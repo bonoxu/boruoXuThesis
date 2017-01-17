@@ -1,0 +1,17 @@
+LaTeX package 'ifetex'
+~~~~~~~~~~~~~~~~~~~~~~
+Copyright (c) 2011 by Martin Scharrer <martin@scharrer.me>
+WWW: http://latex.scharrer.me/
+CTAN: http://www.ctan.org/pkg/ifetex
+Code repository: https://bitbucket.org/martin_scharrer/ifetex
+
+This small package provides the if-switch \ifetex which indicated whether
+e-TeX is available or not.
+
+The package can be loaded as LaTeX package using `\usepackage{ifetex}` or in
+plainTeX using `\input ifetex`. In both cases it aborts silently if the \ifetex macro
+is already defined.
+
+The package currently test if \eTeXversion is defined as a primitive and
+assumes e-TeX if so.
+
