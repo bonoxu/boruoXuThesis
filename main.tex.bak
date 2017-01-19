@@ -11,9 +11,12 @@
 %\documentclass[hyperpdf,oneside]{hepthesis}
 
 %% Load special font packages here if you wish
-%\usepackage{lmodern}
-\usepackage{mathpazo}
-%\usepackage{euler}
+%\usepackage{mathpazo} should not load for the upright greek letter
+\usepackage{lmodern}
+%\usepackage{mathpazo}
+\usepackage{euler}
+
+%\usepackage{gfsartemisia}
 
 %% Put package includes etc. into preamble.tex for convenience
 \input{preamble}
@@ -25,17 +28,17 @@
 
 
 %% Define the thesis title and author
-\title{A study of \BToKPi decays with\\ the \LHCb experiment}
-\author{Andrew Gordon Buckley}
+\title{Detector optimisation for future linear collider}
+\author{Boruo Xu}
 
 %% Doc-specific PDF metadata
 \makeatletter
 \@ifpackageloaded{hyperref}{%
 \hypersetup{%
-  pdftitle = {Studying B to K pi decays with LHCb},
-  pdfsubject = {Andy Buckley's PhD thesis},
-  pdfkeywords = {LHCb, B, physics, LHC, heavy flavour},
-  pdfauthor = {\textcopyright\ Andy Buckley}
+  pdftitle = {Detector optimisation for future linear collider},
+  pdfsubject = {Boruo Xu's PhD thesis},
+  pdfkeywords = {physics, some keywords},
+  pdfauthor = {\textcopyright\ Boruo Xu}
 }}{}
 \makeatother
 
@@ -53,7 +56,7 @@
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
   %\input{chap1}
   %\input{chap2}
-  %\input{chap3}
+  \input{chapDoubleHiggs}
   %% To ignore a specific chapter while working on another, making the build faster, comment it out:
   %\input{chap4}
 \end{mainmatter}
@@ -66,7 +69,7 @@
 %% Produce the un-numbered back matter (e.g. colophon,
 %% bibliography, tables of figures etc., index...)
 \begin{backmatter}
-  %\input{backmatter}
+  \input{backmatter}
 \end{backmatter}
 
 %% Close
