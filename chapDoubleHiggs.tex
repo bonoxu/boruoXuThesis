@@ -36,7 +36,7 @@ Proof-of-principle study was perform at \CLIC for \rootS{1.4} and 3\,TeV. Simula
 
 % TODO
 % Understand bremsstrahlung and EPA
-Single channel is defined as \eeToHH. It is divided into sub-channel \eeToHHbbWW and \eeToHHbbbb to allow closer examination and an improvement of signal selection when combined. In particular, I studied \eeToHHbbWW sub-channel. 
+Single channel is defined as \eeToHH. It is divided into sub-channel \eeToHHbbWW and \eeToHHbbbb to allow closer examination and an improvement of signal selection when combined. In particular, I studied \eeToHHbbWW sub-channel.
 
 Selected background samples, including processes initiated by photons, are considered in the analysis and listed in Table \ref{tab:doubleHiggsMCSamples}. These background were expected share similar topologies with the signal process. When describing a multi-quark final state, it is referring to  all final states of the same number of quarks, including final states with possible additional neutrinos and or leptons. A multi-quark final state does not include higgs production, unless explicitly stated.
 
@@ -123,56 +123,58 @@ Channel  &  $\sigma(\rootS{3})$ / fb  & $\sigma(\rootS{1.4})$ / fb   \\
 \section{Physics object and event reconstruction}
 
 Simulation is performed by MOKKA, interfacing GEANT 4.
-The reconstruction is done via Marlin in iLCSoft. Separate software package (processor) exists for identification of electrons, muons, taus, and jet reconstruction. New processors have been developed and existing processors have been optimised for a compromise of signal selection and background rejection. 
+The reconstruction is done via Marlin in iLCSoft. Separate software package (processor) exists for identification of electrons, muons, taus, and jet reconstruction. New processors have been developed and existing processors have been optimised for a compromise of signal selection and background rejection.
+
+For my signal channel, \eeToHHbbWW, there is no lepton in the final state. Hence a effective lepton identifier would improve the signal identification. Processors are wither developed or optimised with samples at \rootS{1.4}, and checked against samples at \rootS{3}. Because the expected signal significance would be low, the processors are optimised to reject more background at the cost of losing a bit more signals, to increase the signal significance. It was found that the same set of parameters work well under \rootS{1.4} and 3\,TeV.
 
 \subsection{Electron and Muon identification}
 \label{sec:doubleHiggsLeptonID}
 
-For my signal channel, \eeToHHbbWW, there is no electron nor muon in the final state. Hence a effective light lepton identifier would improve the signal identification. 
+
+\subsubsection{IsolatedLeptonFinderProcessor}
 
 In Marlin package, IsolatedLeptonFinderProcessor has been used and optimised. The particle is identified as an isolated light lepton if it passes a chain of cuts.
- 
+
 A charge track is considered if it has more than 15\,GeV energy. An electron is identified if the energy in the ECal is over 90\% of the total calorimetric energy. A muon is identified if the energy in the ECal is between 5\% and 25\% of the total calorimetric energy. Furthermore, only primary track is selected, which requires the Euclidean distance in the x-y plane, the distance in z direction, the Euclidean distance in the x-y-z three dimensional space of the track starting point to the impact point to be less than 0.02\,mm, 0.03\mm, and  0.04\,mm, respectively. The isolation criteria states that
 \begin{equation}
 E_{cone}^2 \leqslant 5.7 \times E_{l} - 50
 \end{equation}
 where, $E_{cone}$ is the total energy of PFOs within an opening angle of $\cos^{-1}(0.995)$ of the light lepton, and $E_{l}$ is the energy of the light lepton.
-\begin{comment}
-        <parameter name="UseRectangularIsolation" type="bool">true </parameter>
 
-        <parameter name="CosConeAngle" type="float">0.995 </parameter>
-        <parameter name="IsolationMinimumConeEnergy" type="float">0 </parameter>
-        <parameter name="IsolationMaximumConeEnergy" type="float">10000 </parameter>
+\subsubsection{BonoLeptonFinderProcessor}
 
-        <parameter name="IsolationMinimumTrackEnergy" type="float">15 </parameter>
-        <parameter name="IsolationMaximumTrackEnergy" type="float">10000 </parameter>
+The IsolatedLeptonFinderProcessor is rather conservative. I developed a new more aggressive light lepton selection processor, BonoLeptonFinderProcessor, to reject more background.
 
-        <parameter name="UsePolynomialIsolation" type="bool">true </parameter>
 
-        <parameter name="IsolationPolynomialCutA" type="float">0.0 </parameter>
-        <parameter name="IsolationPolynomialCutB" type="float">5.7 </parameter>
-        <parameter name="IsolationPolynomialCutC" type="float">-50. </parameter>
 
-        <!--Use primitive particle ID based on calorimeter energy deposits-->
-        <parameter name="UsePID" type="bool">true </parameter>
-        <parameter name="MuonMinEcalToHcalFraction" type="float">0.05 </parameter>
-        <parameter name="MuonMaxEcalToHcalFraction" type="float">0.25 </parameter>
-        <parameter name="ElectronMinEcalToHcalFraction" type="float">0.9 </parameter>
+\begin{tabular}{lrr}
+\hline
+\hline
+Isolated Lepton \\ Selection Processor  &  Signal(3\,TeV)  & \HepProcess{\Pquark\Pquark\Pquark\Pquark\Plepton\Pnu}(3\,TeV) \\
+\hline
+IsolatedLeptonFinderProcessor & 99.5\% & 66.8\%  \\
+BonoLeptonFinderProcessor & 99.0\% & 52.5\%  \\
+TauFinderProcessor & 97.7\% & 79.5\%  \\
+BonoTauFinderProcessor & 86.3\% & 60.3\%  \\
+ForwardFinderProcessor & 95.9\% & 80.7\%  \\
+Combined & 81.0\% & 23.3\%  \\
+\hline
+Isolated Lepton \\ Selection Processor  &  Signal(1.4\,TeV)  & \HepProcess{\Pquark\Pquark\Pquark\Pquark\Plepton\Pnu}(1.4\,TeV) \\
+\hline
+IsolatedLeptonFinderProcessor & 99.3\% & 50.3\%  \\
+BonoLeptonFinderProcessor & 99.1\% & 39.9\%  \\
+TauFinderProcessor & 97.5\% & 52.3\%  \\
+BonoTauFinderProcessor & 89.7\% & 38.5\%  \\
+ForwardFinderProcessor & 98.9\% & 95.1\%  \\
+Combined & 86.6\% & 16.8\%  \\
 
-        <!--Use impact parameter cuts for consistency with primary/secondary track-->
-        <parameter name="UseImpactParameter" type="bool">true </parameter>
+\hline
 
-        <!--Minimum and maximum impact parameters-->
-        <parameter name="ImpactParameterMinD0" type="float">0.0 </parameter>
-        <parameter name="ImpactParameterMaxD0" type="float">0.02 </parameter>
+\end{tabular}
 
-        <parameter name="ImpactParameterMinZ0" type="float">0.0 </parameter>
-        <parameter name="ImpactParameterMaxZ0" type="float">0.03 </parameter>
+\subsubsection{Other Processors}
 
-        <parameter name="ImpactParameterMin3D" type="float">0.0 </parameter>
-        <parameter name="ImpactParameterMax3D" type="float">0.04 </parameter>
-\end{comment}
-
+Other isolated lepton selection processors available in Marlin package, including IsolatedLeptonTagging and TauJetClustering, have been tested. The results, after some tuning of parameters, were unsatisfactory. They either performed poorly comparing to the processors above, or became redundant after the processors above. Therefore, these processors were not used in this analysis.
 
 For the identification of electrons and muons the IsolatedLeptonFinderProcessor \cite{} has been used. The processor uses a combination of track energy, calorimeter energy, impact parameter, and isolation information to distinguish between light leptons and other objects.
 In order to improve the identification efficiency, the method has been integrated with the particle flow information from Pandora \cite{}. Particle ID from Pandora uses shower shape information which is complementray to the IsolatedLeptonFinderProcessor.
