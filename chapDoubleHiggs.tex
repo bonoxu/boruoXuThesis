@@ -133,9 +133,9 @@ For my signal channel, \eeToHHbbWW, there is no lepton in the final state. Hence
 
 \subsubsection{IsolatedLeptonFinderProcessor}
 
-In Marlin package, IsolatedLeptonFinderProcessor has been used and optimised. The particle is identified as an isolated light lepton if it passes a chain of cuts.
+In Marlin package, IsolatedLeptonFinderProcessor has been used. The optimal parameters ware chosen in collaboration and tested. The particle is identified as an isolated light lepton if it passes a chain of cuts.
 
-A charge track is considered if it has more than 15\,GeV energy. An electron is identified if the energy in the ECal is over 90\% of the total calorimetric energy. A muon is identified if the energy in the ECal is between 5\% and 25\% of the total calorimetric energy. Furthermore, only primary track is selected, which requires the Euclidean distance in the x-y plane, the distance in z direction, the Euclidean distance in the x-y-z three dimensional space of the track starting point to the impact point to be less than 0.02\,mm, 0.03\mm, and  0.04\,mm, respectively. The isolation criteria states that
+A charge track is considered if it has more than 15\,GeV energy. An electron is identified if the energy in the ECal is over 90\% of the total calorimetric energy. A muon is identified if the energy in the ECal is between 5\% and 25\% of the total calorimetric energy. Furthermore, only primary track is selected, which requires the Euclidean distance in the x-y plane, the in z direction, and in the x-y-z three dimensional space of the track starting point to the impact point to be less than 0.02\,mm, 0.03\mm, and  0.04\,mm, respectively. The isolation criteria states that
 \begin{equation}
 E_{cone}^2 \leqslant 5.7 \times E_{l} - 50
 \end{equation}
@@ -143,14 +143,63 @@ where, $E_{cone}$ is the total energy of PFOs within an opening angle of $\cos^{
 
 \subsubsection{BonoLeptonFinderProcessor}
 
-The IsolatedLeptonFinderProcessor is rather conservative. I developed a new more aggressive light lepton selection processor, BonoLeptonFinderProcessor, to reject more background.
+The IsolatedLeptonFinderProcessor is rather conservative. I developed a new more aggressive light lepton selection processor, BonoLeptonFinderProcessor, that utilises calorimetric information provided by PandoraPFA. 
+
+The processor uses two chains of cuts. 
+
+First chain uses the particle ID information from PandoraPFA. A electron is identified if it is a ``PandoraPFA'' electron and the energy in the ECal is over 95\% of the total calorimetric energy. A muon is identified if it is a ``PandoraPFA'' muon.  Primary track selection states the Euclidean distance in the x-y-z three dimensional space of the track starting point to the impact point to be less than 0.015\,mm, and the PFO energy is more than 10\,GeV. The light lepton either satisfy the high \pT requirement of at least 40\,GeV, or the isolation criteria,
+\begin{equation}
+E_{l} \geqslant 23 \times \sqrt{E_{cone}} + 5
+\end{equation}
+where $E_{cone}$ and $E_{l}$ have the same definition as in the IsolatedLeptonFinderProcessor.
+
+Second chain of cuts is similar to the IsolatedLeptonFinderProcessor. An electron is identified if the energy in the ECal is over 95\% of the total calorimetric energy. A muon is identified if the energy in the ECal is between 5\% and 20\% of the total calorimetric energy. Primary track selection states the Euclidean distance in the x-y-z three dimensional space of the track starting point to the impact point to be less than 0.5\,mm, and the PFO energy is more than 10\,GeV. The light lepton either satisfy the high \pT requirement of at least 40\,GeV, or the isolation criteria,
+\begin{equation}
+E_{l} \geqslant 28 \times \sqrt{E_{cone}} + 30
+\end{equation}
+where, $E_{cone}$ is the total energy of PFOs within an opening angle of $\cos^{-1}(0.99)$ of the light lepton, and $E_{l}$ is the energy of the light lepton.
+
+\subsubsection{Comparison: IsolatedLeptonFinderProcessor v.s. BonoLeptonFinderProcessor}
+
+Two processors share similar criterion for light lepton identification. The main difference is that the BonoLeptonFinderProcessor allows high \pT light lepton to be identified in a potential non-isolated environment, which leads to the more aggressiveness of the BonoLeptonFinderProcessor. The performance of two processors on the signal and selected background samples is shown in \Table{tab:doubleHiggsIsoLepPerformance}
 
 
+\subsubsection{TauFinderProcessor}
 
+% TODO check tau stuff
+With a decay length of 87$\mu{m}$, tau leptons decay before reaching the detector and can only be identified through the reconstruction of their decay products. The leptonic decay of tau can be identified using the two isolated lepton finder processor. Therefore tau identification will focus on the hadronic decay.
+
+TauFinderProcessor, an existing processor Marlin package, has been tuned in collaboration and tested. The a collection of tau decay productions are identified they pass a chain of cuts.
+
+Particles are not considered if \pT is less than 1\,GeV or \absCosTheta is more than 1.1\,rad, as they are more likely from beam induced background. A seed is considered if a charged particle has \pT more than 10\,GeV. A search cone of opening angle 0.03\,rad is then formed. The search cone is rejected if it has more than 3 charged particles, more than 10 particles or its invariant mass more than 2\,GeV. An isolation cone is formed with opening angle between 0.03 and 0.33\,rad of the seed. The seed is rejected if there are more than 3\,GeV in the isolation cone.
+
+\subsubsection{BonoTauFinderProcessor}
+
+The TauFinderProcessor's performance is decent, but there is room for improvement. I developed a new more aggressive tau lepton selection processor, BonoTauFinderProcessor, that utilises calorimetric information provided by PandoraPFA.
+
+Similar to the previous processor, PFOs with \pT less than 1\,GeV are rejected. A tau seed is defined as a charged particle with \pT at least 5\,GeV. The search cone has an opening angle of $\cos^{-1}(0.999)$. Particles are iteratively added to the search cone according to the size of the opening angle to the seed. A temporary search cone is then considered if it has one or three charged particles, and the invariant mass is less than 3\,GeV. The search cone needs to satisfy one of isolation criterion.
+\begin{enumerate}
+\item No particle in the large isolation cone, and \pT of search cone at least 10\,GeV,
+\item One charged particle in the search cone, one particle in the large isolation cone, and \rZero larger than 0.01\,mm,
+\item Three charged particle in the search cone, one particle in the large isolation cone,\pT of search cone at least 10\,GeV, and search cone opening angle less than $\cos^{-1}(0.9995)$,
+\item One charged particle in the search cone, no particle in the small isolation cone, \rZero larger than 0.01\,mm, and \pT of search cone at least 10\,GeV,
+\item Three charged particle in the search cone, no particle in the small isolation cone,\pT of search cone at least 10\,GeV, and search cone opening angle less than $\cos^{-1}(0.9995)$,
+\end{enumerate}
+where large and small isolation cone are defined as opening angle of $\cos^{-1}(0.95)$, and $\cos^{-1}(0.99)$ respectively.
+If there are multiple temporary search cone of a same seed passing the isolation criteria, the cone with smallest opening angle is chosen for output.
+
+\subsubsection{Comparison: TauFinderProcessor v.s. BonoTauFinderProcessor}
+
+Two processors share similar size of search cone and isolation cone. The BonoTauFinderProcessor has looser cut on minimum \pT and invariant, but stricter isolation criterion. This leads to a more aggressive tau finder. The performance of two processors on the signal and selected background samples is shown in \Table{tab:doubleHiggsIsoLepPerformance}
+
+\subsubsection{Very Forward Electron Identification}
+
+
+\begin{table}
 \begin{tabular}{lrr}
 \hline
 \hline
-Isolated Lepton \\ Selection Processor  &  Signal(3\,TeV)  & \HepProcess{\Pquark\Pquark\Pquark\Pquark\Plepton\Pnu}(3\,TeV) \\
+Processor / Efficiency (3\,TeV)  &  Signal  & \HepProcess{\Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} \\
 \hline
 IsolatedLeptonFinderProcessor & 99.5\% & 66.8\%  \\
 BonoLeptonFinderProcessor & 99.0\% & 52.5\%  \\
@@ -159,7 +208,7 @@ BonoTauFinderProcessor & 86.3\% & 60.3\%  \\
 ForwardFinderProcessor & 95.9\% & 80.7\%  \\
 Combined & 81.0\% & 23.3\%  \\
 \hline
-Isolated Lepton \\ Selection Processor  &  Signal(1.4\,TeV)  & \HepProcess{\Pquark\Pquark\Pquark\Pquark\Plepton\Pnu}(1.4\,TeV) \\
+Selection / Efficiency (1.4\,TeV)  &  Signal & \HepProcess{\Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} \\
 \hline
 IsolatedLeptonFinderProcessor & 99.3\% & 50.3\%  \\
 BonoLeptonFinderProcessor & 99.1\% & 39.9\%  \\
@@ -171,6 +220,9 @@ Combined & 86.6\% & 16.8\%  \\
 \hline
 
 \end{tabular}
+\caption{isolated lepton finder processors performance on the signal and selected background samples.}
+\label{tab:doubleHiggsIsoLepPerformance}
+\end{table}
 
 \subsubsection{Other Processors}
 

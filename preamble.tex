@@ -5,6 +5,7 @@
 \usepackage{verbatim}
 \usepackage{amssymb}
 \usepackage{tabularx}
+%\usepackage{mathtools}
 
 %% Using Babel allows other languages to be used and mixed-in easily
 %\usepackage[ngerman,english]{babel}
@@ -41,6 +42,7 @@
 \DeclareRobustCommand{\Rate}{\mymath{\Gamma}\xspace}
 \DeclareRobustCommand{\RateOf}[1]{\mymath{\Gamma}\parenths{#1}\xspace}
 
+\DeclareRobustCommand{\Table}[1]{table \ref{#1}\xspace}
 %% High-energy physics stuff
 \usepackage{abhep}
 \usepackage{hepnames}
@@ -57,6 +59,9 @@
 \DeclareRobustCommand{\egamma}[4]{\HepProcess{ #1 #2 (#3) \to #4}\xspace}
 \DeclareRobustCommand{\gammagamma}[5]{\HepProcess{ #1 (#2) #3 (#4) \to #5}\xspace}
 
+\DeclareRobustCommand{\cosTheta}{\mymath{\cos(\MathUpright{\theta})}\xspace}
+\DeclareRobustCommand{\absCosTheta}{\mymath{\lvert\cos(\MathUpright{\theta}_{\MathUpright{Z}})\rvert}\xspace}
+\DeclareRobustCommand{\rZero}{\mymath{r_{0}\xspace}}
 %\DeclareRobustCommand{\arXivCode}[1]{arXiv:#1}
 %\DeclareRobustCommand{\CP}{\ensuremath{\mathcal{CP}}\xspace}
 %\DeclareRobustCommand{\CPviolation}{\CP-violation\xspace}
