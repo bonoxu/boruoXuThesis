@@ -28,6 +28,8 @@
 
 
 %% Define the thesis title and author
+
+
 \title{Detector optimisation for future linear collider}
 \author{Boruo Xu}
 
@@ -55,7 +57,7 @@
 \begin{mainmatter}
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
   %\input{chap1}
-  %\input{chap2}
+  \input{chapDetector}
   \input{chapDoubleHiggs}
   %% To ignore a specific chapter while working on another, making the build faster, comment it out:
   %\input{chap4}

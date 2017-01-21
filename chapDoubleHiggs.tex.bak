@@ -1,6 +1,9 @@
 \chapter{Double Higgs Bosons Analysis}
 \label{chap:DoubleHiggs}
 
+\chapterquote{Two is better than one}%
+{Sir Steve Orange, 1785--1854}%: Blackwood's Magazine May 1830
+
 \section{Motivation}
 
 Ha there is a higgs.
@@ -127,13 +130,13 @@ The reconstruction is done via Marlin in iLCSoft. Separate software package (pro
 
 For my signal channel, \eeToHHbbWW, there is no lepton in the final state. Hence a effective lepton identifier would improve the signal identification. Processors are wither developed or optimised with samples at \rootS{1.4}, and checked against samples at \rootS{3}. Because the expected signal significance would be low, the processors are optimised to reject more background at the cost of losing a bit more signals, to increase the signal significance. It was found that the same set of parameters work well under \rootS{1.4} and 3\,TeV.
 
-\subsection{Electron and Muon identification}
+\subsection{Electron and muon identification}
 \label{sec:doubleHiggsLeptonID}
 
 
 \subsubsection{IsolatedLeptonFinderProcessor}
 
-In Marlin package, IsolatedLeptonFinderProcessor has been used and optimised. The particle is identified as an isolated light lepton if it passes a chain of cuts.
+In Marlin package, IsolatedLeptonFinderProcessor has been used. The optimal parameters ware chosen in collaboration and tested. The particle is identified as an isolated light lepton if it passes a chain of cuts.
 
 A charge track is considered if it has more than 15\,GeV energy. An electron is identified if the energy in the ECal is over 90\% of the total calorimetric energy. A muon is identified if the energy in the ECal is between 5\% and 25\% of the total calorimetric energy. Furthermore, only primary track is selected, which requires the Euclidean distance in the x-y plane, the in z direction, and in the x-y-z three dimensional space of the track starting point to the impact point to be less than 0.02\,mm, 0.03\mm, and  0.04\,mm, respectively. The isolation criteria states that
 \begin{equation}
@@ -143,9 +146,9 @@ where, $E_{cone}$ is the total energy of PFOs within an opening angle of $\cos^{
 
 \subsubsection{BonoLeptonFinderProcessor}
 
-The IsolatedLeptonFinderProcessor is rather conservative. I developed a new more aggressive light lepton selection processor, BonoLeptonFinderProcessor, to reject more background events.
+The IsolatedLeptonFinderProcessor is rather conservative. I developed a new more aggressive light lepton selection processor, BonoLeptonFinderProcessor, that utilises calorimetric information provided by PandoraPFA.
 
-The processor uses two chains of cuts. 
+The processor uses two chains of cuts.
 
 First chain uses the particle ID information from PandoraPFA. A electron is identified if it is a ``PandoraPFA'' electron and the energy in the ECal is over 95\% of the total calorimetric energy. A muon is identified if it is a ``PandoraPFA'' muon.  Primary track selection states the Euclidean distance in the x-y-z three dimensional space of the track starting point to the impact point to be less than 0.015\,mm, and the PFO energy is more than 10\,GeV. The light lepton either satisfy the high \pT requirement of at least 40\,GeV, or the isolation criteria,
 \begin{equation}
@@ -163,31 +166,39 @@ where, $E_{cone}$ is the total energy of PFOs within an opening angle of $\cos^{
 
 Two processors share similar criterion for light lepton identification. The main difference is that the BonoLeptonFinderProcessor allows high \pT light lepton to be identified in a potential non-isolated environment, which leads to the more aggressiveness of the BonoLeptonFinderProcessor. The performance of two processors on the signal and selected background samples is shown in \Table{tab:doubleHiggsIsoLepPerformance}
 
+\subsection{Tau identification}
 
 \subsubsection{TauFinderProcessor}
 
 % TODO check tau stuff
 With a decay length of 87$\mu{m}$, tau leptons decay before reaching the detector and can only be identified through the reconstruction of their decay products. The leptonic decay of tau can be identified using the two isolated lepton finder processor. Therefore tau identification will focus on the hadronic decay.
 
-TauFinderProcessor, an existing processor Marlin package, has been used and optimised. The a collection of tau decay productions are identified they pass a chain of cuts.
+TauFinderProcessor, an existing processor Marlin package, has been tuned in collaboration and tested. The a collection of tau decay productions are identified they pass a chain of cuts.
 
-A charge track is considered if it has more than 15\,GeV energy. An electron is identified if the energy in the ECal is over 90\% of the total calorimetric energy. A muon is identified if the energy in the ECal is between 5\% and 25\% of the total calorimetric energy. Furthermore, only primary track is selected, which requires the Euclidean distance in the x-y plane, the in z direction, and in the x-y-z three dimensional space of the track starting point to the impact point to be less than 0.02\,mm, 0.03\mm, and  0.04\,mm, respectively. The isolation criteria states that
+Particles are not considered if \pT is less than 1\,GeV or \absCosTheta is more than 1.1\,rad, as they are more likely from beam induced background. A seed is considered if a charged particle has \pT more than 10\,GeV. A search cone of opening angle 0.03\,rad is then formed. The search cone is rejected if it has more than 3 charged particles, more than 10 particles or its invariant mass more than 2\,GeV. An isolation cone is formed with opening angle between 0.03 and 0.33\,rad of the seed. The seed is rejected if there are more than 3\,GeV in the isolation cone.
 
+\subsubsection{BonoTauFinderProcessor}
 
-For the identification of tau lepton decays, the TauFinder \cite{} has been used. The processor aims to identify high energetic, low multiplicity jets, including criteria on impact parameter and cone isolation. This method has been improved by searching for 1-prong and 3-prong decays specifically, which account for X\% of the tau lepton decays.
+The TauFinderProcessor's performance is decent, but there is room for improvement. I developed a new more aggressive tau lepton selection processor, BonoTauFinderProcessor, that utilises calorimetric information provided by PandoraPFA.
+
+Similar to the previous processor, PFOs with \pT less than 1\,GeV are rejected. A tau seed is defined as a charged particle with \pT at least 5\,GeV. The search cone has an opening angle of $\cos^{-1}(0.999)$. Particles are iteratively added to the search cone according to the size of the opening angle to the seed. A temporary search cone is then considered if it has one or three charged particles, and the invariant mass is less than 3\,GeV. The search cone needs to satisfy one of isolation criterion.
+\begin{enumerate}
+\item No particle in the large isolation cone, and \pT of search cone at least 10\,GeV,
+\item One charged particle in the search cone, one particle in the large isolation cone, and \rZero larger than 0.01\,mm,
+\item Three charged particle in the search cone, one particle in the large isolation cone,\pT of search cone at least 10\,GeV, and search cone opening angle less than $\cos^{-1}(0.9995)$,
+\item One charged particle in the search cone, no particle in the small isolation cone, \rZero larger than 0.01\,mm, and \pT of search cone at least 10\,GeV,
+\item Three charged particle in the search cone, no particle in the small isolation cone,\pT of search cone at least 10\,GeV, and search cone opening angle less than $\cos^{-1}(0.9995)$,
+\end{enumerate}
+where large and small isolation cone are defined as opening angle of $\cos^{-1}(0.95)$, and $\cos^{-1}(0.99)$ respectively.
+If there are multiple temporary search cone of a same seed passing the isolation criteria, the cone with smallest opening angle is chosen for output.
+
+\subsubsection{Comparison: TauFinderProcessor v.s. BonoTauFinderProcessor}
+
+Two processors share similar size of search cone and isolation cone. The BonoTauFinderProcessor has looser cut on minimum \pT and invariant, but stricter isolation criterion. This leads to a more aggressive tau finder. The performance of two processors on the signal and selected background samples is shown in \Table{tab:doubleHiggsIsoLepPerformance}
 
 \begin{table}
 \begin{tabular}{lrr}
 \hline
-\hline
-Processor / Efficiency (3\,TeV)  &  Signal  & \HepProcess{\Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} \\
-\hline
-IsolatedLeptonFinderProcessor & 99.5\% & 66.8\%  \\
-BonoLeptonFinderProcessor & 99.0\% & 52.5\%  \\
-TauFinderProcessor & 97.7\% & 79.5\%  \\
-BonoTauFinderProcessor & 86.3\% & 60.3\%  \\
-ForwardFinderProcessor & 95.9\% & 80.7\%  \\
-Combined & 81.0\% & 23.3\%  \\
 \hline
 Selection / Efficiency (1.4\,TeV)  &  Signal & \HepProcess{\Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} \\
 \hline
@@ -197,6 +208,16 @@ TauFinderProcessor & 97.5\% & 52.3\%  \\
 BonoTauFinderProcessor & 89.7\% & 38.5\%  \\
 ForwardFinderProcessor & 98.9\% & 95.1\%  \\
 Combined & 86.6\% & 16.8\%  \\
+\hline
+Processor / Efficiency (3\,TeV)  &  Signal  & \HepProcess{\Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} \\
+\hline
+IsolatedLeptonFinderProcessor & 99.5\% & 66.8\%  \\
+BonoLeptonFinderProcessor & 99.0\% & 52.5\%  \\
+TauFinderProcessor & 97.7\% & 79.5\%  \\
+BonoTauFinderProcessor & 86.3\% & 60.3\%  \\
+ForwardFinderProcessor & 95.9\% & 80.7\%  \\
+Combined & 81.0\% & 23.3\%  \\
+
 
 \hline
 
@@ -205,19 +226,72 @@ Combined & 86.6\% & 16.8\%  \\
 \label{tab:doubleHiggsIsoLepPerformance}
 \end{table}
 
-\subsubsection{Other Processors}
+\subsection{Very forward electron identification}
+
+Certain background channels, for example photon-electron interactions, contain electrons in the very forward part of the detector, namely LCal and BCal. These forward calorimeters were not simulated due to computational limitation. Most particle in these detector would be very forward particles from beam induced background. However, previous study has shown \cite{} that high energy electrons can be identified with high efficiency. Due to the lack of tracking in these region, electrons and photons would have the same electromagnetic shower profile, with the given calorimeter resolution. MC photons and electrons are checked if they fall in the LCal or the BCal, and checked against the known detection efficiency.
+
+Beam Calorimeter acceptance is defined as \absCosTheta is between  0.01 and 0.04\,rad and length in z direction is between 3181 and 3441\,mm. Luminosity Calorimeter acceptance is defined as \absCosTheta is between  0.038 and 0.11\,rad and length in z direction is between 2539 and 2714\,mm. For \rootS(3), the BeamCal detection efficiency is provided by a software package \cite{}. For \rootS(1.4), the same software for the BeamCal is used, by scaling the energy of the MC particle by a factor of $\frac{3}{1.4}$. For the LumiCal, the identification efficiency is defined as
+\begin{equation}
+\varepsilon=
+\begin{cases}
+  0, & \text{if}\ E < 50\,GeV\\
+  0.99 \times \frac{(erf(E - 100) + 1 )}{2}, & \text{otherwise}
+\end{cases}
+\end{equation}
+where $E$ is the energy of the electron or the photon.
+
+The background rejection is significant, shown in \Table{} for the signal and selected background.
+
+
+\begin{table}
+\begin{tabular}{lrr}
+\hline
+\hline
+Selection / Efficiency (1.4\,TeV)  &  Signal & \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark}  \\
+\hline
+Combined light lepton finder & 87.6\% & 67.5\%  \\
+ForwardFinderProcessor & 98.9\% & 53.6\%  \\
+Combined & 86.6\% & 30.8\%  \\
+\hline
+Processor / Efficiency (3\,TeV)  &  Signal  & \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark}  \\
+\hline
+Combined light lepton finder & 84.4\% & 72.7\%  \\
+ForwardFinderProcessor & 95.9\% & 55.4\%  \\
+Combined & 81.0\% &  33.4\%  \\
+
+
+\hline
+
+\end{tabular}
+\caption{Very forward electron and photon finder performance on the signal and selected background samples.}
+\label{tab:doubleHiggsForwardPerformance}
+\end{table}
+
+\subsection{Other lepton identification processors}
 
 Other isolated lepton selection processors available in Marlin package, including IsolatedLeptonTagging and TauJetClustering, have been tested. The results, after some tuning of parameters, were unsatisfactory. They either performed poorly comparing to the processors above, or became redundant after the processors above. Therefore, these processors were not used in this analysis.
 
-For the identification of electrons and muons the IsolatedLeptonFinderProcessor \cite{} has been used. The processor uses a combination of track energy, calorimeter energy, impact parameter, and isolation information to distinguish between light leptons and other objects.
-In order to improve the identification efficiency, the method has been integrated with the particle flow information from Pandora \cite{}. Particle ID from Pandora uses shower shape information which is complementray to the IsolatedLeptonFinderProcessor.
-%A detailed list of variables and selection cuts is reported in Table . Since lepton identification enters in the analysis categorisation, the same criterion have been used for the two sub-channels. Moreover, different criterion have been optimised for the two centre-of-mass energy \SI{3}{\TeV} and \SI{1.4}{\TeV}.
+\section{Jet reconstruction}
 
-%Very forward electrons with polar angle outside the tracker acceptance ($\theta\lesssim6^\circ$) cannot be identified using the IsolatedLeptonFinderProcessor. Nevertheless, the forward calorimeters, the BeamCal and the LumiCal, are dedicated to the tagging of such forward electromagnetic objects. In the production samples used for this analysis, the simulated information for the reconstruction in this very forward region has not been recorded due to technical issues. Therefore, MC information is used to identified both electrons and photons (since there is no tracking information available, it is not possible to distinguish between them with the CLIC detectors) and the efficiencies measured in test beams are applied in the analysis. The detection efficiency for the LumiCal is taken from xxx \cite{} and for the BeamCal, it is simulated with Andre processor \cite{}. %as a function of angles and momentum
-This results in a significant rejection of background events with forward electrons and positrons, at the price of a moderate loss of signal events, O(\%).   \\
+The signal channel, \eeToHHbbWWHad, is a four-jet final state. A useful technique for the analysis is to reconstruct the four-jet final state using jet algorithms. This allows discriminative variables to be calculated.
 
-%\subsection{Tau identification}
-%\label{sec:tau}
+Longitudinal invariant, \kt, jet algorithm was chosen for the jet clustering. Due to the presence high level of beam induced background at the CLIC, it has been shown that a jet algorithm designed for hadron colliders are more effective than those traditional designed for the electron-positron collider, such as Durham algorithm.\cite{}
 
-%With a decay length of \SI{87}{\micro\m}, tau leptons decay before reaching the detector and can only be identified through the reconstruction of their decay products.
-For the identification of tau lepton decays, the TauFinder \cite{} has been used. The processor aims to identify high energetic, low multiplicity jets, including criteria on impact parameter and cone isolation. This method has been improved by searching for 1-prong and 3-prong decays specifically, which account for X\% of the tau lepton decays.
+% ATTN, PFO collection should be explained already
+The free parameters for \kt algorithm is the $R$ parameter, which controls the fatness of the jet. There is also the choice of the PFO collection, which incorporate different level of time and \pT cuts, to reduce beam induce background. Both parameters are optimised for \rootS{1.4} and \rootS{3}.
+The parameters of jet algorithm was cho
+
+
+
+\begin{comment}
+Jet reconstruction is performed using the FastJet package \cite{} via the MarlinFastJet \cite{} interface.
+
+At the CLIC, due to the high level of induced background, it has been proven that the employment of algorithms designed for hadronic collider, like the longitudinal invariant $k_t$ algorithm \cite{}, is preferable to more classical electron-positron algorithms \cite{}, like the Durham algorithm \cite{}.
+The VLC algorithm \cite{} has been developed as an attempt to include the good features of hadron collider jet algorithms, in particular the resilience against induced background, in an algorithm optimised for lepton colliders. In the \HHbbbb channel the VLC algorithm has been shown to perform better than the longitudinal invariant $k_t$ algorithm, it has therefore been used for this channel. %Finally, different optimal values for the R parameter has been found for the two channels and reported in Table . This is mostly due to the difference between b-jets and light-quark-jets.
+
+Jet algorithms at CLIC are run in ``exclusive mode'', the algorithm will stop when the required number of jets is reached. For the \HHbbbb channel, 4 jets are expected from the $b$-quarks hadronisation, while for the \HHWWbb channel, 6, 4 and 2 jets are expected depending on the final states. Hence, clustering in a different number of jets is required according to the event categorisation.
+
+The optimal value for the jet R parameter is optimised separately for the individual channels. The results are reported in Table  . The difference between the channels is mostly justify by the difference between b-jets and light-quark-jets. \\
+\end{comment}
+
+

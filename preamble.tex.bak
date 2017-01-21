@@ -5,6 +5,7 @@
 \usepackage{verbatim}
 \usepackage{amssymb}
 \usepackage{tabularx}
+%\usepackage{mathtools}
 
 %% Using Babel allows other languages to be used and mixed-in easily
 %\usepackage[ngerman,english]{babel}
@@ -51,6 +52,7 @@
 \DeclareRobustCommand{\rootS}[1]{\sqrtS = #1\,TeV\xspace}
 \DeclareRobustCommand{\eeToHH}{\HepProcess{ \Pem \Pep \to \PHiggs \PHiggs \Pnu \APnu }\xspace}
 \DeclareRobustCommand{\eeToHHbbWW}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus}\xspace}
+\DeclareRobustCommand{\eeToHHbbWWHad}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus \to \Pbottom \APbottom \Pq \Pq}\xspace}
 \DeclareRobustCommand{\eeToHHbbbb}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \Pbottom \APbottom}\xspace}
 \DeclareRobustCommand{\eeTo}[1]{\HepProcess{ \Pem \Pep \to #1 }\xspace}
 \DeclareRobustCommand{\ggHad}{\HepProcess{ \Pphoton \Pphoton \to hadrons }\xspace}
@@ -59,7 +61,9 @@
 \DeclareRobustCommand{\gammagamma}[5]{\HepProcess{ #1 (#2) #3 (#4) \to #5}\xspace}
 
 \DeclareRobustCommand{\cosTheta}{\mymath{\cos(\MathUpright{\theta})}\xspace}
-
+\DeclareRobustCommand{\absCosTheta}{\mymath{\lvert\cos(\MathUpright{\theta}_{\MathUpright{Z}})\rvert}\xspace}
+\DeclareRobustCommand{\rZero}{\mymath{r_{0}\xspace}}
+\DeclareRobustCommand{\kt}{\mymath{k_{t}\xspace}}
 %\DeclareRobustCommand{\arXivCode}[1]{arXiv:#1}
 %\DeclareRobustCommand{\CP}{\ensuremath{\mathcal{CP}}\xspace}
 %\DeclareRobustCommand{\CPviolation}{\CP-violation\xspace}
