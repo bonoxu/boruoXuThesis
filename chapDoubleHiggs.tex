@@ -286,29 +286,35 @@ The $R$ parameter of the \kt jet algorithm, and the collection of the PFOs are c
 
 \subsection{Optimisation of jet reconstruction}
 
-\kt jet algorithm was used as part of the FastJet algorithms available in the Marlin package. 
+\kt jet algorithm was used as part of the FastJet algorithms available in the Marlin package.
 
-The samples containing the signal, \eeToHHbbWWHad, was used for the optimisation of the jet reconstruction. The signal events were chosen using MC truth information. 
+The samples containing the signal, \eeToHHbbWWHad, was used for the optimisation of the jet reconstruction. The signal events were chosen using MC truth information.
 
-Jet algorithm was run in exclusive mode, where number of jets is chosen to be six. 
+Jet algorithm was run in exclusive mode, where number of jets is chosen to be six.
 
-For the signal, \eeToHHbbWWHad, one Higgs decays to two \Pbottom quarks, resulting in two jets from hadronisation. Similarly the other Higgs decays to two \PW bosons, where each \PW boson decays into two quarks. Therefore, the expected number of jets is six. 
+For the signal, \eeToHHbbWWHad, one Higgs decays to two \Pbottom quarks, resulting in two jets from hadronisation. Similarly the other Higgs decays to two \PW bosons, where each \PW boson decays into two quarks. Therefore, the expected number of jets is six.
 
 Jets produced by the \kt jet algorithm are pairred up using MC truth information, to the corresponding Higgs and \PW boson. Four invariant mass distributions are obtained: two Higgs masses, $m_{\Hbb}$, $m_{\HWW}$, and two \PW masses $m_{\PW}$, $m_{\W*}$. \W* indicates the off-mass-shell \PW boson, because when a Higgs decays into two \PW bosons, one \PW is off the mass shell, as the Higgs mass is less than the sum two \PW masses.
 
 
 
+Three mass distributions are worth comparing for different jet reconstruction, namely, $m_{\Hbb}$, $m_{\HWW}$, and $m_{\PW}$. The ideal jet reconstruction should produce the a sharp mass peak around the particle's true mass.
 
+To quantitatively access the mass distribution, a gaussian like fit is performed to extract the position of the peak, and the width of the distribution. The fit has the form:
 
-\begin{comment}
-Jet reconstruction is performed using the FastJet package \cite{} via the MarlinFastJet \cite{} interface.
+\begin{equation}
+f(m)=A e^{- \frac{(m - \mu)^2}{g}}
+\begin{cases}
+  g = 2\sigma_L + \alpha_L(m - \mu), & \text{if}\ m < \mu\\
+  g = 2\sigma_R + \alpha_R(m - \mu), & \text{if}\ m \geqslant \mu
+\end{cases}
+\end{equation}
+The fit represents an asymmetrical gaussian function, where $m$ is binned mass distribution, with 50 bins in range [0, 200]\,GeV. $\sigma_L$ and $\sigma_R$ allow asymmetrical width of the distribution. $\alpha$ parameter controls the fit of the tail. Inspired by the $\Ptop\APtop$  analysis \cite{}, the use of the $\alpha$ parameter allows the fit in the whole mass range, as only the peak of the distribution is gaussian like. $A$ is the normalistion factor. An example of the fit of $m_{\Hbb}$ is shown in \Figure{fig:doubleHiggsFitMCMass}.
 
-At the CLIC, due to the high level of induced background, it has been proven that the employment of algorithms designed for hadronic collider, like the longitudinal invariant $k_t$ algorithm \cite{}, is preferable to more classical electron-positron algorithms \cite{}, like the Durham algorithm \cite{}.
-The VLC algorithm \cite{} has been developed as an attempt to include the good features of hadron collider jet algorithms, in particular the resilience against induced background, in an algorithm optimised for lepton colliders. In the \HHbbbb channel the VLC algorithm has been shown to perform better than the longitudinal invariant $k_t$ algorithm, it has therefore been used for this channel. %Finally, different optimal values for the R parameter has been found for the two channels and reported in Table . This is mostly due to the difference between b-jets and light-quark-jets.
-
-Jet algorithms at CLIC are run in ``exclusive mode'', the algorithm will stop when the required number of jets is reached. For the \HHbbbb channel, 4 jets are expected from the $b$-quarks hadronisation, while for the \HHWWbb channel, 6, 4 and 2 jets are expected depending on the final states. Hence, clustering in a different number of jets is required according to the event categorisation.
-
-The optimal value for the jet R parameter is optimised separately for the individual channels. The results are reported in Table  . The difference between the channels is mostly justify by the difference between b-jets and light-quark-jets. \\
-\end{comment}
-
+\begin{figure}
+\includegraphics[width=\largefigwidth]{doubleHiggs/MCmassFit}
+\caption[Example MC mass fit for double higgs analysis]%
+   {A typical example of MC mass fit of $m_{\Hbb}$ for double higgs analysis. Red line indicates the best fit. Vertical arrow indicates the fitted peak position.}
+   \label{fig:doubleHiggsFitMCMass}
+\end{figure}
 
