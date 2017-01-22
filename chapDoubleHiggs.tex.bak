@@ -33,7 +33,7 @@ The main mechanism for double Higgs production %in \epem collisions
 
 \section{Analysis Straggly Overview}
 
-Proof-of-principle study was perform at \CLIC for \rootS{1.4} and 3\,TeV. Simulated samples, including those containing double higgs production were used. Signal events, events with double higgs production, were selected via a set of carefully designed and complicated methods. \gHHH and \gWWHH are extracted simultaneously with template fitting with modified couplings samples.
+Proof-of-principle study was perform at \CLIC using \CLICILD detector model for \rootS{1.4} and 3\,TeV. Simulated samples, including those containing double higgs production were used. Signal events, events with double higgs production, were selected via a set of carefully designed and complicated methods. \gHHH and \gWWHH are extracted simultaneously with template fitting with modified couplings samples.
 \section{Monte Carlo Sample Generation}
 
 
@@ -311,7 +311,6 @@ f(m)=A e^{- \frac{(m - \mu)^2}{g}}
 \end{equation}
 The fit represents an asymmetrical gaussian function, where $m$ is binned mass distribution, with 50 bins in range [0, 200]\,GeV. $\sigma_L$ and $\sigma_R$ allow asymmetrical width of the distribution. $\alpha$ parameter controls the fit of the tail. Inspired by the $\Ptop\APtop$  analysis \cite{}, the use of the $\alpha$ parameter allows the fit in the whole mass range, as only the peak of the distribution is gaussian like. $A$ is the normalistion factor. An example of the fit of $m_{\Hbb}$ is shown in \Figure{fig:doubleHiggsFitMCMass}.
 
-
 \begin{figure}
 \includegraphics[width=\largefigwidth]{doubleHiggs/MCmassFit}
 \caption[Example MC mass fit for double higgs analysis]%
@@ -319,4 +318,23 @@ The fit represents an asymmetrical gaussian function, where $m$ is binned mass d
    \label{fig:doubleHiggsFitMCMass}
 \end{figure}
 
+
+
+\begin{figure}
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs1_M_R}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs2_M_R}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_W_M_R}}} \\
+\caption[Fitted mass of \Hbb, \HWW and \PW for \rootS{1.4} and \rootS{3}]%
+   {Fitted mass and error of \Hbb, \HWW and \PW for \rootS{1.4}, for loose, normal and tight selected PFO against $R$ parameter.}
+   \label{fig:doubleHiggs1.4TeVMassFit}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_R}}} \\
+\caption[Fitted width of \Hbb, \HWW and \PW for \rootS{1.4} and \rootS{3}]%
+   {Fitted combined width and error of \Hbb, \HWW and \PW for \rootS{3}, for loose, normal and tight selected PFO against $R$ parameter.}
+   \label{fig:doubleHiggs1.4TeVSigmaFit}
+\end{figure}
 

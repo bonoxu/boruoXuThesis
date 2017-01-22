@@ -1,23 +1,45 @@
-\chapter{Detector}
-\label{chap:Detector}
+\chapter{Reconstruction}
+\label{chap:Reconstruction}
 
-\chapterquote{ILC will be built next year}%
-{Mysterious person}%: Blackwood's Magazine May 1830
+\chapterquote{How to open a pandora box?}%
+{A wise Chinese}%: Blackwood's Magazine May 1830
 
-overall 
+Reconstruction overall
+digitisation
+tracking
 
-ILC
+Pandora
 
-CLIC
+Track quality cuts
 
-calorimeter
+Iterative track-cluster association
 
-ECal
+Photon, passage through matter
 
-HCal
+Muon ID
 
-Muon chamber
+Fragmentation
 
-Forward detector
+\section{Analysis}
 
-Tracker
+Jet algorithm
+
+``exclusive mode'', inclusive mode
+Details
+
+Discussion of why \kt, not durham
+Longitudinal invariant, \kt, jet algorithm was chosen for the jet clustering. Due to the presence high level of beam induced background at the CLIC, it has been shown that a jet algorithm designed for hadron colliders are more effective than those traditional designed for the electron-positron collider, such as Durham algorithm.\cite{}
+
+VLC?
+
+Flavour tagging
+
+MVA
+
+BDT
+?likelihood
+
+Signal
+Selection
+Efficiency
+Significance
