@@ -74,52 +74,55 @@ Simulation
 
 For most background processes, events are simulated when invariant mass of quarks are above 50\,GeV. For electron-photon interaction with four quarks and a neutrino final state, events are simulated when invariant mass of quarks are above 120\,GeV. These limits are necessary to generate a large amount of background samples in a feasible time, without losing much signal samples.
 
-Finally, the main beam induced background \ggHad is simulated and overlayed \cite{} to all samples according to the integration time of each subdetector.  \begin{table}\centering
+Finally, the main beam induced background \ggHad is simulated and overlayed \cite{} to all samples according to the integration time of each subdetector.  
+
+\begin{table}[!tbp]\centering 
 % TODO fix lumi correction for e gamma, gamma e
 % TODO change some of sample cross section for  electron-photon interaction with four quarks and a neutrino final state
 %\small{
-\begin{tabular}[!tbp]{lrr}
-\hline\hline
-Channel  &  $\sigma(\rootS{3})$ / fb  & $\sigma(\rootS{1.4})$ / fb   \\
+
+\begin{tabular}{lrr}
+\hline \hline
+Channel  &  $\sigma(\rootS{1.4})$ / fb  & $\sigma(\rootS{3})$ / fb   \\
 \hline
 \eeToHH &0.588& 0.149 \\
 \hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu} & 1.78 & 0.86  \\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu} & 1.12 & 0.36 \\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu} & 1.91 & 0.31 \\
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 0.86 & 1.78 \\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 0.36 & 1.12\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 0.31 & 1.91\\
 
-\eeTo{ \Pquark \Pquark \Pquark \Pquark}  & 546.5 &   1245.1\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}&169.3& 62.1 \\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}&106.6& 110.4 \\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} &71.5& 23.2 \\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1245.1& 546.5\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 62.1 &169.3\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 110.4 &106.6\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 23.2 &71.5\\
 
-\eeTo{ \Pquark \Pquark}&2948.9&  4009.5 \\
-\eeTo{ \Pquark \Pquark \Plepton \Pnu}&5561.1&  4309.7 \\
-\eeTo{ \Pquark \Pquark \Pl \Pl} &3319.6&  2725.8 \\
-\eeTo{ \Pquark \Pquark \Pnu \Pnu}&1317.5 & 787.7 \\
+\eeTo{ \Pquark \Pquark} &  4009.5 &2948.9\\
+\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  4309.7 &5561.1\\
+\eeTo{ \Pquark \Pquark \Pl \Pl} &  2725.8 &3319.6\\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 787.7 &1317.5 \\
 \hline
-\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 1268.7 & 1160.7 \\
-\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 1267.6 & 1156.3 \\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark}& 287.9 & 287.1 \\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark} & 287.8 & 286.9 \\
-\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark} & 262.5& 136.9 \\
-\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark} & 262.3& 136.4 \\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark} & 54.2& 32.6 \\
-\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark} & 54.2& 32.6 \\
+\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 1160.7  & 1268.7\\
+\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 1156.3  & 1267.6\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 287.1 & 287.9\\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 286.9 & 287.8\\
+\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 136.9  & 262.5\\
+\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 136.4  & 262.3\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 32.6  & 54.2\\
+\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 32.6  & 54.2\\
 
-\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 58.6 & 15.8  \\
-\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 58.5 & 15.7  \\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 11.7 & 3.39  \\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 11.7 & 3.39  \\
+\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 15.8  & 58.6 \\
+\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 15.7  & 58.5 \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 3.39  & 11.7 \\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 3.39   & 11.7\\
 \hline
-\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark} &13050.3& 21406.2 \\
-\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark} &2420.6& 4018.7 \\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}&2423.1& 4034.8 \\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}&402.7& 753.0 \\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 21406.2  &13050.3\\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 4018.7  &2420.6\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 4034.8 &2423.1\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 753.0 &402.7 \\
 \hline \hline
 \end{tabular}
-%}
-\caption{List of signal and background samples with the corresponding cross sections at \rootS{3} and \rootS{1.4}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV. Simulated \PW has invariant mass of 80.4\,GeV.
+
+\caption{List of signal and background samples with the corresponding cross sections at \rootS{3} and \rootS{1.4}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV. Simulated \PW has invariant mass of 80.385\,GeV.
 }
 \label{tab:samples_xsec}
 \end{table}
@@ -218,8 +221,7 @@ TauFinderProcessor & 97.7\% & 79.5\%  \\
 BonoTauFinderProcessor & 86.3\% & 60.3\%  \\
 ForwardFinderProcessor & 95.9\% & 80.7\%  \\
 Combined & 81.0\% & 23.3\%  \\
-
-
+\hline
 \hline
 
 \end{tabular}
@@ -259,8 +261,7 @@ Processor / Efficiency (3\,TeV)  &  Signal  & \egamma{\Pem}{\Pphoton}{BS}{\Pem \
 Combined light lepton finder & 84.4\% & 72.7\%  \\
 ForwardFinderProcessor & 95.9\% & 55.4\%  \\
 Combined & 81.0\% &  33.4\%  \\
-
-
+\hline
 \hline
 
 \end{tabular}
@@ -277,7 +278,7 @@ Other isolated lepton selection processors available in Marlin package, includin
 The signal channel, \eeToHHbbWWHad, is a four-jet final state. A useful technique for the analysis is to reconstruct the four-jet final state using jet algorithms. This allows discriminative variables to be calculated.
 
 \subsection{Jet reconstruction optimisation}
-
+\label{sec:doubleHiggsJetOptimisation}
 Longitudinal invariant, \kt, jet algorithm was chosen for the jet clustering. Due to the presence high level of beam induced background at the CLIC, it has been shown that a jet algorithm designed for hadron colliders are more effective than those traditional designed for the electron-positron collider, such as Durham algorithm.\cite{}
 
 % ATTN, PFO collection should be explained already
@@ -326,7 +327,7 @@ For \rootS{1.4}, shown in \Figure{fig:doubleHiggs1.4TeVMassFit}, \normalPFO with
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs2_M_R}}} \\
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_W_M_R}}} \\
 \caption[Fitted mass of \Hbb, \HWW and \PW for \rootS{1.4}]%
-   {Fitted mass and error of \Hbb, \HWW and \PW for \rootS{1.4}, for loose, normal and tight selected PFO against $R$ parameter.}
+   {Fitted mass and statistical error of \Hbb, \HWW and \PW for \rootS{1.4}, for loose, normal and tight selected PFO against $R$ parameter.}
    \label{fig:doubleHiggs1.4TeVMassFit}
 \end{figure}
 
@@ -335,7 +336,7 @@ For \rootS{1.4}, shown in \Figure{fig:doubleHiggs1.4TeVMassFit}, \normalPFO with
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R}}} \\
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_R}}} \\
 \caption[Fitted width of \Hbb, \HWW and \PW for \rootS{1.4}]%
-   {Fitted combined width and error of \Hbb, \HWW and \PW for \rootS{1.4}, for loose, normal and tight selected PFO against $R$ parameter.}
+   {Fitted combined width and statistical error of \Hbb, \HWW and \PW for \rootS{1.4}, for loose, normal and tight selected PFO against $R$ parameter.}
    \label{fig:doubleHiggs1.4TeVSigmaFit}
 \end{figure}
 
@@ -349,7 +350,7 @@ Later it was shown that \tightPFO with $R = 0.7$ gives a better signal significa
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs2_M_R}}} \\
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_W_M_R}}} \\
 \caption[Fitted mass of \Hbb, \HWW and \PW for \rootS{3}]%
-   {Fitted mass and error of \Hbb, \HWW and \PW for \rootS{3}, for loose, normal and tight selected PFO against $R$ parameter.}
+   {Fitted mass and statistical error of \Hbb, \HWW and \PW for \rootS{3}, for loose, normal and tight selected PFO against $R$ parameter.}
    \label{fig:doubleHiggs3TeVMassFit}
 \end{figure}
 
@@ -358,10 +359,49 @@ Later it was shown that \tightPFO with $R = 0.7$ gives a better signal significa
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R}}} \\
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_R}}} \\
 \caption[Fitted width of \Hbb, \HWW and \PW for \rootS{3}]%
-   {Fitted combined width and error of \Hbb, \HWW and \PW for \rootS{3}, for loose, normal and tight selected PFO against $R$ parameter.}
+   {Fitted combined width and statistical error of \Hbb, \HWW and \PW for \rootS{3}, for loose, normal and tight selected PFO against $R$ parameter.}
    \label{fig:doubleHiggs3TeVSigmaFit}
 \end{figure}
 
+The extracted fitted parameters of optimal jet reconstructions are summarised in \Table{tab:doubleHiggsFitParameters}. 
+
+
+\begin{table}[!tbp]
+\begin{tabular}{lrr}
+\hline
+\hline
+Jet Parameters  &  \rootS{1.4} & \rootS{S}  \\
+\hline
+$\mu_{\Hbb}$ & $122.3_{\pm0.2}$ & $119.1_{\pm0.3}$  \\
+$\sigma_{L,\Hbb}$ & $15.2_{\pm0.2}$ & $15.0_{\pm0.3}$  \\
+$\sigma_{R,\Hbb}$ & $7.55_{\pm0.16}$ & $8.4_{\pm0.2}$  \\
+\hline
+$\mu_{\HWW}$ & $125.7_{\pm0.2}$ & $123.0_{\pm0.3}$  \\
+$\sigma_{L,\HWW}$ & $29.4_{\pm0.3}$ & $36.6_{\pm0.6}$  \\
+$\sigma_{R,\HWW}$ & $7.18_{\pm0.17}$ & $7.4_{\pm0.2}$  \\
+\hline
+$\mu_{\PW}$ & $80.5_{\pm0.2}$ & $78.1_{\pm0.3}$ \\
+$\sigma_{L,\PW}$ & $16.2_{\pm0.3}$ & $13.1_{\pm0.4}$  \\
+$\sigma_{R,\PW}$ & $9.03_{\pm0.16}$ & $9.5_{\pm0.2}$  \\
+\hline
+\hline
+\end{tabular}
+\caption
+[The extracted fitted parameters of optimal jet reconstructions] %
+{The extracted fitted parameters of optimal jet reconstructions, \normalPFO with $R = 0.7$ for \rootS{1.4} and \tightPFO with $R = 0.7$ for \rootS{3}.}
+\label{tab:doubleHiggsFitParameters}
+\end{table}
+
+\begin{comment}
+1996;n;0.7;Higgs1;122.32235414427674;15.240957200997611;7.5504561348187167;0.26543098613314636;0.12182184065528721;3113.2275806707034;0.22543433606291785;0.22430024486833489;0.15856304846729019;0.0030469485502088722;0.0032092877674692391;28.172240112940017;
+1996;n;0.7;Higgs2;125.66836036851493;29.357519006393009;7.1835435253929738;0.060123174451423782;0.13449345831060805;2437.3997896140941;0.24231578716520374;0.3315313674793714;0.17355509758586773;0.0044154148101866499;0.0038407025785247018;20.405908034658069;
+1996;n;0.7;W;80.53749728314051;16.232545245539399;9.0286457327628948;0.2207053340672821;0.11626433093587853;2979.6932364883933;0.21354250006439912;0.31981973411525555;0.1634330407590836;0.004577481212045903;0.0029533158186619834;32.462044237850932;
+
+1998;t;0.7;Higgs1;119.13005080958837;15.037971702204626;8.3914897233789603;0.37671495896544804;0.12723226684850336;2450.6028763420195;0.29519717263163159;0.29538952246189165;0.20193802067306521;0.0041836006100050283;0.0039928785536029465;24.478700631527545;
+1998;t;0.7;Higgs2;122.96923028319048;36.558655935687042;7.7126391897026139;0.093800035959964653;0.14914792076482761;1850.4313592700828;0.33028424129842904;0.566512280790338;0.22405806566158359;0.0077728968962250469;0.0042138236747335245;17.135754973108419;
+1998;t;0.7;W;78.107124939496117;13.086676864110638;9.4516037466928928;0.47312266375623646;0.12798487896514332;2577.7712361437875;0.2531404220362532;0.39068260768287111;0.19051526092021209;0.0067777854263033344;0.0034288665863052362;31.161567527302168;
+
+\end{comment}
 \subsection{Jet flavour tagging} 
 
 Two b-jets out of six jets in \HepProcess final states are identified with flavour tagging processors. The processor calculates a set of discriminatively variables for a jet. After training the MVA, the MVA is applied to jets to produce a likelihood for b-jet and c-jet. For details see \Section{}.
@@ -369,7 +409,6 @@ Two b-jets out of six jets in \HepProcess final states are identified with flavo
 The existing LCFIPlus processor in Marlin package is used. The training sample of the flavour tagging processor is \HepProcess{\Pem \Pep \to \PZ \Pnu \APnu}, where \PZ decays to \HepProcess{\qlight\Aqlight}, \HepProcess{\Pbottom\APbottom}, or \HepProcess{\Pcharm\APcharm} at \rootS{1.4} and \rootS{3}, because they have similar event topology as the signal, and they have only two jets in the final state.
 
 The selection efficiency of b-jets and c-jets with trainning samples are shown in \Figure{}. Flavour tagging performs better at low energy. Because at high energy, particles at more collimated and more difficult to separate.
-
 
 \begin{figure}[!tbp]
   \begin{subfigure}[b]{0.45\textwidth}
@@ -390,3 +429,30 @@ The selection efficiency of b-jets and c-jets with trainning samples are shown i
 
 \subsection{Jet pairing}
 
+The jet pairing was performed by seaking combination of jets that are compatible with signal \eeToHHbbWW. 
+
+The actual pairing is done via a minimisation
+\begin{equation}
+	\chi^2 = \left(\frac{m_{ij}-\mu_{\Hbb}}{\sigma_{\Hbb}^{\prime}}\right)^2 + \left(\frac{m_{klmn}-\mu_{\HWW}}{\sigma_{\HWW}^{\prime}}\right)^2  + \left(\frac{m_{kl}-\mu_{\PW}}{\sigma_{\PW}^{\prime}}\right)^2,
+%\label{eqn:eq_chi2_HHWWbb}
+\end{equation}
+where, $\mu_{\Hbb}$ and $\sigma_{\Hbb}^{\prime}$ are the fitted invariant mass, and the fitted width, respectively. Both are obtained in \Section{sec:doubleHiggsJetOptimisation}. $\sigma_{\Hbb}^{\prime}$ is $\sigma_{L,\Hbb}$ when $m_{ij} < m_{\Hbb}$, and $\sigma_{R,\Hbb}$ otherwise. Similarly $\mu_{\HWW}$ and $\mu_{\PW}$ are fitted mass, and $\sigma_{\HWW}^{\prime}$ and $\sigma_{\PW}^{\prime}$ are fitted invariant mass, and the fitted width, respectively. Out of the six jets from the jet clustering, indicated by subscript $i,j,k,l,m,n$, two are used for \Hbb, two for \PW and four for \HWW. The fitted parameters used are listed in \Table{tab:doubleHiggsFitParameters}. Additional requirement is that at least one of two jets forming \Hbb needs to have a b-jet tag of 0.2 or greater.
+
+With the $\chi^2$, all possible combinations are tested, and the one with smallest $\chi^2$ is chosen.
+
+\section{Pre-selection}
+
+Discriminative variables were calculated. Some are used as to discard background events, whilst hurting the signal events a bit. This allows MVA to concentrate on events where it is difficult to separate in a single parameter space. 
+
+\begin{comment}
+    const TCut selectionCut3000 = "tR0_7_6jet_btag2_ChiSquared<10000  && TightIsoLepTauAll_nPfo < 1 && BonoForwardElectronPhotons_nPfo < 1 && \
+         tR0_7_6jet_btag2_Higgs_all_M>150  && \
+       tR0_7_4jet_btag2_Higgs_all_bTag < 2.3 && tR0_7_6jet_btag2_minusLogY34 < 3.7 \
+       && tR0_7_6jet_btag2_bTag1 > 0.7 &&\
+        tR0_7_6jet_btag2_Higgs_all_M  < 3000 &&  tR0_7_6jet_btag2_Higgs1_M < 500 &&  tR0_7_6jet_btag2_Higgs2_M < 800 &&  tR0_7_6jet_btag2_W_Onshell_M < 200";
+    //&& nR0_7_4jet_btag2_ChiSquared<10000
+    const TCut selectionCut1400 = "nR0_7_6jet_btag2_ChiSquared<10000  && IsoLepTauAll_nPfo < 1      && BonoForwardElectronPhotons_nPfo < 1 && nR0_7_6jet_btag2_Higgs_all_M>150 && \
+        nR0_7_4jet_btag2_Higgs_all_bTag < 2.3  && nR0_7_6jet_btag2_minusLogY34 < 3.6 \
+        &&  nR0_7_6jet_btag2_bTag2 > 0.2 && nR0_7_6jet_btag2_Higgs_all_Pt> 30 &&\
+        nR0_7_6jet_btag2_Higgs_all_M  < 1400 &&  nR0_7_6jet_btag2_Higgs1_M < 500 &&  nR0_7_6jet_btag2_Higgs2_M < 800 &&  nR0_7_6jet_btag2_W_Onshell_M < 200";
+\end{comment}
