@@ -75,9 +75,10 @@ Simulation
 For most background processes, events are simulated when invariant mass of quarks are above 50\,GeV. For electron-photon interaction with four quarks and a neutrino final state, events are simulated when invariant mass of quarks are above 120\,GeV. These limits are necessary to generate a large amount of background samples in a feasible time, without losing much signal samples.
 
 Finally, the main beam induced background \ggHad is simulated and overlayed \cite{} to all samples according to the integration time of each subdetector.  \begin{table}\centering
-
+% TODO fix lumi correction for e gamma, gamma e
+% TODO change some of sample cross section for  electron-photon interaction with four quarks and a neutrino final state
 %\small{
-\begin{tabular}{lrr}
+\begin{tabular}[!tbp]{lrr}
 \hline\hline
 Channel  &  $\sigma(\rootS{3})$ / fb  & $\sigma(\rootS{1.4})$ / fb   \\
 \hline
@@ -196,7 +197,7 @@ If there are multiple temporary search cone of a same seed passing the isolation
 
 Two processors share similar size of search cone and isolation cone. The BonoTauFinderProcessor has looser cut on minimum \pT and invariant, but stricter isolation criterion. This leads to a more aggressive tau finder. The performance of two processors on the signal and selected background samples is shown in \Table{tab:doubleHiggsIsoLepPerformance}
 
-\begin{table}
+\begin{table}[!tbp]
 \begin{tabular}{lrr}
 \hline
 \hline
@@ -243,7 +244,7 @@ where $E$ is the energy of the electron or the photon.
 The background rejection is significant, shown in \Table{} for the signal and selected background.
 
 
-\begin{table}
+\begin{table}[!tbp]
 \begin{tabular}{lrr}
 \hline
 \hline
@@ -274,6 +275,8 @@ Other isolated lepton selection processors available in Marlin package, includin
 \section{Jet reconstruction}
 
 The signal channel, \eeToHHbbWWHad, is a four-jet final state. A useful technique for the analysis is to reconstruct the four-jet final state using jet algorithms. This allows discriminative variables to be calculated.
+
+\subsection{Jet reconstruction optimisation}
 
 Longitudinal invariant, \kt, jet algorithm was chosen for the jet clustering. Due to the presence high level of beam induced background at the CLIC, it has been shown that a jet algorithm designed for hadron colliders are more effective than those traditional designed for the electron-positron collider, such as Durham algorithm.\cite{}
 
@@ -309,7 +312,7 @@ f(m)=A e^{- \frac{(m - \mu)^2}{g}}
 \end{equation}
 The fit represents an asymmetrical gaussian function, where $m$ is binned mass distribution, with 50 bins in range [0, 200]\,GeV. The fitted mass peak is denoted by $\mu$. $\sigma_L$ and $\sigma_R$ allow asymmetrical width of the distribution. $\alpha$ parameter controls the fit of tails. Inspired by the $\Ptop\APtop$  analysis \cite{}, the use of the $\alpha$ parameter allows the fit in the whole mass range, otherwise only the peak of the distribution should be fitted with a gaussian like function. $A$ is the normalistion factor. An example of the fit of $m_{\Hbb}$ is shown in \Figure{fig:doubleHiggsFitMCMass}.
 
-\begin{figure}
+\begin{figure}[!tbp]
 \includegraphics[width=\largefigwidth]{doubleHiggs/MCmassFit}
 \caption[Example MC mass fit for double higgs analysis]%
    {A typical example of MC mass fit of $m_{\Hbb}$ for double higgs analysis. Red line indicates the best fit. Vertical arrow indicates the fitted peak position.}
@@ -318,7 +321,7 @@ The fit represents an asymmetrical gaussian function, where $m$ is binned mass d
 
 For \rootS{1.4}, shown in \Figure{fig:doubleHiggs1.4TeVMassFit}, \normalPFO with $R = 0.7$ give a good fitted mass for \HWW and \PW. The mass is slightly too low for the \Hbb. \Figure{fig:doubleHiggs1.4TeVSigmaFit} shows the combined relative fitted width for the \Hbb, \HWW and \PW. \NormalPFO with $R = 0.7$ gives an almost optimal relative width for \Hbb, while achieving a good balance for \HWW and \PW. Therefore, \normalPFO with $R = 0.7$ is chosen to be the optimal jet reconstruction parameters.
 
-\begin{figure}
+\begin{figure}[!tbp]
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs1_M_R}}} \\
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs2_M_R}}} \\
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_W_M_R}}} \\
@@ -327,7 +330,7 @@ For \rootS{1.4}, shown in \Figure{fig:doubleHiggs1.4TeVMassFit}, \normalPFO with
    \label{fig:doubleHiggs1.4TeVMassFit}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!tbp]
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R}}} \\
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R}}} \\
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_R}}} \\
@@ -341,7 +344,7 @@ For \rootS{3}, the choice is a bit more complicated. Shown in \Figure{fig:double
 
 Later it was shown that \tightPFO with $R = 0.7$ gives a better signal significance. Therefore the optimal choice of jet reconstruction for \rootS{3} is \tightPFO with $R = 0.7$.
 
-\begin{figure}
+\begin{figure}[!tbp]
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs1_M_R}}} \\
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs2_M_R}}} \\
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_W_M_R}}} \\
@@ -350,7 +353,7 @@ Later it was shown that \tightPFO with $R = 0.7$ gives a better signal significa
    \label{fig:doubleHiggs3TeVMassFit}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!tbp]
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R}}} \\
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R}}} \\
 \includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_R}}} \\
@@ -359,12 +362,31 @@ Later it was shown that \tightPFO with $R = 0.7$ gives a better signal significa
    \label{fig:doubleHiggs3TeVSigmaFit}
 \end{figure}
 
-\section{Jet flavour tagging} 
+\subsection{Jet flavour tagging} 
 
-\begin{comment}
-For flavour tagging the LCFIPlus processor \cite{} has been used. The algorithm is based on a multivariate analysis.
-In the training, because of the similar event topology with the signal events, $\epem\to Z\nu\overline{\nu}$ events have been used. The samples have been separately produced for the $Z$ boson decaying to $b\overline{b}$, $c\overline{c}$ and $q\overline{q}$ (where $q=u,d,s$).
-%For the training step, $\epem\to Z\nu\overline{\nu}$ samples produced separately for the $Z$ boson decaying to $b\overline{b}$, $c\overline{c}$ and $q\overline{q}$ (where $q=u,d,s$) have been used because of their similar event topology to the signal.
-It is interesting to notice that in order to mitigate the effects of the beam induced background, the vertex reconstruction is done after the jet clustering.
+Two b-jets out of six jets in \HepProcess final states are identified with flavour tagging processors. The processor calculates a set of discriminatively variables for a jet. After training the MVA, the MVA is applied to jets to produce a likelihood for b-jet and c-jet. For details see \Section{}.
 
-\end{comment}
+The existing LCFIPlus processor in Marlin package is used. The training sample of the flavour tagging processor is \HepProcess{\Pem \Pep \to \PZ \Pnu \APnu}, where \PZ decays to \HepProcess{\qlight\Aqlight}, \HepProcess{\Pbottom\APbottom}, or \HepProcess{\Pcharm\APcharm} at \rootS{1.4} and \rootS{3}, because they have similar event topology as the signal, and they have only two jets in the final state.
+
+The selection efficiency of b-jets and c-jets with trainning samples are shown in \Figure{}. Flavour tagging performs better at low energy. Because at high energy, particles at more collimated and more difficult to separate.
+
+
+\begin{figure}[!tbp]
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/eval-lcfiweights_R0_7_2jets-test}}}
+    \caption{\rootS{1.4}}
+    \label{fig:doubleHiggs1.4Btag}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test}}} 
+    \caption{\rootS{3}}
+    \label{fig:doubleHiggs3Btag}
+  \end{subfigure}
+    \caption[Performance of b-jet tagging with trainning samples]%
+   {Performance of b-jet tagging with trainning samples}
+   \label{fig:doubleHiggsBtag}
+\end{figure}
+
+\subsection{Jet pairing}
+
