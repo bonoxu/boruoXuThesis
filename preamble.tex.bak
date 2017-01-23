@@ -59,6 +59,7 @@
 \DeclareRobustCommand{\eeTo}[1]{\HepProcess{ \Pem \Pep \to #1 }\xspace}
 \DeclareRobustCommand{\ggHad}{\HepProcess{ \Pphoton \Pphoton \to hadrons }\xspace}
 \DeclareRobustCommand{\qlight}{\HepGenParticle{q}{l}{}\xspace}
+\DeclareRobustCommand{\Aqlight}{!\HepGenParticle{q}{l}{}\xspace}
 \DeclareRobustCommand{\egamma}[4]{\HepProcess{ #1 #2 (#3) \to #4}\xspace}
 \DeclareRobustCommand{\gammagamma}[5]{\HepProcess{ #1 (#2) #3 (#4) \to #5}\xspace}
 
@@ -70,9 +71,14 @@
 \DeclareRobustCommand{\W*}{\HepParticle{W}{}{*}\xspace}
 \DeclareRobustCommand{\Hbb}{\HepParticle{H}{\Pbottom\Pbottom}{}\xspace}
 \DeclareRobustCommand{\HWW}{\HepParticle{H}{\PW\W*}{}\xspace}
-\DeclareRobustCommand{loosePFO}{loose selected PFO \xspace}
-\DeclareRobustCommand{normalPFO}{loose selected PFO \xspace}
-\DeclareRobustCommand{tightPFO}{loose selected PFO \xspace}
+
+\DeclareRobustCommand{\loosePFO}{loose selected PFO\xspace}
+\DeclareRobustCommand{\normalPFO}{normal selected PFO\xspace}
+\DeclareRobustCommand{\tightPFO}{tight selected PFO\xspace}
+\DeclareRobustCommand{\LoosePFO}{Loose selected PFO\xspace}
+\DeclareRobustCommand{\NormalPFO}{Normal selected PFO\xspace}
+\DeclareRobustCommand{\TightPFO}{Tight selected PFO\xspace}
+
 %\DeclareRobustCommand{\arXivCode}[1]{arXiv:#1}
 %\DeclareRobustCommand{\CP}{\ensuremath{\mathcal{CP}}\xspace}
 %\DeclareRobustCommand{\CPviolation}{\CP-violation\xspace}
