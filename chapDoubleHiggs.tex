@@ -33,7 +33,7 @@ The main mechanism for double Higgs production %in \epem collisions
 
 \section{Analysis Straggly Overview}
 
-Proof-of-principle study was perform at \CLIC for \rootS{1.4} and 3\,TeV. Simulated samples, including those containing double higgs production were used. Signal events, events with double higgs production, were selected via a set of carefully designed and complicated methods. \gHHH and \gWWHH are extracted simultaneously with template fitting with modified couplings samples.
+Proof-of-principle study was perform at \CLIC using \CLICILD detector model for \rootS{1.4} and 3\,TeV. Simulated samples, including those containing double higgs production were used. Signal events, events with double higgs production, were selected via a set of carefully designed and complicated methods. \gHHH and \gWWHH are extracted simultaneously with template fitting with modified couplings samples.
 \section{Monte Carlo Sample Generation}
 
 
@@ -75,7 +75,8 @@ Simulation
 For most background processes, events are simulated when invariant mass of quarks are above 50\,GeV. For electron-photon interaction with four quarks and a neutrino final state, events are simulated when invariant mass of quarks are above 120\,GeV. These limits are necessary to generate a large amount of background samples in a feasible time, without losing much signal samples.
 
 Finally, the main beam induced background \ggHad is simulated and overlayed \cite{} to all samples according to the integration time of each subdetector.  \begin{table}\centering
-
+% TODO fix lumi correction for e gamma, gamma e
+% TODO change some of sample cross section for  electron-photon interaction with four quarks and a neutrino final state
 %\small{
 \begin{tabular}{lrr}
 \hline\hline
@@ -118,7 +119,7 @@ Channel  &  $\sigma(\rootS{3})$ / fb  & $\sigma(\rootS{1.4})$ / fb   \\
 \hline \hline
 \end{tabular}
 %}
-\caption{List of signal and background samples with the corresponding cross sections at \rootS{3} and \rootS{1.4}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV.
+\caption{List of signal and background samples with the corresponding cross sections at \rootS{3} and \rootS{1.4}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV. Simulated \PW has invariant mass of 80.4\,GeV.
 }
 \label{tab:samples_xsec}
 \end{table}
@@ -284,31 +285,85 @@ The details of jet algorithm can be found in \Section{}.
 
 The $R$ parameter of the \kt jet algorithm, and the collection of the PFOs are chosen to give the best invariant mass resolution. When there are a few suitable candidate, analysis were performed in parallel. Decision were made to give the highest signal significance.
 
-\subsection{Optimisation of jet reconstruction}
+\kt jet algorithm was used as part of the FastJet algorithms available in the Marlin package.
 
-\kt jet algorithm was used as part of the FastJet algorithms available in the Marlin package. 
+The samples containing the signal, \eeToHHbbWWHad, was used for the optimisation of the jet reconstruction. The signal events were chosen using MC truth information.
 
-The samples containing the signal, \eeToHHbbWWHad, was used for the optimisation of the jet reconstruction. The signal events were chosen using MC truth information. 
+Jet algorithm was run in exclusive mode, where number of jets is chosen to be six.
 
-Jet algorithm was run in exclusive mode, where number of jets is chosen to be six. 
-
-For the signal, \eeToHHbbWWHad, one Higgs decays to two \Pbottom quarks, resulting in two jets from hadronisation. Similarly the other Higgs decays to two \PW bosons, where each \PW boson decays into two quarks. Therefore, the expected number of jets is six. 
+For the signal, \eeToHHbbWWHad, one Higgs decays to two \Pbottom quarks, resulting in two jets from hadronisation. Similarly the other Higgs decays to two \PW bosons, where each \PW boson decays into two quarks. Therefore, the expected number of jets is six.
 
 Jets produced by the \kt jet algorithm are pairred up using MC truth information, to the corresponding Higgs and \PW boson. Four invariant mass distributions are obtained: two Higgs masses, $m_{\Hbb}$, $m_{\HWW}$, and two \PW masses $m_{\PW}$, $m_{\W*}$. \W* indicates the off-mass-shell \PW boson, because when a Higgs decays into two \PW bosons, one \PW is off the mass shell, as the Higgs mass is less than the sum two \PW masses.
 
 
 
+Three mass distributions are worth comparing for different jet reconstruction, namely, $m_{\Hbb}$, $m_{\HWW}$, and $m_{\PW}$. The ideal jet reconstruction should produce the a sharp mass peak around the particle's true mass.
+
+To quantitatively access the mass distribution, a gaussian like fit is performed to extract the position of the peak, and the width of the distribution. The fit has the form:
+
+\begin{equation}
+f(m)=A e^{- \frac{(m - \mu)^2}{g}}
+\begin{cases}
+  g = 2\sigma_L + \alpha_L(m - \mu), & \text{if}\ m < \mu\\
+  g = 2\sigma_R + \alpha_R(m - \mu), & \text{if}\ m \geqslant \mu
+\end{cases}
+\end{equation}
+The fit represents an asymmetrical gaussian function, where $m$ is binned mass distribution, with 50 bins in range [0, 200]\,GeV. The fitted mass peak is denoted by $\mu$. $\sigma_L$ and $\sigma_R$ allow asymmetrical width of the distribution. $\alpha$ parameter controls the fit of tails. Inspired by the $\Ptop\APtop$  analysis \cite{}, the use of the $\alpha$ parameter allows the fit in the whole mass range, otherwise only the peak of the distribution should be fitted with a gaussian like function. $A$ is the normalistion factor. An example of the fit of $m_{\Hbb}$ is shown in \Figure{fig:doubleHiggsFitMCMass}.
+
+\begin{figure}
+\includegraphics[width=\largefigwidth]{doubleHiggs/MCmassFit}
+\caption[Example MC mass fit for double higgs analysis]%
+   {A typical example of MC mass fit of $m_{\Hbb}$ for double higgs analysis. Red line indicates the best fit. Vertical arrow indicates the fitted peak position.}
+   \label{fig:doubleHiggsFitMCMass}
+\end{figure}
+
+For \rootS{1.4}, shown in \Figure{fig:doubleHiggs1.4TeVMassFit}, \normalPFO with $R = 0.7$ give a good fitted mass for \HWW and \PW. The mass is slightly too low for the \Hbb. \Figure{fig:doubleHiggs1.4TeVSigmaFit} shows the combined relative fitted width for the \Hbb, \HWW and \PW. \NormalPFO with $R = 0.7$ gives an almost optimal relative width for \Hbb, while achieving a good balance for \HWW and \PW. Therefore, \normalPFO with $R = 0.7$ is chosen to be the optimal jet reconstruction parameters.
+
+\begin{figure}
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs1_M_R}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs2_M_R}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_W_M_R}}} \\
+\caption[Fitted mass of \Hbb, \HWW and \PW for \rootS{1.4}]%
+   {Fitted mass and error of \Hbb, \HWW and \PW for \rootS{1.4}, for loose, normal and tight selected PFO against $R$ parameter.}
+   \label{fig:doubleHiggs1.4TeVMassFit}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_R}}} \\
+\caption[Fitted width of \Hbb, \HWW and \PW for \rootS{1.4}]%
+   {Fitted combined width and error of \Hbb, \HWW and \PW for \rootS{1.4}, for loose, normal and tight selected PFO against $R$ parameter.}
+   \label{fig:doubleHiggs1.4TeVSigmaFit}
+\end{figure}
 
 
-\begin{comment}
-Jet reconstruction is performed using the FastJet package \cite{} via the MarlinFastJet \cite{} interface.
+For \rootS{3}, the choice is a bit more complicated. Shown in \Figure{fig:doubleHiggs3TeVMassFit}, fitted mass for \Hbb favours \normalPFO with $R = 0.8$. Fitted mass for \HWW favours \tightPFO with $R = 0.9$. Fitted mass for \PW favours \tightPFO with $R = 0.8$. Looking at the combined relative fitted width for the \Hbb, \HWW and \PW, shown in \Figure{fig:doubleHiggs3TeVSigmaFit}, \normalPFO gives a larger width than \tightPFO. Within \tightPFO, small $R$ values provide a shaper width for \HWW and \Hbb, but a broader width for \PW. Therefore, \tightPFO with $R = 0.7$ and $R = 1$ are both chosen for parallel analysis.
 
-At the CLIC, due to the high level of induced background, it has been proven that the employment of algorithms designed for hadronic collider, like the longitudinal invariant $k_t$ algorithm \cite{}, is preferable to more classical electron-positron algorithms \cite{}, like the Durham algorithm \cite{}.
-The VLC algorithm \cite{} has been developed as an attempt to include the good features of hadron collider jet algorithms, in particular the resilience against induced background, in an algorithm optimised for lepton colliders. In the \HHbbbb channel the VLC algorithm has been shown to perform better than the longitudinal invariant $k_t$ algorithm, it has therefore been used for this channel. %Finally, different optimal values for the R parameter has been found for the two channels and reported in Table . This is mostly due to the difference between b-jets and light-quark-jets.
+Later it was shown that \tightPFO with $R = 0.7$ gives a better signal significance. Therefore the optimal choice of jet reconstruction for \rootS{3} is \tightPFO with $R = 0.7$.
 
-Jet algorithms at CLIC are run in ``exclusive mode'', the algorithm will stop when the required number of jets is reached. For the \HHbbbb channel, 4 jets are expected from the $b$-quarks hadronisation, while for the \HHWWbb channel, 6, 4 and 2 jets are expected depending on the final states. Hence, clustering in a different number of jets is required according to the event categorisation.
+\begin{figure}
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs1_M_R}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs2_M_R}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_W_M_R}}} \\
+\caption[Fitted mass of \Hbb, \HWW and \PW for \rootS{3}]%
+   {Fitted mass and error of \Hbb, \HWW and \PW for \rootS{3}, for loose, normal and tight selected PFO against $R$ parameter.}
+   \label{fig:doubleHiggs3TeVMassFit}
+\end{figure}
 
-The optimal value for the jet R parameter is optimised separately for the individual channels. The results are reported in Table  . The difference between the channels is mostly justify by the difference between b-jets and light-quark-jets. \\
-\end{comment}
+\begin{figure}
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_R}}} \\
+\caption[Fitted width of \Hbb, \HWW and \PW for \rootS{3}]%
+   {Fitted combined width and error of \Hbb, \HWW and \PW for \rootS{3}, for loose, normal and tight selected PFO against $R$ parameter.}
+   \label{fig:doubleHiggs3TeVSigmaFit}
+\end{figure}
 
+\section{Jet flavour tagging} 
 
+Two b-jets out of six jets in \HepProcess final states are identified with flavour tagging processors. The processor calculates a set of discriminatively variables for a jet. After training the MVA, the MVA is applied to jets to produce a likelihood for b-jet and c-jet. For details see \Section{}.
+
+The existing LCFIPlus processor in Marlin package is used. The training sample of the flavour tagging processor is \HepProcess{\Pem \Pep \to \PZ \Pnu \APnu}, where \PZ decays to \HepProcess{\qlight\Aqlight}, \HepProcess{\Pbottom\APbottom}, or \HepProcess{\Pcharm\APcharm} at \rootS{1.4} and \rootS{3}, because they have similar event topology as the signal, and they have only two jets in the final state.
+
+The selection efficiency of b-jets and c-jets with trainning samples are shown in \Figure{}. Flavour tagging performs better at low energy. Because at high energy, particles at more collimated and more difficult to separate.

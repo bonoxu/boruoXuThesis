@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.4.28)  21 JAN 2017 22:41
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.4.28)  23 JAN 2017 10:59
 entering extended mode
 **main.tex
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.tex"
@@ -929,6 +929,7 @@ LaTeX Info: Redefining \exclude on input line 247.
 LaTeX Info: Redefining \mymath on input line 23.
 LaTeX Info: Redefining \Table on input line 45.
 LaTeX Info: Redefining \Section on input line 46.
+LaTeX Info: Redefining \Figure on input line 47.
 
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\abhep.sty"
 Package: abhep 2005/01/17
@@ -1035,8 +1036,8 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\hepnames.sty"
 Package: hepnames 2014/12/01 Pre-defined HEP particle symbols (version 2.0)
 )
-LaTeX Info: Redefining \W* on input line 69.
-LaTeX Info: Redefining \CERN on input line 79.
+LaTeX Info: Redefining \W* on input line 71.
+LaTeX Info: Redefining \CERN on input line 89.
 )
 ("D:\MiKTeX 2.9\tex\latex\csquotes\csquotes.sty"
 Package: csquotes 2016/12/28 v5.2 context-sensitive quotations (JAW)
@@ -1160,7 +1161,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip100
 )
-("E:\user\my documents\University\2016-2017\boruoXuThesis\main.aux")
+("E:\user\my documents\University\2016-2017\boruoXuThesis\main.aux"
+
+LaTeX Warning: Label `chap:Reconstruction' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
@@ -1175,15 +1180,15 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 49.
-
-("D:\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+ ("D:\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
 LaTeX Font Info:    ... okay on input line 49.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 49.
- ("D:\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+
+("D:\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Info: Redefining \microtypecontext on input line 49.
@@ -1196,7 +1201,8 @@ Package microtype Info: Using default expansion set `basictext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- ("D:\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg"
+
+("D:\MiKTeX 2.9\tex\latex\microtype\mt-cmr.cfg"
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
@@ -1330,12 +1336,12 @@ Package microtype Info: Loading generic settings for font family
 Package tocbasic Info: character protrusion at toc deactivated on input line 48
 .
 
-("E:\user\my documents\University\2016-2017\boruoXuThesis\main.toc")
+("E:\user\my documents\University\2016-2017\boruoXuThesis\main.toc" [11])
 \tf@toc=\write6
- [11]
-[12
 
-] [13])) Processing 'mainmatter' comment.
+[12] [13
+
+])) Processing 'mainmatter' comment.
 Comment 'mainmatter' writing to comment.cut. Straight input of comment.cut.
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\comment.cut"
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\chap1.tex" [14
@@ -1355,103 +1361,257 @@ chapter 2.
 
 ]
 chapter 3.
-[5])
-("E:\user\my documents\University\2016-2017\boruoXuThesis\chapDoubleHiggs.tex"
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5])
+("E:\user\my documents\University\2016-2017\boruoXuThesis\chapPhoton.tex"
 [6]
 chapter 4.
+) ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapTau.tex"
 [7
 
+] [8
+
 ]
+chapter 5.
+) ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapDoubleHiggs.tex
+" [9] [10
 
-LaTeX Warning: Reference `tab:doubleHiggsMCSamples' on page 8 undefined on inpu
-t line 44.
+]
+chapter 6.
+[11]
 
-[8]
+LaTeX Warning: Reference `tab:doubleHiggsMCSamples' on page 12 undefined on inp
+ut line 44.
+
+[12]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 122.
+(Font)              <10.95> on input line 123.
 
 Underfull \vbox (badness 1603) has occurred while \output is active []
 
- [9]
-[10] [11]
+ [13]
+[14] [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-[13] [14]
+ [16]
+[17] [18]
 
-LaTeX Warning: Reference `' on page 15 undefined on input line 243.
+LaTeX Warning: Reference `' on page 19 undefined on input line 244.
 
 
 Underfull \vbox (badness 7308) has occurred while \output is active []
 
- [15]
+ [19]
 
-LaTeX Warning: Reference `' on page 16 undefined on input line 283.
+LaTeX Warning: Reference `' on page 20 undefined on input line 284.
 
 
-Underfull \vbox (badness 1424) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]))
-Processing 'appendices' comment. Comment 'appendices' writing to comment.cut.
-Straight input of comment.cut.
+ [20]
+<doubleHiggs/MCmassFit.png, id=319, 750.1626pt x 507.8172pt>
+File: doubleHiggs/MCmassFit.png Graphic file (type png)
+
+<use doubleHiggs/MCmassFit.png>
+Package pdftex.def Info: doubleHiggs/MCmassFit.png used on input line 314.
+(pdftex.def)             Requested size: 336.05533pt x 227.48505pt.
+
+<doubleHiggs/ILD_1.4TeV_Higgs1_M_R.png, id=323, 1601.985pt x 875.27pt>
+File: doubleHiggs/ILD_1.4TeV_Higgs1_M_R.png Graphic file (type png)
+
+<use doubleHiggs/ILD_1.4TeV_Higgs1_M_R.png>
+Package pdftex.def Info: doubleHiggs/ILD_1.4TeV_Higgs1_M_R.png used on input li
+ne 323.
+(pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
+
+<doubleHiggs/ILD_1.4TeV_Higgs2_M_R.png, id=324, 1601.985pt x 875.27pt>
+File: doubleHiggs/ILD_1.4TeV_Higgs2_M_R.png Graphic file (type png)
+
+<use doubleHiggs/ILD_1.4TeV_Higgs2_M_R.png>
+Package pdftex.def Info: doubleHiggs/ILD_1.4TeV_Higgs2_M_R.png used on input li
+ne 324.
+(pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
+
+<doubleHiggs/ILD_1.4TeV_W_M_R.png, id=325, 1601.985pt x 875.27pt>
+File: doubleHiggs/ILD_1.4TeV_W_M_R.png Graphic file (type png)
+
+<use doubleHiggs/ILD_1.4TeV_W_M_R.png>
+Package pdftex.def Info: doubleHiggs/ILD_1.4TeV_W_M_R.png used on input line 32
+5.
+(pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+<doubleHiggs/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R.png, id=339, 1601.9
+85pt x 875.27pt>
+File: doubleHiggs/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R.png Graphic fi
+le (type png)
+
+<use doubleHiggs/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R.png>
+Package pdftex.def Info: doubleHiggs/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide
+_M_R.png used on input line 332.
+(pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
+
+<doubleHiggs/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R.png, id=340, 1601.9
+85pt x 875.27pt>
+File: doubleHiggs/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R.png Graphic fi
+le (type png)
+
+<use doubleHiggs/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R.png>
+Package pdftex.def Info: doubleHiggs/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide
+_M_R.png used on input line 333.
+(pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
+
+<doubleHiggs/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_R.png, id=341, 1601.985pt 
+x 875.27pt>
+File: doubleHiggs/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_R.png Graphic file (t
+ype png)
+ <use doubleHiggs/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_R.png>
+Package pdftex.def Info: doubleHiggs/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_R.
+png used on input line 334.
+(pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
+
+<doubleHiggs/ILD_3TeV_Higgs1_M_R.png, id=344, 1601.985pt x 875.27pt>
+File: doubleHiggs/ILD_3TeV_Higgs1_M_R.png Graphic file (type png)
+
+<use doubleHiggs/ILD_3TeV_Higgs1_M_R.png>
+Package pdftex.def Info: doubleHiggs/ILD_3TeV_Higgs1_M_R.png used on input line
+ 346.
+(pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
+
+<doubleHiggs/ILD_3TeV_Higgs2_M_R.png, id=345, 1601.985pt x 875.27pt>
+File: doubleHiggs/ILD_3TeV_Higgs2_M_R.png Graphic file (type png)
+
+<use doubleHiggs/ILD_3TeV_Higgs2_M_R.png>
+Package pdftex.def Info: doubleHiggs/ILD_3TeV_Higgs2_M_R.png used on input line
+ 347.
+(pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
+
+<doubleHiggs/ILD_3TeV_W_M_R.png, id=346, 1601.985pt x 875.27pt>
+File: doubleHiggs/ILD_3TeV_W_M_R.png Graphic file (type png)
+
+<use doubleHiggs/ILD_3TeV_W_M_R.png>
+Package pdftex.def Info: doubleHiggs/ILD_3TeV_W_M_R.png used on input line 348.
+
+(pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
+
+<doubleHiggs/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R.png, id=347, 1601.985
+pt x 875.27pt>
+File: doubleHiggs/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R.png Graphic file
+ (type png)
+
+<use doubleHiggs/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R.png>
+Package pdftex.def Info: doubleHiggs/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M
+_R.png used on input line 355.
+(pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
+
+<doubleHiggs/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R.png, id=348, 1601.985
+pt x 875.27pt>
+File: doubleHiggs/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R.png Graphic file
+ (type png)
+
+<use doubleHiggs/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R.png>
+Package pdftex.def Info: doubleHiggs/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M
+_R.png used on input line 356.
+(pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
+
+<doubleHiggs/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_R.png, id=349, 1601.985pt x 
+875.27pt>
+File: doubleHiggs/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_R.png Graphic file (typ
+e png)
+ <use doubleHiggs/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_R.png>
+Package pdftex.def Info: doubleHiggs/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_R.pn
+g used on input line 357.
+(pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
+
+
+LaTeX Warning: Reference `' on page 22 undefined on input line 365.
+
+[22 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/MCmass
+Fit.png>] [23 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHi
+ggs/ILD_1.4TeV_Higgs1_M_R.png> <E:/user/my documents/University/2016-2017/boruo
+XuThesis/doubleHiggs/ILD_1.4TeV_Higgs2_M_R.png> <E:/user/my documents/Universit
+y/2016-2017/boruoXuThesis/doubleHiggs/ILD_1.4TeV_W_M_R.png>] [24 <E:/user/my do
+cuments/University/2016-2017/boruoXuThesis/doubleHiggs/ILD_1.4TeV_Higgs1_SigmaL
+_add_SigmaR_divide_M_R.png> <E:/user/my documents/University/2016-2017/boruoXuT
+hesis/doubleHiggs/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R.png> <E:/user/
+my documents/University/2016-2017/boruoXuThesis/doubleHiggs/ILD_1.4TeV_W_SigmaL
+_add_SigmaR_divide_M_R.png>] [25 <E:/user/my documents/University/2016-2017/bor
+uoXuThesis/doubleHiggs/ILD_3TeV_Higgs1_M_R.png> <E:/user/my documents/Universit
+y/2016-2017/boruoXuThesis/doubleHiggs/ILD_3TeV_Higgs2_M_R.png> <E:/user/my docu
+ments/University/2016-2017/boruoXuThesis/doubleHiggs/ILD_3TeV_W_M_R.png>]
+[26 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/ILD_3T
+eV_Higgs1_SigmaL_add_SigmaR_divide_M_R.png> <E:/user/my documents/University/20
+16-2017/boruoXuThesis/doubleHiggs/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R.
+png> <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/ILD_3
+TeV_W_SigmaL_add_SigmaR_divide_M_R.png>])) Processing 'appendices' comment.
+Comment 'appendices' writing to comment.cut. Straight input of comment.cut.
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\comment.cut")
 Processing 'backmatter' comment. Comment 'backmatter' writing to comment.cut.
 Straight input of comment.cut.
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\comment.cut"
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\backmatter.tex"
-[17] [18
+[27] [28
 
 ] ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.bbl"
-[19] [20
+[29] [30
 
-]) [21] [22
+]) [31] [32
 
 ]
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.lof")
 \tf@lof=\write7
- [23]
-[24
+ [33]
+[34
 
 ] ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.lot")
 \tf@lot=\write8
 ))
-[25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
+[35]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
  ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2B01A15A99D75688FDE2AC8D4573C9AC;1287.
+(rerunfilecheck)             Checksum: BF9109711834176A565ED811796A2212;1776.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 26433 strings out of 494045
- 454976 string characters out of 3154005
- 690589 words of memory out of 3000000
- 28965 multiletter control sequences out of 15000+200000
- 136408 words of font info for 207 fonts, out of 3000000 for 9000
+ 26573 strings out of 494045
+ 459160 string characters out of 3154005
+ 690284 words of memory out of 3000000
+ 29054 multiletter control sequences out of 15000+200000
+ 136673 words of font info for 210 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 67i,35n,68p,8816b,666s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 67i,35n,68p,8816b,687s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{D:/MiKTeX 2.9/fonts/enc/dvip
 s/lm/lm-ec.enc}{D:/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<D:/MiKTeX 2.9/f
 onts/type1/public/amsfonts/euler/euex10.pfb><D:/MiKTeX 2.9/fonts/type1/public/a
-msfonts/euler/eufm10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eurm1
-0.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><D:/MiKTeX 2.9/fonts/type
-1/public/lm/lmbx12.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><D:/MiKT
-eX 2.9/fonts/type1/public/lm/lmr10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr
-12.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><D:/MiKTeX 2.9/fonts/type
-1/public/lm/lmr6.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><D:/MiKTeX 2
-.9/fonts/type1/public/lm/lmri12.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmro12
-.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><D:/MiKTeX 2.9/fonts/type1
-/public/lm/lmsy6.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><D:/MiKTeX 
-2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (39 pages, 353105 bytes).
+msfonts/euler/eufm10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm7
+.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eurm10.pfb><D:/MiKTeX 2.9
+/fonts/type1/public/amsfonts/euler/eurm7.pfb><D:/MiKTeX 2.9/fonts/type1/public/
+lm/lmbx10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><D:/MiKTeX 2.9/fo
+nts/type1/public/lm/lmex10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><
+D:/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><D:/MiKTeX 2.9/fonts/type1/public
+/lm/lmr17.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><D:/MiKTeX 2.9/font
+s/type1/public/lm/lmr8.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><D:/
+MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><D:/MiKTeX 2.9/fonts/type1/public/l
+m/lmsy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><D:/MiKTeX 2.9/font
+s/type1/public/lm/lmsy8.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/
+msam10.pfb>
+Output written on main.pdf (49 pages, 752480 bytes).
 PDF statistics:
- 394 PDF objects out of 1000 (max. 8388607)
- 80 named destinations out of 1000 (max. 500000)
- 24741 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 520 PDF objects out of 1000 (max. 8388607)
+ 104 named destinations out of 1000 (max. 500000)
+ 24870 words of extra memory for PDF output out of 24883 (max. 10000000)
 
