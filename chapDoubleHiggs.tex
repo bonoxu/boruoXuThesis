@@ -74,9 +74,9 @@ Simulation
 
 For most background processes, events are simulated when invariant mass of quarks are above 50\,GeV. For electron-photon interaction with four quarks and a neutrino final state, events are simulated when invariant mass of quarks are above 120\,GeV. These limits are necessary to generate a large amount of background samples in a feasible time, without losing much signal samples.
 
-Finally, the main beam induced background \ggHad is simulated and overlayed \cite{} to all samples according to the integration time of each subdetector.  
+Finally, the main beam induced background \ggHad is simulated and overlayed \cite{} to all samples according to the integration time of each subdetector.
 
-\begin{table}[!tbp]\centering 
+\begin{table}[!tbp]\centering
 % TODO fix lumi correction for e gamma, gamma e
 % TODO change some of sample cross section for  electron-photon interaction with four quarks and a neutrino final state
 %\small{
@@ -363,7 +363,7 @@ Later it was shown that \tightPFO with $R = 0.7$ gives a better signal significa
    \label{fig:doubleHiggs3TeVSigmaFit}
 \end{figure}
 
-The extracted fitted parameters of optimal jet reconstructions are summarised in \Table{tab:doubleHiggsFitParameters}. 
+The extracted fitted parameters of optimal jet reconstructions are summarised in \Table{tab:doubleHiggsFitParameters}.
 
 
 \begin{table}[!tbp]
@@ -402,7 +402,7 @@ $\sigma_{R,\PW}$ & $9.03_{\pm0.16}$ & $9.5_{\pm0.2}$  \\
 1998;t;0.7;W;78.107124939496117;13.086676864110638;9.4516037466928928;0.47312266375623646;0.12798487896514332;2577.7712361437875;0.2531404220362532;0.39068260768287111;0.19051526092021209;0.0067777854263033344;0.0034288665863052362;31.161567527302168;
 
 \end{comment}
-\subsection{Jet flavour tagging} 
+\subsection{Jet flavour tagging}
 
 Two b-jets out of six jets in \HepProcess final states are identified with flavour tagging processors. The processor calculates a set of discriminatively variables for a jet. After training the MVA, the MVA is applied to jets to produce a likelihood for b-jet and c-jet. For details see \Section{}.
 
@@ -418,7 +418,7 @@ The selection efficiency of b-jets and c-jets with trainning samples are shown i
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test}}} 
+    \includegraphics[width=\textwidth]{{{doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test}}}
     \caption{\rootS{3}}
     \label{fig:doubleHiggs3Btag}
   \end{subfigure}
@@ -429,7 +429,7 @@ The selection efficiency of b-jets and c-jets with trainning samples are shown i
 
 \subsection{Jet pairing}
 
-The jet pairing was performed by seaking combination of jets that are compatible with signal \eeToHHbbWW. 
+The jet pairing was performed by seaking combination of jets that are compatible with signal \eeToHHbbWW.
 
 The actual pairing is done via a minimisation
 \begin{equation}
@@ -442,16 +442,49 @@ With the $\chi^2$, all possible combinations are tested, and the one with smalle
 
 \section{Pre-selection}
 
-Discriminative variables were calculated. Some are used as to discard background events, whilst hurting the signal events a bit. This allows MVA to concentrate on events where it is difficult to separate in a single parameter space. 
+Discriminative variables were calculated. Some are used as to discard background events, whilst hurting the signal events a bit. This allows MVA to concentrate on events where it is difficult to separate in a single parameter space.
 
 \subsection{Discriminative pre-selection cuts}
 
-As discussed before, events with identified leptons are rejected. Events where the largest b-jet tag is less than 0.1 is rejected. 
+As discussed before, events with identified leptons are rejected. Jet pairing implies that events with the largest b-jet tag  less than 0.2 are rejected.
 
-For \rootS{1.4}
+For \rootS{1.4}, a range of variables were tested and three where chosen as pre-selection cuts. 
+
+Event with invariant mass of two higgs less than 150\,GeV is rejected. The cut above 120\,GeV is needed as some background samples were generated only for invariant mass greater than 120\,GeV. Shown in \Table{} and \Figure{}, this cut is effective against samples with two quark final states.
+
+Event with second highest b-jet tag less than 0.2 is rejected. This stricter cut than the jet pairing helps to reduce samples with no b-jets.
+
+Event with \pT of two higgs less than 30\,GeV is rejected. This is extremely effective against samples with no neutrinos in the final state.
+
+\begin{figure}[!tbp]
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_prepare}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_prepare}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/nR0_7_6jet_btag2_bTag2_TMVA20161208R0_7_qq_btag2_prepare}}} \\
+\caption[Discriminative pre-selection variables for \rootS{1.4}]%
+   {Discriminative pre-selection variables for \rootS{1.4}, after rejecting events with identified leptons, and jet pairing}
+   \label{fig:doubleHiggs1.4TeVPreSelection}
+\end{figure}
+
+For \rootS{3}, event with invariant mass of two higgs less than 150\,GeV is rejected, for the reason similar to \rootS{1.4}.
+
+In addition, event with highest b-jet tag less than 0.7 is rejected. It is found that b-jet tag is less efficient at a higher \sqrtS. Therefore, a stricter cut at b-jet tag is useful to compensate for the tagging efficiency loss. 
+
+\begin{figure}[!tbp]
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag2_prepare}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prepare}}} \\
+\caption[Discriminative pre-selection variables for \rootS{3}]%
+   {Discriminative pre-selection variables for \rootS{3}, after rejecting events with identified leptons, and jet pairing}
+   \label{fig:doubleHiggsTeVPreSelection}
+\end{figure}
+
+
+
+These set of cuts are stricter than usual analysis. The cross sections of signal channel for both \sqrtS are extremely small, comparing to the background. Hence only the signal events with very clear characteristic topologies would be able to pass the final selection, in order to achieve a decent signal-to-background ratio. Therefore, a strict pre-selection cut would not hurt the final signal selection. On the contrary, final signal selection would benefit from MVA being able to focus the difficult background events, where their topologies are too similar to the signal events to separate in any single parameter space.
+
+\subsection{Sanity cuts}
 
 \subsection{Mutually exclusive cuts for \eeToHHbbWW and \eeToHHbbbb}
-\subsection{Sanity cuts}
+
 \begin{comment}
     const TCut selectionCut3000 = "tR0_7_6jet_btag2_ChiSquared<20  && TightIsoLepTauAll_nPfo < 1 && BonoForwardElectronPhotons_nPfo < 1 && \
          tR0_7_6jet_btag2_Higgs_all_M>150  && \
@@ -463,4 +496,4 @@ For \rootS{1.4}
         nR0_7_4jet_btag2_Higgs_all_bTag < 2.3  && nR0_7_6jet_btag2_minusLogY34 < 3.6 \
         &&  nR0_7_6jet_btag2_bTag2 > 0.2 && nR0_7_6jet_btag2_Higgs_all_Pt> 30 &&\
         nR0_7_6jet_btag2_Higgs_all_M  < 1400 &&  nR0_7_6jet_btag2_Higgs1_M < 500 &&  nR0_7_6jet_btag2_Higgs2_M < 800 &&  nR0_7_6jet_btag2_W_Onshell_M < 200";
-\end{comment}
+\end{comment} 

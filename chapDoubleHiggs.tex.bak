@@ -74,9 +74,9 @@ Simulation
 
 For most background processes, events are simulated when invariant mass of quarks are above 50\,GeV. For electron-photon interaction with four quarks and a neutrino final state, events are simulated when invariant mass of quarks are above 120\,GeV. These limits are necessary to generate a large amount of background samples in a feasible time, without losing much signal samples.
 
-Finally, the main beam induced background \ggHad is simulated and overlayed \cite{} to all samples according to the integration time of each subdetector.  
+Finally, the main beam induced background \ggHad is simulated and overlayed \cite{} to all samples according to the integration time of each subdetector.
 
-\begin{table}[!tbp]\centering 
+\begin{table}[!tbp]\centering
 % TODO fix lumi correction for e gamma, gamma e
 % TODO change some of sample cross section for  electron-photon interaction with four quarks and a neutrino final state
 %\small{
@@ -363,7 +363,7 @@ Later it was shown that \tightPFO with $R = 0.7$ gives a better signal significa
    \label{fig:doubleHiggs3TeVSigmaFit}
 \end{figure}
 
-The extracted fitted parameters of optimal jet reconstructions are summarised in \Table{tab:doubleHiggsFitParameters}. 
+The extracted fitted parameters of optimal jet reconstructions are summarised in \Table{tab:doubleHiggsFitParameters}.
 
 
 \begin{table}[!tbp]
@@ -402,7 +402,7 @@ $\sigma_{R,\PW}$ & $9.03_{\pm0.16}$ & $9.5_{\pm0.2}$  \\
 1998;t;0.7;W;78.107124939496117;13.086676864110638;9.4516037466928928;0.47312266375623646;0.12798487896514332;2577.7712361437875;0.2531404220362532;0.39068260768287111;0.19051526092021209;0.0067777854263033344;0.0034288665863052362;31.161567527302168;
 
 \end{comment}
-\subsection{Jet flavour tagging} 
+\subsection{Jet flavour tagging}
 
 Two b-jets out of six jets in \HepProcess final states are identified with flavour tagging processors. The processor calculates a set of discriminatively variables for a jet. After training the MVA, the MVA is applied to jets to produce a likelihood for b-jet and c-jet. For details see \Section{}.
 
@@ -418,7 +418,7 @@ The selection efficiency of b-jets and c-jets with trainning samples are shown i
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test}}} 
+    \includegraphics[width=\textwidth]{{{doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test}}}
     \caption{\rootS{3}}
     \label{fig:doubleHiggs3Btag}
   \end{subfigure}
@@ -429,7 +429,7 @@ The selection efficiency of b-jets and c-jets with trainning samples are shown i
 
 \subsection{Jet pairing}
 
-The jet pairing was performed by seaking combination of jets that are compatible with signal \eeToHHbbWW. 
+The jet pairing was performed by seaking combination of jets that are compatible with signal \eeToHHbbWW.
 
 The actual pairing is done via a minimisation
 \begin{equation}
@@ -442,17 +442,27 @@ With the $\chi^2$, all possible combinations are tested, and the one with smalle
 
 \section{Pre-selection}
 
-Discriminative variables were calculated. Some are used as to discard background events, whilst hurting the signal events a bit. This allows MVA to concentrate on events where it is difficult to separate in a single parameter space. 
+Discriminative variables were calculated. Some are used as to discard background events, whilst hurting the signal events a bit. This allows MVA to concentrate on events where it is difficult to separate in a single parameter space.
+
+\subsection{Discriminative pre-selection cuts}
+
+As discussed before, events with identified leptons are rejected. Events where the largest b-jet tag is less than 0.1 is rejected.
+
+For \rootS{1.4}, 
+
+\subsection{Sanity cuts}
+
+\subsection{Mutually exclusive cuts for \eeToHHbbWW and \eeToHHbbbb}
 
 \begin{comment}
-    const TCut selectionCut3000 = "tR0_7_6jet_btag2_ChiSquared<10000  && TightIsoLepTauAll_nPfo < 1 && BonoForwardElectronPhotons_nPfo < 1 && \
+    const TCut selectionCut3000 = "tR0_7_6jet_btag2_ChiSquared<20  && TightIsoLepTauAll_nPfo < 1 && BonoForwardElectronPhotons_nPfo < 1 && \
          tR0_7_6jet_btag2_Higgs_all_M>150  && \
        tR0_7_4jet_btag2_Higgs_all_bTag < 2.3 && tR0_7_6jet_btag2_minusLogY34 < 3.7 \
        && tR0_7_6jet_btag2_bTag1 > 0.7 &&\
         tR0_7_6jet_btag2_Higgs_all_M  < 3000 &&  tR0_7_6jet_btag2_Higgs1_M < 500 &&  tR0_7_6jet_btag2_Higgs2_M < 800 &&  tR0_7_6jet_btag2_W_Onshell_M < 200";
     //&& nR0_7_4jet_btag2_ChiSquared<10000
-    const TCut selectionCut1400 = "nR0_7_6jet_btag2_ChiSquared<10000  && IsoLepTauAll_nPfo < 1      && BonoForwardElectronPhotons_nPfo < 1 && nR0_7_6jet_btag2_Higgs_all_M>150 && \
+    const TCut selectionCut1400 = "nR0_7_6jet_btag2_ChiSquared<20  && IsoLepTauAll_nPfo < 1      && BonoForwardElectronPhotons_nPfo < 1 && nR0_7_6jet_btag2_Higgs_all_M>150 && \
         nR0_7_4jet_btag2_Higgs_all_bTag < 2.3  && nR0_7_6jet_btag2_minusLogY34 < 3.6 \
         &&  nR0_7_6jet_btag2_bTag2 > 0.2 && nR0_7_6jet_btag2_Higgs_all_Pt> 30 &&\
         nR0_7_6jet_btag2_Higgs_all_M  < 1400 &&  nR0_7_6jet_btag2_Higgs1_M < 500 &&  nR0_7_6jet_btag2_Higgs2_M < 800 &&  nR0_7_6jet_btag2_W_Onshell_M < 200";
-\end{comment}
+\end{comment} 
