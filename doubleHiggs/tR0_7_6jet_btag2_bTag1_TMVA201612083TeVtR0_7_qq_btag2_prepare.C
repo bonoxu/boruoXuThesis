@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: canvas1/
-//=========  (Mon Jan 23 18:45:18 2017) by ROOT version5.34/05
+//=========  (Tue Jan 24 19:04:05 2017) by ROOT version5.34/05
    TCanvas *canvas1 = new TCanvas("canvas1", "",12,51,1600,900);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -26,64 +26,64 @@
    THStack->SetTitle("");
    THStack->SetMinimum(0.1);
    
-   TH1F *THStack_stack_7 = new TH1F("THStack_stack_7","",40,0,1);
-   THStack_stack_7->SetMinimum(0.0197552);
-   THStack_stack_7->SetMaximum(3.491479e+07);
-   THStack_stack_7->SetDirectory(0);
-   THStack_stack_7->SetStats(0);
-   THStack_stack_7->SetLineWidth(2);
-   THStack_stack_7->SetMarkerSize(1.2);
-   THStack_stack_7->GetXaxis()->SetTitle("Highest b-tag");
-   THStack_stack_7->GetXaxis()->SetNdivisions(506);
+   TH1F *THStack_stack_1 = new TH1F("THStack_stack_1","",40,0,1);
+   THStack_stack_1->SetMinimum(0.0197552);
+   THStack_stack_1->SetMaximum(3.491479e+07);
+   THStack_stack_1->SetDirectory(0);
+   THStack_stack_1->SetStats(0);
+   THStack_stack_1->SetLineWidth(2);
+   THStack_stack_1->SetMarkerSize(1.2);
+   THStack_stack_1->GetXaxis()->SetTitle("Highest b-tag");
+   THStack_stack_1->GetXaxis()->SetNdivisions(506);
 
    Int_t ci;   // for color index setting
    ci = TColor::GetColor("#616161");
-   THStack_stack_7->GetXaxis()->SetAxisColor(ci);
+   THStack_stack_1->GetXaxis()->SetAxisColor(ci);
 
    ci = TColor::GetColor("#616161");
-   THStack_stack_7->GetXaxis()->SetLabelColor(ci);
-   THStack_stack_7->GetXaxis()->SetLabelFont(42);
-   THStack_stack_7->GetXaxis()->SetLabelOffset(0.0015);
-   THStack_stack_7->GetXaxis()->SetLabelSize(0.06);
-   THStack_stack_7->GetXaxis()->SetTitleSize(0.07);
-   THStack_stack_7->GetXaxis()->SetTitleOffset(1.1);
+   THStack_stack_1->GetXaxis()->SetLabelColor(ci);
+   THStack_stack_1->GetXaxis()->SetLabelFont(42);
+   THStack_stack_1->GetXaxis()->SetLabelOffset(0.0015);
+   THStack_stack_1->GetXaxis()->SetLabelSize(0.06);
+   THStack_stack_1->GetXaxis()->SetTitleSize(0.07);
+   THStack_stack_1->GetXaxis()->SetTitleOffset(1.1);
 
    ci = TColor::GetColor("#212121");
-   THStack_stack_7->GetXaxis()->SetTitleColor(ci);
-   THStack_stack_7->GetXaxis()->SetTitleFont(42);
-   THStack_stack_7->GetYaxis()->SetTitle("Number of events");
-   THStack_stack_7->GetYaxis()->SetNdivisions(506);
+   THStack_stack_1->GetXaxis()->SetTitleColor(ci);
+   THStack_stack_1->GetXaxis()->SetTitleFont(42);
+   THStack_stack_1->GetYaxis()->SetTitle("Number of events");
+   THStack_stack_1->GetYaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
-   THStack_stack_7->GetYaxis()->SetAxisColor(ci);
+   THStack_stack_1->GetYaxis()->SetAxisColor(ci);
 
    ci = TColor::GetColor("#616161");
-   THStack_stack_7->GetYaxis()->SetLabelColor(ci);
-   THStack_stack_7->GetYaxis()->SetLabelFont(42);
-   THStack_stack_7->GetYaxis()->SetLabelOffset(0.02);
-   THStack_stack_7->GetYaxis()->SetLabelSize(0.06);
-   THStack_stack_7->GetYaxis()->SetTitleSize(0.07);
-   THStack_stack_7->GetYaxis()->SetTitleOffset(1.1);
+   THStack_stack_1->GetYaxis()->SetLabelColor(ci);
+   THStack_stack_1->GetYaxis()->SetLabelFont(42);
+   THStack_stack_1->GetYaxis()->SetLabelOffset(0.02);
+   THStack_stack_1->GetYaxis()->SetLabelSize(0.06);
+   THStack_stack_1->GetYaxis()->SetTitleSize(0.07);
+   THStack_stack_1->GetYaxis()->SetTitleOffset(1.1);
 
    ci = TColor::GetColor("#212121");
-   THStack_stack_7->GetYaxis()->SetTitleColor(ci);
-   THStack_stack_7->GetYaxis()->SetTitleFont(42);
+   THStack_stack_1->GetYaxis()->SetTitleColor(ci);
+   THStack_stack_1->GetYaxis()->SetTitleFont(42);
 
    ci = TColor::GetColor("#616161");
-   THStack_stack_7->GetZaxis()->SetAxisColor(ci);
+   THStack_stack_1->GetZaxis()->SetAxisColor(ci);
 
    ci = TColor::GetColor("#616161");
-   THStack_stack_7->GetZaxis()->SetLabelColor(ci);
-   THStack_stack_7->GetZaxis()->SetLabelFont(42);
-   THStack_stack_7->GetZaxis()->SetLabelOffset(0.02);
-   THStack_stack_7->GetZaxis()->SetLabelSize(0.06);
-   THStack_stack_7->GetZaxis()->SetTitleSize(0.07);
-   THStack_stack_7->GetZaxis()->SetTitleOffset(1.1);
+   THStack_stack_1->GetZaxis()->SetLabelColor(ci);
+   THStack_stack_1->GetZaxis()->SetLabelFont(42);
+   THStack_stack_1->GetZaxis()->SetLabelOffset(0.02);
+   THStack_stack_1->GetZaxis()->SetLabelSize(0.06);
+   THStack_stack_1->GetZaxis()->SetTitleSize(0.07);
+   THStack_stack_1->GetZaxis()->SetTitleOffset(1.1);
 
    ci = TColor::GetColor("#212121");
-   THStack_stack_7->GetZaxis()->SetTitleColor(ci);
-   THStack_stack_7->GetZaxis()->SetTitleFont(42);
-   THStack->SetHistogram(THStack_stack_7);
+   THStack_stack_1->GetZaxis()->SetTitleColor(ci);
+   THStack_stack_1->GetZaxis()->SetTitleFont(42);
+   THStack->SetHistogram(THStack_stack_1);
    
    
    TH1F *0 = new TH1F("0","HH#nu#nu#rightarrowbbWW*#nu#nu,hadronic",40,0,1);
@@ -127,8 +127,6 @@
 
    ci = TColor::GetColor("#63c1e5");
    0->SetLineColor(ci);
-   0->SetLineWidth(2);
-   0->SetMarkerSize(1.2);
    0->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -179,7 +177,6 @@
    THStack->Add(0,"");
    
    TH1F *1 = new TH1F("1","HH#nu#nu#rightarrowbbbb#nu#nu",40,0,1);
-   1->SetBinContent(1,0.05939399);
    1->SetBinContent(9,0.138586);
    1->SetBinContent(10,0.227677);
    1->SetBinContent(11,0.207879);
@@ -212,7 +209,7 @@
    1->SetBinContent(38,13.77953);
    1->SetBinContent(39,32.22162);
    1->SetBinContent(40,508.5777);
-   1->SetEntries(59848);
+   1->SetEntries(59842);
    1->SetStats(0);
 
    ci = TColor::GetColor("#f0916e");
@@ -220,8 +217,6 @@
 
    ci = TColor::GetColor("#f0916e");
    1->SetLineColor(ci);
-   1->SetLineWidth(2);
-   1->SetMarkerSize(1.2);
    1->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -312,8 +307,6 @@
 
    ci = TColor::GetColor("#62eee3");
    2->SetLineColor(ci);
-   2->SetLineWidth(2);
-   2->SetMarkerSize(1.2);
    2->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -364,7 +357,6 @@
    THStack->Add(2,"");
    
    TH1F *3 = new TH1F("3","Hbb#nu",40,0,1);
-   3->SetBinContent(1,0.5402399);
    3->SetBinContent(9,5.807575);
    3->SetBinContent(10,9.555472);
    3->SetBinContent(11,8.373703);
@@ -397,7 +389,7 @@
    3->SetBinContent(38,88.76943);
    3->SetBinContent(39,201.1146);
    3->SetBinContent(40,2373.827);
-   3->SetEntries(90793);
+   3->SetEntries(90777);
    3->SetStats(0);
 
    ci = TColor::GetColor("#f67ea6");
@@ -405,8 +397,6 @@
 
    ci = TColor::GetColor("#f67ea6");
    3->SetLineColor(ci);
-   3->SetLineWidth(2);
-   3->SetMarkerSize(1.2);
    3->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -457,7 +447,6 @@
    THStack->Add(3,"");
    
    TH1F *4 = new TH1F("4","Hcc#nu",40,0,1);
-   4->SetBinContent(1,0.4591859);
    4->SetBinContent(9,73.95033);
    4->SetBinContent(10,88.57858);
    4->SetBinContent(11,77.71125);
@@ -490,7 +479,7 @@
    4->SetBinContent(38,93.14854);
    4->SetBinContent(39,180.2621);
    4->SetBinContent(40,1381.384);
-   4->SetEntries(133391);
+   4->SetEntries(133370);
    4->SetStats(0);
 
    ci = TColor::GetColor("#48c9a8");
@@ -498,8 +487,6 @@
 
    ci = TColor::GetColor("#48c9a8");
    4->SetLineColor(ci);
-   4->SetLineWidth(2);
-   4->SetMarkerSize(1.2);
    4->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -550,7 +537,6 @@
    THStack->Add(4,"");
    
    TH1F *5 = new TH1F("5","Hqq#nu",40,0,1);
-   5->SetBinContent(1,0.116308);
    5->SetBinContent(9,236.6208);
    5->SetBinContent(10,278.3211);
    5->SetBinContent(11,203.0094);
@@ -583,7 +569,7 @@
    5->SetBinContent(38,230.4568);
    5->SetBinContent(39,475.2729);
    5->SetBinContent(40,3634.171);
-   5->SetEntries(125094);
+   5->SetEntries(125092);
    5->SetStats(0);
 
    ci = TColor::GetColor("#e2a0e3");
@@ -591,8 +577,6 @@
 
    ci = TColor::GetColor("#e2a0e3");
    5->SetLineColor(ci);
-   5->SetLineWidth(2);
-   5->SetMarkerSize(1.2);
    5->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -643,40 +627,39 @@
    THStack->Add(5,"");
    
    TH1F *6 = new TH1F("6","e^{#pm}#gamma#rightarrowqqH#nu",40,0,1);
-   6->SetBinContent(1,10.52248);
-   6->SetBinContent(9,7741.515);
-   6->SetBinContent(10,9481.39);
+   6->SetBinContent(9,7741.514);
+   6->SetBinContent(10,9481.389);
    6->SetBinContent(11,7202.188);
    6->SetBinContent(12,13593.42);
-   6->SetBinContent(13,7325.839);
-   6->SetBinContent(14,4392.431);
-   6->SetBinContent(15,3811.888);
-   6->SetBinContent(16,3497.062);
-   6->SetBinContent(17,3210.298);
+   6->SetBinContent(13,7325.838);
+   6->SetBinContent(14,4392.43);
+   6->SetBinContent(15,3811.887);
+   6->SetBinContent(16,3497.061);
+   6->SetBinContent(17,3210.297);
    6->SetBinContent(18,2960.366);
-   6->SetBinContent(19,2780.591);
-   6->SetBinContent(20,2460.503);
+   6->SetBinContent(19,2780.59);
+   6->SetBinContent(20,2460.502);
    6->SetBinContent(21,2264.065);
-   6->SetBinContent(22,2203.556);
+   6->SetBinContent(22,2203.555);
    6->SetBinContent(23,2100.075);
-   6->SetBinContent(24,1858.063);
+   6->SetBinContent(24,1858.062);
    6->SetBinContent(25,1869.461);
-   6->SetBinContent(26,1747.582);
+   6->SetBinContent(26,1747.581);
    6->SetBinContent(27,1730.045);
-   6->SetBinContent(28,1707.248);
+   6->SetBinContent(28,1707.247);
    6->SetBinContent(29,1715.139);
-   6->SetBinContent(30,1751.966);
-   6->SetBinContent(31,1752.843);
-   6->SetBinContent(32,1837.019);
+   6->SetBinContent(30,1751.965);
+   6->SetBinContent(31,1752.842);
+   6->SetBinContent(32,1837.018);
    6->SetBinContent(33,1979.065);
    6->SetBinContent(34,2176.37);
    6->SetBinContent(35,2626.247);
    6->SetBinContent(36,3336.579);
-   6->SetBinContent(37,4634.47);
+   6->SetBinContent(37,4634.469);
    6->SetBinContent(38,7561.739);
    6->SetBinContent(39,15257.88);
    6->SetBinContent(40,114456.2);
-   6->SetEntries(277350);
+   6->SetEntries(277338);
    6->SetStats(0);
 
    ci = TColor::GetColor("#a6c973");
@@ -684,8 +667,6 @@
 
    ci = TColor::GetColor("#a6c973");
    6->SetLineColor(ci);
-   6->SetLineWidth(2);
-   6->SetMarkerSize(1.2);
    6->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -736,7 +717,6 @@
    THStack->Add(6,"");
    
    TH1F *7 = new TH1F("7","qqqq#nu#nu",40,0,1);
-   7->SetBinContent(1,7.320093);
    7->SetBinContent(9,16535.98);
    7->SetBinContent(10,19686.75);
    7->SetBinContent(11,14644.08);
@@ -769,7 +749,7 @@
    7->SetBinContent(38,1721.382);
    7->SetBinContent(39,3117.301);
    7->SetBinContent(40,21443.58);
-   7->SetEntries(1209695);
+   7->SetEntries(1209642);
    7->SetStats(0);
 
    ci = TColor::GetColor("#b196e4");
@@ -777,8 +757,6 @@
 
    ci = TColor::GetColor("#b196e4");
    7->SetLineColor(ci);
-   7->SetLineWidth(2);
-   7->SetMarkerSize(1.2);
    7->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -829,7 +807,6 @@
    THStack->Add(7,"");
    
    TH1F *8 = new TH1F("8","qqqqll",40,0,1);
-   8->SetBinContent(1,1.84776);
    8->SetBinContent(9,11886.96);
    8->SetBinContent(10,15415.06);
    8->SetBinContent(11,10096.58);
@@ -862,7 +839,7 @@
    8->SetBinContent(38,428.6813);
    8->SetBinContent(39,490.5819);
    8->SetBinContent(40,595.9053);
-   8->SetEntries(107591);
+   8->SetEntries(107589);
    8->SetStats(0);
 
    ci = TColor::GetColor("#77bd7d");
@@ -870,8 +847,6 @@
 
    ci = TColor::GetColor("#77bd7d");
    8->SetLineColor(ci);
-   8->SetLineWidth(2);
-   8->SetMarkerSize(1.2);
    8->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -922,7 +897,6 @@
    THStack->Add(8,"");
    
    TH1F *9 = new TH1F("9","qqqql#nu",40,0,1);
-   9->SetBinContent(1,3.076948);
    9->SetBinContent(9,4552.417);
    9->SetBinContent(10,6364.722);
    9->SetBinContent(11,3824.683);
@@ -955,7 +929,7 @@
    9->SetBinContent(38,2267.261);
    9->SetBinContent(39,4384.985);
    9->SetBinContent(40,29139.82);
-   9->SetEntries(191327);
+   9->SetEntries(191320);
    9->SetStats(0);
 
    ci = TColor::GetColor("#e798b9");
@@ -963,8 +937,6 @@
 
    ci = TColor::GetColor("#e798b9");
    9->SetLineColor(ci);
-   9->SetLineWidth(2);
-   9->SetMarkerSize(1.2);
    9->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -1015,7 +987,6 @@
    THStack->Add(9,"");
    
    TH1F *10 = new TH1F("10","e^{#pm}#gamma#rightarrowqqqq#nu",40,0,1);
-   10->SetBinContent(1,46.67928);
    10->SetBinContent(9,90437.05);
    10->SetBinContent(10,110897.5);
    10->SetBinContent(11,81587.12);
@@ -1048,7 +1019,7 @@
    10->SetBinContent(38,19865.03);
    10->SetBinContent(39,37890.06);
    10->SetBinContent(40,252775);
-   10->SetEntries(3949198);
+   10->SetEntries(3949038);
    10->SetStats(0);
 
    ci = TColor::GetColor("#9aebb2");
@@ -1056,8 +1027,6 @@
 
    ci = TColor::GetColor("#9aebb2");
    10->SetLineColor(ci);
-   10->SetLineWidth(2);
-   10->SetMarkerSize(1.2);
    10->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -1148,8 +1117,6 @@
 
    ci = TColor::GetColor("#ea908f");
    11->SetLineColor(ci);
-   11->SetLineWidth(2);
-   11->SetMarkerSize(1.2);
    11->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -1200,7 +1167,6 @@
    THStack->Add(11,"");
    
    TH1F *12 = new TH1F("12","qqqq",40,0,1);
-   12->SetBinContent(1,317.1678);
    12->SetBinContent(9,103885.9);
    12->SetBinContent(10,153798.8);
    12->SetBinContent(11,103134.1);
@@ -1233,7 +1199,7 @@
    12->SetBinContent(38,5137.063);
    12->SetBinContent(39,7187.173);
    12->SetBinContent(40,22597.95);
-   12->SetEntries(1482311);
+   12->SetEntries(1481868);
    12->SetStats(0);
 
    ci = TColor::GetColor("#4ac7d0");
@@ -1241,8 +1207,6 @@
 
    ci = TColor::GetColor("#4ac7d0");
    12->SetLineColor(ci);
-   12->SetLineWidth(2);
-   12->SetMarkerSize(1.2);
    12->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -1293,7 +1257,6 @@
    THStack->Add(12,"");
    
    TH1F *13 = new TH1F("13","#gamma#gamma#rightarrowqqqq",40,0,1);
-   13->SetBinContent(1,155.392);
    13->SetBinContent(9,2806502);
    13->SetBinContent(10,3583683);
    13->SetBinContent(11,2628068);
@@ -1315,18 +1278,18 @@
    13->SetBinContent(27,144150.8);
    13->SetBinContent(28,126695.2);
    13->SetBinContent(29,112502.9);
-   13->SetBinContent(30,95254.53);
-   13->SetBinContent(31,79663.67);
-   13->SetBinContent(32,76504.06);
-   13->SetBinContent(33,67646.8);
-   13->SetBinContent(34,62156.33);
-   13->SetBinContent(35,61638.36);
-   13->SetBinContent(36,59929.06);
-   13->SetBinContent(37,62104.53);
-   13->SetBinContent(38,68941.72);
-   13->SetBinContent(39,77850.78);
-   13->SetBinContent(40,103179.5);
-   13->SetEntries(482881);
+   13->SetBinContent(30,95254.52);
+   13->SetBinContent(31,79663.66);
+   13->SetBinContent(32,76504.05);
+   13->SetBinContent(33,67646.78);
+   13->SetBinContent(34,62156.31);
+   13->SetBinContent(35,61638.34);
+   13->SetBinContent(36,59929.05);
+   13->SetBinContent(37,62104.52);
+   13->SetBinContent(38,68941.7);
+   13->SetBinContent(39,77850.77);
+   13->SetBinContent(40,103179.4);
+   13->SetEntries(482878);
    13->SetStats(0);
 
    ci = TColor::GetColor("#ccac60");
@@ -1334,8 +1297,6 @@
 
    ci = TColor::GetColor("#ccac60");
    13->SetLineColor(ci);
-   13->SetLineWidth(2);
-   13->SetMarkerSize(1.2);
    13->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -1386,7 +1347,6 @@
    THStack->Add(13,"");
    
    TH1F *14 = new TH1F("14","qq#nu#nu",40,0,1);
-   14->SetBinContent(1,2720.844);
    14->SetBinContent(9,276132.1);
    14->SetBinContent(10,367142.9);
    14->SetBinContent(11,318460.1);
@@ -1419,7 +1379,7 @@
    14->SetBinContent(38,44966.12);
    14->SetBinContent(39,89033.88);
    14->SetBinContent(40,595719.6);
-   14->SetEntries(406775);
+   14->SetEntries(406481);
    14->SetStats(0);
 
    ci = TColor::GetColor("#79a9eb");
@@ -1427,8 +1387,6 @@
 
    ci = TColor::GetColor("#79a9eb");
    14->SetLineColor(ci);
-   14->SetLineWidth(2);
-   14->SetMarkerSize(1.2);
    14->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -1479,7 +1437,6 @@
    THStack->Add(14,"");
    
    TH1F *15 = new TH1F("15","qqll",40,0,1);
-   15->SetBinContent(1,112.187);
    15->SetBinContent(9,331026.9);
    15->SetBinContent(10,471968);
    15->SetBinContent(11,494533.2);
@@ -1512,7 +1469,7 @@
    15->SetBinContent(38,15033.12);
    15->SetBinContent(39,28748.04);
    15->SetBinContent(40,130782.6);
-   15->SetEntries(181481);
+   15->SetEntries(181477);
    15->SetStats(0);
 
    ci = TColor::GetColor("#e2d689");
@@ -1520,8 +1477,6 @@
 
    ci = TColor::GetColor("#e2d689");
    15->SetLineColor(ci);
-   15->SetLineWidth(2);
-   15->SetMarkerSize(1.2);
    15->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -1572,7 +1527,6 @@
    THStack->Add(15,"");
    
    TH1F *16 = new TH1F("16","qql#nu",40,0,1);
-   16->SetBinContent(1,775.2449);
    16->SetBinContent(9,587825.3);
    16->SetBinContent(10,870652.2);
    16->SetBinContent(11,675322.2);
@@ -1605,7 +1559,7 @@
    16->SetBinContent(38,9143.619);
    16->SetBinContent(39,11214.54);
    16->SetBinContent(40,12499.58);
-   16->SetEntries(591862);
+   16->SetEntries(591789);
    16->SetStats(0);
 
    ci = TColor::GetColor("#c2b0e8");
@@ -1613,8 +1567,6 @@
 
    ci = TColor::GetColor("#c2b0e8");
    16->SetLineColor(ci);
-   16->SetLineWidth(2);
-   16->SetMarkerSize(1.2);
    16->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -1665,7 +1617,6 @@
    THStack->Add(16,"");
    
    TH1F *17 = new TH1F("17","qq",40,0,1);
-   17->SetBinContent(1,1338.052);
    17->SetBinContent(9,524740.8);
    17->SetBinContent(10,733875);
    17->SetBinContent(11,654757.9);
@@ -1698,7 +1649,7 @@
    17->SetBinContent(38,68301.27);
    17->SetBinContent(39,129121.6);
    17->SetBinContent(40,590357.5);
-   17->SetEntries(121759);
+   17->SetEntries(121737);
    17->SetStats(0);
 
    ci = TColor::GetColor("#aec48b");
@@ -1706,8 +1657,6 @@
 
    ci = TColor::GetColor("#aec48b");
    17->SetLineColor(ci);
-   17->SetLineWidth(2);
-   17->SetMarkerSize(1.2);
    17->GetXaxis()->SetNdivisions(506);
 
    ci = TColor::GetColor("#616161");
@@ -1779,7 +1728,7 @@
    ci = TColor::GetColor("#aec48b");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1792,7 +1741,7 @@
    ci = TColor::GetColor("#c2b0e8");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1805,7 +1754,7 @@
    ci = TColor::GetColor("#e2d689");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1818,7 +1767,7 @@
    ci = TColor::GetColor("#79a9eb");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1831,7 +1780,7 @@
    ci = TColor::GetColor("#ccac60");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1844,7 +1793,7 @@
    ci = TColor::GetColor("#4ac7d0");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1857,7 +1806,7 @@
    ci = TColor::GetColor("#ea908f");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1870,7 +1819,7 @@
    ci = TColor::GetColor("#9aebb2");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1883,7 +1832,7 @@
    ci = TColor::GetColor("#e798b9");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1896,7 +1845,7 @@
    ci = TColor::GetColor("#77bd7d");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1909,7 +1858,7 @@
    ci = TColor::GetColor("#b196e4");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1922,7 +1871,7 @@
    ci = TColor::GetColor("#a6c973");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1935,7 +1884,7 @@
    ci = TColor::GetColor("#e2a0e3");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1948,7 +1897,7 @@
    ci = TColor::GetColor("#48c9a8");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1961,7 +1910,7 @@
    ci = TColor::GetColor("#f67ea6");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1974,7 +1923,7 @@
    ci = TColor::GetColor("#62eee3");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1987,7 +1936,7 @@
    ci = TColor::GetColor("#f0916e");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -2000,7 +1949,7 @@
    ci = TColor::GetColor("#63c1e5");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
