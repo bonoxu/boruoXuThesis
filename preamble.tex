@@ -8,7 +8,7 @@
 %\usepackage{mathtools}
 %\usepackage{caption}
 \usepackage{subcaption}
-
+\usepackage{epstopdf}
 
 %% Using Babel allows other languages to be used and mixed-in easily
 %\usepackage[ngerman,english]{babel}
@@ -57,6 +57,7 @@
 \DeclareRobustCommand{\rootS}[1]{\sqrtS = #1\,TeV\xspace}
 \DeclareRobustCommand{\eeToHH}{\HepProcess{ \Pem \Pep \to \PHiggs \PHiggs \Pnu \APnu }\xspace}
 \DeclareRobustCommand{\eeToHHbbWW}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus}\xspace}
+\DeclareRobustCommand{\eeToHHbbqqqq}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \Pq \Pq \Pq \Pq}\xspace}
 \DeclareRobustCommand{\eeToHHbbWWFull}{\HepProcess{ \Pem \Pep \to \PHiggs \PHiggs \Pnu \APnu \to \Pbottom \APbottom \PWplus \PWminus}\xspace}
 \DeclareRobustCommand{\eeToHHbbWWHad}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus \to \Pbottom \APbottom \Pq \Pq \Pq \Pq}\xspace}
 \DeclareRobustCommand{\eeToHHbbbb}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \Pbottom \APbottom}\xspace}
@@ -71,6 +72,11 @@
 \DeclareRobustCommand{\absCosTheta}{\mymath{\lvert\cos(\MathUpright{\theta}_{\MathUpright{Z}})\rvert}\xspace}
 \DeclareRobustCommand{\rZero}{\mymath{r_{0}\xspace}}
 \DeclareRobustCommand{\kt}{\mymath{k_{t}\xspace}}
+\DeclareRobustCommand{\y}[1]{\mymath{y_{#1}\xspace}}
+\DeclareRobustCommand{\btag}{\mymath{B\xspace}}
+\DeclareRobustCommand{\sumBtag}[1]{\mymath{\Sigma{\btag}_{#1\xspace{jets}}\xspace}}
+\DeclareRobustCommand{\partialSumBtag}[3]{\mymath{\sum_{#1}^{#2}{\btag}_{#3\xspace{jets}}\xspace}}
+
 
 \DeclareRobustCommand{\W*}{\HepParticle{W}{}{*}\xspace}
 \DeclareRobustCommand{\Hbb}{\HepParticle{H}{\Pbottom\Pbottom}{}\xspace}

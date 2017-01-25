@@ -596,8 +596,49 @@ These set of cuts are stricter than usual analysis. The cross sections of signal
 
 \subsection{Sanity cuts}
 
+A set of very loose cuts, aiming to reduce the range of some discriminative variables to increase the effectiveness of MVA. (See \Section{} on MVA) These cuts are very loose and physics motivated.
+
+For \rootS{1.4}, invariant masses for \Hbb, \HWW, \PW, and \HH are smaller than 500, 800, 200, and 1400\,GeV, respectively.
+
+For \rootS{3}, invariant masses for \Hbb, \HWW, \PW, and \HH are smaller than 500, 800, 200, and 3000\,GeV, respectively.
+
+The selection efficiencies after sanity cuts and other pre-selection cuts stated above, are listed in \Table{}. 
+
 \subsection{Mutually exclusive cuts for \eeToHHbbWW and \eeToHHbbbb}
 
+Since the analysis for \eeToHH channel is divided into two subchannels, \eeToHHbbWWHad and \eeToHHbbbb, it is convenient to divided samples, both signal and background, into two mutually exclusive sets. This will make combining subchaneels much easier, as correlations between subchannels do not need to be considered.
+
+The most distinctive difference between two subchannels, is that they have different number of jets, and different number of b-jets in the final state. So variables related to number of b-jets or a number of jets are suitable for separating two subchannels.
+
+Shown in \Figure{fig:doubleHiggsMutualPreselection}, two subchannels can be clearly separated in the two dimensional parameter space. The optimal rectangular cuts were selected by scanning the two parameters, and maximising 
+\begin{equation}
+\varepsilon = P(subchannel_1|selection) \times P(subchannel_2|\neg{selection})
+\end{equation}
+where $\neg{selection}$ indicates the phase space not covered by the $selection$
+Variables tested includes $\Sigma(b-tag)_{4\xspace{jets}}$, $\Sigma(b-tag_{123})_{4\xspace{jets}}$, \y{34}, \y{45}, \y{56}, \y{67} and other related variables. The best separation was summarised in \Table{}.
+
+\begin{figure}[!tbp]
+\includegraphics[width=\largefigwidth]{{doubleHiggs/sumbtagY34.eps}} \\
+
+\caption[Sum of b tag against \y{34}]%
+   {Sum of b tag against \y{34}, shown for signal samples}
+   \label{fig:doubleHiggsMutualPreselection}
+\end{figure}
+
+\begin{table}[!tbp]\centering
+
+\begin{tabular}{llrr}
+\hline
+\hline
+\sqrtS & cuts & \multicolumn{1}{m{4cm}}{\eeToHHbbWWHad Selection Efficiency} & \multicolumn{1}{m{4cm}}{\eeToHHbbbb Selection Efficiency} \\
+\hline
+\hline
+\end{tabular}
+\caption[Mutually exclusive cuts] %
+{Mutually exclusive cuts, for full signal samples}
+\label{tab:doubleHiggsMutualCuts}
+\end{table}
+The selection efficiencies after mutually exclusive cuts and other pre-selection cuts stated above, are listed in \Table{}.
 
 \begin{table}[!tbp]\centering
 \small
@@ -606,50 +647,50 @@ These set of cuts are stricter than usual analysis. The cross sections of signal
  \multicolumn{1}{m{3.5cm}}{Channel / Efficiency} &  \multicolumn{1}{m{2cm}}{Sanity \rootS{1.4}}  & \multicolumn{1}{m{2cm}}{Mutually exclusive \rootS{1.4}} & \multicolumn{1}{m{2cm}}{Sanity \rootS{3}} & \multicolumn{1}{m{2cm}}{Mutually exclusive \rootS{3}} \\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             & 66.4\%& 59.7\% & 79.9\% & 69.7\%\\
+\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             & 66.4\%& 59.7\% & 69.5\% & 61.7\%\\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &80.6\%& 15.4\% & 82.9\% & 81.2\% \\
-\eeToHH $\to$ other & 24.7\% & 20.5\% & 35.8\% & 25.2\% \\
+\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &80.6\%& 15.4\% & 81.1\% & 18.8\% \\
+\eeToHH $\to$ other & 24.7\% & 20.5\% & 25.1\% & 20.0\% \\
 \hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 42.0\% & 39.5\% & 58.5\% & 40.4\%\\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 43.4\% & 31.7\%& 58.4\%& 39.3\%\\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 64.2\% & 25.2\%& 68.4\%& 64.2\%\\
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 42.0\% & 39.5\% & 40.3\% & 35.9\%\\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 43.4\% & 31.7\%& 39.2\%& 26.2\%\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 64.2\% & 25.2\%& 64.2\%& 25.9\%\\
 
-\eeTo{ \Pquark \Pquark \Pquark \Pquark}   & 4.6\%  & 3.4\% & 39.7\%& 3.0\%\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 3.3\% & 3.1\%& 14.2\%& 0.7\%\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 11.4\%. & 9.8\%& 19.4\%& 10.0\%\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 18.8\% & 16.6\%& 57.3\%& 11.9\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   & 4.6\%  & 3.4\% & 2.5\%& 1.4\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 3.3\% & 3.1\%& 0.7\%& 0.6\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 11.4\%. & 9.8\%& 9.2\%& 7.2\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 18.8\% & 16.6\%& 11.8\%& 9.0\%\\
 
-\eeTo{ \Pquark \Pquark} &  2.0\% & 0.8\%& 13.2\%& 2.7\%\\
-\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  1.6\% & 0.9\%& 11.9\%& 0.3\%\\
-\eeTo{ \Pquark \Pquark \Pl \Pl} &  0.1\% & 0.1\%& 2.9\%& 0.7\%\\
-\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 5.8\% & 4.0\%& 24.1\%& 5.3\% \\
+\eeTo{ \Pquark \Pquark} &  2.0\% & 0.8\%& 2.5\%& 1.4\%\\
+\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  1.6\% & 0.9\%& 0.3\%& 0.1\%\\
+\eeTo{ \Pquark \Pquark \Pl \Pl} &  0.1\% & 0.1\%& 0.7\%& 0.4\%\\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 5.8\% & 4.0\%& 5.3\%& 3.1\% \\
 \hline
-\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 0.4\%  & 0.3\%& 21.5\%& 0.8\%\\
-\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 0.4\% & 0.4\%& 21.6\%& 0.8\%\\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 0.3\% & 0.2\%& 11.0\%& 0.5\%\\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 0.3\% & 0.3\% & 10.9\%& 0.4\%\\
-\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 27.7\%  & 25.3\%& 59.5\%& 20.4\%\\
-\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 27.3\% & 24.9\% & 59.1\%& 19.4\%\\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}&  13.9\% & 12.6\% & 29.9\%& 9.6\%\\
-\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 13.7\%  & 12.3\%& 29.7\%& 9.1\% \\
+\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 0.4\%  & 0.3\%& 0.8\%& 0.7\%\\
+\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 0.4\% & 0.4\%& 0.8\%& 0.7\%\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 0.3\% & 0.2\%& 0.4\%& 0.4\%\\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 0.3\% & 0.3\% & 0.4\%& 0.3\%\\
+\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 27.7\%  & 25.3\%& 20.3\%& 16.8\%\\
+\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 27.3\% & 24.9\% & 19.3\%& 15.9\%\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}&  13.9\% & 12.6\% & 9.4\%& 7.8\%\\
+\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 13.7\%  & 12.3\%& 8.9\%& 7.3\% \\
 
-\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 34.5\%  & 30.2\% &56.2\%& 37.3\% \\
-\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 34.2\% & 30.3\% & 56.0\% & 37.1\% \\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 18.2\% & 16.0\% &29.2\% & 19.4\% \\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 18.7\%   & 16.4\% & 28.6\% & 18.8\% \\
+\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 34.5\%  & 30.2\% &37.2\%& 30.2\% \\
+\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 34.2\% & 30.3\% & 37.1\% & 30.2\% \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 18.2\% & 16.0\% & 19.0\% & 15.7\% \\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 18.7\%   & 16.4\% & 18.4\% & 15.2\% \\
 \hline
-\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 0.3\%  & 0.3\%& 49.2\%& 1.9\%\\
-\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 0.4\%  &0.3\%& 30.2\%& 1.2\%\\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 0.4\% & 0.3\%& 30.3\%& 1.2\%\\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 0.4\% & 0.3\% & 19.8\% & 0.8\%\\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 0.3\%  & 0.3\%& 1.9\%& 1.7\%\\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 0.4\%  &0.3\%& 1.1\%& 1.0\%\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 0.4\% & 0.3\%& 1.1\%& 1.0\%\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 0.4\% & 0.3\% & 0.7\% & 0.6\%\\
 \hline \hline
 \end{tabular}
 
-\caption{List of signal and background samples with the corresponding expected number at \rootS{3}, assuming a luminosity of 2000$fb^{-1}$. The selection efficiencies are presented in a ``flow'' fashion, as the every selection cut contains all the cuts to the left of it.
+\caption{List of signal and background samples with the corresponding expected number at \rootS{1.4} and \rootS{3}, assuming a luminosity of 1500 and 2000$fb^{-1}$, respectively. The selection efficiencies are presented in a ``flow'' fashion, as the every selection cut contains all the cuts to the left of it.
 }
-\label{tab:doubleHiggs1.4TeVPreslection}
+\label{tab:doubleHiggsPreslectionPart2}
 \end{table}
 
 
