@@ -446,9 +446,96 @@ Discriminative variables were calculated. Some are used as to discard background
 
 \subsection{Discriminative pre-selection cuts}
 
-As discussed before, events with identified leptons are rejected. Events where the largest b-jet tag is less than 0.1 is rejected.
+As discussed before, events with identified leptons are rejected. Jet pairing implies that events with the largest b-jet tag  less than 0.2 are rejected.
 
-For \rootS{1.4}, 
+For \rootS{1.4}, a range of variables were tested and three where chosen as pre-selection cuts. 
+
+Event with invariant mass of two higgs less than 150\,GeV is rejected. The cut above 120\,GeV is needed as some background samples were generated only for invariant mass greater than 120\,GeV. Shown in \Table{} and \Figure{}, this cut is effective against samples with two quark final states.
+
+Event with second highest b-jet tag less than 0.2 is rejected. This stricter cut than the jet pairing helps to reduce samples with no b-jets.
+
+Event with \pT of two higgs less than 30\,GeV is rejected. This is extremely effective against samples with no neutrinos in the final state.
+
+\begin{figure}[!tbp]
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_prepare}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_prepare}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/nR0_7_6jet_btag2_bTag2_TMVA20161208R0_7_qq_btag2_prepare}}} \\
+\caption[Discriminative pre-selection variables for \rootS{1.4}]%
+   {Discriminative pre-selection variables for \rootS{1.4}, after rejecting events with identified leptons, and jet pairing}
+   \label{fig:doubleHiggs1.4TeVPreSelection}
+\end{figure}
+
+For \rootS{3}, event with invariant mass of two higgs less than 150\,GeV is rejected, for the reason similar to \rootS{1.4}.
+
+In addition, event with highest b-jet tag less than 0.7 is rejected. It is found that b-jet tag is less efficient at a higher \sqrtS. Therefore, a stricter cut at b-jet tag is useful to compensate for the tagging efficiency loss. 
+
+\begin{figure}[!tbp]
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag2_prepare}}} \\
+\includegraphics[width=\largefigwidth]{{{doubleHiggs/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prepare}}} \\
+\caption[Discriminative pre-selection variables for \rootS{3}]%
+   {Discriminative pre-selection variables for \rootS{3}, after rejecting events with identified leptons, and jet pairing}
+   \label{fig:doubleHiggsTeVPreSelection}
+\end{figure}
+
+
+
+These set of cuts are stricter than usual analysis. The cross sections of signal channel for both \sqrtS are extremely small, comparing to the background. Hence only the signal events with very clear characteristic topologies would be able to pass the final selection, in order to achieve a decent signal-to-background ratio. Therefore, a strict pre-selection cut would not hurt the final signal selection. On the contrary, final signal selection would benefit from MVA being able to focus the difficult background events, where their topologies are too similar to the signal events to separate in any single parameter space.
+
+\begin{table}[!tbp]\centering
+% TODO fix lumi correction for e gamma, gamma e
+% TODO change some of sample cross section for  electron-photon interaction with four quarks and a neutrino final state
+%\small{
+\small
+\begin{tabular}{lrrrrr}
+\hline \hline
+ \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{1.4}} &  \multicolumn{1}{m{2cm}}{Expected number of events}  & \multicolumn{1}{m{2cm}}{Lepton ID and jet pairing} & \multicolumn{1}{m{1.5cm}}{$m_{HH}>150\xspace{GeV}$} & \multicolumn{1}{m{1.5cm}}{$B_{2}>0.2$} & \multicolumn{1}{m{1.5cm}}{$\Pt>30\xspace{GeV}$}  \\
+\hline
+\eeToHH $\to$ \\
+\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             &0.588& 0.149 \\
+\hline
+\eeToHH $\to$ \\
+\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &0.588& 0.149 \\
+\eeToHH $\to$ other & a & b \\
+\hline
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 0.86 & 1.78 \\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 0.36 & 1.12\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 0.31 & 1.91\\
+
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1245.1& 546.5\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 62.1 &169.3\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 110.4 &106.6\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 23.2 &71.5\\
+
+\eeTo{ \Pquark \Pquark} &  4009.5 &2948.9\\
+\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  4309.7 &5561.1\\
+\eeTo{ \Pquark \Pquark \Pl \Pl} &  2725.8 &3319.6\\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 787.7 &1317.5 \\
+\hline
+\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 1160.7  & 1268.7\\
+\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 1156.3  & 1267.6\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 287.1 & 287.9\\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 286.9 & 287.8\\
+\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 136.9  & 262.5\\
+\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 136.4  & 262.3\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 32.6  & 54.2\\
+\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 32.6  & 54.2\\
+
+\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 15.8  & 58.6 \\
+\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 1232.8  & 70.7\% & 61.2\% & 60.0\% & 45.4\% & 34.2\%\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 3.39  & 11.7 \\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu \Pnu} & 3.39   & 11.7\\
+\hline
+\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 21406.2  &13050.3\\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 4018.7  &2420.6\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 4034.8 &2423.1\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 753.0 &402.7 \\
+\hline \hline
+\end{tabular}
+
+\caption{List of signal and background samples with the corresponding cross sections at \rootS{3} and \rootS{1.4}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV. Simulated \PW has invariant mass of 80.385\,GeV.
+}
+\label{tab:doubleHiggsPreslection}
+\end{table}
 
 \subsection{Sanity cuts}
 
