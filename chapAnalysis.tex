@@ -24,7 +24,7 @@ The chosen jet algorithm implementation is FastJet C++ software package \cite{Ca
 
 \subsection{\kt algorithm}
 
-One of the common sequential combination algorithms is longitudinally-invariant \kt algorithm \cite{Catani:1993hr,Ellis:1993tq}. In the inclusive variant, The symmetrical pair-wise distance metric between particle $i$ and $j$, and the beam distance, are defined as
+One of the common sequential combination algorithms for \pp collider experiment, is longitudinally-invariant \kt algorithm \cite{Catani:1993hr,Ellis:1993tq}. In the inclusive variant, The symmetrical pair-wise distance metric between particle $i$ and $j$, and the beam distance, are defined as
 \begin{equation}
 &d_{ij} = d_{ji} = \min\!\parenths{\pT_{i}^{2},\!\pT_{j}^{2}}\frac{\DeltaOf{R_{ij}^{2}}}{R^{2}}, \\
 &d_{iB} = \pT_{i}^2,
@@ -33,11 +33,23 @@ where $\pT_{i}$ is the transverse momentum of particle $i$ with respect to the b
 
 If $d_{ij} < d_{iB}$, particle $i$ and $j$ are merged, with the \fourMomentum of particle $i$ updated as the sum. Otherwise, particle $i$ is set to be a final jet, and delete from the particle list. The above procedure is repeated until no particle left.
 
-The exclusive variant is similar, except when
-Discuss \kt
-``exclusive mode'', inclusive mode
+The exclusive variant is similar. First difference is that when  $d_{iB} < d_{ij}$, the particle $i$ is discarded and part of the beam jet. The second difference is that when both $d_{ij}$ and $d_{iB}$ are above some threshold, $d_{cut}$, the clustering will stop. In practise, exclusive mode allows a specified number of jets to be found, whilst inclusive mode would fine as many jets as the algorithm allows. 
 
-Discuss Durham
+\subsection{Durham algorithm}
+
+Durham algorithm \cite{Catani:1991hj}, also known as \ee \kt algorithm, is commonly used \ee collider experiment. It has a single distance metric:
+\begin{equation}
+d_{ij} = 2\min\!\parenths{E_i^2,\!E_j^2}\!\parenths{1 - \cosOf{\theta_{ij}}},
+\end{equation}
+where $E_i$ is the energy of particle $i$. $\theta_{ij}$ is the polar angle difference between particle $i$ and $j$. Durham algorithm can only be run at exclusive mode. 
+
+Comparing to \kt algorithm, it uses energy instead of \pT in the distance metric, and it did not have a beam jet. This is because that for the \ee collider in the past, the beam induced background was not severe and collisions energy is known, \sqrtS.
+
+\subsection{\kt algorithm for \CLIC}
+
+
+
+
 Discuss CLIC why \kt not durham
 
 Details
@@ -45,8 +57,12 @@ Details
 Discussion of why \kt, not durham
 Longitudinal invariant, \kt, jet algorithm was chosen for the jet clustering. Due to the presence high level of beam induced background at the CLIC, it has been shown that a jet algorithm designed for hadron colliders are more effective than those traditional designed for the electron-positron collider, such as Durham algorithm.\cite{}
 
-VLC?
-
+% VLC?
+\begin{comment}
+Why extra C++ implementation
+speed reduce O(n^3) to NlgN
+y, phi space, 2D KNN problem
+\end{comment}
 
 y parameters
 \subsection{Flavour tagging}

@@ -24,7 +24,18 @@ The chosen jet algorithm implementation is FastJet C++ software package \cite{Ca
 
 \subsection{\kt algorithm}
 
-One of the common sequential combination algorithms is longitudinally-invariant \kt algorithm \cite{Catani:1993hr,Ellis:1993tq}.
+One of the common sequential combination algorithms is longitudinally-invariant \kt algorithm \cite{Catani:1993hr,Ellis:1993tq}. In the inclusive variant, The symmetrical pair-wise distance metric between particle $i$ and $j$, and the beam distance, are defined as
+\begin{equation}
+&d_{ij} = d_{ji} = \min\!\parenths{\pT_{i}^{2},\!\pT_{j}^{2}}\frac{\DeltaOf{R_{ij}^{2}}}{R^{2}}, \\
+&d_{iB} = \pT_{i}^2,
+\end{equation}
+where $\pT_{i}$ is the transverse momentum of particle $i$ with respect to the beam ($z$) direction, and $\DeltaOf{R_{ij}^{2}}$ is the measurement of angular separation of particle $i$ and $j$. Formally $\DeltaOf{R_{ij}^{2}} = \parenths{y_i - y_j}^2 + \parenths{\phi_i - \phi_j}^2$, where $y_i = \frac{1}{2}\ln\!\frac{E_i + {p_z}_i}{E_i - {p_z}_i}$ and $\phi_i$ are particle $i$'s rapidity and azimuthal angle. R is a free parameter controlling the jet radius.
+
+If $d_{ij} < d_{iB}$, particle $i$ and $j$ are merged, with the \fourMomentum of particle $i$ updated as the sum. Otherwise, particle $i$ is set to be a final jet, and delete from the particle list. The above procedure is repeated until no particle left.
+
+The exclusive variant is similar. First difference is that when  $d_{iB} < d_{ij}$, the particle $i$ is discarded and part of the beam jet. The second difference is that when both $d_{ij}$ and $d_{iB}$ are above some threshold, $d_{cut}$, the clustering will stop. In practise, exclusive mode allows a specified number of jets to be found, whilst inclusive mode would fine as many jets as the algorithm allows. 
+
+\subsection{Durham  algorithm}
 
 Discuss \kt
 ``exclusive mode'', inclusive mode
