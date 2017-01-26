@@ -13,6 +13,21 @@ tracking
 
 Track quality cuts
 
+\subsection{Cone clustering}
+\label{sec:pandoraConeClustering}
+
+% ATTN add a cone cluster picture?
+
+Cone clustering is used in \pandora for grouping calorimeter hits, within a opening angle of the seed hit. Because the direction of particle flows is largely unchanged from the originated particle, whether it is a electromagnetic shower, QCD radiation or hadronisation, these cone clusters have similar direction and energy to the originated particle.
+
+Typically a high energy calorimeter hit will be chosen as a ``seed''. A cone with a specified opening angle and depth will be formed around the seed. The \fourMomentum of calorimeter hits sum to the cone's \fourMomentum.
+
+These cone clustering algorithms are widely used in the calorimeter in \pandora, and they produce basic working objects, \clusters.
+
+
+% double counting taking care in pandora
+
+
 Iterative track-cluster association
 
 Photon, passage through matter
@@ -20,38 +35,3 @@ Photon, passage through matter
 Muon ID
 
 Fragmentation
-
-\section{Analysis}
-
-\subsection{Jet algorithm}
-
-``exclusive mode'', inclusive mode
-Details
-
-Discussion of why \kt, not durham
-Longitudinal invariant, \kt, jet algorithm was chosen for the jet clustering. Due to the presence high level of beam induced background at the CLIC, it has been shown that a jet algorithm designed for hadron colliders are more effective than those traditional designed for the electron-positron collider, such as Durham algorithm.\cite{}
-
-VLC?
-
-
-y parameters
-\subsection{Flavour tagging}
-
-1 vs 1 ? 1 vs all?
-output
-
-\subsection{MVA}
-
-BDT
-?likelihood
-Range, discrete
-\subsection{Jargons}
-Signal
-Selection
-Efficiency
-Significance
-
-\qlight light quark
-light lepton
-
-Thanks computing resources. i.e. ILC VO, CLIC grid, etc. 

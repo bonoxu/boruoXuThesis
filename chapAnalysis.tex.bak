@@ -1,0 +1,71 @@
+\chapter{Analysis technique}
+\label{chap:Reconstruction}
+
+\chapterquote{In preparing for battle I have always found that plans are useless, but planning is indispensable.}%
+{Dwight D. Eisenhower}%:
+
+Automated analysis is the only way to deal with the vast amount of data generated in the high energy physics. In the last chapter we described the automated reconstruction tools in details. This chapter is dedicated to the common automated analysis tools and techniques, which will be used in the analysis described in subsequent chapters.
+
+For the linear collider, thanks to the high granular calorimeter, the starting point for analysis would be individual Particle Flow Objects, as well as individual tracks. Each of the PFOs encodes four-momentum and position information. For tracks, they would have momentum and position information.
+
+However, sometimes it is interesting to group PFOs and tracks into jets, where a jet is the result of hadronisation process from high energy particles like quarks or gulons. 
+
+\section{Jet algorithm}
+
+A jet is typically a visually obvious structure in a event display. The momentum and the direction of a jet tend to resemble the originated particle. Despite the relative easiness of identifying jets visually, it presents a challenge for a pattern recognition program to identify jets effectively and efficiently. 
+
+Early work on jet finding started in 1977 \cite{PhysRevLett.39.1436}, where later development can be found in reviews \cite{Moretti:1998qx,Salam:2009jx,Ali:2010tw}.
+
+There are two large families of jet finding algorithm, cone based algorithm, and sequential combination algorithm. Cone based algorithm is briefly discussed in \Section{sec:pandoraConeClustering}.
+
+Sequential combination algorithm typically calculate a pair-wise distance metric. Pairs with the smallest metric will be combined. The metric will be calculated and updated, and a pair with smallest metric will be combined. This procedure will be repeated until some stopping criterion are satisfied.
+
+The chosen jet algorithm implementation is FastJet C++ software package \cite{Cacciari:2011ma,Cacciari:2005hq}, providing a wide range of jet finding algorithms. The implementation in Marlin software package is called MarlinFastJet. The symbols in the subsequent discussion about specific jet algorithms will follow \cite{Cacciari:2011ma}
+
+\subsection{\kt algorithm}
+
+One of the common sequential combination algorithms is longitudinally-invariant \kt algorithm \cite{Catani:1993hr,Ellis:1993tq}.
+
+Discuss \kt
+``exclusive mode'', inclusive mode
+
+Discuss Durham
+Discuss CLIC why \kt not durham
+
+Details
+
+Discussion of why \kt, not durham
+Longitudinal invariant, \kt, jet algorithm was chosen for the jet clustering. Due to the presence high level of beam induced background at the CLIC, it has been shown that a jet algorithm designed for hadron colliders are more effective than those traditional designed for the electron-positron collider, such as Durham algorithm.\cite{}
+
+VLC?
+
+
+y parameters
+\subsection{Flavour tagging}
+
+1 vs 1 ? 1 vs all?
+output
+
+\subsection{MVA}
+\label{sec:theoryMVA}
+BDT
+?likelihood
+Range, discrete
+Typical example:
+m in a good range
+log transformation
+
+\subsection{Event shape}
+Thrust
+Sphericity
+Aplanarity
+\subsection{Jargons}
+Signal
+Selection
+Efficiency
+Significance
+
+\qlight light quark
+light lepton
+
+Thanks computing resources. i.e. ILC VO, CLIC grid, etc. 

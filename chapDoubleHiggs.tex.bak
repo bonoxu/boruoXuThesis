@@ -602,7 +602,7 @@ For \rootS{1.4}, invariant masses for \Hbb, \HWW, \PW, and \HH are smaller than 
 
 For \rootS{3}, invariant masses for \Hbb, \HWW, \PW, and \HH are smaller than 500, 800, 200, and 3000\,GeV, respectively.
 
-The selection efficiencies after sanity cuts and other pre-selection cuts stated above, are listed in \Table{}. 
+The selection efficiencies after sanity cuts and other pre-selection cuts stated above, are listed in \Table{}.
 
 \subsection{Mutually exclusive cuts for \eeToHHbbWW and \eeToHHbbbb}
 
@@ -610,12 +610,13 @@ Since the analysis for \eeToHH channel is divided into two subchannels, \eeToHHb
 
 The most distinctive difference between two subchannels, is that they have different number of jets, and different number of b-jets in the final state. So variables related to number of b-jets or a number of jets are suitable for separating two subchannels.
 
-Shown in \Figure{fig:doubleHiggsMutualPreselection}, two subchannels can be clearly separated in the two dimensional parameter space. The optimal rectangular cuts were selected by scanning the two parameters, and maximising 
+Shown in \Figure{fig:doubleHiggsMutualPreselection}, two subchannels can be clearly separated in the two dimensional parameter space. The optimal rectangular cuts were selected by scanning the two parameters, and maximising
 \begin{equation}
 \varepsilon = P(subchannel_1|selection) \times P(subchannel_2|\neg{selection})
 \end{equation}
-where $\neg{selection}$ indicates the phase space not covered by the $selection$
-Variables tested includes $\Sigma(b-tag)_{4\xspace{jets}}$, $\Sigma(b-tag_{123})_{4\xspace{jets}}$, \y{34}, \y{45}, \y{56}, \y{67} and other related variables. The best separation was summarised in \Table{}.
+where $selection$ represents the mutually exclusive cuts, $\neg{selection}$ indicates the phase space not covered by the $selection$.
+
+Variables tested includes \sumBtag{4}, \partialSumBtag{1}{3}{4}, \y{34}, \y{45}, \y{56}, \y{67} and other related variables. The best separation was summarised in \Table{tab:doubleHiggsMutualCuts}.
 
 \begin{figure}[!tbp]
 \includegraphics[width=\largefigwidth]{{doubleHiggs/sumbtagY34.eps}} \\
@@ -630,7 +631,9 @@ Variables tested includes $\Sigma(b-tag)_{4\xspace{jets}}$, $\Sigma(b-tag_{123})
 \begin{tabular}{llrr}
 \hline
 \hline
-\sqrtS & cuts & \multicolumn{1}{m{4cm}}{\eeToHHbbWWHad Selection Efficiency} & \multicolumn{1}{m{4cm}}{\eeToHHbbbb Selection Efficiency} \\
+\sqrtS & $selection$ & \multicolumn{1}{m{4cm}}{\eeToHHbbqqqq Selection Efficiency} & \multicolumn{1}{m{4cm}}{\eeToHHbbbb Selection Efficiency} \\
+1.4\,TeV &  \sumBtag{4} < 2.3 and \y{34} < 3.7 & 86\% & 78\% \\
+3\,TeV &  \sumBtag{4} < 2.3 and \y{34} < 3.6 & 89\% & 82\% \\
 \hline
 \hline
 \end{tabular}
@@ -638,6 +641,7 @@ Variables tested includes $\Sigma(b-tag)_{4\xspace{jets}}$, $\Sigma(b-tag_{123})
 {Mutually exclusive cuts, for full signal samples}
 \label{tab:doubleHiggsMutualCuts}
 \end{table}
+
 The selection efficiencies after mutually exclusive cuts and other pre-selection cuts stated above, are listed in \Table{}.
 
 \begin{table}[!tbp]\centering
@@ -700,9 +704,74 @@ The selection efficiencies after mutually exclusive cuts and other pre-selection
        tR0_7_4jet_btag2_Higgs_all_bTag < 2.3 && tR0_7_6jet_btag2_minusLogY34 < 3.7 \
        && tR0_7_6jet_btag2_bTag1 > 0.7 &&\
         tR0_7_6jet_btag2_Higgs_all_M  < 3000 &&  tR0_7_6jet_btag2_Higgs1_M < 500 &&  tR0_7_6jet_btag2_Higgs2_M < 800 &&  tR0_7_6jet_btag2_W_Onshell_M < 200";
-    //&& nR0_7_4jet_btag2_ChiSquared<10000
+
     const TCut selectionCut1400 = "nR0_7_6jet_btag2_ChiSquared<20  && IsoLepTauAll_nPfo < 1      && BonoForwardElectronPhotons_nPfo < 1 && nR0_7_6jet_btag2_Higgs_all_M>150 && \
         nR0_7_4jet_btag2_Higgs_all_bTag < 2.3  && nR0_7_6jet_btag2_minusLogY34 < 3.6 \
         &&  nR0_7_6jet_btag2_bTag2 > 0.2 && nR0_7_6jet_btag2_Higgs_all_Pt> 30 &&\
         nR0_7_6jet_btag2_Higgs_all_M  < 1400 &&  nR0_7_6jet_btag2_Higgs1_M < 500 &&  nR0_7_6jet_btag2_Higgs2_M < 800 &&  nR0_7_6jet_btag2_W_Onshell_M < 200";
-\end{comment} 
+\end{comment}
+
+\section{Discriminative Variables}
+
+A series of discriminative variables were calculated, and fed into MVA for signal selection.
+
+The full list of variables can be found in \Table{}.
+Same set of variables are used for \rootS{1.4} and \rootS{3}.
+
+
+
+
+\begin{table}[!tbp]\centering
+\begin{tabular}{ll}
+\hline
+\hline
+ \multicolumn{1}{m{3cm}}{Variable} &  \multicolumn{1}{m{0.7\textwidth}}{Description} \\
+ \multicolumn{1}{m{3cm}}{$m_{\Hbb}$} &  \multicolumn{1}{m{0.7\textwidth}}{Invariant mass of \Hbb } \\
+ \multicolumn{1}{m{3cm}}{$m_{\HWW}$} &  \multicolumn{1}{m{0.7\textwidth}}{Invariant mass of \HWW } \\
+ \multicolumn{1}{m{3cm}}{$m_{\PW}$} &  \multicolumn{1}{m{10cm}}{Invariant mass of \PW } \\
+ \multicolumn{1}{m{3cm}}{$m_{\HH}$} &  \multicolumn{1}{m{10cm}}{Invariant mass of \HH } \\
+ \multicolumn{1}{m{3cm}}{$E_{\W*}$} &  \multicolumn{1}{m{10cm}}{Energy of \W* } \\
+ \multicolumn{1}{m{3cm}}{$E_{mis}$} &  \multicolumn{1}{m{10cm}}{Missing energy, assuming collision at \sqrtS} \\
+ \multicolumn{1}{m{3cm}}{$\pT_{\Hbb}$} &  \multicolumn{1}{m{10cm}}{Transverse momentum of \Hbb } \\
+ \multicolumn{1}{m{3cm}}{$\pT_{\HWW}$} &  \multicolumn{1}{m{10cm}}{Transverse momentum of \HWW } \\
+ \multicolumn{1}{m{3cm}}{$\pT_{\HH}$} &  \multicolumn{1}{m{10cm}}{Transverse momentum of \HH } \\
+ \multicolumn{1}{m{3cm}}{$\eta_{mis}$} &  \multicolumn{1}{m{10cm}}{Pseudorapidity of missing momentum, assuming collision at \sqrtS} \\
+ \multicolumn{1}{m{3cm}}{$\pT_{\HH}$} &  \multicolumn{1}{m{10cm}}{Transverse momentum of \HH } \\
+ \multicolumn{1}{m{3cm}}{$-\ln(\y{23})$} &  \multicolumn{1}{m{10cm}}{minus ln of \y{23}. See \Section{} for \y{} parameter. See \Section{} for the ln transformation } \\
+ \multicolumn{1}{m{3cm}}{$-\ln(\y{34})$} &  \multicolumn{1}{m{10cm}}{minus ln of \y{34}.} \\
+ \multicolumn{1}{m{3cm}}{$-\ln(\y{45})$} &  \multicolumn{1}{m{10cm}}{minus ln of \y{45}.} \\
+ \multicolumn{1}{m{3cm}}{$-\ln(\y{56})$} &  \multicolumn{1}{m{10cm}}{minus ln of \y{56}.} \\
+ \multicolumn{1}{m{3cm}}{$\btagFull{1,\Hbb}$} &  \multicolumn{1}{m{10cm}}{Highest b-jet tag value of two jets forming \Hbb .} \\
+ \multicolumn{1}{m{3cm}}{$\btagFull{2,\Hbb}$} &  \multicolumn{1}{m{10cm}}{Lowest b-jet tag value of two jets forming \Hbb .} \\
+ \multicolumn{1}{m{3cm}}{$\btagFull{1,\PW}$} &  \multicolumn{1}{m{10cm}}{Highest b-jet tag value of two jets forming \PW .} \\
+ \multicolumn{1}{m{3cm}}{$\btagFull{1,\W*}$} &  \multicolumn{1}{m{10cm}}{Highest b-jet tag value of two jets forming \W* .} \\
+ \multicolumn{1}{m{3cm}}{$\ctagFull{1,\Hbb}$} &  \multicolumn{1}{m{10cm}}{Highest c-jet tag value of two jets forming \Hbb .} \\
+ \multicolumn{1}{m{3cm}}{$\ctagFull{1,\PW}$} &  \multicolumn{1}{m{10cm}}{Highest c-jet tag value of two jets forming \PW .} \\
+ \multicolumn{1}{m{3cm}}{$\abs{\sphericity}$} &  \multicolumn{1}{m{10cm}}{Modulus of sphericity, \sphericity. See \Section{}.} \\
+ \multicolumn{1}{m{3cm}}{$\acolinearity{\Hbb}$} &  \multicolumn{1}{m{10cm}}{Acolinearity of two jets forming \Hbb.} \\
+ \multicolumn{1}{m{3cm}}{$\acolinearity{\PW}$} &  \multicolumn{1}{m{10cm}}{Acolinearity of two jets forming \PW.} \\
+ \multicolumn{1}{m{3cm}}{$\acolinearity{\HH}$} &  \multicolumn{1}{m{10cm}}{Acolinearity of \Hbb and \HWW.} \\
+ \multicolumn{1}{m{3cm}}{$\npfo{\Hbb}$} &  \multicolumn{1}{m{10cm}}{Number of PFOs forming \Hbb.} \\
+ \multicolumn{1}{m{3cm}}{$\npfo{\HWW}$} &  \multicolumn{1}{m{10cm}}{Number of PFOs forming \HWW.} \\
+ \multicolumn{1}{m{3cm}}{$\npfo{\PW}$} &  \multicolumn{1}{m{10cm}}{Number of PFOs forming \PW.} \\
+ \multicolumn{1}{m{3cm}}{$\npfo{\W*}$} &  \multicolumn{1}{m{10cm}}{Number of PFOs forming \W*.} \\
+ \multicolumn{1}{m{3cm}}{$\cosStar{\Hbb}$} &  \multicolumn{1}{m{10cm}}{Cosine of opening angles of two jets forming \Hbb, in their rest frame.} \\
+ \multicolumn{1}{m{3cm}}{$\cosStar{\HWW}$} &  \multicolumn{1}{m{10cm}}{Cosine of opening angles of \PW and \W*, forming \HWW, in their rest frame.} \\
+ \multicolumn{1}{m{3cm}}{$\cosStar{\PW}$} &  \multicolumn{1}{m{10cm}}{Cosine of opening angles of two jets forming \PW, in their rest frame.} \\
+ \multicolumn{1}{m{3cm}}{$\cosStar{\W*}$} &  \multicolumn{1}{m{10cm}}{Cosine of opening angles of two jets forming \W*, in their rest frame.} \\
+ \multicolumn{1}{m{3cm}}{$\cosStar{\HH}$} &  \multicolumn{1}{m{10cm}}{Cosine of opening angles of \Hbb and \HWW, in their rest frame.} \\
+\hline
+\hline
+\end{tabular}
+\caption[List of variables used in MVA] %
+{List of variables used in MVA}
+\label{tab:doubleHiggsVaraibles}
+\end{table}
+
+The optimal set were chosen to give the best MVA performance, whilst no strong pair-wise correlation between any two variables, shown in \Figure{}.
+
+
+
+\section{Multivariate analysis}
+
+\section{Couplings extration} 

@@ -8,7 +8,8 @@
 %\usepackage{mathtools}
 %\usepackage{caption}
 \usepackage{subcaption}
-
+\usepackage{epstopdf}
+\epstopdfsetup{update}
 
 %% Using Babel allows other languages to be used and mixed-in easily
 %\usepackage[ngerman,english]{babel}
@@ -52,11 +53,16 @@
 \usepackage{abhep}
 \usepackage{hepnames}
 \usepackage{hepunits}
+
+\newlength{\widthOne}
+\setlength{\widthOne}{12cm}
+
 \DeclareRobustCommand{\gHHH}{\HepParticle{g}{HHH}{}\xspace}
 \DeclareRobustCommand{\gWWHH}{\HepParticle{g}{WWHH}{}\xspace}
 \DeclareRobustCommand{\rootS}[1]{\sqrtS = #1\,TeV\xspace}
 \DeclareRobustCommand{\eeToHH}{\HepProcess{ \Pem \Pep \to \PHiggs \PHiggs \Pnu \APnu }\xspace}
 \DeclareRobustCommand{\eeToHHbbWW}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus}\xspace}
+\DeclareRobustCommand{\eeToHHbbqqqq}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \Pq \Pq \Pq \Pq}\xspace}
 \DeclareRobustCommand{\eeToHHbbWWFull}{\HepProcess{ \Pem \Pep \to \PHiggs \PHiggs \Pnu \APnu \to \Pbottom \APbottom \PWplus \PWminus}\xspace}
 \DeclareRobustCommand{\eeToHHbbWWHad}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus \to \Pbottom \APbottom \Pq \Pq \Pq \Pq}\xspace}
 \DeclareRobustCommand{\eeToHHbbbb}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \Pbottom \APbottom}\xspace}
@@ -71,11 +77,22 @@
 \DeclareRobustCommand{\absCosTheta}{\mymath{\lvert\cos(\MathUpright{\theta}_{\MathUpright{Z}})\rvert}\xspace}
 \DeclareRobustCommand{\rZero}{\mymath{r_{0}\xspace}}
 \DeclareRobustCommand{\kt}{\mymath{k_{t}\xspace}}
+\DeclareRobustCommand{\y}[1]{\mymath{y_{#1}\xspace}}
+\DeclareRobustCommand{\btag}{\mymath{B\xspace}}
+\DeclareRobustCommand{\btagFull}[1]{\mymath{B_{#1}\xspace}}
+\DeclareRobustCommand{\sumBtag}[1]{\mymath{\Sigma{\btag}_{#1\xspace{jets}}\xspace}}
+\DeclareRobustCommand{\partialSumBtag}[3]{\mymath{\sum_{#1}^{#2}{\btag}_{#3\xspace{jets}}\xspace}}
+\DeclareRobustCommand{\ctagFull}[1]{\mymath{C_{#1}\xspace}}
+\DeclareRobustCommand{\sphericity}{\mymath{\textbf{S}\xspace}}
+\DeclareRobustCommand{\abs}[1]{\mods{#1}}
+\DeclareRobustCommand{\acolinearity}[1]{\mymath{acol_{#1}\xspace}}
+\DeclareRobustCommand{\npfo}[1]{\mymath{N_{#1}\xspace}}
+\DeclareRobustCommand{\cosStar}[1]{\mymath{\cosOf{\theta^{*}_{#1}}\xspace}}
 
 \DeclareRobustCommand{\W*}{\HepParticle{W}{}{*}\xspace}
 \DeclareRobustCommand{\Hbb}{\HepParticle{H}{\Pbottom\Pbottom}{}\xspace}
 \DeclareRobustCommand{\HWW}{\HepParticle{H}{\PW\W*}{}\xspace}
-\DeclareRobustCommand{\HH}{\HepParticle{HH}{\PHiggs\PHiggs}{}\xspace}
+\DeclareRobustCommand{\HH}{\HepParticle{HH}{}{}\xspace}
 
 \DeclareRobustCommand{\loosePFO}{loose selected PFO\xspace}
 \DeclareRobustCommand{\normalPFO}{normal selected PFO\xspace}
@@ -83,6 +100,8 @@
 \DeclareRobustCommand{\LoosePFO}{Loose selected PFO\xspace}
 \DeclareRobustCommand{\NormalPFO}{Normal selected PFO\xspace}
 \DeclareRobustCommand{\TightPFO}{Tight selected PFO\xspace}
+\DeclareRobustCommand{\PFO}{PFO\xspace}
+\DeclareRobustCommand{\cluster}{Cluster\xspace}
 
 %\DeclareRobustCommand{\arXivCode}[1]{arXiv:#1}
 %\DeclareRobustCommand{\CP}{\ensuremath{\mathcal{CP}}\xspace}
