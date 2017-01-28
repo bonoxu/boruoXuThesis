@@ -130,9 +130,12 @@ Channel  &  $\sigma(\rootS{1.4})$ / fb  & $\sigma(\rootS{3})$ / fb   \\
 \section{Physics object and event reconstruction}
 
 Simulation is performed by MOKKA, interfacing GEANT 4.
-The reconstruction is done via Marlin in iLCSoft. Separate software package (processor) exists for identification of electrons, muons, taus, and jet reconstruction. New processors have been developed and existing processors have been optimised for a compromise of signal selection and background rejection.
+The reconstruction is done via Marlin in \ilcsoft v01-16. Separate software package (processor) exists for identification of electrons, muons, taus, and jet reconstruction. New processors have been developed and existing processors have been optimised for a compromise of signal selection and background rejection. The latest function flavour tagging processor exist in \ilcsoft v01-16, which prevented the usage of more recent \ilcsoft.
+
 
 For my signal channel, \eeToHHbbWW, there is no lepton in the final state. Hence a effective lepton identifier would improve the signal identification. Processors are wither developed or optimised with samples at \rootS{1.4}, and checked against samples at \rootS{3}. Because the expected signal significance would be low, the processors are optimised to reject more background at the cost of losing a bit more signals, to increase the signal significance. It was found that the same set of parameters work well under \rootS{1.4} and 3\,TeV.
+
+
 
 \subsection{Electron and muon identification}
 \label{sec:doubleHiggsLeptonID}
@@ -718,14 +721,13 @@ A series of discriminative variables were calculated, and fed into MVA for signa
 The full list of variables can be found in \Table{}.
 Same set of variables are used for \rootS{1.4} and \rootS{3}.
 
-
-
+\Figure shows the the variable XX which gives a good discrimination of signal against background.
 
 \begin{table}[!tbp]\centering
 \begin{tabular}{ll}
 \hline
 \hline
- \multicolumn{1}{m{3cm}}{Variable} &  \multicolumn{1}{m{0.7\textwidth}}{Description} \\
+ \multicolumn{1}{m{3cm}}{Variable} &  \multicolumn{1}{m{\widthOne}}{Description} \\
  \multicolumn{1}{m{3cm}}{$m_{\Hbb}$} &  \multicolumn{1}{m{0.7\textwidth}}{Invariant mass of \Hbb } \\
  \multicolumn{1}{m{3cm}}{$m_{\HWW}$} &  \multicolumn{1}{m{0.7\textwidth}}{Invariant mass of \HWW } \\
  \multicolumn{1}{m{3cm}}{$m_{\PW}$} &  \multicolumn{1}{m{10cm}}{Invariant mass of \PW } \\
@@ -773,5 +775,18 @@ The optimal set were chosen to give the best MVA performance, whilst no strong p
 
 
 \section{Multivariate analysis}
+
+Multivariate analysis was performed with TMVA package. The classifier that performs the best was found to be the boosted decision tree. See \Section{} for details on boosted decision tree.
+
+The parameters for boosted decision tree were optimised and checked for overtraining. The most important variables are the depth of the tree and the number of trees. Other parameters includes the minimum number of nodes in a leaf, the number of cuts of a variable, the learning rate, the sampling fraction, the yes/no or purity leaf, adaBoost or gradient boost.
+
+The optimisation and overtraining test was done with \rootS{3} samples. \rootS{1.4} samples produce similar results.
+
+Half of the samples were used for training, and the other half used for testing.
+
+% TODO discuss BDT TMVA first, then come back here
+% TODO discuss each variables
+
+\section{Signal selection results}
 
 \section{Couplings extration} 

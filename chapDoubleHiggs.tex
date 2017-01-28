@@ -130,9 +130,12 @@ Channel  &  $\sigma(\rootS{1.4})$ / fb  & $\sigma(\rootS{3})$ / fb   \\
 \section{Physics object and event reconstruction}
 
 Simulation is performed by MOKKA, interfacing GEANT 4.
-The reconstruction is done via Marlin in iLCSoft. Separate software package (processor) exists for identification of electrons, muons, taus, and jet reconstruction. New processors have been developed and existing processors have been optimised for a compromise of signal selection and background rejection.
+The reconstruction is done via Marlin in \ilcsoft v01-16. Separate software package (processor) exists for identification of electrons, muons, taus, and jet reconstruction. New processors have been developed and existing processors have been optimised for a compromise of signal selection and background rejection. The latest function flavour tagging processor exist in \ilcsoft v01-16, which prevented the usage of more recent \ilcsoft.
+
 
 For my signal channel, \eeToHHbbWW, there is no lepton in the final state. Hence a effective lepton identifier would improve the signal identification. Processors are wither developed or optimised with samples at \rootS{1.4}, and checked against samples at \rootS{3}. Because the expected signal significance would be low, the processors are optimised to reject more background at the cost of losing a bit more signals, to increase the signal significance. It was found that the same set of parameters work well under \rootS{1.4} and 3\,TeV.
+
+
 
 \subsection{Electron and muon identification}
 \label{sec:doubleHiggsLeptonID}
@@ -177,7 +180,7 @@ Two processors share similar criterion for light lepton identification. The main
 % TODO check tau stuff
 With a decay length of 87$\mu{m}$, tau leptons decay before reaching the detector and can only be identified through the reconstruction of their decay products. The leptonic decay of tau can be identified using the two isolated lepton finder processor. Therefore tau identification will focus on the hadronic decay.
 
-TauFinderProcessor, an existing processor Marlin package, has been tuned in collaboration and tested. The a collection of tau decay productions are identified they pass a chain of cuts.
+TauFinderProcessor \cite{LCD-Note-2010-009}, an existing processor Marlin package, has been tuned in collaboration and tested. The a collection of tau decay productions are identified they pass a chain of cuts.
 
 Particles are not considered if \pT is less than 1\,GeV or \absCosTheta is more than 1.1\,rad, as they are more likely from beam induced background. A seed is considered if a charged particle has \pT more than 10\,GeV. A search cone of opening angle 0.03\,rad is then formed. The search cone is rejected if it has more than 3 charged particles, more than 10 particles or its invariant mass more than 2\,GeV. An isolation cone is formed with opening angle between 0.03 and 0.33\,rad of the seed. The seed is rejected if there are more than 3\,GeV in the isolation cone.
 
