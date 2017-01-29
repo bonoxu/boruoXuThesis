@@ -75,21 +75,10 @@ Vertices are refined to improve the \Pbottom jet identification from c jet. Two 
 
 The final flavour tagging of the jet is done using multivariate analysis, which will be discussed in \Section{sec:theoryMVA}. Using TMVA software package \cite{Hocker:2007ht}, Boosted Decision Tree classier is used. A series of flavour sensitive variables are calculated, and the classification is divided four sub-set: jet with zero, one, or two properly reconstructed vertices, or a single-track pseudovertex. For each sub-set, a jet can either be a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet (\Pup, \Pdown or \Pstrange). The multiclass classifier's response is normalised across different sub-set, and they will be referred in the subsequent physics analysis as the tag value.
 
-\section{Multivariate analysis}
+\subsection{MVA}
 \label{sec:theoryMVA}
 
-Multivariate analysis (MVA) has become increasingly common in high energy physics. MVA can be viewed as an advanced tool for regression or classification. Comparing to the traditional cut based method, modern machine learning technique offers much improvement in data analysis. 
-
-Software package for MVA used throughout this document is TMVA \cite{Hocker:2007ht}. 
-
-A typical machine learning MVA classification involves two classes, also known as signal and background. A machine learning model, called classifier in TMVA, needs to be trained with training data. The trained model will be applied onto the testing data, for signal extraction. Response of the model could be signal/background, or be  a number in a continuous spectrum, where the user decides the value to separate signal from background.
-
-This classification scheme can be easily extended to multiple classes, implemented in TMVA with multiclass class. 
-
-
-
-
-
+Multivariate analysis (MVA) has become increasingly common in high energy physics. 
 BDT
 ?likelihood
 Range, discrete
