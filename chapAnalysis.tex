@@ -94,7 +94,16 @@ The optimisation of the model is to select the optimal free parameters of the mo
 
 The compromise is clear. The optimal model is one between overfitting and underfitting. In practice, this involves building the model with increasing complexity, and finding the point where overfitting occurs.
 
+\begin{figure}[!tbp]
+\includegraphics[width=\largefigwidth]{doubleHiggs/DepthOfTrees}
+\caption[MVA overtraining]%
+   {MVA overtraining}
+   \label{fig:analysisMVAovertraining}
+\end{figure}
 
+\Figure{fig:analysisMVAovertraining} shows a typical overfitting plot. Overfitting is defined when the efficiency of signal selection in the training samples increases, but the efficiency in the testing sample decrease. Here the example is chosen from double Higgs analysis, using Boosted Decision Tree model, for \rootS{3} samples. The efficiency of signal selection is defined as the signal efficiency when background efficiency is 1\%, report by the TMVA training process. In the plot, the depth of the tree, or the number of layers in the tree, reflects the complexity of the model. From tree depth 2 to 5, the efficiency for both testing and training samples increases. From tree depth 6 onwards, the overfitting occurs. In this particular example, one should choose a tree depth fewer than 7 to avoid overfitting.
+
+There are methods to assign the error on the selection efficiency. Thus one can make a better choice of parameters to avoid overfitting. These methods were not implemented due to the technical capacity provided by the TMVA.
 
 \subsection{Choice of models}
 
@@ -138,18 +147,20 @@ The training of the decision tree is to determine the optimal cut at the node. T
 
 The using of a trained decision tree is to transverse along the tree. The event is classified as signal or background depending on whether it falls in the signal-like or background-like end node.
 
-Decision tree has a low bias, but high variance. This means it is very easy to construct a tree that fits the training data very well, but the tree would not be optimal for the testing sample. To overcome the instability of the decision 
+Decision tree has a low bias, but high variance. This means it is very easy to construct a tree that fits the training data very well, but the tree would not be optimal for the testing sample. To overcome the instability of the decision tree, many methods have been developed. The most stressful one is boosting.
 
 
-Decision tree
-size of tree (depth)
-minimum number of events in a node
 
 
 
 Boosting
 Learning rate
 number of trees
+Decision tree
+size of tree (depth)
+minimum number of events in a node
+
+
 Adaptive boost and gradient boost
 
 Bagging

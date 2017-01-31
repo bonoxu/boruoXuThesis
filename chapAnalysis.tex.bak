@@ -88,11 +88,31 @@ Strictly, there should be three statistically independent samples for the MVA. O
 
 This classification scheme can be easily extended to multiple classes, implemented in TMVA with multiclass class.
 
+\subsection{Optimisation and overfitting}
+
+The optimisation of the model is to select the optimal free parameters of the model. One could build a complex model which fits the training samples very well, but it would not be optimal for another testing sample. A simple model is less prone to statistical fluctuation of samples, however, it might be too simple to achieve the optimal modeling. The former case is known as overfitting, or overtraining. The latter case is called underfitting, or undertraining.
+
+The compromise is clear. The optimal model is one between overfitting and underfitting. In practice, this involves building the model with increasing complexity, and finding the point where overfitting occurs.
+
+\begin{figure}[!tbp]
+\includegraphics[width=\largefigwidth]{doubleHiggs/DepthOfTrees}
+\caption[MVA overtraining]%
+   {MVA overtraining}
+   \label{fig:analysisMVAovertraining}
+\end{figure}
+
+\Figure{fig:analysisMVAovertraining} shows a typical overfitting plot. Overfitting is defined when the efficiency of signal selection in the training samples increases, but the efficiency in the testing sample decrease. Here the example is chosen from double Higgs analysis, using Boosted Decision Tree model, for \rootS{3} samples. The efficiency of signal selection is defined as the signal efficiency when background efficiency is 1\%, report by the TMVA training process. In the plot, the depth of the tree, or the number of layers in the tree, reflects the complexity of the model. From tree depth 2 to 5, the efficiency for both testing and training samples increases. From tree depth 6 onwards, the overfitting occurs. In this particular example, one should choose a tree depth fewer than 7 to avoid overfitting.
+
+There are methods to assign the error on the selection efficiency. Thus one can make a better choice of parameters to avoid overfitting. These methods were not implemented due to the technical capacity provided by the TMVA.
+
+
 \subsection{Choice of models}
 
 The model, known as the classifier in TMVA, can be as simple as cut based, likelihood or linear regression. It can be complicated as non linear tree, non linear neutral network or support vector machine. Regardless of model complexity, the choice of most optimal classifier is often data driven. Also, given the free parameters in each model, the comparison between different models without individual tuning is not rigorous. Nevertheless, as researchers in the machine learning suggested, the boosted decision tree is probably the best out-of-the-box machine learning method. Neutral network could potentially be better than the boosted decision, but it requires more tuning, and it is less intuitive to interpret the model. For these reasons, boost decision tree (BDT) is often the choice of machine learning model in the high energy physics. And it is used in various physics analysis in this document.
 
 Before describing BDT in detail, we will first visit the traditional rectangular cut model, and the Projective Likelihood method, which is used in the photon ID in the \pandora.
+
+
 
 \subsection{Rectangular Cut}
 
@@ -121,8 +141,16 @@ Decision tree is a binary tree, where each node, the splitting point, uses a sin
 
 The training of the decision tree is to determine the optimal cut at the node. The the probability of the cut produces the signal is $p$. Three commonly used metrics for two-class classification are
 \begin{enumerate}
-\item Misclassification error:  
+\item Misclassification error:  $1 - \max\parenths{p\!,\!1\!-\!p}$,
+\item Gini index: $2p\parenths{1\!-\!p}$,
+\item Cross-Entropy or deviance: $-p\log{p}-\parenths{1\!-\!p}\log\parenths{1\!-\!p}$.
 \end{enumerate}
+
+The using of a trained decision tree is to transverse along the tree. The event is classified as signal or background depending on whether it falls in the signal-like or background-like end node.
+
+Decision tree has a low bias, but high variance. This means it is very easy to construct a tree that fits the training data very well, but the tree would not be optimal for the testing sample. To overcome the instability of the decision 
+
+
 Decision tree
 size of tree (depth)
 minimum number of events in a node
