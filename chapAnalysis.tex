@@ -133,10 +133,10 @@ Similarly to the rectangular cut method, PDE works better with decorrelated, gau
 
 
 \subsection{Boosted decision tree}
+\label{sec:analysisBDT}
+Boost decision tree (BDT) is a non linear tree based model. Its rather complex nature requires a careful explanation of many concepts within the BDT.
 
-Boost decision tree (BDT) is a non linear tree based model. Its rather complex nature requires a careful explanation of many concepts within the BDT.  
-
-Decision tree is a binary tree, where each node, the splitting point, uses a single discriminative variable to decide whether a event is signal-like (``goes down by a layer to the left''), or background-like (``goes down by a layer to the right''). At each node, samples are divided into signal-like and background-like sub-samples. The tree growing starts at the root node, and stops at certain criterion, which could be the minimum number of events in a node, the number of layers of the tree, or a minimum/maximum signal purity. 
+Decision tree is a binary tree, where each node, the splitting point, uses a single discriminative variable to decide whether a event is signal-like (``goes down by a layer to the left''), or background-like (``goes down by a layer to the right''). At each node, samples are divided into signal-like and background-like sub-samples. The tree growing starts at the root node, and stops at certain criterion, which could be the minimum number of events in a node, the number of layers of the tree, or a minimum/maximum signal purity.
 
 The training of the decision tree is to determine the optimal cut at the node. The the probability of the cut produces the signal is $p$. Three commonly used metrics for two-class classification are
 \begin{enumerate}
@@ -147,67 +147,94 @@ The training of the decision tree is to determine the optimal cut at the node. T
 
 The using of a trained decision tree is to transverse along the tree. The event is classified as signal or background depending on whether it falls in the signal-like or background-like end node.
 
-Decision tree has a low bias, but high variance. This means it is very easy to construct a tree that fits the training data very well, but the tree would not be optimal for the testing sample. To overcome the instability of the decision tree, many methods have been developed. The most stressful one is boosting.
+Decision tree has a low bias, but high variance. This means it is very easy to construct a tree that fits the training data very well, but the tree would not be optimal for the testing sample. To overcome the instability of the decision tree, many methods have been developed. The most successful one is boosting.
+
+Boosting: it is a technique where the misclassified events receives a higher weight than the correctly classified events. Therefore, when the training is iterated, the misclassified events would receive higher and higher wights and more likely to classify correctly. The boosting is done at every iteration, which can be few hundred or few thousand time. This will create a ``forest'' of many trees. The final output could be a majority vote, by transversing the event to the end node for each tree in the forest.
+
+Bagging: also known as boot-strap, it is a method that select a simple random sub-set of the training sample, and apply the model. In this case, every boosting iteration takes a bagged sample, rather than the whole sample.
+
+TMVA implementation of the BDT for the output is using a likelihood estimator, depending on how often a event is classified as signal in the forest. The likelihood number is later used to select signal from background.
+
+\subsection{Optimisation of Boosted decision tree}
+
+Many parameters can be tuned. Hence we dedicate a small section to describe the tuning parameters.
+
+The most important parameter is the depth of a tree, which determines how many end nodes a tree has, or the degrees of freedom of a tree. The related parameter is the number of trees. Experience shows that using many small trees yields the best result.
+
+The minimum number of events in a node, which is a stopping criteria for tree growing, affects the size of the tree. But it is less influential than the depth of the tree.
+
+The learning rate, which controls how fast the weight changes for events in each boosting iteration. Experience shows small learning rate with many trees work better than large learning rate with few trees.
+
+The usual choice of the metric for the optimal cuts is either Gini index or cross-entropy. (See \Section{sec:analysisBDT}) We chose Gini index for out BDT usages, as it makes little difference to performances, comparing to the cross-entropy metric.
+
+Number of bins per variables for the cut is necessary to make tree growing efficient. Discrete binned variables are faster to computer than continuous variables. The parameter does not impact the performance much. However, variables should be pre-processed before going into the model. For example, the variable should be limited to a sensible range to avoid the extremes. The variable should also be transformed to obtain a more uniform distribution, if the original distribution is highly skewed.
+
+The boosting has two variant, adaptive boost and gradient boost. For all the BDT used in this document, adaptive boost is used.
+
+For the end node, it is determined as either signal-like or background-like, based on the majority for the training event in the end node. Numerically, it corresponds to 1/0. However, the end node could also use signal purity as the output, resulting in a continues spectrum of [0,1].
 
 
+\subsection{Multiple classes}
+The above discussion is done assuming two classes - signal and background. The argument can be easily extended to multiple classes. There are two ways for the training. "One v.s. one" is each class is trained against each other class. And the overall likelihood is normalised. The second way to train is called "one v.s. all", which is when each class is trained against all other classes.
 
+Using a three-class example, A, B and C, "one v.s. one" scheme trains A against B, B against C, and C against A. Then the likelihood is normalised. "One v.s. all" would train A against B plus C, B against A plus C, and C against A plus B.
 
+TMVA multiclass implementation uses "one v.s. all" scheme. Multiclass is used in falvour tagging of jets, \Section{sec:theoryFalvourTagging}, and in the tau lepton final state separation study, \Section{}.
 
-Boosting
-Learning rate
-number of trees
-Decision tree
-size of tree (depth)
-minimum number of events in a node
+\section{Event shape varaibles}
 
+Event shape variables are some useful global variables to describe the shape of the event, for example whether it is back-to-back, or homogenous in the solid angle.
 
-Adaptive boost and gradient boost
+The classical event shape thrust\cite{PhysRevLett.39.1587}, is defined as
+\begin{equation}
+T = \max_{\hat{t}}\!\frac{\sum_{i}\absOf{\hat{t}\!\cdot\!\vec{p_{i}}}}{\sum_{i}\absOf{\vec{p_{i}}}}
+\end{equation}
+where $\vec{p_{i}}$ is the momentum vector of the particle $i$. Summation is over all particles in the event. Thrust axis, $\hat{t}$, is a unit vector. (Principle) Thrust value, $T$, is 1 for a perfect pencillike back-to-back two-jet event, and 0.5 for a perfect spherical event. The thrust value is useful in picking out back-to-back two-jet event. Thrust axis is useful to separate each jet in a back-to-back two-jet event.
 
-Bagging
+Sphericity tensor \cite{PhysRevLett.35.1609}, is defined as
+\begin{equation}
+\bm{S^{\alpha\beta}} = \frac{\sum_{i}p^{\alpha}_{i}p^{\beta}_{i}}{\sum_{i}\absOf{\vec{p_{i}}}^2},
+\end{equation}
+where $\vec{p_{i}}$ is the momentum vector of the particle $i$. Summation is over all particles in the event. $\alpha$ and $\beta$ refer to the x, y, z coordinate axis. Eigenvalues of tensor $\bm{S}$ can be found, or in this case diagonalisation of the matrix $\bm{S}$, denoted with $\lambda_{1}$, $\lambda_{2}$, $\lambda_{3}$. The normalisation condition requires $\lambda_{1}\!\geqslant\! \lambda_{2} \! \geqslant \! \lambda_{3}$ and $ \lambda_{1} \! + \! \lambda_{2} \! + \! \lambda_{3} \! = \! 1 $. Sphericity, $S$, is defined in terms of $\lambda$,
+\begin{equation}
+S = \frac{3}{2}\parenths{\lambda_{1} \! + \! \lambda_{2}}.
+\end{equation}
+$S$, is 0 for a perfect pencillike back-to-back two-jet event, and 1 for a perfect spherically symmetric event.
 
-Cuts variable
+Aplanarity is another event shape varaible that distinguishes spherical symmetrical events from planar and linear events. The definition is
+\begin{equation}
+S = \frac{3}{2}\parenths{\lambda_{1}},
+\end{equation}
+where $\lambda_{1}$ is the largest eigenvalue in the diagonalised sphericity tensor.
 
-Yes/no vs purity
+\section{Miscellaneous}
 
+An event in a collider experiment refers to one collision and the subsequent energy deposition in the detector. An event corresponds to a certain type of physics process.
 
-\begin{comment}
-Boosted decision trees have been successfully used in High Energy Physics analysis for example by the MiniBooNE experiment (Yang-Roe-Zhu, physics/0508045). In Boosted Decision Trees, the selection is done on a majority vote on the result of several decision trees, which are all derived from the same training sample by supplying different event weights during the training.
+Often we are dealing with extracting a type of events, from a large number of other events. The signal, or signal events refer to events of interests. Other events are referred to as the background, or background events.
 
-Decision trees: successive decision nodes are used to categorize the events out of the sample as either signal or background. Each node uses only a single discriminating variable to decide if the event is signal-like ("goes right") or background-like ("goes left"). This forms a tree like structure with "baskets" at the end (leave nodes), and an event is classified as either signal or background according to whether the basket where it ends up has been classified signal or background during the training. Training of a decision tree is the process to define the "cut criteria" for each node. The training starts with the root node. Here one takes the full training event sample and selects the variable and corresponding cut value that gives the best separation between signal and background at this stage. Using this cut criterion, the sample is then divided into two subsamples, a signal-like (right) and a background-like (left) sample. Two new nodes are then created for each of the two sub-samples and they are constructed using the same mechanism as described for the root node. The devision is stopped once a certain node has reached either a minimum number of events, or a minimum or maximum signal purity. These leave nodes are then called "signal" or "background" if they contain more signal respective background events from the training sample.
+Typical metrics of signal selection is efficiency and purity. This toy example illustrates definitions of efficiency and purity.
 
-Boosting: the idea behind the boosting is, that signal events from the training sample, that end up in a background node (and vice versa) are given a larger weight than events that are in the correct leave node. This results in a re-weighed training event sample, with which then a new decision tree can be developed. The boosting can be applied several times (typically 100-500 times) and one ends up with a set of decision trees (a forest).
+\begin{table}[!tbp]
+\begin{tabular}{lrr}
+\hline
+\hline
+Event Number  &  True Signal & True Background  \\
+\hline
+Selected Signal & $N_S$ & $N_1$ \\
+Selected Background & $N_2$ & $N_B$ \\ 
+\hline
+\hline
 
-Bagging: In this particular variant of the Boosted Decision Trees the boosting is not done on the basis of previous training results, but by a simple stochasitc re-sampling of the initial training event sample.
+\end{tabular}
+\caption[A toy example to demonstrate definitions of efficiency and purity.]%
+    {A toy example to demonstrate definitions of efficiency and purity.}
+\label{tab:analysisToyExample}
+\end{table}
+Signal selection efficiency is defined as $\frac{N_S}{N_S \! + \! N_2}$. Signal selection purity is defined as $\frac{N_S}{N_S \! + \! N_1}$.
+Significance is a quantity that is similar to purity, $\frac{N_S}{\rootOf{N_S \! + \! N_1}}$
 
-Analysis: applying an individual decision tree to a test event results in a classification of the event as either signal or background. For the boosted decision tree selection, an event is successively subjected to the whole set of decision trees and depending on how often it is classified as signal, a "likelihood" estimator is constructed for the event being signal or background. The value of this estimator is the one which is then used to select the events from an event sample, and the cut value on this estimator defines the efficiency and purity of the selection.
-\end{comment}
+When we are describing particles, light lepton, \llight, refer to electrons, \Pem, and muons, \Pmuon. Light quarks, \qlight, refer to up quark, \Pup, down quark, \Pdown, and strange quark, \Pstrange.
 
-\subsection{Optimisation and overfitting}
-
-
-
-
-
-
-
-BDT
-?3likelihood
-Range, discrete
-Typical example:
-m in a good range
-log transformation
-
-\section{Event shape}
-Thrust
-Sphericity
-Aplanarity
-\subsection{Jargons}
-Signal
-Selection
-Efficiency
-Significance
-
-\qlight light quark
-light lepton
-
-Thanks computing resources. i.e. ILC VO, CLIC grid, etc. 
+Computational intensive jobs are processed either on the Cambridge High Energy Physics grid, or the \CLIC computing grid.
+%Thanks computing resources. i.e. ILC VO, CLIC grid, etc. 

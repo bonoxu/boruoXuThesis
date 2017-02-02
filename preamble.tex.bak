@@ -81,6 +81,7 @@
 \DeclareRobustCommand{\ggHad}{\HepProcess{ \Pphoton \Pphoton \to hadrons }\xspace}
 \DeclareRobustCommand{\qlight}{\HepGenParticle{q}{l}{}\xspace}
 \DeclareRobustCommand{\Aqlight}{\HepGenAntiParticle{q}{l}{}\xspace}
+\DeclareRobustCommand{\llight}{\HepGenParticle{l}{l}{}\xspace}
 \DeclareRobustCommand{\egamma}[4]{\HepProcess{ #1 #2 (#3) \to #4}\xspace}
 \DeclareRobustCommand{\gammagamma}[5]{\HepProcess{ #1 (#2) #3 (#4) \to #5}\xspace}
 
@@ -99,7 +100,7 @@
 \DeclareRobustCommand{\acolinearity}[1]{\mymath{acol_{#1}}\xspace}
 \DeclareRobustCommand{\npfo}[1]{\mymath{N_{#1}}\xspace}
 \DeclareRobustCommand{\cosStar}[1]{\mymath{\cosOf{\theta^{*}_{#1}}}\xspace}
-\DeclareRobustCommand{\rootOf}[1]{\mymath{\sqrt{\1}}\xspace}
+\DeclareRobustCommand{\rootOf}[1]{\mymath{\sqrt{#1}}\xspace}
 
 \DeclareRobustCommand{\W*}{\HepParticle{W}{}{*}\xspace}
 \DeclareRobustCommand{\Hbb}{\HepParticle{H}{\Pbottom\Pbottom}{}\xspace}
@@ -128,6 +129,7 @@
 \DeclareRobustCommand{\ILC}{ILC\xspace}
 \DeclareRobustCommand{\CLIC}{CLIC\xspace}
 \DeclareRobustCommand{\CLICILD}{CLIC\_ILD\xspace}
+\DeclareRobustCommand{\ILD}{ILD\xspace}
 \DeclareRobustCommand{\ilcsoft}{iLCSoft\xspace}
 \DeclareRobustCommand{\lcfiplus}{LCFIPlus\xspace}
 \DeclareRobustCommand{\ILCloi}{\ILC Letter of Intent\xspace}

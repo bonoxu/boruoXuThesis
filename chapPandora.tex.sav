@@ -43,30 +43,19 @@ There are two standalone particle identification algorithms in \pandora, muon id
 
 \subsection{Clusters Merging}
 
-Initial clustering scheme is aggressive at splitting clusters. The next step is to merge clusters base on clear topological signatures. For clusters associated to tracks (charged clusters) and clusters not associated to tracks(neutral clusters), track like segments in the calorimeter are identified.
-
-These merging signatures include combining track segments, connecting tack segments with gaps, connecting track segment to a hadronic shower, and merging clusters when they are within close proximity.
-
 \subsection{Re-clustering}
 
-The clustering and cluster merging scheme work well for low energy (less than 50\,GeV) jet. For a high energy jet, particles and the subsequent hadronic showers are more boosted and more likely to overlap each other. herefore, it is important to re-cluster base on the compatibility of the cluster energy and the associated track momentum. A cluster may be split into two, or two clusters maybe be re-clustered based on the track-cluster association. The re-clustering algorithm is applied iteratively to find a more correct clustering of calorimeter hits.
-
-\subsection{Photon identification}
-
-The neutral clusters are tested against an expected photon electromagnetic shower profile. The longitudinal shower profile for a photon cluster is required to be similar to a expected electromagnetic shower profile, with the discrepancy being smaller than a threshold.
-
 \subsection{Fragment removal}
-
-The late stage of the reconstruction will focus on merging low energy clusters, especially non-photon neutral clusters. These neutral clusters are likely to be fragments of charged clusters, instead of being a physical particle. The merging criterion are mostly based on the proximity and the energy comparison.
-
-One algorithm will attempt to split up photon clusters, where each is originated from two close by photons. This will be described in details in \Chapter{}.
 
 \subsection{Particle Flow Object Creation}
 
 % double counting taking care in pandora
-Particle Flow Objects (PFOs) are created at the last step. Tracks are associated to the clusters based on the proximity. Simple but effective particle identification for electrons, muons are applied. Photon identifications have been applied at various stages of the reconstruction. 
 
-PFOs are the output of the \pandora reconstruction. The four-momentum of these PFOs are  used heavily for the downstream analysis. The electron, muon and photon identification are  also used in physics analysis, such as one described in \Chapter{}.
+\section{}
+Iterative track-cluster association
 
-\section{Suppression of \ggHad backround}
+Photon, passage through matter
 
+Muon ID
+
+Fragmentation

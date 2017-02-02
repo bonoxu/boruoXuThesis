@@ -1,10 +1,12 @@
-\chapter{Double Higgs Bosons Analysis}
+\chapter{Double Higgs Bosons Production Analysis}
 \label{chap:DoubleHiggs}
 
 \chapterquote{Two is better than one}%
 {Sir Steve Orange, 1785--1854}%: Blackwood's Magazine May 1830
 
 \section{Motivation}
+
+
 
 Ha there is a higgs.
 
@@ -180,7 +182,7 @@ Two processors share similar criterion for light lepton identification. The main
 % TODO check tau stuff
 With a decay length of 87$\mu{m}$, tau leptons decay before reaching the detector and can only be identified through the reconstruction of their decay products. The leptonic decay of tau can be identified using the two isolated lepton finder processor. Therefore tau identification will focus on the hadronic decay.
 
-TauFinderProcessor, an existing processor Marlin package, has been tuned in collaboration and tested. The a collection of tau decay productions are identified they pass a chain of cuts.
+TauFinderProcessor \cite{LCD-Note-2010-009}, an existing processor Marlin package, has been tuned in collaboration and tested. The a collection of tau decay productions are identified they pass a chain of cuts.
 
 Particles are not considered if \pT is less than 1\,GeV or \absCosTheta is more than 1.1\,rad, as they are more likely from beam induced background. A seed is considered if a charged particle has \pT more than 10\,GeV. A search cone of opening angle 0.03\,rad is then formed. The search cone is rejected if it has more than 3 charged particles, more than 10 particles or its invariant mass more than 2\,GeV. An isolation cone is formed with opening angle between 0.03 and 0.33\,rad of the seed. The seed is rejected if there are more than 3\,GeV in the isolation cone.
 

@@ -16,7 +16,8 @@
 \DeclareRobustCommand{\braces}[1]{\mymath{\left\{{#1}\right\}}}
 \DeclareRobustCommand{\angles}[1]{\mymath{\left\langle{#1}\right\rangle}}
 \DeclareRobustCommand{\sqbracs}[1]{\mymath{\left[{#1}\right]}}
-\DeclareRobustCommand{\absOf}[1]{\mods{#1}}
+\DeclareRobustCommand{\absOf}[1]{\mymath{\left[{#1}\right]}}
+
 \DeclareRobustCommand{\mods}[1]{\mymath{\left\lvert{#1}\right\rvert}}
 \DeclareRobustCommand{\modsq}[1]{\mymath{\mods{#1}^2}}
 \DeclareRobustCommand{\dblmods}[1]{\mymath{\left\lVert{#1}\right\rVert}}

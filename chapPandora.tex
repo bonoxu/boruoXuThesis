@@ -4,34 +4,78 @@
 \chapterquote{How to open a pandora box?}%
 {A wise Chinese}%: Blackwood's Magazine May 1830
 
+As previously stated, this document focus on the \ILD and \CLICILD detectors. Due to the similarity, we often only discuss one detector to avoid the repetition. The difference in detectors will be stated if applicable.
 
 \section{Reconstruction overall}
-digitisation
-tracking
+
+Reconstruction software runs in Marlin software framework \cite{Gaede:2006pj}, part of \ilcsoft.
+
+The reconstruction of a event into physical objects containing a few main steps: digitisation of calorimeter hits (simulated hits in this case), reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects reconstruction with \pandora. For the \CLIC detectors, there is an extra step of \ggHad background suppression. We will discuss \pandora cite{Thomson:2009rp,Marshall:2012ry,Marshall:2015rfa} in details, where a lot work goes into, and the background suppression due to its relevance in later analysis.
 
 \section{Pandora}
 
-Track quality cuts
+Inputs of \pandora are digitised calorimeter hits and reconstructed tracks. 
 
-\subsection{Cone clustering}
+\subsection{Track selection} 
+
+Tracks are selected based on their topological properties, how likely they are from physical processes, and whether they are consistent with tracker resolution. Only selected tracks will be used for the subsequent reconstruction. 
+
+Using a helical fit of last 50 reconstructed hits, tracks are projected to the front of the ECal.
+
+\subsection{Calorimeter selection}
+
+Calorimeter hits are selected based on a series of criterion. The selected hits need to have energies above the threshold, using the conversion of a minimum ionising particle (MIP) equivalent. 
+
+Isolated hits, often originated from low energy neutrons in a hadronic shower, are difficult to associate to the correct hadronic shower. They are identified and not used in the clustering. But their energy is added in the particle flow object (PFO) creation step.
+
+\subsection{Clustering}
 \label{sec:pandoraConeClustering}
 
 % ATTN add a cone cluster picture?
+The main clustering scheme used in \pandora is cone clustering, for grouping calorimeter hits. 
+Cone clustering has a specified opening angle of the seed hit. Because the direction of particle flows is largely unchanged from the originated particle, whether it is a electromagnetic shower, QCD radiation or hadronisation, these cone clusters have similar direction and energy to the originated particle.
 
-Cone clustering is used in \pandora for grouping calorimeter hits, within a opening angle of the seed hit. Because the direction of particle flows is largely unchanged from the originated particle, whether it is a electromagnetic shower, QCD radiation or hadronisation, these cone clusters have similar direction and energy to the originated particle.
-
-Typically a high energy calorimeter hit will be chosen as a ``seed''. A cone with a specified opening angle and depth will be formed around the seed. The \fourMomentum of calorimeter hits sum to the cone's \fourMomentum.
+Typically a high energy calorimeter hit will be chosen as a ``seed''. A cone with a specified opening angle and depth will be formed around the seed. The \fourMomentum of calorimeter hits sum to the cone's \fourMomentum. \pandora will start to use projection of tracks at the ECal as seeds. When all tracks are used, the remaining hits will be used as seeds.
 
 These cone clustering algorithms are widely used in the calorimeter in \pandora, and they produce basic working objects, \clusters.
 
+There are two standalone particle identification algorithms in \pandora, muon identification and photon identification. Identified muons and photons will not participate in the clustering and re-clustering stages. Both algorithms aim to improve the clustering and the re-clustering. The photon identification and related algorithm will be discussed in details in \Chapter{}.
+
+\subsection{Clusters Merging}
+
+Initial clustering scheme is aggressive at splitting clusters. The next step is to merge clusters base on clear topological signatures. For clusters associated to tracks (charged clusters) and clusters not associated to tracks(neutral clusters), track like segments in the calorimeter are identified.
+
+These merging signatures include combining track segments, connecting tack segments with gaps, connecting track segment to a hadronic shower, and merging clusters when they are within close proximity.
+
+\subsection{Re-clustering}
+
+The clustering and cluster merging scheme work well for low energy (less than 50\,GeV) jet. For a high energy jet, particles and the subsequent hadronic showers are more boosted and more likely to overlap each other. herefore, it is important to re-cluster base on the compatibility of the cluster energy and the associated track momentum. A cluster may be split into two, or two clusters maybe be re-clustered based on the track-cluster association. The re-clustering algorithm is applied iteratively to find a more correct clustering of calorimeter hits.
+
+\subsection{Photon identification}
+
+The neutral clusters are tested against an expected photon electromagnetic shower profile. The longitudinal shower profile for a photon cluster is required to be similar to a expected electromagnetic shower profile, with the discrepancy being smaller than a threshold.
+
+\subsection{Fragment removal}
+
+The late stage of the reconstruction will focus on merging low energy clusters, especially non-photon neutral clusters. These neutral clusters are likely to be fragments of charged clusters, instead of being a physical particle. The merging criterion are mostly based on the proximity and the energy comparison.
+
+One algorithm will attempt to split up photon clusters, where each is originated from two close by photons. This will be described in details in \Chapter{}.
+
+\subsection{Particle Flow Object Creation}
 
 % double counting taking care in pandora
+Particle Flow Objects (PFOs) are created at the last step. Tracks are associated to the clusters based on the proximity. Simple but effective particle identification for electrons, muons are applied. Photon identifications have been applied at various stages of the reconstruction. 
 
+PFOs are the output of the \pandora reconstruction. The four-momentum of these PFOs are  used heavily for the downstream analysis. The electron, muon and photon identification are  also used in physics analysis, such as one described in \Chapter{}.
 
-Iterative track-cluster association
+\section{Suppression of \ggHad backround}
 
-Photon, passage through matter
+For the CLIC, as discussed in \Section{}, significant \ggHad background is present. It is crucial to remove the beam induced background as they don't represent the underlying physics process.
 
-Muon ID
+Two Marlin process has been developed to suppress these background, a track selector and a PFO selector\cite{Marshall:2012ry}. 
 
-Fragmentation
+The track selector aims to remove poor quality and fake tracks. It places simple quality cut and a simple time of arrival cut. If the arrival time of the track at the front of the ECal, using the helical fit, differs more than 50\,ns from using a straight line fit, the track will be rejected.
+
+The PFO selector utilise the high spatial resolution from the high granular calorimeter. PFOs from \ggHad often have low \pT and have a range of time. PFOs from physics processes have a range of \pT, and have time close to the brunch crossing time. These two distinctive features allow \ggHad background to be separated. The optimal suppression uses different \pT and time cuts for the central part of the detector, and for the forward part of the detector, and uses different cuts for photons, neutral PFOs and charged PFOs. Three configurations of these cuts are developed, namely ``loose'', ``normal'', and ``tight'' selections. As the name suggested, ``loose'' selection corresponds to a looser cut of \pT and time. The optimal configuration depends on the \sqrtS of the collision, and the physics process to study.
+
+The background suppression is used in analysis described in \Chapter{chap:DoubleHiggs}

@@ -58,6 +58,8 @@
 
 \DeclareRobustCommand{\Table}[1]{table \ref{#1}\xspace}
 \DeclareRobustCommand{\Section}[1]{section \ref{#1}\xspace}
+\DeclareRobustCommand{\Chapter}[1]{chapter \ref{#1}\xspace}
+
 \DeclareRobustCommand{\Figure}[1]{figure \ref{#1}\xspace}
 %% High-energy physics stuff
 \usepackage{abhep}
@@ -81,6 +83,7 @@
 \DeclareRobustCommand{\ggHad}{\HepProcess{ \Pphoton \Pphoton \to hadrons }\xspace}
 \DeclareRobustCommand{\qlight}{\HepGenParticle{q}{l}{}\xspace}
 \DeclareRobustCommand{\Aqlight}{\HepGenAntiParticle{q}{l}{}\xspace}
+\DeclareRobustCommand{\llight}{\HepGenParticle{l}{l}{}\xspace}
 \DeclareRobustCommand{\egamma}[4]{\HepProcess{ #1 #2 (#3) \to #4}\xspace}
 \DeclareRobustCommand{\gammagamma}[5]{\HepProcess{ #1 (#2) #3 (#4) \to #5}\xspace}
 
@@ -128,6 +131,7 @@
 \DeclareRobustCommand{\ILC}{ILC\xspace}
 \DeclareRobustCommand{\CLIC}{CLIC\xspace}
 \DeclareRobustCommand{\CLICILD}{CLIC\_ILD\xspace}
+\DeclareRobustCommand{\ILD}{ILD\xspace}
 \DeclareRobustCommand{\ilcsoft}{iLCSoft\xspace}
 \DeclareRobustCommand{\lcfiplus}{LCFIPlus\xspace}
 \DeclareRobustCommand{\ILCloi}{\ILC Letter of Intent\xspace}
