@@ -69,12 +69,29 @@
 \newlength{\widthOne}
 \setlength{\widthOne}{12cm}
 
-\DeclareRobustCommand{\eeToHH}{\HepProcess{ \Pem \Pep \to \Pgtm \Pgtp }\xspace}
+
+\DeclareRobustCommand{\decayElectron}{\Pem\Pagne\Pgngt\xspace}
+\DeclareRobustCommand{\decayMuon}{\Pgmm\Pagngm\Pgngt\xspace}
+\DeclareRobustCommand{\decayPion}{\Pgpm\Pgngt\xspace}
+\DeclareRobustCommand{\decayRho}{\HepParticleResonance{\rho}{\Pgpm\Ppizero}{770}{}\Pgngt\xspace}
+\DeclareRobustCommand{\decayAiPhoton}{\HepParticleResonanceFull{a}{1}{}{\Pgpm\Pgpz\Pgpz}{1260}{}\Pgngt\xspace}
+\DeclareRobustCommand{\decayAiPion}{\HepParticleResonanceFull{a}{1}{}{\Pgpm\Pgpm\Pgpp}{1260}{}\Pgngt\xspace}
+\DeclareRobustCommand{\decayThreePionPhoton}{\Pgpm\Pgpm\Pgpp\Pgpz\Pgngt\xspace}
+
+\DeclareRobustCommand{\decayElectronShort}{\Pem\Pagne\xspace}
+\DeclareRobustCommand{\decayMuonShort}{\Pgmm\Pagngm\xspace}
+\DeclareRobustCommand{\decayPionShort}{\Pgpm\xspace}
+\DeclareRobustCommand{\decayRhoShort}{\HepParticleResonance{\rho}{\Pgpm\Ppizero}{770}{}\xspace}
+\DeclareRobustCommand{\decayAiPhotonShort}{\HepParticleResonanceFull{a}{1}{}{\Pgpm\Pgpz\Pgpz}{1260}{}\xspace}
+\DeclareRobustCommand{\decayAiPionShort}{\HepParticleResonanceFull{a}{1}{}{\Pgpm\Pgpm\Pgpp}{1260}{}\xspace}
+\DeclareRobustCommand{\decayThreePionPhotonShort}{\Pgpm\Pgpm\Pgpp\Pgpz\xspace}
+\DeclareRobustCommand{\eeToTauTau}{\HepProcess{ \Pem \Pep \to \Pgtm \Pgtp }\xspace}
 
 
 \DeclareRobustCommand{\gHHH}{\HepParticle{g}{HHH}{}\xspace}
 \DeclareRobustCommand{\gWWHH}{\HepParticle{g}{WWHH}{}\xspace}
 \DeclareRobustCommand{\rootS}[1]{\sqrtS = #1\,TeV\xspace}
+\DeclareRobustCommand{\rootSGeV}[1]{\sqrtS = #1\,TeV\xspace}
 \DeclareRobustCommand{\ee}{\Pem\Pep\xspace}
 \DeclareRobustCommand{\eeToHH}{\HepProcess{ \Pem \Pep \to \PHiggs \PHiggs \Pnu \APnu }\xspace}
 \DeclareRobustCommand{\eeToHHbbWW}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus}\xspace}

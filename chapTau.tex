@@ -17,7 +17,7 @@ Tau lepton has been examined closely in the past. The decay and the spin of the 
 This chapter will describe a tau final decay separation study. The processor developed for the study is used to test different detector models, as a proof-of-principle of detector optimisation using tau decay separation. Lastly, the spin of the higgs was studied using one higgs decaying to two tau tau channel.
 
 
-\section{Simulation and Reconstruction}
+\section{Simulation and reconstruction}
 
 \eeToTauTau channel is used for the tau decay mode separation study. Generator software WHIZARD 1.95 \cite{whizard} is used to generated simulated Monte Carlo (MC) samples. Hadronisation is described with PYTHIA 6.4 \cite{Sjostrand:1995iq}, which is tuned to the LEP results \cite{}. The spin effect of tau lepton decay is described by TAUOLA \cite{Jadach:1993hs}.
 
@@ -72,4 +72,61 @@ T = \max_{\hat{t}}\!\frac{\sum_{i}\absOf{\hat{t}\!\cdot\!\vec{p_{i}}}}{\sum_{i}\
 where $\vec{p_{i}}$ is the momentum vector of the particle $i$. Summation is over all particles in the event. Thrust axis, $\hat{t}$, is a unit vector. (Principle) Thrust value, $T$, is 1 for a perfect pencillike back-to-back two-jet event, and 0.5 for a perfect spherical event. The sign of dot product between thrust axis and PFO momentum determines which half the PFO falls into.
 
 
+\section{Discriminative varibles}
+
+\begin{figure}[htbp]
+\centering 
+% \begin{center}/\end{center} takes some additional vertical space
+
+\includegraphics[width=.45\textwidth]{tau/var/nPhoton_100GeV_improved}
+\qquad
+\includegraphics[width=.45\textwidth]{tau/var/nCharge_100GeV_improved}
+\qquad
+\includegraphics[width=.45\textwidth]{tau/var/mVis_100GeV_improved_zoom}
+\qquad
+\includegraphics[width=.45\textwidth]{tau/var/mA1A1Fit_100GeV_improved_zoom}
+\qquad
+
+\caption[]{
+Normalised distribution for selected discriminative variables for seven final states, \decayElectron, \decayMuon, \decayPion, \decayRho, \decayAiPhoton, \decayAiPion and \decayThreePionPhoton, separated using truth information,  for \rootSGeV{100} for nominal \CLICILD detector model. The top left, top right, bottom left and bottom right plots are the normalised entries against the number of photons, number of charged PFOs, invariant mass of visible PFOs, and the invariant mass of \decayAiPhotonShort for hypothesis test, respectively. There is a clear distinction between different final states in each plot.
+}
+\label{fig:tauVar}
+\end{figure}
+
+Some variables with most discriminative power are shown in figure~\ref{fig:nPfos}. In total 29 variables used in the multivariate analysis. The reason for the large number of variables is due to training seven decay modes at once, which will be discussed later.
+
+Here is a full list of all variables used in the multivariate analysis.
+
+\begin{itemize}
+\item  $\frac{E_{ECal,HCal}}{E_{tot}}, charged$:  Sum of energy deposited in ECal and HCal, divided by the energy of charged particles
+\item  $\frac{E_{ECal,HCal}}{E_{tot}}, all$:  	 Sum of energy deposited in ECal and HCal, divided by the energy of all particles
+\item  $m_{vis}$:     	 Invariant mass of visible particles in GeV
+\item  $\frac{E_{vis}}{E_{\Ptauon}}$:	 Sum of energy of all particles, divided by the energy of \Ptauon
+\item  $\frac{E_{charged}}{E_{\Ptauon}}$:	 Sum of energy of charged particles, divided by the energy of \Ptauon
+\item  $\frac{E_{\Pgmm}}{E_{\Ptauon}}$:	 Sum of energy of muons, divided by the energy of \Ptauon
+\item  $\frac{E_{\Pem}}{E_{\Ptauon}}$:	 Sum of energy of electrons, divided by the energy of \Ptauon
+\item  $\frac{E_{\Pgg}}{E_{\Ptauon}}$:	 Sum of energy of photons, divided by the energy of \Ptauon
+\item  $\frac{E_{\Pgpm}}{E_{\Ptauon}}$:	 Sum of energy of charged pions, divided by the energy of \Ptauon
+\item  $N_{charged}$:	 Number of charged particles
+\item  $N_{\Pgmm}$:	 Number of muons
+\item  $N_{\Pem}$:	 Number of electrons
+\item  $N_{\Pgg}$:	 Number of photons
+\item  $N_{\Pgpm}$:	 Number of charged pions
+\item  $m_{\Pgg}$:     	 Invariant mass of photons in GeV
+\item  $m_{charged}$:     	 Invariant mass of charged particles in GeV
+\item  $m_{neutral}$:     	 Invariant mass of neutral particles in GeV
+\item  $m_{\Pgpm}$:     	 Invariant mass of charged pions in GeV
+\item  $m_{\Pgpz}, \decayRhoShort hypothesis$:     	 Fitted invariant mass of \Pgpz for \decayRhoShort hypothesis test
+\item  $m_{\decayRhoShort}, \decayRhoShort hypothesis$:     	 Fitted invariant mass of \decayRhoShort for \decayRhoShort hypothesis test
+
+\item  $m_{\Pgpz1}, \decayAiPhotonShort hypothesis$:     	 First fitted invariant mass of \Pgpz, for \decayAiPhotonShort hypothesis test, ordered by closeness to the true \Pgpz mass
+\item  $m_{\Pgpz2}, \decayAiPhotonShort hypothesis$:     	 Second fitted invariant mass of \Pgpz, for \decayAiPhotonShort hypothesis test, ordered by closeness to the true \Pgpz mass
+\item  $m_{\decayAiPhotonShort}, \decayAiPhotonShort hypothesis$:     	 Second fitted invariant mass of \decayAiPhotonShort, for \decayAiPhotonShort hypothesis test
+\item  $\bar{E_{cell}}$:     	 Average energy deposited in a calorimeter cell in GeV
+\item  $d_{trans,shower}$:    Transverse shower width for electromagnetic shower profile, averaged for all clusters in the ECal
+\item  $l_{long,shower}$:    Longitudinal start layer for electromagnetic shower profile, averaged for all clusters in the ECal
+\item  $\Delta{l_{long,shower}}$:    Longitudinal discrepancy for electromagnetic shower profile, averaged for all clusters in the ECal
+\item  $\%MIP$:    Fraction of calorimeter hits registered as minimum ionised particles, averaged for all clusters in the ECal
+\item  $\frac{E}{P}$:   Energy divided by momentum, averaged for all clusters in the ECal
+\end{itemize}
 
