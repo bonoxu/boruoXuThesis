@@ -58,6 +58,8 @@
 
 \DeclareRobustCommand{\Table}[1]{table \ref{#1}\xspace}
 \DeclareRobustCommand{\Section}[1]{section \ref{#1}\xspace}
+\DeclareRobustCommand{\Chapter}[1]{chapter \ref{#1}\xspace}
+
 \DeclareRobustCommand{\Figure}[1]{figure \ref{#1}\xspace}
 %% High-energy physics stuff
 \usepackage{abhep}
@@ -66,6 +68,9 @@
 
 \newlength{\widthOne}
 \setlength{\widthOne}{12cm}
+
+\DeclareRobustCommand{\eeToHH}{\HepProcess{ \Pem \Pep \to \Pgtm \Pgtp }\xspace}
+
 
 \DeclareRobustCommand{\gHHH}{\HepParticle{g}{HHH}{}\xspace}
 \DeclareRobustCommand{\gWWHH}{\HepParticle{g}{WWHH}{}\xspace}

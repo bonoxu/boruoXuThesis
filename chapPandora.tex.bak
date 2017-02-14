@@ -70,3 +70,12 @@ PFOs are the output of the \pandora reconstruction. The four-momentum of these P
 
 \section{Suppression of \ggHad backround}
 
+For the CLIC, as discussed in \Section{}, significant \ggHad background is present. It is crucial to remove the beam induced background as they don't represent the underlying physics process.
+
+Two Marlin process has been developed to suppress these background, a track selector and a PFO selector\cite{Marshall:2012ry}. 
+
+The track selector aims to remove poor quality and fake tracks. It places simple quality cut and a simple time of arrival cut. If the arrival time of the track at the front of the ECal, using the helical fit, differs more than 50\,ns from using a straight line fit, the track will be rejected.
+
+The PFO selector utilise the high spatial resolution from the high granular calorimeter. PFOs from \ggHad often have low \pT and have a range of time. PFOs from physics processes have a range of \pT, and have time close to the brunch crossing time. These two distinctive features allow \ggHad background to be separated. The optimal suppression uses different \pT and time cuts for the central part of the detector, and for the forward part of the detector, and uses different cuts for photons, neutral PFOs and charged PFOs. Three configurations of these cuts are developed, namely ``loose'', ``normal'', and ``tight'' selections. As the name suggested, ``loose'' selection corresponds to a looser cut of \pT and time. The optimal configuration depends on the \sqrtS of the collision, and the physics process to study.
+
+The background suppression is used in analysis described in \Chapter{chap:DoubleHiggs}

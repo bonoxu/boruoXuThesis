@@ -4,3 +4,72 @@
 \chapterquote{MVA: Turn numbers into gold.}%
 {TMVA}%: Blackwood's Magazine May 1830
 
+
+\section{Introduction}
+
+Why study tau
+
+% TODO tau life time
+Tau lepton has been examined closely in the past. The decay and the spin of the decay product were direct tests to the standard model. The spin of the decay product, using a Higgs decaying to tau tau channel, allows one to determine the spin of the higgs. Also, as tau is short-lived, only its decay products can be detected and reconstructed in the detector. Therefore, the ability to reconstruct and separate different tau decay modes is benchmark of detector performances.
+
+\section{Analysis}
+
+This chapter will describe a tau final decay separation study. The processor developed for the study is used to test different detector models, as a proof-of-principle of detector optimisation using tau decay separation. Lastly, the spin of the higgs was studied using one higgs decaying to two tau tau channel.
+
+
+\section{Simulation and Reconstruction}
+
+\eeToTauTau channel is used for the tau decay mode separation study. Generator software WHIZARD 1.95 \cite{whizard} is used to generated simulated Monte Carlo (MC) samples. Hadronisation is described with PYTHIA 6.4 \cite{Sjostrand:1995iq}, which is tuned to the LEP results \cite{}. The spin effect of tau lepton decay is described by TAUOLA \cite{Jadach:1993hs}.
+
+Final state radiation (FSR) was simulated. The initial state radiation (ISR) and the beam induced background were not simulated.
+
+Events were simulated with the \CLICILD detector concept, using software with MOKKA \cite{MoradeFreitas:2002kj}, based on the GEANT 4 package  \cite{Agostinelli:2002hh}.
+Events were reconstructed with  ilcsoft version v01-17-07 \cite{Gaede:82475} and PandoraPFA version v02-02-00 \cite{Marshall:2015rfa}, where the photon reconstruction is described in \cite{Xu:2016rcz}.
+ 
+\section{Generator level cut}
+
+To study the difference between different tau decay modes, clear topological difference is required. Therefore, events was considered if the event passes a set of cuts at generator level, listed here
+\begin{itemize}
+  \item the final state photons not converting to electron pair in the tracker,
+  \item the tau leptons decaying in the barrel and the end cap regions, which are defined as polar angle between 0.3 to 0.6 rad and 0.8 to 1.57 rad, and
+  \item the visible energy of the tau lepton decay products more than 5\,GeV, where the visible energy of the tau lepton decay is defined as the energy of the tau minus the energy of the tau neutrino.
+\end{itemize} 
+
+The angular requirement is due to the gap region between the barrel and and the end cap of calorimeters, which degrades the PFO resolution significantly.
+
+Around two million events were simulated for this study.
+
+
+\section{Decay modes}
+
+\begin{table}[htbp]
+\centering
+\caption{\label{tab:TauDecayMode} Branching ratios of the seven major \Pgtm decays, taken from \cite{Agashe:2014kda}. \Pgtp decays similarly to \Pgtm.}
+\smallskip
+\begin{tabular}{|l |r|}
+\hline
+  \textbf{Decay final state} & \textbf{Branching ratio / \%} \\
+\hline
+  \decayElectron        & 17.83$\pm$0.04   \\
+  \decayMuon  	& 17.41$\pm$0.04  \\
+  \decayPion     	& 10.83$\pm$0.06   \\
+  \decayRho	& 25.52$\pm$0.09 \\
+  \decayAiPhoton	& 9.30$\pm$0.11    \\
+  \decayAiPion  	    & 8.99$\pm$0.06  \\
+  \decayThreePionPhoton  	    & 2.70$\pm$0.08  \\
+
+\hline
+\end{tabular}
+\end{table}
+
+Seven major decay final states of the tau lepton shown in \Table{tab:TauDecayMode} were studied, covering 92.58\,\% of all tau decays  \cite{Agashe:2014kda}.  Decay modes not listed in the table have branching fractions lower than 1\% each. These final states can be classified into three categories: leptonic decays (\decayElectron and \decayMuon), one-prong with photons (\decayPion, \decayRho and \decayAiPhoton), and three-prong with photons (\decayAiPion and \decayThreePionPhoton).
+
+The studied channel, \eeToTauTau, contains two \Pgt decaying in opposite directions. To select decay products of one \Ptau, the fiducial detector space was divided into two halves. %This is possible because ISR and beam induced background was not simulated.
+Event shape variable thrust is used to separate two halves. The classical event shape thrust\cite{PhysRevLett.39.1587}, is defined as
+\begin{equation}
+T = \max_{\hat{t}}\!\frac{\sum_{i}\absOf{\hat{t}\!\cdot\!\vec{p_{i}}}}{\sum_{i}\absOf{\vec{p_{i}}}}
+\end{equation}
+where $\vec{p_{i}}$ is the momentum vector of the particle $i$. Summation is over all particles in the event. Thrust axis, $\hat{t}$, is a unit vector. (Principle) Thrust value, $T$, is 1 for a perfect pencillike back-to-back two-jet event, and 0.5 for a perfect spherical event. The sign of dot product between thrust axis and PFO momentum determines which half the PFO falls into.
+
+
+

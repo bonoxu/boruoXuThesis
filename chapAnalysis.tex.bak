@@ -206,13 +206,35 @@ Aplanarity is another event shape varaible that distinguishes spherical symmetri
 S = \frac{3}{2}\parenths{\lambda_{1}},
 \end{equation}
 where $\lambda_{1}$ is the largest eigenvalue in the diagonalised sphericity tensor.
-\section{Jargons}
-Signal
-Selection
-Efficiency
-Significance
 
-\qlight light quark
-light lepton
+\section{Miscellaneous}
 
-Thanks computing resources. i.e. ILC VO, CLIC grid, etc. 
+An event in a collider experiment refers to one collision and the subsequent energy deposition in the detector. An event corresponds to a certain type of physics process.
+
+Often we are dealing with extracting a type of events, from a large number of other events. The signal, or signal events refer to events of interests. Other events are referred to as the background, or background events.
+
+Typical metrics of signal selection is efficiency and purity. This toy example illustrates definitions of efficiency and purity.
+
+\begin{table}[!tbp]
+\begin{tabular}{lrr}
+\hline
+\hline
+Event Number  &  True Signal & True Background  \\
+\hline
+Selected Signal & $N_S$ & $N_1$ \\
+Selected Background & $N_2$ & $N_B$ \\ 
+\hline
+\hline
+
+\end{tabular}
+\caption[A toy example to demonstrate definitions of efficiency and purity.]%
+    {A toy example to demonstrate definitions of efficiency and purity.}
+\label{tab:analysisToyExample}
+\end{table}
+Signal selection efficiency is defined as $\frac{N_S}{N_S \! + \! N_2}$. Signal selection purity is defined as $\frac{N_S}{N_S \! + \! N_1}$.
+Significance is a quantity that is similar to purity, $\frac{N_S}{\rootOf{N_S \! + \! N_1}}$
+
+When we are describing particles, light lepton, \llight, refer to electrons, \Pem, and muons, \Pmuon. Light quarks, \qlight, refer to up quark, \Pup, down quark, \Pdown, and strange quark, \Pstrange.
+
+Computational intensive jobs are processed either on the Cambridge High Energy Physics grid, or the \CLIC computing grid.
+%Thanks computing resources. i.e. ILC VO, CLIC grid, etc. 
