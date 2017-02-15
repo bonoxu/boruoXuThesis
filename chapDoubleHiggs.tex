@@ -300,21 +300,48 @@ The fit represents an asymmetrical gaussian function, where $m$ is binned mass d
 For \rootS{1.4}, shown in \Figure{fig:doubleHiggs1.4TeVMassFit}, \normalPFO with $R = 0.7$ give a good fitted mass for \HWW and \PW. The mass is slightly too low for the \Hbb. \Figure{fig:doubleHiggs1.4TeVSigmaFit} shows the combined relative fitted width for the \Hbb, \HWW and \PW. \NormalPFO with $R = 0.7$ gives an almost optimal relative width for \Hbb, while achieving a good balance for \HWW and \PW. Therefore, \normalPFO with $R = 0.7$ is chosen to be the optimal jet reconstruction parameters.
 
 \begin{figure}[!tbp]
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs1_M_R}}} \\
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs2_M_R}}} \\
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_W_M_R}}} \\
-\caption[Fitted mass of \Hbb, \HWW and \PW for \rootS{1.4}]%
-   {Fitted mass and statistical error of \Hbb, \HWW and \PW for \rootS{1.4}, for loose, normal and tight selected PFO against $R$ parameter.}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R}}}
+    \caption{}
+    \label{fig:doubleHiggs1.4Higgs1M}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR}}}
+    \caption{}
+    \label{fig:doubleHiggs1.4Higgs1Sigma}
+  \end{subfigure}
+  
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R}}}
+    \caption{}
+    \label{fig:doubleHiggs1.4Higgs2M}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR}}}
+    \caption{}
+    \label{fig:doubleHiggs1.4Higgs2Sigma}
+  \end{subfigure}
+  
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_1.4TeV_W_M_testR}}} 
+    \caption{}
+    \label{fig:doubleHiggs1.4WM}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_testR}}}
+    \caption{}
+    \label{fig:doubleHiggs1.4WSigma}
+  \end{subfigure}
+  
+%\includegraphics[width=\largefigwidth]{{{doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R}}} \\
+%\includegraphics[width=\largefigwidth]{{{doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R}}} \\
+%\includegraphics[width=\largefigwidth]{{{doubleHiggs/resolution/ILD_1.4TeV_W_M_testR}}} \\
+\caption[Fitted mass, and resolution of \Hbb, \HWW and \PW for \rootS{1.4}]%
+   {\Figure{fig:doubleHiggs1.4Higgs1M}, \ref{fig:doubleHiggs1.4Higgs2M}, and \ref{fig:doubleHiggs1.4WM}  show fitted mass of \Hbb, \HWW, and \PW, respectively, for loose, normal and tight selected PFO against $R$ parameter, with \rootS{1.4}. \Figure{fig:doubleHiggs1.4Higgs1Sigma}, \ref{fig:doubleHiggs1.4Higgs2Sigma}, and \ref{fig:doubleHiggs1.4WSigma} show fitted combined widths divided by the fitted masses of \Hbb, \HWW, and \PW, respectively, for loose, normal and tight selected PFO against $R$ parameter, with \rootS{1.4}.}
    \label{fig:doubleHiggs1.4TeVMassFit}
-\end{figure}
-
-\begin{figure}[!tbp]
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R}}} \\
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R}}} \\
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_R}}} \\
-\caption[Fitted width of \Hbb, \HWW and \PW for \rootS{1.4}]%
-   {Fitted combined width and statistical error of \Hbb, \HWW and \PW for \rootS{1.4}, for loose, normal and tight selected PFO against $R$ parameter.}
-   \label{fig:doubleHiggs1.4TeVSigmaFit}
 \end{figure}
 
 
@@ -323,22 +350,47 @@ For \rootS{3}, the choice is a bit more complicated. Shown in \Figure{fig:double
 Later it was shown that \tightPFO with $R = 0.7$ gives a better signal significance. Therefore the optimal choice of jet reconstruction for \rootS{3} is \tightPFO with $R = 0.7$.
 
 \begin{figure}[!tbp]
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs1_M_R}}} \\
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs2_M_R}}} \\
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_W_M_R}}} \\
-\caption[Fitted mass of \Hbb, \HWW and \PW for \rootS{3}]%
-   {Fitted mass and statistical error of \Hbb, \HWW and \PW for \rootS{3}, for loose, normal and tight selected PFO against $R$ parameter.}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R}}}
+    \caption{}
+    \label{fig:doubleHiggs3Higgs1M}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR}}}
+    \caption{}
+    \label{fig:doubleHiggs3Higgs1Sigma}
+  \end{subfigure}
+
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R}}}
+    \caption{}
+    \label{fig:doubleHiggs3Higgs2M}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR}}}
+    \caption{}
+    \label{fig:doubleHiggs3Higgs2Sigma}
+  \end{subfigure}
+
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_3TeV_W_M_testR}}}
+    \caption{}
+    \label{fig:doubleHiggs3WM}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR}}}
+    \caption{}
+    \label{fig:doubleHiggs3WSigma}
+  \end{subfigure}
+
+\caption[Fitted mass, and resolution of \Hbb, \HWW and \PW for \rootS{3}]%
+   {\Figure{fig:doubleHiggs3Higgs1M}, \ref{fig:doubleHiggs3Higgs2M}, and \ref{fig:doubleHiggs3WM}  show fitted mass of \Hbb, \HWW, and \PW, respectively, for loose, normal and tight selected PFO against $R$ parameter, with \rootS{3}. \Figure{fig:doubleHiggs3Higgs1Sigma}, \ref{fig:doubleHiggs3Higgs2Sigma}, and \ref{fig:doubleHiggs3WSigma} show fitted combined widths divided by the fitted masses of \Hbb, \HWW, and \PW, respectively, for loose, normal and tight selected PFO against $R$ parameter, with \rootS{3}.}
    \label{fig:doubleHiggs3TeVMassFit}
 \end{figure}
 
-\begin{figure}[!tbp]
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_R}}} \\
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_R}}} \\
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_R}}} \\
-\caption[Fitted width of \Hbb, \HWW and \PW for \rootS{3}]%
-   {Fitted combined width and statistical error of \Hbb, \HWW and \PW for \rootS{3}, for loose, normal and tight selected PFO against $R$ parameter.}
-   \label{fig:doubleHiggs3TeVSigmaFit}
-\end{figure}
 
 The extracted fitted parameters of optimal jet reconstructions are summarised in \Table{tab:doubleHiggsFitParameters}.
 
@@ -347,7 +399,7 @@ The extracted fitted parameters of optimal jet reconstructions are summarised in
 \begin{tabular}{lrr}
 \hline
 \hline
-Jet Parameters  &  \rootS{1.4} & \rootS{S}  \\
+Jet Parameters  &  \rootS{1.4} & \rootS{3}  \\
 \hline
 $\mu_{\Hbb}$ & $122.3_{\pm0.2}$ & $119.1_{\pm0.3}$  \\
 $\sigma_{L,\Hbb}$ & $15.2_{\pm0.2}$ & $15.0_{\pm0.3}$  \\

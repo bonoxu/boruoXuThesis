@@ -25,7 +25,7 @@ Final state radiation (FSR) was simulated. The initial state radiation (ISR) and
 
 Events were simulated with the \CLICILD detector concept, using software with MOKKA \cite{MoradeFreitas:2002kj}, based on the GEANT 4 package  \cite{Agostinelli:2002hh}.
 Events were reconstructed with  ilcsoft version v01-17-07 \cite{Gaede:82475} and PandoraPFA version v02-02-00 \cite{Marshall:2015rfa}, where the photon reconstruction is described in \cite{Xu:2016rcz}.
- 
+
 \section{Generator level cut}
 
 To study the difference between different tau decay modes, clear topological difference is required. Therefore, events was considered if the event passes a set of cuts at generator level, listed here
@@ -33,7 +33,7 @@ To study the difference between different tau decay modes, clear topological dif
   \item the final state photons not converting to electron pair in the tracker,
   \item the tau leptons decaying in the barrel and the end cap regions, which are defined as polar angle between 0.3 to 0.6 rad and 0.8 to 1.57 rad, and
   \item the visible energy of the tau lepton decay products more than 5\,GeV, where the visible energy of the tau lepton decay is defined as the energy of the tau minus the energy of the tau neutrino.
-\end{itemize} 
+\end{itemize}
 
 The angular requirement is due to the gap region between the barrel and and the end cap of calorimeters, which degrades the PFO resolution significantly.
 
@@ -75,7 +75,7 @@ where $\vec{p_{i}}$ is the momentum vector of the particle $i$. Summation is ove
 \section{Discriminative varibles}
 
 \begin{figure}[htbp]
-\centering 
+\centering
 % \begin{center}/\end{center} takes some additional vertical space
 
 \includegraphics[width=.45\textwidth]{tau/var/nPhoton_100GeV_improved}
@@ -129,4 +129,12 @@ Here is a full list of all variables used in the multivariate analysis.
 \item  $\%MIP$:    Fraction of calorimeter hits registered as minimum ionised particles, averaged for all clusters in the ECal
 \item  $\frac{E}{P}$:   Energy divided by momentum, averaged for all clusters in the ECal
 \end{itemize}
+
+Number of photons is an important variable for separating decay modes. This information is only available due to the excellent photon reconstruction. Shown in \Figure{fig:nPfos}, the majority of \decayMuon, \decayPion and \decayAiPion final states have zero photon reconstructed. The \decayElectron final state event have one photon reconstructed instead of zero, due to the FSR effect. \decayRho and \decayThreePionPhoton have nearly 80\% events with two reconstructed photons, whilst \decayAiPion have over 60\% events with four reconstructed photons. The loss is efficiency is due to the increasing difficulty to separate nearby photons.
+
+The number of charged PFOs can clearly separate the leptonic and 1-prong final states, from the 3-prong final states, shown in \Figure{fig:nPfos}. The efficiency of leptonic final states are over 98\%.
+
+The invariant mass of the visible PFOs shows clear differences between different final states. \decayRho, \decayAiPhoton and \decayAiPion distribution show clear resonance at \Prho and \Pai. \decayElectron, \decayMuon and \decayPion distribution show much smaller invariant mass and \decayThreePionPhoton shows a large invariant mass than \Pai. The \decayElectron final state has a long tail of invariant mass due to the extra photons from the FSR.
+
+
 
