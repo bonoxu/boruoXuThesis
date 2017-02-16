@@ -72,7 +72,7 @@ T = \max_{\hat{t}}\!\frac{\sum_{i}\absOf{\hat{t}\!\cdot\!\vec{p_{i}}}}{\sum_{i}\
 where $\vec{p_{i}}$ is the momentum vector of the particle $i$. Summation is over all particles in the event. Thrust axis, $\hat{t}$, is a unit vector. (Principle) Thrust value, $T$, is 1 for a perfect pencillike back-to-back two-jet event, and 0.5 for a perfect spherical event. The sign of dot product between thrust axis and PFO momentum determines which half the PFO falls into.
 
 
-\section{Discriminative varibles}
+\section{Discriminative variables}
 
 \begin{figure}[htbp]
 \centering
@@ -95,7 +95,7 @@ Normalised distribution for selected discriminative variables for seven final st
 
 Some variables with most discriminative power are shown in figure~\ref{fig:nPfos}. In total 29 variables used in the multivariate analysis. The reason for the large number of variables is due to training seven decay modes at once, which will be discussed later.
 
-Here is a full list of all variables used in the multivariate analysis.
+Here is a full list of all variables used in the multivariate analysis. Energy of the \Pgt is assume to be the same as the energy of \Pepm colliding beam, which is half of the \rootS energy. Recoil momenta were calculated assuming the \Pem\Pep collision happened at the centre of mass energy. Both assumptions are largely valid when there is no ISR contribution.
 
 \begin{itemize}
 \item  $\frac{E_{ECal,HCal}}{E_{tot}}, charged$:  Sum of energy deposited in ECal and HCal, divided by the energy of charged particles
@@ -136,5 +136,114 @@ The number of charged PFOs can clearly separate the leptonic and 1-prong final s
 
 The invariant mass of the visible PFOs shows clear differences between different final states. \decayRho, \decayAiPhoton and \decayAiPion distribution show clear resonance at \Prho and \Pai. \decayElectron, \decayMuon and \decayPion distribution show much smaller invariant mass and \decayThreePionPhoton shows a large invariant mass than \Pai. The \decayElectron final state has a long tail of invariant mass due to the extra photons from the FSR.
 
+$\frac{E_{ECal,HCal}}{E_{tot}}, charged$ and $\frac{E_{ECal,HCal}}{E_{tot}}, all$ are both very effective at picking out leptonic decay modes.
+
+For final states containing \Prho and \Pai resonance, it is useful to use minimisation test for right pairing of the resonance. We will use \decayAiPhotonShort as an example. \decayRhoShort is very similar.
+
+The minimisation of \decayAiPhotonShort hypothesis states
+
+\begin{equation}
+\label{eq:a1}
+\chi_{\Pai}^{2} = {\left(\frac{m_{\Pai,fit} -  m_{\Pai}}{\sigma_{\Pai}}\right)}^{2} + {\left(\frac{{m_{\Pgpz,fit}} -  m_{\Pgpz}}{\sigma_{\Pgpz}}\right)}^{2} + {\left(\frac{{m_{\Pgpz^*,fit}} -  m_{\Pgpz}}{\sigma_{\Pgpz}}\right)}^{2}  \,,
+\end{equation}
+
+where $m_{\Pgpz,fit}$ and $m_{\Pgpz^*,fit}$  are the invariant masses of all possible two photons combinations, $\sigma_{\Pai}$ and $\sigma_{\Pgpz}$ are the half width of the invariant mass distribution of reconstructed \Pai and \Pgpz using the truth information, and $m_{\Pai}$ and $m_{\Pgp}$ are the masses of \Pai and \Pgpz, taken from \cite{Agashe:2014kda}. If there are only two or three photons, the $\chi_{\Pai}^{2}$ expression will be reduced and not including $m_{\Pgpz^*,fit}$ term, assuming two photons are merged in the reconstruction. If there are fewer than two photons, the $\chi_{\Pai}^{2}$ expression would only contain $m_{\Pai,fit}$ term.
+
+For the \decayRho final state, a similar $\chi_{\Pgri}^{2}$ test for \Pgri hypothesis is used to extract $m_{\Pgri,fit}$ and $m_{\Pgpz,fit}$ variables. $\chi_{\Pgri}^{2}$ is similar to $\chi_{\Pai}^{2}$ with \Pgri replacing \Pai and only one $m_{\Pgpz,fit}$ term.
 
 
+\Figure{fig:nPfos} shows the $m_{\Pai,fit}$ where \decayRho, \decayAiPhoton  and \decayThreePionPhoton final states contribute to the \Pai resonance, although only \decayAiPhoton final has a real \Pai resonance. This is due to the structure of the  $\chi_{\Pai}^{2}$ minimisation function allowing final states with more than two photons and one \Pgppm to contribute.
+
+Last six variables in the list help to differentiate an electron final state to that of a charged pion. A charged pion that starts showering early in the calorimeter could have a similar topology to an electromagnetic shower. Nevertheless, a good separation between the two can be achieved with the help of these variables.
+
+\section{Multivariate Analysis}
+
+For the multivariate analysis, the multiclass class of the TMVA package \cite{Therhaag:2009dp} was used to perform a multiclass classification, which trains the seven final states simultaneously. The multiclass class is an extension of the standard two-class signal-background classifier.
+
+There are two ways for the training. "One v.s. one" is each class is trained against each other class. And the overall likelihood is normalised. The second way to train is called "one v.s. all", which is when each class is trained against all other classes.
+
+Using a three-class example, A, B and C, "one v.s. one" scheme trains A against B, B against C, and C against A. Then the likelihood is normalised. "One v.s. all" would train A against B plus C, B against A plus C, and C against A plus B.
+
+TMVA multiclass implementation uses "one v.s. all" scheme. For each final state, the multiclass classifier will train the final state as the signal against all other final states as the background. This process is repeated for each final state. The classifier output for a single event is a normalised response for each final state, where the sum is one. The response of each final state of a event can be treated as the likelihood. The event is classified into a particular final state if the final state has the highest classifier output response. The advantage of using the multiclass is that the correlation between different final states are accounted for and the classifier output are correctly adjusted for multiple final states, hence one event can only be classified into one final state. The issue with the multiclass is that discriminative variables for each final state need enter the training stage, resulting in a large number of variables.
+
+Half of the randomly selected samples were used in the training process and the other half were used for testing.
+
+The TMVA multiclass classifier used is boosted decision tree with gradient boosting (BDTG), as it was found to give for the best performance. The MVA classifier is trained and optimised to give the best overall separation across all final states. MVA will be discuss further in \Section{}
+
+\section{Result}
+
+
+\begin{table}[htbp]
+\centering
+
+\smallskip
+\small
+\begin{tabular}{| l | r | r | r | r | r | r | r |}
+\hline
+  Reco $\downarrow$ True $\to$  & \decayElectronShort & \decayMuonShort &\decayPionShort & \decayRhoShortest &\decayAiPhotonShortest &\decayAiPionShortest &\decayThreePionPhotonShort \\
+\hline
+
+\decayElectronShort  &\textbf{99.8}&-&0.9&1.1&0.8&-&-\\
+\decayMuonShort   &-&\textbf{99.5}&0.5&-&-&-&-\\
+\decayPionShort  &-&0.3&\textbf{93.2}&0.9&-&0.4&-\\
+\decayRhoShortest&-&-&4.1&\textbf{93.0}&10.5&0.6&2.8\\
+\decayAiPhotonShortest&-&-&-&4.3&\textbf{88.2}&-&1.0\\
+\decayAiPionShortest&-&-&1.0&0.3&-&\textbf{96.6}&6.9\\
+\decayThreePionPhotonShort&-&-&-&0.4&0.4&2.4&\textbf{89.3}\\
+
+\hline
+\end{tabular}
+
+\caption[]%
+{The percentage of reconstructed decay modes corresponds to underlying true decay modes, with \rootSGeV{100} for nominal \CLICILD detector model. Bold numbers show the correctly reconstructed percentages. Numbers less than 0.25\% are not shown. Statistical uncertainties are less than 0.25\%. Final states include \Pgngt, which is not shown.}
+\label{tab:TauSelExample}
+\end{table} 
+
+
+The reconstruction efficiencies for the seven final state of the tau decaying with c.o.m. energy of 100 \,GeV for the nominal CLIC\_ILD detector are shown in \Table{tab:TauSelExample}. The perfect reconstruction would result in only terms in the diagonal.
+
+The unprecedented high classification rate has been achieved. The improvement of photon reconstruction described in \Section{} improved the ability to separate 1-prong final state. Most notably,  \Figure{} shows number of photons have a high correct reconstruction efficiency.
+
+For leptonic decay, the selection efficiency is above 99.5\% as the tracking system have much better resolution than the calorimeter.
+
+The \decayMuonShort final state has very clear topology, as muon deposits energy in the muon chamber. Therefore, there is little confusion with other final states.
+
+\decayElectronShort final state is well separated, due to the specialised variables aimed to differentiate early hadronic shower to electromagnetic shower. However, there is still about 1\% confusion in one prong final state.
+
+For one prong final states, \decayPionShort, \decayRhoShortest, and \decayAiPhotonShortest, the confusion is mainly due to the imperfect separation of nearby photons, originated form \Ppizero. 
+
+
+Similarly the confusion between 3-prong final state, \decayAiPionShortest, and \decayThreePionPhotonShort is caused by the inability to resolve photon pairs.
+
+\section{Electromagnetic calorimeter  optimisaiton}
+
+As discussed above, the tau decay mode separation is an benchmark test of detector performance. The ability to resolve photon pairs is crucial to separate different 1-prong states, and different 3-prong state. One of the main feature of calorimeter design affecting the photon resolution is the size of electromagnetic calorimeter (ECal) cell for the high granular calorimeter. The finer ECal cell size is, the better resolution of reconstructing individual photons.
+
+
+The classification is being tested with the impact of different \rootS and different ECal  square cell sizes.
+
+\begin{figure}[htbp]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+%\includegraphics[width=.45\textwidth]{plots/decayMode0}
+%\qquad
+%\includegraphics[width=.45\textwidth]{plots/decayMode1}
+%\qquad
+\includegraphics[width=.45\textwidth]{plots/decayMode2}
+\qquad
+\includegraphics[width=.45\textwidth]{plots/decayMode3}
+\qquad
+\includegraphics[width=.45\textwidth]{plots/decayMode4}
+\qquad
+\includegraphics[width=.45\textwidth]{plots/decayMode5}
+\qquad
+\includegraphics[width=.45\textwidth]{plots/decayMode6}
+\qquad
+\includegraphics[width=.45\textwidth]{plots/legend}
+%\qquad
+%\includegraphics[width=.4\textwidth]{plots/hadEff}
+% "\includegraphics" from the "graphicx" permits to crop (trim+clip)
+% and rotate (angle) and image (and much more)
+\caption[]%
+{ The selection efficiencies for various final states against the ECal cell size for different c.o.m. energies with the nominal CLIC\_ILD detector model are shown. The top left, top right, middle left, middle right and bottom left plots are for the \decayPion, \decayRho,  \decayAiPhoton, \decayAiPion  and \decayThreePionPhoton  final states respectively. From the top to the bottom, blue, orange, green and red lines are representing the \rootS = 100, 200, 500 and 1000\,GeV respectively. Note that the y axis are not the same for displaying purpose.}
+\label{fig:pion_efficiency}
+\end{figure}

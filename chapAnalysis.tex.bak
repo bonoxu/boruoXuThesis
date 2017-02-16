@@ -183,6 +183,8 @@ TMVA multiclass implementation uses "one v.s. all" scheme. Multiclass is used in
 
 \section{Event shape varaibles}
 
+% ATTN used in tau chapter
+\begin{comment}
 Event shape variables are some useful global variables to describe the shape of the event, for example whether it is back-to-back, or homogenous in the solid angle.
 
 The classical event shape thrust\cite{PhysRevLett.39.1587}, is defined as
@@ -190,6 +192,7 @@ The classical event shape thrust\cite{PhysRevLett.39.1587}, is defined as
 T = \max_{\hat{t}}\!\frac{\sum_{i}\absOf{\hat{t}\!\cdot\!\vec{p_{i}}}}{\sum_{i}\absOf{\vec{p_{i}}}}
 \end{equation}
 where $\vec{p_{i}}$ is the momentum vector of the particle $i$. Summation is over all particles in the event. Thrust axis, $\hat{t}$, is a unit vector. (Principle) Thrust value, $T$, is 1 for a perfect pencillike back-to-back two-jet event, and 0.5 for a perfect spherical event. The thrust value is useful in picking out back-to-back two-jet event. Thrust axis is useful to separate each jet in a back-to-back two-jet event.
+\end{comment}
 
 Sphericity tensor \cite{PhysRevLett.35.1609}, is defined as
 \begin{equation}
@@ -222,7 +225,7 @@ Typical metrics of signal selection is efficiency and purity. This toy example i
 Event Number  &  True Signal & True Background  \\
 \hline
 Selected Signal & $N_S$ & $N_1$ \\
-Selected Background & $N_2$ & $N_B$ \\ 
+Selected Background & $N_2$ & $N_B$ \\
 \hline
 \hline
 
