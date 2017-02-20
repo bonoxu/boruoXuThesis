@@ -12,9 +12,7 @@ Why study tau
 % TODO tau life time
 Tau lepton has been examined closely in the past. The decay and the spin of the decay product were direct tests to the standard model. The spin of the decay product, using a Higgs decaying to tau tau channel, allows one to determine the spin of the higgs. Also, as tau is short-lived, only its decay products can be detected and reconstructed in the detector. Therefore, the ability to reconstruct and separate different tau decay modes is benchmark of detector performances.
 
-\section{Analysis}
-
-This chapter will describe a tau final decay separation study. The processor developed for the study is used to test different detector models, as a proof-of-principle of detector optimisation using tau decay separation. Lastly, the spin of the higgs was studied using one higgs decaying to two tau tau channel.
+This chapter will describe a tau final decay separation study. The processor developed for the study is used to test different detector models, as a proof-of-principle of detector optimisation using tau decay separation. Lastly, the spin of the Z was studied using one Z decaying to two tau tau channel.
 
 
 \section{Simulation and reconstruction}
@@ -220,7 +218,7 @@ Similarly the confusion between 3-prong final state, \decayAiPionShortest, and \
 As discussed above, the tau decay mode separation is an benchmark test of detector performance. The ability to resolve photon pairs is crucial to separate different 1-prong states, and different 3-prong state. One of the main feature of calorimeter design affecting the photon resolution is the size of electromagnetic calorimeter (ECal) cell for the high granular calorimeter. The finer ECal cell size is, the better resolution of reconstructing individual photons.
 
 
-The classification is being tested with the impact of different \rootS and different ECal  square cell sizes.
+The classification is being tested with the impact of different \sqrtS and different ECal square cell sizes. Around two million events were simulated at each \sqrtS = 100, 200, 500 and 1000\,GeV, with each different ECal square cell sizes of 3, 5, 7, 10, 15 and 20\,mm. Events were simulated and reconstructed in the same way as described above, with same selection applied. MVA classifier was trained individually for each \sqrtS and each ECal square cell size, with same set of discriminative variables.
 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
@@ -228,22 +226,61 @@ The classification is being tested with the impact of different \rootS and diffe
 %\qquad
 %\includegraphics[width=.45\textwidth]{plots/decayMode1}
 %\qquad
-\includegraphics[width=.45\textwidth]{plots/decayMode2}
+\includegraphics[width=.45\textwidth]{tau/decayMode2}
 \qquad
-\includegraphics[width=.45\textwidth]{plots/decayMode3}
+\includegraphics[width=.45\textwidth]{tau/decayMode3}
 \qquad
-\includegraphics[width=.45\textwidth]{plots/decayMode4}
+\includegraphics[width=.45\textwidth]{tau/decayMode4}
 \qquad
-\includegraphics[width=.45\textwidth]{plots/decayMode5}
+\includegraphics[width=.45\textwidth]{tau/decayMode5}
 \qquad
-\includegraphics[width=.45\textwidth]{plots/decayMode6}
+\includegraphics[width=.45\textwidth]{tau/decayMode6}
 \qquad
-\includegraphics[width=.45\textwidth]{plots/legend}
+\includegraphics[width=.45\textwidth]{tau/legend}
 %\qquad
 %\includegraphics[width=.4\textwidth]{plots/hadEff}
 % "\includegraphics" from the "graphicx" permits to crop (trim+clip)
 % and rotate (angle) and image (and much more)
 \caption[]%
-{ The selection efficiencies for various final states against the ECal cell size for different c.o.m. energies with the nominal CLIC\_ILD detector model are shown. The top left, top right, middle left, middle right and bottom left plots are for the \decayPion, \decayRho,  \decayAiPhoton, \decayAiPion  and \decayThreePionPhoton  final states respectively. From the top to the bottom, blue, orange, green and red lines are representing the \rootS = 100, 200, 500 and 1000\,GeV respectively. Note that the y axis are not the same for displaying purpose.}
-\label{fig:pion_efficiency}
+{The selection efficiencies for various final states against the ECal cell size for different c.o.m. energies with the nominal \CLICILD detector model are shown. The top left, top right, middle left, middle right and bottom left plots are for the \decayPion, \decayRho,  \decayAiPhoton, \decayAiPion  and \decayThreePionPhoton  final states respectively. From the top to the bottom, blue, orange, green and red lines are representing the \sqrtS = 100, 200, 500 and 1000\,GeV respectively.}
+\label{fig:TauPionEfficiency}
 \end{figure}
+
+To access the impact different ECal square size on detector performance, in particular ECal performance, the correct reconstruction efficiency for 1-prong and 3-prong final states is used as metric. The higher \sqrtS of the collision would degrade the performance, as photons are more boosted and more difficult to resolve.
+
+The leptonic decay  correct reconstruction efficiency is not used as a metric as they are similar across different ECal cell sizes. This is because the \Pepm and \Pgmpm identifications mostly rely on the tracking system, which was not varied in this study. The energy deposited in the calorimeter are used for the association to the tracks but it has a small impact on the lepton identification.
+
+\Figure{fig:TauPionEfficiency} shows that as the ECal cell sizes increase, the reconstruction efficiencies generally decrease. Larger cell sizes have lower spatial resolutions, making the separating of nearby photons more difficult.
+
+For the \decayAiPhoton final state, the selection efficiency for 500\,GeV rises from ECal cell sizes 15\,mm to 20\,mm and the one for 1000\,GeV rises from 7\,, to 20\,mm actually goes up as cell size increases. This is because when the algorithm can not reconstruct four photons in the \decayAiPhoton final state, and the event topology would be very similar to the \decayRho final states.
+
+For the \rootS = 100 and 200\,GeV, the selection efficiency of the 5\,mm ECal cell size is better than that of the 3\,mm. One possible explanation is that the  and the PandoraPFA have been optimised for the nominal ILD detector with the 5\,mm ECal cell size, which shares the same ECal structure with the nominal \CLICILD detector.
+
+
+\begin{figure}[htbp]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+\includegraphics[width=.45\textwidth]{tau/hadronicEff}
+% "\includegraphics" from the "graphicx" permits to crop (trim+clip)
+% and rotate (angle) and image (and much more)
+\caption[]%
+{The \Pgt hadronic decay efficiency against the ECal cell size for different \rootS energies with the nominal CLIC\_ILD detector model are shown. The blue, orange, green and red lines are representing the \sqrtS = 100, 200, 500 and 1000\,GeV respectively.}
+\label{fig:TauHadronicEfficiency}
+\end{figure}
+
+
+To effectively compare the overall separation power of all hadronic final states across \sqrtS and ECal square cell sizes, we constructed a single parameter function, the  \Pgt hadronic decay final state efficiency function,
+\begin{equation}
+\label{eq:had}
+\tauHad = \frac{\Sigma_{i} {Br}_{i}\varepsilon_{i}}{\Sigma_{i} {Br}_{i}}  \,,
+\end{equation}
+
+where $Br_{i}$ is the branching fraction of a hadronic final state after the generator level cut. $\varepsilon_{i}$ is the correct reconstruction efficiency of the final state, and the $i$ is summing over five hadronic decay final state of \Pgt. Leptonic decays, \decayElectron and \decayMuon, were not included, because the variation of the leptonic decay selection efficiency is small.
+
+
+In the \Figure{fig:TauHadronicEfficiency}, \Pgt hadronic decay final state efficiency, \tauHad, against the ECal cell size with different \sqrtS is shown. \tauHad decreases when cell sizes increases and when \sqrtS increases.  \tauHad of the 5\,mm ECal cell size is better than that of the 3\,mm for \sqrtS = 100 and 200\,GeV lines possibly due the optimisation of the software for the nominal ILD 5\,mm ECal square cell size.
+
+The \tauHad is above 90\% for the ECal cell size from 3 to 20\,mm for the \rootSGeV{100}. For \rootSGeV{200}, the \tauHad decreases from over 90\% to 86\% for the ECal square cell size from 3 to 20\,mm. The degradation of the \tauHad is more significant for the \sqrtS = 500 and 1000\,GeV, where the \tauHad drops from over 90\% to 77\%  and from 86\% to 75\% respectively, over the same range of ECal square cell size.
+
+For \sqrtS = 100 and 200\,GeV, up to 15\,mm cell sizes of ECal will give a good performance for \Pgt hadronic decay modes separation, and the \tauHad is above 90\%. For \sqrtS = 500 and 1000\,GeV, it is preferential to have a small ECal cell size for a good \Pgt hadronic decay modes separation. There is about 15\% degradation of \tauHad for ECal square cell size from 3 to 20\,mm.
+
+\section{}

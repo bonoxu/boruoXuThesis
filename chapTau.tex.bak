@@ -200,14 +200,68 @@ The TMVA multiclass classifier used is boosted decision tree with gradient boost
 \end{table} 
 
 
-The reconstruction efficiencies for the seven final state of the tau decaying with c.o.m. energy of 100 \,GeV for the nominal CLIC\_ILD detector are shown in the \Table{tab:TauSelExample}. The perfect reconstruction would result in only terms in the diagonal.
+The reconstruction efficiencies for the seven final state of the tau decaying with c.o.m. energy of 100 \,GeV for the nominal CLIC\_ILD detector are shown in \Table{tab:TauSelExample}. The perfect reconstruction would result in only terms in the diagonal.
+
+The unprecedented high classification rate has been achieved. The improvement of photon reconstruction described in \Section{} improved the ability to separate 1-prong final state. Most notably,  \Figure{} shows number of photons have a high correct reconstruction efficiency.
 
 For leptonic decay, the selection efficiency is above 99.5\% as the tracking system have much better resolution than the calorimeter.
 
-For \decayPionShort final state, the main misclassification is reconstructed as \decayRhoShort, as the topology could be similar when photons are not properly reconstructed. There is sub-percent level misclassification as leptonic decay.
+The \decayMuonShort final state has very clear topology, as muon deposits energy in the muon chamber. Therefore, there is little confusion with other final states.
 
-For \decayRhoShort and \decayAiPhotonShort final state, the main misclassification is between the two states, again due to the photons not properly reconstructed. This is a test for the photon reconstruction. There is also percent level misclassification as leptonic decay.
+\decayElectronShort final state is well separated, due to the specialised variables aimed to differentiate early hadronic shower to electromagnetic shower. However, there is still about 1\% confusion in one prong final state.
 
-For 3-prong final states, the main misclassification is between the two states, due to the photons not properly reconstructed and events busier with more PFOs.
+For one prong final states, \decayPionShort, \decayRhoShortest, and \decayAiPhotonShortest, the confusion is mainly due to the imperfect separation of nearby photons, originated form \Ppizero. 
 
-The unprecedented high classification rate has been achieved. The classification is being tested with the impact of different \rootS and different ECal  square cell sizes.
+
+Similarly the confusion between 3-prong final state, \decayAiPionShortest, and \decayThreePionPhotonShort is caused by the inability to resolve photon pairs.
+
+\section{Electromagnetic calorimeter  optimisaiton}
+
+As discussed above, the tau decay mode separation is an benchmark test of detector performance. The ability to resolve photon pairs is crucial to separate different 1-prong states, and different 3-prong state. One of the main feature of calorimeter design affecting the photon resolution is the size of electromagnetic calorimeter (ECal) cell for the high granular calorimeter. The finer ECal cell size is, the better resolution of reconstructing individual photons.
+
+
+The classification is being tested with the impact of different \sqrtS and different ECal square cell sizes. Around two million events were simulated at each \sqrtS = 100, 200, 500 and 1000\,GeV, with each different ECal square cell sizes of 3, 5, 7, 10, 15 and 20\,mm. Events were simulated and reconstructed in the same way as described above, with same selection applied. MVA classifier was trained individually for each \sqrtS and each ECal square cell size, with same set of discriminative variables.
+
+\begin{figure}[htbp]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+%\includegraphics[width=.45\textwidth]{plots/decayMode0}
+%\qquad
+%\includegraphics[width=.45\textwidth]{plots/decayMode1}
+%\qquad
+\includegraphics[width=.45\textwidth]{tau/decayMode2}
+\qquad
+\includegraphics[width=.45\textwidth]{tau/decayMode3}
+\qquad
+\includegraphics[width=.45\textwidth]{tau/decayMode4}
+\qquad
+\includegraphics[width=.45\textwidth]{tau/decayMode5}
+\qquad
+\includegraphics[width=.45\textwidth]{tau/decayMode6}
+\qquad
+\includegraphics[width=.45\textwidth]{tau/legend}
+%\qquad
+%\includegraphics[width=.4\textwidth]{plots/hadEff}
+% "\includegraphics" from the "graphicx" permits to crop (trim+clip)
+% and rotate (angle) and image (and much more)
+\caption[]%
+{The selection efficiencies for various final states against the ECal cell size for different c.o.m. energies with the nominal \CLICILD detector model are shown. The top left, top right, middle left, middle right and bottom left plots are for the \decayPion, \decayRho,  \decayAiPhoton, \decayAiPion  and \decayThreePionPhoton  final states respectively. From the top to the bottom, blue, orange, green and red lines are representing the \sqrtS = 100, 200, 500 and 1000\,GeV respectively.}
+\label{fig:TauPionEfficiency}
+\end{figure}
+
+To access the impact different ECal square size on detector performance, in particular ECal performance, the correct reconstruction efficiency for 1-prong and 3-prong final states is used as metric. The higher \sqrtS of the collision would degrade the performance, as photons are more boosted and more difficult to resolve.
+
+The leptonic decay  correct reconstruction efficiency is not used as a metric as they are similar across different ECal cell sizes. This is because the \Pepm and \Pgmpm identifications mostly rely on the tracking system, which was not varied in this study. The energy deposited in the calorimeter are used for the association to the tracks but it has a small impact on the lepton identification.
+
+\Figure{fig:TauPionEfficiency} shows that as the ECal cell sizes increase, the reconstruction efficiencies generally decrease. Larger cell sizes have lower spatial resolutions, making the separating of nearby photons more difficult.
+
+For the \decayAiPhoton final state, the selection efficiency for 500\,GeV rises from ECal cell sizes 15\,mm to 20\,mm and the one for 1000\,GeV rises from 7\,, to 20\,mm actually goes up as cell size increases. This is because when the algorithm can not reconstruct four photons in the \decayAiPhoton final state, and the event topology would be very similar to the \decayRho final states.
+
+For the \rootS = 100 and 200\,GeV, the selection efficiency of the 5\,mm ECal cell size is better than that of the 3\,mm. One possible explanation is that the  and the PandoraPFA have been optimised for the nominal ILD detector with the 5\,mm ECal cell size, which shares the same ECal structure with the nominal \CLICILD detector.
+
+To effectively compare the overall separation power of all hadronic final states across \sqrtS and ECal square cell sizes, we constructed a single parameter function, the  \Pgt hadronic decay final state efficiency function,
+\begin{equation}
+\label{eq:had}
+\varepsilon_{had} = \frac{\Sigma_{i} {Br}_{i}\varepsilon_{i}}{\Sigma_{i} {Br}_{i}}  \,,
+\end{equation}
+where $Br_{i}$ is the branching fraction of a hadronic final state after the generator level cut. $\varepsilon_{i}$ is the correct reconstruction efficiency of the final state, and the $i$ is summing over five hadronic decay final state of \Pgt. Leptonic decays, \decayElectron and \decayMuon, were not included, because the variation of the leptonic decay selection efficiency is small.
+

@@ -1,0 +1,126 @@
+\documentclass[11pt,tightenlines,print,twoside,onecolumn,aps,amsmath,amssymb]{revtex4}
+\usepackage{cases}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage[section]{placeins}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{epstopdf}
+\usepackage{tabularx}
+\usepackage{hyperref}
+%\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage[caption=false]{subfig}
+
+\usepackage{hepnicenames}
+% for tabularx
+\newcolumntype{L}[1]{>{\hsize=#1\hsize\raggedright\arraybackslash}X}%
+\newcolumntype{R}[1]{>{\hsize=#1\hsize\raggedleft\arraybackslash}X}%
+\newcolumntype{C}[2]{>{\hsize=#1\hsize\columncolor{#2}\centering\arraybackslash}X}%
+
+% change the style of the caption numbering.
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+%\renewcommand{\thesubtable}{\Roman{subtable}}
+%\renewcommand{\thesubfigure}{\arabic{subfigure}}
+
+% define something
+\newcommand{\bra}[1]{\langle #1|}
+\newcommand{\ket}[1]{|#1\rangle}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\Fig}[1]{Fig.\,\ref{#1}}
+\newcommand{\Table}[1]{Table\,\ref{#1}}
+\makeatletter
+\def\tagform@#1{\maketag@@@{(\ignorespaces\textbf{#1}\unskip\@@italiccorr)}}
+\renewcommand{\eqref}[1]{\textup{{\normalfont(\ref{#1}}\normalfont)}}
+\makeatother
+
+\newcommand{\Eq}[1]{Eqn.\,(\ref{#1})}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\nl}{\nonumber \\}
+\usepackage[usenames]{color}
+\definecolor{Red}{rgb}{1,0,0}
+\definecolor{Blue}{rgb}{0,0,1}
+
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\newcommand{\tstamp}{\today}
+
+\renewcommand\floatpagefraction{1}
+\renewcommand\dblfloatpagefraction{.9} % for two column documents
+\renewcommand\topfraction{1}
+\renewcommand\dbltopfraction{.9} % for two column documents
+\renewcommand\bottomfraction{1}
+\renewcommand\textfraction{0.2}
+\setcounter{totalnumber}{50}
+\setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50}
+
+\begin{document}
+
+\lhead[\fancyplain{}{\thepage}]         {\fancyplain{}{Boruo Xu}}
+\chead[\fancyplain{}{}]                 {\fancyplain{}{}}
+\rhead[\fancyplain{}{Boruo Xu}]                  {\fancyplain{}{\thepage}}
+\lfoot[\fancyplain{}{}]                 {\fancyplain{}{}}   %  {\fancyplain{\tstamp}{\tstamp}}
+\cfoot[\fancyplain{\thepage}{}]         {\fancyplain{\thepage}{}}
+\rfoot[\fancyplain{}{}]  {\fancyplain{}{}}    %  \rfoot[\fancyplain{\tstamp} {\tstamp}]  {\fancyplain{}{}}
+
+\title{New approach to calorimetry at the LHC}
+%\author{Boruo Xu}
+%\affiliation{University of Cambridge}
+
+\begin{abstract}
+
+%I will bring expertise to optimisation of the high performance calorimeters design for the
+%upgrade of the current the Large Hadron Collider in CERN. The novel, yet untested design brings
+% state-of-the-art techniques from several independent areas.
+
+%%A key part of planned upgrade to the current LHC is the use of high performance calorimeter
+
+%New physics is required to understand some of the deepest secrets of our universe.
+%Key improvements to current experiment at the LHC are high performance calorimeters.
+%HGCAL is a novel untested design which combines state-of-the-art techniques.
+%I am uniquely placed to bring critical expertise of particle flow techniques to CMS
+%%
+
+\end{abstract}
+
+%\maketitle
+%\section{Summary 50 words}{
+%The project concerns optimisation of the high granularity calorimeter design for the upgrade of the CMS experiment at the LHC at CERN, which is pioneered in future Linear Colliders %designs. I will bring my expertise in software development and event reconstruction for particle flow calorimetry with high granularity calorimeters.
+
+
+
+The Large Hadron Collider (LHC) at CERN will be the highest energy accelerator in the world for the foreseeable future. It is the only facility capable of investigating some of the highest priority fundamental physics topics. The discovery of a Higgs boson in 2012 provided a gateway to new physics~\cite{Aad:2012tfa}, which is required to understand some of the deepest mysteries of our universe. It may answer fundamental questions such as the composition of dark matter and dark energy which seemingly make up 95\% of the universe's energy, and the evolution of the universe.
+
+To fully exploit the physics potential of the LHC, the large dataset only attainable through the high luminosity LHC (HL-LHC)~\cite{Bruce:2059094} programme will be needed. This will allow the best chance of discovery of new particles but will also give enough data to make precision tests of the Higgs boson discovered in 2012 to check whether it really behaves as predicted. Some of the most crucial Higgs measurements are only accessible with the HL-LHC, in particular the Higgs self-couplings~\cite{CMS-NOTE-2012-006}.
+
+The HL-LHC will be very challenging experimentally as the high data-taking rate will mean a huge background from ``uninteresting'' interactions (known as pile-up) as well as those which we want to study. Pile-up will be at a rate of up to eight billion interactions per second and separating these from the much lower rate of Higgs boson production requires new designs for the LHC detectors, with upgrades planned over the next decade. Most relevant for this proposal are the calorimeters. A conventional calorimeter is intrinsically limited at dealing with a high rate environment, as it only records the energy of the particles in a large detector volume and hence cannot easily separate out the background interactions. Also, the radiation dose resulting from the background events is very large and most conventional calorimeters could not survive at the HL-LHC.
+
+A highly granular calorimeter built with radiation-hard silicon sensors would allow a full exploitation of the HL-LHC data. The proposed High Granularity Calorimeter (HGCAL)~\cite{Bilki:2015rla} for the Compact Muon Solenoid detector (CMS)~\cite{Contardo:2020886} at the LHC offers a new opportunity to overcome these challenges. The HGCAL is a novel design which has never been used in a collider experiment. The innovative scheme will require state-of-the-art techniques from several areas and will require a significant learning curve to gain expertise in its design and use. New technologies will have to be developed for such a cutting-edge calorimeter. The HGCAL, once built, would be a world-leading calorimeter and the first of its kind; it will be a forerunner for many future calorimeter designs.
+
+Such a calorimeter will be a new step for the CMS collaboration. However, simulations of these fine granular calorimeter designs have been studied for many years within the Linear Collider community~\cite{Brau:2007zza,Linssen:2012hp} for a potential future accelerator facility. Using a technique called ``particle flow'', highly granular calorimeters are combined with state-of-the-art pattern recognition software. It has been shown that excellent energy and position resolutions can be obtained even in environments with large backgrounds. Particle flow calorimetry represents a major paradigm shift from traditional energy flow calorimetry. However, this has yet to be demonstrated for the very high backgrounds of the HL-LHC.
+
+To fully exploit all the information from high granularity calorimeters, the foremost implementation of the particle flow approach, PandoraPFA, has been developed and tested in the linear collider community and neutrino experiments~\cite{Marshall:2015rfa}. The sophisticated PandoraPFA algorithms iteratively collect calorimeters hits and associate hits to tracks. PandoraPFA has demonstrated an outstanding jet energy resolution for the future linear colliders.  However, the harsh HL-LHC environment degrades the performance of the algorithms. A dedicated effort to optimise particle flow algorithms is needed for the HGCAL to deal with the challenging detector conditions.
+
+
+Hence, for CMS to get the best possible detector for the HL-LHC, they will need to understand how to optimise the HGCAL design over the next three years before construction starts. During the course of my PhD, I have worked within PandoraPFA on photon identification. I implemented a sophisticated pattern recognition algorithm that uses the topological properties of electromagnetic showers to identify photon candidates and separate them from other, nearby particles. It performs clustering of the energy deposits in the detector, followed by topological characterisation of the clusters, with the results being considered by a multivariate likelihood analysis. This algorithm leads to a significant improvement in the reconstruction of both single photons and multiple photons in a dense collider environment. I successfully applied this to identify interactions producing two Higgs bosons, which is an essential measurement for understanding the Higgs particle. My algorithm is used by researchers across the worldwide international linear collider community, and has improved many physics studies by providing better photon energy resolution and better mass resolution of particles decaying to photons. This work has been published in the proceedings of International Linear Collider Workshop~\cite{Xu:2016rcz}.
+
+Therefore, I am uniquely placed to bring critical expertise of particle flow techniques to CMS if awarded the 1851 Fellowship. I propose a programme of work in two specific areas of the HGCAL development. First, the detector design needs to be optimised for use with the particle flow technique. This includes many parameters, including the choice of the material thickness per layer of the calorimeter, the granularity of the sensitive elements as a function of the position within the calorimeter, the distribution of the readout bandwidth across the calorimeter to maximise the information available, etc. All of these design choices must be made with particle flow reconstruction providing the figure-of-merit and I will be well-placed to play a crucial role in this. The second area is the ``trigger'', which is the first level of selection of the interactions in the experiment and is essential as it is impossible to store the full data rate from CMS. The trigger is implemented in custom-designed hardware and any data which are not selected are lost forever, so it is critical to optimise the trigger design as far as possible. The trigger operates on only a subset of the data and cannot support such sophisticated algorithms as are used offline. However, I propose to implement a stripped-down version of particle flow in the trigger hardware. This will require very careful study to understand how the performance degrades as various aspects of the particle flow algorithm are changed. I will then minimise the degradation overall while producing a simplified algorithm which can be implemented in the trigger system. Again, this work will require an in-depth knowledge of how particle flow works, which I will bring to the collaboration.
+
+The Imperial College London group initiated the HGCAL project and has major leadership roles; the overall project leader and two subsystem coordinators are from Imperial College. The HGCal is a major project for the Imperial group and a priority for the CMS group there. This makes Imperial College a natural and ideal choice for this fellowship, where I will undertake optimisation of the calorimeter, development of the reconstruction software, and trigger studies. My strong skill-set in problem solving and programming, along with my extensive experience of developing algorithms with PandoraPFA, and of Higgs physics, makes me an ideal candidate for developing particle flow algorithms as part of the HGCAL project of the CMS detector for the HL-LHC.
+\bibliographystyle{h-physrev3}
+\bibliography{bib}
+
+
+\enddocument}
+\end

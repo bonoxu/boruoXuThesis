@@ -1,0 +1,116 @@
+\documentclass[11pt,tightenlines,print,twoside,onecolumn,aps,amsmath,amssymb]{revtex4}
+\usepackage{cases}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage[section]{placeins}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{epstopdf}
+\usepackage{tabularx}
+\usepackage{hyperref}
+%\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage[caption=false]{subfig}
+
+\usepackage{hepnicenames}
+% for tabularx
+\newcolumntype{L}[1]{>{\hsize=#1\hsize\raggedright\arraybackslash}X}%
+\newcolumntype{R}[1]{>{\hsize=#1\hsize\raggedleft\arraybackslash}X}%
+\newcolumntype{C}[2]{>{\hsize=#1\hsize\columncolor{#2}\centering\arraybackslash}X}%
+
+% change the style of the caption numbering.
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+%\renewcommand{\thesubtable}{\Roman{subtable}}
+%\renewcommand{\thesubfigure}{\arabic{subfigure}}
+
+% define something
+\newcommand{\bra}[1]{\langle #1|}
+\newcommand{\ket}[1]{|#1\rangle}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\Fig}[1]{Fig.\,\ref{#1}}
+\newcommand{\Table}[1]{Table\,\ref{#1}}
+\makeatletter
+\def\tagform@#1{\maketag@@@{(\ignorespaces\textbf{#1}\unskip\@@italiccorr)}}
+\renewcommand{\eqref}[1]{\textup{{\normalfont(\ref{#1}}\normalfont)}}
+\makeatother
+
+\newcommand{\Eq}[1]{Eqn.\,(\ref{#1})}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\nl}{\nonumber \\}
+\usepackage[usenames]{color}
+\definecolor{Red}{rgb}{1,0,0}
+\definecolor{Blue}{rgb}{0,0,1}
+
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\newcommand{\tstamp}{\today}
+
+\renewcommand\floatpagefraction{1}
+\renewcommand\dblfloatpagefraction{.9} % for two column documents
+\renewcommand\topfraction{1}
+\renewcommand\dbltopfraction{.9} % for two column documents
+\renewcommand\bottomfraction{1}
+\renewcommand\textfraction{0.2}
+\setcounter{totalnumber}{50}
+\setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50}
+
+\begin{document}
+
+\lhead[\fancyplain{}{\thepage}]         {\fancyplain{}{Boruo Xu}}
+\chead[\fancyplain{}{}]                 {\fancyplain{}{}}
+\rhead[\fancyplain{}{Boruo Xu}]                  {\fancyplain{}{\thepage}}
+\lfoot[\fancyplain{}{}]                 {\fancyplain{}{}}   %  {\fancyplain{\tstamp}{\tstamp}}
+\cfoot[\fancyplain{\thepage}{}]         {\fancyplain{\thepage}{}}
+\rfoot[\fancyplain{}{}]  {\fancyplain{}{}}    %  \rfoot[\fancyplain{\tstamp} {\tstamp}]  {\fancyplain{}{}}
+
+\title{Detectors and Physics at a Future Linear Collider}
+\author{Boruo Xu}
+\affiliation{University of Cambridge}
+
+\begin{abstract}
+
+%I will bring expertise to optimisation of the high performance calorimeters design for the
+%upgrade of the current the Large Hadron Collider in CERN. The novel, yet untested design brings
+% state-of-the-art techniques from several independent areas.
+
+%%A key part of planned upgrade to the current LHC is the use of high performance calorimeter
+
+%New physics is required to understand some of the deepest secrets of our universe.
+%Key improvements to current experiment at the LHC are high performance calorimeters.
+%HGCAL is a novel untested design which combines state-of-the-art techniques.
+%I am uniquely placed to bring critical expertise of particle flow techniques to CMS
+%%
+
+\end{abstract}
+
+\maketitle
+
+\section{Summary 300 words}
+
+The next large accelerator project will almost certainly be a linear electron-positron collider for precision studies of the higgs boson. This research project has two three strands: 
+
+ Particle reconstruction  is improved for the next generation high granular calorimeter. I have worked on the pattern recognition of photons, within PandoraPFA, a world-leading pattern-recognition software. A sophisticated pattern recognition algorithm is implemented, which uses the topological properties of electromagnetic showers to identify photon candidates and separate them from other, nearby particles. It performs clustering of the energy deposits in the detector, followed by topological characterisation of the clusters, with the results being considered by a multivariate likelihood analysis. This algorithm leads to a significant improvement in the reconstruction of both single photons and multiple photons in a dense collider environment.
+
+Second aspect is a detailed simulation study on reconstruction and classification of the tau lepton decay modes. The essential step is to reconstruct tau decay products as separate entities, such as photons. Using my photon reconstruction algorithm, the resolution of energy and invariant mass of the tau decay products is improved. I performed a hypothesis test for expected decay final states, and a multivariate analysis to classify decay final states with a data-driven machine learning method. The high classification rate of the final state of the tau lepton would provide a precision test of the Standard Model and provides a stronger physics case for future linear colliders, ILC or CLIC. My work is also an important benchmark for the optimisation of the electromagnetic calorimeter, to be used at the ILC or CLIC.
+
+
+Third aspect is a simulation study of double Higgs boson production in the context of the CLIC. By characterising complex events, I developed algorithms to identify isolated high energy leptons and fed the results into a multivariate analysis. Events with two Higgs bosons were extracted from background events for two CLIC energy scenarios. This leads to my sensitivity study of the Higgs self-triple coupling and quartic coupling, using a two-dimensional template fitting method. This work would feed into the proposal for the CLIC detector.
+
+
+\bibliographystyle{h-physrev3}
+\bibliography{bib}
+
+
+\enddocument}
+\end
