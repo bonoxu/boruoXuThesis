@@ -69,6 +69,7 @@
 \newlength{\widthOne}
 \setlength{\widthOne}{12cm}
 
+\DeclareRobustCommand{\myDagger}[1]{\mymath{\dagger}\xspace}
 
 \DeclareRobustCommand{\decayElectron}{\Pem\Pagne\Pgngt\xspace}
 \DeclareRobustCommand{\decayMuon}{\Pgmm\Pagngm\Pgngt\xspace}
@@ -92,7 +93,7 @@
 \DeclareRobustCommand{\decayAiPhotonShortest}{\HepParticleResonanceFull{a}{1}{}{\Pgpm\Pgpz\Pgpz}{}{}\xspace}
 \DeclareRobustCommand{\decayAiPionShortest}{\HepParticleResonanceFull{a}{1}{}{\Pgpm\Pgpm\Pgpp}{}{}\xspace}
 \DeclareRobustCommand{\tauHad}{\mymath{\varepsilon_{had}}\xspace}
- 
+
 
 \DeclareRobustCommand{\gHHH}{\HepParticle{g}{HHH}{}\xspace}
 \DeclareRobustCommand{\gWWHH}{\HepParticle{g}{WWHH}{}\xspace}
