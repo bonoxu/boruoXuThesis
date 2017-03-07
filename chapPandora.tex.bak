@@ -1,4 +1,4 @@
-\chapter{Reconstruction}
+\chapter{Simulation and Reconstruction}
 \label{chap:Reconstruction}
 
 \chapterquote{How to open a pandora box?}%
@@ -14,17 +14,17 @@ The reconstruction of a event into physical objects containing a few main steps:
 
 \section{Pandora}
 
-Inputs of \pandora are digitised calorimeter hits and reconstructed tracks. 
+Inputs of \pandora are digitised calorimeter hits and reconstructed tracks.
 
-\subsection{Track selection} 
+\subsection{Track selection}
 
-Tracks are selected based on their topological properties, how likely they are from physical processes, and whether they are consistent with tracker resolution. Only selected tracks will be used for the subsequent reconstruction. 
+Tracks are selected based on their topological properties, how likely they are from physical processes, and whether they are consistent with tracker resolution. Only selected tracks will be used for the subsequent reconstruction.
 
 Using a helical fit of last 50 reconstructed hits, tracks are projected to the front of the ECal.
 
 \subsection{Calorimeter selection}
 
-Calorimeter hits are selected based on a series of criterion. The selected hits need to have energies above the threshold, using the conversion of a minimum ionising particle (MIP) equivalent. 
+Calorimeter hits are selected based on a series of criterion. The selected hits need to have energies above the threshold, using the conversion of a minimum ionising particle (MIP) equivalent.
 
 Isolated hits, often originated from low energy neutrons in a hadronic shower, are difficult to associate to the correct hadronic shower. They are identified and not used in the clustering. But their energy is added in the particle flow object (PFO) creation step.
 
@@ -32,7 +32,7 @@ Isolated hits, often originated from low energy neutrons in a hadronic shower, a
 \label{sec:pandoraConeClustering}
 
 % ATTN add a cone cluster picture?
-The main clustering scheme used in \pandora is cone clustering, for grouping calorimeter hits. 
+The main clustering scheme used in \pandora is cone clustering, for grouping calorimeter hits.
 Cone clustering has a specified opening angle of the seed hit. Because the direction of particle flows is largely unchanged from the originated particle, whether it is a electromagnetic shower, QCD radiation or hadronisation, these cone clusters have similar direction and energy to the originated particle.
 
 Typically a high energy calorimeter hit will be chosen as a ``seed''. A cone with a specified opening angle and depth will be formed around the seed. The \fourMomentum of calorimeter hits sum to the cone's \fourMomentum. \pandora will start to use projection of tracks at the ECal as seeds. When all tracks are used, the remaining hits will be used as seeds.
@@ -64,15 +64,15 @@ One algorithm will attempt to split up photon clusters, where each is originated
 \subsection{Particle Flow Object Creation}
 
 % double counting taking care in pandora
-Particle Flow Objects (PFOs) are created at the last step. Tracks are associated to the clusters based on the proximity. Simple but effective particle identification for electrons, muons are applied. Photon identifications have been applied at various stages of the reconstruction. 
+Particle Flow Objects (PFOs) are created at the last step. Tracks are associated to the clusters based on the proximity. Simple but effective particle identification for electrons, muons are applied. Photon identifications have been applied at various stages of the reconstruction.
 
 PFOs are the output of the \pandora reconstruction. The four-momentum of these PFOs are  used heavily for the downstream analysis. The electron, muon and photon identification are  also used in physics analysis, such as one described in \Chapter{}.
 
-\section{Suppression of \ggHad backround}
+\section{Suppression of \ggHad backgrounds}
 
 For the CLIC, as discussed in \Section{}, significant \ggHad background is present. It is crucial to remove the beam induced background as they don't represent the underlying physics process.
 
-Two Marlin process has been developed to suppress these background, a track selector and a PFO selector\cite{Marshall:2012ry}. 
+Two Marlin process has been developed to suppress these background, a track selector and a PFO selector\cite{Marshall:2012ry}.
 
 The track selector aims to remove poor quality and fake tracks. It places simple quality cut and a simple time of arrival cut. If the arrival time of the track at the front of the ECal, using the helical fit, differs more than 50\,ns from using a straight line fit, the track will be rejected.
 

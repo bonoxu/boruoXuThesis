@@ -1,16 +1,25 @@
-\chapter{Reconstruction}
+\chapter{Simulation and Reconstruction}
 \label{chap:Reconstruction}
 
 \chapterquote{How to open a pandora box?}%
 {A wise Chinese}%: Blackwood's Magazine May 1830
 
-As previously stated, this document focus on the \ILD and \CLICILD detectors. Due to the similarity, we often only discuss one detector to avoid the repetition. The difference in detectors will be stated if applicable.
+%As previously stated, this document focus on the \ILD and \CLICILD detectors. Due to the similarity, we often only discuss one detector to avoid the repetition. The difference in detectors will be stated if applicable.
 
-\section{Reconstruction overall}
+\section{Monte Carlo Simulation}
 
-Reconstruction software runs in Marlin software framework \cite{Gaede:2006pj}, part of \ilcsoft.
+Simulation and reconstruction of events for the future Linear Colliders share common software framework. Simulated events are generated with Whizard software \cite{}. Pythia describes hadronisation and Tauola simulates correct spins of tau lepton decay products.  Whizard allows events simulation without initial state radiation, and can simulate electron beam interaction. For the \CLIC detector, electron beam induced background events are simulated and reconstructed. These events are superimposed on the physics process to save computational resources.
 
-The reconstruction of a event into physical objects containing a few main steps: digitisation of calorimeter hits (simulated hits in this case), reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects reconstruction with \pandora. For the \CLIC detectors, there is an extra step of \ggHad background suppression. We will discuss \pandora cite{Thomson:2009rp,Marshall:2012ry,Marshall:2015rfa} in details, where a lot work goes into, and the background suppression due to its relevance in later analysis.
+
+\section{Event Reconstruction}
+
+Reconstruction software runs in Marlin framework \cite{Gaede:2006pj}, as a part of \ilcsoft.
+
+Event reconstruction contains following steps: 
+
+digitisation of calorimeter hits (simulated hits in this case), reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects reconstruction with \pandora
+  
+into physical objects containing a few main steps: digitisation of calorimeter hits (simulated hits in this case), reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects reconstruction with \pandora. For the \CLIC detectors, there is an extra step of \ggHad background suppression. We will discuss \pandora cite{Thomson:2009rp,Marshall:2012ry,Marshall:2015rfa} in details, where a lot work goes into, and the background suppression due to its relevance in later analysis.
 
 \section{Pandora}
 
