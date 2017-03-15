@@ -69,7 +69,7 @@
 \newlength{\widthOne}
 \setlength{\widthOne}{12cm}
 
-\DeclareRobustCommand{\myDagger}[1]{\mymath{\dagger}\xspace}
+\DeclareRobustCommand{\myDagger}{\mymath{\dagger}\xspace}
 
 \DeclareRobustCommand{\decayElectron}{\Pem\Pagne\Pgngt\xspace}
 \DeclareRobustCommand{\decayMuon}{\Pgmm\Pagngm\Pgngt\xspace}
