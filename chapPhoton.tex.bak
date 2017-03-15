@@ -101,24 +101,25 @@ The default metric is chosen due to a good balance between distance and energy o
 
 \subsection{Candidate close to track projection}
 
-If a cluster or a photon candidate is close to the projection of the track in the front of the \ECAL, it is likely that the cluster or the candidate is a charged hadron. Misidentifying a charged hadron as a photon leads to significant degradation in reconstruction performance. However, if a photon next to a charged hadron is carefully reconstructed, the overall reconstruction is improved. Hence this step aims to carefully identifies photon candidate next to charged hadrons, by using track information and features of electromagnetic shower.
+If a cluster or a photon candidate is close to the projection of the track in the front of the \ECAL, it is likely that the cluster or the candidate is a charged hadron. Misidentifying a charged hadron as a photon leads to significant degradation in reconstruction performance. However, if a photon next to a charged hadron is carefully reconstructed, the overall reconstruction is improved. Hence this step aims to carefully identifies photon candidate next to charged hadrons, by using track information and features of the electromagnetic shower. Photon induced electromagnetic shower in the \ECAL typically start in the first few layers. As the shower develops, the direction of the shower core does not change much.
 
-Photon induced electromagnetic shower in the \ECAL typically start in the first few layers. As the shower develops, the direction of the shower core does not change much. 
-
-\subsection{Speed and performance tuning}
-
-The bin is 
+If a peak bin is within the eight neighbouring bins of the track projection onto the two dimensional plane, the peak and its associated bins are flagged as non-photons. Furthermore, the \ECAL is sliced longitudinally to help identify photon candidates. For example, the default three slices will result in three \ECAL fiducial spaces, each contains space from the front of the \ECAL to a third, two thirds and the back of the \ECAL, respectively. The peaking finding algorithm is repeated for the same cluster divided in each \ECAL fiducial space. The peak is only preserved as a photon candidate if the peak exists in every fiducial space, and if its position is shifted by no more than one neighbouring bin between fiducial spaces.
 
 
-The default histogram size is 41 by 41 bins. 
+\subsection{Peak filtering}
 
-
-
-The input of the two dimensional peak finding algorithm is a two dimensional histogram. 
-
+The performance of the two dimensional peaking finding algorithm is improved by clever programming and physics arguments. For a given two dimensional histogram, such as the one in \Figure{fig:photonPeakFinding}, major peaks most likely correspond to physical photons, while the minor peaks more likely come from fluctuations in energy deposition. To select major peaks, every time after non-peak bins are associated with peak bins, minor peaks with fewer than three bins associated (including the peak bin) are discarded. These bins are then associated with non-discarded peaks.  The algorithm also allows bins with height below a critical value to not participate in the peak finding. The default value is set such that only empty bins are not used.
 
 \section{Likelihood classifier for photon ID}
 Discriminating variables of each candidate are calculated. The variables are used for trainning the classifier and for the classification.
+
+
+
+The default histogram size is 41 by 41 bins.
+
+
+
+The input of the two dimensional peak finding algorithm is a two dimensional histogram.
 
 
 

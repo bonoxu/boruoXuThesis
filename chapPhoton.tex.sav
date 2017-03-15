@@ -97,7 +97,18 @@ where $d$ is the Euclidean distance between a non-peak bin and a peak bin, and $
 \begin{equation}
 \frac{d}{{E_{peak}^2}}
 \end{equation}
-The default metric is chosen due to a good balance between distance and 
+The default metric is chosen due to a good balance between distance and energy of the peak.
+
+\subsection{Candidate close to track projection}
+
+If a cluster or a photon candidate is close to the projection of the track in the front of the \ECAL, it is likely that the cluster or the candidate is a charged hadron. Misidentifying a charged hadron as a photon leads to significant degradation in reconstruction performance. However, if a photon next to a charged hadron is carefully reconstructed, the overall reconstruction is improved. Hence this step aims to carefully identifies photon candidate next to charged hadrons, by using track information and features of the electromagnetic shower. Photon induced electromagnetic shower in the \ECAL typically start in the first few layers. As the shower develops, the direction of the shower core does not change much.
+
+If a peak bin is within the eight neighbouring bins of the track projection onto the two dimensional plane, the peak and its associated bins are flagged as non-photons. Furthermore, the \ECAL is sliced longitudinally to help identify photon candidates. For example, the default three slices will result in three \ECAL fiducial spaces, each contains space from the front of the \ECAL to a third, two thirds and the back of the \ECAL, respectively. The peaking finding algorithm is repeated for the same cluster divided in each \ECAL fiducial space. The peak is only preserved as a photon candidate if the peak exists in every fiducial space, and if its position is shifted by no more than one neighbouring bin between fiducial spaces.
+
+
+\subsection{Speed and performance tuning}
+
+
 
 The bin is 
 
