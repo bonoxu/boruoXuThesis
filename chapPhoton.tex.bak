@@ -315,20 +315,21 @@ The \Table{tab:photonPhotonSplitting} shows values for the splitting a photon. $
 
 
 
-\section{Figures of merit}
+\section{Photon reconstruction performance}
 
 Motivations and implementations of four different algorithms for photon reconstruction, fragment removal and photon splitting have been described in the above. The main photon reconstruction algorithm in \Section{sec:photonRecostrcution} improves the photon completeness and the photon pair resolution, due to the improved two dimensional peak finding algorithm in \Section{sec:peakFinding}. The fragment removal algorithms in \Section{sec:photonFragRemoval} and \Section{sec:photonHighEFragRemoval} further reduce the photon fragments in the \ECAL and the \HCAL. The photon splitting algorithm in \Section{sec:photonSplitting} exploits the peak finding algorithms and improves the photon separation resolution. Because of the high photon reconstruction completeness, the jet energy resolution receives a small improvement.
 
-This section reviews the performance improvement with the introduced algorithms, using single photon, photon pair and jet samples. The performance was compared using \pandora version 1 and version 3, where the photon algorithms were introduced in \pandora version 2. The \ILD detector model is used. The \ECAL square cell size is about 5\,mm.
+This section reviews the performance improvement with the introduced algorithms, using single photon, photon pair and jet samples. The performance was compared using \pandora version 1 and version 3, where the photon algorithms were introduced in \pandora version 2. The \ILD detector model is used. The \ECAL square cell size is about 5\,mm. The events selected such that there is no early photon conversion and the monte carlo photon deposits energies in the calorimeter. The photon pair simulated events were generated with a uniform distribution in the solid angle for a range of the opening angles between the pair. 
 
 
 %We will review performance metrics of above algorithms. \Fig{fig:n_p} shows the number of reconstructed photons as a function of their true distance separation for a two photons per event sample. The reduction of the number of reconstructed photons are mainly due the the fragment merging algorithms for fragments in the ECal. \Fig{fig:n_all} shows a similar reduction in the reconstructed particles as in \Fig{fig:n_p}, and it shows that neutral hadron fragments in HCal have been merged back to main photons.
 
 
-\subsection{Single Photon Reconstruction}
+\subsection{Single photon reconstruction}
 
-\Figure{fig:photonSingleN_p} and \Figure{fig:fig:photonSingleN_all} shows the number of reconstructed photons and reconstructed particles, as a function of their true energy for a single photon per event sample. The top orange and bottom blue dots are reconstruction with \pandora version 1 and version 3. The photon reconstruction is changed in \pandora version 2. 
 
+
+\Figure{fig:photonSingleN_p} shows the reduction in fragments identified as photons, using a single photon per event sample, comparing photon reconstructions. The number of photon stays below 1.05, where the true value is 1, even at high energy. A similar trends shows in \Figure{fig:fig:photonSingleN_all}, where the extra fragments identified as neutral hadrons have taken into account. 
 
 \begin{figure}[tbph]
 \centering
@@ -344,11 +345,36 @@ This section reviews the performance improvement with the introduced algorithms,
     \end{subfigure}
 
 \caption[]
-{\Figure{fig:photonSingleN_p} and \Figure{fig:fig:photonSingleN_all} shows the number of reconstructed photons and reconstructed particles, as a function of their true energy for a single photon per event sample. The top orange and bottom blue dots are reconstruction with \pandora version 1 and version 3. The photon reconstruction is changed in \pandora version 2.}
+{\Figure{fig:photonSingleN_p} and \Figure{fig:photonSingleN_all} shows the number of reconstructed photons and reconstructed particles, as a function of their true energy using a single photon per event sample. The top orange and bottom blue dots are reconstructed with \pandora version 1 and version 3. The photon reconstruction is changed in \pandora version 2.}
 \label{fig:photonSingleN}
 \end{figure}
 
 
+
+\begin{figure}[tbph]
+\centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{photon/DoubleCompareN_p3.pdf}
+        \caption{}
+        \label{fig:photonDoubleCompareN_p}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{photon/DoubleCompareN_all2.pdf}
+        \caption{}
+        \label{fig:photonDoubleCompareN_all}
+    \end{subfigure}
+
+\caption[]
+{\Figure{fig:photonDoubleCompareN_p} and \Figure{fig:photonDoubleCompareN_all} shows the number of reconstructed photons and reconstructed particles, as a function of the MC distance separation in the calorimeter, using a two photons per event sample. The top orange and bottom blue dots are reconstructed with \pandora version 1 and version 3. The photon reconstruction is changed in \pandora version 2.}
+\label{fig:photonDoubleCompareN}
+\end{figure}
+
+
+
+
+
+
+\Figure{fig:photonSingleN_p} and \Figure{fig:fig:photonSingleN_all} 
 
 
 
