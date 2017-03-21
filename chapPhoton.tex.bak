@@ -102,8 +102,9 @@ If a peak bin is within the eight neighbouring bins of the track projection onto
 The performance of the two dimensional peaking finding algorithm is improved by clever programming and physics arguments. For a given two dimensional histogram, such as the one in \Figure{fig:photonPeakFinding}, major peaks most likely correspond to physical photons, while the minor peaks more likely come from fluctuations in energy deposition. To select major peaks, every time after non-peak bins are associated with peak bins, minor peaks with fewer than three bins associated (including the peak bin) are discarded. These bins are then associated with non-discarded peaks.  The algorithm also allows bins with height below a critical value to not participate in the peak finding. The default value is set such that only empty bins are not used.
 
 \subsection{Inclusive mode}
+\label{sec:photonPeakFindingInclusive}
 
-The two dimensional histogram is iterated a few times during the algorithm. The time complexity is $O(n^2)$ for a $n \times n$ histogram. Therefore, for the purpose of speed, it is undesirable to have a very large histogram. However, since the histogram has a finite size, only energy deposition projected on the histogram would be considered for peak finding.  This behaviour is suitable for photon reconstruction (\Section{sec:photonCandiate}) and test for photon fragment removal (\Section{sec:photonFragRemoval}). However, for photon splitting (\Section{}), there should be no calorimeter hits loss from splitting a photon. Hence inclusive mode of the peak finding algorithm is developed, and it allows energy deposition projected outside the histogram to be associated with identified peaks.
+The two dimensional histogram is iterated a few times during the algorithm. The time complexity is $O(n^2)$ for a $n \times n$ histogram (Default $n = 41$). Therefore, for the purpose of speed, it is undesirable to have a very large histogram. However, since the histogram has a finite size, only energy deposition projected on the histogram would be considered for peak finding.  This behaviour is suitable for photon reconstruction (\Section{sec:photonCandiate}) and test for photon fragment removal (\Section{sec:photonFragRemoval}). However, for photon splitting (\Section{sec:photonSplitting}), there should be no calorimeter hits loss from splitting a photon. Hence inclusive mode of the peak finding algorithm is developed, and it allows energy deposition projected outside the histogram to be associated with identified peaks.
 
 
 \section{Likelihood classifier for photon ID}
@@ -137,7 +138,7 @@ During classification, a candidate passes the photon id test if
 \end{equation}
 where $E$ is the candidate energy. Two values of the $pid$ cuts reflect the confidence of the id test with different candidate energy. The test is more cautious with low energy candidate.
 
-\section{Overview of photon fragment removal algorithm}
+\section{Photon fragment removal algorithm}
 \label{sec:photonFragRemoval}
 During the reconstruction, it is possible that a core of the photon electromagnetic shower is identified as a photon (the main photon). The outer part of the shower is reconstructed as a separate particle, and wrongly identified as a photon or a neural hadron (the photon/neutral fragment). \Figure{fig:photonEvtDspPhotonFrag} shows a typical creation of such a photon fragment. The fragment does not have the electromagnetic shower structure, and typically it is has much lower energy than the main photon. If a photon-fragment pair is merged, the pair should be consistent with a one-particle profile. These characteristics are used to merge fragments to main photons.
 
@@ -221,6 +222,7 @@ Since all possible photon-fragment pairs are compared, this is a costly cooperat
 
 
 \section{High energy photon fragment recovery algorithm}
+\label{sec:photonHighEFragRemoval}
 
 \SECTION{sec:photonFragRemoval} descried effective algorithms to removal photon fragments that are peripheral to the main photon, or the electromagnetic shower core. An example of such fragment is shown in \Figure{fig:photonEvtDspPhotonFrag}. There is another type of fragment which is the leakage effect of the \ECAL. When the high energy photon shower is not fully contained in the \ECAL, shower deposits energy in the \HCAL, which often forms a neutral hadron in the \HCAL. Photon reconstruction, as described in \Section{sec:photonRecostrcution}, considers only calorimeter hits in the \ECAL.  An example of a 500\,GeV photon reconstructed into a main photon in the \ECAL (yellow) and a neutral hadron fragment in the \HCAL (blue) is shown in \Figure{fig:photonEvtDspHCalFrag}. For the \ILD detector, this \ECAL leakage effect appears when the photon energy is above 50\,GeV.
 
@@ -277,10 +279,80 @@ If multiple photon-fragment pairs pass the cuts with the same fragment, the pair
 
 
 \section{Photon splitting algorithm}
+\label{sec:photonSplitting}
 
-So far algorithms
+Algorithms described above deal with forming photons from calorimeter hits in the \ECAL, merging photon fragments in the \ECAL and the \HCAL. Another aspect in photon reconstruction is splitting accidentally merged photons. During the particle reconstruction, it is possible that photons are accidentally merged if they are spatially close. Hence another algorithm at the end of the particle reconstruction addresses this issue and tries to split merged photons.
+
+Merged photon is typically energetic. The merged photon should be consistent with topologies of a spatially closed photon pair. Extra care should be taken if the photon is close to a charged \PFO. Many \pandora algorithms deal with track clusters association and there is a greater confidence in clusters associated with tracks. These features form logics behind the algorithm.
+
+\begin{table}[htbp]
+\centering
+
+\smallskip
+\small
+\begin{tabular}{l r }
+\hline
+Photon splitting&  Cuts\\
+\hline
+\multicolumn{1}{L{0.3\textwidth}}{Cuts} & \multicolumn{1}{R{0.3\textwidth}}{$E > E_{c1}$, $E_{p2} > E_{c2}$, $N_{p} < 5$} \\
+\hline
+$E_{c1}$ and $E_{c2}$ values &  \\
+\hline
+\multicolumn{1}{L{0.3\textwidth}}{0 nearby charged \PFO} & \multicolumn{1}{R{0.3\textwidth}}{$E_{c1} = 10$, $E_{c2} = 1$} \\
+\multicolumn{1}{L{0.3\textwidth}}{1 nearby charged \PFO} & \multicolumn{1}{R{0.3\textwidth}}{$E_{c1} = 10$, $E_{c2} = 5$} \\
+\multicolumn{1}{L{0.3\textwidth}}{> 1 nearby charged \PFO} & \multicolumn{1}{R{0.3\textwidth}}{$E_{c1} = 20$, $E_{c2} = 10$} \\
+\hline
+
+\hline
+\end{tabular}
+
+\caption[]%
+{The cuts for splitting photons, and the values for energy cut-off points. $E$ is the photon energy. $E_{p2}$ is  energy if the second largest peak from the two dimensional peak finding. $N_{p}$ is the number of peaks identified by the peak finding. $E_{c1}$ and $E_{c2}$ are the energy cut-off values, determined by the number of nearby charged \PFO{s}.}
+\label{tab:photonPhotonSplitting}
+\end{table}
+
+The \Table{tab:photonPhotonSplitting} shows values for the splitting a photon. $E$ is the photon energy. $E_{p2}$ is  energy if the second largest peak from the two dimensional peak finding. $N_{p}$ is the number of peaks identified by the peak finding. $E_{c1}$ and $E_{c2}$ are the energy cut-off values, determined by the number of nearby charged \PFO{s}. When a energetic photon is identified, and a energetic second peak can be found by the peak finding, the photon is likely from a photon pair. $N_{p}$ cut is because a reconstructed photon is unlikely from more than four photons. The values of $E_{c1}$ and $E_{c2}$ allow more conservative approach when a photon is close to charged \PFO{s}.
 
 
+
+\section{Figures of merit}
+
+Motivations and implementations of four different algorithms for photon reconstruction, fragment removal and photon splitting have been described in the above. The main photon reconstruction algorithm in \Section{sec:photonRecostrcution} improves the photon completeness and the photon pair resolution, due to the improved two dimensional peak finding algorithm in \Section{sec:peakFinding}. The fragment removal algorithms in \Section{sec:photonFragRemoval} and \Section{sec:photonHighEFragRemoval} further reduce the photon fragments in the \ECAL and the \HCAL. The photon splitting algorithm in \Section{sec:photonSplitting} exploits the peak finding algorithms and improves the photon separation resolution. Because of the high photon reconstruction completeness, the jet energy resolution receives a small improvement.
+
+This section reviews the performance improvement with the introduced algorithms, using single photon, photon pair and jet samples. The performance was compared using \pandora version 1 and version 3, where the photon algorithms were introduced in \pandora version 2. The \ILD detector model is used. The \ECAL square cell size is about 5\,mm.
+
+
+%We will review performance metrics of above algorithms. \Fig{fig:n_p} shows the number of reconstructed photons as a function of their true distance separation for a two photons per event sample. The reduction of the number of reconstructed photons are mainly due the the fragment merging algorithms for fragments in the ECal. \Fig{fig:n_all} shows a similar reduction in the reconstructed particles as in \Fig{fig:n_p}, and it shows that neutral hadron fragments in HCal have been merged back to main photons.
+
+
+\subsection{Single Photon Reconstruction}
+
+\Figure{fig:photonSingleN_p} and \Figure{fig:fig:photonSingleN_all} shows the number of reconstructed photons and reconstructed particles, as a function of their true energy for a single photon per event sample. The top orange and bottom blue dots are reconstruction with \pandora version 1 and version 3. The photon reconstruction is changed in \pandora version 2. 
+
+
+\begin{figure}[tbph]
+\centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{photon/SingleN_p.pdf}
+        \caption{}
+        \label{fig:photonSingleN_p}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{photon/SingleN_all.pdf}
+        \caption{}
+        \label{fig:photonSingleN_all}
+    \end{subfigure}
+
+\caption[]
+{\Figure{fig:photonSingleN_p} and \Figure{fig:fig:photonSingleN_all} shows the number of reconstructed photons and reconstructed particles, as a function of their true energy for a single photon per event sample. The top orange and bottom blue dots are reconstruction with \pandora version 1 and version 3. The photon reconstruction is changed in \pandora version 2.}
+\label{fig:photonSingleN}
+\end{figure}
+
+
+
+
+
+%The number of nearby charged \PFO{s} is defined by the number of charged \PFO{s}
 
 \begin{comment}
 Another type of photon fragment is caused when a highly energetic photon, typically more than 50GeV, goes through the ECal and deposits energy in the hadronic calorimeter (HCal), illustrated in \Fig{fig:evtDspHCalFrag}. Since the photon identification in PandoraPFA implicitly assumes that all photons are contained in the ECal, the energy deposited in the HCal either becomes neutral hadron fragments or part of a hadronic shower if a hadronic shower of another particle is nearby.

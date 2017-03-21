@@ -138,7 +138,7 @@ During classification, a candidate passes the photon id test if
 \end{equation}
 where $E$ is the candidate energy. Two values of the $pid$ cuts reflect the confidence of the id test with different candidate energy. The test is more cautious with low energy candidate.
 
-\section{Overview of photon fragment removal algorithm}
+\section{Photon fragment removal algorithm}
 \label{sec:photonFragRemoval}
 During the reconstruction, it is possible that a core of the photon electromagnetic shower is identified as a photon (the main photon). The outer part of the shower is reconstructed as a separate particle, and wrongly identified as a photon or a neural hadron (the photon/neutral fragment). \Figure{fig:photonEvtDspPhotonFrag} shows a typical creation of such a photon fragment. The fragment does not have the electromagnetic shower structure, and typically it is has much lower energy than the main photon. If a photon-fragment pair is merged, the pair should be consistent with a one-particle profile. These characteristics are used to merge fragments to main photons.
 
@@ -222,6 +222,7 @@ Since all possible photon-fragment pairs are compared, this is a costly cooperat
 
 
 \section{High energy photon fragment recovery algorithm}
+\label{sec:photonHighEFragRemoval}
 
 \SECTION{sec:photonFragRemoval} descried effective algorithms to removal photon fragments that are peripheral to the main photon, or the electromagnetic shower core. An example of such fragment is shown in \Figure{fig:photonEvtDspPhotonFrag}. There is another type of fragment which is the leakage effect of the \ECAL. When the high energy photon shower is not fully contained in the \ECAL, shower deposits energy in the \HCAL, which often forms a neutral hadron in the \HCAL. Photon reconstruction, as described in \Section{sec:photonRecostrcution}, considers only calorimeter hits in the \ECAL.  An example of a 500\,GeV photon reconstructed into a main photon in the \ECAL (yellow) and a neutral hadron fragment in the \HCAL (blue) is shown in \Figure{fig:photonEvtDspHCalFrag}. For the \ILD detector, this \ECAL leakage effect appears when the photon energy is above 50\,GeV.
 
@@ -310,31 +311,70 @@ $E_{c1}$ and $E_{c2}$ values &  \\
 \label{tab:photonPhotonSplitting}
 \end{table}
 
-The \Table{tab:photonPhotonSplitting} shows values for the splitting a photon. $E$ is the photon energy. $E_{p2}$ is  energy if the second largest peak from the two dimensional peak finding. $N_{p}$ is the number of peaks identified by the peak finding. $E_{c1}$ and $E_{c2}$ are the energy cut-off values, determined by the number of nearby charged \PFO{s}. When a energetic photon is identified, and a energetic second peak can be found by the peak finding, the photon is likely from a photon pair. $N_{p}$ cut is because a reconstructed photon is unlikely from more than four photons. The values of $E_{c1}$ and $E_{c2}$ allow more conservative approach when a photon is close to charged \PFO{s}. 
+The \Table{tab:photonPhotonSplitting} shows values for the splitting a photon. $E$ is the photon energy. $E_{p2}$ is  energy if the second largest peak from the two dimensional peak finding. $N_{p}$ is the number of peaks identified by the peak finding. $E_{c1}$ and $E_{c2}$ are the energy cut-off values, determined by the number of nearby charged \PFO{s}. When a energetic photon is identified, and a energetic second peak can be found by the peak finding, the photon is likely from a photon pair. $N_{p}$ cut is because a reconstructed photon is unlikely from more than four photons. The values of $E_{c1}$ and $E_{c2}$ allow more conservative approach when a photon is close to charged \PFO{s}.
 
 
 
-\section{Figures of merit}
+\section{Photon reconstruction performance}
+
+Motivations and implementations of four different algorithms for photon reconstruction, fragment removal and photon splitting have been described in the above. The main photon reconstruction algorithm in \Section{sec:photonRecostrcution} improves the photon completeness and the photon pair resolution, due to the improved two dimensional peak finding algorithm in \Section{sec:peakFinding}. The fragment removal algorithms in \Section{sec:photonFragRemoval} and \Section{sec:photonHighEFragRemoval} further reduce the photon fragments in the \ECAL and the \HCAL. The photon splitting algorithm in \Section{sec:photonSplitting} exploits the peak finding algorithms and improves the photon separation resolution. Because of the high photon reconstruction completeness, the jet energy resolution receives a small improvement.
+
+This section reviews the performance improvement with the introduced algorithms, using single photon, photon pair and jet samples. The performance was compared using \pandora version 1 and version 3, where the photon algorithms were introduced in \pandora version 2. The \ILD detector model is used. The \ECAL square cell size is about 5\,mm. The events selected such that there is no early photon conversion and the monte carlo photon deposits energies in the calorimeter. The photon pair simulated events were generated with a uniform distribution in the solid angle for a range of the opening angles between the pair. 
+
+
+%We will review performance metrics of above algorithms. \Fig{fig:n_p} shows the number of reconstructed photons as a function of their true distance separation for a two photons per event sample. The reduction of the number of reconstructed photons are mainly due the the fragment merging algorithms for fragments in the ECal. \Fig{fig:n_all} shows a similar reduction in the reconstructed particles as in \Fig{fig:n_p}, and it shows that neutral hadron fragments in HCal have been merged back to main photons.
+
+
+\subsection{Single photon reconstruction}
+
+
+
+\Figure{fig:photonSingleN_p} shows the reduction in fragments identified as photons, using a single photon per event sample, comparing photon reconstructions. The number of photon stays below 1.05, where the true value is 1, even at high energy. A similar trends shows in \Figure{fig:fig:photonSingleN_all}, where the extra fragments identified as neutral hadrons have taken into account. 
+
 \begin{figure}[tbph]
 \centering
     \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{photon/n_p}
+        \includegraphics[width=\textwidth]{photon/SingleN_p.pdf}
         \caption{}
-        \label{fig:photonNumberOfPhoton}
+        \label{fig:photonSingleN_p}
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{photon/n_all}
+        \includegraphics[width=\textwidth]{photon/SingleN_all.pdf}
         \caption{}
-        \label{fig:photonNumberOfParticle}
+        \label{fig:photonSingleN_all}
     \end{subfigure}
 
 \caption[]
-{\Figure{fig:photonNumberOfPhoton} shows the number of reconstructed photons as a function of their true distance separation for a two photons per event sample. \Figure{fig:photonNumberOfParticle} shows the number of reconstructed particle as a function of their true distance separation for a two photons per event sample. The top blue line is reconstructed with PandoraSettingsDefault.xml with iLCSoft v01-17-07. The bottom orange line is reconstructed with PandoraSettingsDefault.xml plus two fragment merging algorithm (RecoPhotonFragmentMergingAlgorithm and PhotonFragmentMergingAlgorithm). The middle green line is is reconstructed with PandoraSettingsDefault.xml plus all algorithms described above.
-}
-\label{fig:photonNPhoton}
+{\Figure{fig:photonSingleN_p} and \Figure{fig:photonSingleN_all} shows the number of reconstructed photons and reconstructed particles, as a function of their true energy using a single photon per event sample. The top orange and bottom blue dots are reconstructed with \pandora version 1 and version 3. The photon reconstruction is changed in \pandora version 2.}
+\label{fig:photonSingleN}
 \end{figure}
 
 
+
+\begin{figure}[tbph]
+\centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{photon/DoubleCompareN_p2.eps}
+        \caption{}
+        \label{fig:photonDoubleCompareN_p}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{photon/DoubleCompareN_all.pdf}
+        \caption{}
+        \label{fig:photonDoubleCompareN_all}
+    \end{subfigure}
+
+\caption[]
+{\Figure{fig:photonDoubleCompareN_p} and \Figure{fig:photonDoubleCompareN_all} shows the number of reconstructed photons and reconstructed particles, as a function of the MC distance separation in the calorimeter, using a two photons per event sample. The top orange and bottom blue dots are reconstructed with \pandora version 1 and version 3. The photon reconstruction is changed in \pandora version 2.}
+\label{fig:photonDoubleCompareN}
+\end{figure}
+
+
+
+
+
+
+\Figure{fig:photonSingleN_p} and \Figure{fig:fig:photonSingleN_all} 
 
 
 
