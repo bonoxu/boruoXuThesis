@@ -31,6 +31,9 @@
 \DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
 \DeclareRobustCommand*\mit{\@fontswitch\relax\mathnormal}
 
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
 %% Maths
 % TODO: rework or eliminate maybemath
 \usepackage{abmath}
@@ -140,6 +143,7 @@
 \DeclareRobustCommand{\Hbb}{\HepParticle{H}{\Pbottom\Pbottom}{}\xspace}
 \DeclareRobustCommand{\HWW}{\HepParticle{H}{\PW\W*}{}\xspace}
 \DeclareRobustCommand{\HH}{\HepParticle{HH}{}{}\xspace}
+\DeclareRobustCommand{\Z'}{\HepParticle{Z}{}{'}\xspace}
 
 \DeclareRobustCommand{\loosePFO}{loose selected PFO\xspace}
 \DeclareRobustCommand{\normalPFO}{normal selected PFO\xspace}

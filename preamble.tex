@@ -32,7 +32,7 @@
 \DeclareRobustCommand*\mit{\@fontswitch\relax\mathnormal}
 
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}      
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 %% Maths
 % TODO: rework or eliminate maybemath
@@ -76,6 +76,9 @@
 
 \newlength{\widthOne}
 \setlength{\widthOne}{12cm}
+
+\DeclareRobustCommand{\Zprime}{\HepParticle{Z}{}{\prime}\xspace}
+\DeclareRobustCommand{\Zuds}{\HepProcess{ \Zprime \to \Pup / \Pdown / \Pstrange}\xspace}
 
 \DeclareRobustCommand{\myDagger}{\mymath{\dagger}\xspace}
 
@@ -143,6 +146,8 @@
 \DeclareRobustCommand{\Hbb}{\HepParticle{H}{\Pbottom\Pbottom}{}\xspace}
 \DeclareRobustCommand{\HWW}{\HepParticle{H}{\PW\W*}{}\xspace}
 \DeclareRobustCommand{\HH}{\HepParticle{HH}{}{}\xspace}
+
+
 
 \DeclareRobustCommand{\loosePFO}{loose selected PFO\xspace}
 \DeclareRobustCommand{\normalPFO}{normal selected PFO\xspace}
