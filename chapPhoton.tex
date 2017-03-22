@@ -140,7 +140,7 @@ During classification, a candidate passes the photon id test if
 \end{equation}
 where $E$ is the candidate energy. Two values of the $pid$ cuts reflect the confidence of the id test with different candidate energy. The test is more cautious with low energy candidate.
 
-\section{Photon fragment removal algorithm}
+\section{Photon fragment removal algorithm in the \ECAL}
 \label{sec:photonFragRemoval}
 During the reconstruction, it is possible that a core of the photon electromagnetic shower is identified as a photon (the main photon). The outer part of the shower is reconstructed as a separate particle, and wrongly identified as a photon or a neural hadron (the photon/neutral fragment). \Figure{fig:photonEvtDspPhotonFrag} shows a typical creation of such a photon fragment. The fragment does not have the electromagnetic shower structure, and typically it is has much lower energy than the main photon. If a photon-fragment pair is merged, the pair should be consistent with a one-particle profile. These characteristics are used to merge fragments to main photons.
 
@@ -327,7 +327,23 @@ This section reviews the performance improvement with the introduced algorithms,
 
 %We will review performance metrics of above algorithms. \Fig{fig:n_p} shows the number of reconstructed photons as a function of their true distance separation for a two photons per event sample. The reduction of the number of reconstructed photons are mainly due the the fragment merging algorithms for fragments in the ECal. \Fig{fig:n_all} shows a similar reduction in the reconstructed particles as in \Fig{fig:n_p}, and it shows that neutral hadron fragments in HCal have been merged back to main photons.
 
+
+\Figure{fig:photonDoubleCompareAlgs} shows the reduction in fragments identified as photons, using a single photon per event sample. For the blue dots, the average number of photon stays below 1.05, where the true value is 1, even at high energy. A similar trends shows in \Figure{fig:fig:photonSingleN_all}, where the extra fragments identified as neutral hadrons have taken into account. For a 100\,GeV photon, the average numbers of photon and particle are reduced to 1 from 2 and 2.4. For a 500\,GeV photon, the average numbers of photon and particle are reduced to 1.05 from 2.8 and 3.8.
+
+\begin{figure}[tbph]
+\centering
+\includegraphics[width=0.45\textwidth]{photon/DoubleCompareAlgs.pdf}
+\caption[]
+{Figure shows the average number of photons, as a function of the MC distance separation in the calorimeter, using two photons of 500 and 500\,GeV per event sample. The blue, orange, and green dots are reconstructed with \pandora version 3, \pandora version 1 with fragment removal in the \ECAL (\Section{{sec:photonFragRemoval}}), and \pandora version 1 with fragment removal in the \ECAL and the \HCAL. The photon reconstruction is changed in \pandora version 2.}
+\label{fig:photonDoubleCompareAlgs}
+\end{figure}
+
+
+
 \Figure{fig:photonSingleN_p} shows the reduction in fragments identified as photons, using a single photon per event sample. For the blue dots, the average number of photon stays below 1.05, where the true value is 1, even at high energy. A similar trends shows in \Figure{fig:fig:photonSingleN_all}, where the extra fragments identified as neutral hadrons have taken into account. For a 100\,GeV photon, the average numbers of photon and particle are reduced to 1 from 2 and 2.4. For a 500\,GeV photon, the average numbers of photon and particle are reduced to 1.05 from 2.8 and 3.8.
+
+
+
 
 \begin{figure}[tbph]
 \centering
