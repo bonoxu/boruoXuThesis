@@ -77,6 +77,9 @@
 \newlength{\widthOne}
 \setlength{\widthOne}{12cm}
 
+\DeclareRobustCommand{\Zprime}{\HepParticle{Z}{}{\prime}\xspace}
+\DeclareRobustCommand{\Zuds}{\HepProcess{ \Zprime \to \Pup / \Pdown / \Pstrange}\xspace}
+
 \DeclareRobustCommand{\myDagger}{\mymath{\dagger}\xspace}
 
 \DeclareRobustCommand{\decayElectron}{\Pem\Pagne\Pgngt\xspace}
@@ -143,7 +146,8 @@
 \DeclareRobustCommand{\Hbb}{\HepParticle{H}{\Pbottom\Pbottom}{}\xspace}
 \DeclareRobustCommand{\HWW}{\HepParticle{H}{\PW\W*}{}\xspace}
 \DeclareRobustCommand{\HH}{\HepParticle{HH}{}{}\xspace}
-\DeclareRobustCommand{\Z'}{\HepParticle{Z}{}{'}\xspace}
+
+
 
 \DeclareRobustCommand{\loosePFO}{loose selected PFO\xspace}
 \DeclareRobustCommand{\normalPFO}{normal selected PFO\xspace}
@@ -174,6 +178,11 @@
 \DeclareRobustCommand{\CLICcdr}{\CLIC Concept Design Report\xspace}
 \DeclareRobustCommand{\ECAL}{ECAL\xspace}
 \DeclareRobustCommand{\HCAL}{HCAL\xspace}
+\DeclareRobustCommand{\FCAL}{FCAL\xspace}
+\DeclareRobustCommand{\TPC}{TPC\xspace}
+\DeclareRobustCommand{\VTX}{VTX\xspace}
+
+\DeclareRobustCommand{\IP}{IP\xspace}
 %\DeclareRobustCommand{\bphysics}{\Pbottom-physics\xspace}
 %\DeclareRobustCommand{\bhadron}{\Pbottom-hadron\xspace}
 %\DeclareRobustCommand{\Bmeson}{\PB-meson\xspace}

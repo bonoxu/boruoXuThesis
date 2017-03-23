@@ -23,6 +23,12 @@ CLIC
 
 
 
+\section{CLIC vs ILC}
+
+Beam induced background
+effective collision energy
+
+
 \section{Physics at ILC}
 
 Tau - LC relavence tau
@@ -58,12 +64,6 @@ The main mechanism for double Higgs production %in \epem collisions
 %at high energy CLIC ($\sqrt{s}>$\SI{1}{\TeV}) is via $WW$-fusion ($\epem\to HH\nu\overline{\nu}$). The main Feynman diagrams contributing to the process are illustrated in Figure . %The cross section for the process increases with the centre-of-mass energy: from \SI{0.15}{\fb} at $\sqrt{s}=$\SI{1.4}{\TeV} to \SI{0.59}{\fb} at $\sqrt{s}=$\SI{3}{\TeV}, assuming a %Higgs mass of \SI{126}{GeV}.
 
 
-
-\section{CLIC vs ILC}
-
-Due to the similarities of the two two linear collider programs, the development with \CLIC detector concepts start with \ILC detector concepts. The two main differences are the high centre-of-mass energy and the 0.5\,ns between bunch crossings at CLIC. More incoherent pairs and more hadronic two-photon events are produced at high energy. Particles produced in the forward region via t-channel are more important due to a stronger boost. These differences leads to a modification in the detector design and the reconstruction software for the \CLIC.
-
-
 \section{ILD vs SID}
 
 
@@ -82,33 +82,34 @@ This section will describe the sub-systems of the \ILD detector concept in the \
 \centering
 \includegraphics[width=0.45\textwidth]{ILD/ILD}
 \caption[]
-{ Longitudinal cross section of top quadrant of the \ILD detector concept, taken from \cite{Baer:2013cma}. From interaction point (\IP) outwards, there is a tracking system compromising a large time projection chamber (\TPC) augmented with silicon tungsten layer, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. Numbers are in units of mm.}
+{ Longitudinal cross section of top quadrant of the \ILD detector concept, taken from \cite{Behnke:2007gj}. From interaction point (\IP) outwards, there is a tracking system compromising a large time projection chamber (\TPC) augmented with silicon tungsten layer, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. Numbers are in units of mm.}
 \label{fig:ILD}
 \end{figure}
 
 \section{Overview of \ILD sub-detectors}
  
-The \ILD detector concept is designed as a general purpose detector. Closest to the interaction points are the precision a vertex detector and a tracking system. The tracking system consists of silicon tracking with a time projection chamber. Surrounding the tracking system is a high granular calorimeter system. The outer solenoid provides a magnetic field of 3.5\,T. The most outer iron return yoke acts as a muon calorimeter.
+The \ILD detector concept is designed as a general purpose detector. Closest to the interaction points are the precision a vertex detector and a tracking system. The tracking system consists of silicon tracking with a time projection chamber. Surrounding the tracking system is a high granular calorimeter system. The outer solenoid provides a strong magnetic field of 3.5\,T. The most outer iron return yoke acts as a muon calorimeter.
 
 
-\section{Vertex Detector}
-
-The pixel-vertex detector(\VTX) needs to be close to the interaction point to reconstruct secondary vertex. As the \TPC is the main tracking  detector, the \VTX mainly measures the impact parameter of tracks. The structure is three double layers with a barrel geometry. Double layer lowers the material budget and improves the impact parameter measurements. The first double layer is half length of the other two to avoid the high occupancy region of direct low omentulum hits from the incoherent pair background.
-
-For the \CLIC, the same structure is used. The first layer is moved outwards due to a larger high occupancy region with higher centre-of-mass energy. The detector is also required to provided time stamping at nanoseconds level.
 
 
-\section{Tracking Detectors}
-
-
-\begin{figure}[tdbph]
-\centering
-\includegraphics[width=0.45\textwidth]{ILD/Tracking}
-\caption[]
-{A quadrant view of the \ILD silicon envelope system, \SIT, \SET, \FTD, and \ETD as included in MOKKA full simulation, adapted from the figure in \cite{Baer:2013cma}.}
-\label{fig:detectorTracking}
-\end{figure}
-
+The vertex detector is realised as a multi-layer pixel-vertex detector (VTX), with three super-layers
+each comprising two layers, or a 5 layer geometry. In either case the detector has a pure barrel
+geometry. To minimise the occupancy from background hits, the first super-layer is only half as long
+as the outer two. Whilst the underlying detector technology has not yet been decided, the VTX is
+optimised for point resolution and minimum material thickness.
+A system of silicon strip and pixel detectors surrounds the VTX detector. In the barrel, two
+layers of silicon strip detectors (SIT) are arranged to bridge the gap between the VTX and the TPC.
+In the forward region, a system of two silicon-pixel disks and five silicon-strip disks (FTD) provides
+low angle tracking coverage.
+A distinct feature of ILD is a large volume time projection chamber (TPC) with up to 224 points
+per track. The TPC is optimised for 3-dimensional point resolution and minimum material in the
+field cage and in the end-plate. It also allows dE/dx based particle identification.
+Outside the TPC a system of Si-strip detectors, one behind the end-plate of the TPC (ETD)
+and one in between the TPC and the ECAL (SET), provide additional high precision space points
+which improve the tracking performance and provide additional redundancy in the regions between
+the main tracking volume and the calorimeters
+ 
  
  
 

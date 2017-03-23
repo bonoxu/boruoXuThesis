@@ -1,8 +1,17 @@
-\chapter{Theory}
-\label{chap:Theory}
+\chapter{Detector and Physics at Future Linear Colliders}
+\label{chap:Detector}
 
 \chapterquote{ILC will be built next year}%
 {Mysterious person}%: Blackwood's Magazine May 1830
+
+
+
+
+
+Since the discovery of a particle consistent with being the SM Higgs boson in LHC at 2012 \cite{Aad:2012tfa,Chatrchyan:2012ufa}, our understanding of Standard Model has improved greatly. Yet limited by the underlying QCD interaction from proton-anti-proton collision, one has great difficulty to measure the properties of the Higgs precisely. Next generation electron-positron linear collider could hopefully make precision measurements of the Higgs sector and the Top quark sector \cite{Abramowicz:2013tzc}.
+
+The leading candidates for next generation electron-positron linear collider are the International Linear Collider (ILC) \cite{Brau:2007zza}, and the Compact Linear Collider (CLIC) \cite{Linssen:2012hp}. The ILC has developed two detector models, namely the International Large Detector (ILD) \cite{Abe:2010aa} and the Silicon Detector (SiD) \cite{Aihara:2010zz}. The CLIC has developed two slightly modified detector models based on ILD and SiD \cite{Linssen:2012hp}. One key common feature of these next generation electron-positron linear colliders is the high granular calorimeter, which provides a great spatial resolution at the cost of the energy resolution. Particle flow algorithms (PFA) benefit from the spatial resolution from calorimeters, together with tracking information, to provide excellent a jet energy resolution. PandoraPFA, the most complicated and the best performing one, provides a jet energy resolution of less than 3.5\%, which is required for W/Z separation \cite{Thomson:2009rp,Marshall:2013bda}.
+
 
 overall
 
@@ -12,24 +21,132 @@ ILC
 
 CLIC
 
-calorimeter
 
-ECal
 
-HCal
+\section{Physics at ILC}
 
-Muon chamber
+Tau - LC relavence tau
 
-Forward detector
+Double higgs
 
-Tracker
 
-CLCI-background
+general higgs field
 
-Theory
+Lagrangian
 
+current constraint
+
+single higgs coupling measurement done in higgs
+
+Double higgs measurement
+
+The main mechanism for double Higgs production %in \epem collisions
+%at high energy CLIC ($\sqrt{s}>$\SI{1}{\TeV}) is via $WW$-fusion ($\epem\to HH\nu\overline{\nu}$). The main Feynman diagrams contributing to the process are illustrated in Figure . %The cross section for the process increases with the centre-of-mass energy: from \SI{0.15}{\fb} at $\sqrt{s}=$\SI{1.4}{\TeV} to \SI{0.59}{\fb} at $\sqrt{s}=$\SI{3}{\TeV}, assuming a %Higgs mass of \SI{126}{GeV}.
+
+
+
+
+\section{Physics at CILC}
+
+current constraint
+
+single higgs coupling measurement done in higgs
+
+Double higgs measurement
+
+The main mechanism for double Higgs production %in \epem collisions
+%at high energy CLIC ($\sqrt{s}>$\SI{1}{\TeV}) is via $WW$-fusion ($\epem\to HH\nu\overline{\nu}$). The main Feynman diagrams contributing to the process are illustrated in Figure . %The cross section for the process increases with the centre-of-mass energy: from \SI{0.15}{\fb} at $\sqrt{s}=$\SI{1.4}{\TeV} to \SI{0.59}{\fb} at $\sqrt{s}=$\SI{3}{\TeV}, assuming a %Higgs mass of \SI{126}{GeV}.
+
+
+
+\section{CLIC vs ILC}
+
+Due to the similarities of the two two linear collider programs, the development with \CLIC detector concepts start with \ILC detector concepts. The two main differences are the high centre-of-mass energy and the 0.5\,ns between bunch crossings at CLIC. More incoherent pairs and more hadronic two-photon events are produced at high energy. Particles produced in the forward region via t-channel are more important due to a stronger boost. These differences leads to a modification in the detector design and the reconstruction for the \CLIC. 
+
+
+\section{ILD vs SID}
+
+
+
+
+\section{International Large Detector}
+
+
+The International Large Detector, \ILD, is a detector concept at the International Linear Collider, \ILC. The \ILD detector concept has been optimised in the view of the particle flow techniques. Particle flow approach to event reconstruction has shown to deliver the best possible jet reconstruction with proof-of-principle implementation such as \pandora {\Chapter{chap:Reconstruction}}. Each individual particles are reconstructed with the particle flow approach. For charged particles, calorimeter hits are associated with the tracks. The measurement of charged particle relies on the excellent tracking system resolution. Neutral particle reconstruction require fine spatial resolution of the calorimeters. These form the requirements for the detector designs and optimisations.
+
+
+The particle flow paradigm requires topological information for individual particle reconstruction. The sub-detector systems need to have the spatial resolution to separate charged particles from neutral particles. The result is a highly granular calorimeters with a central tracking system with excellent momentum resolution. Longitudinal cross section of top quadrant of the \ILD detector concept, taken from \cite{Behnke:2007gj}, is shown in \Figure{fig:ILD} From interaction point (\IP) outwards, there is a tracking system compromising a large time projection chamber (\TPC) augmented with silicon tungsten layer, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. Numbers are in units of mm.
+
+This section will describe the sub-systems of the \ILD detector concept in the \ILD technical design report\cite{}. The detector concept has been optimised and documented in previous documents, such as the letter of intent\cite{}. The \CLICILD detector concept for the \CLIC in the conceptual design report\cite{} is a modified version of the \ILD, adapted to the \CLIC colliding environment.
+\begin{figure}[tdbph]
+\centering
+\includegraphics[width=0.45\textwidth]{ILD/ILD}
+\caption[]
+{ Longitudinal cross section of top quadrant of the \ILD detector concept, taken from \cite{Behnke:2007gj}. From interaction point (\IP) outwards, there is a tracking system compromising a large time projection chamber (\TPC) augmented with silicon tungsten layer, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. Numbers are in units of mm.}
+\label{fig:ILD}
+\end{figure}
+
+\section{Overview of \ILD sub-detectors}
+ 
+The \ILD detector concept is designed as a general purpose detector. Closest to the interaction points are the precision a vertex detector and a tracking system. The tracking system consists of silicon tracking with a time projection chamber. Surrounding the tracking system is a high granular calorimeter system. The outer solenoid provides a strong magnetic field of 3.5\,T. The most outer iron return yoke acts as a muon calorimeter.
+
+
+\section{Vertex Detector}
+
+The vertex detector is realised as a multi-layer pixel-vertex detector (VTX), with three super-layers
+each comprising two layers, or a 5 layer geometry. In either case the detector has a pure barrel
+geometry. To minimise the occupancy from background hits, the first super-layer is only half as long
+as the outer two. Whilst the underlying detector technology has not yet been decided, the VTX is
+optimised for point resolution and minimum material thickness.
+A system of silicon strip and pixel detectors surrounds the VTX detector. In the barrel, two
+layers of silicon strip detectors (SIT) are arranged to bridge the gap between the VTX and the TPC.
+In the forward region, a system of two silicon-pixel disks and five silicon-strip disks (FTD) provides
+low angle tracking coverage.
+A distinct feature of ILD is a large volume time projection chamber (TPC) with up to 224 points
+per track. The TPC is optimised for 3-dimensional point resolution and minimum material in the
+field cage and in the end-plate. It also allows dE/dx based particle identification.
+Outside the TPC a system of Si-strip detectors, one behind the end-plate of the TPC (ETD)
+and one in between the TPC and the ECAL (SET), provide additional high precision space points
+which improve the tracking performance and provide additional redundancy in the regions between
+the main tracking volume and the calorimeters
+ 
+ 
+ 
+
+This section will describe sub-systems from small to large radius. 
+
+
+
+\begin{comment}
+The International Large Detector (ILD) is a concept for a detector at the International Linear Collider,
+ILC [198]. In a slightly modified version, it has also been proposed for the CLIC linear collider [199].
+The ILD detector concept has been optimised with a clear view on precision. In recent years
+the concept of particle flow has been shown to deliver the best possible overall event reconstruction.
+Particle flow implies that all particles in an event, charged and neutral, are individually reconstructed.
+This requirement has a large impact on the design of the detector, and has played a central role in
+the optimisation of the system. Superb tracking capabilities and outstanding detection of secondary
+vertices are other important aspects. Care has been taken to design a hermetic detector, both in
+terms of solid-angle coverage, but also in terms of avoiding cracks and non-uniformities in response.
+The overall detector system has undergone a vigorous optimisation procedure based on extensive
+simulation studies both of the performance of the subsystems, and on studies of the physics reach
+of the detector. Simulations are accompanied by an extensive testing program of components and
+prototypes in laboratory and test-beam experiments.
+Figure III-1.1
+View of the ILD detector
+concept.
+The ILD detector concept has been described in a number of documents in the past. Most
+recently the letter of intent [198] gave a fairly in depth description of the ILD concept. The ILD
+concept is based on the earlier GLD and LDC detector concepts [200, 201, 202]. Since the publication
+of the letter of intent, major progress has been made in the maturity of the technologies proposed for
+ILD, and their integration into a coherent detector concept
+\end{comment}
 
 \section{Motivation}
+
+
+
+Photon - passage through matter. Photon electromagnetic shower
+
 
 Since Higgs discovery in the \LHC in 2012, Higgs
 
@@ -45,17 +162,3 @@ Generator level study has performed. ILC has done this this and that. gHHH in CL
 
 Here we do things differently. First subchannels, then extract both couplings simultaneously.
 
-\section{Theory}
-
-general higgs field
-
-Lagrangian
-
-current constraunt
-
-single higgs coupling measurement done in higgs
-
-Double higgs measurement
-
-The main mechanism for double Higgs production %in \epem collisions
-%at high energy CLIC ($\sqrt{s}>$\SI{1}{\TeV}) is via $WW$-fusion ($\epem\to HH\nu\overline{\nu}$). The main Feynman diagrams contributing to the process are illustrated in Figure . %The cross section for the process increases with the centre-of-mass energy: from \SI{0.15}{\fb} at $\sqrt{s}=$\SI{1.4}{\TeV} to \SI{0.59}{\fb} at $\sqrt{s}=$\SI{3}{\TeV}, assuming a %Higgs mass of \SI{126}{GeV}.
