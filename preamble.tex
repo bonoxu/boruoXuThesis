@@ -67,7 +67,8 @@
 \DeclareRobustCommand{\CHAPTER}[1]{Chapter \ref{#1}\xspace}
 \DeclareRobustCommand{\Figure}[1]{figure \ref{#1}\xspace}
 \DeclareRobustCommand{\FIGURE}[1]{Figure \ref{#1}\xspace}
-
+\DeclareRobustCommand{\Equation}[1]{equation \ref{#1}\xspace}
+\DeclareRobustCommand{\EQUATION}[1]{Equation \ref{#1}\xspace}
 
 %% High-energy physics stuff
 \usepackage{abhep}
@@ -76,6 +77,13 @@
 
 \newlength{\widthOne}
 \setlength{\widthOne}{12cm}
+
+\DeclareRobustCommand{\SM}{SM\xspace}
+\DeclareRobustCommand{\QED}{QED\xspace}
+\DeclareRobustCommand{\QCD}{QCD\xspace}
+
+\DeclareMathOperator{\Lagr}{\mathcal{L}}
+\DeclareRobustCommand{\Dstroke}{\mymath{\gamma^{\mu}D_{\mu}}\xspace}
 
 \DeclareRobustCommand{\Zprime}{\HepParticle{Z}{}{\prime}\xspace}
 \DeclareRobustCommand{\Zuds}{\HepProcess{ \Zprime \to \Pup / \Pdown / \Pstrange}\xspace}
@@ -189,6 +197,10 @@
 \DeclareRobustCommand{\SET}{SET\xspace}
 \DeclareRobustCommand{\FTD}{ETD\xspace}
 \DeclareRobustCommand{\ETD}{ETD\xspace}
+\DeclareRobustCommand{\LumiCAL}{LumiCAL\xspace}
+\DeclareRobustCommand{\BeamCAL}{BeamCAL\xspace}
+\DeclareRobustCommand{\LHCAL}{LHCAL\xspace}
+
 
 \DeclareRobustCommand{\IP}{IP\xspace}
 

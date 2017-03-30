@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.4.28)  24 MAR 2017 11:35
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.4.28)  30 MAR 2017 18:33
 entering extended mode
 **main.tex
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.tex"
@@ -959,6 +959,7 @@ LaTeX Info: Redefining \Table on input line 62.
 LaTeX Info: Redefining \Section on input line 64.
 LaTeX Info: Redefining \Chapter on input line 66.
 LaTeX Info: Redefining \Figure on input line 68.
+LaTeX Info: Redefining \Equation on input line 70.
 
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\abhep.sty"
 Package: abhep 2005/01/17
@@ -1066,10 +1067,12 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 Package: hepnames 2014/12/01 Pre-defined HEP particle symbols (version 2.0)
 )
 \widthOne=\skip95
-LaTeX Info: Redefining \decayPionShort on input line 104.
-LaTeX Info: Redefining \W* on input line 147.
-LaTeX Info: Redefining \CERN on input line 172.
-LaTeX Info: Redefining \IP on input line 193.
+LaTeX Info: Redefining \SM on input line 81.
+LaTeX Info: Redefining \QCD on input line 83.
+LaTeX Info: Redefining \decayPionShort on input line 112.
+LaTeX Info: Redefining \W* on input line 155.
+LaTeX Info: Redefining \CERN on input line 180.
+LaTeX Info: Redefining \IP on input line 205.
 )
 ("D:\MiKTeX 2.9\tex\latex\csquotes\csquotes.sty"
 Package: csquotes 2016/12/28 v5.2 context-sensitive quotations (JAW)
@@ -1366,7 +1369,17 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 48
 .
 
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.toc" [11]
-[12])
+[12]
+Overfull \hbox (2.03773pt too wide) detected at line 98
+ []\T1/lmr/bx/n/12 103
+ []
+
+
+Overfull \hbox (2.03773pt too wide) detected at line 99
+ []\T1/lmr/bx/n/12 105
+ []
+
+)
 \tf@toc=\write6
  [13] [14
 
@@ -1378,130 +1391,303 @@ Comment 'mainmatter' writing to comment.cut. Straight input of comment.cut.
 
 ]
 chapter 1.
-) ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapTheory.tex"
 [1
 
-] [2
-
-]
+]) ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapTheory.tex"
+[2]
 chapter 2.
-) ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapDetector.tex"
-[3] [4
+
+LaTeX Warning: Reference `' on page 3 undefined on input line 13.
+
+
+LaTeX Warning: Reference `' on page 3 undefined on input line 13.
+
+[3
 
 ]
-chapter 3.
 
-LaTeX Warning: Citation `Aad:2012tfa' on page 5 undefined on input line 11.
-
-
-LaTeX Warning: Citation `Chatrchyan:2012ufa' on page 5 undefined on input line 
-11.
+LaTeX Warning: Reference `' on page 4 undefined on input line 17.
 
 
-LaTeX Warning: Citation `Abramowicz:2013tzc' on page 5 undefined on input line 
-11.
+LaTeX Warning: Reference `' on page 4 undefined on input line 21.
 
-
-LaTeX Warning: Citation `Aihara:2010zz' on page 5 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Marshall:2013bda' on page 5 undefined on input line 13
-.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[4]
+Underfull \vbox (badness 4492) has occurred while \output is active []
 
  [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
-
-LaTeX Warning: Citation `Behnke:2007gj' on page 7 undefined on input line 77.
-
-
-Underfull \vbox (badness 1320) has occurred while \output is active []
-
- [7]
-<ILD/ILD.jpg, id=514, 273.20566pt x 247.30544pt>
-File: ILD/ILD.jpg Graphic file (type jpg)
- <use ILD/ILD.jpg>
-Package pdftex.def Info: ILD/ILD.jpg used on input line 83.
-(pdftex.def)             Requested size: 201.63182pt x 182.51636pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 84.
-Package epstopdf Info: Source file: <ILD/CLIC_ILD.eps>
-(epstopdf)                    date: 2017-03-23 15:36:23
-(epstopdf)                    size: 2918938 bytes
-(epstopdf)             Output file: <ILD/CLIC_ILD-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-23 15:36:39
-(epstopdf)                    size: 209350 bytes
-(epstopdf)             Command: <epstopdf --outfile=ILD/CLIC_ILD-eps-converted-
-to.pdf ILD/CLIC_ILD.eps>
-(epstopdf)             \includegraphics on input line 88.
-Package epstopdf Info: Output file is already uptodate.
-
-<ILD/CLIC_ILD-eps-converted-to.pdf, id=515, 371.3875pt x 427.5975pt>
-File: ILD/CLIC_ILD-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ILD/CLIC_ILD-eps-converted-to.pdf>
-Package pdftex.def Info: ILD/CLIC_ILD-eps-converted-to.pdf used on input line 8
-8.
-(pdftex.def)             Requested size: 156.82855pt x 180.5684pt.
- [8 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILD.jpg> <E:/u
-ser/my documents/University/2016-2017/boruoXuThesis/ILD/CLIC_ILD-eps-converted-
-to.pdf>]
-Package epstopdf Info: Source file: <ILD/Tracking.eps>
-(epstopdf)                    date: 2017-03-23 15:10:40
-(epstopdf)                    size: 343930 bytes
-(epstopdf)             Output file: <ILD/Tracking-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-23 15:11:04
-(epstopdf)                    size: 16370 bytes
-(epstopdf)             Command: <epstopdf --outfile=ILD/Tracking-eps-converted-
-to.pdf ILD/Tracking.eps>
-(epstopdf)             \includegraphics on input line 144.
-Package epstopdf Info: Output file is already uptodate.
-
-<ILD/Tracking-eps-converted-to.pdf, id=544, 168.63pt x 147.55125pt>
-File: ILD/Tracking-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ILD/Tracking-eps-converted-to.pdf>
-Package pdftex.def Info: ILD/Tracking-eps-converted-to.pdf used on input line 1
-44.
-(pdftex.def)             Requested size: 201.63182pt x 176.43243pt.
- [9]
-
-LaTeX Warning: Reference `' on page 10 undefined on input line 157.
-
-[10 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/Tracking-eps-c
-onverted-to.pdf>] <ILD/ILD_ECAL.jpg, id=563, 173.64333pt x 131.25795pt>
-File: ILD/ILD_ECAL.jpg Graphic file (type jpg)
-
-<use ILD/ILD_ECAL.jpg>
-Package pdftex.def Info: ILD/ILD_ECAL.jpg used on input line 165.
-(pdftex.def)             Requested size: 201.63182pt x 152.41553pt.
- [11 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILD_ECAL.jpg>
-])
-("E:\user\my documents\University\2016-2017\boruoXuThesis\chapPandora.tex"
-[12]
-chapter 4.
-[13
-
-]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
+ [7]
+[8]
+Underfull \vbox (badness 1515) has occurred while \output is active []
 
-LaTeX Warning: Reference `' on page 15 undefined on input line 51.
+ [9]
+Package epstopdf Info: Source file: <theory/HiggsDecayWidth.eps>
+(epstopdf)                    date: 2017-03-30 14:58:48
+(epstopdf)                    size: 728222 bytes
+(epstopdf)             Output file: <theory/HiggsDecayWidth-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2017-03-30 15:05:16
+(epstopdf)                    size: 42395 bytes
+(epstopdf)             Command: <epstopdf --outfile=theory/HiggsDecayWidth-eps-
+converted-to.pdf theory/HiggsDecayWidth.eps>
+(epstopdf)             \includegraphics on input line 175.
+Package epstopdf Info: Output file is already uptodate.
 
+<theory/HiggsDecayWidth-eps-converted-to.pdf, id=615, 441.65pt x 337.26pt>
+File: theory/HiggsDecayWidth-eps-converted-to.pdf Graphic file (type pdf)
+
+<use theory/HiggsDecayWidth-eps-converted-to.pdf>
+Package pdftex.def Info: theory/HiggsDecayWidth-eps-converted-to.pdf used on in
+put line 175.
+(pdftex.def)             Requested size: 201.63182pt x 153.9733pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 176.
+Package epstopdf Info: Source file: <theory/HiggsBranchingRatio.eps>
+(epstopdf)                    date: 2017-03-30 14:59:43
+(epstopdf)                    size: 774878 bytes
+(epstopdf)             Output file: <theory/HiggsBranchingRatio-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-03-30 15:05:17
+(epstopdf)                    size: 49831 bytes
+(epstopdf)             Command: <epstopdf --outfile=theory/HiggsBranchingRatio-
+eps-converted-to.pdf theory/HiggsBranchingRatio.eps>
+(epstopdf)             \includegraphics on input line 180.
+Package epstopdf Info: Output file is already uptodate.
+
+<theory/HiggsBranchingRatio-eps-converted-to.pdf, id=616, 439.6425pt x 337.26pt
+>
+File: theory/HiggsBranchingRatio-eps-converted-to.pdf Graphic file (type pdf)
+ <use theory/HiggsBranchingRatio-eps-converted-to.pdf>
+Package pdftex.def Info: theory/HiggsBranchingRatio-eps-converted-to.pdf used o
+n input line 180.
+(pdftex.def)             Requested size: 201.63182pt x 154.67317pt.
+ [10 <E:/user/my documents/University/2016-2017/boruoXuThesis/theory/HiggsDecay
+Width-eps-converted-to.pdf> <E:/user/my documents/University/2016-2017/boruoXuT
+hesis/theory/HiggsBranchingRatio-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+
+LaTeX Warning: Reference `' on page 12 undefined on input line 223.
+
+Package epstopdf Info: Source file: <theory/HiggsCLICcrossSection.eps>
+(epstopdf)                    date: 2017-03-30 18:26:18
+(epstopdf)                    size: 1015186 bytes
+(epstopdf)             Output file: <theory/HiggsCLICcrossSection-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2017-03-30 18:29:21
+(epstopdf)                    size: 38581 bytes
+(epstopdf)             Command: <epstopdf --outfile=theory/HiggsCLICcrossSectio
+n-eps-converted-to.pdf theory/HiggsCLICcrossSection.eps>
+(epstopdf)             \includegraphics on input line 227.
+Package epstopdf Info: Output file is already uptodate.
+
+<theory/HiggsCLICcrossSection-eps-converted-to.pdf, id=661, 569.12625pt x 553.0
+6625pt>
+File: theory/HiggsCLICcrossSection-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use theory/HiggsCLICcrossSection-eps-converted-to.pdf>
+Package pdftex.def Info: theory/HiggsCLICcrossSection-eps-converted-to.pdf used
+ on input line 227.
+(pdftex.def)             Requested size: 201.63182pt x 195.93903pt.
+)
+("E:\user\my documents\University\2016-2017\boruoXuThesis\chapDetector.tex"
+[12] [13 <E:/user/my documents/University/2016-2017/boruoXuThesis/theory/HiggsC
+LICcrossSection-eps-converted-to.pdf>] [14
+
+]
+chapter 3.
+
+LaTeX Warning: Citation `Aad:2012tfa' on page 15 undefined on input line 11.
+
+
+LaTeX Warning: Citation `Chatrchyan:2012ufa' on page 15 undefined on input line
+ 11.
+
+
+LaTeX Warning: Citation `Abramowicz:2013tzc' on page 15 undefined on input line
+ 11.
+
+Package epstopdf Info: Source file: <ILD/ILC2.eps>
+(epstopdf)                    date: 2017-03-28 09:44:02
+(epstopdf)                    size: 3159002 bytes
+(epstopdf)             Output file: <ILD/ILC2-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-28 09:44:20
+(epstopdf)                    size: 267789 bytes
+(epstopdf)             Command: <epstopdf --outfile=ILD/ILC2-eps-converted-to.p
+df ILD/ILC2.eps>
+(epstopdf)             \includegraphics on input line 21.
+Package epstopdf Info: Output file is already uptodate.
+<ILD/ILC2-eps-converted-to.pdf, id=696, 380.42125pt x 202.7575pt>
+File: ILD/ILC2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ILD/ILC2-eps-converted-to.pdf>
+Package pdftex.def Info: ILD/ILC2-eps-converted-to.pdf used on input line 21.
+(pdftex.def)             Requested size: 201.63182pt x 107.46715pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
+<ILD/ILDview.jpg, id=709, 2389.92876pt x 1690.315pt>
+File: ILD/ILDview.jpg Graphic file (type jpg)
+ <use ILD/ILDview.jpg>
+Package pdftex.def Info: ILD/ILDview.jpg used on input line 66.
+(pdftex.def)             Requested size: 201.63182pt x 142.60449pt.
 
-LaTeX Warning: Reference `' on page 16 undefined on input line 71.
+<ILD/SiD.jpg, id=710, 264.7178pt x 183.73729pt>
+File: ILD/SiD.jpg Graphic file (type jpg)
+ <use ILD/SiD.jpg>
+Package pdftex.def Info: ILD/SiD.jpg used on input line 71.
+(pdftex.def)             Requested size: 156.82855pt x 108.85823pt.
+
+<ILD/CLIC.jpg, id=718, 409.7709pt x 219.7008pt>
+File: ILD/CLIC.jpg Graphic file (type jpg)
+ <use ILD/CLIC.jpg>
+Package pdftex.def Info: ILD/CLIC.jpg used on input line 133.
+(pdftex.def)             Requested size: 201.63182pt x 108.10689pt.
+
+Underfull \vbox (badness 2057) has occurred while \output is active []
+
+ [16 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILC2-eps-conv
+erted-to.pdf>] [17 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD
+/ILDview.jpg> <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/SiD.
+jpg> <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/CLIC.jpg>]
+<ILD/ILD.jpg, id=746, 273.20566pt x 247.30544pt>
+File: ILD/ILD.jpg Graphic file (type jpg)
+ <use ILD/ILD.jpg>
+Package pdftex.def Info: ILD/ILD.jpg used on input line 186.
+(pdftex.def)             Requested size: 201.63182pt x 182.51636pt.
+Package epstopdf Info: Source file: <ILD/CLIC_ILD.eps>
+(epstopdf)                    date: 2017-03-23 16:36:23
+(epstopdf)                    size: 2918938 bytes
+(epstopdf)             Output file: <ILD/CLIC_ILD-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-23 16:36:39
+(epstopdf)                    size: 209350 bytes
+(epstopdf)             Command: <epstopdf --outfile=ILD/CLIC_ILD-eps-converted-
+to.pdf ILD/CLIC_ILD.eps>
+(epstopdf)             \includegraphics on input line 191.
+Package epstopdf Info: Output file is already uptodate.
+
+<ILD/CLIC_ILD-eps-converted-to.pdf, id=747, 371.3875pt x 427.5975pt>
+File: ILD/CLIC_ILD-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ILD/CLIC_ILD-eps-converted-to.pdf>
+Package pdftex.def Info: ILD/CLIC_ILD-eps-converted-to.pdf used on input line 1
+91.
+(pdftex.def)             Requested size: 156.82855pt x 180.5684pt.
+ [18] [19 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILD.jpg>
+ <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/CLIC_ILD-eps-conv
+erted-to.pdf>]
+
+LaTeX Warning: Citation `Behnke:2007gj' on page 20 undefined on input line 208.
 
 
-LaTeX Warning: Reference `' on page 16 undefined on input line 78.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+Package epstopdf Info: Source file: <ILD/Tracking.eps>
+(epstopdf)                    date: 2017-03-23 16:10:40
+(epstopdf)                    size: 343930 bytes
+(epstopdf)             Output file: <ILD/Tracking-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-23 16:11:04
+(epstopdf)                    size: 16370 bytes
+(epstopdf)             Command: <epstopdf --outfile=ILD/Tracking-eps-converted-
+to.pdf ILD/Tracking.eps>
+(epstopdf)             \includegraphics on input line 258.
+Package epstopdf Info: Output file is already uptodate.
+
+<ILD/Tracking-eps-converted-to.pdf, id=788, 168.63pt x 147.55125pt>
+File: ILD/Tracking-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ILD/Tracking-eps-converted-to.pdf>
+Package pdftex.def Info: ILD/Tracking-eps-converted-to.pdf used on input line 2
+58.
+(pdftex.def)             Requested size: 201.63182pt x 176.43243pt.
+
+Underfull \vbox (badness 2173) has occurred while \output is active []
+
+ [21]
+Underfull \vbox (badness 2237) has occurred while \output is active []
+
+ [22 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/Tracking-eps-
+converted-to.pdf>] <ILD/ILD_ECAL.jpg, id=809, 173.64333pt x 131.25795pt>
+File: ILD/ILD_ECAL.jpg Graphic file (type jpg)
+
+<use ILD/ILD_ECAL.jpg>
+Package pdftex.def Info: ILD/ILD_ECAL.jpg used on input line 279.
+(pdftex.def)             Requested size: 201.63182pt x 152.41553pt.
+
+Underfull \vbox (badness 1496) has occurred while \output is active []
+
+ [23 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILD_ECAL.jpg>
+]
+<ILD/ILD_AHCAL.jpg, id=821, 257.07722pt x 164.32193pt>
+File: ILD/ILD_AHCAL.jpg Graphic file (type jpg)
+ <use ILD/ILD_AHCAL.jpg>
+Package pdftex.def Info: ILD/ILD_AHCAL.jpg used on input line 358.
+(pdftex.def)             Requested size: 201.63182pt x 128.88768pt.
+Package epstopdf Info: Source file: <ILD/HCALoptimise.eps>
+(epstopdf)                    date: 2017-03-24 14:33:17
+(epstopdf)                    size: 361222 bytes
+(epstopdf)             Output file: <ILD/HCALoptimise-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-24 14:46:34
+(epstopdf)                    size: 29957 bytes
+(epstopdf)             Command: <epstopdf --outfile=ILD/HCALoptimise-eps-conver
+ted-to.pdf ILD/HCALoptimise.eps>
+(epstopdf)             \includegraphics on input line 363.
+Package epstopdf Info: Output file is already uptodate.
+
+<ILD/HCALoptimise-eps-converted-to.pdf, id=822, 154.5775pt x 147.55125pt>
+File: ILD/HCALoptimise-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ILD/HCALoptimise-eps-converted-to.pdf>
+Package pdftex.def Info: ILD/HCALoptimise-eps-converted-to.pdf used on input li
+ne 363.
+(pdftex.def)             Requested size: 201.63182pt x 192.483pt.
+ [24 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILD_AHCAL.jpg
+> <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/HCALoptimise-eps
+-converted-to.pdf>]
+<ILD/ILD_Muon.jpg, id=845, 320.5343pt x 227.66922pt>
+File: ILD/ILD_Muon.jpg Graphic file (type jpg)
+ <use ILD/ILD_Muon.jpg>
+Package pdftex.def Info: ILD/ILD_Muon.jpg used on input line 439.
+(pdftex.def)             Requested size: 201.63182pt x 143.2135pt.
+
+<ILD/ILD_forward.jpg, id=850, 187.50464pt x 138.82794pt>
+File: ILD/ILD_forward.jpg Graphic file (type jpg)
+
+<use ILD/ILD_forward.jpg>
+Package pdftex.def Info: ILD/ILD_forward.jpg used on input line 498.
+(pdftex.def)             Requested size: 201.63182pt x 149.29007pt.
+ [25 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILD_Muon.jpg>
+])
+("E:\user\my documents\University\2016-2017\boruoXuThesis\chapPandora.tex"
+[26 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILD_forward.jp
+g>]
+chapter 4.
+[27
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28]
+
+LaTeX Warning: Reference `' on page 29 undefined on input line 51.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+
+LaTeX Warning: Reference `' on page 30 undefined on input line 71.
+
+
+LaTeX Warning: Reference `' on page 30 undefined on input line 78.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 80.
@@ -1792,29 +1978,29 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 80.
 
 
-LaTeX Warning: Reference `' on page 16 undefined on input line 82.
+LaTeX Warning: Reference `' on page 30 undefined on input line 82.
 
-[16]) ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapPhoton.tex"
-[17] [18
+[30]) ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapPhoton.tex"
+[31] [32
 
 ]
 chapter 5.
-[19]
+[33]
 Underfull \vbox (badness 7030) has occurred while \output is active []
 
- [20]
+ [34]
 Package epstopdf Info: Source file: <photon/peakFinding.eps>
-(epstopdf)                    date: 2016-02-23 17:43:08
+(epstopdf)                    date: 2016-02-23 18:43:08
 (epstopdf)                    size: 291835 bytes
 (epstopdf)             Output file: <photon/peakFinding-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-02-23 17:49:20
+(epstopdf)                    date: 2016-02-23 18:49:20
 (epstopdf)                    size: 49125 bytes
 (epstopdf)             Command: <epstopdf --outfile=photon/peakFinding-eps-conv
 erted-to.pdf photon/peakFinding.eps>
 (epstopdf)             \includegraphics on input line 59.
 Package epstopdf Info: Output file is already uptodate.
 
-<photon/peakFinding-eps-converted-to.pdf, id=619, 569.12625pt x 311.1625pt>
+<photon/peakFinding-eps-converted-to.pdf, id=909, 569.12625pt x 311.1625pt>
 File: photon/peakFinding-eps-converted-to.pdf Graphic file (type pdf)
 
 <use photon/peakFinding-eps-converted-to.pdf>
@@ -1823,40 +2009,40 @@ line 59.
 (pdftex.def)             Requested size: 224.03688pt x 122.49239pt.
 
 
-LaTeX Warning: Reference `' on page 21 undefined on input line 72.
+LaTeX Warning: Reference `' on page 35 undefined on input line 72.
 
-[21 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/peakFinding
+[35 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/peakFinding
 -eps-converted-to.pdf>]
 
-LaTeX Warning: Reference `' on page 22 undefined on input line 76.
+LaTeX Warning: Reference `' on page 36 undefined on input line 76.
 
 
-LaTeX Warning: Reference `' on page 22 undefined on input line 76.
+LaTeX Warning: Reference `' on page 36 undefined on input line 76.
 
-[22]
+[36]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
+ [37]
 
-LaTeX Warning: Reference `sec:photonLikelihood' on page 24 undefined on input l
+LaTeX Warning: Reference `sec:photonLikelihood' on page 38 undefined on input l
 ine 112.
 
-[24]
+[38]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
+ [39]
 Package epstopdf Info: Source file: <photon/allPhoton.eps>
-(epstopdf)                    date: 2016-02-23 17:19:18
+(epstopdf)                    date: 2016-02-23 18:19:18
 (epstopdf)                    size: 25496 bytes
 (epstopdf)             Output file: <photon/allPhoton-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-02-23 17:21:56
+(epstopdf)                    date: 2016-02-23 18:21:56
 (epstopdf)                    size: 89126 bytes
 (epstopdf)             Command: <epstopdf --outfile=photon/allPhoton-eps-conver
 ted-to.pdf photon/allPhoton.eps>
 (epstopdf)             \includegraphics on input line 150.
 Package epstopdf Info: Output file is already uptodate.
 
-<photon/allPhoton-eps-converted-to.pdf, id=662, 764.8575pt x 565.11125pt>
+<photon/allPhoton-eps-converted-to.pdf, id=950, 764.8575pt x 565.11125pt>
 File: photon/allPhoton-eps-converted-to.pdf Graphic file (type pdf)
 
 <use photon/allPhoton-eps-converted-to.pdf>
@@ -1864,17 +2050,17 @@ Package pdftex.def Info: photon/allPhoton-eps-converted-to.pdf used on input li
 ne 150.
 (pdftex.def)             Requested size: 134.4235pt x 99.31847pt.
 Package epstopdf Info: Source file: <photon/big.eps>
-(epstopdf)                    date: 2016-02-23 17:19:18
+(epstopdf)                    date: 2016-02-23 18:19:18
 (epstopdf)                    size: 24966 bytes
 (epstopdf)             Output file: <photon/big-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-02-23 17:21:57
+(epstopdf)                    date: 2016-02-23 18:21:57
 (epstopdf)                    size: 86906 bytes
 (epstopdf)             Command: <epstopdf --outfile=photon/big-eps-converted-to
 .pdf photon/big.eps>
 (epstopdf)             \includegraphics on input line 155.
 Package epstopdf Info: Output file is already uptodate.
 
-<photon/big-eps-converted-to.pdf, id=663, 764.8575pt x 565.11125pt>
+<photon/big-eps-converted-to.pdf, id=951, 764.8575pt x 565.11125pt>
 File: photon/big-eps-converted-to.pdf Graphic file (type pdf)
 
 <use photon/big-eps-converted-to.pdf>
@@ -1882,39 +2068,39 @@ Package pdftex.def Info: photon/big-eps-converted-to.pdf used on input line 155
 .
 (pdftex.def)             Requested size: 134.4235pt x 99.31847pt.
 Package epstopdf Info: Source file: <photon/small.eps>
-(epstopdf)                    date: 2016-02-23 17:19:18
+(epstopdf)                    date: 2016-02-23 18:19:18
 (epstopdf)                    size: 5680 bytes
 (epstopdf)             Output file: <photon/small-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-02-23 17:21:57
+(epstopdf)                    date: 2016-02-23 18:21:57
 (epstopdf)                    size: 7149 bytes
 (epstopdf)             Command: <epstopdf --outfile=photon/small-eps-converted-
 to.pdf photon/small.eps>
 (epstopdf)             \includegraphics on input line 160.
 Package epstopdf Info: Output file is already uptodate.
 
-<photon/small-eps-converted-to.pdf, id=664, 764.8575pt x 565.11125pt>
+<photon/small-eps-converted-to.pdf, id=952, 764.8575pt x 565.11125pt>
 File: photon/small-eps-converted-to.pdf Graphic file (type pdf)
 
 <use photon/small-eps-converted-to.pdf>
 Package pdftex.def Info: photon/small-eps-converted-to.pdf used on input line 1
 60.
 (pdftex.def)             Requested size: 134.4235pt x 99.31847pt.
- [26 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/allPhoton-
+ [40 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/allPhoton-
 eps-converted-to.pdf> <E:/user/my documents/University/2016-2017/boruoXuThesis/
 photon/big-eps-converted-to.pdf> <E:/user/my documents/University/2016-2017/bor
-uoXuThesis/photon/small-eps-converted-to.pdf>] [27] [28]
+uoXuThesis/photon/small-eps-converted-to.pdf>] [41] [42]
 Package epstopdf Info: Source file: <photon/hcalfrag.eps>
-(epstopdf)                    date: 2016-02-23 17:19:18
+(epstopdf)                    date: 2016-02-23 18:19:18
 (epstopdf)                    size: 93077 bytes
 (epstopdf)             Output file: <photon/hcalfrag-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-02-23 17:32:43
+(epstopdf)                    date: 2016-02-23 18:32:43
 (epstopdf)                    size: 374384 bytes
 (epstopdf)             Command: <epstopdf --outfile=photon/hcalfrag-eps-convert
 ed-to.pdf photon/hcalfrag.eps>
 (epstopdf)             \includegraphics on input line 236.
 Package epstopdf Info: Output file is already uptodate.
 
-<photon/hcalfrag-eps-converted-to.pdf, id=1655, 764.8575pt x 565.11125pt>
+<photon/hcalfrag-eps-converted-to.pdf, id=1941, 764.8575pt x 565.11125pt>
 File: photon/hcalfrag-eps-converted-to.pdf Graphic file (type pdf)
 
 <use photon/hcalfrag-eps-converted-to.pdf>
@@ -1924,16 +2110,16 @@ e 236.
 
 Underfull \vbox (badness 7907) has occurred while \output is active []
 
- [29 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/hcalfrag-e
+ [43 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/hcalfrag-e
 ps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30]
+ [44]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31]
+ [45]
 
-LaTeX Warning: Reference `fig:fig:photonSingleN_all' on page 32 undefined on in
+LaTeX Warning: Reference `fig:fig:photonSingleN_all' on page 46 undefined on in
 put line 332.
 
 
@@ -1941,7 +2127,7 @@ put line 332.
 pdfTeX warning: pdflatex.exe (file E:/user/my documents/University/2016-2017/bo
 ruoXuThesis/photon/SingleN_pedit.pdf): PDF inclusion: found PDF version <1.6>, 
 but at most version <1.5> allowed
-<photon/SingleN_pedit.pdf, id=3674, 569.12625pt x 480.79625pt>
+<photon/SingleN_pedit.pdf, id=3959, 569.12625pt x 480.79625pt>
 File: photon/SingleN_pedit.pdf Graphic file (type pdf)
 
 <use photon/SingleN_pedit.pdf>
@@ -1952,7 +2138,7 @@ Package pdftex.def Info: photon/SingleN_pedit.pdf used on input line 340.
 pdfTeX warning: pdflatex.exe (file E:/user/my documents/University/2016-2017/bo
 ruoXuThesis/photon/SingleN_alledit.pdf): PDF inclusion: found PDF version <1.6>
 , but at most version <1.5> allowed
-<photon/SingleN_alledit.pdf, id=3675, 569.12625pt x 480.79625pt>
+<photon/SingleN_alledit.pdf, id=3960, 569.12625pt x 480.79625pt>
 File: photon/SingleN_alledit.pdf Graphic file (type pdf)
 
 <use photon/SingleN_alledit.pdf>
@@ -1961,12 +2147,12 @@ Package pdftex.def Info: photon/SingleN_alledit.pdf used on input line 345.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32]
+ [46]
 
 pdfTeX warning: pdflatex.exe (file E:/user/my documents/University/2016-2017/bo
 ruoXuThesis/photon/DoubleCompareN_p3edit.pdf): PDF inclusion: found PDF version
  <1.6>, but at most version <1.5> allowed
-<photon/DoubleCompareN_p3edit.pdf, id=3689, 569.12625pt x 480.79625pt>
+<photon/DoubleCompareN_p3edit.pdf, id=3974, 569.12625pt x 480.79625pt>
 File: photon/DoubleCompareN_p3edit.pdf Graphic file (type pdf)
 
 <use photon/DoubleCompareN_p3edit.pdf>
@@ -1978,20 +2164,20 @@ Package pdftex.def Info: photon/DoubleCompareN_p3edit.pdf used on input line 36
 pdfTeX warning: pdflatex.exe (file E:/user/my documents/University/2016-2017/bo
 ruoXuThesis/photon/DoubleCompareN_all2edit.pdf): PDF inclusion: found PDF versi
 on <1.6>, but at most version <1.5> allowed
-<photon/DoubleCompareN_all2edit.pdf, id=3690, 569.12625pt x 480.79625pt>
+<photon/DoubleCompareN_all2edit.pdf, id=3975, 569.12625pt x 480.79625pt>
 File: photon/DoubleCompareN_all2edit.pdf Graphic file (type pdf)
 
 <use photon/DoubleCompareN_all2edit.pdf>
 Package pdftex.def Info: photon/DoubleCompareN_all2edit.pdf used on input line 
 367.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
- [33 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/SingleN_pe
+ [47 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/SingleN_pe
 dit.pdf, page is rotated 90 degrees> <E:/user/my documents/University/2016-2017
 /boruoXuThesis/photon/SingleN_alledit.pdf, page is rotated 90 degrees> <E:/user
 /my documents/University/2016-2017/boruoXuThesis/photon/DoubleCompareN_p3edit.p
 df, page is rotated 90 degrees> <E:/user/my documents/University/2016-2017/boru
 oXuThesis/photon/DoubleCompareN_all2edit.pdf, page is rotated 90 degrees>]
-<photon/DoubleCompareFragEnergy.pdf, id=3746, 569.12625pt x 480.79625pt>
+<photon/DoubleCompareFragEnergy.pdf, id=4029, 569.12625pt x 480.79625pt>
 File: photon/DoubleCompareFragEnergy.pdf Graphic file (type pdf)
 
 <use photon/DoubleCompareFragEnergy.pdf>
@@ -1999,7 +2185,7 @@ Package pdftex.def Info: photon/DoubleCompareFragEnergy.pdf used on input line
 382.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<photon/JERnew.pdf, id=3750, 569.12625pt x 480.79625pt>
+<photon/JERnew.pdf, id=4033, 569.12625pt x 480.79625pt>
 File: photon/JERnew.pdf Graphic file (type pdf)
 
 <use photon/JERnew.pdf>
@@ -2008,9 +2194,9 @@ Package pdftex.def Info: photon/JERnew.pdf used on input line 393.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleComp
+ [48 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleComp
 areFragEnergy.pdf, page is rotated 90 degrees>]
-<photon/DoubleCompareAlgs.pdf, id=3808, 569.12625pt x 480.79625pt>
+<photon/DoubleCompareAlgs.pdf, id=4092, 569.12625pt x 480.79625pt>
 File: photon/DoubleCompareAlgs.pdf Graphic file (type pdf)
 
 <use photon/DoubleCompareAlgs.pdf>
@@ -2018,46 +2204,46 @@ Package pdftex.def Info: photon/DoubleCompareAlgs.pdf used on input line 407.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 
-LaTeX Warning: Reference `{sec:photonFragRemoval}' on page 35 undefined on inpu
+LaTeX Warning: Reference `{sec:photonFragRemoval}' on page 49 undefined on inpu
 t line 409.
 
 
-LaTeX Warning: Reference `{sec:photonFragRemoval}' on page 35 undefined on inpu
+LaTeX Warning: Reference `{sec:photonFragRemoval}' on page 49 undefined on inpu
 t line 409.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/JERnew.pdf
+ [49 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/JERnew.pdf
 , page is rotated 90 degrees>]
-<photon/DoubleN_pN_all.pdf, id=3859, 569.12625pt x 480.79625pt>
+<photon/DoubleN_pN_all.pdf, id=4143, 569.12625pt x 480.79625pt>
 File: photon/DoubleN_pN_all.pdf Graphic file (type pdf)
 
 <use photon/DoubleN_pN_all.pdf>
 Package pdftex.def Info: photon/DoubleN_pN_all.pdf used on input line 422.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<photon/DoubleCompareEnergies.pdf, id=3860, 569.12625pt x 480.79625pt>
+<photon/DoubleCompareEnergies.pdf, id=4144, 569.12625pt x 480.79625pt>
 File: photon/DoubleCompareEnergies.pdf Graphic file (type pdf)
 
 <use photon/DoubleCompareEnergies.pdf>
 Package pdftex.def Info: photon/DoubleCompareEnergies.pdf used on input line 42
 7.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
- [36 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleComp
+ [50 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleComp
 areAlgs.pdf, page is rotated 90 degrees>]) ("E:\user\my documents\University\20
 16-2017\boruoXuThesis\chapTau.tex"
-[37 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleN_pN_
+[51 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleN_pN_
 all.pdf, page is rotated 90 degrees> <E:/user/my documents/University/2016-2017
 /boruoXuThesis/photon/DoubleCompareEnergies.pdf, page is rotated 90 degrees>]
-[38
+[52
 
 ]
 chapter 6.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39]
+ [53]
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 31.
 
 ("D:\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
@@ -2068,8 +2254,8 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40]
-<tau/var/nPhoton_100GeV_improved.png, id=4040, 798.985pt x 674.52pt>
+ [54]
+<tau/var/nPhoton_100GeV_improved.png, id=4323, 798.985pt x 674.52pt>
 File: tau/var/nPhoton_100GeV_improved.png Graphic file (type png)
 
 <use tau/var/nPhoton_100GeV_improved.png>
@@ -2077,7 +2263,7 @@ Package pdftex.def Info: tau/var/nPhoton_100GeV_improved.png used on input line
  79.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/var/nCharge_100GeV_improved.png, id=4041, 798.985pt x 674.52pt>
+<tau/var/nCharge_100GeV_improved.png, id=4324, 798.985pt x 674.52pt>
 File: tau/var/nCharge_100GeV_improved.png Graphic file (type png)
 
 <use tau/var/nCharge_100GeV_improved.png>
@@ -2085,7 +2271,7 @@ Package pdftex.def Info: tau/var/nCharge_100GeV_improved.png used on input line
  81.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/var/mVis_100GeV_improved_zoom.png, id=4042, 798.985pt x 674.52pt>
+<tau/var/mVis_100GeV_improved_zoom.png, id=4325, 798.985pt x 674.52pt>
 File: tau/var/mVis_100GeV_improved_zoom.png Graphic file (type png)
 
 <use tau/var/mVis_100GeV_improved_zoom.png>
@@ -2093,7 +2279,7 @@ Package pdftex.def Info: tau/var/mVis_100GeV_improved_zoom.png used on input li
 ne 83.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/var/mA1A1Fit_100GeV_improved_zoom.png, id=4043, 798.985pt x 674.52pt>
+<tau/var/mA1A1Fit_100GeV_improved_zoom.png, id=4326, 798.985pt x 674.52pt>
 File: tau/var/mA1A1Fit_100GeV_improved_zoom.png Graphic file (type png)
 
 <use tau/var/mA1A1Fit_100GeV_improved_zoom.png>
@@ -2103,11 +2289,11 @@ t line 85.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
+ [55]
 
-LaTeX Warning: Reference `fig:nPfos' on page 42 undefined on input line 94.
+LaTeX Warning: Reference `fig:nPfos' on page 56 undefined on input line 94.
 
-[42 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/var/nPhoton_10
+[56 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/var/nPhoton_10
 0GeV_improved.png> <E:/user/my documents/University/2016-2017/boruoXuThesis/tau
 /var/nCharge_100GeV_improved.png> <E:/user/my documents/University/2016-2017/bo
 ruoXuThesis/tau/var/mVis_100GeV_improved_zoom.png> <E:/user/my documents/Univer
@@ -2120,7 +2306,7 @@ t mass of $\OML/eur/m/n/12 []$ \T1/lmr/m/n/12 (-20) for $\OML/eur/m/n/12 []$
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
+ [57]
 Overfull \hbox (0.49338pt too wide) in paragraph at lines 120--121
 []$\OML/eur/m/n/12 m[]; [][]hypothesis$\T1/lmr/m/n/12 (-20) : First fit-ted in-
 vari-ant mass of $[]$, for $[][]$
@@ -2139,24 +2325,24 @@ n-vari-ant mass of $[][]$,
  []
 
 
-LaTeX Warning: Reference `fig:nPfos' on page 44 undefined on input line 131.
+LaTeX Warning: Reference `fig:nPfos' on page 58 undefined on input line 131.
 
 
-LaTeX Warning: Reference `fig:nPfos' on page 44 undefined on input line 133.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [44]
-
-LaTeX Warning: Reference `fig:nPfos' on page 45 undefined on input line 153.
+LaTeX Warning: Reference `fig:nPfos' on page 58 undefined on input line 133.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45]
+ [58]
 
-LaTeX Warning: Reference `' on page 46 undefined on input line 169.
+LaTeX Warning: Reference `fig:nPfos' on page 59 undefined on input line 153.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+
+LaTeX Warning: Reference `' on page 60 undefined on input line 169.
 
 
 Overfull \hbox (23.88158pt too wide) in paragraph at lines 179--194
@@ -2166,48 +2352,48 @@ Overfull \hbox (23.88158pt too wide) in paragraph at lines 179--194
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
+ [60]
 
-LaTeX Warning: Reference `' on page 47 undefined on input line 203.
+LaTeX Warning: Reference `' on page 61 undefined on input line 203.
 
 
-LaTeX Warning: Reference `' on page 47 undefined on input line 203.
+LaTeX Warning: Reference `' on page 61 undefined on input line 203.
 
 
 Underfull \vbox (badness 5504) has occurred while \output is active []
 
- [47]
-<tau/decayMode2.png, id=4090, 798.985pt x 674.52pt>
+ [61]
+<tau/decayMode2.png, id=4369, 798.985pt x 674.52pt>
 File: tau/decayMode2.png Graphic file (type png)
  <use tau/decayMode2.png>
 Package pdftex.def Info: tau/decayMode2.png used on input line 229.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/decayMode3.png, id=4091, 798.985pt x 674.52pt>
+<tau/decayMode3.png, id=4370, 798.985pt x 674.52pt>
 File: tau/decayMode3.png Graphic file (type png)
  <use tau/decayMode3.png>
 Package pdftex.def Info: tau/decayMode3.png used on input line 231.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/decayMode4.png, id=4092, 798.985pt x 674.52pt>
+<tau/decayMode4.png, id=4371, 798.985pt x 674.52pt>
 File: tau/decayMode4.png Graphic file (type png)
  <use tau/decayMode4.png>
 Package pdftex.def Info: tau/decayMode4.png used on input line 233.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/decayMode5.png, id=4093, 798.985pt x 674.52pt>
+<tau/decayMode5.png, id=4372, 798.985pt x 674.52pt>
 File: tau/decayMode5.png Graphic file (type png)
  <use tau/decayMode5.png>
 Package pdftex.def Info: tau/decayMode5.png used on input line 235.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/decayMode6.png, id=4094, 798.985pt x 674.52pt>
+<tau/decayMode6.png, id=4373, 798.985pt x 674.52pt>
 File: tau/decayMode6.png Graphic file (type png)
  <use tau/decayMode6.png>
 Package pdftex.def Info: tau/decayMode6.png used on input line 237.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/legend.png, id=4095, 798.985pt x 674.52pt>
+<tau/legend.png, id=4374, 798.985pt x 674.52pt>
 File: tau/legend.png Graphic file (type png)
  <use tau/legend.png>
 Package pdftex.def Info: tau/legend.png used on input line 239.
@@ -2215,14 +2401,14 @@ Package pdftex.def Info: tau/legend.png used on input line 239.
 
 Underfull \vbox (badness 2269) has occurred while \output is active []
 
- [48]
-[49 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/decayMode2.png
+ [62]
+[63 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/decayMode2.png
 > <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/decayMode3.png> 
 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/decayMode4.png> <E
 :/user/my documents/University/2016-2017/boruoXuThesis/tau/decayMode5.png> <E:/
 user/my documents/University/2016-2017/boruoXuThesis/tau/decayMode6.png> <E:/us
 er/my documents/University/2016-2017/boruoXuThesis/tau/legend.png>]
-<tau/hadronicEff.png, id=4107, 798.985pt x 674.52pt>
+<tau/hadronicEff.png, id=4386, 798.985pt x 674.52pt>
 File: tau/hadronicEff.png Graphic file (type png)
  <use tau/hadronicEff.png>
 Package pdftex.def Info: tau/hadronicEff.png used on input line 262.
@@ -2230,2052 +2416,2043 @@ Package pdftex.def Info: tau/hadronicEff.png used on input line 262.
 
 Underfull \vbox (badness 3601) has occurred while \output is active []
 
- [50 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/hadronicEff.p
+ [64 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/hadronicEff.p
 ng>])
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapDoubleHiggs.tex"
-[51] [52
+[65] [66
 
 ]
 chapter 7.
+[67]
 
-LaTeX Warning: Reference `tab:doubleHiggsMCSamples' on page 53 undefined on inp
-ut line 18.
-
-[53]
-
-LaTeX Warning: Float too large for page by 4.1941pt on input line 103.
+LaTeX Warning: Reference `tab:doubleHiggsMCSamples' on page 68 undefined on inp
+ut line 35.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54]
-[55] [56]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [68]
 
- [57]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [58]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [59]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [60]
-
-LaTeX Warning: Reference `' on page 61 undefined on input line 224.
-
-[61]
-
-LaTeX Warning: Reference `' on page 62 undefined on input line 265.
+LaTeX Warning: Float too large for page by 4.1941pt on input line 120.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62]
-<doubleHiggs/MCmassFit.png, id=4190, 750.1626pt x 507.8172pt>
+ [69]
+[70] [71] [72]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [73]
+Underfull \vbox (badness 2818) has occurred while \output is active []
+
+ [74]
+
+LaTeX Warning: Reference `' on page 75 undefined on input line 241.
+
+[75]
+
+LaTeX Warning: Reference `' on page 76 undefined on input line 282.
+
+[76] <doubleHiggs/MCmassFit.png, id=4468, 750.1626pt x 507.8172pt>
 File: doubleHiggs/MCmassFit.png Graphic file (type png)
 
 <use doubleHiggs/MCmassFit.png>
-Package pdftex.def Info: doubleHiggs/MCmassFit.png used on input line 295.
+Package pdftex.def Info: doubleHiggs/MCmassFit.png used on input line 312.
 (pdftex.def)             Requested size: 336.05533pt x 227.48505pt.
 
 
-LaTeX Warning: Reference `fig:doubleHiggs1.4TeVSigmaFit' on page 63 undefined o
-n input line 301.
+LaTeX Warning: Reference `fig:doubleHiggs1.4TeVSigmaFit' on page 77 undefined o
+n input line 318.
 
 
-<doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.png, id=4193, 798.985pt x 674.52p
+<doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.png, id=4471, 798.985pt x 674.52p
 t>
 File: doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.png Graphic file (type png)
  <use doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.png>
 Package pdftex.def Info: doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.png used 
-on input line 305.
+on input line 322.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
 <doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR.png,
- id=4194, 798.985pt x 674.52pt>
+ id=4472, 798.985pt x 674.52pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR
 .png Graphic file (type png)
 
 <use doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR.
 png>
 Package pdftex.def Info: doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_Si
-gmaR_divide_M_testR.png used on input line 311.
+gmaR_divide_M_testR.png used on input line 328.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.png, id=4195, 798.985pt x 674.52p
+<doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.png, id=4473, 798.985pt x 674.52p
 t>
 File: doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.png Graphic file (type png)
  <use doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.png>
 Package pdftex.def Info: doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.png used 
-on input line 317.
+on input line 334.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
 <doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR.png,
- id=4196, 798.985pt x 674.52pt>
+ id=4474, 798.985pt x 674.52pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR
 .png Graphic file (type png)
 
 <use doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR.
 png>
 Package pdftex.def Info: doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_Si
-gmaR_divide_M_testR.png used on input line 323.
+gmaR_divide_M_testR.png used on input line 340.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.png, id=4197, 798.985pt x 674.52pt
+<doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.png, id=4475, 798.985pt x 674.52pt
 >
 File: doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.png Graphic file (type png)
  <use doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.png>
 Package pdftex.def Info: doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.png used o
-n input line 329.
+n input line 346.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
 <doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_testR.png, id=4
-198, 798.985pt x 674.52pt>
+476, 798.985pt x 674.52pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_testR.png 
 Graphic file (type png)
 
 <use doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_testR.png>
 Package pdftex.def Info: doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_SigmaR_
-divide_M_testR.png used on input line 335.
+divide_M_testR.png used on input line 352.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
 
-LaTeX Warning: Float too large for page by 4.87976pt on input line 346.
+LaTeX Warning: Float too large for page by 4.87976pt on input line 363.
 
 
-LaTeX Warning: Reference `fig:doubleHiggs3TeVSigmaFit' on page 63 undefined on 
-input line 349.
+LaTeX Warning: Reference `fig:doubleHiggs3TeVSigmaFit' on page 77 undefined on 
+input line 366.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [63 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/MCmas
-sFit.png>]
-[64 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/resolu
-tion/ILD_1.4TeV_Higgs1_M_R.png> <E:/user/my documents/University/2016-2017/boru
-oXuThesis/doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_t
-estR.png> <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/
-resolution/ILD_1.4TeV_Higgs2_M_R.png> <E:/user/my documents/University/2016-201
-7/boruoXuThesis/doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divi
-de_M_testR.png> <E:/user/my documents/University/2016-2017/boruoXuThesis/double
-Higgs/resolution/ILD_1.4TeV_W_M_testR.png> <E:/user/my documents/University/201
-6-2017/boruoXuThesis/doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_SigmaR_divi
-de_M_testR.png>]
-<doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.png, id=4226, 798.985pt x 674.52pt>
+ [77]
+<doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.png, id=4498, 798.985pt x 674.52pt>
 File: doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.png Graphic file (type png)
 <use doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.png>
 Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.png used on
- input line 355.
+ input line 372.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
 <doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR.png, i
-d=4227, 798.985pt x 674.52pt>
+d=4499, 798.985pt x 674.52pt>
 File: doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR.p
 ng Graphic file (type png)
 
 <use doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR.pn
 g>
 Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_Sigm
-aR_divide_M_testR.png used on input line 361.
+aR_divide_M_testR.png used on input line 378.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.png, id=4228, 798.985pt x 674.52pt>
+<doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.png, id=4500, 798.985pt x 674.52pt>
 File: doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.png Graphic file (type png)
 <use doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.png>
 Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.png used on
- input line 367.
+ input line 384.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
 <doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR.png, i
-d=4229, 798.985pt x 674.52pt>
+d=4501, 798.985pt x 674.52pt>
 File: doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR.p
 ng Graphic file (type png)
 
 <use doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR.pn
 g>
 Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_Sigm
-aR_divide_M_testR.png used on input line 373.
+aR_divide_M_testR.png used on input line 390.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<doubleHiggs/resolution/ILD_3TeV_W_M_testR.png, id=4230, 798.985pt x 674.52pt>
+<doubleHiggs/resolution/ILD_3TeV_W_M_testR.png, id=4502, 798.985pt x 674.52pt>
 File: doubleHiggs/resolution/ILD_3TeV_W_M_testR.png Graphic file (type png)
 
 <use doubleHiggs/resolution/ILD_3TeV_W_M_testR.png>
 Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_W_M_testR.png used on 
-input line 379.
+input line 396.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR.png, id=423
-1, 798.985pt x 674.52pt>
+<doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR.png, id=450
+3, 798.985pt x 674.52pt>
 File: doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR.png Gr
 aphic file (type png)
 
 <use doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR.png>
 Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_di
-vide_M_testR.png used on input line 385.
+vide_M_testR.png used on input line 402.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
 
-LaTeX Warning: Float too large for page by 4.87976pt on input line 393.
+LaTeX Warning: Float too large for page by 4.87976pt on input line 410.
 
 
-LaTeX Warning: Reference `' on page 65 undefined on input line 437.
+LaTeX Warning: Reference `' on page 78 undefined on input line 454.
+
+[78 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/MCmass
+Fit.png>] [79 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHi
+ggs/resolution/ILD_1.4TeV_Higgs1_M_R.png> <E:/user/my documents/University/2016
+-2017/boruoXuThesis/doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_
+divide_M_testR.png> <E:/user/my documents/University/2016-2017/boruoXuThesis/do
+ubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.png> <E:/user/my documents/Universit
+y/2016-2017/boruoXuThesis/doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_S
+igmaR_divide_M_testR.png> <E:/user/my documents/University/2016-2017/boruoXuThe
+sis/doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.png> <E:/user/my documents/Univ
+ersity/2016-2017/boruoXuThesis/doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_S
+igmaR_divide_M_testR.png>] [80 <E:/user/my documents/University/2016-2017/boruo
+XuThesis/doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.png> <E:/user/my documents/
+University/2016-2017/boruoXuThesis/doubleHiggs/resolution/ILD_3TeV_Higgs1_Sigma
+L_add_SigmaR_divide_M_testR.png> <E:/user/my documents/University/2016-2017/bor
+uoXuThesis/doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.png> <E:/user/my document
+s/University/2016-2017/boruoXuThesis/doubleHiggs/resolution/ILD_3TeV_Higgs2_Sig
+maL_add_SigmaR_divide_M_testR.png> <E:/user/my documents/University/2016-2017/b
+oruoXuThesis/doubleHiggs/resolution/ILD_3TeV_W_M_testR.png> <E:/user/my documen
+ts/University/2016-2017/boruoXuThesis/doubleHiggs/resolution/ILD_3TeV_W_SigmaL_
+add_SigmaR_divide_M_testR.png>]
+
+LaTeX Warning: Reference `' on page 81 undefined on input line 458.
 
 
-Underfull \vbox (badness 2221) has occurred while \output is active []
-
- [65]
-[66 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/resolu
-tion/ILD_3TeV_Higgs1_M_R.png> <E:/user/my documents/University/2016-2017/boruoX
-uThesis/doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR
-.png> <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/reso
-lution/ILD_3TeV_Higgs2_M_R.png> <E:/user/my documents/University/2016-2017/boru
-oXuThesis/doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_tes
-tR.png> <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/re
-solution/ILD_3TeV_W_M_testR.png> <E:/user/my documents/University/2016-2017/bor
-uoXuThesis/doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR.p
-ng>]
-
-LaTeX Warning: Reference `' on page 67 undefined on input line 441.
-
-
-<doubleHiggs/eval-lcfiweights_R0_7_2jets-test.png, id=4256, 497.86pt x 473.77pt
+<doubleHiggs/eval-lcfiweights_R0_7_2jets-test.png, id=4531, 497.86pt x 473.77pt
 >
 File: doubleHiggs/eval-lcfiweights_R0_7_2jets-test.png Graphic file (type png)
  <use doubleHiggs/eval-lcfiweights_R0_7_2jets-test.png>
 Package pdftex.def Info: doubleHiggs/eval-lcfiweights_R0_7_2jets-test.png used 
-on input line 445.
+on input line 462.
 (pdftex.def)             Requested size: 201.63182pt x 191.8758pt.
 
-<doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.png, id=4257, 497.86pt x 47
+<doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.png, id=4532, 497.86pt x 47
 3.77pt>
 File: doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.png Graphic file (type
  png)
  <use doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.png>
 Package pdftex.def Info: doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.png
- used on input line 451.
+ used on input line 468.
 (pdftex.def)             Requested size: 201.63182pt x 191.8758pt.
 
-Underfull \vbox (badness 7558) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/eval-
+ [81 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/eval-
 lcfiweights_R0_7_2jets-test.png> <E:/user/my documents/University/2016-2017/bor
 uoXuThesis/doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.png>]
 
-LaTeX Warning: Reference `' on page 68 undefined on input line 483.
+LaTeX Warning: Reference `' on page 82 undefined on input line 500.
 
 
-LaTeX Warning: Reference `' on page 68 undefined on input line 483.
+LaTeX Warning: Reference `' on page 82 undefined on input line 500.
 
-
+[82]
 <doubleHiggs/var/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_prepare
-.png, id=4266, 1601.985pt x 875.27pt>
+.png, id=4546, 1601.985pt x 875.27pt>
 File: doubleHiggs/var/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_pr
 epare.png Graphic file (type png)
 
 <use doubleHiggs/var/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_pre
 pare.png>
 Package pdftex.def Info: doubleHiggs/var/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161
-208R0_7_qq_btag2_prepare.png used on input line 490.
+208R0_7_qq_btag2_prepare.png used on input line 507.
 (pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
 
 <doubleHiggs/var/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_prepar
-e.png, id=4267, 1601.985pt x 875.27pt>
+e.png, id=4547, 1601.985pt x 875.27pt>
 File: doubleHiggs/var/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_p
 repare.png Graphic file (type png)
 
 <use doubleHiggs/var/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_pr
 epare.png>
 Package pdftex.def Info: doubleHiggs/var/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA2016
-1208R0_7_qq_btag2_prepare.png used on input line 491.
+1208R0_7_qq_btag2_prepare.png used on input line 508.
 (pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
 
 <doubleHiggs/var/nR0_7_6jet_btag2_bTag2_TMVA20161208R0_7_qq_btag2_prepare.png, 
-id=4268, 1601.985pt x 875.27pt>
+id=4548, 1601.985pt x 875.27pt>
 File: doubleHiggs/var/nR0_7_6jet_btag2_bTag2_TMVA20161208R0_7_qq_btag2_prepare.
 png Graphic file (type png)
 
 <use doubleHiggs/var/nR0_7_6jet_btag2_bTag2_TMVA20161208R0_7_qq_btag2_prepare.p
 ng>
 Package pdftex.def Info: doubleHiggs/var/nR0_7_6jet_btag2_bTag2_TMVA20161208R0_
-7_qq_btag2_prepare.png used on input line 492.
+7_qq_btag2_prepare.png used on input line 509.
 (pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
 
 <doubleHiggs/var/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag2_pr
-epare.png, id=4269, 1601.985pt x 875.27pt>
+epare.png, id=4549, 1601.985pt x 875.27pt>
 File: doubleHiggs/var/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_bta
 g2_prepare.png Graphic file (type png)
 
 <use doubleHiggs/var/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag
 2_prepare.png>
 Package pdftex.def Info: doubleHiggs/var/tR0_7_6jet_btag2_Higgs_all_M_TMVA20161
-2083TeVtR0_7_qq_btag2_prepare.png used on input line 503.
+2083TeVtR0_7_qq_btag2_prepare.png used on input line 520.
 (pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
 
 <doubleHiggs/var/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prepare.
-png, id=4270, 1601.985pt x 875.27pt>
+png, id=4550, 1601.985pt x 875.27pt>
 File: doubleHiggs/var/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_pre
 pare.png Graphic file (type png)
 
 <use doubleHiggs/var/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prep
 are.png>
 Package pdftex.def Info: doubleHiggs/var/tR0_7_6jet_btag2_bTag1_TMVA201612083Te
-VtR0_7_qq_btag2_prepare.png used on input line 504.
+VtR0_7_qq_btag2_prepare.png used on input line 521.
 (pdftex.def)             Requested size: 336.05533pt x 183.59843pt.
- [68] [69 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/
-var/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_prepare.png> <E:/use
-r/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/var/nR0_7_6jet_bt
-ag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_prepare.png> <E:/user/my documents/U
-niversity/2016-2017/boruoXuThesis/doubleHiggs/var/nR0_7_6jet_btag2_bTag2_TMVA20
-161208R0_7_qq_btag2_prepare.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 521--521
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--538
 []|\T1/lmr/m/n/10.95 (+20) Expected
  []
 
 
-Underfull \hbox (badness 6396) in paragraph at lines 521--521
+Underfull \hbox (badness 6396) in paragraph at lines 538--538
 \T1/lmr/m/n/10.95 (+20) num-ber of
  []
 
 
-Underfull \hbox (badness 4316) in paragraph at lines 521--521
+Underfull \hbox (badness 4316) in paragraph at lines 538--538
 []|\T1/lmr/m/n/10.95 (+20) Lepton ID
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 521--521
+Underfull \hbox (badness 2027) in paragraph at lines 538--538
 []|$\OML/eur/m/n/10.95 m[] >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--521
+Underfull \hbox (badness 10000) in paragraph at lines 538--538
 []|$[] \OML/eur/m/n/10.95 >
  []
 
 
-LaTeX Warning: Float too large for page by 12.76947pt on input line 568.
+LaTeX Warning: Float too large for page by 12.76947pt on input line 585.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 577--577
+Underfull \hbox (badness 10000) in paragraph at lines 594--594
 []|\T1/lmr/m/n/10.95 (+20) Expected
  []
 
 
-Underfull \hbox (badness 6396) in paragraph at lines 577--577
+Underfull \hbox (badness 6396) in paragraph at lines 594--594
 \T1/lmr/m/n/10.95 (+20) num-ber of
  []
 
 
-Underfull \hbox (badness 4316) in paragraph at lines 577--577
+Underfull \hbox (badness 4316) in paragraph at lines 594--594
 []|\T1/lmr/m/n/10.95 (+20) Lepton ID
  []
 
 
-Underfull \hbox (badness 2027) in paragraph at lines 577--577
+Underfull \hbox (badness 2027) in paragraph at lines 594--594
 []|$\OML/eur/m/n/10.95 m[] >
  []
 
 
-LaTeX Warning: Float too large for page by 12.76947pt on input line 624.
+LaTeX Warning: Float too large for page by 12.76947pt on input line 641.
 
 
-LaTeX Warning: Reference `' on page 70 undefined on input line 629.
+LaTeX Warning: Reference `' on page 83 undefined on input line 646.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [70 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/var/t
-R0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag2_prepare.png> <E:/use
-r/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/var/tR0_7_6jet_bt
-ag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prepare.png>] [71] [72]
-
-LaTeX Warning: Reference `' on page 73 undefined on input line 635.
+LaTeX Warning: Reference `' on page 83 undefined on input line 652.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 637.
+(Font)              <7> on input line 654.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `subscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `superscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `subscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `superscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 1.95871pt
-(hyperref)                removed on input line 637.
+(hyperref)                removed on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@oldTo' on input line 637.
+(hyperref)                removing `\@oldTo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 1.95871pt
-(hyperref)                removed on input line 637.
+(hyperref)                removed on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 637.
+(hyperref)                removing `subscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 637.
+(hyperref)                removing `superscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@overline' on input line 637.
+(hyperref)                removing `\@@overline' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 637.
+(hyperref)                removing `subscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 637.
+(hyperref)                removing `superscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 637.
+(hyperref)                removing `\@ifnextchar' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\scriptstyle' on input line 637.
+(hyperref)                removing `\scriptstyle' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 637.
+(hyperref)                removing `subscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 637.
+(hyperref)                removing `superscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 637.
+(hyperref)                removing `subscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 637.
+(hyperref)                removing `superscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 637.
+(hyperref)                removing `subscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 637.
+(hyperref)                removing `superscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 637.
+(hyperref)                removing `subscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 637.
+(hyperref)                removing `superscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 1.95871pt
-(hyperref)                removed on input line 637.
+(hyperref)                removed on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@oldTo' on input line 637.
+(hyperref)                removing `\@oldTo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \kern 1.95871pt
-(hyperref)                removed on input line 637.
+(hyperref)                removed on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 637.
+(hyperref)                removing `subscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 637.
+(hyperref)                removing `superscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@overline' on input line 637.
+(hyperref)                removing `\@@overline' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 637.
+(hyperref)                removing `subscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 637.
+(hyperref)                removing `superscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 637.
+(hyperref)                removing `\@ifnextchar' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\scriptstyle' on input line 637.
+(hyperref)                removing `\scriptstyle' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 637.
+(hyperref)                removing `subscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 637.
+(hyperref)                removing `superscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargtwo' on input line 637.
+(hyperref)                removing `\myargtwo' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 637.
+(hyperref)                removing `\<def>-command' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\myargthree' on input line 637.
+(hyperref)                removing `\myargthree' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@overline' on input line 637.
+(hyperref)                removing `\@@overline' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 637.
+(hyperref)                removing `subscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 637.
+(hyperref)                removing `superscript' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ifnextchar' on input line 637.
+(hyperref)                removing `\@ifnextchar' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\scriptstyle' on input line 637.
+(hyperref)                removing `\scriptstyle' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mskip' on input line 637.
+(hyperref)                removing `\mskip' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 637.
+(hyperref)                removing `math shift' on input line 654.
 
 
-Overfull \hbox (74.83443pt too wide) in paragraph at lines 639--640
+Overfull \hbox (74.83443pt too wide) in paragraph at lines 656--657
 \T1/lmr/m/n/12 (-20) Since the anal-y-sis for $[][][][][][][][][][][][][][]$ ch
 an-nel is di-vided into two sub-chan-nels, $[][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][]$
  []
 
+
+Underfull \vbox (badness 1584) has occurred while \output is active []
+
+ [83]
+[84 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/var/nR
+0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_prepare.png> <E:/user/my d
+ocuments/University/2016-2017/boruoXuThesis/doubleHiggs/var/nR0_7_6jet_btag2_Hi
+ggs_all_Pt_TMVA20161208R0_7_qq_btag2_prepare.png> <E:/user/my documents/Univers
+ity/2016-2017/boruoXuThesis/doubleHiggs/var/nR0_7_6jet_btag2_bTag2_TMVA20161208
+R0_7_qq_btag2_prepare.png>] [85 <E:/user/my documents/University/2016-2017/boru
+oXuThesis/doubleHiggs/var/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq
+_btag2_prepare.png> <E:/user/my documents/University/2016-2017/boruoXuThesis/do
+ubleHiggs/var/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prepare.png
+>] [86] [87]
 Package epstopdf Info: Source file: <doubleHiggs/sumbtagY34.eps>
-(epstopdf)                    date: 2017-01-25 15:58:50
+(epstopdf)                    date: 2017-01-25 16:58:50
 (epstopdf)                    size: 84539 bytes
 (epstopdf)             Output file: <doubleHiggs/sumbtagY34-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2017-01-25 16:02:41
+(epstopdf)                    date: 2017-01-25 17:02:41
 (epstopdf)                    size: 18538 bytes
 (epstopdf)             Command: <epstopdf --outfile=doubleHiggs/sumbtagY34-eps-
 converted-to.pdf doubleHiggs/sumbtagY34.eps>
-(epstopdf)             \includegraphics on input line 652.
+(epstopdf)             \includegraphics on input line 669.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/sumbtagY34-eps-converted-to.pdf, id=4298, 569.12625pt x 311.1625pt
+<doubleHiggs/sumbtagY34-eps-converted-to.pdf, id=4578, 569.12625pt x 311.1625pt
 >
 File: doubleHiggs/sumbtagY34-eps-converted-to.pdf Graphic file (type pdf)
  <use doubleHiggs/sumbtagY34-eps-converted-to.pdf>
 Package pdftex.def Info: doubleHiggs/sumbtagY34-eps-converted-to.pdf used on in
-put line 652.
+put line 669.
 (pdftex.def)             Requested size: 336.05533pt x 183.74097pt.
 
-Underfull \hbox (badness 1546) in paragraph at lines 664--664
+Underfull \hbox (badness 1546) in paragraph at lines 681--681
 []|$[][][][][][][][][][][][][][][][][][]$ \T1/lmr/m/n/12 (+20) Se-lec-
  []
 
 
-Overfull \hbox (5.19197pt too wide) in paragraph at lines 661--671
+Overfull \hbox (5.19197pt too wide) in paragraph at lines 678--688
  [] 
  []
 
 
-LaTeX Warning: Reference `' on page 73 undefined on input line 675.
+LaTeX Warning: Reference `' on page 88 undefined on input line 692.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--681
+Underfull \hbox (badness 10000) in paragraph at lines 698--698
 []|\T1/lmr/m/n/10.95 (+20) Sanity $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--681
+Underfull \hbox (badness 10000) in paragraph at lines 698--698
 []|\T1/lmr/m/n/10.95 (+20) Mutually
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--681
+Underfull \hbox (badness 10000) in paragraph at lines 698--698
 \T1/lmr/m/n/10.95 (+20) ex-clu-sive
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--681
+Underfull \hbox (badness 10000) in paragraph at lines 698--698
 []$ \T1/lmr/m/n/10.95 (+20) =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--681
+Underfull \hbox (badness 10000) in paragraph at lines 698--698
 []|\T1/lmr/m/n/10.95 (+20) Sanity $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--681
+Underfull \hbox (badness 10000) in paragraph at lines 698--698
 []|\T1/lmr/m/n/10.95 (+20) Mutually
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 681--681
+Underfull \hbox (badness 10000) in paragraph at lines 698--698
 \T1/lmr/m/n/10.95 (+20) ex-clu-sive
  []
 
 
-LaTeX Warning: Float too large for page by 26.36948pt on input line 728.
-
-[73]
-
-LaTeX Warning: Reference `' on page 74 undefined on input line 748.
+LaTeX Warning: Float too large for page by 26.36948pt on input line 745.
 
 
-LaTeX Warning: Reference `s' on page 74 undefined on input line 751.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [88 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/sumbt
+agY34-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `' on page 89 undefined on input line 765.
 
 
-LaTeX Warning: Reference `' on page 74 undefined on input line 769.
+LaTeX Warning: Reference `s' on page 89 undefined on input line 768.
 
 
-LaTeX Warning: Reference `' on page 74 undefined on input line 769.
+LaTeX Warning: Reference `' on page 89 undefined on input line 786.
 
 
-LaTeX Warning: Reference `' on page 74 undefined on input line 779.
+LaTeX Warning: Reference `' on page 89 undefined on input line 786.
 
 
-Overfull \hbox (2.71754pt too wide) in paragraph at lines 754--796
+LaTeX Warning: Reference `' on page 89 undefined on input line 796.
+
+
+Overfull \hbox (2.71754pt too wide) in paragraph at lines 771--813
  [] 
  []
 
 
-LaTeX Warning: Float too large for page by 146.37303pt on input line 798.
+LaTeX Warning: Float too large for page by 146.37303pt on input line 815.
 
 
-LaTeX Warning: Reference `' on page 74 undefined on input line 800.
+LaTeX Warning: Reference `' on page 89 undefined on input line 817.
 
 
-LaTeX Warning: Reference `' on page 74 undefined on input line 806.
+LaTeX Warning: Reference `' on page 89 undefined on input line 823.
 
-
-Underfull \vbox (badness 1924) has occurred while \output is active []
-
- [74 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/sumbt
-agY34-eps-converted-to.pdf>] [75] [76]
-Underfull \hbox (badness 10000) in paragraph at lines 824--824
+[89] [90] [91]
+Underfull \hbox (badness 10000) in paragraph at lines 841--841
 []|\T1/lmr/m/n/10.95 (+20) Expected
  []
 
 
-Underfull \hbox (badness 6396) in paragraph at lines 824--824
+Underfull \hbox (badness 6396) in paragraph at lines 841--841
 \T1/lmr/m/n/10.95 (+20) num-ber of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 824--824
+Underfull \hbox (badness 10000) in paragraph at lines 841--841
 []|\T1/lmr/m/n/10.95 (+20) Pre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 824--824
+Underfull \hbox (badness 10000) in paragraph at lines 841--841
 \T1/lmr/m/n/10.95 (+20) selection
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 824--824
+Underfull \hbox (badness 10000) in paragraph at lines 841--841
 []|\T1/lmr/m/n/10.95 (+20) MVA ef-fi-
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 824--824
+Underfull \hbox (badness 1845) in paragraph at lines 841--841
 []|\T1/lmr/m/n/10.95 (+20) Number of
  []
 
 
-LaTeX Warning: Float too large for page by 12.76947pt on input line 871.
+LaTeX Warning: Float too large for page by 12.76947pt on input line 888.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 878--878
+Underfull \hbox (badness 10000) in paragraph at lines 895--895
 []|\T1/lmr/m/n/10.95 (+20) Expected
  []
 
 
-Underfull \hbox (badness 6396) in paragraph at lines 878--878
+Underfull \hbox (badness 6396) in paragraph at lines 895--895
 \T1/lmr/m/n/10.95 (+20) num-ber of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 878--878
+Underfull \hbox (badness 10000) in paragraph at lines 895--895
 []|\T1/lmr/m/n/10.95 (+20) Pre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 878--878
+Underfull \hbox (badness 10000) in paragraph at lines 895--895
 \T1/lmr/m/n/10.95 (+20) selection
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 878--878
+Underfull \hbox (badness 10000) in paragraph at lines 895--895
 []|\T1/lmr/m/n/10.95 (+20) MVA ef-fi-
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 878--878
+Underfull \hbox (badness 1845) in paragraph at lines 895--895
 []|\T1/lmr/m/n/10.95 (+20) Number of
  []
 
 
-LaTeX Warning: Float too large for page by 12.76947pt on input line 925.
+LaTeX Warning: Float too large for page by 12.76947pt on input line 942.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--933
+Underfull \hbox (badness 10000) in paragraph at lines 950--950
 []|\T1/lmr/m/n/10.95 (+20) Expected
  []
 
 
-Underfull \hbox (badness 6396) in paragraph at lines 933--933
+Underfull \hbox (badness 6396) in paragraph at lines 950--950
 \T1/lmr/m/n/10.95 (+20) num-ber of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--933
+Underfull \hbox (badness 10000) in paragraph at lines 950--950
 []|\T1/lmr/m/n/10.95 (+20) Pre-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--933
+Underfull \hbox (badness 10000) in paragraph at lines 950--950
 \T1/lmr/m/n/10.95 (+20) selection
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 933--933
+Underfull \hbox (badness 10000) in paragraph at lines 950--950
 []|\T1/lmr/m/n/10.95 (+20) MVA ef-fi-
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 933--933
+Underfull \hbox (badness 1845) in paragraph at lines 950--950
 []|\T1/lmr/m/n/10.95 (+20) Number of
  []
 
 
-LaTeX Warning: Float too large for page by 12.76947pt on input line 980.
+LaTeX Warning: Float too large for page by 12.76947pt on input line 997.
 
 )) Processing 'appendices' comment.
 Comment 'appendices' writing to comment.cut. Straight input of comment.cut.
@@ -4284,41 +4461,40 @@ Processing 'backmatter' comment. Comment 'backmatter' writing to comment.cut.
 Straight input of comment.cut.
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\comment.cut"
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\backmatter.tex"
-[77] [78] [79] [80]
-("E:\user\my documents\University\2016-2017\boruoXuThesis\main.bbl" [81
+[92] [93] [94] [95] [96
 
 ]
-[82
+("E:\user\my documents\University\2016-2017\boruoXuThesis\main.bbl" [97]
+[98
 
-] [83]) [84]
-("E:\user\my documents\University\2016-2017\boruoXuThesis\main.lof")
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [100])
+[101] [102
+
+] ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.lof")
 \tf@lof=\write7
- [85
-
-]
-[86
+ [103] [104
 
 ] ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.lot"
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [87])
+ [105])
 \tf@lot=\write8
 ))
-[88]
+[106]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
  ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 84.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 84.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 5F5462BD4CCDFD1F38DF822833E5A99D;6826.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: EB60B8D0EB29A95D21A1DE8E9413A860;5857
-(rerunfilecheck)             After:  FEA5F688D7E5FF1D6D7730D21B623E7C;5857.
 
 LaTeX Warning: There were undefined references.
 
@@ -4327,76 +4503,34 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 27479 strings out of 494045
- 478030 string characters out of 3154005
- 784380 words of memory out of 3000000
- 29641 multiletter control sequences out of 15000+200000
+ 27666 strings out of 494045
+ 481622 string characters out of 3154005
+ 793139 words of memory out of 3000000
+ 29750 multiletter control sequences out of 15000+200000
  157100 words of font info for 269 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 67i,49n,75p,8816b,1030s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{table.caption.37} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.34} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.40} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.39} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.33} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.30} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.28} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.19} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.18} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.16} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.10} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.8} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.7} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.6} has been referenced but does not e
-xist, replaced by a fixed one
-
-{D:/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{D:/MiKTeX 2.9/fonts/enc/dvips/
-lm/lm-ec.enc}{D:/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<D:/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmmi12.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/euler/euex10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufb10.pfb
-><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><D:/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/euler/eufm7.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsf
-onts/euler/eurb10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eurm10.p
-fb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eurm7.pfb><D:/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/euler/eusm10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm
-/lmbx10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><D:/MiKTeX 2.9/font
-s/type1/public/lm/lmex10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><D:
-/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><D:/MiKTeX 2.9/fonts/type1/public/l
-m/lmr17.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><D:/MiKTeX 2.9/fonts/
-type1/public/lm/lmr8.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><D:/Mi
-KTeX 2.9/fonts/type1/public/lm/lmro12.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/
-lmsy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><D:/MiKTeX 2.9/fonts/
-type1/public/lm/lmsy8.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
-am10.pfb>
-Output written on main.pdf (104 pages, 2530062 bytes).
+ 67i,49n,75p,8816b,1046s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{D:/MiKTeX 2.9/fonts/enc/dvips/lm
+/lm-mathsy.enc}{D:/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<D:/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsf
+onts/euler/euex10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufb10.p
+fb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><D:/MiKTeX 2.9/f
+onts/type1/public/amsfonts/euler/eufm7.pfb><D:/MiKTeX 2.9/fonts/type1/public/am
+sfonts/euler/eurb10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eurm10
+.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eurm7.pfb><D:/MiKTeX 2.9/
+fonts/type1/public/amsfonts/euler/eusm10.pfb><D:/MiKTeX 2.9/fonts/type1/public/
+lm/lmbx10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><D:/MiKTeX 2.9/fo
+nts/type1/public/lm/lmex10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><
+D:/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><D:/MiKTeX 2.9/fonts/type1/public
+/lm/lmr17.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><D:/MiKTeX 2.9/font
+s/type1/public/lm/lmr8.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><D:/
+MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><D:/MiKTeX 2.9/fonts/type1/public/l
+m/lmsy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><D:/MiKTeX 2.9/font
+s/type1/public/lm/lmsy8.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/
+msam10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (122 pages, 4654676 bytes).
 PDF statistics:
- 4578 PDF objects out of 5155 (max. 8388607)
- 284 named destinations out of 1000 (max. 500000)
- 27511 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 4882 PDF objects out of 5155 (max. 8388607)
+ 352 named destinations out of 1000 (max. 500000)
+ 27670 words of extra memory for PDF output out of 29859 (max. 10000000)
 

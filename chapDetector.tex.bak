@@ -10,7 +10,6 @@
 
 Since the discovery of a particle consistent with being the SM Higgs boson in LHC at 2012 \cite{Aad:2012tfa,Chatrchyan:2012ufa}, our understanding of Standard Model has improved greatly. Yet limited by the underlying QCD interaction from proton-anti-proton collision, one has great difficulty to measure the properties of the Higgs precisely. Next generation electron-positron linear collider could hopefully make precision measurements of the Higgs sector and the Top quark sector \cite{Abramowicz:2013tzc}.
 
-The leading candidates for next generation electron-positron linear collider are the International Linear Collider (ILC) \cite{Brau:2007zza}, and the Compact Linear Collider (CLIC) \cite{Linssen:2012hp}. The ILC has developed two detector models, namely the International Large Detector (ILD) \cite{Abe:2010aa} and the Silicon Detector (SiD) \cite{Aihara:2010zz}. The CLIC has developed two slightly modified detector models based on ILD and SiD \cite{Linssen:2012hp}. One key common feature of these next generation electron-positron linear colliders is the high granular calorimeter, which provides a great spatial resolution at the cost of the energy resolution. Particle flow algorithms (PFA) benefit from the spatial resolution from calorimeters, together with tracking information, to provide excellent a jet energy resolution. PandoraPFA, the most complicated and the best performing one, provides a jet energy resolution of less than 3.5\%, which is required for W/Z separation \cite{Thomson:2009rp,Marshall:2013bda}.
 
 
 overall
@@ -22,8 +21,99 @@ ILC
 CLIC
 
 
+\section{ILC}
 
-\section{Physics at ILC}
+
+Two leading candidates for next generation electron-positron linear collider are the International Linear Collider (\ILC) \cite{Brau:2007zza}, and t he Compact Linear Collider (\CLIC) \cite{Linssen:2012hp}. The \ILC is a high-luminosity electron-positron linear collider with centre-of-mass energy from 200\,GeV up to 1\,TeV. Thirty years of development leads to the the technical design report in 2013 \cite{}. A layout of the collider complex is shown in \Figure{}
+
+
+\begin{comment}
+The International Linear Collider (ILC) is a high-luminosity linear electron-positron collider based on
+1.3 GHz superconducting radio-frequency (SCRF) accelerating technology. Its centre-of-mass-energy
+range is 200¨C500 GeV (extendable to 1TeV). A schematic view of the accelerator complex, indicating
+the location of the major sub-systems, is shown in Fig. 3.1:
+
+The International Linear Collider (ILC) is a 200¨C500 GeV (extendable to 1TeV) centre-of-mass highluminosity
+linear electron-positron collider, based on 1.3 GHz superconducting radio-frequency (SCRF)
+accelerating technology. Its parameters have been set by physics requirements first outlined in 2003,
+updated in 2006, and thoroughly discussed over many years with the physics user community. The
+physics parameters have been reviewed continuously and found to be robust to advances in the science,
+including the recent discovery of a Higgs boson at the Large Hadron Collider at CERN.
+
+The collider design is the result of nearly twenty years of R&D. The heart of the ILC, the
+superconducting cavities, is based on over a decade of pioneering work by the TESLA collaboration in
+the 1990s. Some other aspects were based on the R&D carried out for the JLC/GLC and NLC projects,
+which were based on room-temperature accelerating structures. Since 2005, the design of the ILC
+accelerator has continued as a worldwide international collaboration coordinated by the Global Design
+Effort (GDE) under a mandate from the International Committee for Future Accelerators (ICFA).
+Drawing on the resources of over 300 national laboratories, universities and institutes worldwide, the
+GDE produced the ILC Reference Design Report (RDR) in August 2007. The work done by the GDE
+during the RDR phase identified several high-risk challenges that required R&D, which have since
+been the focus of the worldwide activity during the Technical Design Phase. In parallel with the
+accelerator effort, detailed baseline designs of two detectors have been developed by large international
+teams as a result of intense detector R&D under the coordination of the Research Directorate, also
+established by a mandate of ICFA.
+\end{comment}
+\subsection{ILD vs SID}
+
+Two detectors concepts have been designed for the \ILC to deliver the physics program. Precision tests for Standard Model requires an excellent jet energy resolution and di-jet mass reconstruction. Particle Flow Algorithms based event reconstruction meets the requirement and motivates the detector designs. For the best performance of the PFA, high granular calorimeter systems and highly efficient tracking systems are designed. The requirement to separate \PW and \PZ bosons in di-jet final states requires a jet energy resolution below 3.5\%. The momentum resolution of $5\times10^{-5}$\,GeV is motivated by the Higgs boson recoil reconstruction in the Higgs-strahlung.
+
+
+Motivation for two detectors is to have multiple independent measurements within one collider for cross-checking, complementary measurements and competition between collaborations. Two detectors are both general purpose detectors. Silicon Detector, \SiD, is a compact detector with a large magnetic filed of 5\,T. It uses silicon tracking modules. The International Large Detector, \ILD, is a larger detector with a time projection chamber as the main tracking unit. Both detectors have high granular calorimeters optimised for the particle flow. 
+
+\begin{comment}
+The ILC has been designed to enable two experiments (SiD and ILD) sharing one interaction region using
+a push-pull approach. This two-detector design is motivated by the enhanced scientific productivity of
+past collider facilities which benefited from independent operation of multiple experiments, providing
+complementary strengths, cross-checking and confirmation of results, reliability, insurance against
+mishaps, competition between collaborations, as well as increased number of involved scientific
+personnel. Figure 4.1 shows the arrangement of the two detectors in the detector hall.
+Both detector designs are conceived as multi-purpose detectors, optimised for the broad range
+of physics opportunities at the ILC. SiD is a compact, cost-constrained detector made possible
+with a 5 Tesla magnetic field and silicon tracking. Silicon enables time-stamping on single bunch
+crossings to provide robust performance, derived from immunity to spurious background bursts. The
+highly granular calorimeter is optimised for particle-flow analysis. The ILD group has designed a
+large detector with robust and stable performance over a wide range of energies. The concept uses
+a tracking system based on a continuous-readout time-projection chamber combined with silicon
+
+In order to realise the physics program, the ILC detectors face challenges requiring significant advances
+in collider detector performance. The machine environment is benign by LHC standards, enabling
+designs and technologies that are unthinkable at the LHC. However, the ILC environment poses its
+own set of background issues that must be overcome. The ¡°Detailed Baseline Design¡± of the SiD and
+ILD detectors have been developed to achieve the requirements for all considered physics programs,
+over the full range of centre-of-mass energies from 200 GeV up to 1TeV, as well as the possibility of
+special running at the Z-pole.
+The ILC physics opportunities place a premium on high-resolution jet energy reconstruction and
+di-jet mass performance. Event reconstruction techniques based on the Particle Flow Algorithm (PFA)
+have been developed to meet this challenge. This motivates highly granular electromagnetic and hadron
+calorimeters and highly efficient tracking systems. New detector technologies and new reconstruction
+algorithms based on the PFA approach achieve the needed precision in the reconstruction of jets of 3
+to 4 percent for 100 GeV jets, set by the requirement to separate W and Z di-jet final states. The
+requirements on momentum resolution for charged tracks (p/p2 of 5 ¡Á 10.5 (GeV/c).1) are driven
+by reconstruction of a Higgs boson recoiling from the associated Z boson decaying to a lepton pair in
+the Higgs-strahlung process. Flavour and quark-charge tagging will be available at an unprecedented
+level of performance as a result of the development of a new generation of vertex detectors. Particle
+identification is achieved by the highly granular calorimeters and muon identification is aided by the
+instrumented iron return yoke.
+A very important element of the detector design work has been the common effort to develop and
+apply simulation tools to realise realistic detector-performance estimates. A small group of experts
+from both SiD and ILD have cooperated closely on this critical work.
+To preserve this unprecedented performance, the inner detectors must accommodate very lowmass
+detectors and supports. This is a significant challenge. The detector designs have achieved the
+required light-weight support structures with minimal dead spaces. This was greatly simplified by the
+ILC time structure of 1 millisecond bunch trains at 5 Hertz. This very sparse filling allows power for
+many of the detector subsystems to be switched off between bunch trains (so-called power pulsing),
+reducing the heat load and the need for cooling. The design of these power-pulsed systems presents a
+significant challenge, including the need for quiescent currents.
+27
+\end{comment}
+\section{CLIC}
+The ILC has developed two detector models, namely the International Large Detector (ILD) \cite{Abe:2010aa} and the Silicon Detector (SiD) \cite{Aihara:2010zz}. The CLIC has developed two slightly modified detector models based on ILD and SiD \cite{Linssen:2012hp}. One key common feature of these next generation electron-positron linear colliders is the high granular calorimeter, which provides a great spatial resolution at the cost of the energy resolution. Particle flow algorithms (PFA) benefit from the spatial resolution from calorimeters, together with tracking information, to provide excellent a jet energy resolution. PandoraPFA, the most complicated and the best performing one, provides a jet energy resolution of less than 3.5\%, which is required for W/Z separation \cite{Thomson:2009rp,Marshall:2013bda}.
+
+
+\section{Physics at future linear colliders}
+
+\subsection{Physics at ILC}
 
 Tau - LC relavence tau
 
@@ -46,7 +136,7 @@ The main mechanism for double Higgs production %in \epem collisions
 
 
 
-\section{Physics at CILC}
+\subsection{Physics at CILC}
 
 current constraint
 
@@ -60,23 +150,45 @@ The main mechanism for double Higgs production %in \epem collisions
 
 
 
-\section{ILD vs SID}
+
 
 
 
 \section{CLIC vs ILC}
 
-Due to the similarities of the two two linear collider programs, the development with \CLIC detector concepts start with \ILC detector concepts. \CLICILD and \CLICSiD are developed based on \ILD and \SiD. The two main differences are the high centre-of-mass energy and the 0.5\,ns between bunch crossings at CLIC. More incoherent pairs and more hadronic two-photon events are produced at high energy. Particles produced in the forward region via t-channel are more important due to a stronger boost. These differences leads to a modification in the detector design and the reconstruction software for the \CLIC. A comparison of \CLICILD and \ILD longitudinal cross sections can be seen in \Figure{fig:detectorILD}.
-
-\section{International Large Detector}
+Due to the similarities of the two two linear collider programs, the development with \CLIC detector concepts start with \ILC detector concepts. \CLICILD and \CLICSiD are developed based on \ILD and \SiD. The two main differences are the high centre-of-mass energy and the 0.5\,ns between bunch crossings at CLIC. More incoherent pairs and more hadronic two-photon events are produced at high energy. Particles produced in the forward region via t-channel are more important due to a stronger boost. These differences leads to a modification in the detector design and the reconstruction software for the \CLIC. A comparison of \CLICILD and \ILD longitudinal cross sections can be seen in \Figure{fig:detectorILD}. A comparison of key parameters of the \ILD and \CLICILD detector concepts is shown in \Table{tab:ILDvsCLICILD}.
 
 
-The International Large Detector, \ILD, is a detector concept at the International Linear Collider, \ILC. The \ILD detector concept has been optimised in the view of the particle flow techniques. Particle flow approach to event reconstruction has shown to deliver the best possible jet reconstruction with proof-of-principle implementation such as \pandora {\Chapter{chap:Reconstruction}}. Each individual particles are reconstructed with the particle flow approach. For charged particles, calorimeter hits are associated with the tracks. The measurement of charged particle relies on the excellent tracking system resolution. Neutral particle reconstruction require fine spatial resolution of the calorimeters. These form the requirements for the detector designs and optimisations.
+\begin{table}[htbp]
+\centering
 
+\smallskip
+\small
+\begin{tabular}{l  r  r }
+\hline
+Concept &  \ILD & \CLICILD \\
+\hline
+Tracker & TPC/Silicon & TPC/Silicon \\
+Solenoid Field (T) & 3.5 & 4 \\
+Solenoid Field Bore (m) & 3.3 & 3.4 \\
+Solenoid Length (m) & 8.0 & 8.3 \\
+\VTX Inner Radius (mm) & 16 & 31 \\
+\ECAL $r_{min}$ (m) & 1.8 & 1.8 \\
+\ECAL $\Delta{r}$ (mm) & 172 & 172 \\
+\HCAL Absorber B / E & Fe & Fe / W \\
+\HCAL Interaction Length & 5.5 & 7.5 \\
+Overall Height (m) & 14.0 & 14.0 \\
+Overall Length (m) & 13.2 & 12.8 \\
+\hline
 
-The particle flow paradigm requires topological information for individual particle reconstruction. The sub-detector systems need to have the spatial resolution to separate charged particles from neutral particles. The result is a highly granular calorimeters with a central tracking system with excellent momentum resolution. Longitudinal cross section of top quadrant of the \ILD detector concept, taken from \cite{Behnke:2007gj}, is shown in \Figure{fig:ILD} From interaction point (\IP) outwards, there is a tracking system compromising a large time projection chamber (\TPC) augmented with silicon tungsten layer, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. Numbers are in units of mm.
+\hline
+\end{tabular}
 
-This section will describe the sub-systems of the \ILD detector concept in the \ILD technical design report\cite{}, the ILD\_o1\_v05 option in \Mokka simulation. The detector concept has been optimised and documented in previous documents, such as the letter of intent\cite{}. The \CLICILD detector concept for the \CLIC in the conceptual design report\cite{} is a modified version of the \ILD, adapted to the \CLIC colliding environment.
+\caption[]%
+{ A comparison of key parameters of the \ILD and \CLICILD detector concepts. \ECAL $r_{min}$ is the smallest distance from the calorimeter to the main detector axis. \HCAL Absorber B / E indicates the absorber material for the barrel (B) and the endcap (E). The table is adapted from \cite{Linssen:2012hp}.}
+\label{tab:ILDvsCLICILD}
+\end{table}
+
 \begin{figure}[tdbph]
 \centering
   \begin{subfigure}[b]{0.45\textwidth}
@@ -95,6 +207,17 @@ This section will describe the sub-systems of the \ILD detector concept in the \
 \end{figure}
 
 
+\section{International Large Detector}
+
+
+The International Large Detector, \ILD, is a detector concept at the International Linear Collider, \ILC. The \ILD detector concept has been optimised in the view of the particle flow techniques. Particle flow approach to event reconstruction has shown to deliver the best possible jet reconstruction with proof-of-principle implementation such as \pandora {\Chapter{chap:Reconstruction}}. Each individual particles are reconstructed with the particle flow approach. For charged particles, calorimeter hits are associated with the tracks. The measurement of charged particle relies on the excellent tracking system resolution. Neutral particle reconstruction require fine spatial resolution of the calorimeters. These form the requirements for the detector designs and optimisations.
+
+
+The particle flow paradigm requires topological information for individual particle reconstruction. The sub-detector systems need to have the spatial resolution to separate charged particles from neutral particles. The result is a highly granular calorimeters with a central tracking system with excellent momentum resolution. Longitudinal cross section of top quadrant of the \ILD detector concept, taken from \cite{Behnke:2007gj}, is shown in \Figure{fig:ILD} From interaction point (\IP) outwards, there is a tracking system compromising a large time projection chamber (\TPC) augmented with silicon tungsten layer, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. Numbers are in units of mm.
+
+This section will describe the sub-systems of the \ILD detector concept in the \ILD technical design report\cite{}, the ILD\_o1\_v05 option in \Mokka simulation. The detector concept has been optimised and documented in previous documents, such as the letter of intent\cite{}. The \CLICILD detector concept for the \CLIC in the conceptual design report\cite{Linssen:2012hp} is a modified version of the \ILD, adapted to the \CLIC colliding environment. The differences between \ILD and \CLICILD can be seen in \Figure{fig:detectorILD} and \Table{tab:ILDvsCLICILD}, and are addressed in the discussion below.
+
+
 
 
 \section{Overview of \ILD sub-detectors}
@@ -102,14 +225,14 @@ This section will describe the sub-systems of the \ILD detector concept in the \
 The \ILD detector concept is designed as a general purpose detector. Closest to the interaction points are the precision a vertex detector and a tracking system. The tracking system consists of silicon tracking with a time projection chamber. Surrounding the tracking system is a high granular calorimeter system. The outer solenoid provides a magnetic field of 3.5\,T. The most outer iron return yoke acts as a muon calorimeter.
 
 
-\section{Vertex Detector}
+\subsection{Vertex Detector}
 
 The pixel-vertex detector(\VTX) needs to be close to the interaction point to reconstruct secondary vertex. As the \TPC is the main tracking  detector, the \VTX mainly measures the impact parameter of tracks. The structure is three double layers with a barrel geometry. Double layer lowers the material budget and improves the impact parameter measurements. The first double layer is half length of the other two to avoid the high occupancy region of direct low omentulum hits from the incoherent pair background.
 
 For the \CLIC, the same structure is used. The first layer is moved outwards due to a larger high occupancy region with higher centre-of-mass energy. The detector is also required to provided time stamping at nanoseconds level.
 
 
-\section{Tracking Detectors}
+\subsection{Tracking Detectors}
 
 The hybrid  tracking system is consists of a large volume time projection chamber (\TPC), a Silicon Inner Tracker (\SIT), a Silicon External Tracker (\SET) in the barrel region, a end cap tracking component (\ETD) behind the endplate of the \TPC, and a silicon forward tracker (\FTD) in the forward region. The \SIT, \SET, and \ETD are made up two single-sided strip layers tilted by a small angle. The \FTD is a system of two silicon-pixel disks and five silicon-strip disks.  The silicon envelope tracking system and the \TPC are shown in \Figure{fig:detectorTracking}.
 
@@ -148,9 +271,9 @@ within an ILC bunch train.
 \end{figure}
 
 
-\section{Electromagnetic Calorimeter}
+\subsection{Electromagnetic Calorimeter}
 
-The Silicon-Tungsten sampling electromagnetic calorimeters in the \ILD consist of a nearly cylindrical barrel and two end cap systems, optimised for particle flow. The \ECAL measures photon energies and separates photons from other particles. The fine granular \ECAL also sits inside the \HCAL, which hosts the first part of the hadronic showers and greatly helps to separate hadronic showers. 
+The Silicon-Tungsten sampling electromagnetic calorimeters in the \ILD consist of a nearly cylindrical barrel and two end cap systems, optimised for particle flow. The \ECAL measures photon energies and separates photons from other particles. The fine granular \ECAL also sits inside the \HCAL, which hosts the first part of the hadronic showers and greatly helps to separate hadronic showers.
 
 The particle flow paradigm has a large impact on the \ECAL design with many requirements. In addition for the \ECAL to measure and separate photons, it also needs to reconstruct detail shower profiles to separate electromagnetic showers from hadronic showers, as approximately 50\% of hadronic showers starts in the \ECAL. These requirements can be fulfilled with an excellent three dimensional granular \ECAL.
 
@@ -222,10 +345,198 @@ optimise the pattern recognition performance, the active layers (either silicon 
 are segmented into cells with a lateral size of 5 mm.
 \end{comment}
 
-\section{Hadronic Calorimeter}
+\subsection{Hadronic Calorimeter}
+
+The requirements of sampling hadronic calorimeter is, again, driven by the need of the particle flow. The need of three dimensional granularity in transverse and logistically direction is satisfied by a sampling calorimeter.
 
 
-This section will describe sub-systems from small to large radius.
+
+The principle role of the \HCAL is to separate neutral hadron showers from other particles, and to measure neutral hadron energies. The neutral hadron contribution of  the jet energy is around 10\% on average. A moderate fine  granular \HCAL is a good balance between cost and performance. The chosen layout is 48 longitudinal layers with 3 by 3\cm scintillator tiles, using an analogue read out system. The layout of a technological prototype, the "EUDET prototype" is shown in \Figure{fig:detectorAHCAL} \cite{Collaboration:2011jka}.
+
+The longitudinal system provide about 6 radiation lengths including the \ECAL, which is sufficient to contain the hadronic showers. The transverse cell sizes has been optimised for the best jet energy resolution. It is found that no substantial gain below 3\,cm and performance degradation above 3\,cm. Hence 3\,cm cell size is chosen for the \HCAL. The jet energy resolution as a function of \HCAL scintillator cell size with different jet energies is shown in \Figure{fig:detectorHCALoptimise}.
+
+The absorber material, stainless steel is chosen for mechanical and calorimetric reasons. Steel allows a self-supporting structure without auxiliary supports. Also steel has a moderate ratio of interaction length to radiation length.
+
+For the \CLICILD, extra layers are added to contain the hadronic shower at high energy. The increased thickeners is justified by the simulation studies, where the jet energy resolution degrades quickly for a thinner \HCAL.
+
+
+
+\begin{figure}[tdbph]
+\centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{ILD/ILD_AHCAL}
+    \caption{}
+    \label{fig:detectorAHCAL}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{ILD/HCALoptimise}
+    \caption{}
+    \label{fig:detectorHCALoptimise}
+  \end{subfigure}
+\caption[]
+{\FIGURE{fig:detectorAHCAL} shows the schematic view of a CALICE AHCAL technological prototype module. \FIGURE{fig:detectorHCALoptimise} shows the jet energy resolution as a function of the hadronic calorimeter scintillator cell sizes, with different energies. Both figures are taken from \cite{Baer:2013cma}.}
+\label{fig:detectorHCAL}
+\end{figure}
+
+
+\begin{comment}
+The role of the HCAL is to separate the deposits of charged and neutral hadrons and to precisely
+measure the energy of the neutrals. Their contribution to the jet energy, around 10% on average,
+fluctuates over a wide range from event to event, and the accuracy of the measurement is the
+dominant contribution to the particle flow resolution for jet energies up to about 100 GeV. For higher
+energies, the performance is dominated by confusion, and both topological pattern recognition and
+energy information are important for correct track cluster assignment.
+
+
+This is followed by a highly segmented hadronic calorimeter (HCAL) with up to 48 longitudinal
+samples and small transverse cell size. Two options are considered, both based on a Steel-absorber
+structure. One option uses scintillator tiles of 3 . 3 cm2, which are read out with an analogue
+system. The second uses a gas-based readout which allows a 1.1 cm2 cell geometry with a binary or semi-digital readout of each cell.
+
+
+The HCAL is optimized to measure neutral hadrons
+well and thus has to provide the topological resolution power for separating them from the showers of
+the much more abundant charged hadrons which must be matched with tracks.
+
+
+The transverse and longitudinal segmentation of both calorimeters has been optimised based on
+detailed simulation and test beam data. It has been shown that the granularity must be of the order
+of X0 in all three dimensions. This implies that a sampling calorimeter is the best option for both
+ECAL and HCAL. For the ECAL the most compact design can be realised with tungsten as absorber
+material. For the HCAL iron is chosen as this allows an excellent energy resolution for hadrons at
+manageable granularity.
+
+
+
+The role of the HCAL is to separate the deposits of charged and neutral hadrons and to precisely
+measure the energy of the neutrals. Their contribution to the jet energy, around 10% on average,
+fluctuates over a wide range from event to event, and the accuracy of the measurement is the
+dominant contribution to the particle flow resolution for jet energies up to about 100 GeV. For higher
+energies, the performance is dominated by confusion, and both topological pattern recognition and
+energy information are important for correct track cluster assignment.
+
+
+
+
+The HCAL is conceived as a sampling calorimeter with steel absorber and scintillator tiles
+(analogue HCAL) or gaseous devices (semi-digital HCAL) as active medium. Due to the rigidity of
+stainless steel, a self-supporting structure without auxiliary supports (dead regions) can be realised.
+Moreover, in contrast to heavier materials, iron with its moderate ratio of hadronic interaction length
+(.I = 17 cm) to electromagnetic radiation length (X0 = 1.8 cm) allows a fine longitudinal sampling
+in terms of X0 with a reasonable number of layers in a given total hadronic absorption length, thus
+keeping the detector volume and readout channel count at an acceptable level. This fine sampling is
+beneficial both for the measurement of the sizeable electromagnetic energy part in hadronic showers
+and for the topological resolution of shower substructure, needed for particle separation and weighting.
+Two baseline technology options have been developed, the scintillator-tile based AHCAL and the
+Glass Resistive Plate Chamber (GRPC) based SDHCAL.
+\end{comment}
+
+\subsection{Solenoid}
+
+A large superconducting solenoid outside the calorimeters produces a nominal  3.5\,T magnetic field. For the \CLICILD, the magnetic filed is increased to 4\,T  for a better performance at a high centre-of-mass energy.
+
+
+\subsection{Yoke and Muon system}
+
+An iron yoke instrumented with scintillator strips active layers returns the magnetic flux, and acts as a muon detector and tail catcher calorimeter at the same time. The layout is shown in \Figure{fig:detectorILDMuon}. The agreed maximum magnetic field at 15 m radial distance from the detector is 50 Gauss to ensure safety \cite{Parker:21354}. A highly efficient muon detector is provided by the 3 by 3\,cm scintillator strips. As a tail catcher calorimetry, the first layer of the muon detector, catches the energy leakage from the \HCAL and the \ECAL. It has been shown a 10\% improvement of single particle energy resolution is possible with the tail catcher \cite{CALICE:2012aa}.
+
+For the \CLICILD, due to the different magnetic field strength, the iron yoke thickness differs to that of the \ILD.
+
+
+\begin{figure}[tdbph]
+\centering
+\includegraphics[width=0.45\textwidth]{ILD/ILD_Muon}
+\caption[]
+{Sensitive Layers of the \ILD muon system, taken from \cite{Baer:2013cma}.}
+\label{fig:detectorILDMuon}
+\end{figure}
+
+\begin{comment}
+the iron Yoke has been instrumented with scintillator based active layers. At the
+moment tiles with 3 . 3 cm2 granularity are used, for muon detection and serving as a tail
+catcher for the HCAL; this is different than the detector baseline which uses 3 cm wide and 1
+m long strips;
+
+During beam operation the IR hall has to be accessible due to the push-pull concept. Since all
+activities in a high magnetic field are very cumbersome and potentially dangerous, a field limit of 50 G
+at 15 m radial distance from the beam line was agreed upon [354]. Two- and three-dimensional FEM
+field calculations were done using the CST EM Studio program, varying the thickness and geometry
+of the iron in the barrel and end-caps until the goal of less than 50 G at 15 m radial distance was
+achieved.
+
+
+
+An iron yoke, instrumented with scintillator strips or resistive plate chambers (RPCs), returns
+the magnetic flux of the solenoid, and, at the same time, serves as a muon filter, muon detector and
+tail catcher calorimeter
+
+A stable, highly efficient muon identification system with excellent hadron rejection is an important
+requirement to meet the physics goals of the ILD detector. The ILD muon system provides a number
+of measurement stations outside the solenoid coil, which supplement the measurements taken with
+the calorimeter system and the tracker. It is used to identify the muons and to act as a tail catcher, to
+recover energy which is leaking out of the back of the calorimeter. However, the barrel part location
+behind the coil limits its role to fairly high momentum particles.
+The muon system/ tail catcher instruments the iron return yoke in the barrel and in the forward
+region. The yoke barrel part is equipped with one sensitive layer in front of the iron yoke, 10 layers
+spaced 14 cm apart, followed by three sensitive layers spaced by 60 cm apart. The forward part of the
+yoke is equipped with 10 layers spaced by 14 cm, followed by two sensitive layers spaced by 60 cm.
+The overall layout of the muon system/ tail catcher is shown in Figure
+
+The first layers of the muon system serve as a tail catcher, measuring the energy which leaks through
+the end of the calorimeter system. Figure III-4.5 shows the effect of an ideal tail catcher (no dead
+material between the calorimeter and the tail catcher) and the realistic scenario at ILD, with two
+interaction lengths of material in front of the tail catcher, as a function of the total depth of the
+calorimeter system. For 6 ., the value for the ILD calorimeter system, a roughly 10% improvement is
+possible with the tail catcher [348].
+A prototype of the muon system/tail catcher was successfully tested during the 2007-2012
+CALICE test beam campaign with ECAL and analogue HCAL. A tail catcher was placed behind the
+HCAL instrumented with scintillator strips and readout with SiPMs [348]. Results from the tests
+show that the proposed system delivers the anticipated performance and thus validates the technology
+needed to built a muon system for ILD.
+\end{comment}
+
+\subsection{Very Forward Calorimeters}
+
+The forward region detectors provide luminosity measurements and forward coverage of calorimeters. A system of precision and radiation resistent calorimeters are required. The luminosity calorimeter counts  Bhabha scattering to measure the luminosity to precision of $10^{-3}$ at 500\,GeV centre-of-mass energy. The beam calorimeter (\BeamCAL) extend the forward coverage, which are hit by many beamstrahlung pairs after each bunch corssing. \BeamCAL estimates a bunch-by-bunch luminosity. An additional hadron calorimeter, \LHCAL, at the forward region extends the angular coverage of the \HCAL to that of the \LumiCAL. Electron tagging is possible with the very forward calorimeters\cite{sailer2012radiation}, which aids event reconstruction at high centre-of-mass energy.
+
+The \CLICILD adopted a similar very forward calorimetry system as that of the \ILD. Modifications to the design due to \CLIC 3\,TeV centre-mass-of energy can be found in \cite{Linssen:2012hp}.
+
+
+\begin{figure}[tdbph]
+\centering
+\includegraphics[width=0.45\textwidth]{ILD/ILD_forward}
+\caption[]
+{The forward calorimeters of the \ILD, taken from \cite{Baer:2013cma}. LumiCal, BeamCal, and LHCAL are the luminosity calorimeter, beam calorimeter, and forward hadronic calorimeter.}
+\label{fig:detectorILDForward}
+\end{figure}
+
+\begin{comment}
+
+At very forward angles, below the coverage provided by the ECAL and the HCAL, a system of
+high precision and radiation hard calorimetric detectors (LumiCAL, BeamCAL, LHCAL) is foreseen.
+These extend the calorimetric coverage to almost 4fi, measure the luminosity, and monitor the quality
+of the colliding beams
+
+Two special calorimeters are foreseen in the very forward regions of the detector [324], denoted
+hereafter as LumiCal and BeamCal. LumiCal will measure the luminosity with a precision of better
+than 10¡Ù3 at 500 GeV centre-of-mass energy1, and BeamCal will perform a bunch-by-bunch estimate
+of the luminosity and, supplemented by a pair monitor, assist beam tuning when included in a fast
+feedback system [325]. Both calorimeters extend the detector coverage to low polar angles, important
+e.g. for new particle searches with missing energy signature [326]. The additional low angle hadron
+calorimeter LHCAL extends the coverage of the hadron calorimeter to the polar angle range of
+LumiCal. A sketch of the design is shown in Figure III-3.24.
+LumiCal is positioned in a circular hole of the end-cap electromagnetic calorimeter ECAL.
+BeamCal is placed just in front of the final focus quadrupole. LumiCal covers polar angles between
+31 and 77 mrad and BeamCal between 5 and 40 mrad.
+Due to the high occupancy originating from beamstrahlung and two-photon processes, both
+calorimeters need a fast readout. In addition, the lower polar angle range of BeamCal is exposed to a
+large flux of low energy electrons, resulting in radiation depositions up to one MGy per year. Hence,
+radiation hard sensors are needed.
+
+\end{comment}
+
+
+%This section will describe sub-systems from small to large radius.
 
 
 
@@ -253,24 +564,4 @@ of the letter of intent, major progress has been made in the maturity of the tec
 ILD, and their integration into a coherent detector concept
 \end{comment}
 
-\section{Motivation}
-
-
-
-Photon - passage through matter. Photon electromagnetic shower
-
-
-Since Higgs discovery in the \LHC in 2012, Higgs
-
-
-
-Ha there is a higgs.
-
-We found higgs. Higgs is cool. It explains mass.
-
-Why double higgs. Double higgs coulpling is unique to linear collider. It can revel much about the BSM models.
-
-Generator level study has performed. ILC has done this this and that. gHHH in CLIC before
-
-Here we do things differently. First subchannels, then extract both couplings simultaneously.
 
