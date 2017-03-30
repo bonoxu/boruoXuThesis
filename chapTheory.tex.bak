@@ -4,17 +4,17 @@
 \chapterquote{ILC will be built next year}%
 {Mysterious person}%: Blackwood's Magazine May 1830
 
-This chapter provides a theoretical overview which would be used in the subsequent  chapters. A short review of the Standard Model of Particle Physics, the current best particle theory, is provided, with an emphasis on the Higgs mechanism. A general parametrisation of the Higgs theory is discussed, and supplies the theoretical background for the physics analysis in the \Chapter{chap:DoubleHiggs}.
+This chapter provides a theoretical overview which would be used in the subsequent  chapters. A short review of the Standard Model of Particle Physics, the current best particle theory, is provided, with an emphasis on the Higgs mechanism and the Higgs boson. A general parametrisation of the Higgs theory, beyond the Standard Model, is discussed, and supplies the theoretical background for the physics analysis in the \Chapter{chap:DoubleHiggs}.
 
 \section{Overview of the Standard Model}
 
-The Standard Model (\SM) is a quantum field theory concerning three fundamental interactions of nature: the electromagnetic, weak and strong integrations. The \SM also describes the interactions between the sub-atomic particles. The deployment and the experimental verification of the \SM throughout the second half of the 20th century is one of the greatest triumph of the particle physics. The most recent discovery of the Higgs boson in 2012 \cite{} further verified the theory. This chapter summarise the \SM based on \cite{}.
+The Standard Model (\SM) is a quantum field theory concerning three fundamental interactions of nature: the electromagnetic, weak and strong integrations. The \SM also describes the interactions between the sub-atomic particles. The deployment and the experimental verification of the \SM throughout the second half of the 20th century is one of the greatest triumph of the particle physics. The most recent discovery of the Higgs boson in 2012 \cite{Aad:2012tfa} further verified the theory. This chapter summarise the \SM based on the summaries of the \SM \cite{Agashe:2014kda,Thomson:2013zua,Tong:QFT,Gripaios:GFT}.
 
-The fundamental particles in the \SM consist of three categories: force exchange bosons, leptons and neutrinos, and quarks. In the \SM, the force exchange bosons carries the fundamental forces between particles. For example, photon is the force carrier of the electromagnetic force. \PWp, \PWm, and \PZ are the force carriers of the weak force. Gluon, \Pg, is the force carrier of the strong force. These bosons will be discussed further in \Section{}. There is also the Higgs boson from the spontaneous symmetry breaking of the Higgs filed, which is discussed in \Section{}
+The fundamental particles in the \SM consist of three categories: force exchange bosons, leptons and neutrinos, and quarks. In the \SM, the force exchange bosons carries the fundamental forces between particles. For example, photon is the force carrier of the electromagnetic force. \PWp, \PWm, and \PZ are the force carriers of the weak force. Gluon, \Pg, is the force carrier of the strong force. These bosons will be discussed further in \Section{sec:theoryElectroweak}. There is also the Higgs boson from the spontaneous symmetry breaking of the Higgs filed, which is discussed in \Section{sec:theoryHiggsBoson}
 
 %A summary of the selected properties of these force exchange bosons can be found in \Table{}.
 
-Another category of fundamental particles contains leptons and neutrinos. These particles are fermions. For each fermion in the \SM, there is an anti-fermion with same mass and spin, but opposite charge. Leptons and neutrinos have three generations. Each generation has same interaction properties, but different masses. Although neutrinos could not be directly detected, measurements of the \PZ decay width strong suggested the three generations of neutrinos \cite{ALEPH:2005ab}. Leptons and neutrinos experience weak forces as well as electromagnetic forces, which will be further discussed in \Section{}.
+Another category of fundamental particles contains leptons and neutrinos. These particles are fermions. For each fermion in the \SM, there is an anti-fermion with same mass and spin, but opposite charge. Leptons and neutrinos have three generations. Each generation has same interaction properties, but different masses. Although neutrinos could not be directly detected, measurements of the \PZ decay width strong suggested the three generations of neutrinos \cite{ALEPH:2005ab}. Leptons and neutrinos experience weak forces as well as electromagnetic forces, which will be further discussed in \Section{sec:theoryElectroweak}.
 
 The last category of fundamental particles are quarks, which are also fermions and have three generations. Each generation has a positively charged up type quark and a negatively charged down type quark. Quarks experiences all three fundamental forces described by the \SM.
 
@@ -61,7 +61,7 @@ G^a_{\mu\nu} = \partial_{\mu}\gamma_{\nu}^a - \partial_{\nu}\gamma_{\mu}^a  - g_
 The last extra term comparing to \QED indicates the non-Abelian nature of the \QCD.
 
 \section{The electroweak interaction}
-
+\label{sec:theoryElectroweak}
 The electroweak interaction can be thought of a extension to the \QED to incorporate the weak force, and to explain different coupling strength to left-handed and right-handed fermions. However, the Lagrangian  does not allow the massive  electroweak force exchange bosons and fermions, which are explained by the Higgs mechanism  and  the Yukawa interactions.
 
 There are four vector boson fields in the theory, 3 $W$ and 1 $B$ field. The Lagrangian can be divided into two parts: the bosonic self interaction and the couplings to the fermions.
@@ -138,8 +138,8 @@ m_{u} = \frac{\lambda^u{\nu}}{\sqrt{2}},\ m_{d} = \frac{\lambda^d{\nu}}{\sqrt{2}
 \end{equation}
 
 \section{Standard Model Higgs boson}
-
-So far, interactions between different fields in the Standard Model, as well as the mass obtaining mechanism have been discussed. Only left for discussion is the Higgs bosons, and its interactions with other fields. 
+\label{sec:theoryHiggsBoson}
+So far, interactions between different fields in the Standard Model, as well as the mass obtaining mechanism have been discussed. Only left for discussion is the Higgs bosons, and its interactions with other fields.
 
 For the Higgs doublet complex field in the \SM, there are four real scalar degrees of freedom. By choosing the unitary gauge, three degree of freedoms are manifestly eaten. The Higgs field becomes
 \begin{equation}
@@ -156,15 +156,17 @@ $h(x)$ is real scalar field for the Higgs boson. It is not charged under electro
 
 From the \Equation{eq:theoryBoson}, the Higgs boson interaction terms for bosons can be shown as
 \begin{equation}
+\label{eq:theoryHiggsBosonic}
 \Lagr\supset m^2_W\left(\frac{2h}{\nu} + \frac{{h}^2}{\nu^2}\right)W^+_{\mu}W^{-\mu} + \frac{m^2_Z}{2}\left(\frac{2h}{\nu} + \frac{{h}^2}{\nu^2}  \right)Z_{\mu}Z^{\mu}
 \end{equation}
 The Higgs boson self interactions are obtained from the Higgs field potential
 \begin{equation}
+\label{eq:theoryHiggsSelfCoupling}
 \Lagr\supset \frac{\mu^2}{2}\left(\nu+h\right)^2 - \frac{\lambda}{4}\left(\nu+h\right)^4 \supset -\lambda\nu^2{h}^2-\lambda\nu{h}^3 - \frac{\lambda}{4}h^4 = -\frac{m_h^2}{2}h^2 - \frac{m_h^2}{2\nu}h^3 - \frac{m_h^2}{8\nu^2}h^4.
-\end{equation} 
+\end{equation}
 The Higgs boson mass, $m_h$ is $2\lambda\nu^2$. The triple and quartic self interaction strengths are $- \frac{m_h^2}{2\nu}$ and $\frac{m_h^2}{8\nu^2}$. Once the $m_h$ is determined, $\lambda$ can be worked out. The Higgs boson decay width and branching fraction can be roughly worked out. For example, \Figure{fig:theoryHiggsDecayWidth} and \Figure{fig:theoryHiggsBranchingRatio} show partial decay width and the branching ratios as a function of $m_h$.
 
-The Higgs boson decaying to a pair of heavier particles, such as $\PWp\PWm$ or \PZ\PZ is forbidden kinematically. However, \Figure{fig:theoryHiggsPhenomenology} shows that the Higgs decaying to  $\PWp\PWm$  dominates before the mass threshold $m_H = 2m_W \sim 160 \ GeV$. This is because one of the $\PWpm$ gauge bosons is virtual and not on the mass shell, which is allowed by the quantum field theory. The virtual gauge boson subsequently decays to real on-shell particles. 
+The Higgs boson decaying to a pair of heavier particles, such as $\PWp\PWm$ or \PZ\PZ is forbidden kinematically. However, \Figure{fig:theoryHiggsPhenomenology} shows that the Higgs decaying to  $\PWp\PWm$  dominates before the mass threshold $m_H = 2m_W \sim 160 \ GeV$. This is because one of the $\PWpm$ gauge bosons is virtual and not on the mass shell, which is allowed by the quantum field theory. The virtual gauge boson subsequently decays to real on-shell particles.
 
 %Higgs prefers to decay to the most massive possible final state. The ratio of fermionic branching ratios are proportional to fermion masses squared, modulo color factors and radiative corrections.
 \begin{figure}[tbph]
@@ -192,11 +194,44 @@ Since the \SM like Higgs boson discovery in 2012, it becomes important to unders
 
 An important physics channel for testing the Higgs theory is the double Higgs production via vector boson fusion at high energy \cite{Giudice:2007fh,Contino:2010mh,Contino:2013gna}. For the composite Higgs scenario, the scattering amplitude increases with the energy. For the dilaton scenario, no energy defence on the scattering amplitude is expected. It is difficult for the Large Hardon Collider to measure the cross section due to the large \SM background rate \cite{Contino:2010mh}. However, a multi-TeV linear electron position collider, such as Compact Linear Collider, would be able to precisely measure the cross section \cite{Barger:2003rs}.
 
-Following the assumption made in the \cite{Contino:2010mh,Contino:2013gna}, the self interaction of the light scalar Higgs, $h$, and its coupling to other \SM bosons can be described by the Lagrangian, after the electroweak symmetry breaking:
+Following the assumption made in the \cite{Contino:2010mh,Contino:2013gna}, the self interaction of the light scalar Higgs, $h$, and its coupling to other \SM bosons can be described by the following Lagrangian. The notation in the \cite{Contino:2013gna} is followed. After the electroweak symmetry breaking, the bosonic part of the Lagrangian reads:
 \begin{equation}
-\Lagr = m^2_W\left(\frac{2h}{\nu} + \frac{{h}^2}{\nu^2}\right)W^+_{\mu}W^{-\mu} + \frac{m^2_Z}{2}\left(\frac{2h}{\nu} + \frac{{h}^2}{\nu^2}  \right)Z_{\mu}Z^{\mu}
+\Lagr =\frac{1}{2}\left(\partial_\mu{h}\right)  - V(h) + \parenths{m_W^2{W}_\mu^+{W}^{-\mu} + \frac{m_Z^2}{2}Z_{\mu}Z^\mu}\sqbracs{1 + 2a\frac{h}{\nu} + b \frac{h^2}{\nu^2} + \hdots},
 \end{equation}
+where $V(h)$ is the $h$ field potential,
+\begin{equation}
+V(h) = \frac{1}{2}m_h^2h^2 + d_3\parenths{\frac{m_h^2}{2\nu}}h^3 + d_4\parenths{\frac{m_h^2}{8{\nu}^2}}h^4 + \hdots .
+\end{equation}
+$a$, $b$, $d_3$ and $d_4$ are arbitrary dimensionless parameters. Higher order terms in $h$ are omitted. $a$ and $b$ are proportional to the coupling strength of the $VVh$ and $VVhh$ vertices, where $V = \PWpm, \PZ$. $d_3$ and $d_4$ are proportional to the triple and quartic $h$ self coupling strength. Comparing with \Equation{eq:theoryHiggsBosonic} and \Equation{eq:theoryHiggsSelfCoupling}, the \SM Higgs suggests $a=b=d_3=d_4=1$ and all higher order terms vanish. The dilaton scenario imposes the relation, $a = b^2$.
+
+The scattering amplitude for \HepProcess{{V}_L{V}_L \to hh} can be written as
+\begin{equation}
+A = a^2\parenths{A_{SM} + A_1\delta_b + A_2\delta_{d_3}},
+\end{equation}
+where $A_{SM}$ is the \SM amplitude and 
+\begin{equation}
+\delta_b \equiv 1 - \frac{b}{a^2},
+\end{equation}
+\begin{equation}
+\delta_{d_3} \equiv 1 - \frac{d_3}{a}.
+\end{equation}
+$A_1$ grows like energy squared at large center-of-mass energy, $E\gg{m_V}$. $A_{SM}$ and $A_2$ has no energy depended. Therefore, $\delta_b$ controls the magnitude of the scattering amplitude increasing as a function of energy. $\delta_{d_3}$, however, determines the magnitude at threshold. In an electron-positron collider, this scattering process and be studied via \HepProcess{\Ppositron\Pelectron \to \Pneutrino\APneutrino hh} channel. The cross section of the channel can be written as 
+\begin{equation}
+\label{eq:theoryGeneralHiggsCrossSection}
+\sigma = a^4\sigma_{SM}\parenths{1 + A\delta_b + B\delta_{d_3} + C\delta_b\delta_{d_3} + D\delta_b^2 + E\delta_{d_3}^2},
+\end{equation}
+where $\sigma_{SM}$ is the cross section predicted by the \SM. With suitable kinematic cuts, high-energy behaviour can be disentailed from the physics at threshold, allowing the extraction of $\delta_{b}$, $\delta_{d_3}$ and hence the coupling strength $g_{VVHH}$ and $g_{HHH}$. $a$, which is proportional to $g_{VVH}$ also appears in the cross section, and in the definition of $\delta_{b}$ and $\delta_{d_3}$. For a multi-TeV electron-positron collider, the cross section for single Higgs production is far greater than that of the double Higgs. \FIGURE{fig:theoryHiggsCrossSection} shows the comparison of the cross section as a function of the centre-of-mass energy. Therefore, $g_{VVH}$ will be measured precisely before investigating double Higgs production. For the purpose of measuring $g_{VVHH}$ and $g_{HHH}$ via double Higgs production, $a$ in the \Equation{eq:theoryGeneralHiggsCrossSection} can be treated as a constant.
+
+\begin{figure}[tbph]
+\centering
+\includegraphics[width=0.45\textwidth]{theory/HiggsCLICcrossSection}
+\caption[]
+{Cross section as a function of centre-of-mass energy for the Higgs production processes at an electron-positron collider for a Higgs mass of 126GeV. The values shown correspond
+to unpolarised beams and do not include the effect of beamstrahlung. Plot is taken from \cite{Abramowicz:2016zbo}.}
+\label{fig:theoryHiggsCrossSection}
+\end{figure}
 
 
-Photon - passage through matter. Photon electromagnetic shower
+
+%Photon - passage through matter. Photon electromagnetic shower
 

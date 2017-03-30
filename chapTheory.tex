@@ -4,21 +4,25 @@
 \chapterquote{ILC will be built next year}%
 {Mysterious person}%: Blackwood's Magazine May 1830
 
-This chapter provides a theoretical overview which would be used in the subsequent  chapters. A short review of the Standard Model of Particle Physics, the current best particle theory, is provided, with an emphasis on the Higgs mechanism. A general parametrisation of the Higgs theory is discussed, and supplies the theoretical background for the physics analysis in the \Chapter{chap:DoubleHiggs}.
+This chapter provides a theoretical overview which would be used in the subsequent  chapters. A short review of the Standard Model of Particle Physics, the current best particle theory, is provided, with an emphasis on the Higgs mechanism and the Higgs boson. A general parametrisation of the Higgs theory, beyond the Standard Model, is discussed, and supplies the theoretical background for the physics analysis in the \Chapter{chap:DoubleHiggs}.
 
 \section{Overview of the Standard Model}
 
-The Standard Model (\SM) is a quantum field theory concerning three fundamental interactions of nature: the electromagnetic, weak and strong integrations. The \SM also describes the interactions between the sub-atomic particles. The deployment and the experimental verification of the \SM throughout the second half of the 20th century is one of the greatest triumph of the particle physics. The most recent discovery of the Higgs boson in 2012 \cite{} further verified the theory. This chapter summarise the \SM based on \cite{}.
+The Standard Model (\SM) is a quantum field theory concerning three fundamental interactions of nature: the electromagnetic, weak and strong integrations. The \SM also describes the interactions between the sub-atomic particles. The deployment and the experimental verification of the \SM throughout the second half of the 20th century is one of the greatest triumph of the particle physics. The most recent discovery of the Higgs boson in 2012 \cite{Aad:2012tfa} further verified the theory. This chapter summarise the \SM based on the summaries of the \SM \cite{Agashe:2014kda,Thomson:2013zua,Tong:QFT,Gripaios:GFT}.
 
-The fundamental particles in the \SM consist of three categories: force exchange bosons, leptons and neutrinos, and quarks. In the \SM, the force exchange bosons carries the fundamental forces between particles. For example, photon is the force carrier of the electromagnetic force. \PWp, \PWm, and \PZ are the force carriers of the weak force. Gluon, \Pg, is the force carrier of the strong force. These bosons will be discussed further in \Section{}. There is also the Higgs boson from the spontaneous symmetry breaking of the Higgs filed, which is discussed in \Section{}
+The fundamental particles in the \SM consist of three categories: force exchange bosons, leptons and neutrinos, and quarks. In the \SM, the force exchange bosons carries the fundamental forces between particles. For example, photon is the force carrier of the electromagnetic force. \PWp, \PWm, and \PZ are the force carriers of the weak force. Gluon, \Pg, is the force carrier of the strong force. These bosons will be discussed further in \Section{sec:theoryElectroweak}. There is also the Higgs boson from the spontaneous symmetry breaking of the Higgs filed, which is discussed in \Section{sec:theoryHiggsBoson}
 
 %A summary of the selected properties of these force exchange bosons can be found in \Table{}.
 
-Another category of fundamental particles contains leptons and neutrinos. These particles are fermions. For each fermion in the \SM, there is an anti-fermion with same mass and spin, but opposite charge. Leptons and neutrinos have three generations. Each generation has same interaction properties, but different masses. Although neutrinos could not be directly detected, measurements of the \PZ decay width strong suggested the three generations of neutrinos \cite{ALEPH:2005ab}. Leptons and neutrinos experience weak forces as well as electromagnetic forces, which will be further discussed in \Section{}.
+Another category of fundamental particles contains leptons and neutrinos. These particles are fermions. For each fermion in the \SM, there is an anti-fermion with same mass and spin, but opposite charge. Leptons and neutrinos have three generations. Each generation has same interaction properties, but different masses. Although neutrinos could not be directly detected, measurements of the \PZ decay width strong suggested the three generations of neutrinos \cite{ALEPH:2005ab}. Leptons and neutrinos experience weak forces as well as electromagnetic forces, which will be further discussed in \Section{sec:theoryElectroweak}.
 
 The last category of fundamental particles are quarks, which are also fermions and have three generations. Each generation has a positively charged up type quark and a negatively charged down type quark. Quarks experiences all three fundamental forces described by the \SM.
 
-The \SM has enjoyed great success with theoretical predictions being experimentally varied. Some highlights included the discovery of the top quark in 1995 cite{}, the tau netrino in 2000 cite{} and the Higgs bosons in 2012 cite{}. However, there are observations which are not explained by the \SM. One issue is that the \SM does not incorporate the gravitational force. There have been attempts to modify the \SM but no conclusive theory yet. Another issue is that the \SM does not allow neutrino masses and mixings. There have been many theories beyond the Standard Model (BSM). One such example is the generalisation of the Higgs theory to allow non \SM coupling values. This will be discussed in \Section{}.
+The \SM has enjoyed great success with theoretical predictions being experimentally varied. Some highlights included the discovery of the top quark in 1995 cite{}, the tau netrino in 2000 cite{} and the Higgs bosons in 2012 cite{Aad:2012tfa}. However, there are observations which are not explained by the \SM. One issue is that the \SM does not incorporate the gravitational force. There have been attempts to modify the \SM but no conclusive theory yet. Another issue is that the \SM does not allow neutrino masses and mixings. There have been many theories beyond the Standard Model (BSM). One such example is the generalisation of the Higgs theory to allow non \SM coupling strengths. This will be discussed in \Section{sec:theoryHiggsBSM}.
+
+Notations and conventions will be introduced. The overview of the Standard Model starts with the quantum electrodynamics, and its generalisation to quantum chromodynamics. The unification of electromagnetism and weak interaction, electroweak gauge theory will be discussed. Afterwards, Higgs mechanism and Yukawa couplings will be introduced to explain bosons and fermions masses whilst preserving the Lagrangian symmetry. This will be followed by a detailed discussion on the Standard Model Higgs boson, its mass and interactions with other particles. The chapter finishes with explanation for possible Higgs theories beyond the Standard Model, the Lagrangian of the Higgs interaction, and observables, which forms the theoretical background for the analysis on the double Higgs production in the \Chapter{chap:DoubleHiggs}.
+
+
 \section{Notations and conventions}
 
 The natural unit is used in this document, $\hbar = c = 1$. The metric is mostly-minus, $\eta^{\mu\nu} = \text{diag}(1,-1,-1,-1)$. The Dirac gamma matrices are represented with $\gamma^{\mu}$, with $\mu$ goes from 0 to 3. $\gamma^5 = i \gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}$. $\overline{\psi} = \psi^{\dagger}\gamma^0$. Einstein summation convention is used as well this document.
@@ -61,7 +65,7 @@ G^a_{\mu\nu} = \partial_{\mu}\gamma_{\nu}^a - \partial_{\nu}\gamma_{\mu}^a  - g_
 The last extra term comparing to \QED indicates the non-Abelian nature of the \QCD.
 
 \section{The electroweak interaction}
-
+\label{sec:theoryElectroweak}
 The electroweak interaction can be thought of a extension to the \QED to incorporate the weak force, and to explain different coupling strength to left-handed and right-handed fermions. However, the Lagrangian  does not allow the massive  electroweak force exchange bosons and fermions, which are explained by the Higgs mechanism  and  the Yukawa interactions.
 
 There are four vector boson fields in the theory, 3 $W$ and 1 $B$ field. The Lagrangian can be divided into two parts: the bosonic self interaction and the couplings to the fermions.
@@ -138,7 +142,7 @@ m_{u} = \frac{\lambda^u{\nu}}{\sqrt{2}},\ m_{d} = \frac{\lambda^d{\nu}}{\sqrt{2}
 \end{equation}
 
 \section{Standard Model Higgs boson}
-
+\label{sec:theoryHiggsBoson}
 So far, interactions between different fields in the Standard Model, as well as the mass obtaining mechanism have been discussed. Only left for discussion is the Higgs bosons, and its interactions with other fields.
 
 For the Higgs doublet complex field in the \SM, there are four real scalar degrees of freedom. By choosing the unitary gauge, three degree of freedoms are manifestly eaten. The Higgs field becomes
@@ -188,7 +192,7 @@ The Higgs boson decaying to a pair of heavier particles, such as $\PWp\PWm$ or \
 
 
 \section{Higgs beyond the Standard Model}
-
+\label{sec:theoryHiggsBSM}
 
 Since the \SM like Higgs boson discovery in 2012, it becomes important to understand of role of the Higgs boson in the electroweak spontaneous symmetry breaking. In the absence of the Higgs boson, the coupling strength of the longitudinally polarised vector bosons grows with energy and becomes strong at TeV scale. The \SM Higgs bosons moderates the interacting strength, allowing the extraction of the weak coupling at short distances. In this scenario, the \SM Higgs couplings are constrained and predicted in one parameter only, the Higgs mass. But other alternative scenarios could allow the behaviour of the \SM Higgs at low energy. One such example, motivated by the hierarchy problem and the electroweak data, is that the light and narrow Higgs-scalar is a composite bound state of some strongly interacting sector at the TeV scale. The couplings of the Higgs to fermions and bosons would be different to those in the \SM. If the composite Higgs is the pseudo Nambu-Goldstone boson from a spontaneous global symmetry breaking, the Higgs can be naturally light \cite{Kaplan:1983fs}. Another scenario is that a composite dilaton, the pseudo Nambu-Goldstone boson arose from a spontaneous scale invariance breaking, partially behaves like a light Higgs \cite{Goldberger:2008zz}. In both scenarios, the interaction of Higgs becomes strong at high energy. The coupling of the Higgs would deviate to those in the \SM.
 
@@ -220,9 +224,19 @@ $A_1$ grows like energy squared at large center-of-mass energy, $E\gg{m_V}$. $A_
 \label{eq:theoryGeneralHiggsCrossSection}
 \sigma = a^4\sigma_{SM}\parenths{1 + A\delta_b + B\delta_{d_3} + C\delta_b\delta_{d_3} + D\delta_b^2 + E\delta_{d_3}^2},
 \end{equation}
-where $\sigma_{SM}$ is the cross section predicted by the \SM. With suitable kinematic cuts, high-energy behaviour can be disentailed from the physics at threshold, allowing the extraction of $\delta_{b}$, $\delta_{d_3}$ and hence the coupling strength $g_{VVHH}$ and $g_{HHH}$. $a$, which is proportional to $g_{VVH}$ also appears in the cross section, and in the definition of $\delta_{b}$ and $\delta_{d_3}$. For a multi-TeV electron-positron collider, the cross section for single Higgs production is far greater than that of the double Higgs. \FIGURE{} shows the comparison of the cross section as a function of the centre-of-mass energy. Therefore, $g_{VVH}$ will be measured precisely before investigating double Higgs production. For the purpose of measuring $g_{VVHH}$ and $g_{HHH}$ via double Higgs production, $a$ in the \Equation{eq:theoryGeneralHiggsCrossSection} can be treated as a constant.
+where $\sigma_{SM}$ is the cross section predicted by the \SM. With suitable kinematic cuts, high-energy behaviour can be disentailed from the physics at threshold, allowing the extraction of $\delta_{b}$, $\delta_{d_3}$ and hence the coupling strength $g_{VVHH}$ and $g_{HHH}$. Suitable observables are variables that increases with  increasing centre-of-mass energy. Two examples of such variables are the invariant mass of the two Higgses system, $m_{hh}$, and the sum of their transverse momenta, $H_T$. \Figure{theoryMhhHtDistribution} shows that the $m_{hh}$ and $H_T$ distributions are sensitive to the values of $\delta_{b}$ and $\delta_{d_3}$. The figure shows the result of a general level study performed in \cite{Contino:2013gna}.
 
-\begin{figure}[tbph]
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1\textwidth]{theory/MhhHtDistribution}
+\caption[]
+{Normalized differential cross sections $d\sigma/dm_{hh}$ and $d\sigma/dH_{T}$ for \HepProcess{\Ppositron\Pelectron \to \Pneutrino\APneutrino hh} at the Compact Linear Collider, with \rootS{3} TeV after the identification cuts, for several values of $\delta_{b}$ and $\delta_{d_3}$. Plot is taken from \cite{Contino:2013gna}.}
+\label{fig:theoryMhhHtDistribution}
+\end{figure}
+
+In the \Equation{eq:theoryGeneralHiggsCrossSection}, $a$, which is proportional to $g_{VVH}$, only entres as an overall factor. However, $a$ also appears in the definition of $\delta_{b}$ and $\delta_{d_3}$. To extract $\delta_{b}$ and $\delta_{d_3}$, $a$ should be a constant ideally. For a multi-TeV electron-positron collider, the cross section for single Higgs production is far greater than that of the double Higgs. \FIGURE{fig:theoryHiggsCrossSection} shows the comparison of the cross section as a function of the centre-of-mass energy. Therefore, $g_{VVH}$ and $a$ will be measured precisely before investigating the double Higgs production. For the purpose of measuring $g_{VVHH}$ and $g_{HHH}$ via double Higgs production, $a$ in the \Equation{eq:theoryGeneralHiggsCrossSection} can be treated as a constant.
+
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.45\textwidth]{theory/HiggsCLICcrossSection}
 \caption[]
