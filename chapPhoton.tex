@@ -29,11 +29,11 @@ Photon reconstruction is an important part of particle reconstruction. For many 
 
 PandoraPFA provides a framework for particle reconstruction \cite{}, as described in \Chapter{chap:Reconstruction}. In the linear collider content, it has a vast library of algorithms developed through years by many people. Each algorithm addresses one topological issue in the particle reconstruction \cite{}. The essential part of the PandoraPFA is track-cluster association and reclustering to find the best track-cluster pair. Algorithms that removes trackless clusters, such as removing muon clusters or photon clusters, would provide a clean environment for the track-cluster association, hence improving the jet energy resolution.
 
-Photon identification in the PandoraPFA has two main mechanisms. The basic mechanism tests trackless clusters, the after track-cluster association and the reclustering processes. The second more sophisticated photon identification is performed before the track-cluster association and reclustering process. This algorithm identifies photon electromagnetic shower cores carefully in the dense jet environment.
+Photon identification in the PandoraPFA has two main mechanisms. The basic mechanism (see \Section{sec:pandoraPFOcreation}) performs photon identification after track-cluster association and the reclustering processes. The second more sophisticated photon identification, the photon reconstruction algorithm, is performed before the track-cluster association and reclustering process. This algorithm identifies photon electromagnetic shower cores carefully in the dense jet environment.
 
-Second mechanism improves jet energy resolution by correctly identifying photon electromagnetic shower cores and leaving a cleaner environment for the track-cluster association. However, the peripheral calorimeter hits to the shower cores may be left as fragments, and reconstructed as separate particles. This lowers the reconstructed photon completeness and makes the number of reconstructed photons a less useful physical quantity. Also, the second mechanism leaves rooms for improvement of photon separation resolution.
+The photon reconstruction algorithm in \pandora version 1 improves jet energy resolution by correctly identifying photon electromagnetic shower cores and leaving a cleaner environment for the track-cluster association. However, the peripheral calorimeter hits to the shower cores may be left as fragments, and reconstructed as separate particles. This lowers the reconstructed photon completeness and makes the number of reconstructed photons a less useful physical quantity. Also, the algorithm in \pandora version 1 leaves rooms for improvement of photon separation resolution.
 
-This section presents a solution to the photon fragments issue. The introduced PandoraPFA algorithms also improves the photon separation resolution. Algorithms related to photon reconstruction, fragmental removal and photon splitting, which are written or introduced by authors, will be discussed below.
+This section presents a solution to the photon fragments issue. The newly introduced \pandora algorithms also improves the photon separation resolution. Algorithms related to photon reconstruction, fragmental removal and photon splitting, which are written or introduced by authors, will be discussed below.
 
 %Three algorithm will be discussed: a rewritten sophisticated photon reconstruction algorithm, a photon fragment removal algorithm and a photons splitting algorithm.
 
@@ -41,11 +41,11 @@ This section presents a solution to the photon fragments issue. The introduced P
 
 \section{Photon reconstruction algorithm}
 \label{sec:photonRecostrcution}
-The photon reconstruction algorithm refers to the more sophisticated photon identification of the two main identification mechanisms, before the track-cluster association and reclustering process. The algorithm has the following steps: coarsely forming photon clusters, reconstructing photon candidate, photon ID test, and optional fragment removals.
+The photon reconstruction algorithm refers to the more sophisticated photon identification of the two main identification mechanisms, before the track-cluster association and reclustering process (see \Section{sec:particleID}). The algorithm has the following steps: coarsely forming photon clusters, reconstructing photon candidate, photon ID test, and optional fragment removals. Reconstructing photon candidate requires further explanation of the two dimensional peak finding algorithms in \Section{sec:peakFinding}. The photon ID test involves a multi dimensional likelihood classifier, which is described in \Section{sec:photonLikelihood}.
 
 \subsection{Form photon clusters}
 
-This step finds large potential photon clusters. All calorimeter hits in the \ECAL, which are not used in previous algorithms, are grouped into clusters using a cone based clustering algorithm. To find photon clusters, which do not deposit energies in the tracking system, the cone clustering algorithm is seeded with energetic hits. The parameters for the cone clustering are generous, allowing potentially two or three photons in one cluster.
+This step finds large potential photon clusters. All calorimeter hits in the \ECAL, which are not used in previous algorithms, are grouped into clusters using a cone based clustering algorithm.To find neutral photon clusters, which do not deposit energies in the tracking system, the cone clustering algorithm is seeded with energetic hits. The parameters for the cone clustering are generous, allowing potentially two or three photons in one cluster.
 
 \subsection{Reconstruct photon candidates}
 \label{sec:photonCandiate}
@@ -109,7 +109,7 @@ The two dimensional histogram is iterated a few times during the algorithm. The 
 
 
 \section{Likelihood classifier for photon ID}
-\SECTION{sec:photonLikelihood}
+\label{sec:photonLikelihood}
 
 \SECTION{sec:photonIDtest} outlines the photon ID test in the photon reconstruction algorithm. This section describes the multidimensional likelihood classifier in details, including discriminating variables. For each photon candidate, a set of kinematic variables are calculated. The classifier training typically uses simulated jet events.
 
@@ -433,7 +433,7 @@ For simple samples such as two photons per event, there are very few fragments. 
 \label{fig:photonDoublePerformance}
 \end{figure}
 
-The resolving power of a photon pair depends on energies of two photons. \Figure{fig:photonDoubleCompareEnergies} is an example of average number of photon reconstructed for differen photon pairs. When the energies of two photons are similar, the resolving distance is shorter. This is because that the two photon showers have similar sizes, and the peak finding algorithm can exploit the symmetry. For example, 500 - 500\,GeV photon pair and 10 - 10\,GeV photon pair start to be resolved at 6\,mm apart, which is about 1 \ECAL cell. The asymmetrical photon pair,  500 - 50\,GeV and  100 - 10\,GeV pair, starts to be resolved at 10\,mm apart, which is about 2 \ECAL cell. 
+The resolving power of a photon pair depends on energies of two photons. \Figure{fig:photonDoubleCompareEnergies} is an example of average number of photon reconstructed for differen photon pairs. When the energies of two photons are similar, the resolving distance is shorter. This is because that the two photon showers have similar sizes, and the peak finding algorithm can exploit the symmetry. For example, 500 - 500\,GeV photon pair and 10 - 10\,GeV photon pair start to be resolved at 6\,mm apart, which is about 1 \ECAL cell. The asymmetrical photon pair,  500 - 50\,GeV and  100 - 10\,GeV pair, starts to be resolved at 10\,mm apart, which is about 2 \ECAL cell.
 
 For the energetic photon, it is more difficult to remove fragments, but it is easier to identify the photon. The electromagnetic shower core is more dominant than the peripherals. Therefore separating two energetic photons is easier than separating two low energy photons. This can be seen in \Figure{fig:photonDoubleCompareEnergies}. At 20\,mm apart, two photons in  500 - 500\,GeV pair are fully resolved, where approximately 60\% of two photons in 10 - 10\,GeV pair are resolved.
 

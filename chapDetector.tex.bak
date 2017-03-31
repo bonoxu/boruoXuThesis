@@ -11,20 +11,18 @@
 Since the discovery of a particle consistent with being the SM Higgs boson in LHC at 2012 \cite{Aad:2012tfa,Chatrchyan:2012ufa}, our understanding of Standard Model has improved greatly. Yet limited by the underlying QCD interaction from proton-anti-proton collision, one has great difficulty to measure the properties of the Higgs precisely. Next generation electron-positron linear collider could hopefully make precision measurements of the Higgs sector and the Top quark sector \cite{Abramowicz:2013tzc}.
 
 
-
-overall
-
-Future linear collider
-
-ILC
-
-CLIC
-
-
 \section{ILC}
 
 
-Two leading candidates for next generation electron-positron linear collider are the International Linear Collider (\ILC) \cite{Brau:2007zza}, and t he Compact Linear Collider (\CLIC) \cite{Linssen:2012hp}. The \ILC is a high-luminosity electron-positron linear collider with centre-of-mass energy from 200\,GeV up to 1\,TeV. Thirty years of development leads to the the technical design report in 2013 \cite{}. A layout of the collider complex is shown in \Figure{}
+Two leading candidates for next generation electron-positron linear collider are the International Linear Collider (\ILC) \cite{Brau:2007zza}, and the Compact Linear Collider (\CLIC) \cite{Linssen:2012hp}. The \ILC is a high-luminosity electron-positron linear collider with centre-of-mass energy from 200\,GeV up to 1\,TeV. Thirty years of development leads to the the technical design report in 2013 \cite{Baer:2013cma}. A layout of the collider complex is shown in \Figure{fig:detectorILC}.
+
+\begin{figure}[tdbph]
+\centering
+\includegraphics[width=0.45\textwidth]{ILD/ILC2}
+\caption[]
+{A layout of the International Linear Collider complex, taken from \cite{Baer:2013cma}.}
+\label{fig:detectorILC}
+\end{figure}
 
 
 \begin{comment}
@@ -59,7 +57,25 @@ established by a mandate of ICFA.
 Two detectors concepts have been designed for the \ILC to deliver the physics program. Precision tests for Standard Model requires an excellent jet energy resolution and di-jet mass reconstruction. Particle Flow Algorithms based event reconstruction meets the requirement and motivates the detector designs. For the best performance of the PFA, high granular calorimeter systems and highly efficient tracking systems are designed. The requirement to separate \PW and \PZ bosons in di-jet final states requires a jet energy resolution below 3.5\%. The momentum resolution of $5\times10^{-5}$\,GeV is motivated by the Higgs boson recoil reconstruction in the Higgs-strahlung.
 
 
-Motivation for two detectors is to have multiple independent measurements within one collider for cross-checking, complementary measurements and competition between collaborations. Two detectors are both general purpose detectors. Silicon Detector, \SiD, is a compact detector with a large magnetic filed of 5\,T. It uses silicon tracking modules. The International Large Detector, \ILD, is a larger detector with a time projection chamber as the main tracking unit. Both detectors have high granular calorimeters optimised for the particle flow. 
+
+Motivation for two detectors is to have multiple independent measurements within one collider for cross-checking, complementary measurements and competition between collaborations. Two detectors are both general purpose detectors. Silicon Detector, \SiD, is a compact detector with a large magnetic filed of 5\,T. It uses silicon tracking modules. The International Large Detector, \ILD, is a larger detector with a time projection chamber as the main tracking unit. Both detectors have high granular calorimeters optimised for the particle flow. A view of both detector concepts can be seen in \Figure{fig:detectorILDSiD}
+
+\begin{figure}[tdbph]
+\centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{ILD/ILDview}
+    \caption{}
+    \label{fig:ILDview}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.35\textwidth}
+    \includegraphics[width=\textwidth]{ILD/SiD}
+    \caption{}
+    \label{fig:SiDview}
+  \end{subfigure}
+\caption[]
+{\FIGURE{fig:ILDview} and \Figure{fig:SiDview} show the view of the International Large Detector and the Silicon Detector for the International Linear Collider, taken from \cite{Baer:2013cma}.}
+\label{fig:detectorILDSiD}
+\end{figure}
 
 \begin{comment}
 The ILC has been designed to enable two experiments (SiD and ILD) sharing one interaction region using
@@ -89,7 +105,7 @@ have been developed to meet this challenge. This motivates highly granular elect
 calorimeters and highly efficient tracking systems. New detector technologies and new reconstruction
 algorithms based on the PFA approach achieve the needed precision in the reconstruction of jets of 3
 to 4 percent for 100 GeV jets, set by the requirement to separate W and Z di-jet final states. The
-requirements on momentum resolution for charged tracks (p/p2 of 5 ¡Á 10.5 (GeV/c).1) are driven
+requirements on momentum resolution for charged tracks (p/p2 of 5 ¡Á 10.5 (GeV/c).1) are driven
 by reconstruction of a Higgs boson recoiling from the associated Z boson decaying to a lepton pair in
 the Higgs-strahlung process. Flavour and quark-charge tagging will be available at an unprecedented
 level of performance as a result of the development of a new generation of vertex detectors. Particle
@@ -108,50 +124,25 @@ significant challenge, including the need for quiescent currents.
 27
 \end{comment}
 \section{CLIC}
-The ILC has developed two detector models, namely the International Large Detector (ILD) \cite{Abe:2010aa} and the Silicon Detector (SiD) \cite{Aihara:2010zz}. The CLIC has developed two slightly modified detector models based on ILD and SiD \cite{Linssen:2012hp}. One key common feature of these next generation electron-positron linear colliders is the high granular calorimeter, which provides a great spatial resolution at the cost of the energy resolution. Particle flow algorithms (PFA) benefit from the spatial resolution from calorimeters, together with tracking information, to provide excellent a jet energy resolution. PandoraPFA, the most complicated and the best performing one, provides a jet energy resolution of less than 3.5\%, which is required for W/Z separation \cite{Thomson:2009rp,Marshall:2013bda}.
 
+The other potential next generation electron-positron linear collider,  the Compact Linear Collider (\CLIC), has a higher reach of the centre-of-mass energy up to 3\,TeV. Although the accelerating systems would be different, the calorimeter designs are similar, both highly granular for the optimal particle flow. A layout of the \CLIC complex is shown in \Figure{fig:detectorCILC}
+
+
+\begin{figure}[tdbph]
+\centering
+\includegraphics[width=0.45\textwidth]{ILD/CLIC}
+\caption[]
+{A layout of the Compact Linear Collider at 3\,TeV, taken from \cite{Aicheler:2012bya}.}
+\label{fig:detectorCILC}
+\end{figure}
+
+\begin{comment}
+The ILC has developed two detector models, namely the International Large Detector (ILD) \cite{Abe:2010aa} and the Silicon Detector (SiD) \cite{Aihara:2010zz}. The CLIC has developed two slightly modified detector models based on ILD and SiD \cite{Linssen:2012hp}. One key common feature of these next generation electron-positron linear colliders is the high granular calorimeter, which provides a great spatial resolution at the cost of the energy resolution. Particle flow algorithms (PFA) benefit from the spatial resolution from calorimeters, together with tracking information, to provide excellent a jet energy resolution. PandoraPFA, the most complicated and the best performing one, provides a jet energy resolution of less than 3.5\%, which is required for W/Z separation \cite{Thomson:2009rp,Marshall:2013bda}.
+\end{comment}
 
 \section{Physics at future linear colliders}
 
-\subsection{Physics at ILC}
-
-Tau - LC relavence tau
-
-Double higgs
-
-
-general higgs field
-
-Lagrangian
-
-current constraint
-
-single higgs coupling measurement done in higgs
-
-Double higgs measurement
-
-The main mechanism for double Higgs production %in \epem collisions
-%at high energy CLIC ($\sqrt{s}>$\SI{1}{\TeV}) is via $WW$-fusion ($\epem\to HH\nu\overline{\nu}$). The main Feynman diagrams contributing to the process are illustrated in Figure . %The cross section for the process increases with the centre-of-mass energy: from \SI{0.15}{\fb} at $\sqrt{s}=$\SI{1.4}{\TeV} to \SI{0.59}{\fb} at $\sqrt{s}=$\SI{3}{\TeV}, assuming a %Higgs mass of \SI{126}{GeV}.
-
-
-
-
-\subsection{Physics at CILC}
-
-current constraint
-
-single higgs coupling measurement done in higgs
-
-Double higgs measurement
-
-The main mechanism for double Higgs production %in \epem collisions
-%at high energy CLIC ($\sqrt{s}>$\SI{1}{\TeV}) is via $WW$-fusion ($\epem\to HH\nu\overline{\nu}$). The main Feynman diagrams contributing to the process are illustrated in Figure . %The cross section for the process increases with the centre-of-mass energy: from \SI{0.15}{\fb} at $\sqrt{s}=$\SI{1.4}{\TeV} to \SI{0.59}{\fb} at $\sqrt{s}=$\SI{3}{\TeV}, assuming a %Higgs mass of \SI{126}{GeV}.
-
-
-
-
-
-
+The physics program for the \CLIC and the \ILC, which is a driving force for the detector design, have some common goals. \ILC has a reach of centre-of-mass from 200\,GeV to 1\,TeV, whilst \CLIC can reach from 350\,GeV to 3\,TeV. Both machines are capable of precision higgs coupling measurements, top mass and coupling measurements, search for new physics such as supersymmertry particles. The \ILC can also operate at low energy to be a \PZ and a \PHiggs factory for ultra precision \PZ mass and \PHiggs mass measurement. \CLIC, however, has the advantage of higher energy reach, which allows measurements of rare events, such as higgs  triple self-couplings and quartic couplings. The discovery potential for the \CLIC is also greater.
 
 
 \section{CLIC vs ILC}
@@ -210,13 +201,13 @@ Overall Length (m) & 13.2 & 12.8 \\
 \section{International Large Detector}
 
 
+
 The International Large Detector, \ILD, is a detector concept at the International Linear Collider, \ILC. The \ILD detector concept has been optimised in the view of the particle flow techniques. Particle flow approach to event reconstruction has shown to deliver the best possible jet reconstruction with proof-of-principle implementation such as \pandora {\Chapter{chap:Reconstruction}}. Each individual particles are reconstructed with the particle flow approach. For charged particles, calorimeter hits are associated with the tracks. The measurement of charged particle relies on the excellent tracking system resolution. Neutral particle reconstruction require fine spatial resolution of the calorimeters. These form the requirements for the detector designs and optimisations.
 
 
 The particle flow paradigm requires topological information for individual particle reconstruction. The sub-detector systems need to have the spatial resolution to separate charged particles from neutral particles. The result is a highly granular calorimeters with a central tracking system with excellent momentum resolution. Longitudinal cross section of top quadrant of the \ILD detector concept, taken from \cite{Behnke:2007gj}, is shown in \Figure{fig:ILD} From interaction point (\IP) outwards, there is a tracking system compromising a large time projection chamber (\TPC) augmented with silicon tungsten layer, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. Numbers are in units of mm.
 
-This section will describe the sub-systems of the \ILD detector concept in the \ILD technical design report\cite{}, the ILD\_o1\_v05 option in \Mokka simulation. The detector concept has been optimised and documented in previous documents, such as the letter of intent\cite{}. The \CLICILD detector concept for the \CLIC in the conceptual design report\cite{Linssen:2012hp} is a modified version of the \ILD, adapted to the \CLIC colliding environment. The differences between \ILD and \CLICILD can be seen in \Figure{fig:detectorILD} and \Table{tab:ILDvsCLICILD}, and are addressed in the discussion below.
-
+This section will describe the sub-systems of the \ILD detector concept in the \ILD technical design report\cite{}, the ILD\_o1\_v05 option in \Mokka simulation. This detector concept has been used in studies described in subsequent chapters. The \ILD detector concept has been optimised and documented in previous documents, such as the letter of intent\cite{}. The \CLICILD detector concept for the \CLIC in the conceptual design report\cite{Linssen:2012hp} is a modified version of the \ILD, adapted to the \CLIC colliding environment. The differences between \ILD and \CLICILD can be seen in \Figure{fig:detectorILD} and \Table{tab:ILDvsCLICILD}, and are addressed in the discussion below.
 
 
 
