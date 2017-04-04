@@ -118,16 +118,20 @@
 
 
 \DeclareRobustCommand{\gHHH}{\HepParticle{g}{HHH}{}\xspace}
+\DeclareRobustCommand{\gWWH}{\HepParticle{g}{WWH}{}\xspace}
 \DeclareRobustCommand{\gWWHH}{\HepParticle{g}{WWHH}{}\xspace}
 \DeclareRobustCommand{\rootS}[1]{\sqrtS = #1\,TeV\xspace}
 \DeclareRobustCommand{\rootSGeV}[1]{\sqrtS = #1\,GeV\xspace}
 \DeclareRobustCommand{\ee}{\Pem\Pep\xspace}
+
 \DeclareRobustCommand{\eeToHH}{\HepProcess{ \Pem \Pep \to \PHiggs \PHiggs \Pnu \APnu }\xspace}
 \DeclareRobustCommand{\eeToHHbbWW}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus}\xspace}
 \DeclareRobustCommand{\eeToHHbbqqqq}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \Pq \Pq \Pq \Pq}\xspace}
 \DeclareRobustCommand{\eeToHHbbWWFull}{\HepProcess{ \Pem \Pep \to \PHiggs \PHiggs \Pnu \APnu \to \Pbottom \APbottom \PWplus \PWminus}\xspace}
 \DeclareRobustCommand{\eeToHHbbWWHad}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus \to \Pbottom \APbottom \Pq \Pq \Pq \Pq}\xspace}
 \DeclareRobustCommand{\eeToHHbbbb}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \Pbottom \APbottom}\xspace}
+\DeclareRobustCommand{\eeToHHbbbbFull}{\HepProcess{\Pem \Pep \to  \PHiggs \PHiggs \to \Pbottom \APbottom \Pbottom \APbottom}\xspace}
+\DeclareRobustCommand{\eeToHHotherFull}{\HepProcess{\Pem \Pep \to  \PHiggs \PHiggs \to \text{others}}\xspace}
 \DeclareRobustCommand{\eeTo}[1]{\HepProcess{ \Pem \Pep \to #1 }\xspace}
 \DeclareRobustCommand{\ggHad}{\HepProcess{ \Pphoton \Pphoton \to hadrons }\xspace}
 \DeclareRobustCommand{\qlight}{\HepGenParticle{q}{l}{}\xspace}
