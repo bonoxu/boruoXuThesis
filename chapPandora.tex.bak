@@ -20,7 +20,7 @@ For the \CLIC simulated samples, the luminosity spectrum, which is generated wit
 
 \section{Event Simulation}
 
-The event simulation software is GEANT4 \cite{Agostinelli:2002hh}, and the detector geometry description is provided by MOKKA \cite{MoradeFreitas:2002kj}.  QGSP\_BERT physics list is used to describe the hadronic showers decay in the detector. 
+The event simulation software is GEANT4 \cite{Agostinelli:2002hh}, and the detector geometry description is provided by MOKKA \cite{MoradeFreitas:2002kj}.  QGSP\_BERT physics list is used to describe the hadronic showers decay in the detector.
 
 
 %Simulation and reconstruction of events for the future Linear Colliders share common software framework. Simulated events are generated with Whizard software \cite{}. Pythia describes hadronisation and Tauola simulates correct spins of tau lepton decay products.  Whizard allows events simulation without initial state radiation, and can simulate electron beam interaction. For the \CLIC detector, electron beam induced background events are simulated and reconstructed. These events are superimposed on the physics process to save computational resources.
@@ -28,21 +28,21 @@ The event simulation software is GEANT4 \cite{Agostinelli:2002hh}, and the detec
 
 \section{Event Reconstruction}
 
-Reconstruction software runs in Marlin framework \cite{Gaede:2006pj}, as a part of the \ilcsoft. Event reconstruction contains following steps: digitisation of simulated calorimeter hits, reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects (\PFOs)reconstruction with \pandora\cite{Thomson:2009rp,Marshall:2012ry}. Reconstruction does not include calorimeters hits in the forward calorimeters, due to computational reasons. 
+Reconstruction software runs in Marlin framework \cite{Gaede:2006pj}, as a part of the \ilcsoft. Event reconstruction contains following steps: digitisation of simulated calorimeter hits, reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects (\PFOs)reconstruction with \pandora\cite{Thomson:2009rp,Marshall:2012ry}. Reconstruction does not include calorimeters hits in the forward calorimeters, due to computational reasons.
 
-For the \CLIC detector simulations, suppression of \ggHad background is performed. 
+For the \CLIC detector simulations, suppression of \ggHad background is performed.
 
 Details of the reconstruction can be found in \cite{Brau:2007zza,Linssen:2012hp}. Particle flow reconstruction via \pandora will be discussed in details, which provides the background for the photon reconstructions in \pandora in \Chapter{chap:Reconstruction}.
 
 %We will discuss \pandora cite{Thomson:2009rp,Marshall:2012ry,Marshall:2015rfa} in details, where a lot work goes into, and the background suppression due to its relevance in later analysis.
 
-%into physical objects containing a few main steps: digitisation of calorimeter hits (simulated hits in this case), reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects reconstruction with \pandora. 
+%into physical objects containing a few main steps: digitisation of calorimeter hits (simulated hits in this case), reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects reconstruction with \pandora.
 
 \section{\pandora}
+\label{sec:pandoraPandoraPFA}
+Tradition calorimetric approach is unable to meet the mass and energy requirements for the future linear collider. The particle flow approach with \pandora has a proof-of-principle demonstration of its capability to reach required resolution. The particle flow approach also put stringent requirements on the detector design, which is described in \Chapter{chap:Detector}. By associating calorimeter hits to the tracks, around 60\% of the jet energy from charged particles is measured by the tracker, which has a much better resolution than the calorimeter. Small cell sizes of the calorimeters are required to identify hits from different particles. The traditional sum of calorimeter cell energies is replaced by particle flow reconstruction algorithms, a complex pattern recognition problem.  The \pandora algorithm has been developed and used in the \ILC and \CLIC simulation studies.
 
-Tradition calorimetric approach is unable to meet the mass and energy requirements for the future linear collider. The particle flow approach with \pandora has a proof-of-principle demonstration of its capability to reach required resolution. The particle flow approach also put stringent requirements on the detector design, which is described in \Chapter{chap:Detector}. By associating calorimeter hits to the tracks, around 60\% of the jet energy from charged particles is measured by the tracker, which has a much better resolution than the calorimeter. Small cell sizes of the calorimeters are required to identify hits from different particles. The traditional sum of calorimeter cell energies is replaced by particle flow reconstruction algorithms, a complex pattern recognition problem.  The \pandora algorithm has been developed and used in the \ILC and \CLIC simulation studies. 
-
-Started with the \ILD detector concept, \pandora has been adapted to the \CLIC condition and shows its ability to deliver required energy resolutions \cite{Linssen:2012hp}. Recent the code base of the \pandora has been restructured. The core base codes for basic object and memory managements are factorised in the Pandora C++ Software Development Kit\cite{Marshall:2015rfa}. There are over 60 linear collider specific reconstruction algorithms, each aims to address a particular topological in the reconstruction. 
+Started with the \ILD detector concept, \pandora has been adapted to the \CLIC condition and shows its ability to deliver required energy resolutions \cite{Linssen:2012hp}. Recent the code base of the \pandora has been restructured. The core base codes for basic object and memory managements are factorised in the Pandora C++ Software Development Kit\cite{Marshall:2015rfa}. There are over 60 linear collider specific reconstruction algorithms, each aims to address a particular topological in the reconstruction.
 
 In the subsequent paragraphs, the main steps in the \pandora reconstructions are described. The details of the reconstruction can be found in cite{Thomson:2009rp,Marshall:2012ry,Marshall:2015rfa}.
 
@@ -56,17 +56,17 @@ Using a helical fit of last 50 reconstructed hits, tracks are projected to the f
 
 \subsection{Calorimeter selection}
 
-The input information of a calorimeter hit is the position, the layer in the calorimeter and the energy response from the calorimeter. 
+The input information of a calorimeter hit is the position, the layer in the calorimeter and the energy response from the calorimeter.
 
-Calorimeter hits are selected based on a series of criterion. The selected hits need to have energies above the threshold, using the conversion of a minimum ionising particle (MIP) equivalent, and using directly the converted energy. Similar to tracks, only calorimeter passed the selection are used in later steps. 
+Calorimeter hits are selected based on a series of criterion. The selected hits need to have energies above the threshold, using the conversion of a minimum ionising particle (MIP) equivalent, and using directly the converted energy. Similar to tracks, only calorimeter passed the selection are used in later steps.
 
-Geometry information and likelihood of the hit originated from a minimum ionising particle (MIP) are calculated. 
+Geometry information and likelihood of the hit originated from a minimum ionising particle (MIP) are calculated.
 
 Isolated hits, often originated from low energy neutrons in a hadronic shower, are difficult to associate to the correct hadronic shower. They are identified and not used in the clustering. But their energy is added in the very last particle flow object (PFO) creation step.
 
 \subsection{Cone Clusters Algorithm}
 \label{sec:pandoraConeCluster}
-Before discussing the rest of the \pandora reconstruction, it is necessary to introduce the cone based clustering algorithm, which is widely used in the calorimeter in \pandora. The clustering algorithm produces basic working objects, \clusters. 
+Before discussing the rest of the \pandora reconstruction, it is necessary to introduce the cone based clustering algorithm, which is widely used in the calorimeter in \pandora. The clustering algorithm produces basic working objects, \clusters.
 
 
 \begin{figure}[tbph]
@@ -83,13 +83,13 @@ The seed for the cone clustering is typically the projection of a energetic trac
 
 
 \subsection{Particle Identification}
-\label{sec:pandoraConeClustering}
+\label{sec:particleID}
 
-Dedicated particle identification algorithms aim to identify muons and photons before associating calorimeter hits to tracks. The details of the photon reconstruction algorithms and photon related algorithms are described in \Chapter{chap:Reconstruction}. By removing the hits from muons and photons, the reconstruction of charged particles is improved as it reduce the pattern recognition problem. Identified muons and photons do not participate in the clustering and re-clustering stages, but re-entre the construction at the fragment removal stage (see \Section{sec:pandoraFragmentRemoval}). 
+Dedicated particle identification algorithms aim to identify muons and photons before associating calorimeter hits to tracks. The details of the photon reconstruction algorithms and photon related algorithms are described in \Chapter{chap:Reconstruction}. By removing the hits from muons and photons, the reconstruction of charged particles is improved as it reduce the pattern recognition problem. Identified muons and photons do not participate in the clustering and re-clustering stages, but re-entre the construction at the fragment removal stage (see \Section{sec:pandoraFragmentRemoval}).
 
 \subsection{Clustering}
 
-The cone clustering algorithm described in \Section{sec:pandoraConeCluster} is used to group calorimeter hits from innermost to outmost pseduo-layer. The output \clusters are further processed, merged or split based on their topological properties. 
+The cone clustering algorithm described in \Section{sec:pandoraConeCluster} is used to group calorimeter hits from innermost to outmost pseduo-layer. The output \clusters are further processed, merged or split based on their topological properties.
 
 \subsection{Topological cluster association}
 
@@ -97,7 +97,7 @@ Initial clustering scheme is aggressive at splitting clusters. Small clusters ar
 
 \subsection{Track-cluster association}
 
-Clusters are associated to tracks, according to the proximity of the first layer of the cluster and the track projection to the front of the \ECAL. 
+Clusters are associated to tracks, according to the proximity of the first layer of the cluster and the track projection to the front of the \ECAL.
 
 
 \subsection{Re-clustering}
@@ -116,7 +116,10 @@ The late stage of the reconstruction will focus on merging low energy clusters, 
 
 One algorithm will attempt to split up photon clusters, where each is originated from two close by photons. Photon related algorithms are described in details in \Chapter{chap:Reconstruction}.
 
+
+
 \subsection{Particle Flow Object Creation}
+\label{sec:pandoraPFOcreation}
 
 % double counting taking care in pandora
 Particle Flow Objects (PFOs) are created at the last step. Tracks are associated to the clusters based on the proximity. Simple but effective particle identification for electrons, muons are applied. Photon identifications have been applied at various stages of the reconstruction.

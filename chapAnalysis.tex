@@ -121,6 +121,7 @@ Discriminative variables gives better separation power when they are gaussian-li
 
 Because its simplicity, the cut method is often performed manual, much more often in the time pre-date the wide spread of machine learning methods. It is still commonly used for the pre-selection step before the MVA, and other simple usages. Unless specified, the optimal cuts proposed in this document for various physics analysis are found using the rectangular cut method manually.
 
+\begin{comment}
 \subsection{Projective Likelihood}
 
 Projective likelihood model (PDE) is used in \pandora for the photon ID due to its simplicity and low requirement on computing resources.
@@ -130,7 +131,7 @@ PDE implemented in the TMVA calculates the probability density for each discrimi
 TMVA implementation also fits an underlying function to the probability density. The \pandora implementation simply uses binned likelihood ratio, $R$, as the output, due to the simplicity. The sub-categories for the \pandora implementation are determined by the cluster energy.
 
 Similarly to the rectangular cut method, PDE works better with decorrelated, gaussian like variables. The \pandora implementation did not decorrelate nor transform the variables, to keep implementation fast.
-
+\end{comment}
 
 \subsection{Boosted decision tree}
 \label{sec:analysisBDT}

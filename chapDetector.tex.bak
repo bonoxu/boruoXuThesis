@@ -67,7 +67,7 @@ Motivation for two detectors is to have multiple independent measurements within
     \caption{}
     \label{fig:ILDview}
   \end{subfigure}
-  \begin{subfigure}[b]{0.35\textwidth}
+  \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{ILD/SiD}
     \caption{}
     \label{fig:SiDview}
@@ -144,6 +144,27 @@ The ILC has developed two detector models, namely the International Large Detect
 
 The physics program for the \CLIC and the \ILC, which is a driving force for the detector design, have some common goals. \ILC has a reach of centre-of-mass from 200\,GeV to 1\,TeV, whilst \CLIC can reach from 350\,GeV to 3\,TeV. Both machines are capable of precision higgs coupling measurements, top mass and coupling measurements, search for new physics such as supersymmertry particles. The \ILC can also operate at low energy to be a \PZ and a \PHiggs factory for ultra precision \PZ mass and \PHiggs mass measurement. \CLIC, however, has the advantage of higher energy reach, which allows measurements of rare events, such as higgs  triple self-couplings and quartic couplings. The discovery potential for the \CLIC is also greater.
 
+
+\section{Physics requirements on the detector design}
+
+The physics goal of jet energy resolution at the \ILC and the \CLIC is to separate \PW and \PZ hadronic decays via reconstruction their di-jet masses \cite{Baer:2013cma,Linssen:2012hp}. This translate to a requirement of 3.5-5\% of the energy resolution. This level of precision is unlikely to be achieved with a traditional calorimetry design. On the contrary, particle flow approach has demonstrated it ability to reach the goal \cite{Thomson:2009rp,Marshall:2012ry}.
+
+In a typical jet, using measurements on the particle composition from the \LEP\cite{Knowles:1997dk,green1998electron}, about 62\% of the jet energy is from charged particles, 27\% from photons, 10\% from long-lived neutral hadrons, and 1.5\% from neutrinos. In a traditional approach to calorimetry, about 72\% jet energy is measured in the electromagnetic (\ECAL) and the hadronic (\HCAL) calorimeters combines. The jet energy resolution is thus limited by the energy resolution of the hadronic calorimeters, which typically is $\gtrsim 55\% / \sqrt{E(GeV)}$.
+
+The particle flow approach to calorimetry improves the jet energy resolution by fully reconstructing the four momenta of all visible particles in the detector. The jet energy is the sum of the individual particles' energies, where the energy of the charge particles are measured in the tracking detectors, and the energy of neutral particles are measured in calorimeters. In this manner, the hadronic calorimeter only measures about 10\% of the energy, which would greatly improves the overall energy measurement.
+
+The particle flow calorimetry requires to fully reconstruct particles and associate calorimeter hits to tracks. This is demanding for the software design and the detector design. The software details of the \pandora, which is a successful particle flow implementation, are described in \Section{sec:pandoraPandoraPFA}. The detector needs to be highly granular for the excellent spatial resolution to be able to correctly associate calorimeter hits to the inner detector tracks. This forms the main motivation in the detector design and it is illustrated with a brief description of the particle flow principle.
+
+\begin{figure}[tdbph]
+\centering
+\includegraphics[width=0.45\textwidth]{{ILD/jetCLIC_ILD}}
+\caption[]
+{A typical topology of a 250\,GeV jet, simulated with \CLICILD detector concept, taken from \cite{Marshall:2012ry}.}
+\label{fig:detectorJetCLICILD}
+\end{figure}
+
+
+\FIGURE{fig:detectorJetCLICILD} is a typical topology of a 250\,GeV jet, simulated with \CLICILD detector concept. The particles with the calorimeter hits and tracks are labelled with different colours. Clusters of calorimeter hits in the highly granular \ECAL and \HCAL are associated with tracks from the inner tracking detector, \TPC. Photons are identified using the characteristics longitudinal and transverse electromagnetic shower profiles. Hadronic showers are separated from electromagnetic showers due to the small transverse spread of the electromagnetic shower.  Therefore, the inner tracking detector should be highly efficient and has very little material. For the calorimeter, the \ECAL and \HCAL, both should be highly granular. The material of the calorimeter should be dense and has a large ratio of interaction length to radiation length.
 
 \section{CLIC vs ILC}
 
@@ -268,7 +289,7 @@ The Silicon-Tungsten sampling electromagnetic calorimeters in the \ILD consist o
 
 The particle flow paradigm has a large impact on the \ECAL design with many requirements. In addition for the \ECAL to measure and separate photons, it also needs to reconstruct detail shower profiles to separate electromagnetic showers from hadronic showers, as approximately 50\% of hadronic showers starts in the \ECAL. These requirements can be fulfilled with an excellent three dimensional granular \ECAL.
 
-From test beam data and simulation studies, a sampling calorimeter with longitudinal and transverse segmentation below one Moli\`{e}re radius and below one radiation length at the front the calorimeter is needed. The most compact design is realised with Tungsten as absorber material and silicon pad diodes as active material. A cross section of the \ECAL is shown in \Figure{fig:detectorILDECAL}. Tungsten is a dense material with a large ratio of interaction length to radiation length. This helps to separate electromagnetic showers from hadronic showers by delaying the start of the hadronic showers. Silicon pad size of 5.1 by 5.1 \,mm cover large areas. They are simple and reliable to operate. The choice of thin silicon layers offers a great spatial resolution at a cost of the energy resolution in favour of the particle flow.
+From test beam data and simulation studies, a sampling calorimeter with longitudinal and transverse segmentation below one Moli\`{e}re radius and below one radiation length at the front the calorimeter is needed. The most compact design is realised with Tungsten as absorber material and silicon pad diodes as active material. A cross section of the \ECAL is shown in \Figure{fig:detectorILDECAL}. Tungsten is a dense material with a large ratio of interaction length to radiation length. This helps to separate electromagnetic showers from hadronic showers by making electromagnetic showers transversely narrow. Silicon pad size of 5.1 by 5.1 \,mm cover large areas. They are simple and reliable to operate. The choice of thin silicon layers offers a great spatial resolution at a cost of the energy resolution in favour of the particle flow.
 
 The longitudinal segregation is a compromise between the cost and the performance. The total 30 layers, which is about 20\,cm, provides about 24 radiation lengths. The first 20 layers use 2.1\,mm thick absorber plates, which is twice finer sampling than the last 10 layers with 4.2\mm thick absorber plates. The test beam data with electron shows the energy resolution of the \ECAL concept to be $16.6/\sqrt{E(\ GeV)}\oplus1.1\%$, which is compatible with the values assumed for the full \ILD detector simulation.
 

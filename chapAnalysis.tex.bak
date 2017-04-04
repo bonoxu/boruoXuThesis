@@ -175,12 +175,14 @@ For the end node, it is determined as either signal-like or background-like, bas
 
 
 \subsection{Multiple classes}
+% ATTN used in tau chapter
+\begin{comment}
 The above discussion is done assuming two classes - signal and background. The argument can be easily extended to multiple classes. There are two ways for the training. "One v.s. one" is each class is trained against each other class. And the overall likelihood is normalised. The second way to train is called "one v.s. all", which is when each class is trained against all other classes.
 
 Using a three-class example, A, B and C, "one v.s. one" scheme trains A against B, B against C, and C against A. Then the likelihood is normalised. "One v.s. all" would train A against B plus C, B against A plus C, and C against A plus B.
 
 TMVA multiclass implementation uses "one v.s. all" scheme. Multiclass is used in falvour tagging of jets, \Section{sec:theoryFalvourTagging}, and in the tau lepton final state separation study, \Section{}.
-
+\end{comment}
 \section{Event shape varaibles}
 
 % ATTN used in tau chapter
