@@ -5,7 +5,10 @@
 {Sir Steve Orange, 1785--1854}%: Blackwood's Magazine May 1830
 
 
-Since the discovery of Higgs boson in the \LHC in 2012\cite{Aad:2012tfa,Chatrchyan:2012ufa}, it is crucial to understand the properties of the Higgs boson and test if it is a Standard Model Higgs. The Higgs mechanism and the Higgs boson in the Standard Model have been explained in the \Chapter{chap:Theory}. A few theories of Higgs beyond the Standard Model could be tested via the double higgs production in an electro-positron collider (\Section{sec:theoryHiggsBSM}). A generator level studies has shown that the precision reached by a multi-TeV linear collider, such as the Compact Linear Collider (\CLIC), is much better than it by the Large Hadron Collider \cite{Contino:2013gna}. The first challenge for double Higgs bosons production analysis is that events are rare. The cross section is very small comparing to other background physics processes, making it difficult to select signal events. The second challenges is at high centre-of-mass, events are boosted and many particles are in the forward region of the detector, where the reconstruction performance is worse than the barrel region.
+Since the discovery of Higgs boson in the \LHC in 2012\cite{Aad:2012tfa,Chatrchyan:2012ufa}, it is crucial to understand the properties of the Higgs boson and test if it is a Standard Model Higgs. The Higgs mechanism and the Higgs boson in the Standard Model have been explained in the \Chapter{chap:Theory}. A few theories of Higgs beyond the Standard Model could be tested via the double higgs production in an electro-positron collider (\Section{sec:theoryHiggsBSM}). A generator level studies has shown that the precision reached by a multi-TeV linear collider, such as the Compact Linear Collider (\CLIC), is much better than it by the Large Hadron Collider (\LHC) even with 3000$fb^{-1}$ of data \cite{Contino:2013gna}.
+
+
+The first challenge for double Higgs bosons production analysis is that events are rare. The cross section is very small comparing to other background physics processes, making it difficult to select signal events. The second challenges is at high centre-of-mass, events are boosted and many particles are in the forward region of the detector, where the reconstruction performance is worse than the barrel region.
 
 
 In this chapter, a full \CLICILD detector simulation studies has been performed for the double higgs production, \eeToHH. First event generation and simulation will be briefly discussed. An overview of the analysis, including lepton finding and jet reconstruction, is presented. This is followed by a multivariate analysis with results on the selection efficiency. Lastly, a uncertainty on extracting Higgs triple self couplings, \gHHH, and quartic coupling, \gWWHH, is presented.
@@ -15,19 +18,24 @@ In this chapter, a full \CLICILD detector simulation studies has been performed 
 
 \section{Analysis Straggly Overview}
 
-The double higgs production, \eeToHH, can occur via processes in \Figure{fig:doubleHiggsFeynman}. \FIGURE{fig:doubleHiggsFeynman1} is sensitive to Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH. For this study of \gHHH and \gWWHH, \FIGURE{} and \Figure{}, which are sensitive to \gWWH, would be the irreducible background processes. There are a few other irreducible background processes with same final state as \eeToHH. For example, {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace}, where \PZ decays to \Pnu \APnu, will have the same final state. However, {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} can be easily identified via the recoil mass. Hence {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} is not considered in this studied.
-
-TODO
-ZHH
+The double higgs production, \eeToHH, can occur via processes in \Figure{fig:doubleHiggsFeynman}. \FIGURE{fig:doubleHiggsFeynman1} is sensitive to Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH. For this study of \gHHH and \gWWHH, \FIGURE{} and \Figure{}, which are sensitive to \gWWH, would be the irreducible background processes. The {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace}, where \PZ decays to \Pnu \APnu, will have the same final state. This channel can be used to study the Higgs triple self couplings, and has been studied at \ILC for \rootSGeV{500} \cite{Baer:2013cma}. However, for the relevant  \CLIC \rootS{1.4} and 3\,TeV, as shown in \Figure{fig:theoryHiggsCrossSection}, the cross section for {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} is one order of magnitude smaller than \eeToHH via processes in \Figure{fig:doubleHiggsFeynman}. Therefore, the effect of {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} present in \eeToHH at \rootS{1.4} and 3\,TeV is negligible.
 
 
-\eeToHH is divided into sub-channel \eeToHHbbWW and \eeToHHbbbb to allow a more detailed examination, providing a cross checks between two sub-channels and an improvement of signal selection when combined. In this chapter, the \PW hadronic decay mode of the \eeToHHbbWW channel is studied, and called the signal channel. It is chosen because the hadronic decay has the largest cross section and does not produce neutrinos, which allows each \PW to be reconstructed using a di-jet. However, hadronic decay final state of the \eeToHHbbWW has a very low cross section. The signal selection is challenging and aggressive background rejection methods are deployed.
+%There are a few other irreducible background processes with same final state as \eeToHH. For example, {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace}, where \PZ decays to \Pnu \APnu, will have the same final state.
 
-The semi-leptonic and leptonic final states of the  sub-channel \eeToHHbbWW are studied as well. However, extra neutrinos in the final states present greater difficulty to reconstruct the two Higgs bosons, as some momenta of one Higgs boson is missing. Combining with the low cross section, results for these two final states are not reported. The analysis can be easily (and have been) adapted for the semi-leptonic and leptonic final states.
+
+%However, {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} can be easily identified via the recoil mass. Hence {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} is not considered in this studied.
+
+
+The double higgs production, \eeToHH is divided into sub-channel \eeToHHbbWW and \eeToHHbbbb to allow a more detailed examination, providing a cross checks between two sub-channels and an improvement of signal selection when combined. In this chapter, the \PW hadronic decay mode of the \eeToHHbbWW channel is studied, and called the signal channel. It is chosen because the hadronic decay has the largest cross section and does not produce neutrinos, which allows each \PW to be reconstructed using a di-jet. However, hadronic decay final state of the \eeToHHbbWW has a very low cross section. The signal selection is challenging and aggressive background rejection methods are deployed.
+
+The semi-leptonic final states of the  sub-channel \eeToHHbbWW is studied as well. However, extra neutrinos in the final states present greater difficulty to reconstruct the two Higgs bosons, as some momenta of one Higgs boson is missing. This channel would be discussed briefly as it is adapted from the hadronic decay analysis.
+
+%Combining with the low cross section, results for these two final states are not reported. The analysis can be easily (and have been) adapted for the semi-leptonic and leptonic final states.
 
 The signal channel final state, \eeToHHbbWWHadFull, is a six quark final state with missing momentum. The high number of quarks require efficient jet reconstruction and jet pairing algorithms to select the signal final states. The two b quarks in the final states allows b jet tagging information to be useful. Since the final state does not contain leptons, event-level lepton finding, typically for energetic isolated leptons,  would improve the signal selection efficiency. The topology of the signal events determine the analysis strategy.
 
-Proof-of-principle generator study was perform at \CLIC using \CLICILD detector model for \rootS{1.4} and 3\,TeV\cite{Linssen:2012hp}. For the full \CLICILD detector simulation, firstly suitable signal and background channels are identified. To help selecting the signal, light lepton and tau lepton are found and b-jet tagging is used. An event is group into a number of jets depending on the final state, followed by pre-selections cuts and multivariate analysis.
+Proof-of-principle generator study was perform at \CLIC using \CLICILD detector model for \rootS{1.4} and 3\,TeV\cite{Linssen:2012hp}. A full \CLICILD detector simulation is presented in this chapter. Firstly suitable signal and background channels are identified. To help selecting the signal, light lepton and tau lepton are found and b-jet tagging is used. An event is group into a number of jets depending on the final state, followed by pre-selections cuts and multivariate analysis. 
 
 \begin{figure}[!htbp]
   \begin{subfigure}[b]{0.22\textwidth}
@@ -53,7 +61,7 @@ Proof-of-principle generator study was perform at \CLIC using \CLICILD detector 
     \label{fig:doubleHiggsFeynman4}
   \end{subfigure}
 \caption[]%
-   {Figures show Feynman diagrams of leading-order \eeToHH processes at \CLIC. \FIGURE{fig:doubleHiggsFeynman1} is sensitive to the Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH.}
+   {Figures show Feynman diagrams of leading-order \eeToHH processes at \CLIC, without considering {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace}. \FIGURE{fig:doubleHiggsFeynman1} is sensitive to the Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH.}
    \label{fig:doubleHiggsFeynman}
 \end{figure}
 
@@ -218,7 +226,7 @@ Energy deposition  \Pmupm &  \pandora reconstructed\\
 Primary Track (mm) & $r_0 < 0.015$ \\
 a) High Transverse Momentum (GeV) &  $\pT > 40$  \\
 b) Isolation (GeV)& $E \geqslant 23 \times \sqrt{E_{cone1}} + 5$ \\
-\hline 
+\hline
 High Energy (GeV) &  $E > 10$  \\
 Energy deposition  \Pepm & $\frac{E_{\ECAL}}{E} > 0.95$ \\
 Energy deposition  \Pmupm & $0.2 > \frac{E_{\ECAL}}{E} > 0.05$ \\
@@ -317,12 +325,12 @@ Two processors share similar size of search cone and isolation cone.  The main d
 Certain background channels, for example photon-electron interactions, contain electrons in the very forward part of the detector, namely the \LCAL and \BCAL. With the increase of the centre-of-mass energy, more particles are boosted and it is increasingly important to use the information in the forward region for the signal selection. As discussed before, veto events with leptons help the signal selection. Hence the goal is to identify leptons in the forward region.
 
 Due to the low angular acceptance, most particles in these forward detector would be very forward particles from beam induced background. However, previous study \cite{sailer2012radiation} has shown that sufficiently high energy electrons can be efficiently identified.
- 
- 
+
+
  Due to the lack of tracking in these region, electrons and photons would have the same electromagnetic shower profile, with the given calorimeter resolution. MC photons and electrons are checked if they fall in the LCal or the BCal, and checked against the known detection efficiency.
 
 
-These forward calorimeters were not simulated due to computational limitation. 
+These forward calorimeters were not simulated due to computational limitation.
 Beam Calorimeter acceptance is defined as \absCosTheta is between  0.01 and 0.04\,rad and length in z direction is between 3181 and 3441\,mm. Luminosity Calorimeter acceptance is defined as \absCosTheta is between  0.038 and 0.11\,rad and length in z direction is between 2539 and 2714\,mm. For \rootS(3), the BeamCal detection efficiency is provided by a software package \cite{}. For \rootS(1.4), the same software for the BeamCal is used, by scaling the energy of the MC particle by a factor of $\frac{3}{1.4}$. For the LumiCal, the identification efficiency is defined as
 \begin{equation}
 \varepsilon=
