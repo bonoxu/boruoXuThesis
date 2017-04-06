@@ -16,6 +16,8 @@ For the simulated study, Monte Carlo (MC) event generation is the first step. Mo
 
 For the \CLIC simulated samples, the luminosity spectrum, which is generated with GUINEAPIG \cite{Schulte:1999tx}, is simulated in WHIZARD. The \ggHad background events are hadronised with PYTHIA, and superimposed on the physics process simulations to save computational resources.
 
+TODO
+\ggHad simulation -5 to 25ns etc
 
 
 \section{Event Simulation}
@@ -81,6 +83,8 @@ There are two main types of clustering algorithms: cone based and sequential com
 
 The seed for the cone clustering is typically the projection of a energetic track to the front of the \ECAL. A high  energy calorimeter hit can also be used as a seed. A cone with a specified opening angle and depth will be formed around the seed. The \fourMomentum of calorimeter hits sum to the cone's \fourMomentum.
 
+TODO
+Build from inner to outer, then every layer outer in inner see Mark's paper
 
 \subsection{Particle Identification}
 \label{sec:particleID}
@@ -126,8 +130,16 @@ Particle Flow Objects (PFOs) are created at the last step. Tracks are associated
 
 PFOs are the output of the \pandora reconstruction. The four-momentum of these PFOs are  used heavily for the downstream analysis. The electron, muon and photon identification are  also used in physics analysis, such as one described in \Chapter{chap:Tau}.
 
+\section{\CLIC specific simulation and reconstruction}
+
+\section{Luminosity spectrum}
+
+
+
 \section{Suppression of \ggHad backgrounds}
 \label{sec:pandoraggHad}
+
+
 For the CLIC, significant \ggHad background is present. It is crucial to remove the beam induced background as they don't represent the underlying physics process.
 
 Two Marlin process has been developed to suppress these background, a track selector and a PFO selector\cite{Marshall:2012ry}.
@@ -137,3 +149,4 @@ The track selector aims to remove poor quality and fake tracks. It places simple
 The PFO selector utilise the high spatial resolution from the high granular calorimeter. PFOs from \ggHad often have low \pT and have a range of time. PFOs from physics processes have a range of \pT, and have time close to the brunch crossing time. These two distinctive features allow \ggHad background to be separated. The optimal suppression uses different \pT and time cuts for the central part of the detector, and for the forward part of the detector, and uses different cuts for photons, neutral PFOs and charged PFOs. Three configurations of these cuts are developed, namely ``loose'', ``normal'', and ``tight'' selections. As the name suggested, ``loose'' selection corresponds to a looser cut of \pT and time. The optimal configuration depends on the \sqrtS of the collision, and the physics process to study.
 
 The background suppression is used in analysis described in \Chapter{chap:DoubleHiggs}
+TODO add efficiency table pandora 

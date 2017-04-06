@@ -79,6 +79,9 @@ This step marks the end of the photon reconstruction algorithm. The output are a
 %The candidate passed the test will be kept in a separate container for photons only
 
 \section{Two dimensional peak finding algorithm for photon candidate}
+
+
+\section{Two dimensional peak finding algorithm for photon candidate}
 \label{sec:peakFinding}
 
 As discussed in \Section{sec:photonCandiate}, separating photon candidates from a cluster is same as identifying peaks in a two dimensional histogram. An example of two photons is shown in the \Figure{fig:photonPeakFinding}. The basic algorithm treats all clusters as potential photon clusters. Since charged hadrons would deposit tracks in the tracking system, extra care is taken when a cluster is close to the projection of the track in the front of the \ECAL. The basic peak finding algorithm has two main functions: identifying peaks, and assigning bins to peaks.
@@ -122,7 +125,7 @@ PDE implemented calculates the probability density for each discriminative varia
 
 To use the likelihood ratio, one way is to fit an underlying function to the probability density, which is implemented the \TMVA software package. The other way is to use binned likelihood ratio, $R$, as the output, due to the simplicity. This is implemented in the \pandora. Similarly to classifier like the rectangular cut method, PDE works better with decorrelated, gaussian like variables. The \pandora implementation did not decorrelate nor transform the variables, to keep implementation fast.
 
-\subsection{Projective Likelihood in \Pandora}
+\subsection{Projective Likelihood in \pandora}
 
 Kinematic variables to obtain the probability distribution exploit the differences between a characteristic electromagnetic shower and a hadronic shower, and the fact that a photon is more likely to be isolated from other showers and charged tracks. Two variables use the longitudinal shower distribution: the first \ECAL layer of the shower, and the difference between a expected longitudinal distribution and the observed. Two variable uses the transverse shower distribution: in the transverse plane with two orthogonal axes, the r.m.s. distance of associated bins to the peak bin, and the smallest ratio of the two r.m.s. distances in each axis direction. One variable is the ratio between the photon candidate energy to the photon cluster energy. The last kinematic variable is the distance between the photon candidate and the closest track projection. The distributions of kinematic variables are normalised to probability distribution, stored in binned histograms.
 
@@ -395,6 +398,9 @@ Another metric to reflect the improvement in photon reconstruction is the fragme
 \label{fig:photonDoubleFragEnergy}
 \end{figure}
 
+TODO
+write RMS90
+
 The improvement in completeness and resolution in photon reconstruction, as shown in single photon and double photon reconstruction, leads to a small improvement in the jet energy resolution at high energy. Jet energy resolution is defined as the root mean squared divided by the mean for the smallest width of distribution that contains 90\% of entries, using \Zuds sample. The di-jet energy is sampled at 91, 200, 360 and 500\,GeV. Shown in \Figure{fig:photonJER}, the jet energy resolutions are better at 360 and 500\,GeV with improved photon reconstruction.
 
 
@@ -407,6 +413,9 @@ The improvement in completeness and resolution in photon reconstruction, as show
 \end{figure}
 
 The improvement of the photon is also demonstrated in \Chapter{chap:Tau}, where tau lepton decay modes are classified. Excellent photon reconstruction leads to a high classification rate.
+
+TODO
+write other people using it
 
 \section{Breakdown of photon reconstruction improvement}
 

@@ -14,92 +14,99 @@
 \contentsline {section}{\numberline {2.8}Standard Model Higgs boson}{9}{section.2.8}
 \contentsline {section}{\numberline {2.9}Higgs beyond the Standard Model}{10}{section.2.9}
 \contentsline {chapter}{\numberline {3}Detector and Physics at Future Linear Colliders}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}ILC}{15}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}ILD vs SID}{16}{subsection.3.1.1}
-\contentsline {section}{\numberline {3.2}CLIC}{16}{section.3.2}
-\contentsline {section}{\numberline {3.3}Physics at future linear colliders}{18}{section.3.3}
-\contentsline {section}{\numberline {3.4}Physics requirements on the detector design}{18}{section.3.4}
-\contentsline {section}{\numberline {3.5}CLIC vs ILC}{19}{section.3.5}
-\contentsline {section}{\numberline {3.6}International Large Detector}{20}{section.3.6}
+\contentsline {section}{\numberline {3.1}\ILC }{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}\CLIC }{16}{section.3.2}
+\contentsline {section}{\numberline {3.3}\CLIC vs \ILC }{16}{section.3.3}
+\contentsline {section}{\numberline {3.4}Physics at future linear colliders}{17}{section.3.4}
+\contentsline {section}{\numberline {3.5}Impact of physics requirements on the detector design}{18}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Jet energy resolution requirements on the detector design}{18}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Other requirements on the detector design}{20}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}International Large Detector}{21}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}\ILD vs \SiD }{22}{subsection.3.6.1}
 \contentsline {section}{\numberline {3.7}Overview of \ILD sub-detectors}{22}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Vertex Detector}{22}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Tracking Detectors}{22}{subsection.3.7.2}
-\contentsline {subsection}{\numberline {3.7.3}Electromagnetic Calorimeter}{23}{subsection.3.7.3}
-\contentsline {subsection}{\numberline {3.7.4}Hadronic Calorimeter}{24}{subsection.3.7.4}
-\contentsline {subsection}{\numberline {3.7.5}Solenoid}{25}{subsection.3.7.5}
-\contentsline {subsection}{\numberline {3.7.6}Yoke and Muon system}{26}{subsection.3.7.6}
-\contentsline {subsection}{\numberline {3.7.7}Very Forward Calorimeters}{26}{subsection.3.7.7}
-\contentsline {chapter}{\numberline {4}Simulation and Reconstruction}{29}{chapter.4}
-\contentsline {section}{\numberline {4.1}Monte Carlo event generation}{29}{section.4.1}
-\contentsline {section}{\numberline {4.2}Event Simulation}{30}{section.4.2}
-\contentsline {section}{\numberline {4.3}Event Reconstruction}{30}{section.4.3}
-\contentsline {section}{\numberline {4.4}\pandora }{30}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Track selection}{31}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Calorimeter selection}{31}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Cone Clusters Algorithm}{32}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}Particle Identification}{33}{subsection.4.4.4}
-\contentsline {subsection}{\numberline {4.4.5}Clustering}{33}{subsection.4.4.5}
-\contentsline {subsection}{\numberline {4.4.6}Topological cluster association}{33}{subsection.4.4.6}
-\contentsline {subsection}{\numberline {4.4.7}Track-cluster association}{33}{subsection.4.4.7}
-\contentsline {subsection}{\numberline {4.4.8}Re-clustering}{34}{subsection.4.4.8}
-\contentsline {subsection}{\numberline {4.4.9}Fragment removal}{34}{subsection.4.4.9}
-\contentsline {subsection}{\numberline {4.4.10}Particle Flow Object Creation}{34}{subsection.4.4.10}
-\contentsline {section}{\numberline {4.5}Suppression of \ggHad backgrounds}{34}{section.4.5}
-\contentsline {chapter}{\numberline {5}Photon Reconstruction in PandoraPFA}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Overview of photon reconstruction in PandoraPFA}{37}{section.5.1}
-\contentsline {section}{\numberline {5.2}Photon reconstruction algorithm}{38}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Form photon clusters}{38}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Reconstruct photon candidates}{39}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Photon ID test}{40}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Photon Fragment removal}{40}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Two dimensional peak finding algorithm for photon candidate}{40}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Candidate close to track projection}{41}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Peak filtering}{42}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Inclusive mode}{42}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Likelihood classifier for photon ID}{42}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Overview of Projective Likelihood}{43}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Projective Likelihood in \pandora }{43}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Photon fragment removal algorithm in the \ECAL }{44}{section.5.5}
-\contentsline {section}{\numberline {5.6}High energy photon fragment recovery algorithm}{47}{section.5.6}
-\contentsline {section}{\numberline {5.7}Photon splitting algorithm}{50}{section.5.7}
-\contentsline {section}{\numberline {5.8}Photon reconstruction performance improvement}{51}{section.5.8}
-\contentsline {section}{\numberline {5.9}Breakdown of photon reconstruction improvement}{54}{section.5.9}
-\contentsline {section}{\numberline {5.10}Photon reconstruction performance}{55}{section.5.10}
-\contentsline {chapter}{\numberline {6}Tau Lepton Final State Separation}{57}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{57}{section.6.1}
-\contentsline {section}{\numberline {6.2}Simulation and reconstruction}{58}{section.6.2}
-\contentsline {section}{\numberline {6.3}Generator level cut}{58}{section.6.3}
-\contentsline {section}{\numberline {6.4}Decay modes}{59}{section.6.4}
-\contentsline {section}{\numberline {6.5}Discriminative variables}{60}{section.6.5}
-\contentsline {section}{\numberline {6.6}Multivariate Analysis}{64}{section.6.6}
-\contentsline {section}{\numberline {6.7}Result}{65}{section.6.7}
-\contentsline {section}{\numberline {6.8}Electromagnetic calorimeter optimisaiton}{66}{section.6.8}
-\contentsline {chapter}{\numberline {7}Double Higgs Bosons Production Analysis}{71}{chapter.7}
-\contentsline {section}{\numberline {7.1}Analysis Straggly Overview}{72}{section.7.1}
-\contentsline {section}{\numberline {7.2}Monte Carlo Sample Generation}{73}{section.7.2}
-\contentsline {section}{\numberline {7.3}Physics object and event reconstruction}{75}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Electron and muon identification}{75}{subsection.7.3.1}
-\contentsline {subsubsection}{\nonumberline IsolatedLeptonFinderProcessor}{75}{section*.36}
-\contentsline {subsubsection}{\nonumberline BonoLeptonFinderProcessor}{76}{section*.38}
-\contentsline {subsubsection}{\nonumberline Comparison: IsolatedLeptonFinderProcessor v.s. BonoLeptonFinderProcessor}{77}{section*.40}
-\contentsline {subsection}{\numberline {7.3.2}Tau identification}{77}{subsection.7.3.2}
-\contentsline {subsubsection}{\nonumberline TauFinderProcessor}{77}{section*.41}
-\contentsline {subsubsection}{\nonumberline BonoTauFinderProcessor}{78}{section*.43}
-\contentsline {subsubsection}{\nonumberline Comparison: TauFinderProcessor v.s. BonoTauFinderProcessor}{79}{section*.45}
-\contentsline {subsection}{\numberline {7.3.3}Very forward electron identification}{80}{subsection.7.3.3}
-\contentsline {subsection}{\numberline {7.3.4}Other lepton identification processors}{81}{subsection.7.3.4}
-\contentsline {section}{\numberline {7.4}Jet reconstruction}{81}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Jet reconstruction optimisation}{82}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Jet flavour tagging}{85}{subsection.7.4.2}
-\contentsline {subsection}{\numberline {7.4.3}Jet pairing}{87}{subsection.7.4.3}
-\contentsline {section}{\numberline {7.5}Pre-selection}{88}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Discriminative pre-selection cuts}{88}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {3.7.1}Vertex Detector}{23}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Tracking Detectors}{23}{subsection.3.7.2}
+\contentsline {subsection}{\numberline {3.7.3}Electromagnetic Calorimeter}{24}{subsection.3.7.3}
+\contentsline {subsection}{\numberline {3.7.4}Hadronic Calorimeter}{25}{subsection.3.7.4}
+\contentsline {subsection}{\numberline {3.7.5}Solenoid}{26}{subsection.3.7.5}
+\contentsline {subsection}{\numberline {3.7.6}Yoke and Muon system}{27}{subsection.3.7.6}
+\contentsline {subsection}{\numberline {3.7.7}Very Forward Calorimeters}{27}{subsection.3.7.7}
+\contentsline {subsection}{\numberline {3.7.8}\ILD vs \CLICILD }{29}{subsection.3.7.8}
+\contentsline {chapter}{\numberline {4}Simulation and Reconstruction}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Monte Carlo event generation}{31}{section.4.1}
+\contentsline {section}{\numberline {4.2}Event Simulation}{32}{section.4.2}
+\contentsline {section}{\numberline {4.3}Event Reconstruction}{32}{section.4.3}
+\contentsline {section}{\numberline {4.4}\pandora }{33}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Track selection}{33}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Calorimeter selection}{34}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Cone Clusters Algorithm}{34}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Particle Identification}{35}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}Clustering}{35}{subsection.4.4.5}
+\contentsline {subsection}{\numberline {4.4.6}Topological cluster association}{35}{subsection.4.4.6}
+\contentsline {subsection}{\numberline {4.4.7}Track-cluster association}{36}{subsection.4.4.7}
+\contentsline {subsection}{\numberline {4.4.8}Re-clustering}{36}{subsection.4.4.8}
+\contentsline {subsection}{\numberline {4.4.9}Fragment removal}{36}{subsection.4.4.9}
+\contentsline {subsection}{\numberline {4.4.10}Particle Flow Object Creation}{36}{subsection.4.4.10}
+\contentsline {section}{\numberline {4.5}\CLIC specific simulation and reconstruction}{37}{section.4.5}
+\contentsline {section}{\numberline {4.6}Luminosity spectrum}{37}{section.4.6}
+\contentsline {section}{\numberline {4.7}Suppression of \ggHad backgrounds}{37}{section.4.7}
+\contentsline {chapter}{\numberline {5}Photon Reconstruction in PandoraPFA}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Overview of photon reconstruction in PandoraPFA}{39}{section.5.1}
+\contentsline {section}{\numberline {5.2}Photon reconstruction algorithm}{40}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Form photon clusters}{40}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Reconstruct photon candidates}{41}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Photon ID test}{42}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Photon Fragment removal}{42}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Two dimensional peak finding algorithm for photon candidate}{42}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Candidate close to track projection}{43}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Peak filtering}{44}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Inclusive mode}{44}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Likelihood classifier for photon ID}{44}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Overview of Projective Likelihood}{45}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Projective Likelihood in \pandora }{45}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}Photon fragment removal algorithm in the \ECAL }{46}{section.5.5}
+\contentsline {section}{\numberline {5.6}High energy photon fragment recovery algorithm}{49}{section.5.6}
+\contentsline {section}{\numberline {5.7}Photon splitting algorithm}{52}{section.5.7}
+\contentsline {section}{\numberline {5.8}Photon reconstruction performance improvement}{53}{section.5.8}
+\contentsline {section}{\numberline {5.9}Breakdown of photon reconstruction improvement}{56}{section.5.9}
+\contentsline {section}{\numberline {5.10}Photon reconstruction performance}{57}{section.5.10}
+\contentsline {chapter}{\numberline {6}Tau Lepton Final State Separation}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{59}{section.6.1}
+\contentsline {section}{\numberline {6.2}Simulation and reconstruction}{60}{section.6.2}
+\contentsline {section}{\numberline {6.3}Generator level cut}{60}{section.6.3}
+\contentsline {section}{\numberline {6.4}Decay modes}{61}{section.6.4}
+\contentsline {section}{\numberline {6.5}Discriminative variables}{62}{section.6.5}
+\contentsline {section}{\numberline {6.6}Multivariate Analysis}{66}{section.6.6}
+\contentsline {section}{\numberline {6.7}Result}{67}{section.6.7}
+\contentsline {section}{\numberline {6.8}Electromagnetic calorimeter optimisaiton}{68}{section.6.8}
+\contentsline {chapter}{\numberline {7}Double Higgs Bosons Production Analysis}{73}{chapter.7}
+\contentsline {section}{\numberline {7.1}Analysis Straggly Overview}{74}{section.7.1}
+\contentsline {section}{\numberline {7.2}Monte Carlo Sample Generation}{75}{section.7.2}
+\contentsline {section}{\numberline {7.3}Physics object and event reconstruction}{76}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Electron and muon identification}{78}{subsection.7.3.1}
+\contentsline {subsubsection}{\nonumberline IsolatedLeptonFinderProcessor}{78}{section*.36}
+\contentsline {subsubsection}{\nonumberline BonoLeptonFinderProcessor}{79}{section*.38}
+\contentsline {subsubsection}{\nonumberline Comparison: IsolatedLeptonFinderProcessor v.s. BonoLeptonFinderProcessor}{79}{section*.40}
+\contentsline {subsection}{\numberline {7.3.2}Tau identification}{80}{subsection.7.3.2}
+\contentsline {subsubsection}{\nonumberline TauFinderProcessor}{80}{section*.41}
+\contentsline {subsubsection}{\nonumberline BonoTauFinderProcessor}{81}{section*.43}
+\contentsline {subsubsection}{\nonumberline Comparison: TauFinderProcessor v.s. BonoTauFinderProcessor}{82}{section*.45}
+\contentsline {subsection}{\numberline {7.3.3}Very forward electron identification}{82}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.4}Lepton identification performance}{85}{subsection.7.3.4}
+\contentsline {subsection}{\numberline {7.3.5}Other lepton identification processors}{85}{subsection.7.3.5}
+\contentsline {section}{\numberline {7.4}Jet reconstruction}{86}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Jet reconstruction optimisation}{86}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Jet flavour tagging}{88}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Jet pairing}{92}{subsection.7.4.3}
+\contentsline {section}{\numberline {7.5}Pre-selection}{92}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Discriminative pre-selection cuts}{92}{subsection.7.5.1}
 \contentsline {subsection}{\numberline {7.5.2}Sanity cuts}{93}{subsection.7.5.2}
-\contentsline {subsection}{\numberline {7.5.3}Mutually exclusive cuts for \eeToHHbbWW and \eeToHHbbbb }{93}{subsection.7.5.3}
-\contentsline {section}{\numberline {7.6}Discriminative Variables}{94}{section.7.6}
-\contentsline {section}{\numberline {7.7}Multivariate analysis}{97}{section.7.7}
-\contentsline {section}{\numberline {7.8}Signal selection results}{97}{section.7.8}
-\contentsline {section}{\numberline {7.9}Couplings extration}{97}{section.7.9}
-\contentsline {chapter}{Bibliography}{103}{chapter*.65}
-\contentsline {chapter}{List of figures}{107}{chapter*.66}
-\contentsline {chapter}{List of tables}{109}{chapter*.67}
+\contentsline {subsection}{\numberline {7.5.3}Mutually exclusive cuts for \eeToHHbbWW and \eeToHHbbbb }{98}{subsection.7.5.3}
+\contentsline {section}{\numberline {7.6}Discriminative Variables}{99}{section.7.6}
+\contentsline {section}{\numberline {7.7}Multivariate analysis}{99}{section.7.7}
+\contentsline {section}{\numberline {7.8}Signal selection results}{102}{section.7.8}
+\contentsline {section}{\numberline {7.9}3\tmspace +\thinmuskip {.1667em}TeV hadronic decay analysis}{102}{section.7.9}
+\contentsline {section}{\numberline {7.10}Couplings extration}{102}{section.7.10}
+\contentsline {chapter}{Bibliography}{111}{chapter*.69}
+\contentsline {chapter}{List of figures}{115}{chapter*.70}
+\contentsline {chapter}{List of tables}{117}{chapter*.71}

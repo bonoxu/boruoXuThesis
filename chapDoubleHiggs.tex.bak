@@ -5,7 +5,10 @@
 {Sir Steve Orange, 1785--1854}%: Blackwood's Magazine May 1830
 
 
-Since the discovery of Higgs boson in the \LHC in 2012\cite{Aad:2012tfa,Chatrchyan:2012ufa}, it is crucial to understand the properties of the Higgs boson and test if it is a Standard Model Higgs. The Higgs mechanism and the Higgs boson in the Standard Model have been explained in the \Chapter{chap:Theory}. A few theories of Higgs beyond the Standard Model could be tested via the double higgs production in an electro-positron collider (\Section{sec:theoryHiggsBSM}). A generator level studies has shown that the precision reached by a multi-TeV linear collider, such as the Compact Linear Collider (\CLIC), is much better than it by the Large Hadron Collider \cite{Contino:2013gna}. The first challenge for double Higgs bosons production analysis is that events are rare. The cross section is very small comparing to other background physics processes, making it difficult to select signal events. The second challenges is at high centre-of-mass, events are boosted and many particles are in the forward region of the detector, where the reconstruction performance is worse than the barrel region.
+Since the discovery of Higgs boson in the \LHC in 2012\cite{Aad:2012tfa,Chatrchyan:2012ufa}, it is crucial to understand the properties of the Higgs boson and test if it is a Standard Model Higgs. The Higgs mechanism and the Higgs boson in the Standard Model have been explained in the \Chapter{chap:Theory}. A few theories of Higgs beyond the Standard Model could be tested via the double higgs production in an electro-positron collider (\Section{sec:theoryHiggsBSM}). A generator level studies has shown that the precision reached by a multi-TeV linear collider, such as the Compact Linear Collider (\CLIC), is much better than it by the Large Hadron Collider (\LHC) even with 3000$fb^{-1}$ of data \cite{Contino:2013gna}.
+
+
+The first challenge for double Higgs bosons production analysis is that events are rare. The cross section is very small comparing to other background physics processes, making it difficult to select signal events. The second challenges is at high centre-of-mass, events are boosted and many particles are in the forward region of the detector, where the reconstruction performance is worse than the barrel region.
 
 
 In this chapter, a full \CLICILD detector simulation studies has been performed for the double higgs production, \eeToHH. First event generation and simulation will be briefly discussed. An overview of the analysis, including lepton finding and jet reconstruction, is presented. This is followed by a multivariate analysis with results on the selection efficiency. Lastly, a uncertainty on extracting Higgs triple self couplings, \gHHH, and quartic coupling, \gWWHH, is presented.
@@ -15,47 +18,27 @@ In this chapter, a full \CLICILD detector simulation studies has been performed 
 
 \section{Analysis Straggly Overview}
 
-The double higgs production, \eeToHH, can occur via processes in \Figure{fig:doubleHiggsFeynman}. \FIGURE{fig:doubleHiggsFeynman1} is sensitive to Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH. For this study of \gHHH and \gWWHH, \FIGURE{} and \Figure{}, which are sensitive to \gWWH, would be the irreducible background processes. The {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace}, where \PZ decays to \Pnu \APnu, will have the same final state. This channel can be used to study the Higgs triple self couplings, and has been studied at \ILC for \rootSGeV{500} \cite{}. However, for the relevant  \CLIC \rootS{1.4} and 3\,TeV, the cross section for {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} is one order of magnitude smaller than \eeToHH (see \Figure{fig:theoryHiggsCrossSection}).
+The double higgs production, \eeToHH, can occur via processes in \Figure{fig:doubleHiggsFeynman}. \FIGURE{fig:doubleHiggsFeynman1} is sensitive to Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH. \FIGURE{fig:doubleHiggsFeynman3} and \Figure{fig:doubleHiggsFeynman4}  are the irreducible background processes for the study of \gHHH and \gWWHH. 
 
 
-There are a few other irreducible background processes with same final state as \eeToHH. For example, {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace}, where \PZ decays to \Pnu \APnu, will have the same final state.
+The {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace}, where \PZ decays to \Pnu \APnu, has the same \HepProcess{\PHiggs \PHiggs \Pnu \APnu} final state as in \Figure{fig:doubleHiggsFeynman}. The \HepProcess{\PZ \PHiggs \PHiggs} channel can be used to study the Higgs triple self couplings, and has been studied at \ILC for \rootSGeV{500} \cite{Baer:2013cma}. However, its contribution to the \HepProcess{\PHiggs \PHiggs \Pnu \APnu} final state is small comparing to Feynman diagrams in \Figure{fig:doubleHiggsFeynman}, for the relevant  \CLIC energies \rootS{1.4} and 3\,TeV. Shown in \Figure{fig:theoryHiggsCrossSection}, the cross section for {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} is one order of magnitude smaller than \eeToHH via processes in \Figure{fig:doubleHiggsFeynman}. Therefore, the effect of {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} present in \eeToHH at \rootS{1.4} and 3\,TeV is negligible.
 
 
-
-The e + e ? ¡ú ZHH process at
-¡Ì
-s = 500 GeV has been studied in the context of the ILC,
-where the results show that a very large integrated luminos-
-¡Ì
-ity is required [25]. However for s ¡Ý 1 TeV, the sensitivity
-+ ?
-for the process e e ¡ú HH ¦Íe ¦Íe increases with increasing
-centre-of-mass energy and the measurement of the Higgs
-boson self-coupling (see Section 9) forms a central part of
-,
-and thus the total width can be determined utilising the model-
-independent measurement of gHWW . In practice, a fit (see
-Section 12) is performed to all of the experimental measure-
-ments involving the Higgs boson couplings.
-8
-the CLIC Higgs physics programme. Ultimately a precision
-of approximately 20 % on ¦Ë can be achieved.
+%There are a few other irreducible background processes with same final state as \eeToHH. For example, {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace}, where \PZ decays to \Pnu \APnu, will have the same final state.
 
 
-
-However, {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} can be easily identified via the recoil mass. Hence {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} is not considered in this studied.
-
-TODO
-ZHH
+%However, {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} can be easily identified via the recoil mass. Hence {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} is not considered in this studied.
 
 
-\eeToHH is divided into sub-channel \eeToHHbbWW and \eeToHHbbbb to allow a more detailed examination, providing a cross checks between two sub-channels and an improvement of signal selection when combined. In this chapter, the \PW hadronic decay mode of the \eeToHHbbWW channel is studied, and called the signal channel. It is chosen because the hadronic decay has the largest cross section and does not produce neutrinos, which allows each \PW to be reconstructed using a di-jet. However, hadronic decay final state of the \eeToHHbbWW has a very low cross section. The signal selection is challenging and aggressive background rejection methods are deployed.
+The double higgs production, \eeToHH is divided into sub-channel \eeToHHbbWW and \eeToHHbbbb to allow a more detailed examination, providing a cross checks between two sub-channels and an improvement of signal selection when combined. In this chapter, the \PW hadronic decay mode of the \eeToHHbbWW channel is studied, and called the signal channel. It is chosen because the hadronic decay has the largest cross section and does not produce neutrinos, which allows each \PW to be reconstructed using a di-jet. However, hadronic decay final state of the \eeToHHbbWW has a very low cross section. The signal selection is challenging and aggressive background rejection methods are deployed.
 
-The semi-leptonic and leptonic final states of the  sub-channel \eeToHHbbWW are studied as well. However, extra neutrinos in the final states present greater difficulty to reconstruct the two Higgs bosons, as some momenta of one Higgs boson is missing. Combining with the low cross section, results for these two final states are not reported. The analysis can be easily (and have been) adapted for the semi-leptonic and leptonic final states.
+The semi-leptonic final states of the  sub-channel \eeToHHbbWW is studied as well. However, extra neutrinos in the final states present greater difficulty to reconstruct the two Higgs bosons, as some momenta of one Higgs boson is missing. This channel would be discussed briefly as it is adapted from the hadronic decay analysis.
+
+%Combining with the low cross section, results for these two final states are not reported. The analysis can be easily (and have been) adapted for the semi-leptonic and leptonic final states.
 
 The signal channel final state, \eeToHHbbWWHadFull, is a six quark final state with missing momentum. The high number of quarks require efficient jet reconstruction and jet pairing algorithms to select the signal final states. The two b quarks in the final states allows b jet tagging information to be useful. Since the final state does not contain leptons, event-level lepton finding, typically for energetic isolated leptons,  would improve the signal selection efficiency. The topology of the signal events determine the analysis strategy.
 
-Proof-of-principle generator study was perform at \CLIC using \CLICILD detector model for \rootS{1.4} and 3\,TeV\cite{Linssen:2012hp}. For the full \CLICILD detector simulation, firstly suitable signal and background channels are identified. To help selecting the signal, light lepton and tau lepton are found and b-jet tagging is used. An event is group into a number of jets depending on the final state, followed by pre-selections cuts and multivariate analysis.
+Proof-of-principle generator study was perform at \CLIC using \CLICILD detector model for \rootS{1.4} and 3\,TeV\cite{Linssen:2012hp}. A full \CLICILD detector simulation is presented in this chapter. Firstly suitable signal and background channels are identified. To help selecting the signal, light lepton and tau lepton are found and b-jet tagging is used. An event is group into a number of jets depending on the final state, followed by pre-selections cuts and multivariate analysis. The analysis for \rootS{1.4} with \eeToHHbbWW hadronic decay will be presented first. The difference in the analysis and results for \rootS{3} and for the \eeToHHbbWW semi-leptonic decay will be highlighted afterwards. The simultaneous extraction of couplings, extracting Higgs triple self couplings, \gHHH, and quartic coupling, \gWWHH, are presented in the final section.
 
 \begin{figure}[!htbp]
   \begin{subfigure}[b]{0.22\textwidth}
@@ -81,56 +64,35 @@ Proof-of-principle generator study was perform at \CLIC using \CLICILD detector 
     \label{fig:doubleHiggsFeynman4}
   \end{subfigure}
 \caption[]%
-   {Figures show Feynman diagrams of leading-order \eeToHH processes at \CLIC. \FIGURE{fig:doubleHiggsFeynman1} is sensitive to the Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH.}
+   {Figures show Feynman diagrams of leading-order \eeToHH processes at \CLIC, without considering {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace}. \FIGURE{fig:doubleHiggsFeynman1} is sensitive to the Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH.}
    \label{fig:doubleHiggsFeynman}
 \end{figure}
 
 
-
-%Simulated samples, including those containing double higgs production were used. Signal events, events with double higgs production, were selected via a set of carefully designed and complicated methods. \gHHH and \gWWHH are extracted simultaneously with template fitting with modified couplings samples.
 
 \section{Monte Carlo Sample Generation}
 
 
 % TODO
 % Understand bremsstrahlung and EPA
+Selected background samples are considered in the analysis and listed in Table \ref{tab:doubleHiggsMCSamples}. The signal channel is \eeToHHbbWWFull where both \PW decay hadronically. 
+%The analysis is performed with \CLICILD detector concept at \rootS{1.4} and 3\,TeV, and the semi-leptonic channel. Unless specified, the
 
+Background processes with many quarks with missing energies would be challenging to veto. Two examples  are \eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} and \egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}. Single Higgs boson production would be difficult to remove as well, such as \eeTo{\qlight \qlight \PHiggs \Pnu \APnu}.
 
+Some background channels are not considered because either have different different event topologies, or they have very small cross sections. For example  \egamma{\Pepm}{\Pphoton}{}{\Pquark \Pquark \PHiggs \Plepton} is ignored as the cross section is vert small even at \rootS(3) (0.07\,fb with photon from EPA, 0.6\,fb with photon from BS). Other background channels are not simulated due to computational limitations. For example, six-quark final states were not simulated due to constraint of the simulating software.
 
-
-Selected background samples are considered in the analysis and listed in Table \ref{tab:doubleHiggsMCSamples}. These background were expected share similar topologies with the signal process. The ignored background samples either have different different event topologies, or they have very small cross sections. For example  \egamma{\Pepm}{\Pphoton}{}{\Pquark \Pquark \PHiggs \Plepton} is ignored as the cross section is vert small even at \rootS(3) (0.07\,fb with photon from EPA, 0.6\,fb with photon from BS).
-
-%When describing a multi-quark final state, it is referring to  all final states of the same number of quarks, including final states with possible additional neutrinos and or leptons. A multi-quark final state does not include higgs production, unless explicitly stated.
-
-Most two-quark and four-quark final states were considered. Six-quark final states were not considered due to computational limitation. Since the significant presence of beamstrahlung, where photon produced due to the high electric field generated by the colliding beams, processes initiated by photons are also included. Processes invloving real photons from beamstrahlung (BS) and ``quasi-real'' photons are generated separately. For the ``quasi-real'' photon initiated processes, the Equivalent Photon Appproximation (EPA) has been used.
-
-Single higgs productions are considered and it is shown later that it is different to completely remove single higgs events when studying double higgs events.
-%because topologies are very different to the single process.
-
-%Photon-electron/photon-photon interactions with four-quark final states were considered. Photon-electron interaction with two-quark final state, one Higgs, and one neutrino is considered. Photon-electron interaction with two-quark final state, one Higgs, and one lepton is not considered due to its negligible cross section.
-
-%I have just checked the ea->qqHl and ea->qqHv processes at 3 TeV. While ea->qqHl has a very small cross section (0.07 fb with photon from EPA, 0.6 fb with photon from BS), the ea->qqHv final state might not be negligible (4 fb with photon from EPA, 59 fb with photon from BS). The events will be very forward (more than the signal I assume). But of course I'm producing MC samples so that we can check.
+Electron-photon interactions are considered in this analysis. They are important as the the interaction becomes significant with high \sqrtS. Processes initiated by photons included, where photons are produced due to the high electric field generated by the colliding beams. Processes invloving real photons from beamstrahlung (BS) and ``quasi-real'' photons are generated separately. For the ``quasi-real'' photon initiated processes, the Equivalent Photon Appproximation (EPA) has been used.
 
 
 For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Multi-quark final state background samples could, in principle, contain higgs production. Therefore, they are generated with a Higgs mass of 14\,TeV. This will produce negligible double higgs production cross section. The cross section for sub-channels of the signal, such as \eeToHHbbWW, are corrected manually according to \cite{Dittmaier:2012vm}, as the internal value of the event generation software (PYTHIA) is inaccurate.
 
 
-% ATTN
-% EPA has no ISR contribution
-%Since the significant presence of beamstrahlung\footnote{photon emission due to the high electric field produced by the colliding beams}, processes initiated by photons are also included.
-%Processes initiated by real photons from beamstrahlung (BS) and ``quasi-real'' photons are generated separately. For the ``quasi-real'' photon initiated processes, the Equivalent Photon Appproximation (EPA) has been used. In order to avoid double counting with the signal processes, most of the background samples have been generated assuming a Higgs mass of \SI{14}{\TeV}, where not possible Higgs events are removed during the analysis.
-
-%All samples are generated with WHIZARD 1.95 \cite{}, taking into account the expected \CLIC luminosity spectrum.
-
-%\footnote{Photon radiation due to beamstrahlung causes a reduction of the effective energy available in the collision.}.
-%PYTHIA 6.4 \cite{} tuned on LEP data \cite{} is used to describe fragmentation, hadronisation processes, and Higgs decays. TAUOLA \cite{} is used for $\tau$ lepton decays.
-
-%Simulation
 
 % ATTN need to rewrite
 The simulation and reconstruction chain are described in \Chapter{chap:Reconstruction}. For most background processes, events are simulated when invariant mass of quarks are above 50\,GeV. For electron-photon interaction with $\Pquark\Pquark\Pquark\Pquark\Pnu$ final state, events are simulated when invariant mass of quarks are above 120\,GeV. These limits are necessary to generate a large amount of background samples in a feasible time, without losing much signal samples.
 
-Finally, the main beam induced background \ggHad is simulated and overlayed to all samples according to the integration time of each subdetector. Details can be found in \Section{sec:pandoraggHad}.
+Finally, the main beam induced background \ggHad is simulated and overlayed to all samples according to the integration time of each subdetector. Details can be found in \Section{}.
 
 \begin{table}[!tbp]\centering
 % TODO fix lumi correction for e gamma, gamma e
@@ -138,64 +100,63 @@ Finally, the main beam induced background \ggHad is simulated and overlayed to a
 \small
 %{
 
-\begin{tabular}{lrr}
+\begin{tabular}{lr}
 \hline \hline
-Channel  &  $\sigma(\rootS{1.4})$ / fb  & $\sigma(\rootS{3})$ / fb   \\
+Channel  &  $\sigma(\rootS{1.4})$ / fb   \\
 \hline
-\eeToHH & 0.149 &0.588 \\
+\eeToHH & 0.149 \\
 \hline
-\eeToHHbbWWFull,hadronic & 0.018 &0.07 \\
-\eeToHHbbbbFull & 0.047 &0.19 \\
-\eeToHHotherFull & 0.085 &0.34 \\
+\eeToHHbbWWFull,hadronic & 0.018  \\
+\eeToHHbbbbFull & 0.047 \\
+\eeToHHotherFull & 0.085 \\
 \hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 0.86 & 1.78 \\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 0.36 & 1.12\\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 0.31 & 1.91\\
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 0.86 \\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 0.36 \\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 0.31 \\
 
-\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1245.1& 546.5*\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 62.1* &169.3*\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 110.4* &106.6*\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 23.2* &71.5*\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1245.1\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 62.1* \\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 110.4*\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 23.2* \\
 
-\eeTo{ \Pquark \Pquark} &  4009.5 &2948.9\\
-\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  4309.7 &5561.1\\
-\eeTo{ \Pquark \Pquark \Pl \Pl} &  2725.8 &3319.6\\
-\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 787.7 &1317.5 \\
+\eeTo{ \Pquark \Pquark} &  4009.5\\
+\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  4309.7\\
+\eeTo{ \Pquark \Pquark \Pl \Pl} &  2725.8 \\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 787.7  \\
 \hline
-\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 1160.7  & 1268.7*\\
-\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 1156.3 & 1267.6*\\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 287.1 & 287.9*\\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 286.9 & 287.8*\\
-\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 79.8\myDagger  & 262.5*\\
-\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 79.3\myDagger & 262.3*\\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 17.4\myDagger  & 54.2*\\
-\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 17.3\myDagger  & 54.2*\\
+\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 1160.7  \\
+\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 1156.3 \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 287.1 \\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 286.9 \\
+\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 79.8\myDagger \\
+\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 79.3\myDagger \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 17.4\myDagger  \\
+\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 17.3\myDagger  \\
 
-\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 15.8*  & 58.6* \\
-\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 15.7* & 58.5* \\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 3.39*  & 11.7* \\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 3.39*   & 11.7* \\
+\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 15.8* \\
+\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 15.7* \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 3.39* \\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 3.39*   \\
 \hline
-\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 21406.2*  &13050.3*\\
-\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 4018.7*  &2420.6*\\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 4034.8* &2423.1*\\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 753.0* &402.7* \\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 21406.2*  \\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 4018.7* \\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 4034.8* \\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 753.0* \\
 \hline \hline
 \end{tabular}
 
-\caption[]{List of signal and background samples with the corresponding cross sections at \rootS{3} and \rootS{1.4}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV. For processes labeled with * and $\myDagger$, the generator level cut requires invariant mass of quarks greater than 50 and 120\,GeV, respectively.}
-\label{tab:samples_xsec}
+\caption[]{List of signal and background samples with the corresponding cross sections at \rootS{1.4}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV. For processes labeled with * and $\myDagger$, the generator level cut requires invariant mass of quarks greater than 50 and 120\,GeV, respectively.}
+\label{tab:doubleHiggsMCSamples}
 \end{table}
 %Simulated \PW has invariant mass of 80.385\,GeV.
 
 \section{Physics object and event reconstruction}
 
-The reconstruction is done via Marlin in \ilcsoft v01-16. Separate software package (processor) exists for identification of electrons, muons, taus, and jet reconstruction. New processors have been developed and existing processors have been optimised for signal selection and background rejection. The latest functioning flavour tagging processor exist in \ilcsoft v01-16. Thus newer versions of  \ilcsoft can not be used in this analysis.
+The reconstruction is done via Marlin in \ilcsoft v01-16. Separate software packages (processors) exist for identification of electrons, muons, and taus, and for jet reconstruction. New processors have been developed and existing processors have been optimised for signal selection and background rejection. The latest functioning flavour tagging processor exist in \ilcsoft v01-16. Thus newer versions of  \ilcsoft can not be used in this analysis.
 
-For the signal channel, \eeToHHbbWWHad, there is no lepton in the final state, whilst many background final states contain primary leptons, such as \HepProcess{\Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}. Hence effective lepton identifiers to veto events with leptons would improve the signal identification. These primary electrons and muons are typically energetic, and often isolated from other particles. Their tracks are close to the interaction point. Tau lepton is very short lived. Therefore only its decay products can be reconstructed. These characteristics provide the basis for the isolated lepton finding.
+For the signal channel, \eeToHHbbWWHad, there is no lepton in the final state, whilst many background final states contain primary leptons, such as \HepProcess{\Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}. Hence effective vetoing events with leptons would improve the signal selection efficiency. Leptons from channels like \HepProcess{\Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} are primary, where their tracks are very close to the interaction point. These leptons are typically energetic, and often isolated from other particles. Whilst electrons and muons are stable enough to deposit energies in calorimeters, tau lepton is very short lived and decays in the tracker. Therefore only tau decay products can be reconstructed. These characteristics provide the basis for the isolated lepton finding.
 
 
-The lepton finding processors are either developed or optimised with samples at \rootS{1.4}, and checked against samples at \rootS{3}. Because the expected signal significance would be low, the processors are optimised to aggressively reject more background, to increase the final signal significance. It was found that the same set of parameters for lepton identifiers work well under \rootS{1.4} and 3\,TeV.
 
 \subsection{Electron and muon identification}
 \label{sec:doubleHiggsLeptonID}
@@ -342,16 +303,62 @@ Two processors share similar size of search cone and isolation cone.  The main d
 
 \subsection{Very forward electron identification}
 
-Certain background channels, for example photon-electron interactions, contain electrons in the very forward part of the detector, namely the \LCAL and \BCAL. With the increase of the centre-of-mass energy, more particles are boosted and it is increasingly important to use the information in the forward region for the signal selection. As discussed before, veto events with leptons help the signal selection. Hence the goal is to identify leptons in the forward region.
+At high \sqrtS, particles are boosted and it is important to extract information in the forward calorimeters to aid signal selection. Certain background channels, for example photon-electron interactions, can have energetic electrons in  the forward calorimeters, the \LumiCAL and the \BeamCAL. These extracting information from these forward calorimeters is different to information in the barrel and the end cap. As forward calorimeters have the angular low angular acceptance, most particles in these forward detector would be very forward particles from beam induced background. However, previous study \cite{sailer2012radiation} has shown that sufficiently high energy electrons can be efficiently identified in the \BeamCAL and \LumiCAl. Analysis on \HepProcess{\PHiggs \to \APmuon \Pmuon}\xspace \cite{Grefe:2012rt} has studied electron tagging in the \LumiCAL and the \BeamCAL, based on previous studies.
 
-Due to the low angular acceptance, most particles in these forward detector would be very forward particles from beam induced background. However, previous study \cite{sailer2012radiation} has shown that sufficiently high energy electrons can be efficiently identified.
+For the \CLICILD detector concept, energies deposited in the \LumiCAL and the \BeamCAL are not simulated. This is because the thousands of beam induced background particles per bunch corssing () (see \Section{}) requires expensive computational resources. The current simulation software could not handle the simulation in a feasible time. Therefore, the adopted approach is to parameterise the background particle energy deposition and leads to electron tagging algorithms.
+
+For the \BeamCAL, \cite{Sailer:2017onh} describes an electron tagging algorithm developed using \rootS{3} collision environment, by comparing the simulated electron and background energy distributions. Events are overlaid background energy deposition integrated over 40 bunch crossing. A C++ code library has been developed and used in this analysis. The tagging efficiency for electrons with energy 500 to 1500\,GeV are bin in histograms at interval of 100\,GeV. There is no tagging for electrons with energy below 500\,GeV or about 1500\,GeV. An indicative performance plot of 500\,GeV electron tagging efficiency as a function of the polar angle is shown in \Figure{fig:doubleHiggsForwardBCAL}.
+
+
+The input of the \BeamCAL electron tagging algorithm is the four momenta of the MC electron. Since the algorithm assumes collision at \rootS{3}, for the \rootS{1.4} user case, the momenta of the MC electron is scaled down by a factor of $\frac{3}{1.4}$ to use the algorithm.
+\begin{figure}[!tbp]
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/forward/ForwardBCAL}}}
+    \caption{}
+    \label{fig:doubleHiggsForwardBCAL}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/forward/ForwardLCAL}}}
+    \caption{}
+    \label{fig:doubleHiggsForwardLCAL}
+  \end{subfigure}
+\caption[]%
+   {\FIGURE{fig:doubleHiggsForwardBCAL} shows \BeamCAL 500\,GeV electron tagging efficiency as a function of the polar angle with different methods to model backgrounds and fittings, taken from \cite{Sailer:2017onh}. \FIGURE{fig:doubleHiggsForwardLCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy, for polar angle $\theta = 50\,mrad$.\cite{Lukic:forwardElectron} }
+   \label{fig:doubleHiggsForwardCAL}
+\end{figure}
+
+For the \LumiCAL, the \HepProcess{\PHiggs \to \Pmu \Pmu} analysis in \cite{Milutinovic-Dumbelovic:2014uta} 
+
+
+\cite{Sailer:2017onh} describes an electron tagging algorithm developed using \rootS{3} collision environment, by comparing the simulated electron and background energy distributions. Events are overlaid background energy deposition integrated over 40 bunch crossing. A C++ code library has been developed and used in this analysis. The tagging efficiency for electrons with energy 500 to 1500\,GeV are bin in histograms at interval of 100\,GeV. There is no tagging for electrons with energy below 500\,GeV or about 1500\,GeV. An indicative performance plot of 500\,GeV electron tagging efficiency as a function of the polar angle is shown in \Figure{fig:doubleHiggsForwardBCAL}.
+
+
+The input of the \BeamCAL electron tagging algorithm is the four momenta of the MC electron. Since the algorithm assumes collision at \rootS{3}, for the \rootS{1.4} user case, the momenta of the MC electron is scaled down by a factor of $\frac{3}{1.4}$ to use the algorithm.
+
+
+
+%The algorithm identifies if the MC electron is in the \BeamCAL acceptance region (see \Section{}) and passes a set of selection cut.
+
+every signal event was overlaid with background
+energy deposition accumulated during 40 bunch crossings.
+
+
+For example
+
+ for the signal selection.
+
+
+With the increase of the centre-of-mass energy, more  As discussed before, veto events with leptons help the signal selection. Hence the goal is to identify leptons in the forward region.
+
+Due to the
 
 
  Due to the lack of tracking in these region, electrons and photons would have the same electromagnetic shower profile, with the given calorimeter resolution. MC photons and electrons are checked if they fall in the LCal or the BCal, and checked against the known detection efficiency.
 
 
 These forward calorimeters were not simulated due to computational limitation.
-Beam Calorimeter acceptance is defined as \absCosTheta is between  0.01 and 0.04\,rad and length in z direction is between 3181 and 3441\,mm. Luminosity Calorimeter acceptance is defined as \absCosTheta is between  0.038 and 0.11\,rad and length in z direction is between 2539 and 2714\,mm. For \rootS(3), the BeamCal detection efficiency is provided by a software package \cite{}. For \rootS(1.4), the same software for the BeamCal is used, by scaling the energy of the MC particle by a factor of $\frac{3}{1.4}$. For the LumiCal, the identification efficiency is defined as
+ For \rootS(3), the BeamCal detection efficiency is provided by a software package \cite{}. For \rootS(1.4), the same software for the BeamCal is used, by scaling the energy of the MC particle by a factor of $\frac{3}{1.4}$. For the LumiCal, the identification efficiency is defined as
 \begin{equation}
 \varepsilon=
 \begin{cases}
@@ -374,12 +381,6 @@ Combined light lepton finder & 87.6\% & 67.5\%  \\
 ForwardFinderProcessor & 98.9\% & 53.6\%  \\
 Combined & 86.6\% & 30.8\%  \\
 \hline
-Processor / Efficiency (3\,TeV)  &  Signal  & \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark}  \\
-\hline
-Combined light lepton finder & 84.4\% & 72.7\%  \\
-ForwardFinderProcessor & 95.9\% & 55.4\%  \\
-Combined & 81.0\% &  33.4\%  \\
-\hline
 \hline
 
 \end{tabular}
@@ -389,7 +390,7 @@ Combined & 81.0\% &  33.4\%  \\
 
 \subsection{Lepton identification performance}
 
-The performance of two processors on the signal and selected background samples is shown in \Table{tab:doubleHiggsIsoLepPerformance}. The number is the fraction of events without identified lepton from individual processor, and combined. For both centre-of-mass, the developed version of lepton finding processors, BonoLeptonFinderProcessor and BonoTauFinderProcessor are more aggressive at rejecting background than the processors in Marlin, IsolatedLeptonFinderProcessor and TauFinderProcessor. Comparing \rootS{1.4} and \rootS{3}, the performance is worse for \rootS{3}. This is because particles are more boosted and separation because particles are smaller. This reflects on the performance of the  ForwardFinderProcessor. Whilst at \rootS{1.4}, the processor only rejects 5\% background and 1\% signal, at \rootS{3} it rejects 19\% background and 4\% signal, suggesting many leptons are in the forward region. These processors are complimentary and a good rejection rate with combined processors is achieved.
+The performance of two processors on the signal and selected background samples is shown in \Table{tab:doubleHiggsIsoLepPerformance}. The number is the fraction of events without identified lepton from individual processor, and combined. For both centre-of-mass, the developed version of lepton finding processors, BonoLeptonFinderProcessor and BonoTauFinderProcessor are more aggressive at rejecting background than the processors in Marlin, IsolatedLeptonFinderProcessor and TauFinderProcessor.
 
 \begin{table}[!tbp]
 \begin{tabular}{lrr}
@@ -403,15 +404,6 @@ TauFinderProcessor & 97.5\% & 52.3\%  \\
 BonoTauFinderProcessor & 89.7\% & 38.5\%  \\
 ForwardFinderProcessor & 98.9\% & 95.1\%  \\
 Combined & 86.6\% & 16.8\%  \\
-\hline
-Efficiency (3\,TeV)  &  Signal  & \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} \\
-\hline
-IsolatedLeptonFinderProcessor & 99.5\% & 66.8\%  \\
-BonoLeptonFinderProcessor & 99.0\% & 52.5\%  \\
-TauFinderProcessor & 97.7\% & 79.5\%  \\
-BonoTauFinderProcessor & 86.3\% & 60.3\%  \\
-ForwardFinderProcessor & 95.9\% & 80.7\%  \\
-Combined & 81.0\% & 23.3\%  \\
 \hline
 \hline
 
@@ -1156,5 +1148,117 @@ Half of the samples were used for training, and the other half used for testing.
 \end{table}
 
 
+\section{3\,TeV hadronic decay analysis}
 
+The lepton finding processors are either developed or optimised with samples at \rootS{1.4}, and checked against samples at \rootS{3}. Because the expected signal significance would be low, the processors are optimised to aggressively reject more background, to increase the final signal significance. It was found that the same set of parameters for lepton identifiers work well under \rootS{1.4} and 3\,TeV.
+
+Comparing \rootS{1.4} and \rootS{3}, the performance is worse for \rootS{3}. This is because particles are more boosted and separation because particles are smaller. This reflects on the performance of the  ForwardFinderProcessor. Whilst at \rootS{1.4}, the processor only rejects 5\% background and 1\% signal, at \rootS{3} it rejects 19\% background and 4\% signal, suggesting many leptons are in the forward region. These processors are complimentary and a good rejection rate with combined processors is achieved.
+
+\begin{table}[!tbp]\centering
+% TODO fix lumi correction for e gamma, gamma e
+% TODO change some of sample cross section for  electron-photon interaction with four quarks and a neutrino final state
+\small
+%{
+
+\begin{tabular}{lrr}
+\hline \hline
+Channel  &  $\sigma(\rootS{1.4})$ / fb  & $\sigma(\rootS{3})$ / fb   \\
+\hline
+\eeToHH & 0.149 &0.588 \\
+\hline
+\eeToHHbbWWFull,hadronic & 0.018 &0.07 \\
+\eeToHHbbbbFull & 0.047 &0.19 \\
+\eeToHHotherFull & 0.085 &0.34 \\
+\hline
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 0.86 & 1.78 \\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 0.36 & 1.12\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 0.31 & 1.91\\
+
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1245.1& 546.5*\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 62.1* &169.3*\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 110.4* &106.6*\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 23.2* &71.5*\\
+
+\eeTo{ \Pquark \Pquark} &  4009.5 &2948.9\\
+\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  4309.7 &5561.1\\
+\eeTo{ \Pquark \Pquark \Pl \Pl} &  2725.8 &3319.6\\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 787.7 &1317.5 \\
+\hline
+\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 1160.7  & 1268.7*\\
+\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 1156.3 & 1267.6*\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 287.1 & 287.9*\\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 286.9 & 287.8*\\
+\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 79.8\myDagger  & 262.5*\\
+\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 79.3\myDagger & 262.3*\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 17.4\myDagger  & 54.2*\\
+\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 17.3\myDagger  & 54.2*\\
+
+\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 15.8*  & 58.6* \\
+\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 15.7* & 58.5* \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 3.39*  & 11.7* \\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 3.39*   & 11.7* \\
+\hline
+\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 21406.2*  &13050.3*\\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 4018.7*  &2420.6*\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 4034.8* &2423.1*\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 753.0* &402.7* \\
+\hline \hline
+\end{tabular}
+
+\caption[]{List of signal and background samples with the corresponding cross sections at \rootS{3} and \rootS{1.4}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV. For processes labeled with * and $\myDagger$, the generator level cut requires invariant mass of quarks greater than 50 and 120\,GeV, respectively.}
+\label{tab:samples_xsec}
+\end{table}
+
+
+\begin{table}[!tbp]
+\begin{tabular}{lrr}
+\hline
+\hline
+Efficiency (1.4\,TeV)  &  Signal & \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} \\
+\hline
+IsolatedLeptonFinderProcessor & 99.3\% & 50.3\%  \\
+BonoLeptonFinderProcessor & 99.1\% & 39.9\%  \\
+TauFinderProcessor & 97.5\% & 52.3\%  \\
+BonoTauFinderProcessor & 89.7\% & 38.5\%  \\
+ForwardFinderProcessor & 98.9\% & 95.1\%  \\
+Combined & 86.6\% & 16.8\%  \\
+\hline
+Efficiency (3\,TeV)  &  Signal  & \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} \\
+\hline
+IsolatedLeptonFinderProcessor & 99.5\% & 66.8\%  \\
+BonoLeptonFinderProcessor & 99.0\% & 52.5\%  \\
+TauFinderProcessor & 97.7\% & 79.5\%  \\
+BonoTauFinderProcessor & 86.3\% & 60.3\%  \\
+ForwardFinderProcessor & 95.9\% & 80.7\%  \\
+Combined & 81.0\% & 23.3\%  \\
+\hline
+\hline
+
+\end{tabular}
+\caption{isolated lepton finder processors performance on the signal and selected background samples.}
+\label{tab:doubleHiggs3TeVIsoLepPerformance}
+\end{table}
+
+\begin{table}[!tbp]
+\begin{tabular}{lrr}
+\hline
+\hline
+Selection / Efficiency (1.4\,TeV)  &  Signal & \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark}  \\
+\hline
+Combined light lepton finder & 87.6\% & 67.5\%  \\
+ForwardFinderProcessor & 98.9\% & 53.6\%  \\
+Combined & 86.6\% & 30.8\%  \\
+\hline
+Processor / Efficiency (3\,TeV)  &  Signal  & \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark}  \\
+\hline
+Combined light lepton finder & 84.4\% & 72.7\%  \\
+ForwardFinderProcessor & 95.9\% & 55.4\%  \\
+Combined & 81.0\% &  33.4\%  \\
+\hline
+\hline
+
+\end{tabular}
+\caption{Very forward electron and photon finder performance on the signal and selected background samples.}
+\label{tab:doubleHiggs3TeVForwardPerformance}
+\end{table}
 \section{Couplings extration} 

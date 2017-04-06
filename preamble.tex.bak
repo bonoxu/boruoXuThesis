@@ -129,6 +129,8 @@
 \DeclareRobustCommand{\eeToHHbbqqqq}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \Pq \Pq \Pq \Pq}\xspace}
 \DeclareRobustCommand{\eeToHHbbWWFull}{\HepProcess{ \Pem \Pep \to \PHiggs \PHiggs \Pnu \APnu \to \Pbottom \APbottom \PWplus \PWminus}\xspace}
 \DeclareRobustCommand{\eeToHHbbWWHad}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus \to \Pbottom \APbottom \Pq \Pq \Pq \Pq}\xspace}
+\DeclareRobustCommand{\eeToHHbbWWHadFull}{\HepProcess{ \PHiggs \PHiggs \Pnu \APnu \to \Pbottom \APbottom \PWplus \PWminus \to \Pbottom \APbottom \Pq \Pq \Pq \Pq \Pnu \APnu}\xspace}
+
 \DeclareRobustCommand{\eeToHHbbbb}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \Pbottom \APbottom}\xspace}
 \DeclareRobustCommand{\eeToHHbbbbFull}{\HepProcess{\Pem \Pep \to  \PHiggs \PHiggs \to \Pbottom \APbottom \Pbottom \APbottom}\xspace}
 \DeclareRobustCommand{\eeToHHotherFull}{\HepProcess{\Pem \Pep \to  \PHiggs \PHiggs \to \text{others}}\xspace}

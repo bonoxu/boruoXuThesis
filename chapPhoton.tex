@@ -25,6 +25,8 @@ The leading candidates for next generation electron-positron linear collider are
 Photon reconstruction is an important part of particle reconstruction. For many physics processes involving particles decaying into photons, such as $\Ptau$ lepton and $\Ppizero$, a good photon reconstruction, which provides a good single photon completeness and purity, as well as a good photon separation resolution, is crucial for reconstructing these particles.
 
 \end{comment}
+\section{Electromagnetic shower}
+
 \section{Overview of photon reconstruction in PandoraPFA}
 
 PandoraPFA provides a framework for particle reconstruction \cite{}, as described in \Chapter{chap:Reconstruction}. In the linear collider content, it has a vast library of algorithms developed through years by many people. Each algorithm addresses one topological issue in the particle reconstruction \cite{}. The essential part of the PandoraPFA is track-cluster association and reclustering to find the best track-cluster pair. Algorithms that removes trackless clusters, such as removing muon clusters or photon clusters, would provide a clean environment for the track-cluster association, hence improving the jet energy resolution.
@@ -395,6 +397,9 @@ Another metric to reflect the improvement in photon reconstruction is the fragme
 \label{fig:photonDoubleFragEnergy}
 \end{figure}
 
+TODO
+write RMS90
+
 The improvement in completeness and resolution in photon reconstruction, as shown in single photon and double photon reconstruction, leads to a small improvement in the jet energy resolution at high energy. Jet energy resolution is defined as the root mean squared divided by the mean for the smallest width of distribution that contains 90\% of entries, using \Zuds sample. The di-jet energy is sampled at 91, 200, 360 and 500\,GeV. Shown in \Figure{fig:photonJER}, the jet energy resolutions are better at 360 and 500\,GeV with improved photon reconstruction.
 
 
@@ -407,6 +412,9 @@ The improvement in completeness and resolution in photon reconstruction, as show
 \end{figure}
 
 The improvement of the photon is also demonstrated in \Chapter{chap:Tau}, where tau lepton decay modes are classified. Excellent photon reconstruction leads to a high classification rate.
+
+TODO
+write other people using it
 
 \section{Breakdown of photon reconstruction improvement}
 
