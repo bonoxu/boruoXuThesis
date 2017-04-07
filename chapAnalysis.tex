@@ -9,7 +9,7 @@ Automated analysis is the only way to deal with the vast amount of data generate
 For the linear collider, thanks to the high granular calorimeter, the starting point for analysis would be individual Particle Flow Objects, as well as individual tracks. Each of the PFOs encodes four-momentum and position information. For tracks, they would have momentum and position information.
 
 However, sometimes it is interesting to group PFOs and tracks into jets, where a jet is the result of hadronisation process from high energy particles like quarks or gulons.
-
+\begin{comment}
 \section{Jet algorithm}
 
 A jet is typically a visually obvious structure in a event display. The momentum and the direction of a jet tend to resemble the originated particle. Despite the relative easiness of identifying jets visually, it presents a challenge for a pattern recognition program to identify jets effectively and efficiently.
@@ -34,7 +34,7 @@ where $\pT_{i}$ is the transverse momentum of particle $i$ with respect to the b
 If $d_{ij} < d_{iB}$, particle $i$ and $j$ are merged, with the \fourMomentum of particle $i$ updated as the sum. Otherwise, particle $i$ is set to be a final jet, and delete from the particle list. The above procedure is repeated until no particle left.
 
 The exclusive variant is similar. First difference is that when  $d_{iB} < d_{ij}$, the particle $i$ is discarded and part of the beam jet. The second difference is that when both $d_{ij}$ and $d_{iB}$ are above some threshold, $d_{cut}$, the clustering will stop. In practise, exclusive mode allows a specified number of jets to be found, which will automatically choose the $d_{cut}$. The inclusive mode would fine as many jets as the algorithm allows.
-
+\end{comment}
 \subsection{Durham algorithm}
 
 Durham algorithm \cite{Catani:1991hj}, also known as \ee \kt algorithm, is commonly used \ee collider experiment. It has a single distance metric:
@@ -44,7 +44,7 @@ d_{ij} = 2\min\!\parenths{E_i^2,\!E_j^2}\!\parenths{1 - \cosOf{\theta_{ij}}},
 where $E_i$ is the energy of particle $i$. $\theta_{ij}$ is the polar angle difference between particle $i$ and $j$. Durham algorithm can only be run at exclusive mode, which means that the clustering will stop when $d_{ij}$ is above some threshold, $d_{cut}$.
 
 Comparing to \kt algorithm, it uses energy instead of \pT in the distance metric, and it did not have a beam jet. This is because that for the \ee collider in the past, the beam induced background was not severe and collisions energy is known, \sqrtS.
-
+\begin{comment}
 \subsection{Jet algorithm for \CLIC}
 
 Although \CLIC is a \ee collider, the significant beam-induced background adds a large amount of energy from \ggHad process. Therefore, traditional \ee jet algorithms, like Durham algorithm, is not suitable for \CLIC environment. Studies has shown that jet algorithms for \pp collider have better performance \cite{Linssen:2012hp,LCD-Note-2010-006}.

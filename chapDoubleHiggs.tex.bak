@@ -303,11 +303,13 @@ Two processors share similar size of search cone and isolation cone.  The main d
 
 \subsection{Very forward electron identification}
 
-At high \sqrtS, particles are boosted and it is important to extract information in the forward calorimeters to aid signal selection. Certain background channels, for example photon-electron interactions, can have energetic electrons in  the forward calorimeters, the \LumiCAL and the \BeamCAL. These extracting information from these forward calorimeters is different to information in the barrel and the end cap. As forward calorimeters have the angular low angular acceptance, most particles in these forward detector would be very forward particles from beam induced background. However, previous study \cite{sailer2012radiation} has shown that sufficiently high energy electrons can be efficiently identified in the \BeamCAL and \LumiCAl. Analysis on \HepProcess{\PHiggs \to \APmuon \Pmuon}\xspace \cite{Grefe:2012rt} has studied electron tagging in the \LumiCAL and the \BeamCAL, based on previous studies.
+At high \sqrtS, particles are boosted and it is important to extract information in the forward calorimeters to aid signal selection. Certain background channels, for example photon-electron interactions, can have energetic electrons in  the forward calorimeters, the \LumiCAL and the \BeamCAL. These extracting information from these forward calorimeters is different to information in the barrel and the end cap. As forward calorimeters have the angular low angular acceptance, most particles in these forward detector would be very forward particles from beam induced background. However, previous study \cite{sailer2012radiation} has shown that sufficiently high energy electrons can be efficiently identified in the \BeamCAL and \LumiCAL. 
 
 For the \CLICILD detector concept, energies deposited in the \LumiCAL and the \BeamCAL are not simulated. This is because the thousands of beam induced background particles per bunch corssing () (see \Section{}) requires expensive computational resources. The current simulation software could not handle the simulation in a feasible time. Therefore, the adopted approach is to parameterise the background particle energy deposition and leads to electron tagging algorithms.
 
-For the \BeamCAL, \cite{Sailer:2017onh} describes an electron tagging algorithm developed using \rootS{3} collision environment, by comparing the simulated electron and background energy distributions. Events are overlaid background energy deposition integrated over 40 bunch crossing. A C++ code library has been developed and used in this analysis. The tagging efficiency for electrons with energy 500 to 1500\,GeV are bin in histograms at interval of 100\,GeV. There is no tagging for electrons with energy below 500\,GeV or about 1500\,GeV. An indicative performance plot of 500\,GeV electron tagging efficiency as a function of the polar angle is shown in \Figure{fig:doubleHiggsForwardBCAL}.
+For the \BeamCAL, \cite{Sailer:2017onh} describes an electron tagging algorithm developed using \rootS{3} collision environment, by comparing the simulated electron and background energy distributions. An electron is tagged if the energy is significantly larger than the expected background energy distributions.
+
+Events are overlaid with background energy deposition integrated over 40 bunch crossing. A C++ code library has been developed and used in this analysis. The tagging efficiency for electrons with energy 500 to 1500\,GeV are bin in histograms at interval of 100\,GeV. There is no tagging for electrons with energy below 500\,GeV or about 1500\,GeV. An indicative performance plot of 500\,GeV electron tagging efficiency as a function of the polar angle is shown in \Figure{fig:doubleHiggsForwardBCAL}.
 
 
 The input of the \BeamCAL electron tagging algorithm is the four momenta of the MC electron. Since the algorithm assumes collision at \rootS{3}, for the \rootS{1.4} user case, the momenta of the MC electron is scaled down by a factor of $\frac{3}{1.4}$ to use the algorithm.
@@ -324,41 +326,13 @@ The input of the \BeamCAL electron tagging algorithm is the four momenta of the 
     \label{fig:doubleHiggsForwardLCAL}
   \end{subfigure}
 \caption[]%
-   {\FIGURE{fig:doubleHiggsForwardBCAL} shows \BeamCAL 500\,GeV electron tagging efficiency as a function of the polar angle with different methods to model backgrounds and fittings, taken from \cite{Sailer:2017onh}. \FIGURE{fig:doubleHiggsForwardLCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy, for polar angle $\theta = 50\,mrad$.\cite{Lukic:forwardElectron} }
+   {\FIGURE{fig:doubleHiggsForwardBCAL} shows \BeamCAL 500\,GeV electron tagging efficiency as a function of the polar angle with different methods to model backgrounds and fittings, taken from \cite{Sailer:2017onh}. \FIGURE{fig:doubleHiggsForwardLCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy, for polar angle $\theta = 50\,mrad$, taken from \cite{Lukic:forwardElectron}. }
    \label{fig:doubleHiggsForwardCAL}
 \end{figure}
 
-For the \LumiCAL, the \HepProcess{\PHiggs \to \Pmu \Pmu} analysis in \cite{Milutinovic-Dumbelovic:2014uta} 
+For the \LumiCAL, the \HepProcess{\PHiggs \to \Pmu \Pmu} analysis in \cite{Milutinovic-Dumbelovic:2014uta,Grefe:2012rt} has developed an algorithm for electron tagging in the \LumiCAL, with similar logic as the algorithm for the \BeamCAL. \FIGURE{fig:doubleHiggsForwardCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy, for polar angle $\theta = 50\,mrad$, where events are overlaid with background energy deposition integrated over 100 bunch crossings. As \Figure{fig:doubleHiggsForwardCAL} is the only available performance plot for the \LumiCAL electron tagging, the \LumiCAL electron tagging in this analysis is based on the plot.
 
-
-\cite{Sailer:2017onh} describes an electron tagging algorithm developed using \rootS{3} collision environment, by comparing the simulated electron and background energy distributions. Events are overlaid background energy deposition integrated over 40 bunch crossing. A C++ code library has been developed and used in this analysis. The tagging efficiency for electrons with energy 500 to 1500\,GeV are bin in histograms at interval of 100\,GeV. There is no tagging for electrons with energy below 500\,GeV or about 1500\,GeV. An indicative performance plot of 500\,GeV electron tagging efficiency as a function of the polar angle is shown in \Figure{fig:doubleHiggsForwardBCAL}.
-
-
-The input of the \BeamCAL electron tagging algorithm is the four momenta of the MC electron. Since the algorithm assumes collision at \rootS{3}, for the \rootS{1.4} user case, the momenta of the MC electron is scaled down by a factor of $\frac{3}{1.4}$ to use the algorithm.
-
-
-
-%The algorithm identifies if the MC electron is in the \BeamCAL acceptance region (see \Section{}) and passes a set of selection cut.
-
-every signal event was overlaid with background
-energy deposition accumulated during 40 bunch crossings.
-
-
-For example
-
- for the signal selection.
-
-
-With the increase of the centre-of-mass energy, more  As discussed before, veto events with leptons help the signal selection. Hence the goal is to identify leptons in the forward region.
-
-Due to the
-
-
- Due to the lack of tracking in these region, electrons and photons would have the same electromagnetic shower profile, with the given calorimeter resolution. MC photons and electrons are checked if they fall in the LCal or the BCal, and checked against the known detection efficiency.
-
-
-These forward calorimeters were not simulated due to computational limitation.
- For \rootS(3), the BeamCal detection efficiency is provided by a software package \cite{}. For \rootS(1.4), the same software for the BeamCal is used, by scaling the energy of the MC particle by a factor of $\frac{3}{1.4}$. For the LumiCal, the identification efficiency is defined as
+Assuming that the \LumiCAL electron tagging efficiency is described as in \Figure{fig:doubleHiggsForwardCAL}, for all polar angles and for \rootS{1.4} and 3\,TeV, \LumiCAL electrons tagging efficiency, $\varepsilon$, is parameterised as 
 \begin{equation}
 \varepsilon=
 \begin{cases}
@@ -366,31 +340,25 @@ These forward calorimeters were not simulated due to computational limitation.
   0.99 \times \frac{(erf(E - 100) + 1 )}{2}, & \text{otherwise}
 \end{cases}
 \end{equation}
-where $E$ is the energy of the electron or the photon.
+where $E$ is the energy of the electron or the photon. $erf$ is the error function. For each MC electron in the \LumiCAL, a random number between 0 and 1 is generated. If the random number is less than \varepsilon, then the MC electron is tagged.
 
-The background rejection is significant, shown in \Table{} for the signal and selected background.
+Due to lack of tracking ability in the forward region (see \Section{} and \Section{} for detector coverage), electrons and photons would have the same electromagnetic shower profile (see \Section{}), with the \ECAL spatial resolution. Therefore, MC photons and electrons appear indistinguishable to the \BeamCAL and \LumiCAL and both  are tagged by the above algorithms.
 
 
-\begin{table}[!tbp]
-\begin{tabular}{lrr}
-\hline
-\hline
-Selection / Efficiency (1.4\,TeV)  &  Signal & \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark}  \\
-\hline
-Combined light lepton finder & 87.6\% & 67.5\%  \\
-ForwardFinderProcessor & 98.9\% & 53.6\%  \\
-Combined & 86.6\% & 30.8\%  \\
-\hline
-\hline
+ %Due to the lack of tracking in these region, electrons and photons would have the same electromagnetic shower profile, with the given calorimeter resolution. MC photons and electrons are checked if they fall in the LCal or the BCal, and checked against the known detection efficiency.
 
-\end{tabular}
-\caption{Very forward electron and photon finder performance on the signal and selected background samples.}
-\label{tab:doubleHiggsForwardPerformance}
-\end{table}
+
+%With the increase of the centre-of-mass energy, more  As discussed before, veto events with leptons help the signal selection. Hence the goal is to identify leptons in the forward region.
+
+%These forward calorimeters were not simulated due to computational limitation.
+% For \rootS(3), the BeamCal detection efficiency is provided by a software package \cite{}. For \rootS(1.4), the same software for the BeamCal is used, by scaling the energy of the MC particle by a factor of $\frac{3}{1.4}$. For the LumiCal, the identification efficiency is defined as
+
 
 \subsection{Lepton identification performance}
 
-The performance of two processors on the signal and selected background samples is shown in \Table{tab:doubleHiggsIsoLepPerformance}. The number is the fraction of events without identified lepton from individual processor, and combined. For both centre-of-mass, the developed version of lepton finding processors, BonoLeptonFinderProcessor and BonoTauFinderProcessor are more aggressive at rejecting background than the processors in Marlin, IsolatedLeptonFinderProcessor and TauFinderProcessor.
+
+
+The performance of all lepton finding processors on the signal and selected background samples is shown in \Table{tab:doubleHiggsIsoLepPerformance}. The percentages are the fraction of events after rejecting events with lepton identified. BonoLeptonFinderProcessor and BonoTauFinderProcessor are more aggressive at rejecting background than the processors IsolatedLeptonFinderProcessor and TauFinderProcessor. By combining the processors, 86.6\% signal events remain and 16.8\% of \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} events survive after rejecting events with lepton identified.
 
 \begin{table}[!tbp]
 \begin{tabular}{lrr}
@@ -403,6 +371,7 @@ BonoLeptonFinderProcessor & 99.1\% & 39.9\%  \\
 TauFinderProcessor & 97.5\% & 52.3\%  \\
 BonoTauFinderProcessor & 89.7\% & 38.5\%  \\
 ForwardFinderProcessor & 98.9\% & 95.1\%  \\
+\hline
 Combined & 86.6\% & 16.8\%  \\
 \hline
 \hline
@@ -412,16 +381,73 @@ Combined & 86.6\% & 16.8\%  \\
 \label{tab:doubleHiggsIsoLepPerformance}
 \end{table}
 
+
+The ForwardFinderProcessor is most effective at rejecting backgrounds with leptons in the forward region. \TABLE{tab:doubleHiggsForwardPerformance} shows the performance for the signal and the  \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background. 53.6\% of \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background are left after the lepton veto.
+
+
+\begin{table}[!tbp]
+\begin{tabular}{lrr}
+\hline
+\hline
+Selection / Efficiency (1.4\,TeV)  &  Signal & \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark}  \\
+\hline
+Combined light lepton finder & 87.6\% & 67.5\%  \\
+ForwardFinderProcessor & 98.9\% & 53.6\%  \\
+\hline
+Combined & 86.6\% & 30.8\%  \\
+\hline
+\hline
+
+\end{tabular}
+\caption{Very forward electron and photon finder performance on the signal and selected background samples.}
+\label{tab:doubleHiggsForwardPerformance}
+\end{table}
+
+
 \subsection{Other lepton identification processors}
 
-Other isolated lepton selection processors available in Marlin package, including IsolatedLeptonTagging and TauJetClustering, have been tested. The results, after some tuning of parameters, were unsatisfactory. They either performed poorly comparing to the processors above, or became redundant after the processors above. Therefore, these processors were not used in this analysis.
 
-
-
+Other isolated lepton selection processors available in Marlin package, including IsolatedLeptonTagging and TauJetClustering, have been tested. The results, after tuning of parameters, were unsatisfactory. They either performed poorly comparing to the processors above, or became redundant after using the processors above. Therefore, these other lepton selection processors are not used in this analysis.
 
 \section{Jet reconstruction}
 
-The signal channel, \eeToHHbbWWHad, is a four-jet final state. A useful technique for the analysis is to reconstruct the four-jet final state using jet algorithms. This allows discriminative variables to be calculated.
+
+
+
+The signal channel, \eeToHHbbWWHad, is a six-jet final state. A useful technique for the analysis is to reconstruct the multi-jet final state using jet algorithms. This allows discriminative variables to be calculated. A brief discussion about jet algorithms and its relevance for the \CLIC and this analysis are provided.
+
+
+\subsection{Jet algorithm}
+
+A jet is typically a visually obvious structure in a event display. The momentum and the direction of a jet tend to resemble the originated particle. Despite the relative easiness of identifying jets visually, it presents a challenge for a pattern recognition program to identify jets effectively and efficiently.
+
+Early work on jet finding started in 1977 \cite{PhysRevLett.39.1436}, where later development can be found in reviews \cite{Moretti:1998qx,Salam:2009jx,Ali:2010tw}.
+
+There are two large families of jet finding algorithm, cone based algorithms, and sequential combination algorithms. Cone based algorithm is briefly discussed in \Section{sec:pandoraConeClustering} in the context of the \pandora user case.
+
+Sequential combination algorithms typically calculate a pair-wise distance metric. Pairs with the smallest metric will be combined. The metric will be calculated and updated after a combination. This procedure will be repeated until some stopping criterion are satisfied.
+%, and a pair with smallest metric will be combined.
+
+The chosen jet algorithm implementation is FastJet C++ software package \cite{Cacciari:2011ma,Cacciari:2005hq}, providing a wide range of jet finding algorithms. The implementation in Marlin software package is called MarlinFastJet. The symbols in the subsequent discussion about specific jet algorithms will follow \cite{Cacciari:2011ma}
+
+\paragraph{\kt algorithm}
+
+longitudinally-invariant \kt algorithm \cite{Catani:1993hr,Ellis:1993tq} is one of the common sequential combination algorithms for \pp collider experiment. In the inclusive variant, the symmetrical pair-wise distance metric between particle $i$ and $j$, and the beam distance, are defined as
+\begin{equation}
+&d_{ij} = d_{ji} = \min\!\parenths{\pT_{i}^{2},\!\pT_{j}^{2}}\frac{\DeltaOf{R_{ij}^{2}}}{R^{2}}, \\
+&d_{iB} = \pT_{i}^2,
+\end{equation}
+where $\pT_{i}$ is the transverse momentum of particle $i$ with respect to the beam ($z$) direction, and $\DeltaOf{R_{ij}^{2}}$ is the measurement of angular separation of particle $i$ and $j$, defined as $\DeltaOf{R_{ij}^{2}} = \parenths{y_i - y_j}^2 + \parenths{\phi_i - \phi_j}^2$, where $y_i = \frac{1}{2}\ln\!\frac{E_i + {p_z}_i}{E_i - {p_z}_i}$ and $\phi_i$ are particle $i$'s rapidity and azimuthal angle. $R$ is a free parameter controlling the jet radius.
+
+If $d_{ij} < d_{iB}$, particle $i$ and $j$ are merged, with the \fourMomentum of particle $i$ updated as the sum of the two particles. Otherwise, particle $i$ is set to be a final jet, and deleted from the particle list. The above procedure is repeated until no particle left.
+
+The exclusive variant is similar. First difference is that when  $d_{iB} < d_{ij}$, the particle $i$ is discarded and part of the beam jet. The second difference is that when both $d_{ij}$ and $d_{iB}$ are above some threshold, $d_{cut}$, the clustering will stop. In practise, exclusive mode allows a specified number of jets to be found, which will automatically choose the $d_{cut}$. The inclusive mode would find as many jets as the algorithm allows.
+
+\paragraph{Jet algorithm for \CLIC}
+
+Although \CLIC is a \ee collider, the significant beam-induced background adds a large amount of energy from \ggHad process (see \Section{}). Therefore, traditional \ee jet algorithms, like Durham algorithm (see \Section{}), is not suitable for the \CLIC environment. Studies has shown that jet algorithms for \pp collider have better performance \cite{Linssen:2012hp,LCD-Note-2010-006}.
+
+A more recent attempt at marrying merits from both Durham and \kt algorithms has resulted in Valencia jet algorithm \cite{Boronat:2014hva}. It had shown promising improvement comparing to \kt algorithm.
 
 \subsection{Jet reconstruction optimisation}
 \label{sec:doubleHiggsJetOptimisation}

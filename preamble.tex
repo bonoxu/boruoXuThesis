@@ -122,7 +122,7 @@
 \DeclareRobustCommand{\gWWHH}{\HepParticle{g}{WWHH}{}\xspace}
 \DeclareRobustCommand{\rootS}[1]{\sqrtS = #1\,TeV\xspace}
 \DeclareRobustCommand{\rootSGeV}[1]{\sqrtS = #1\,GeV\xspace}
-\DeclareRobustCommand{\ee}{\Pem\Pep\xspace}
+\DeclareRobustCommand{\ee}{\HepProcess{ \Pep\Pem}\xspace}
 
 \DeclareRobustCommand{\eeToHH}{\HepProcess{ \Pem \Pep \to \PHiggs \PHiggs \Pnu \APnu }\xspace}
 \DeclareRobustCommand{\eeToHHbbWW}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus}\xspace}
@@ -231,5 +231,5 @@
 %\DeclareRobustCommand{\Xzero}{\HepGenParticle{X}{}{0}\xspace}
 %\DeclareRobustCommand{\Xzerobar}{\HepGenAntiParticle{X}{}{0}\xspace}
 %\DeclareRobustCommand{\epluseminus}{\Ppositron\!\Pelectron\xspace}
-\DeclareRobustCommand{\pp}{\Pproton\APproton\xspace}
-\DeclareRobustCommand{\protonproton}{\Pproton\APproton\xspace}
+\DeclareRobustCommand{\pp}{\HepProcess{\APproton\Pproton}\xspace}
+\DeclareRobustCommand{\protonproton}{\pp}

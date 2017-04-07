@@ -30,15 +30,11 @@ The event simulation software is GEANT4 \cite{Agostinelli:2002hh}, and the detec
 
 \section{Event Reconstruction}
 
-Reconstruction software runs in Marlin framework \cite{Gaede:2006pj}, as a part of the \ilcsoft. Event reconstruction contains following steps: digitisation of simulated calorimeter hits, reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects (\PFOs)reconstruction with \pandora\cite{Thomson:2009rp,Marshall:2012ry}. Reconstruction does not include calorimeters hits in the forward calorimeters, due to computational reasons.
+Reconstruction software runs in Marlin framework \cite{Gaede:2006pj}, as a part of the \ilcsoft. Event reconstruction contains following steps: digitisation of simulated calorimeter hits, reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects (\PFOs)reconstruction with \pandora\cite{Thomson:2009rp,Marshall:2012ry}. Reconstruction does not include calorimeters hits in the forward calorimeters, due to computational reasons  (see \Section{sec:doubleHiggsForwardElectron}).
 
 For the \CLIC detector simulations, suppression of \ggHad background is performed.
 
 Details of the reconstruction can be found in \cite{Brau:2007zza,Linssen:2012hp}. Particle flow reconstruction via \pandora will be discussed in details, which provides the background for the photon reconstructions in \pandora in \Chapter{chap:Reconstruction}.
-
-%We will discuss \pandora cite{Thomson:2009rp,Marshall:2012ry,Marshall:2015rfa} in details, where a lot work goes into, and the background suppression due to its relevance in later analysis.
-
-%into physical objects containing a few main steps: digitisation of calorimeter hits (simulated hits in this case), reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects reconstruction with \pandora.
 
 \section{\pandora}
 \label{sec:pandoraPandoraPFA}
@@ -74,7 +70,6 @@ Before discussing the rest of the \pandora reconstruction, it is necessary to in
 \begin{figure}[tbph]
 \centering
 {\includegraphics[width=0.5\textwidth]{pandora/coneClustering}}%
-
 \caption{Illustration of the cone clustering algorithm, taken from \cite{Marshall:pandoraLC}}
 \label{fig:pandoraConeClustering}
 \end{figure}
@@ -130,6 +125,10 @@ Particle Flow Objects (PFOs) are created at the last step. Tracks are associated
 
 PFOs are the output of the \pandora reconstruction. The four-momentum of these PFOs are  used heavily for the downstream analysis. The electron, muon and photon identification are  also used in physics analysis, such as one described in \Chapter{chap:Tau}.
 
+\section{MC truth linker}
+Hits contribution to MC particle.
+Main contributed MC particle from energy weighted hits 
+Main contributed Jets etc. from hits
 \section{\CLIC specific simulation and reconstruction}
 
 \section{Luminosity spectrum}
@@ -150,3 +149,4 @@ The PFO selector utilise the high spatial resolution from the high granular calo
 
 The background suppression is used in analysis described in \Chapter{chap:DoubleHiggs}
 TODO add efficiency table pandora 
+TODO add timing pT cut and table of energies

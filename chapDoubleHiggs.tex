@@ -18,7 +18,7 @@ In this chapter, a full \CLICILD detector simulation studies has been performed 
 
 \section{Analysis Straggly Overview}
 
-The double higgs production, \eeToHH, can occur via processes in \Figure{fig:doubleHiggsFeynman}. \FIGURE{fig:doubleHiggsFeynman1} is sensitive to Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH. \FIGURE{fig:doubleHiggsFeynman3} and \Figure{fig:doubleHiggsFeynman4}  are the irreducible background processes for the study of \gHHH and \gWWHH. 
+The double higgs production, \eeToHH, can occur via processes in \Figure{fig:doubleHiggsFeynman}. \FIGURE{fig:doubleHiggsFeynman1} is sensitive to Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH. \FIGURE{fig:doubleHiggsFeynman3} and \Figure{fig:doubleHiggsFeynman4}  are the irreducible background processes for the study of \gHHH and \gWWHH.
 
 
 The {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace}, where \PZ decays to \Pnu \APnu, has the same \HepProcess{\PHiggs \PHiggs \Pnu \APnu} final state as in \Figure{fig:doubleHiggsFeynman}. The \HepProcess{\PZ \PHiggs \PHiggs} channel can be used to study the Higgs triple self couplings, and has been studied at \ILC for \rootSGeV{500} \cite{Baer:2013cma}. However, its contribution to the \HepProcess{\PHiggs \PHiggs \Pnu \APnu} final state is small comparing to Feynman diagrams in \Figure{fig:doubleHiggsFeynman}, for the relevant  \CLIC energies \rootS{1.4} and 3\,TeV. Shown in \Figure{fig:theoryHiggsCrossSection}, the cross section for {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} is one order of magnitude smaller than \eeToHH via processes in \Figure{fig:doubleHiggsFeynman}. Therefore, the effect of {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} present in \eeToHH at \rootS{1.4} and 3\,TeV is negligible.
@@ -33,6 +33,8 @@ The {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace}, where \PZ decays t
 The double higgs production, \eeToHH is divided into sub-channel \eeToHHbbWW and \eeToHHbbbb to allow a more detailed examination, providing a cross checks between two sub-channels and an improvement of signal selection when combined. In this chapter, the \PW hadronic decay mode of the \eeToHHbbWW channel is studied, and called the signal channel. It is chosen because the hadronic decay has the largest cross section and does not produce neutrinos, which allows each \PW to be reconstructed using a di-jet. However, hadronic decay final state of the \eeToHHbbWW has a very low cross section. The signal selection is challenging and aggressive background rejection methods are deployed.
 
 The semi-leptonic final states of the  sub-channel \eeToHHbbWW is studied as well. However, extra neutrinos in the final states present greater difficulty to reconstruct the two Higgs bosons, as some momenta of one Higgs boson is missing. This channel would be discussed briefly as it is adapted from the hadronic decay analysis.
+
+\eeToHHbbbb  sub-channel is studied independently by collaborators. However there are collaboration between two studies, which would converge on couplings extractions.
 
 %Combining with the low cross section, results for these two final states are not reported. The analysis can be easily (and have been) adapted for the semi-leptonic and leptonic final states.
 
@@ -75,7 +77,7 @@ Proof-of-principle generator study was perform at \CLIC using \CLICILD detector 
 
 % TODO
 % Understand bremsstrahlung and EPA
-Selected background samples are considered in the analysis and listed in Table \ref{tab:doubleHiggsMCSamples}. The signal channel is \eeToHHbbWWFull where both \PW decay hadronically. 
+Selected background samples are considered in the analysis and listed in Table \ref{tab:doubleHiggsMCSamples}. The signal channel is \eeToHHbbWWFull where both \PW decay hadronically.
 %The analysis is performed with \CLICILD detector concept at \rootS{1.4} and 3\,TeV, and the semi-leptonic channel. Unless specified, the
 
 Background processes with many quarks with missing energies would be challenging to veto. Two examples  are \eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} and \egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}. Single Higgs boson production would be difficult to remove as well, such as \eeTo{\qlight \qlight \PHiggs \Pnu \APnu}.
@@ -155,7 +157,6 @@ Channel  &  $\sigma(\rootS{1.4})$ / fb   \\
 The reconstruction is done via Marlin in \ilcsoft v01-16. Separate software packages (processors) exist for identification of electrons, muons, and taus, and for jet reconstruction. New processors have been developed and existing processors have been optimised for signal selection and background rejection. The latest functioning flavour tagging processor exist in \ilcsoft v01-16. Thus newer versions of  \ilcsoft can not be used in this analysis.
 
 For the signal channel, \eeToHHbbWWHad, there is no lepton in the final state, whilst many background final states contain primary leptons, such as \HepProcess{\Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}. Hence effective vetoing events with leptons would improve the signal selection efficiency. Leptons from channels like \HepProcess{\Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} are primary, where their tracks are very close to the interaction point. These leptons are typically energetic, and often isolated from other particles. Whilst electrons and muons are stable enough to deposit energies in calorimeters, tau lepton is very short lived and decays in the tracker. Therefore only tau decay products can be reconstructed. These characteristics provide the basis for the isolated lepton finding.
-
 
 
 \subsection{Electron and muon identification}
@@ -302,8 +303,8 @@ Isolation (GeV) 5& \multicolumn{1}{R{0.4\textwidth}}{{$N_{X^+} = 3$, $N_{cone2} 
 Two processors share similar size of search cone and isolation cone.  The main difference is that the BonoTauFinderProcessor has an interactive approach to build up tau candidate, which allows a dynamic tau search cone size. The BonoTauFinderProcessor has looser cut on minimum \pT and invariant, but stricter isolation criterion. This leads to a more aggressive tau finder. The performance of processors is shown in \Table{tab:doubleHiggsIsoLepPerformance}.
 
 \subsection{Very forward electron identification}
-
-At high \sqrtS, particles are boosted and it is important to extract information in the forward calorimeters to aid signal selection. Certain background channels, for example photon-electron interactions, can have energetic electrons in  the forward calorimeters, the \LumiCAL and the \BeamCAL. These extracting information from these forward calorimeters is different to information in the barrel and the end cap. As forward calorimeters have the angular low angular acceptance, most particles in these forward detector would be very forward particles from beam induced background. However, previous study \cite{sailer2012radiation} has shown that sufficiently high energy electrons can be efficiently identified in the \BeamCAL and \LumiCAl. 
+\label{sec:doubleHiggsForwardElectron}
+At high \sqrtS, particles are boosted and it is important to extract information in the forward calorimeters to aid signal selection. Certain background channels, for example photon-electron interactions, can have energetic electrons in  the forward calorimeters, the \LumiCAL and the \BeamCAL. These extracting information from these forward calorimeters is different to information in the barrel and the end cap. As forward calorimeters have the angular low angular acceptance, most particles in these forward detector would be very forward particles from beam induced background. However, previous study \cite{sailer2012radiation} has shown that sufficiently high energy electrons can be efficiently identified in the \BeamCAL and \LumiCAL.
 
 For the \CLICILD detector concept, energies deposited in the \LumiCAL and the \BeamCAL are not simulated. This is because the thousands of beam induced background particles per bunch corssing () (see \Section{}) requires expensive computational resources. The current simulation software could not handle the simulation in a feasible time. Therefore, the adopted approach is to parameterise the background particle energy deposition and leads to electron tagging algorithms.
 
@@ -330,9 +331,9 @@ The input of the \BeamCAL electron tagging algorithm is the four momenta of the 
    \label{fig:doubleHiggsForwardCAL}
 \end{figure}
 
-For the \LumiCAL, the \HepProcess{\PHiggs \to \Pmu \Pmu} analysis in \cite{Milutinovic-Dumbelovic:2014uta,Grefe:2012rt} has developed an algorithm for electron tagging in the \LumiCAL, with similar logic as the algorithm for the \BeamCAL. \FIGURE{fig:doubleHiggsForwardCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy, for polar angle $\theta = 50\,mrad$, where events are overlaid with background energy deposition integrated over 100 bunch crossings. As it is the only available performance plot for the \LumiCAL electron tagging, the electron tagging in the \LumiCAL in this analysis is based on the efficiency plot  \Figure{fig:doubleHiggsForwardCAL}.
+For the \LumiCAL, the \HepProcess{\PHiggs \to \Pmu \Pmu} analysis in \cite{Milutinovic-Dumbelovic:2014uta,Grefe:2012rt} has developed an algorithm for electron tagging in the \LumiCAL, with similar logic as the algorithm for the \BeamCAL. \FIGURE{fig:doubleHiggsForwardCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy, for polar angle $\theta = 50\,mrad$, where events are overlaid with background energy deposition integrated over 100 bunch crossings. As \Figure{fig:doubleHiggsForwardCAL} is the only available performance plot for the \LumiCAL electron tagging, the \LumiCAL electron tagging in this analysis is based on the plot.
 
-Assuming the \LumiCAL electron tagging efficiency is described as in \Figure{fig:doubleHiggsForwardCAL}, for all polar angles and for \rootS{1.4} and 3\,TeV, \LumiCAL electrons tagging efficiency, $\varepsilon$, is parameterised as 
+Assuming that the \LumiCAL electron tagging efficiency is described as in \Figure{fig:doubleHiggsForwardCAL}, for all polar angles and for \rootS{1.4} and 3\,TeV, \LumiCAL electrons tagging efficiency, $\varepsilon$, is parameterised as
 \begin{equation}
 \varepsilon=
 \begin{cases}
@@ -356,7 +357,9 @@ Due to lack of tracking ability in the forward region (see \Section{} and \Secti
 
 \subsection{Lepton identification performance}
 
-The performance of two processors on the signal and selected background samples is shown in \Table{tab:doubleHiggsIsoLepPerformance}. The number is the fraction of events without identified lepton from individual processor, and combined. For both centre-of-mass, the developed version of lepton finding processors, BonoLeptonFinderProcessor and BonoTauFinderProcessor are more aggressive at rejecting background than the processors in Marlin, IsolatedLeptonFinderProcessor and TauFinderProcessor.
+
+
+The performance of all lepton finding processors on the signal and selected background samples is shown in \Table{tab:doubleHiggsIsoLepPerformance}. The percentages are the fraction of events after rejecting events with lepton identified. BonoLeptonFinderProcessor and BonoTauFinderProcessor are more aggressive at rejecting background than the processors IsolatedLeptonFinderProcessor and TauFinderProcessor. By combining the processors, 86.6\% signal events remain and 16.8\% of \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} events survive after rejecting events with lepton identified.
 
 \begin{table}[!tbp]
 \begin{tabular}{lrr}
@@ -369,6 +372,7 @@ BonoLeptonFinderProcessor & 99.1\% & 39.9\%  \\
 TauFinderProcessor & 97.5\% & 52.3\%  \\
 BonoTauFinderProcessor & 89.7\% & 38.5\%  \\
 ForwardFinderProcessor & 98.9\% & 95.1\%  \\
+\hline
 Combined & 86.6\% & 16.8\%  \\
 \hline
 \hline
@@ -379,8 +383,7 @@ Combined & 86.6\% & 16.8\%  \\
 \end{table}
 
 
-
-The background rejection is significant, shown in \Table{} for the signal and selected background.
+The ForwardFinderProcessor is most effective at rejecting backgrounds with leptons in the forward region. \TABLE{tab:doubleHiggsForwardPerformance} shows the performance for the signal and the  \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background. 53.6\% of \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background are left after the lepton veto.
 
 
 \begin{table}[!tbp]
@@ -391,6 +394,7 @@ Selection / Efficiency (1.4\,TeV)  &  Signal & \egamma{\Pem}{\Pphoton}{BS}{\Pem 
 \hline
 Combined light lepton finder & 87.6\% & 67.5\%  \\
 ForwardFinderProcessor & 98.9\% & 53.6\%  \\
+\hline
 Combined & 86.6\% & 30.8\%  \\
 \hline
 \hline
@@ -400,35 +404,65 @@ Combined & 86.6\% & 30.8\%  \\
 \label{tab:doubleHiggsForwardPerformance}
 \end{table}
 
+
 \subsection{Other lepton identification processors}
 
-Other isolated lepton selection processors available in Marlin package, including IsolatedLeptonTagging and TauJetClustering, have been tested. The results, after some tuning of parameters, were unsatisfactory. They either performed poorly comparing to the processors above, or became redundant after the processors above. Therefore, these processors were not used in this analysis.
 
-
+Other isolated lepton selection processors available in Marlin package, including IsolatedLeptonTagging and TauJetClustering, have been tested. The results, after tuning of parameters, were unsatisfactory. They either performed poorly comparing to the processors above, or became redundant after using the processors above. Therefore, these other lepton selection processors are not used in this analysis.
 
 
 \section{Jet reconstruction}
 
-The signal channel, \eeToHHbbWWHad, is a four-jet final state. A useful technique for the analysis is to reconstruct the four-jet final state using jet algorithms. This allows discriminative variables to be calculated.
+For the signal channel, \eeToHHbbWWHad, one Higgs boson decays to two \Pbottom quarks, resulting in two jets from hadronisation. Similarly the other Higgs boson decays to two \PW bosons, where each \PW boson decays into two quarks. Therefore, the expected number of jets is six.  Physical bosons,  \PW and \PHiggs, can be reconstructed from suitable jets, which allows information to be extracted about the signal channel. Therefore it is important to have efficient jet reconstruction to maximum information extraction.  In this section, an overview of jet algorithm and the optimisation of the jet reconstruction are discussed.
+
+% A useful technique for the analysis is to reconstruct the multi-jet final state using jet algorithms. This allows discriminative variables to be calculated. A brief discussion about jet algorithms and its relevance for the \CLIC and this analysis are provided.
+
+
+\subsection{Jet algorithm}
+
+A jet is typically a visually obvious structure in a event display. The momentum and the direction of a jet tend to resemble the originated particle. Despite the relative easiness of identifying jets visually, it presents a challenge for a pattern recognition program to identify jets effectively and efficiently.
+
+Early work on jet finding started in 1977 \cite{Sterman:1977wj}, where later development can be found in reviews \cite{Moretti:1998qx,Salam:2009jx,Ali:2010tw}.
+
+There are two large families of jet finding algorithm, cone based algorithms, and sequential combination algorithms. Cone based algorithm is briefly discussed in \Section{sec:pandoraConeClustering} in the context of the \pandora user case.
+
+Sequential combination algorithms typically calculate a pair-wise distance metric. Pairs with the smallest metric will be combined. The metric will be calculated and updated after a combination. This procedure will be repeated until some stopping criterion are satisfied.
+%, and a pair with smallest metric will be combined.
+
+The chosen jet algorithm implementation is FastJet C++ software package \cite{Cacciari:2011ma,Cacciari:2005hq}, providing a wide range of jet finding algorithms. The implementation in Marlin software package is called MarlinFastJet. The symbols in the subsequent discussion follow the convention in \cite{Cacciari:2011ma}
+
+\paragraph{\kt algorithm}
+
+longitudinally-invariant \kt algorithm \cite{Catani:1993hr,Ellis:1993tq} is one of the common sequential combination algorithms for \pp collider experiment. In the inclusive variant, the symmetrical pair-wise distance metric between particle $i$ and $j$, and the beam distance, are defined as
+\begin{equation}
+&d_{ij} = d_{ji} = \min\!\parenths{\pT_{i}^{2},\!\pT_{j}^{2}}\frac{\DeltaOf{R_{ij}^{2}}}{R^{2}}, \\
+&d_{iB} = \pT_{i}^2,
+\end{equation}
+where $\pT_{i}$ is the transverse momentum of particle $i$ with respect to the beam ($z$) direction, and $\DeltaOf{R_{ij}^{2}}$ is the measurement of angular separation of particle $i$ and $j$, defined as $\DeltaOf{R_{ij}^{2}} = \parenths{y_i - y_j}^2 + \parenths{\phi_i - \phi_j}^2$, where $y_i = \frac{1}{2}\ln\!\frac{E_i + {p_z}_i}{E_i - {p_z}_i}$ and $\phi_i$ are particle $i$'s rapidity and azimuthal angle. $R$ is a free parameter controlling the jet radius.
+
+If $d_{ij} < d_{iB}$, particle $i$ and $j$ are merged, with the \fourMomentum of particle $i$ updated as the sum of the two particles. Otherwise, particle $i$ is set to be a final jet, and deleted from the particle list. The above procedure is repeated until no particle left.
+
+The exclusive variant is similar. First difference is that when  $d_{iB} < d_{ij}$, the particle $i$ is discarded and part of the beam jet. The second difference is that when both $d_{ij}$ and $d_{iB}$ are above some threshold, $d_{cut}$, the clustering will stop. In practise, exclusive mode allows a specified number of jets to be found, which will automatically choose the $d_{cut}$. The inclusive mode would find as many jets as the algorithm allows.
+
+\paragraph{Jet algorithm for the \CLIC}
+
+Although \CLIC is a \ee collider, the significant beam-induced background adds a large amount of energy from \ggHad process (see \Section{}). Therefore, traditional \ee jet algorithms, like Durham algorithm (see \Section{}), is not suitable for the \CLIC environment. Studies has shown that jet algorithms for \pp collider have better performance \cite{Linssen:2012hp,LCD-Note-2010-006}.
+
+A more recent attempt at marrying merits from both Durham and \kt algorithms has resulted in Valencia jet algorithm \cite{Boronat:2014hva}. It had shown promising improvement comparing to \kt algorithm, which is used in the parallel  \eeToHHbbbb  sub-channel analysis.
 
 \subsection{Jet reconstruction optimisation}
 \label{sec:doubleHiggsJetOptimisation}
-Longitudinal invariant, \kt, jet algorithm was chosen for the jet clustering. Due to the presence high level of beam induced background at the CLIC, it has been shown that a jet algorithm designed for hadron colliders are more effective than those traditional designed for the electron-positron collider, such as Durham algorithm.\cite{}
+Longitudinal invariant, \kt, jet algorithm was chosen for the jet clustering. The free parameters for \kt algorithm is the $R$ parameter, which controls the radius of the jet. The other parameter to optimised regularise  There is also the choice of the PFO collection, which incorporate different level of time and \pT cuts, to reduce beam induce background (see \Section{}). Both parameters are optimised for \rootS{1.4} and \rootS{3}.
 
-% ATTN, PFO collection should be explained already
-The free parameters for \kt algorithm is the $R$ parameter, which controls the fatness of the jet. There is also the choice of the PFO collection, which incorporate different level of time and \pT cuts, to reduce beam induce background. Both parameters are optimised for \rootS{1.4} and \rootS{3}.
+The metric for optimising the $R$ parameter, and the \PFO collection, is the invariant mass resolution of \PHiggs and \PW. With the signal events, jets will be paired to give physical bosons using cheated MC truth information. Hence  invariant mass resolution of \PHiggs and \PW are obtained.
 
-The details of jet algorithm can be found in \Section{}.
 
-The $R$ parameter of the \kt jet algorithm, and the collection of the PFOs are chosen to give the best invariant mass resolution. When there are a few suitable candidate, analysis were performed in parallel. Decision were made to give the highest signal significance.
+The sample for the optimisation is \eeToHH. The signal channel, hadronic decay of \eeToHHbbWWHad, is chosen using the MC truth information by  examining the decay chain of MC particles.
 
-\kt jet algorithm was used as part of the FastJet algorithms available in the Marlin package.
 
-The samples containing the signal, \eeToHHbbWWHad, was used for the optimisation of the jet reconstruction. The signal events were chosen using MC truth information.
+The signal events were chosen using MC truth information.
 
 Jet algorithm was run in exclusive mode, where number of jets is chosen to be six.
-
-For the signal, \eeToHHbbWWHad, one Higgs decays to two \Pbottom quarks, resulting in two jets from hadronisation. Similarly the other Higgs decays to two \PW bosons, where each \PW boson decays into two quarks. Therefore, the expected number of jets is six.
 
 Jets produced by the \kt jet algorithm are pairred up using MC truth information, to the corresponding Higgs and \PW boson. Four invariant mass distributions are obtained: two Higgs masses, $m_{\Hbb}$, $m_{\HWW}$, and two \PW masses $m_{\PW}$, $m_{\W*}$. \W* indicates the off-mass-shell \PW boson, because when a Higgs decays into two \PW bosons, one \PW is off the mass shell, as the Higgs mass is less than the sum two \PW masses.
 

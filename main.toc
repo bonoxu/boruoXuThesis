@@ -51,25 +51,26 @@
 \contentsline {section}{\numberline {4.6}Luminosity spectrum}{37}{section.4.6}
 \contentsline {section}{\numberline {4.7}Suppression of \ggHad backgrounds}{37}{section.4.7}
 \contentsline {chapter}{\numberline {5}Photon Reconstruction in PandoraPFA}{39}{chapter.5}
-\contentsline {section}{\numberline {5.1}Overview of photon reconstruction in PandoraPFA}{39}{section.5.1}
-\contentsline {section}{\numberline {5.2}Photon reconstruction algorithm}{40}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Form photon clusters}{40}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Reconstruct photon candidates}{41}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Photon ID test}{42}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Photon Fragment removal}{42}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Two dimensional peak finding algorithm for photon candidate}{42}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Candidate close to track projection}{43}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Peak filtering}{44}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Inclusive mode}{44}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Likelihood classifier for photon ID}{44}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Overview of Projective Likelihood}{45}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Projective Likelihood in \pandora }{45}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}Photon fragment removal algorithm in the \ECAL }{46}{section.5.5}
-\contentsline {section}{\numberline {5.6}High energy photon fragment recovery algorithm}{49}{section.5.6}
-\contentsline {section}{\numberline {5.7}Photon splitting algorithm}{52}{section.5.7}
-\contentsline {section}{\numberline {5.8}Photon reconstruction performance improvement}{53}{section.5.8}
-\contentsline {section}{\numberline {5.9}Breakdown of photon reconstruction improvement}{56}{section.5.9}
-\contentsline {section}{\numberline {5.10}Photon reconstruction performance}{57}{section.5.10}
+\contentsline {section}{\numberline {5.1}Electromagnetic shower}{39}{section.5.1}
+\contentsline {section}{\numberline {5.2}Overview of photon reconstruction in PandoraPFA}{39}{section.5.2}
+\contentsline {section}{\numberline {5.3}Photon reconstruction algorithm}{40}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Form photon clusters}{41}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Reconstruct photon candidates}{41}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Photon ID test}{42}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Photon Fragment removal}{42}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Two dimensional peak finding algorithm for photon candidate}{42}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Candidate close to track projection}{43}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Peak filtering}{44}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Inclusive mode}{44}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}Likelihood classifier for photon ID}{45}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Overview of Projective Likelihood}{45}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Projective Likelihood in \pandora }{45}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}Photon fragment removal algorithm in the \ECAL }{47}{section.5.6}
+\contentsline {section}{\numberline {5.7}High energy photon fragment recovery algorithm}{49}{section.5.7}
+\contentsline {section}{\numberline {5.8}Photon splitting algorithm}{52}{section.5.8}
+\contentsline {section}{\numberline {5.9}Photon reconstruction performance improvement}{53}{section.5.9}
+\contentsline {section}{\numberline {5.10}Breakdown of photon reconstruction improvement}{56}{section.5.10}
+\contentsline {section}{\numberline {5.11}Photon reconstruction performance}{57}{section.5.11}
 \contentsline {chapter}{\numberline {6}Tau Lepton Final State Separation}{59}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction}{59}{section.6.1}
 \contentsline {section}{\numberline {6.2}Simulation and reconstruction}{60}{section.6.2}
@@ -92,21 +93,24 @@
 \contentsline {subsubsection}{\nonumberline BonoTauFinderProcessor}{81}{section*.43}
 \contentsline {subsubsection}{\nonumberline Comparison: TauFinderProcessor v.s. BonoTauFinderProcessor}{82}{section*.45}
 \contentsline {subsection}{\numberline {7.3.3}Very forward electron identification}{82}{subsection.7.3.3}
-\contentsline {subsection}{\numberline {7.3.4}Lepton identification performance}{85}{subsection.7.3.4}
+\contentsline {subsection}{\numberline {7.3.4}Lepton identification performance}{84}{subsection.7.3.4}
 \contentsline {subsection}{\numberline {7.3.5}Other lepton identification processors}{85}{subsection.7.3.5}
 \contentsline {section}{\numberline {7.4}Jet reconstruction}{86}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Jet reconstruction optimisation}{86}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Jet flavour tagging}{88}{subsection.7.4.2}
-\contentsline {subsection}{\numberline {7.4.3}Jet pairing}{92}{subsection.7.4.3}
-\contentsline {section}{\numberline {7.5}Pre-selection}{92}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Discriminative pre-selection cuts}{92}{subsection.7.5.1}
-\contentsline {subsection}{\numberline {7.5.2}Sanity cuts}{93}{subsection.7.5.2}
-\contentsline {subsection}{\numberline {7.5.3}Mutually exclusive cuts for \eeToHHbbWW and \eeToHHbbbb }{98}{subsection.7.5.3}
-\contentsline {section}{\numberline {7.6}Discriminative Variables}{99}{section.7.6}
-\contentsline {section}{\numberline {7.7}Multivariate analysis}{99}{section.7.7}
+\contentsline {subsection}{\numberline {7.4.1}Jet algorithm}{86}{subsection.7.4.1}
+\contentsline {paragraph}{\nonumberline \kt algorithm}{87}{section*.49}
+\contentsline {paragraph}{\nonumberline Jet algorithm for the \CLIC }{87}{section*.50}
+\contentsline {subsection}{\numberline {7.4.2}Jet reconstruction optimisation}{87}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Jet flavour tagging}{91}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Jet pairing}{93}{subsection.7.4.4}
+\contentsline {section}{\numberline {7.5}Pre-selection}{94}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Discriminative pre-selection cuts}{94}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Sanity cuts}{97}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.3}Mutually exclusive cuts for \eeToHHbbWW and \eeToHHbbbb }{97}{subsection.7.5.3}
+\contentsline {section}{\numberline {7.6}Discriminative Variables}{100}{section.7.6}
+\contentsline {section}{\numberline {7.7}Multivariate analysis}{102}{section.7.7}
 \contentsline {section}{\numberline {7.8}Signal selection results}{102}{section.7.8}
 \contentsline {section}{\numberline {7.9}3\tmspace +\thinmuskip {.1667em}TeV hadronic decay analysis}{102}{section.7.9}
-\contentsline {section}{\numberline {7.10}Couplings extration}{102}{section.7.10}
-\contentsline {chapter}{Bibliography}{111}{chapter*.69}
-\contentsline {chapter}{List of figures}{115}{chapter*.70}
-\contentsline {chapter}{List of tables}{117}{chapter*.71}
+\contentsline {section}{\numberline {7.10}Couplings extration}{107}{section.7.10}
+\contentsline {chapter}{Bibliography}{113}{chapter*.71}
+\contentsline {chapter}{List of figures}{117}{chapter*.72}
+\contentsline {chapter}{List of tables}{119}{chapter*.73}

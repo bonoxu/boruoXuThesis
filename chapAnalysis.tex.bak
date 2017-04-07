@@ -9,7 +9,7 @@ Automated analysis is the only way to deal with the vast amount of data generate
 For the linear collider, thanks to the high granular calorimeter, the starting point for analysis would be individual Particle Flow Objects, as well as individual tracks. Each of the PFOs encodes four-momentum and position information. For tracks, they would have momentum and position information.
 
 However, sometimes it is interesting to group PFOs and tracks into jets, where a jet is the result of hadronisation process from high energy particles like quarks or gulons.
-
+\begin{comment}
 \section{Jet algorithm}
 
 A jet is typically a visually obvious structure in a event display. The momentum and the direction of a jet tend to resemble the originated particle. Despite the relative easiness of identifying jets visually, it presents a challenge for a pattern recognition program to identify jets effectively and efficiently.
@@ -34,7 +34,7 @@ where $\pT_{i}$ is the transverse momentum of particle $i$ with respect to the b
 If $d_{ij} < d_{iB}$, particle $i$ and $j$ are merged, with the \fourMomentum of particle $i$ updated as the sum. Otherwise, particle $i$ is set to be a final jet, and delete from the particle list. The above procedure is repeated until no particle left.
 
 The exclusive variant is similar. First difference is that when  $d_{iB} < d_{ij}$, the particle $i$ is discarded and part of the beam jet. The second difference is that when both $d_{ij}$ and $d_{iB}$ are above some threshold, $d_{cut}$, the clustering will stop. In practise, exclusive mode allows a specified number of jets to be found, which will automatically choose the $d_{cut}$. The inclusive mode would fine as many jets as the algorithm allows.
-
+\end{comment}
 \subsection{Durham algorithm}
 
 Durham algorithm \cite{Catani:1991hj}, also known as \ee \kt algorithm, is commonly used \ee collider experiment. It has a single distance metric:
@@ -121,6 +121,7 @@ Discriminative variables gives better separation power when they are gaussian-li
 
 Because its simplicity, the cut method is often performed manual, much more often in the time pre-date the wide spread of machine learning methods. It is still commonly used for the pre-selection step before the MVA, and other simple usages. Unless specified, the optimal cuts proposed in this document for various physics analysis are found using the rectangular cut method manually.
 
+\begin{comment}
 \subsection{Projective Likelihood}
 
 Projective likelihood model (PDE) is used in \pandora for the photon ID due to its simplicity and low requirement on computing resources.
@@ -130,7 +131,7 @@ PDE implemented in the TMVA calculates the probability density for each discrimi
 TMVA implementation also fits an underlying function to the probability density. The \pandora implementation simply uses binned likelihood ratio, $R$, as the output, due to the simplicity. The sub-categories for the \pandora implementation are determined by the cluster energy.
 
 Similarly to the rectangular cut method, PDE works better with decorrelated, gaussian like variables. The \pandora implementation did not decorrelate nor transform the variables, to keep implementation fast.
-
+\end{comment}
 
 \subsection{Boosted decision tree}
 \label{sec:analysisBDT}
