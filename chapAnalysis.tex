@@ -61,7 +61,7 @@ y, phi space, 2D KNN problem
 \y{} parameter is a commonly used quantity to describe the transition of exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets.
 
 Numerically \y{} parameter is often much smaller than one. A typically way to convert the small number to a human acceptable range is to take the minus logarithm of the number.
-
+\begin{comment}
 \section{Flavour tagging}
 \label{sec:theoryFalvourTagging}
 
@@ -74,7 +74,7 @@ Jet clustering ensures that the secondary vertices and the muons identified from
 Vertices are refined to improve the \Pbottom jet identification from c jet. Two vertices is strongly correlated to a \Pbottom jet. Hence the vertices refining will reconstruct as many secondary vertices correctly as possible.
 
 The final flavour tagging of the jet is done using multivariate analysis, which will be discussed in \Section{sec:theoryMVA}. Using TMVA software package \cite{Hocker:2007ht}, Boosted Decision Tree classier is used. A series of flavour sensitive variables are calculated, and the classification is divided four sub-set: jet with zero, one, or two properly reconstructed vertices, or a single-track pseudovertex. For each sub-set, a jet can either be a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet (\Pup, \Pdown or \Pstrange). The multiclass classifier's response is normalised across different sub-set, and they will be referred in the subsequent physics analysis as the tag value.
-
+\end{comment}
 \section{Multivariate analysis}
 \label{sec:theoryMVA}
 

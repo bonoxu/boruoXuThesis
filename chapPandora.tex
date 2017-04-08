@@ -47,10 +47,8 @@ In the subsequent paragraphs, the main steps in the \pandora reconstructions are
 Inputs of \pandora are digitised calorimeter hits and reconstructed tracks. The output are reconstructed particles with four-momenta, Particle Flow Objects (\PFOs).
 
 \subsection{Track selection}
-
-Tracks from the tracking system are selected based on their topological properties, how likely they are from physical processes, and whether they are consistent with the tracker resolution. Tracks passed the selection are used for the subsequent reconstruction.
-
-Using a helical fit of last 50 reconstructed hits, tracks are projected to the front of the \ECAL. Tracks are also classified based on their likely origin. The information are stored and passed on to the subsequent reconstruction.
+\label{sec:pandoraPandoraTrack}
+Tracks from the tracking system are selected based on their topological properties, how likely they are from physical processes, and whether they are consistent with the tracker resolution. Tracks passed the selection are used for the subsequent reconstruction.  Special topologies of tracks are identified, such as when a neutral particle decays or converts into a pair of charged tracks, leaving a ``V0''  shape tracks. This is identified by searching for a pair of tracks originated from a single point. Another topologies include ``kinks'' , when a charged particle decays to a single charged particles with neutral particles, and ``prongs'', when a charged particles decays to multiple charged particles. This information are stored and passed on to the subsequent reconstruction, along side with the helical track fit (using last 50 reconstructed hits) and the track projection to the front of the \ECAL.
 
 \subsection{Calorimeter selection}
 
@@ -127,9 +125,11 @@ PFOs are the output of the \pandora reconstruction. The four-momentum of these P
 
 \section{MC truth linker}
 Hits contribution to MC particle.
-Main contributed MC particle from energy weighted hits 
+Main contributed MC particle from energy weighted hits
 Main contributed Jets etc. from hits
 \section{\CLIC specific simulation and reconstruction}
+
+
 
 \section{Luminosity spectrum}
 
@@ -148,5 +148,7 @@ The track selector aims to remove poor quality and fake tracks. It places simple
 The PFO selector utilise the high spatial resolution from the high granular calorimeter. PFOs from \ggHad often have low \pT and have a range of time. PFOs from physics processes have a range of \pT, and have time close to the brunch crossing time. These two distinctive features allow \ggHad background to be separated. The optimal suppression uses different \pT and time cuts for the central part of the detector, and for the forward part of the detector, and uses different cuts for photons, neutral PFOs and charged PFOs. Three configurations of these cuts are developed, namely ``loose'', ``normal'', and ``tight'' selections. As the name suggested, ``loose'' selection corresponds to a looser cut of \pT and time. The optimal configuration depends on the \sqrtS of the collision, and the physics process to study.
 
 The background suppression is used in analysis described in \Chapter{chap:DoubleHiggs}
-TODO add efficiency table pandora 
+TODO add efficiency table pandora
 TODO add timing pT cut and table of energies
+
+\section{\CLIC simulated particle masses} 
