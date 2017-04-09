@@ -65,7 +65,7 @@ Proof-of-principle generator study was perform at \CLIC using \CLICILD detector 
     \caption{}
     \label{fig:doubleHiggsFeynman4}
   \end{subfigure}
-\caption[]%
+\caption[Feynman diagrams of leading-order \eeToHH processes at \CLIC]
    {Figures show Feynman diagrams of leading-order \eeToHH processes at \CLIC, without considering {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace}. \FIGURE{fig:doubleHiggsFeynman1} is sensitive to the Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH.}
    \label{fig:doubleHiggsFeynman}
 \end{figure}
@@ -147,7 +147,7 @@ Channel  &  $\sigma(\rootS{1.4})$ / fb   \\
 \hline \hline
 \end{tabular}
 
-\caption[]{List of signal and background samples with the corresponding cross sections at \rootS{1.4}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV. For processes labeled with * and $\myDagger$, the generator level cut requires invariant mass of quarks greater than 50 and 120\,GeV, respectively.}
+\caption[Signal and background samples with the corresponding cross sections at \rootS{1.4}.]{List of signal and background samples with the corresponding cross sections at \rootS{1.4}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV. For processes labeled with * and $\myDagger$, the generator level cut requires invariant mass of quarks greater than 50 and 120\,GeV, respectively.}
 \label{tab:doubleHiggsMCSamples}
 \end{table}
 %Simulated \PW has invariant mass of 80.385\,GeV.
@@ -187,7 +187,7 @@ Isolation (GeV)& $E_{cone}^2 \leqslant 5.7 \times E - 50$ \\
 \hline
 
 \end{tabular}
-\caption[]
+\caption
 {Optimised selection criterion for IsolatedLeptonFinderProcessor}
 \label{tab:doubleHiggsIsolatedLeptonFinder}
 \end{table}
@@ -221,7 +221,7 @@ b) Isolation (GeV)& $ E \geqslant 28 \times \sqrt{E_{cone2}} + 30$ \\
 \hline
 
 \end{tabular}
-\caption[]
+\caption
 {Optimised selection criterion for IsolatedLeptonFinderProcessor}
 \label{tab:doubleHiggsBonoLeptonFinder}
 \end{table}
@@ -260,7 +260,7 @@ Isolation (GeV)&  $ E_{cone} < 3$\\
 \hline
 
 \end{tabular}
-\caption[]
+\caption
 {Optimised selection criterion for TauFinderProcessor}
 \label{tab:doubleHiggsTauFinderProcessor}
 \end{table}
@@ -294,7 +294,7 @@ Isolation (GeV) 5& \multicolumn{1}{R{0.4\textwidth}}{{$N_{X^+} = 3$, $N_{cone2} 
 \hline
 
 \end{tabular}
-\caption[]
+\caption
 {Optimised selection criterion for BonoTauFinderProcessor}
 \label{tab:doubleHiggsBonoTauFinderProcessor}
 \end{table}
@@ -328,7 +328,7 @@ The input of the \BeamCAL electron tagging algorithm is the four momenta of the 
     \caption{}
     \label{fig:doubleHiggsForwardLCAL}
   \end{subfigure}
-\caption[]%
+\caption[\BeamCAL and \LumiCAL electron tagging efficiency.]%
    {\FIGURE{fig:doubleHiggsForwardBCAL} shows \BeamCAL 500\,GeV electron tagging efficiency as a function of the polar angle with different methods to model backgrounds and fittings, taken from \cite{Sailer:2017onh}. \FIGURE{fig:doubleHiggsForwardLCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy, for polar angle $\theta = 50\,mrad$, taken from \cite{Lukic:forwardElectron}. }
    \label{fig:doubleHiggsForwardCAL}
 \end{figure}
@@ -378,7 +378,7 @@ Combined & 86.6\% & 16.8\%  \\
 \hline
 
 \end{tabular}
-\caption{isolated lepton finder processors performance on the signal and selected background samples.}
+\caption{Isolated lepton finder processors performance on the signal and selected background samples at \rootS{1.4}.}
 \label{tab:doubleHiggsIsoLepPerformance}
 \end{table}
 
@@ -400,7 +400,7 @@ Combined & 86.6\% & 30.8\%  \\
 \hline
 
 \end{tabular}
-\caption{Very forward electron and photon finder performance on the signal and selected background samples.}
+\caption{Very forward electron and photon finder performance on the signal and selected background samples at \rootS{1.4}.}
 \label{tab:doubleHiggsForwardPerformance}
 \end{table}
 
@@ -642,8 +642,8 @@ This set of  pre-selection cuts are designed to discard the phase space which is
 \hline
 Pre-selection  &  \rootS{1.4}  \\
 \hline
-Discriminative pre-selection & \multicolumn{1}{R{0.5\textwidth}}{$m_{\HH} > 150\,GeV$, $2^{nd}\, B > 0.2$,  $\pT_{\HH} > 30\,GeV$} \\
-Loose cuts for MVA &  \multicolumn{1}{R{0.5\textwidth}}{$m_{\Hbb} < 500\,GeV$, $m_{\HWW} < 800\,GeV$, $m_{\PW} < 200\,GeV$, $m_{\HH} > 500\,GeV$} \\
+Discriminative pre-selection & \multicolumn{1}{R{0.5\textwidth}}{$m_{\HH} > 150\,GeV$, $B_2 > 0.2$,  $\pT_{\HH} > 30\,GeV$} \\
+Loose cuts for MVA &  \multicolumn{1}{R{0.5\textwidth}}{$m_{\Hbb} < 500\,GeV$, $m_{\HWW} < 800\,GeV$, $m_{\PW} < 200\,GeV$, $m_{\HH} < 1400\,GeV$} \\
 Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.7 \\
 \hline
 \hline
@@ -670,8 +670,8 @@ Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.7 \\
     \label{fig:doubleHiggs1.4PreSelbtag}
   \end{subfigure}
 
-\caption[Discriminative pre-selection variables for \rootS{1.4}]%
-   {Discriminative pre-selection variables for \rootS{1.4}, after rejecting events with leptons, and jet pairing}
+\caption[Discriminative pre-selection variables for \rootS{1.4}.]%
+   {Discriminative pre-selection variables for \rootS{1.4}, after rejecting events with leptons, and jet pairing.}
    \label{fig:doubleHiggs1.4TeVPreSelection}
 \end{figure}
 
@@ -687,10 +687,10 @@ The selection efficiency of the lepton veto and the pre-selection is shown in \T
  \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{1.4}} &  \multicolumn{1}{m{2cm}}{Expected number of events}  & \multicolumn{1}{m{2cm}}{Lepton ID and jet pairing} & \multicolumn{1}{m{1.5cm}}{$m_{HH}>150\xspace{GeV}$} & \multicolumn{1}{m{1.5cm}}{$B_{2}>0.2$} & \multicolumn{1}{m{1.5cm}}{$\Pt>30\xspace{GeV}$}  \\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             &27.9& 85.8\% & 85.6\% & 73.7\%& 66.4\%\\
+\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}, hadronic             &27.9& 85.8\% & 85.6\% & 73.7\%& 66.4\%\\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &67.6& 90.8\% & 90.5\% & 90.1\% & 80.6\%\\
+\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnue \APnue}             &67.6& 90.8\% & 90.5\% & 90.1\% & 80.6\%\\
 \eeToHH $\to$ other & 128.0 & 36.2\% & 35.3\% & 27.7\% & 24.7\%\\
 \hline
 \eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 1304.0 & 60.7\% & 59.8\% & 44.9\%& 42.0\%\\
@@ -728,7 +728,7 @@ The selection efficiency of the lepton veto and the pre-selection is shown in \T
 \hline \hline
 \end{tabular}
 
-\caption[Pre-selection efficiency at \rootS{1.4}]%
+\caption[Pre-selection efficiency at \rootS{1.4}.]%
 {List of signal and background samples with the corresponding expected number at  \rootS{1.4}, assuming a luminosity of 1500\,$fb^{-1}$. The selection efficiencies are presented in a ``flow'' fashion, as the every selection cut contains all the cuts to the left of it.}
 \label{tab:doubleHiggs1.4TeVPreslection}
 \end{table}
@@ -783,7 +783,7 @@ Selection efficiency & \multicolumn{1}{R{0.3\textwidth}}{\eeToHHbbWW, hadronic} 
 \hline
 \hline
 \end{tabular}
-\caption[Mutually exclusive cuts at \rootS{1.4}] %
+\caption[Mutually exclusive cuts at \rootS{1.4}.] %
 {Mutually exclusive cuts at \rootS{1.4}, shown for hadronic decay of \eeToHHbbWW and \eeToHHbbbb subchannesl.}
 \label{tab:doubleHiggsMutualCuts}
 \end{table}
@@ -797,10 +797,10 @@ The selection efficiencies after mutually exclusive cuts are listed in \Table{ta
  \multicolumn{1}{L{0.3\textwidth}}{Channel} &  \multicolumn{1}{R{0.3\textwidth}}{Previous cuts and loose cuts}  & \multicolumn{1}{R{0.3\textwidth}}{Mutually exclusive} \\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             & 66.4\%& 59.7\% \\
+\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}, hadronic             & 66.4\%& 59.7\% \\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &80.6\%& 15.4\%  \\
+\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnue \APnue}             &80.6\%& 15.4\%  \\
 \eeToHH $\to$ other & 24.7\% & 20.5\%  \\
 \hline
 \eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 42.0\% & 39.5\% \\
@@ -1084,13 +1084,13 @@ For the end node, it is determined as either signal-like or background-like, bas
 
 Half of the samples were used for training, and the other half used for testing and classifier optimisation.
 
-The signal for the MVA is the hadronic decay of \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}. \eeToHH decays to other final state does not participate in the MVA training step, as they are from the Feynman diagrams as the signal (see \Section{fig:doubleHiggsFeynman}), event topologies are different.  \eeToHH decaying to other final state would participate in the MVA applying stage.
+The signal for the MVA is the hadronic decay of \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}. \eeToHH decays to other final state does not participate in the MVA training step, as they are from the Feynman diagrams as the signal (see \Section{fig:doubleHiggsFeynman}), event topologies are different.  \eeToHH decaying to other final state would participate in the MVA applying stage.
 
 \section{Signal selection results}
-
+\label{sec:doubleHiggsSignalSelResult}
 After applying the MVA, the efficiencies of the pre-selection cuts, the efficiencies of the MVA selections are listed in \Table{tab:doubleHiggs1.4TeVMVA}, alongside with the number of events after the MVA selection. A few  background channels survive after the MVA. \eeTo{\Pquark \APquark \PHiggs \Pnu \APnu}   survives as the one single Higgs plus neutrino has a very similar topology  to the signal. Similar \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} can be confused as the signal when the lepton is undetected in the forward region, or the energy is too low to be tagged. \eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} has a similar topologies. The electron photon and photon interactions with same final states as the above channels also survive the MVA.
 
-Before interpreting the result, the analysis at \rootS{3} and  the analysis with the semi-leptonic channel of \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu} are presented.
+Before interpreting the result, the analysis at \rootS{3} and  the analysis with the semi-leptonic channel of \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue} are presented.
 
 \begin{table}[!tbp]\centering
 %\small{
@@ -1100,10 +1100,10 @@ Before interpreting the result, the analysis at \rootS{3} and  the analysis with
  \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{1.4}} &  \multicolumn{1}{m{2cm}}{N}  & \multicolumn{1}{m{2cm}}{$\varepsilon_{presel}$} & \multicolumn{1}{m{2cm}}{$\varepsilon_{MVA}$} & \multicolumn{1}{m{2cm}}{$N_{MVA}$} \\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             &27.9& 59.8\% & 8.2\% & 1.29 \\
+\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}, hadronic             &27.9& 59.8\% & 8.2\% & 1.29 \\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &67.6& 15.4\%  & 0.5\% & 0.05\\
+\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnue \APnue}             &67.6& 15.4\%  & 0.5\% & 0.05\\
 \eeToHH $\to$ other                             & 128.0 & 20.4\% & 1.7\% & 0.45\\
 \hline
 \eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 1304.0 & 39.5\% & 0.05\%& 0.29\\
@@ -1141,8 +1141,8 @@ Before interpreting the result, the analysis at \rootS{3} and  the analysis with
 \hline \hline
 \end{tabular}
 
-\caption[Signal and background selection efficiency and event numbers at  \rootS{1.4}]%
-{List of signal and background samples with the corresponding expected number at  \rootS{1.4}, for a luminosity of 1500$fb^{-1}$. The number of events, selection efficiency of pre-selection, selection efficiency of MVA after pre-selection, number of events after MVA are shown. - represents number less than  0.01}
+\caption[Signal and background selection efficiency and event numbers at  \rootS{1.4}.]%
+{List of signal and background samples with the corresponding expected number at  \rootS{1.4}, for a luminosity of 1500$fb^{-1}$. The number of events, selection efficiency of pre-selection, selection efficiency of MVA after pre-selection, number of events after MVA are shown. - represents number less than  0.01.}
 \label{tab:doubleHiggs1.4TeVMVA}
 \end{table}
 
@@ -1203,10 +1203,11 @@ Channel  &  $\sigma(\rootS{3})$ / fb   \\
 \hline \hline
 \end{tabular}
 
-\caption[Cross sections of samples at \rootS{3}]
+\caption[Cross sections of samples at \rootS{3}.]
 {List of signal and background samples with the corresponding cross sections at \rootS{3}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV. For processes labelled with *, the generator level cut requires invariant mass of quarks greater than 50.}
 \label{tab:doubleHiggs3crossSection}
 \end{table}
+
 
 The lepton finding processors are either developed or optimised with samples at \rootS{1.4}, and checked against samples at \rootS{3} (see \Section{sec:doubleHiggsLepton}).  It was found that the same set of parameters for lepton identifiers work well under \rootS{1.4} and 3\,TeV. The performance of the lepton processors is shown in \Table{tab:doubleHiggs3TeVIsoLepPerformance}.
 
@@ -1232,13 +1233,7 @@ Combined & 81.0\% & 23.3\%  \\
 \end{table}
 
 
-
-
 Comparing \rootS{1.4} and \rootS{3}, the lepton finding performance is worse for \rootS{3}. This is because particles are more boosted and separation between particles is smaller. This reflects on the performance of the  ForwardFinderProcessor. Whilst at \rootS{1.4}, the processor only rejects 5\% background and 1\% signal, at \rootS{3} it rejects 19\% background and 4\% signal, suggesting many leptons are in the forward region. These processors are complimentary and a good rejection rate with combined processors is achieved.
-
-
-
-
 
 \begin{comment}
 \begin{table}[!tbp]
@@ -1259,50 +1254,42 @@ Combined & 81.0\% &  33.4\%  \\
 \end{table}
 \end{comment}
 
+For the jet reconstruction optimisation, same strategy listed in \Section{sec:doubleHiggsJetOptimisation} is followed. \FIGURE{fig:doubleHiggs3TeVMassFit} shows fitted mass for \Hbb, \HWW, and \PW, along with the relative mass resolution. The relative resolution of \PW rises sharply with increasing $R$, hence favouring a small $R$ and \tightPFO. The optimal chosen is  \tightPFO with $R = 0.7$. The invariant mass is underestimated for the better mass resolution. The fitted values of the chosen jet reconstruction are listed in \Table{tab:doubleHiggs3TeVFitParameters}
 
-For \rootS{3}, the choice is a bit more complicated. Shown in \Figure{fig:doubleHiggs3TeVMassFit}, fitted mass for \Hbb favours \normalPFO with $R = 0.8$. Fitted mass for \HWW favours \tightPFO with $R = 0.9$. Fitted mass for \PW favours \tightPFO with $R = 0.8$. Looking at the combined relative fitted width for the \Hbb, \HWW and \PW, shown in \Figure{fig:doubleHiggs3TeVSigmaFit}, \normalPFO gives a larger width than \tightPFO. Within \tightPFO, small $R$ values provide a shaper width for \HWW and \Hbb, but a broader width for \PW. Therefore, \tightPFO with $R = 0.7$ and $R = 1$ are both chosen for parallel analysis.
-
-Later it was shown that \tightPFO with $R = 0.7$ gives a better signal significance. Therefore the optimal choice of jet reconstruction for \rootS{3} is \tightPFO with $R = 0.7$.
 
 \begin{figure}[!tbp]
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R}}}
+    \includegraphics[width=\textwidth]{{doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R}.pdf}
     \caption{}
     \label{fig:doubleHiggs3Higgs1M}
   \end{subfigure}
-  \hfill
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR}}}
+    \includegraphics[width=\textwidth]{{doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR}.pdf}
     \caption{}
     \label{fig:doubleHiggs3Higgs1Sigma}
   \end{subfigure}
-
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R}}}
+    \includegraphics[width=\textwidth]{{doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R}.pdf}
     \caption{}
     \label{fig:doubleHiggs3Higgs2M}
   \end{subfigure}
-  \hfill
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR}}}
+    \includegraphics[width=\textwidth]{{doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR}.pdf}
     \caption{}
     \label{fig:doubleHiggs3Higgs2Sigma}
   \end{subfigure}
-
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_3TeV_W_M_testR}}}
+    \includegraphics[width=\textwidth]{{doubleHiggs/resolution/ILD_3TeV_W_M_testR}.pdf}
     \caption{}
     \label{fig:doubleHiggs3WM}
   \end{subfigure}
-  \hfill
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR}}}
+    \includegraphics[width=\textwidth]{{doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR}.pdf}
     \caption{}
     \label{fig:doubleHiggs3WSigma}
   \end{subfigure}
-
-\caption[Fitted mass, and resolution of \Hbb, \HWW and \PW for \rootS{3}]%
-   {\Figure{fig:doubleHiggs3Higgs1M}, \ref{fig:doubleHiggs3Higgs2M}, and \ref{fig:doubleHiggs3WM}  show fitted mass of \Hbb, \HWW, and \PW, respectively, for loose, normal and tight selected PFO against $R$ parameter, with \rootS{3}. \Figure{fig:doubleHiggs3Higgs1Sigma}, \ref{fig:doubleHiggs3Higgs2Sigma}, and \ref{fig:doubleHiggs3WSigma} show fitted combined widths divided by the fitted masses of \Hbb, \HWW, and \PW, respectively, for loose, normal and tight selected PFO against $R$ parameter, with \rootS{3}.}
+\caption[Fitted mass and relative mass resolution of \Hbb, \HWW and \PW at \rootS{3}.]%
+   {\Figure{fig:doubleHiggs3Higgs1M}, \ref{fig:doubleHiggs3Higgs2M}, and \ref{fig:doubleHiggs3WM}  show fitted mass of \Hbb, \HWW, and \PW, respectively, for loose, normal and tight selected PFO collection as a function of $R$ parameter, at \rootS{3}. \Figure{fig:doubleHiggs3Higgs1Sigma}, \ref{fig:doubleHiggs3Higgs2Sigma}, and \ref{fig:doubleHiggs3WSigma} show relative mass resolutions of \Hbb, \HWW, and \PW, respectively, for loose, normal and tight selected \PFO collection as a function of  $R$ parameter, at \rootS{3}.}
    \label{fig:doubleHiggs3TeVMassFit}
 \end{figure}
 
@@ -1310,59 +1297,76 @@ Later it was shown that \tightPFO with $R = 0.7$ gives a better signal significa
 \begin{tabular}{lrr}
 \hline
 \hline
-Jet Parameters  &  \rootS{1.4} & \rootS{3}  \\
+Jet Parameters  & \rootS{3}  \\
 \hline
-$\mu_{\Hbb}$ & $122.3_{\pm0.2}$ & $119.1_{\pm0.3}$  \\
-$\sigma_{L,\Hbb}$ & $15.2_{\pm0.2}$ & $15.0_{\pm0.3}$  \\
-$\sigma_{R,\Hbb}$ & $7.55_{\pm0.16}$ & $8.4_{\pm0.2}$  \\
+$\mu_{\Hbb}$  & $119.1_{\pm0.3}$  \\
+$\sigma_{L,\Hbb}$ & $15.0_{\pm0.3}$  \\
+$\sigma_{R,\Hbb}$ & $8.4_{\pm0.2}$  \\
 \hline
-$\mu_{\HWW}$ & $125.7_{\pm0.2}$ & $123.0_{\pm0.3}$  \\
-$\sigma_{L,\HWW}$ & $29.4_{\pm0.3}$ & $36.6_{\pm0.6}$  \\
-$\sigma_{R,\HWW}$ & $7.18_{\pm0.17}$ & $7.4_{\pm0.2}$  \\
+$\mu_{\HWW}$ &  $123.0_{\pm0.3}$  \\
+$\sigma_{L,\HWW}$ & $36.6_{\pm0.6}$  \\
+$\sigma_{R,\HWW}$ & $7.4_{\pm0.2}$  \\
 \hline
-$\mu_{\PW}$ & $80.5_{\pm0.2}$ & $78.1_{\pm0.3}$ \\
-$\sigma_{L,\PW}$ & $16.2_{\pm0.3}$ & $13.1_{\pm0.4}$  \\
-$\sigma_{R,\PW}$ & $9.03_{\pm0.16}$ & $9.5_{\pm0.2}$  \\
+$\mu_{\PW}$  & $78.1_{\pm0.3}$ \\
+$\sigma_{L,\PW}$ & $13.1_{\pm0.4}$  \\
+$\sigma_{R,\PW}$ &  $9.5_{\pm0.2}$  \\
 \hline
 \hline
 \end{tabular}
 \caption
-[The extracted fitted parameters of optimal jet reconstructions] %
-{The extracted fitted parameters of optimal jet reconstructions, \normalPFO with $R = 0.7$ for \rootS{1.4} and \tightPFO with $R = 0.7$ for \rootS{3}.}
+[The extracted fitted parameters of optimal jet reconstructions at \rootS{3}.] %
+{The extracted fitted parameters of optimal jet reconstructions for \tightPFO with $R = 0.7$ at \rootS{3}.}
 \label{tab:doubleHiggs3TeVFitParameters}
 \end{table}
 
-The selection efficiency of b-jets and c-jets with trainning samples are shown in \Figure{}. Flavour tagging performs better at low energy. Because at high energy, particles at more collimated and more difficult to separate.
+The flavour tagging processor is trained with the chosen jet parameters at \rootS{3}. The performance of the flavour tagging  with training samples is shown in \Figure{fig:doubleHiggsBtag3TeV}. Comparing to the performance at \rootS{1.4}, the flavour tagging performs worse. At high energy, particles at more collimated and more difficult to separate. Hence the performance degrades.
+
+\begin{figure}[!htbp]
+    \includegraphics[width=0.45\textwidth]{{doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test}.pdf}
+    \caption
+   {Performance of b-jet tagging with training samples at \rootS{3}.}
+   \label{fig:doubleHiggsBtag3TeV}
+\end{figure}
+
+The pre-selection cuts at \rootS{3} have changed, listed in \Table{tab:doubleHiggs3TeVPreSel}.  \FIGURE{fig:doubleHiggs3PreSelmHH} shows the distribution of the invariant mass of the two Higgs system, where the cut above 150\,GeV is effective against samples with two quark final states. \FIGURE{fig:doubleHiggs3PreSelbtag} shows the distribution of  the highest b-jet tag, where the cut above 0.7 helps to reduce background events with no b-jets in final states. The cut is aggressive to compensate for the worse performance of the flavour tagging at high \sqrtS.
+
+
+
+\begin{table}[!htbp]
+\begin{tabular}{lr}
+\hline
+\hline
+Pre-selection  &  \rootS{3}  \\
+\hline
+Discriminative pre-selection & \multicolumn{1}{R{0.5\textwidth}}{$m_{\HH} > 150\,GeV$, $B_1 > 0.2$,  $\pT_{\HH} > 30\,GeV$} \\
+Loose cuts for MVA &  \multicolumn{1}{R{0.5\textwidth}}{$m_{\Hbb} < 500\,GeV$, $m_{\HWW} < 800\,GeV$, $m_{\PW} < 200\,GeV$, $m_{\HH} <3000\,GeV$} \\
+Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.6 \\
+\hline
+\hline
+\end{tabular}
+\caption
+{Pre-selection cuts at \rootS{3}.}
+\label{tab:doubleHiggs3TeVPreSel}
+\end{table}
 
 \begin{figure}[!tbp]
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/eval-lcfiweights_R0_7_2jets-test}}}
-    \caption{\rootS{1.4}}
-    \label{fig:doubleHiggs1.4Btag}
+    \includegraphics[width=\textwidth]{{doubleHiggs/preSel/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag2_prepare}.pdf}
+    \caption{}
+    \label{fig:doubleHiggs3PreSelmHH}
   \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test}}}
-    \caption{\rootS{3}}
-    \label{fig:doubleHiggs3Btag}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{doubleHiggs/preSel/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prepare}.pdf}
+    \caption{}
+    \label{fig:doubleHiggs3PreSelbtag}
   \end{subfigure}
-    \caption[Performance of b-jet tagging with trainning samples]%
-   {Performance of b-jet tagging with trainning samples}
-   \label{fig:doubleHiggsBtag}
+\caption[Discriminative pre-selection variables at \rootS{3}.]%
+   {Discriminative pre-selection variables at \rootS{3}, after rejecting events with identified leptons, and jet pairing.}
+   \label{fig:doubleHiggs3TeVPreSelection}
 \end{figure}
 
+The loose cuts for MVA at \rootS{3} are largely the same as the ones at \rootS{3}, apart from the cut on the invariant mass of \HH due to higher \sqrtS. The selection efficiency of the lepton veto and the pre-selection is shown in \Table{tab:doubleHiggs3TeVPreslection}. These pre-selection are still very aggressive. The cut on $m_{HH}$ is effective against background with fewer number of quarks in the final states. The cut on $B_1$ is effective against final states with no b quark.
 
-For \rootS{3}, event with invariant mass of two higgs less than 150\,GeV is rejected, for the reason similar to \rootS{1.4}.
-
-In addition, event with highest b-jet tag less than 0.7 is rejected. It is found that b-jet tag is less efficient at a higher \sqrtS. Therefore, a stricter cut at b-jet tag is useful to compensate for the tagging efficiency loss.
-
-\begin{figure}[!tbp]
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/var/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag2_prepare}}} \\
-\includegraphics[width=\largefigwidth]{{{doubleHiggs/var/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prepare}}} \\
-\caption[Discriminative pre-selection variables for \rootS{3}]%
-   {Discriminative pre-selection variables for \rootS{3}, after rejecting events with identified leptons, and jet pairing}
-   \label{fig:doubleHiggsTeVPreSelection}
-\end{figure}
 
 \begin{table}[!tbp]\centering
 % TODO fix lumi correction for e gamma, gamma e
@@ -1374,10 +1378,10 @@ In addition, event with highest b-jet tag less than 0.7 is rejected. It is found
  \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{3}} &  \multicolumn{1}{m{2cm}}{Expected number of events}  & \multicolumn{1}{m{2cm}}{Lepton ID and jet pairing} & \multicolumn{1}{m{1.5cm}}{$m_{HH}>150\xspace{GeV}$} & \multicolumn{1}{m{1.5cm}}{$B_{1}>0.7$} \\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             &146.0& 80.2\% & 79.9\% & 69.7\%\\
+\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}, hadronic             &146.0& 80.2\% & 79.9\% & 69.7\%\\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &355.0& 83.4\% & 82.9\% & 81.2\% \\
+\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnue \APnue}             &355.0& 83.4\% & 82.9\% & 81.2\% \\
 \eeToHH $\to$ other & 675.0 & 36.7\% & 35.8\% & 25.2\% \\
 \hline
 \eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6115.4 & 59.5\% & 58.5\% & 40.4\%\\
@@ -1415,32 +1419,32 @@ In addition, event with highest b-jet tag less than 0.7 is rejected. It is found
 \hline \hline
 \end{tabular}
 
-\caption{List of signal and background samples with the corresponding expected number at \rootS{3}, assuming a luminosity of 2000$fb^{-1}$. The selection efficiencies are presented in a ``flow'' fashion, as the every selection cut contains all the cuts to the left of it.
+\caption[Signal and background events with selection efficiency and event numbers after the MVA at \rootS{3}]%
+{List of signal and background samples with the corresponding expected number at \rootS{3}, assuming a luminosity of 2000$fb^{-1}$. The selection efficiencies are presented in a ``flow'' fashion, as the every selection cut contains all the cuts to the left of it.
 }
 \label{tab:doubleHiggs3TeVPreslection}
 \end{table}
 
+The mutually exclusive cuts divide samples, both signal and background, into two mutually exclusive sets, for the parallel analyses of  two subchannels, \eeToHHbbWWHad and \eeToHHbbbb. The cuts are obtained using the same strategy in \Section{sec:doubleHiggsMutualExclusive}.  The values are listed in \Table{tab:doubleHiggs3TeVPreSel}. The two dimensional spaces for two subchannels are shown in \Figure{fig:doubleHiggs3TeVMutualPreselection}. The selection efficiencies after the loose cuts and the mutually exclusive cuts  are shown in \Table{tab:doubleHiggs3TeVPreslectionPart2}.
 
-For \rootS{3}, invariant masses for \Hbb, \HWW, \PW, and \HH are smaller than 500, 800, 200, and 3000\,GeV, respectively.
-
-The selection efficiencies after sanity cuts and other pre-selection cuts stated above, are listed in \Table{}.
 
 \begin{figure}[!tbp]
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{doubleHiggs/mutual6022bbWW}.pdf}
+    \includegraphics[width=\textwidth]{{doubleHiggs/mutual6025bbWW}.pdf}
     \caption{\eeToHHbbWWHad, hadronic}
-    \label{fig:doubleHiggs1.4MutualbbWW}
+    \label{fig:doubleHiggs3MutualbbWW}
   \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{doubleHiggs/mutual6022bbbb}.pdf}
+    \includegraphics[width=\textwidth]{{doubleHiggs/mutual6025bbbb}.pdf}
     \caption{\eeToHHbbWW}
-    \label{fig:doubleHiggs1.4MutualbbWW}
+    \label{fig:doubleHiggs3MutualbbWW}
   \end{subfigure}
-\caption[Sum of b tag against \y{34} at \rootS{1.4}]%
-   {Sum of b tag against \y{34} at \rootS{1.4}, shown for hadronic decay of \eeToHHbbWWHad and \eeToHHbbWW subchannel. }
-   \label{fig:doubleHiggsMutualPreselection}
+\caption[Sum of b tag against \y{34} at \rootS{3}]%
+   {Sum of b tag against \y{34} at \rootS{3}, shown for hadronic decay of \eeToHHbbWWHad and \eeToHHbbWW subchannel. }
+   \label{fig:doubleHiggs3TeVMutualPreselection}
 \end{figure}
 
+\begin{comment}
 \begin{table}\centering
 \begin{tabular}{llrr}
 \hline
@@ -1455,78 +1459,76 @@ The selection efficiencies after sanity cuts and other pre-selection cuts stated
 {Mutually exclusive cuts, for full signal samples}
 \label{tab:doubleHiggsMutualCuts}
 \end{table}
-
+\end{comment}
 
 \begin{table}[!tbp]\centering
 \small
 \begin{tabular}{lrrrr}
 \hline \hline
- \multicolumn{1}{m{3.5cm}}{Channel / Efficiency} &  \multicolumn{1}{m{2cm}}{Sanity \rootS{1.4}}  & \multicolumn{1}{m{2cm}}{Mutually exclusive \rootS{1.4}} & \multicolumn{1}{m{2cm}}{Sanity \rootS{3}} & \multicolumn{1}{m{2cm}}{Mutually exclusive \rootS{3}} \\
+ \multicolumn{1}{L{0.3\textwidth}}{Channel} &  \multicolumn{1}{R{0.3\textwidth}}{Previous cuts and loose cuts}  & \multicolumn{1}{R{0.3\textwidth}}{Mutually exclusive} \\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             & 66.4\%& 59.7\% & 69.5\% & 61.7\%\\
+\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}, hadronic             & 69.5\% & 61.7\%\\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &80.6\%& 15.4\% & 81.1\% & 18.8\% \\
-\eeToHH $\to$ other & 24.7\% & 20.5\% & 25.1\% & 20.0\% \\
+\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnue \APnue}             & 81.1\% & 18.8\% \\
+\eeToHH $\to$ other & 25.1\% & 20.0\% \\
 \hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 42.0\% & 39.5\% & 40.3\% & 35.9\%\\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 43.4\% & 31.7\%& 39.2\%& 26.2\%\\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 64.2\% & 25.2\%& 64.2\%& 25.9\%\\
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}   & 40.3\% & 35.9\%\\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu} & 39.2\%& 26.2\%\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu} & 64.2\%& 25.9\%\\
 
-\eeTo{ \Pquark \Pquark \Pquark \Pquark}   & 4.6\%  & 3.4\% & 2.5\%& 1.4\%\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 3.3\% & 3.1\%& 0.7\%& 0.6\%\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 11.4\%. & 9.8\%& 9.2\%& 7.2\%\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 18.8\% & 16.6\%& 11.8\%& 9.0\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   & 2.5\%& 1.4\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton} & 0.7\%& 0.6\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} & 9.2\%& 7.2\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 11.8\%& 9.0\%\\
 
-\eeTo{ \Pquark \Pquark} &  2.0\% & 0.8\%& 2.5\%& 1.4\%\\
-\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  1.6\% & 0.9\%& 0.3\%& 0.1\%\\
-\eeTo{ \Pquark \Pquark \Pl \Pl} &  0.1\% & 0.1\%& 0.7\%& 0.4\%\\
-\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 5.8\% & 4.0\%& 5.3\%& 3.1\% \\
+\eeTo{ \Pquark \Pquark} & 2.5\%& 1.4\%\\
+\eeTo{ \Pquark \Pquark \Plepton \Pnu} & 0.3\%& 0.1\%\\
+\eeTo{ \Pquark \Pquark \Pl \Pl} & 0.7\%& 0.4\%\\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 5.3\%& 3.1\% \\
 \hline
-\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 0.4\%  & 0.3\%& 0.8\%& 0.7\%\\
-\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 0.4\% & 0.4\%& 0.8\%& 0.7\%\\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 0.3\% & 0.2\%& 0.4\%& 0.4\%\\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 0.3\% & 0.3\% & 0.4\%& 0.3\%\\
-\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 27.7\%  & 25.3\%& 20.3\%& 16.8\%\\
-\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 27.3\% & 24.9\% & 19.3\%& 15.9\%\\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}&  13.9\% & 12.6\% & 9.4\%& 7.8\%\\
-\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 13.7\%  & 12.3\%& 8.9\%& 7.3\% \\
+\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark}& 0.8\%& 0.7\%\\
+\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 0.8\%& 0.7\%\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 0.4\%& 0.4\%\\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}   & 0.4\%& 0.3\%\\
+\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark} & 20.3\%& 16.8\%\\
+\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark} & 19.3\%& 15.9\%\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark} & 9.4\%& 7.8\%\\
+\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 8.9\%& 7.3\% \\
 
-\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 34.6\%  & 30.6\% &37.2\%& 30.2\% \\
-\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 34.6\% & 30.6\% & 37.1\% & 30.2\% \\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 18.2\% & 16.0\% & 19.0\% & 15.7\% \\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 18.4\%   & 16.1\% & 18.4\% & 15.2\% \\
+\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} &37.2\%& 30.2\% \\
+\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 37.1\% & 30.2\% \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 19.0\% & 15.7\% \\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 18.4\% & 15.2\% \\
 \hline
-\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 0.3\%  & 0.3\%& 1.9\%& 1.7\%\\
-\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 0.4\%  &0.3\%& 1.1\%& 1.0\%\\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 0.4\% & 0.3\%& 1.1\%& 1.0\%\\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 0.4\% & 0.3\% & 0.7\% & 0.6\%\\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 1.9\%& 1.7\%\\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 1.1\%& 1.0\%\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 1.1\%& 1.0\%\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark} & 0.7\% & 0.6\%\\
 \hline \hline
 \end{tabular}
-
-\caption{List of signal and background samples with the corresponding expected number at \rootS{1.4} and \rootS{3}, assuming a luminosity of 1500 and 2000$fb^{-1}$, respectively. The selection efficiencies are presented in a ``flow'' fashion, as the every selection cut contains all the cuts to the left of it.
-}
-\label{tab:doubleHiggsPreslectionPart2}
+\caption[List of signal and background samples of loose cuts and mutually exclusive cuts at \rootS{3}.]
+{List of signal and background samples with the selection efficiencies of loose cuts and mutually exclusive cuts at \rootS{3}. The selection efficiencies are presented in a ``flow'' fashion, as the every selection cut contains all the cuts to the left of it.}
+\label{tab:doubleHiggs3TeVPreslectionPart2}
 \end{table}
 
-Same set of variables are used for \rootS{1.4} and \rootS{3}.
-
-
+The same set of variables are used at \rootS{3}. The MVA BDT classifier is optimised at \rootS{3}. The efficiencies of the pre-selection cuts, the efficiencies of the MVA selections are listed in \Table{tab:doubleHiggs3TeVMVA}, alongside with the number of events after the MVA selection. Background channels survived the MVA are almost identical to those at \rootS{1.4}. Hence see \Section{sec:doubleHiggsSignalSelResult} for the discussion.
 
 \begin{table}[!tbp]\centering
 %\small{
 \small
 \begin{tabular}{lrrrr}
 \hline \hline
- \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{3}} &  \multicolumn{1}{m{2cm}}{Expected number of events}  & \multicolumn{1}{m{2cm}}{Pre-selection efficiency} & \multicolumn{1}{m{2cm}}{MVA efficiency} & \multicolumn{1}{m{2cm}}{Number of events after MVA} \\
+ \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{3}} &  \multicolumn{1}{m{2cm}}{N}  & \multicolumn{1}{m{2cm}}{$\varepsilon_{presel}$} & \multicolumn{1}{m{2cm}}{$\varepsilon_{MVA}$} & \multicolumn{1}{m{2cm}}{$N_{MVA}$} \\
+
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             &146.0& 61.7\% & 11.6\% & 10.43\\
+\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}, hadronic             &146.0& 61.7\% & 11.6\% & 9.89\\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &355.0& 18.8\% & 1.5\% & 1.01 \\
-\eeToHH $\to$ other                             & 675.0 & 20.0\% & 3.6\% & 4.93 \\
+\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnue \APnue}             &355.0& 18.8\% & 1.5\% & 1.05 \\
+\eeToHH $\to$ other                             & 675.0 & 20.0\% & 3.6\% & 4.51 \\
 \hline
 \eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6115.4 & 36.0\% & 0.4\% & 9.42\\
 \eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 2249.9 & 26.3\%& 0.5\%& 3.13\\
@@ -1563,25 +1565,46 @@ Same set of variables are used for \rootS{1.4} and \rootS{3}.
 \gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400.0 & 0.6\%&  - & - \\
 \hline \hline
 \end{tabular}
-\caption{List of signal and background samples with the corresponding expected number at  \rootS{3}, for a luminosity of 2000$fb^{-1}$. The number of events, selection efficiency of pre-selection, selection efficiency of MVA after pre-selection, number of events after MVA are shown. - represents no events passing the MVA.
-}
+\caption[List of signal and background selection efficiencies and event numbers after MVA at  \rootS{3}.]
+{List of signal and background samples with the corresponding expected number at  \rootS{3}, for a luminosity of 2000$fb^{-1}$. The number of events, selection efficiency of pre-selection, selection efficiency of MVA after pre-selection, number of events after MVA are shown. - represents a number less than 0.01.}
 \label{tab:doubleHiggs3TeVMVA}
 \end{table}
 
+\section{\eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu} semi-leptonic decay at \rootS{3} analysis}
+
+Before interpreting the results, the last discussion is on the \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu} semi-leptonic decay at \rootS{3} analysis. The \rootS{1.4} analysis was performed as well. Since the selected event number is too low, there is not enough signal events to have a meaningful discussion. Hence the \rootS{3} analysis is presented.
+
+The strategy of the analysis is very similar to the hadronic decay analysis. The main difference are that there is one lepton in the final state and the final state has 4 quarks instead of 6. \Hbb and \PW can not be reconstructed due to the leptonic decay of one of the \PW. Hence events are selected when there is one identified lepton, using the same lepton identifiers. The jet reinstruction parameters are the same as the \rootS{3} hadronic decay analysis. The pre-selection cuts are the same, listed in \Table{tab:doubleHiggs3TeVPreSelSemiLep}. There are no mutually exclusive cuts since there is no semi-leptonic analysis in the parallel analysis. The jet pairing still tries to reconstruct all the physical bosons.The same set of variables are used at \rootS{3}. Parameters for the MVA BDT classifier is the same as the ones at \rootS{3}. The efficiencies of the pre-selection cuts, the efficiencies of the MVA selections are listed in \Table{tab:doubleHiggsQlv3TeVMVA}, alongside with the number of events after the MVA selection. Since there are three neutrinos in the final state, reconstructing the correct event topology is more difficult. The MVA performance is worse and all most all background channels survived the MVA. Nevertheless, the dominant background are almost identical to those at \rootS{1.4}. Hence see \Section{sec:doubleHiggsSignalSelResult} for the discussion.
+
+\begin{table}[!htbp]
+\begin{tabular}{lr}
+\hline
+\hline
+Pre-selection  &  \rootS{3}  \\
+\hline
+Discriminative pre-selection & \multicolumn{1}{R{0.5\textwidth}}{$m_{\HH} > 150\,GeV$, $B_1 > 0.2$,  $\pT_{\HH} > 30\,GeV$} \\
+Loose cuts for MVA &  \multicolumn{1}{R{0.5\textwidth}}{$m_{\Hbb} < 500\,GeV$, $m_{\HH} <3000\,GeV$} \\
+\hline
+\hline
+\end{tabular}
+\caption
+{Pre-selection cuts at \rootS{3}.}
+\label{tab:doubleHiggs3TeVPreSelSemiLep}
+\end{table}
 
 \begin{table}[!tbp]\centering
 %\small{
 \small
 \begin{tabular}{lrrrr}
 \hline \hline
- \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{3}} &  \multicolumn{1}{m{2cm}}{Expected number of events}  & \multicolumn{1}{m{2cm}}{Pre-selection efficiency} & \multicolumn{1}{m{2cm}}{MVA efficiency} & \multicolumn{1}{m{2cm}}{Number of events after MVA} \\
+ \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{1.4}} &  \multicolumn{1}{m{2cm}}{N}  & \multicolumn{1}{m{2cm}}{$\varepsilon_{presel}$} & \multicolumn{1}{m{2cm}}{$\varepsilon_{MVA}$} & \multicolumn{1}{m{2cm}}{$N_{MVA}$} \\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, semi-leptonic       &96.8& 44.6\% & 21.9\% & 9.48\\
+\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}, semi-leptonic       &96.8& 44.6\% & 21.9\% & 13.11\\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &355.0& 13.3\% & 10.9\% &  5.16\\
-\eeToHH $\to$ other                             & 724.2 & 13.1\% & 13.6\% &  12.89\\
+\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnue \APnue}             &355.0& 13.3\% & 10.9\% &  5.38\\
+\eeToHH $\to$ other                             & 724.2 & 13.1\% & 13.6\% &  12.75\\
 \hline
 \eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6115.4 & 7.4\% & 13.7\% & 62.63\\
 \eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 2249.9 & 6.3\%& 12.1\%& 17.10\\
@@ -1618,8 +1641,77 @@ Same set of variables are used for \rootS{1.4} and \rootS{3}.
 \gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400.0 & 1.1\%&  - & - \\
 \hline \hline
 \end{tabular}
-\caption{List of signal and background samples with the corresponding expected number at  \rootS{3}, for a luminosity of 2000$fb^{-1}$. The number of events, selection efficiency of pre-selection, selection efficiency of MVA after pre-selection, number of events after MVA are shown. - represents no events passing the MVA.
+\caption[List of signal and background selection efficiencies and event numbers after MVA for semi-leptonic analysis at  \rootS{3}.]
+{List of signal and background samples with the corresponding expected number at  \rootS{3}, for a luminosity of 2000$fb^{-1}$. The number of events, selection efficiency of pre-selection, selection efficiency of MVA after pre-selection, number of events after MVA are shown. - represents no events passing the MVA.
 }
 \label{tab:doubleHiggsQlv3TeVMVA}
 \end{table}
-\section{Couplings extration} 
+
+\section{Result interpretation}
+\label{sec:doubleHiggsResults}
+
+\begin{table}[!htbp]
+\begin{tabular}{lrrr}
+\hline
+\hline
+Channel  &  $N_{S}$ & $N_{B}$ & $N_S / \sqrt{N_S + N_B}$ \\
+\hline
+\multicolumn{1}{L{0.3\textwidth}}{\eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}, hadronic, \rootS{1.4}} & 1.79 & 8.41 & 0.56 \\
+\multicolumn{1}{L{0.3\textwidth}}{\eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}, hadronic, \rootS{3}} & 15.45 & 242.28 & 0.96 \\
+\multicolumn{1}{L{0.3\textwidth}}{\eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}, semi-leptonic, \rootS{3}} &  31.24& 3612.39 & 0.52 \\
+\hline
+\hline
+\end{tabular}
+\caption
+{Number of signal and background events, and significance after MVA.}
+\label{tab:doubleHiggsResult}
+\end{table}
+
+
+The results for \rootS{1.4} and \rootS{3} analysis are summarised in \Table{tab:doubleHiggsResult}. $N_S$ is all \eeToHH events passed the MVA. Combining the \rootS{3} results, the expected precisions on the cross sections, which is roughly $\sqrt{N_S + N_B} / N_S$, at \rootS{1.4} and 3\,TeV are:
+\begin{equation}
+\frac{\Delta\left[\sigma\left(\HHvv\right)\right]}{\sigma\left(\HHvv\right)}=
+\begin{cases}
+  179\%, & \mbox{at \rootS{1.4}, }  \\
+  92\%, & \mbox{at \rootS{3}}.
+\end{cases}
+\end{equation}
+
+As stated in the beginning of the chapter, the double Higgs production cross section is sensitive to the Higgs triple self coupling $\lambda$. The relative uncertainty on the coupling can be related to the uncertainty on the coupling via:
+\begin{equation}
+\frac{\Delta\lambda}{\lambda}\approx \kappa \cdot \frac{\Delta\left[\sigma\left(\HHvv\right)\right]}{\sigma\left(\HHvv\right)}.
+\end{equation}
+$\kappa$ can be extracted by varying the $\lambda$ and parameterise the cross section change at a general level. \FIGURE{fig:doubleHiggsCouplingOneDRelation} shows the cross section as a function of the coupling at generator level, at \rootS{1.4} and \rootS{3}. The negative gradient indicates that the dependence on $\lambda$ experiences the destructive interference with other SM Feynman  diagrams affecting. At the SM $\lambda$ value, the $\kappa$ is 1.22 and 1.47 at \rootS{1.4} and 3\,TeV, respectively. Since $\kappa$ is extracted from the relation at generator level, the fully simulated reconstruction selection, as presented above, may favours certain Feynman  diagrams, hence affecting the sensitivity to $\lambda$ .
+
+\begin{figure}[!tbp]
+    \includegraphics[width=0.45\textwidth]{{doubleHiggs/extraction/oneDrelation}}
+\caption[Cross section for the \eeToHH process as a function of the ratio $\lambda/\lambda_{SM}$ ]
+{Cross section for the \eeToHH process as a function of the ratio $\lambda/\lambda_{SM}$ at \rootS{1.4} and 3\,TeV, taken from \cite{Abramowicz:2016zbo}.}
+   \label{fig:doubleHiggsCouplingOneDRelation}
+\end{figure}
+
+
+Without electron polarisation,  the uncertainty on the Higgs triple self coupling $\lambda$, from  \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue} analysis is:
+\begin{equation}
+\frac{\Delta\lambda}{\lambda}=
+\begin{cases}
+  218\%, & \mbox{at \rootS{1.4}, }  \\
+  135\%, & \mbox{at \rootS{3}}.
+\end{cases}
+\end{equation}
+
+Since the Feynman diagrams for the double Higgs boson productions include t-channel $\HepProcess{\PW\PW}$-fusion, the cross section can be enhanced by polarised electron beam. For $P(\Pem) = 80\%$, the uncertainty on  $\lambda$ becomes:
+\begin{equation}
+\frac{\Delta\lambda}{\lambda}=
+\begin{cases}
+  163\%, & \mbox{at \rootS{1.4}, }  \\
+  97\%, & \mbox{at \rootS{3}}.
+\end{cases}
+\end{equation}
+When both \sqrtS are combined, the statistical precision on \lambda increases to 99\% for the unpolarised beam, and 87\% for the polarised beam with  $P(\Pem) = 80\%$.
+
+\section{Simultaneous couplings extraction} 
+
+The double higgs production, \eeToHH, can occur via processes in \Figure{fig:doubleHiggsFeynman}. As stated in the beginning, \FIGURE{fig:doubleHiggsFeynman1} is sensitive to Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH. Therefore an simultaneous extraction on the coupling uncertainty can be performed by extending the method in the \Section{sec:doubleHiggsResults}. Once a relationship between \gHHH, \gWWHH and significance is established, a contour of the uncertainty in \gHHH and \gWWHH two dimensional phase space can be obtained.
+
+
