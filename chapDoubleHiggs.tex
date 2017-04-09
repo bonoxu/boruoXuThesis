@@ -626,7 +626,7 @@ where $i$ to $l$ indicate the one of the six jets, with all the possible combina
 
 \section{Pre-selection}
 
-With reconstructed jets paired to the physical bosons, kinematic and topological variables can be calculated for the signal selection. A set of pre-selection cuts are places to aid the multivariate analysis. The pre-selection cuts falls into three categories: discriminative pre-selection cuts, loose cuts for the MVA, and the mutually exclusive cuts with the \eeToHHbbqqqq sub-channel. 
+With reconstructed jets paired to the physical bosons, kinematic and topological variables can be calculated for the signal selection. A set of pre-selection cuts are places to aid the multivariate analysis. The pre-selection cuts falls into three categories: discriminative pre-selection cuts, loose cuts for the MVA, and the mutually exclusive cuts with the \eeToHHbbqqqq sub-channel.
 
 \subsection{Discriminative pre-selection cuts}
 
@@ -667,7 +667,7 @@ Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.7 \\
     \caption{}
     \label{fig:doubleHiggs1.4PreSelbtag}
   \end{subfigure}
-  
+
 \caption[Discriminative pre-selection variables for \rootS{1.4}]%
    {Discriminative pre-selection variables for \rootS{1.4}, after rejecting events with leptons, and jet pairing}
    \label{fig:doubleHiggs1.4TeVPreSelection}
@@ -743,7 +743,7 @@ A set of very loose physics motivated. cuts aims to reduce the range of invarian
 
 This set of cuts is designed to   divided samples, both signal and background, into two mutually exclusive sets, for the parallel analyses of  two subchannels, \eeToHHbbWWHad and \eeToHHbbbb. This eases the combining subchaneels, as correlations between subchannels do not need to be considered.
 
-The most distinctive difference between two subchannels, is that they have different number of jets, and different number of b-jets in the final state. So variables related to number of b-jets and a number of jets are suitable for separating two subchannels. 
+The most distinctive difference between two subchannels, is that they have different number of jets, and different number of b-jets in the final state. So variables related to number of b-jets and a number of jets are suitable for separating two subchannels.
 
 A commonly used variable for number of jets is the \y{} parameter. \y{} parameter describes the transition of exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets (see \Section{sec:doubleHiggsJetAlgorithm} for jet algorithm). Numerically \y{} parameter is often much smaller than one. A typically way to convert the small number to a human acceptable range is to take the minus logarithm of the number.
 
@@ -854,16 +854,18 @@ The selection efficiencies after mutually exclusive cuts are listed in \Table{ta
         nR0_7_6jet_btag2_Higgs_all_M  < 1400 &&  nR0_7_6jet_btag2_Higgs1_M < 500 &&  nR0_7_6jet_btag2_Higgs2_M < 800 &&  nR0_7_6jet_btag2_W_Onshell_M < 200";
 \end{comment}
 
-\section{Discriminative Variables}
+\section{Discriminative variables for MVA}
+
+A series of discriminative variables were calculated to differentiate the signal and background events. These variables are fed into MVA for signal selection. The full list of variables can be found in \Table{tab:doubleHiggsVaraibles}.
 
 
-
-A series of discriminative variables were calculated, and fed into MVA for signal selection.
-
-The full list of variables can be found in \Table{}.
-Same set of variables are used for \rootS{1.4} and \rootS{3}.
 
 \Figure shows the the variable XX which gives a good discrimination of signal against background.
+
+The optimal set were chosen to give the best MVA performance, whilst no strong pair-wise correlation between any two variables, shown in \Figure{}.
+
+
+
 
 \begin{table}[!tbp]\centering
 \begin{tabular}{ll}
@@ -912,7 +914,6 @@ Same set of variables are used for \rootS{1.4} and \rootS{3}.
 \label{tab:doubleHiggsVaraibles}
 \end{table}
 
-The optimal set were chosen to give the best MVA performance, whilst no strong pair-wise correlation between any two variables, shown in \Figure{}.
 
 
 
@@ -1460,5 +1461,7 @@ The selection efficiencies after sanity cuts and other pre-selection cuts stated
 }
 \label{tab:doubleHiggsPreslectionPart2}
 \end{table}
+
+Same set of variables are used for \rootS{1.4} and \rootS{3}.
 
 \section{Couplings extration} 
