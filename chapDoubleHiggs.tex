@@ -152,7 +152,9 @@ Channel  &  $\sigma(\rootS{1.4})$ / fb   \\
 \end{table}
 %Simulated \PW has invariant mass of 80.385\,GeV.
 
-\section{Physics object and event reconstruction}
+\section{Lepton identification}
+\label{sec:doubleHiggsLepton}
+
 
 The reconstruction is done via Marlin in \ilcsoft v01-16. Separate software packages (processors) exist for identification of electrons, muons, and taus, and for jet reconstruction. New processors have been developed and existing processors have been optimised for signal selection and background rejection. The latest functioning flavour tagging processor exist in \ilcsoft v01-16. Thus newer versions of  \ilcsoft can not be used in this analysis.
 
@@ -556,7 +558,7 @@ $\sigma_{R,\PW}$ & $9.03_{\pm0.16}$  \\
 \end{table}
 
 \section{Jet flavour tagging}
-
+\label{sec:doubleHiggsFlavourTagging}
 
 
 As the signal channel, \eeToHHbbWWHad has two \Pbottom quarks in the final state, information can be extracted to determine the likelihood of a jet originated from a \Pbottom quark. To find the likelihood of a \Pbottom jet, \Pbottom tag value, a software package \lcfiplus \cite{Suehara:2015ura} is used. A brief discussion of the software is provided, followed by its performance.
@@ -625,7 +627,7 @@ where $i$ to $l$ indicate the one of the six jets, with all the possible combina
 
 
 \section{Pre-selection}
-
+\label{sec:doubleHiggsPreSelection}
 With reconstructed jets paired to the physical bosons, kinematic and topological variables can be calculated for the signal selection. A set of pre-selection cuts are places to aid the multivariate analysis. The pre-selection cuts falls into three categories: discriminative pre-selection cuts, loose cuts for the MVA, and the mutually exclusive cuts with the \eeToHHbbqqqq sub-channel.
 
 \subsection{Discriminative pre-selection cuts}
@@ -740,7 +742,7 @@ A set of very loose physics motivated. cuts aims to reduce the range of invarian
 
 
 \subsection{Mutually exclusive cuts for \eeToHHbbWW and \eeToHHbbbb}
-
+\label{sec:doubleHiggsMutualExclusive}
 This set of cuts is designed to   divided samples, both signal and background, into two mutually exclusive sets, for the parallel analyses of  two subchannels, \eeToHHbbWWHad and \eeToHHbbbb. This eases the combining subchaneels, as correlations between subchannels do not need to be considered.
 
 The most distinctive difference between two subchannels, is that they have different number of jets, and different number of b-jets in the final state. So variables related to number of b-jets and a number of jets are suitable for separating two subchannels.
@@ -753,7 +755,7 @@ Shown in \Figure{fig:doubleHiggsMutualPreselection}, two subchannels can be clea
 \end{equation}
 where $selection$ represents the mutually exclusive cuts, $\neg{selection}$ indicates the phase space not covered by the $selection$.
 
-Variables tested includes \sumBtag{4}, \partialSumBtag{1}{3}{4}, \y{34}, \y{45}, \y{56}, \y{67} and other related variables. The best separation was summarised in \Table{tab:doubleHiggsMutualCuts}.
+Variables tested includes \sumBtag{4}, \partialSumBtag{1}{3}{4}, \y{34}, \y{45}, \y{56}, \y{67} and other related variables. The best separation was summarised in \Table{tab:doubleHiggsMutualCuts}. The \sumBtag{4} is the sum of the b tag values, when clustering an event to four jets.
 
 \begin{figure}[!tbp]
   \begin{subfigure}[b]{0.45\textwidth}
@@ -835,8 +837,8 @@ The selection efficiencies after mutually exclusive cuts are listed in \Table{ta
 \gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 0.4\% & 0.3\% \\
 \hline \hline
 \end{tabular}
-\caption[]
-{List of signal and background samples with the selection efficiencies at \rootS{1.4}. The selection efficiencies are presented in a ``flow'' fashion, as the every selection cut contains all the cuts to the left of it.}
+\caption[List of signal and background samples of loose cuts and mutually exclusive cuts at \rootS{1.4}.]
+{List of signal and background samples with the selection efficiencies of loose cuts and mutually exclusive cuts at \rootS{1.4}. The selection efficiencies are presented in a ``flow'' fashion, as the every selection cut contains all the cuts to the left of it.}
 \label{tab:doubleHiggsPreslectionPart2}
 \end{table}
 
@@ -856,91 +858,249 @@ The selection efficiencies after mutually exclusive cuts are listed in \Table{ta
 
 \section{Discriminative variables for MVA}
 
-A series of discriminative variables were calculated to differentiate the signal and background events. These variables are fed into MVA for signal selection. The full list of variables can be found in \Table{tab:doubleHiggsVaraibles}.
+A series of discriminative variables were calculated to differentiate the signal and background events. These variables are fed into MVA for signal selection. The full list of variables can be found in \Table{tab:doubleHiggsVaraibles}. The variables are grouped into categories.
+
+Invariant mass variables are very effective at selecting signal events as no background events have double Higgs bosons in final states. \FIGURE{fig:doubleHiggs1.4varMHbb} and \Figure{fig:doubleHiggs1.4varMHWW} show the distributions of $m_{\Hbb}$ and $m_{\HWW}$ after all pre-selection cuts.
+
+For the off-shell \W*, it energy is used as its mass distribution doesn't have a resonance. For the recoil momenta, which is calculated by assuming the collision at \sqrtS and a beam crossing angle 20\,mrad, the pseudorapidity is used to focus on the froward region. The pseudorapidity, \eta, is defined as:
+\begin{equation}
+\eta \equiv  - \ln \left[ \tan \left( \frac{\theta}{2} \right) \right],
+\end{equation}
+where $\theta$ is the polar angle. \acolinearity{12} measures the angle between the two constituent jets, defined as:
+\begin{equation}
+\acolinearity{12} = \pi - \cos^{-1}\left(\textbf{\^{p}}_1\cdot\textbf{\^{p}}_2\right),
+\end{equation}
+where $\textbf{\^{p}}_1$ is the normal momentum vector of jet 1. \cosStar{12} is the cosine of the angle between the two constituent jets in their decay rest frame. \FIGURE{fig:doubleHiggs1.4varAcolHbb} and \Figure{fig:doubleHiggs1.4varSpinHbb} compares the \acolinearity{\Hbb} and  \cosStar{\Hbb}. Both shows different distribution for the signal and background channels.  For the signal, \cosStar{\Hbb} has a flat distribution, as expected from a back-to-back decay of \HepProcess{\PHiggs \to \Pbottom \APbottom}. For the background, \cosStar{\Hbb}  peaked at 1.
+
+The global event shape variables includes \y{} variables (see \Section{sec:doubleHiggsMutualExclusive}), and the sphericity,  \sphericity. \sphericity is a measurement of the spherically symmetry of the event. It is  derived from the sphericity tensor \cite{PhysRevLett.35.1609}, defined as
+\begin{equation}
+\bm{S^{\alpha\beta}} = \frac{\sum_{i}p^{\alpha}_{i}p^{\beta}_{i}}{\sum_{i}\absOf{\vec{p_{i}}}^2},
+\end{equation}
+where $\vec{p_{i}}$ is the momentum vector of the particle $i$. Summation is over all particles in the event. $\alpha$ and $\beta$ refer to the x, y, z coordinate axis. Eigenvalues of tensor $\bm{S}$ can be found, or in this case diagonalisation of the matrix $\bm{S}$, denoted with $\lambda_{1}$, $\lambda_{2}$, $\lambda_{3}$. The normalisation condition requires $\lambda_{1}\!\geqslant\! \lambda_{2} \! \geqslant \! \lambda_{3}$ and $ \lambda_{1} \! + \! \lambda_{2} \! + \! \lambda_{3} \! = \! 1 $. Sphericity, $S$, is defined in terms of $\lambda$,
+\begin{equation}
+\sphericity = \frac{3}{2}\parenths{\lambda_{1} \! + \! \lambda_{2}}.
+\end{equation}
+\sphericity, is 0 for a perfect pencil-like back-to-back two-jet event, and 1 for a perfect spherically symmetric event.
+
+The flavour tagging variables are discussed in \Section{sec:doubleHiggsFlavourTagging}. \btagFull{1,\Hbb} denotes the Highest b-jet tag value of two jets forming \Hbb. The number of \PFOs variables are effective against background events with fewer quarks in final states.
+
+The optimal set of 32 variables  were chosen to give the best MVA performance, whilst no strong pair-wise correlation between any two variables. %shown in \Figure{fig:doubleHiggs1.4Corr}.
 
 
-
-\Figure shows the the variable XX which gives a good discrimination of signal against background.
-
-The optimal set were chosen to give the best MVA performance, whilst no strong pair-wise correlation between any two variables, shown in \Figure{}.
-
-
-
-
-\begin{table}[!tbp]\centering
-\begin{tabular}{ll}
+ \begin{table}[!tbp]\centering
+\begin{tabular}{lr}
 \hline
 \hline
- \multicolumn{1}{m{3cm}}{Variable} &  \multicolumn{1}{m{\widthOne}}{Description} \\
- \multicolumn{1}{m{3cm}}{$m_{\Hbb}$} &  \multicolumn{1}{m{0.7\textwidth}}{Invariant mass of \Hbb } \\
- \multicolumn{1}{m{3cm}}{$m_{\HWW}$} &  \multicolumn{1}{m{0.7\textwidth}}{Invariant mass of \HWW } \\
- \multicolumn{1}{m{3cm}}{$m_{\PW}$} &  \multicolumn{1}{m{10cm}}{Invariant mass of \PW } \\
- \multicolumn{1}{m{3cm}}{$m_{\HH}$} &  \multicolumn{1}{m{10cm}}{Invariant mass of \HH } \\
- \multicolumn{1}{m{3cm}}{$E_{\W*}$} &  \multicolumn{1}{m{10cm}}{Energy of \W* } \\
- \multicolumn{1}{m{3cm}}{$E_{mis}$} &  \multicolumn{1}{m{10cm}}{Missing energy, assuming collision at \sqrtS} \\
- \multicolumn{1}{m{3cm}}{$\pT_{\Hbb}$} &  \multicolumn{1}{m{10cm}}{Transverse momentum of \Hbb } \\
- \multicolumn{1}{m{3cm}}{$\pT_{\HWW}$} &  \multicolumn{1}{m{10cm}}{Transverse momentum of \HWW } \\
- \multicolumn{1}{m{3cm}}{$\pT_{\HH}$} &  \multicolumn{1}{m{10cm}}{Transverse momentum of \HH } \\
- \multicolumn{1}{m{3cm}}{$\eta_{mis}$} &  \multicolumn{1}{m{10cm}}{Pseudorapidity of missing momentum, assuming collision at \sqrtS} \\
- \multicolumn{1}{m{3cm}}{$\pT_{\HH}$} &  \multicolumn{1}{m{10cm}}{Transverse momentum of \HH } \\
- \multicolumn{1}{m{3cm}}{$-\ln(\y{23})$} &  \multicolumn{1}{m{10cm}}{minus ln of \y{23}. See \Section{} for \y{} parameter. See \Section{} for the ln transformation } \\
- \multicolumn{1}{m{3cm}}{$-\ln(\y{34})$} &  \multicolumn{1}{m{10cm}}{minus ln of \y{34}.} \\
- \multicolumn{1}{m{3cm}}{$-\ln(\y{45})$} &  \multicolumn{1}{m{10cm}}{minus ln of \y{45}.} \\
- \multicolumn{1}{m{3cm}}{$-\ln(\y{56})$} &  \multicolumn{1}{m{10cm}}{minus ln of \y{56}.} \\
- \multicolumn{1}{m{3cm}}{$\btagFull{1,\Hbb}$} &  \multicolumn{1}{m{10cm}}{Highest b-jet tag value of two jets forming \Hbb .} \\
- \multicolumn{1}{m{3cm}}{$\btagFull{2,\Hbb}$} &  \multicolumn{1}{m{10cm}}{Lowest b-jet tag value of two jets forming \Hbb .} \\
- \multicolumn{1}{m{3cm}}{$\btagFull{1,\PW}$} &  \multicolumn{1}{m{10cm}}{Highest b-jet tag value of two jets forming \PW .} \\
- \multicolumn{1}{m{3cm}}{$\btagFull{1,\W*}$} &  \multicolumn{1}{m{10cm}}{Highest b-jet tag value of two jets forming \W* .} \\
- \multicolumn{1}{m{3cm}}{$\ctagFull{1,\Hbb}$} &  \multicolumn{1}{m{10cm}}{Highest c-jet tag value of two jets forming \Hbb .} \\
- \multicolumn{1}{m{3cm}}{$\ctagFull{1,\PW}$} &  \multicolumn{1}{m{10cm}}{Highest c-jet tag value of two jets forming \PW .} \\
- \multicolumn{1}{m{3cm}}{$\abs{\sphericity}$} &  \multicolumn{1}{m{10cm}}{Modulus of sphericity, \sphericity. See \Section{}.} \\
- \multicolumn{1}{m{3cm}}{$\acolinearity{\Hbb}$} &  \multicolumn{1}{m{10cm}}{Acolinearity of two jets forming \Hbb.} \\
- \multicolumn{1}{m{3cm}}{$\acolinearity{\PW}$} &  \multicolumn{1}{m{10cm}}{Acolinearity of two jets forming \PW.} \\
- \multicolumn{1}{m{3cm}}{$\acolinearity{\HH}$} &  \multicolumn{1}{m{10cm}}{Acolinearity of \Hbb and \HWW.} \\
- \multicolumn{1}{m{3cm}}{$\npfo{\Hbb}$} &  \multicolumn{1}{m{10cm}}{Number of PFOs forming \Hbb.} \\
- \multicolumn{1}{m{3cm}}{$\npfo{\HWW}$} &  \multicolumn{1}{m{10cm}}{Number of PFOs forming \HWW.} \\
- \multicolumn{1}{m{3cm}}{$\npfo{\PW}$} &  \multicolumn{1}{m{10cm}}{Number of PFOs forming \PW.} \\
- \multicolumn{1}{m{3cm}}{$\npfo{\W*}$} &  \multicolumn{1}{m{10cm}}{Number of PFOs forming \W*.} \\
- \multicolumn{1}{m{3cm}}{$\cosStar{\Hbb}$} &  \multicolumn{1}{m{10cm}}{Cosine of opening angles of two jets forming \Hbb, in their rest frame.} \\
- \multicolumn{1}{m{3cm}}{$\cosStar{\HWW}$} &  \multicolumn{1}{m{10cm}}{Cosine of opening angles of \PW and \W*, forming \HWW, in their rest frame.} \\
- \multicolumn{1}{m{3cm}}{$\cosStar{\PW}$} &  \multicolumn{1}{m{10cm}}{Cosine of opening angles of two jets forming \PW, in their rest frame.} \\
- \multicolumn{1}{m{3cm}}{$\cosStar{\W*}$} &  \multicolumn{1}{m{10cm}}{Cosine of opening angles of two jets forming \W*, in their rest frame.} \\
- \multicolumn{1}{m{3cm}}{$\cosStar{\HH}$} &  \multicolumn{1}{m{10cm}}{Cosine of opening angles of \Hbb and \HWW, in their rest frame.} \\
+Category &  Variable \\
+\hline
+Invariant mass &  \multicolumn{1}{R{0.6\textwidth}}{$m_{\Hbb}$, $m_{\HWW}$, $m_{\PW}$, $m_{\HH}$} \\
+Energy and momentum & \multicolumn{1}{R{0.6\textwidth}}{$E_{\W*}$, $E_{mis}$, $\pT_{\Hbb}$, $\pT_{\HWW}$, $\pT_{\HH}$, $\pT_{\HH}$} \\
+Angles in lab frame & \multicolumn{1}{R{0.6\textwidth}}{$\eta_{mis}$, $\acolinearity{\Hbb}$, $\acolinearity{\PW}$, $\acolinearity{\HH}$} \\
+Angles in boosted frames & \multicolumn{1}{R{0.6\textwidth}}{$\cosStar{\Hbb}$, $\cosStar{\HWW}$, $\cosStar{\PW}$, $\cosStar{\W*}$, $\cosStar{\HH}$} \\
+Event shape & \multicolumn{1}{R{0.6\textwidth}}{$\abs{\sphericity}$, $-\ln(\y{23})$, $-\ln(\y{34})$, $-\ln(\y{45})$, $-\ln(\y{56})$} \\
+\Pbottom and \Pcharm tag & \multicolumn{1}{R{0.6\textwidth}}{$\btagFull{1,\Hbb}$, $\btagFull{2,\Hbb}$, $\btagFull{1,\PW}$, $\btagFull{1,\W*}$, $\ctagFull{1,\Hbb}$, $\ctagFull{1,\PW}$} \\
+Number of \PFOs &  \multicolumn{1}{R{0.6\textwidth}}{$\npfo{\Hbb}$, $\npfo{\HWW}$, $\npfo{\PW}$, $\npfo{\W*}$} \\
 \hline
 \hline
 \end{tabular}
-\caption[List of variables used in MVA] %
-{List of variables used in MVA}
+\caption
+{Variables used in MVA at \rootS{1.4}}
 \label{tab:doubleHiggsVaraibles}
 \end{table}
 
 
 
+ \begin{figure}[!tbp]
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_M_TMVA20161208R0_7_qq_btag2_prepare_testNew2}.pdf}
+    \caption{}
+    \label{fig:doubleHiggs1.4varMHbb}
+  \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs2_M_TMVA20161208R0_7_qq_btag2_prepare_testNew2}.pdf}
+    \caption{}
+    \label{fig:doubleHiggs1.4varMHWW}
+  \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_acolinearity_TMVA20161208R0_7_qq_btag2_prepare_testNew2}.pdf}
+    \caption{}
+    \label{fig:doubleHiggs1.4varAcolHbb}
+  \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_spin_TMVA20161208R0_7_qq_btag2_prepare_testNew2}.pdf}
+    \caption{}
+    \label{fig:doubleHiggs1.4varSpinHWW}
+  \end{subfigure}
+\caption
+   {Stacked plots for discriminative variables  for the MVA at \rootS{1.4} after all pre-selection cuts.}
+   \label{fig:doubleHiggs1.4var}
+\end{figure}
+
+\begin{comment}
+ \begin{figure}[!tbp]
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{doubleHiggs/mva/1400signalCorr}}
+    \caption{}
+    \label{fig:doubleHiggs1.4signalCorr}
+  \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{doubleHiggs/mva/1400backgroundCorr}}
+    \caption{}
+    \label{fig:doubleHiggs1.4backgroundCorr}
+  \end{subfigure}
+\caption
+   {The pair-wise correlation between discriminative variables for signal and background events at \rootS{1.4} after all pre-selection cuts.}
+   \label{fig:doubleHiggs1.4Corr}
+\end{figure}
+\end{comment}
 
 \section{Multivariate analysis}
+\label{sec:doubleHiggsMVA}
+After gathering the information and applying the pre-selection cuts, the signal selection is performed using  multivariate analysis (MVA) with Boosted Decision Tree classifier. The parameters for boosted decision tree were optimised and checked for overtraining. A brief discussion on the MVA is provided, followed by the classifier, overtraining and the result.
 
-Multivariate analysis was performed with TMVA package. The classifier that performs the best was found to be the boosted decision tree. See \Section{} for details on boosted decision tree.
+Multivariate analysis  has become increasingly common in high energy physics. MVA can be viewed as an advanced tool for regression or classification. Comparing to the traditional cut based method, modern machine learning technique offers much improvement in data analysis. Software package for MVA used throughout this document is TMVA \cite{Hocker:2007ht}.
 
-The parameters for boosted decision tree were optimised and checked for overtraining. The most important variables are the depth of the tree and the number of trees. Other parameters includes the minimum number of nodes in a leaf, the number of cuts of a variable, the learning rate, the sampling fraction, the yes/no or purity leaf, adaBoost or gradient boost.
+A typical machine learning MVA classification involves two classes, also known as signal and background. A machine learning model, also known as a classifier in TMVA, needs to be trained with training data. The model requires a set of discriminative variables, which separate the signal from background. The trained model will be applied onto the testing data for signal extraction. Response of the model could be a classification of signal or background, or could  a response in a continuous spectrum, where the user decides the value to separate signal from background.
 
-The optimisation and overtraining test was done with \rootS{3} samples. \rootS{1.4} samples produce similar results.
+Strictly, there should be three statistically independent samples for the MVA. One sample is for the training. Another sample for the validation, including optimisation and checking for overfitting. The last sample is for testing. However, due to technical reason (TMVA only natively supports two samples), sometimes the same sample is used for the validation and the testing, which is acceptable with large statistics.
 
-Half of the samples were used for training, and the other half used for testing.
+This classification scheme can be easily extended to multiple classes, implemented in TMVA with multiclass class. The multiclass class is used in the tau decay mode classification in \Section{} and in the flavour tagging classifier in \Section{sec:doubleHiggsFlavourTagging}.
 
-% TODO discuss BDT TMVA first, then come back here
-% TODO discuss each variables
+\subsection{Optimisation and overfitting}
+
+The optimisation of the model refers to selecting the optimal free parameters of the model. One could build a complex model which fits the training samples very well, but it would not be optimal for another testing sample. A simple model is less prone to statistical fluctuation of samples, however, it might be too simple to achieve the optimal modeling. The former case is known as overfitting, or overtraining. The latter case is called underfitting, or undertraining.
+
+The compromise is clear. The optimal model is one between overfitting and underfitting. In practice, this involves building the model with increasing complexity, and finding the point where overfitting occurs.
+
+\begin{figure}[!tbp]
+\includegraphics[width=0.45\textwidth]{doubleHiggs/DepthOfTrees.pdf}
+\caption{Example of MVA overtraining}
+\label{fig:doubleHiggsMVAovertraining}
+\end{figure}
+
+\FIGURE{fig:doubleHiggsMVAovertraining} shows a typical overfitting plot. Overfitting is defined when the efficiency of signal selection in the training samples increases, but the efficiency in the testing sample decreases. Here the example is chosen from double Higgs analysis at \rootS{3}, using Boosted Decision Tree model. The efficiency of signal selection is defined as the signal fraction when background fraction is 1\%, report by the TMVA training process. In \Figure{fig:doubleHiggsMVAovertraining} , the depth of the tree, or the number of layers in the tree, reflects the complexity of the model. From tree depth 2 to 5, the efficiency for both testing and training samples increases. From tree depth 6 onwards, the overfitting occurs. In this particular example, one should choose a tree depth fewer than 7 to avoid overfitting.
+
+There are methods to assign the error on the selection efficiency. Thus one can make a better choice of parameters to avoid overfitting. These methods were not implemented due to the technical capacity provided by the TMVA.
+
+\subsection{Choice of models}
+
+The model, also known as the classifier in TMVA, can be as simple as cut based, likelihood or linear regression. It can also be as complicated as non linear tree, non linear neutral network or support vector machine. Regardless of model complexity, the choice of most optimal classifier is often data driven. Also, given the free parameters in each model, the comparison between different models without individual tuning is not rigourous. Nevertheless, as researchers in the machine learning suggested, the boosted decision tree is probably the best out-of-the-box machine learning method. Neutral network could potentially be better than the boosted decision, but it requires more tuning, and it is less intuitive to interpret the model. For these reasons, boost decision tree (BDT) is often the choice of machine learning model in the high energy physics. And it is used in various physics analysis in this document.
+
+Before describing BDT in detail, we will first visit some simple models.
+
+%the traditional rectangular cut model, and the Projective Likelihood method, which is used in the photon ID in the \pandora in \Section{}.
+
+
+
+\subsubsection{Rectangular Cut}
+
+Probably the most intuitive model, the rectangular cut method optimise cuts to maximise some specific metric. The metric could be the signal efficiency for a particular background efficiency. Alternatively, the metric can be the significance, $\frac{S}{\rootOf{S\!+\!B}}$, where $S$ and $B$ are signal and background numbers, respectively.
+
+Discriminative variables gives better separation power when they are gaussian-like and statistically independent. Therefore it is common to decoorelate  the variables and gaussian transform them before using the rectangular cut MVA.
+
+Because its simplicity, the cut method is often performed manually, much more often in the time pre-date the wide spread of machine learning methods. It is still commonly used for the pre-selection step before the MVA (see \Section{sec:doubleHiggsPreSelection}), and other simple cases. Unless specified, the optimal cuts proposed in this document for various physics analysis are found using the rectangular cut method manually.
+
+\subsubsection{Projective Likelihood}
+
+Projective likelihood model (PDE) is used in \pandora for the photon ID  due to its simplicity and low requirement on computing resources. It is discussed in details in \Section{sec:photonPDE}
+
+
+\subsubsection{Boosted decision tree}
+\label{sec:analysisBDT}
+
+Boost decision tree (BDT) is a non linear tree based model. Its rather complex nature requires a careful explanation of many concepts within the BDT.
+
+\paragraph{Decision tree}
+Decision tree is a binary tree, where each node, the splitting point, uses a single discriminative variable to decide whether a event is signal-like (``goes down by a layer to the left''), or background-like (``goes down by a layer to the right''). At each node, samples are divided into signal-like and background-like sub-samples. The tree growing starts at the root node, and stops at certain criterion, which could be the minimum number of events in a node, the number of layers of the tree, or a minimum/maximum signal purity.
+
+The training of the decision tree is to determine the optimal cut at the node by minimising the metric. The probability of the cut producing the signal is $p$. Three commonly used metrics for two-class classification are
+\begin{enumerate}
+\item Misclassification error:  $1 - \max\parenths{p\!,\!1\!-\!p}$,
+\item Gini index: $2p\parenths{1\!-\!p}$,
+\item Cross-Entropy or deviance: $-p\log{p}-\parenths{1\!-\!p}\log\parenths{1\!-\!p}$.
+\end{enumerate}
+
+The using of a trained decision tree is to transverse along the tree. The event is classified as signal or background depending on whether it falls in the signal-like or background-like end node.
+
+\begin{figure}[!tbp]
+\includegraphics[width=0.45\textwidth]{doubleHiggs/mva/BDTcomic}
+\caption{Example of a decision tree}
+   \label{fig:doubleHiggsMVAdecisionTree}
+\end{figure}
+
+\FIGURE{fig:doubleHiggsMVAdecisionTree} illustrate a simple example of a decision tree. The signal is the PhD student and the background is the undergraduate student. The depth of this imbalance binary  tree is 2. A node is represented by a diamond.  The signal-like node is the red rectangle and the background-like nodes are blue rectangles. The tree is constructed with two possible cut, ``Party ends before 1am'' and ``Know where free pizza is''. The attribute of samples is listed in \Table{tab:doubleHiggsDecisionTreeComic}. To demonstrate the choice of the first layer cut, the Gini index metric is used. If the first cut is ``Party ends before 1am'', the probability of the cut producing the signal, $p$, is $\frac{10}{13}$. Gini index is $2p\parenths{1\!-\!p} \backsimeq 0.36 $. If the first cut is ``Know where free pizza is'', $p=\frac{10}{15}$. Gini index is $2p\parenths{1\!-\!p} \backsimeq 0.44 $. Therefore, the first cut is ``Party ends before 1am''.
+
+The simple tree in \Figure{fig:doubleHiggsMVAdecisionTree} is grown fully as each end node contains signal or background only. To use the trained decision tree, if there is student who ends party before 1am and knows where free pizza is, then the student is classified as a PhD student.
+
+\begin{table}[!tbp]\centering
+\small
+\begin{tabular}{lrr}
+\hline \hline
+Number & Party ends before 1am  & Know where free pizza is\\
+\hline
+PhD student & 10 & 10 \\
+Undergrad student & 3 & 5 \\
+\hline \hline
+\end{tabular}
+\caption
+{The attribute of samples for the decision tree example.}
+\label{tab:doubleHiggsDecisionTreeComic}
+\end{table}
+
+\paragraph{Improve decision tree}
+
+Decision tree has a low bias, but high variance. This means it is very easy to construct a tree that fits the training data very well, but the tree would not be optimal for the testing sample. To overcome the instability of the decision tree, many methods have been developed. The most successful one is boosting.
+
+Boosting: it is a technique where the misclassified events receives a higher weight than the correctly classified events. Therefore, when the training is iterated, the misclassified events would receive higher and higher wights and more likely to classify correctly. The boosting is done at every iteration, which can be few hundred or few thousand time. This will create a ``forest'' of many trees. The final output could be a majority vote, by transversing the event to the end node for each tree in the forest.
+
+Bagging: also known as boot-strap, it is a method that select a simple random sub-set of the training sample, and apply the model. In this case, every boosting iteration takes a bagged sample, rather than the whole sample.
+
+TMVA implementation of the BDT for the output is using a likelihood estimator, depending on how often a event is classified as signal in the forest. The likelihood number is later used to select signal from background.
+
+
+\subsection{Optimisation of Boosted Decision Tree}
+
+Many parameters of the BDT can be tuned. The tuned parameters are described below. The optimal values are obtained by choosing the best performance without overfitting with samples at \rootS{3}. The same values are used \rootS{1.4 analysis}.
+
+The most important parameter is the depth of a tree, which determines how many end nodes a tree has, or the degrees of freedom of a tree. The related parameter is the number of trees. Experience shows that using many small trees yields the best result. The performance as a function of the depth is shown in \Figure{fig:doubleHiggsMVAovertraining}. The chosen value is 4.
+
+The number of tree is another important parameter. Intuitively large number of trees leads to overfitting. However, it has been shown that a large number does not lead to overfitting, using the definition above. There is a debate on how to determine the optimal number of tree. The chosen value is 4000.
+
+The minimum number of events in a node, which is a stopping criteria for tree growing, affects the size of the tree. But it is less influential than the depth of the tree. The chosen value is 0.25\% of the total events.
+
+The boosting has two variant, adaptive boost and gradient boost. For all the BDT used in this document, adaptive boost is used.
+
+The learning rate of the adaptive boost, which controls how fast the weight changes for events in each boosting iteration. Experience shows small learning rate with many trees work better than large learning rate with few trees. The chosen value is 05.
+
+The usual choice of the metric for the optimal cuts is either Gini index or cross-entropy. Gini index metric is chosen. It makes little difference to performances, comparing to the cross-entropy metric.
+
+Number of bins per variables for the cut is necessary to make tree growing efficient. Discrete binned variables are faster to computer than continuous variables. The parameter does not impact the performance much. However, variables should be pre-processed before going into the model. For example, the variable should be limited to a sensible range to avoid the extremes. The variable should also be transformed to obtain a more uniform distribution, if the original distribution is highly skewed. The chosen value is 40.
+
+For the end node, it is determined as either signal-like or background-like, based on the majority for the training event in the end node. Numerically, it corresponds to 1/0. However, the end node could also use signal purity as the output, resulting in a continues spectrum of [0,1]. The chosen method is the continuous response.
+
+\begin{comment}
+  "!H:!V:NTrees=4000:MinNodeSize=0.25%:MaxDepth=4:BoostType=RealAdaBoost:AdaBoostBeta=0.5:UseBaggedBoost:BaggedSampleFraction=0.5:SeparationType=GiniIndex:nCuts=40:DoPreselection=True" );
+\end{comment}
+
+Half of the samples were used for training, and the other half used for testing and classifier optimisation.
+
+The signal for the MVA is the hadronic decay of \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}. \eeToHH decays to other final state does not participate in the MVA training step, as they are from the Feynman diagrams as the signal (see \Section{fig:doubleHiggsFeynman}), event topologies are different.  \eeToHH decaying to other final state would participate in the MVA applying stage.
 
 \section{Signal selection results}
+
+After applying the MVA, the efficiencies of the pre-selection cuts, the efficiencies of the MVA selections are listed in \Table{tab:doubleHiggs1.4TeVMVA}, alongside with the number of events after the MVA selection. A few  background channels survive after the MVA. \eeTo{\Pquark \APquark \PHiggs \Pnu \APnu}   survives as the one single Higgs plus neutrino has a very similar topology  to the signal. Similar \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} can be confused as the signal when the lepton is undetected in the forward region, or the energy is too low to be tagged. \eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} has a similar topologies. The electron photon and photon interactions with same final states as the above channels also survive the MVA.
+
+Before interpreting the result, the analysis at \rootS{3} and  the analysis with the semi-leptonic channel of \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu} are presented.
 
 \begin{table}[!tbp]\centering
 %\small{
 \small
 \begin{tabular}{lrrrr}
 \hline \hline
- \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{1.4}} &  \multicolumn{1}{m{2cm}}{Expected number of events}  & \multicolumn{1}{m{2cm}}{Pre-selection efficiency} & \multicolumn{1}{m{2cm}}{MVA efficiency} & \multicolumn{1}{m{2cm}}{Number of events after MVA} \\
+ \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{1.4}} &  \multicolumn{1}{m{2cm}}{N}  & \multicolumn{1}{m{2cm}}{$\varepsilon_{presel}$} & \multicolumn{1}{m{2cm}}{$\varepsilon_{MVA}$} & \multicolumn{1}{m{2cm}}{$N_{MVA}$} \\
 \hline
 \eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             &27.9& 59.8\% & 8.2\% & 1.37 \\
+\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             &27.9& 59.8\% & 8.2\% & 1.29 \\
 \hline
 \eeToHH $\to$ \\
 \HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &67.6& 15.4\%  & 0.5\% & 0.05\\
@@ -981,126 +1141,16 @@ Half of the samples were used for training, and the other half used for testing.
 \hline \hline
 \end{tabular}
 
-\caption{List of signal and background samples with the corresponding expected number at  \rootS{1.4}, for a luminosity of 1500$fb^{-1}$. The number of events, selection efficiency of pre-selection, selection efficiency of MVA after pre-selection, number of events after MVA are shown. - represents no events passing the MVA.
-}
+\caption[Signal and background selection efficiency and event numbers at  \rootS{1.4}]%
+{List of signal and background samples with the corresponding expected number at  \rootS{1.4}, for a luminosity of 1500$fb^{-1}$. The number of events, selection efficiency of pre-selection, selection efficiency of MVA after pre-selection, number of events after MVA are shown. - represents number less than  0.01}
 \label{tab:doubleHiggs1.4TeVMVA}
 \end{table}
 
-\begin{table}[!tbp]\centering
-%\small{
-\small
-\begin{tabular}{lrrrr}
-\hline \hline
- \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{3}} &  \multicolumn{1}{m{2cm}}{Expected number of events}  & \multicolumn{1}{m{2cm}}{Pre-selection efficiency} & \multicolumn{1}{m{2cm}}{MVA efficiency} & \multicolumn{1}{m{2cm}}{Number of events after MVA} \\
-\hline
-\eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             &146.0& 61.7\% & 11.6\% & 10.43\\
-\hline
-\eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &355.0& 18.8\% & 1.5\% & 1.01 \\
-\eeToHH $\to$ other                             & 675.0 & 20.0\% & 3.6\% & 4.93 \\
-\hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6115.4 & 36.0\% & 0.4\% & 9.42\\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 2249.9 & 26.3\%& 0.5\%& 3.13\\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 2197.7 & 25.8\%& 1.2\%& 6.82\\
-
-\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1093000.0& 1.4\% & 0.01\%& 1.43\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 338600.0 & 0.6\%&  - & -\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 213200.0 & 7.3\%& 0.05\%& 8.35\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 143000.0& 9.0\%& 0.05\%& 6.35\\
-
-\eeTo{ \Pquark \Pquark} &  5897800.0 & 1.4\%&  - & - \\
-\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  11121800 & 0.1\%& - & - \\
-\eeTo{ \Pquark \Pquark \Pl \Pl} &  6639200.0 & 0.4\%& - & - \\
-\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 2635000.0 & 3.1\%&  - & - \\
-\hline
-\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 2004388.1  & 0.7\%&  - & - \\
-\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 2002334.1 & 0.7\%&  - & - \\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 575600.0& 0.4\%&  - & - \\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 575600.0 & 0.3\% &  - & - \\
-
-\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 414750.0  & 16.8\%& 0.04\%& 30.7\\
-\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 414434.0 & 15.9\% & 0.05\%& 30.3\\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 7.8\% & 0.04\%& 3.37\\
-\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 7.3\%& 0.03\%& 2.63 \\
-
-\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92588.0  & 30.2\% & 0.2\%& 67.5 \\
-\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92430.0 & 30.3\% & 0.2\% & 54.2 \\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0 & 15.4\% & 0.2\% & 7.88 \\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0   & 15.2\% & 0.3\% & 10.2 \\
-\hline
-\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 18009413.9  & 1.6\%&   - & - \\
-\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 3824548.1  & 1.0\%&  - & - \\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 3828498.1 & 1.0\%&  - & - \\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400.0 & 0.6\%&  - & - \\
-\hline \hline
-\end{tabular}
-\caption{List of signal and background samples with the corresponding expected number at  \rootS{3}, for a luminosity of 2000$fb^{-1}$. The number of events, selection efficiency of pre-selection, selection efficiency of MVA after pre-selection, number of events after MVA are shown. - represents no events passing the MVA.
-}
-\label{tab:doubleHiggs3TeVMVA}
-\end{table}
 
 
-\begin{table}[!tbp]\centering
-%\small{
-\small
-\begin{tabular}{lrrrr}
-\hline \hline
- \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{3}} &  \multicolumn{1}{m{2cm}}{Expected number of events}  & \multicolumn{1}{m{2cm}}{Pre-selection efficiency} & \multicolumn{1}{m{2cm}}{MVA efficiency} & \multicolumn{1}{m{2cm}}{Number of events after MVA} \\
-\hline
-\eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, semi-leptonic       &96.8& 44.6\% & 21.9\% & 9.48\\
-\hline
-\eeToHH $\to$ \\
-\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &355.0& 13.3\% & 10.9\% &  5.16\\
-\eeToHH $\to$ other                             & 724.2 & 13.1\% & 13.6\% &  12.89\\
-\hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6115.4 & 7.4\% & 13.7\% & 62.63\\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 2249.9 & 6.3\%& 12.1\%& 17.10\\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 2197.7 & 15.9\%& 5.1\%& 18.03\\
+\section{\eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu} hadronic decay at \rootS{3} analysis}
 
-\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1093000.0& 0.6\% & 0.2\%& 15.04\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 338600.0 & 1.0\%&  0.06\% & 1.85\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 213200.0 & 27.6\%& 0.5\%& 270.33\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 143000.0& 1.9\%& 1.6\%& 43.78\\
-
-\eeTo{ \Pquark \Pquark} &  5897800.0 & 0.4\%&  0.3\% & 60.82 \\
-\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  11121800 & 0.3\%& 0.08\% & 21.24 \\
-\eeTo{ \Pquark \Pquark \Pl \Pl} &  6639200.0 & 0.6\%& 0.2\%& 84.14\\
-\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 2635000.0 & 0.4\%&  0.9\% & 92.55 \\
-\hline
-\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 2004388.1  & 1.2\%&  - & - \\
-\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 2002334.1 & 1.2\%&  - & - \\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 575600.0& 1.1\%&  - & - \\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 575600.0 & 1.1\% &  - & - \\
-
-\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 414750.0  & 3.7\%& 1.5\%& 226.77\\
-\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 414434.0 & 3.5\% & 1.6\%& 225.68\\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 11.2\% & 0.9\%& 107.90\\
-\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 10.7\%& 0.8\%& 92.75 \\
-
-\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92588.0  & 7.9\% & 10.7\%& 779.36 \\
-\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92430.0 & 7.9\% & 10.1\% & 741.57 \\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0 & 22.9\% & 6.9\% & 369.52 \\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0   & 22.7\% & 7.2\% & 381.33 \\
-\hline
-\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 18009413.9  & 0.4\%&   - & - \\
-\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 3824548.1  & 1.0\%&  - & - \\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 3828498.1 & 1.0\%&  0.08\% & 28.85 \\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400.0 & 1.1\%&  - & - \\
-\hline \hline
-\end{tabular}
-\caption{List of signal and background samples with the corresponding expected number at  \rootS{3}, for a luminosity of 2000$fb^{-1}$. The number of events, selection efficiency of pre-selection, selection efficiency of MVA after pre-selection, number of events after MVA are shown. - represents no events passing the MVA.
-}
-\label{tab:doubleHiggsQlv3TeVMVA}
-\end{table}
-
-
-\section{3\,TeV hadronic decay analysis}
-
-The lepton finding processors are either developed or optimised with samples at \rootS{1.4}, and checked against samples at \rootS{3}. Because the expected signal significance would be low, the processors are optimised to aggressively reject more background, to increase the final signal significance. It was found that the same set of parameters for lepton identifiers work well under \rootS{1.4} and 3\,TeV.
-
-Comparing \rootS{1.4} and \rootS{3}, the performance is worse for \rootS{3}. This is because particles are more boosted and separation because particles are smaller. This reflects on the performance of the  ForwardFinderProcessor. Whilst at \rootS{1.4}, the processor only rejects 5\% background and 1\% signal, at \rootS{3} it rejects 19\% background and 4\% signal, suggesting many leptons are in the forward region. These processors are complimentary and a good rejection rate with combined processors is achieved.
+The \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu} hadronic decay at \rootS{3} analysis follows the same strategy as the analysis at \rootS{1.4}. Brief discussion of each step and results are provided, where the differences are highlighted. Cross sections of used samples  are listed in \Table{tab:doubleHiggs3crossSection}.
 
 \begin{table}[!tbp]\centering
 % TODO fix lumi correction for e gamma, gamma e
@@ -1110,66 +1160,59 @@ Comparing \rootS{1.4} and \rootS{3}, the performance is worse for \rootS{3}. Thi
 
 \begin{tabular}{lrr}
 \hline \hline
-Channel  &  $\sigma(\rootS{1.4})$ / fb  & $\sigma(\rootS{3})$ / fb   \\
+Channel  &  $\sigma(\rootS{3})$ / fb   \\
 \hline
-\eeToHH & 0.149 &0.588 \\
+\eeToHH &0.588 \\
 \hline
-\eeToHHbbWWFull,hadronic & 0.018 &0.07 \\
-\eeToHHbbbbFull & 0.047 &0.19 \\
-\eeToHHotherFull & 0.085 &0.34 \\
+\eeToHHbbWWFull,hadronic &0.07 \\
+\eeToHHbbbbFull  &0.19 \\
+\eeToHHotherFull &0.34 \\
 \hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 0.86 & 1.78 \\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 0.36 & 1.12\\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 0.31 & 1.91\\
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu} & 1.78 \\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu} & 1.12\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 1.91\\
 
-\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1245.1& 546.5*\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 62.1* &169.3*\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 110.4* &106.6*\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 23.2* &71.5*\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark} & 546.5*\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}&169.3*\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} &106.6*\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu}&71.5*\\
 
-\eeTo{ \Pquark \Pquark} &  4009.5 &2948.9\\
-\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  4309.7 &5561.1\\
-\eeTo{ \Pquark \Pquark \Pl \Pl} &  2725.8 &3319.6\\
-\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 787.7 &1317.5 \\
+\eeTo{ \Pquark \Pquark} &2948.9\\
+\eeTo{ \Pquark \Pquark \Plepton \Pnu} &5561.1\\
+\eeTo{ \Pquark \Pquark \Pl \Pl}&3319.6\\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} &1317.5 \\
 \hline
-\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 1160.7  & 1268.7*\\
-\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 1156.3 & 1267.6*\\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 287.1 & 287.9*\\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 286.9 & 287.8*\\
-\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 79.8\myDagger  & 262.5*\\
-\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 79.3\myDagger & 262.3*\\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 17.4\myDagger  & 54.2*\\
-\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 17.3\myDagger  & 54.2*\\
+\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 1268.7*\\
+\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 1267.6*\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark}  & 287.9*\\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}   & 287.8*\\
+\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}  & 262.5*\\
+\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark} & 262.3*\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}  & 54.2*\\
+\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 54.2*\\
 
-\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 15.8*  & 58.6* \\
-\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 15.7* & 58.5* \\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 3.39*  & 11.7* \\
-\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 3.39*   & 11.7* \\
+\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu}   & 58.6* \\
+\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu}  & 58.5* \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 11.7* \\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 11.7* \\
 \hline
-\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 21406.2*  &13050.3*\\
-\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 4018.7*  &2420.6*\\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 4034.8* &2423.1*\\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 753.0* &402.7* \\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}&13050.3*\\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}&2420.6*\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}&2423.1*\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}&402.7* \\
 \hline \hline
 \end{tabular}
 
-\caption[]{List of signal and background samples with the corresponding cross sections at \rootS{3} and \rootS{1.4}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV. For processes labeled with * and $\myDagger$, the generator level cut requires invariant mass of quarks greater than 50 and 120\,GeV, respectively.}
-\label{tab:samples_xsec}
+\caption[Cross sections of samples at \rootS{3}]
+{List of signal and background samples with the corresponding cross sections at \rootS{3}. \Pquark can \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent particles and its corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes involving Higgs production explicitly, simulated Higgs mass is 126\,GeV. Otherwise, Higgs mass is set to 14\,TeV. For processes labelled with *, the generator level cut requires invariant mass of quarks greater than 50.}
+\label{tab:doubleHiggs3crossSection}
 \end{table}
 
+The lepton finding processors are either developed or optimised with samples at \rootS{1.4}, and checked against samples at \rootS{3} (see \Section{sec:doubleHiggsLepton}).  It was found that the same set of parameters for lepton identifiers work well under \rootS{1.4} and 3\,TeV. The performance of the lepton processors is shown in \Table{tab:doubleHiggs3TeVIsoLepPerformance}.
 
 \begin{table}[!tbp]
 \begin{tabular}{lrr}
 \hline
-\hline
-Efficiency (1.4\,TeV)  &  Signal & \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} \\
-\hline
-IsolatedLeptonFinderProcessor & 99.3\% & 50.3\%  \\
-BonoLeptonFinderProcessor & 99.1\% & 39.9\%  \\
-TauFinderProcessor & 97.5\% & 52.3\%  \\
-BonoTauFinderProcessor & 89.7\% & 38.5\%  \\
-ForwardFinderProcessor & 98.9\% & 95.1\%  \\
-Combined & 86.6\% & 16.8\%  \\
 \hline
 Efficiency (3\,TeV)  &  Signal  & \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} \\
 \hline
@@ -1178,24 +1221,29 @@ BonoLeptonFinderProcessor & 99.0\% & 52.5\%  \\
 TauFinderProcessor & 97.7\% & 79.5\%  \\
 BonoTauFinderProcessor & 86.3\% & 60.3\%  \\
 ForwardFinderProcessor & 95.9\% & 80.7\%  \\
+\hline
 Combined & 81.0\% & 23.3\%  \\
 \hline
 \hline
 
 \end{tabular}
-\caption{isolated lepton finder processors performance on the signal and selected background samples.}
+\caption{Isolated lepton finder processors performance on the signal and selected background samples at \rootS{3}.}
 \label{tab:doubleHiggs3TeVIsoLepPerformance}
 \end{table}
 
+
+
+
+Comparing \rootS{1.4} and \rootS{3}, the lepton finding performance is worse for \rootS{3}. This is because particles are more boosted and separation between particles is smaller. This reflects on the performance of the  ForwardFinderProcessor. Whilst at \rootS{1.4}, the processor only rejects 5\% background and 1\% signal, at \rootS{3} it rejects 19\% background and 4\% signal, suggesting many leptons are in the forward region. These processors are complimentary and a good rejection rate with combined processors is achieved.
+
+
+
+
+
+\begin{comment}
 \begin{table}[!tbp]
 \begin{tabular}{lrr}
 \hline
-\hline
-Selection / Efficiency (1.4\,TeV)  &  Signal & \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark}  \\
-\hline
-Combined light lepton finder & 87.6\% & 67.5\%  \\
-ForwardFinderProcessor & 98.9\% & 53.6\%  \\
-Combined & 86.6\% & 30.8\%  \\
 \hline
 Processor / Efficiency (3\,TeV)  &  Signal  & \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark}  \\
 \hline
@@ -1209,7 +1257,7 @@ Combined & 81.0\% &  33.4\%  \\
 \caption{Very forward electron and photon finder performance on the signal and selected background samples.}
 \label{tab:doubleHiggs3TeVForwardPerformance}
 \end{table}
-
+\end{comment}
 
 
 For \rootS{3}, the choice is a bit more complicated. Shown in \Figure{fig:doubleHiggs3TeVMassFit}, fitted mass for \Hbb favours \normalPFO with $R = 0.8$. Fitted mass for \HWW favours \tightPFO with $R = 0.9$. Fitted mass for \PW favours \tightPFO with $R = 0.8$. Looking at the combined relative fitted width for the \Hbb, \HWW and \PW, shown in \Figure{fig:doubleHiggs3TeVSigmaFit}, \normalPFO gives a larger width than \tightPFO. Within \tightPFO, small $R$ values provide a shaper width for \HWW and \Hbb, but a broader width for \PW. Therefore, \tightPFO with $R = 0.7$ and $R = 1$ are both chosen for parallel analysis.
@@ -1464,4 +1512,114 @@ The selection efficiencies after sanity cuts and other pre-selection cuts stated
 
 Same set of variables are used for \rootS{1.4} and \rootS{3}.
 
+
+
+\begin{table}[!tbp]\centering
+%\small{
+\small
+\begin{tabular}{lrrrr}
+\hline \hline
+ \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{3}} &  \multicolumn{1}{m{2cm}}{Expected number of events}  & \multicolumn{1}{m{2cm}}{Pre-selection efficiency} & \multicolumn{1}{m{2cm}}{MVA efficiency} & \multicolumn{1}{m{2cm}}{Number of events after MVA} \\
+\hline
+\eeToHH $\to$ \\
+\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, hadronic             &146.0& 61.7\% & 11.6\% & 10.43\\
+\hline
+\eeToHH $\to$ \\
+\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &355.0& 18.8\% & 1.5\% & 1.01 \\
+\eeToHH $\to$ other                             & 675.0 & 20.0\% & 3.6\% & 4.93 \\
+\hline
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6115.4 & 36.0\% & 0.4\% & 9.42\\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 2249.9 & 26.3\%& 0.5\%& 3.13\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 2197.7 & 25.8\%& 1.2\%& 6.82\\
+
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1093000.0& 1.4\% & 0.01\%& 1.43\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 338600.0 & 0.6\%&  - & -\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 213200.0 & 7.3\%& 0.05\%& 8.35\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 143000.0& 9.0\%& 0.05\%& 6.35\\
+
+\eeTo{ \Pquark \Pquark} &  5897800.0 & 1.4\%&  - & - \\
+\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  11121800 & 0.1\%& - & - \\
+\eeTo{ \Pquark \Pquark \Pl \Pl} &  6639200.0 & 0.4\%& - & - \\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 2635000.0 & 3.1\%&  - & - \\
+\hline
+\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 2004388.1  & 0.7\%&  - & - \\
+\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 2002334.1 & 0.7\%&  - & - \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 575600.0& 0.4\%&  - & - \\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 575600.0 & 0.3\% &  - & - \\
+
+\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 414750.0  & 16.8\%& 0.04\%& 30.7\\
+\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 414434.0 & 15.9\% & 0.05\%& 30.3\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 7.8\% & 0.04\%& 3.37\\
+\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 7.3\%& 0.03\%& 2.63 \\
+
+\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92588.0  & 30.2\% & 0.2\%& 67.5 \\
+\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92430.0 & 30.3\% & 0.2\% & 54.2 \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0 & 15.4\% & 0.2\% & 7.88 \\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0   & 15.2\% & 0.3\% & 10.2 \\
+\hline
+\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 18009413.9  & 1.6\%&   - & - \\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 3824548.1  & 1.0\%&  - & - \\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 3828498.1 & 1.0\%&  - & - \\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400.0 & 0.6\%&  - & - \\
+\hline \hline
+\end{tabular}
+\caption{List of signal and background samples with the corresponding expected number at  \rootS{3}, for a luminosity of 2000$fb^{-1}$. The number of events, selection efficiency of pre-selection, selection efficiency of MVA after pre-selection, number of events after MVA are shown. - represents no events passing the MVA.
+}
+\label{tab:doubleHiggs3TeVMVA}
+\end{table}
+
+
+\begin{table}[!tbp]\centering
+%\small{
+\small
+\begin{tabular}{lrrrr}
+\hline \hline
+ \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{3}} &  \multicolumn{1}{m{2cm}}{Expected number of events}  & \multicolumn{1}{m{2cm}}{Pre-selection efficiency} & \multicolumn{1}{m{2cm}}{MVA efficiency} & \multicolumn{1}{m{2cm}}{Number of events after MVA} \\
+\hline
+\eeToHH $\to$ \\
+\HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}, semi-leptonic       &96.8& 44.6\% & 21.9\% & 9.48\\
+\hline
+\eeToHH $\to$ \\
+\HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnu \APnu}             &355.0& 13.3\% & 10.9\% &  5.16\\
+\eeToHH $\to$ other                             & 724.2 & 13.1\% & 13.6\% &  12.89\\
+\hline
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6115.4 & 7.4\% & 13.7\% & 62.63\\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 2249.9 & 6.3\%& 12.1\%& 17.10\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 2197.7 & 15.9\%& 5.1\%& 18.03\\
+
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1093000.0& 0.6\% & 0.2\%& 15.04\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 338600.0 & 1.0\%&  0.06\% & 1.85\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 213200.0 & 27.6\%& 0.5\%& 270.33\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 143000.0& 1.9\%& 1.6\%& 43.78\\
+
+\eeTo{ \Pquark \Pquark} &  5897800.0 & 0.4\%&  0.3\% & 60.82 \\
+\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  11121800 & 0.3\%& 0.08\% & 21.24 \\
+\eeTo{ \Pquark \Pquark \Pl \Pl} &  6639200.0 & 0.6\%& 0.2\%& 84.14\\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 2635000.0 & 0.4\%&  0.9\% & 92.55 \\
+\hline
+\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 2004388.1  & 1.2\%&  - & - \\
+\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 2002334.1 & 1.2\%&  - & - \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 575600.0& 1.1\%&  - & - \\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 575600.0 & 1.1\% &  - & - \\
+
+\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 414750.0  & 3.7\%& 1.5\%& 226.77\\
+\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 414434.0 & 3.5\% & 1.6\%& 225.68\\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 11.2\% & 0.9\%& 107.90\\
+\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 10.7\%& 0.8\%& 92.75 \\
+
+\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92588.0  & 7.9\% & 10.7\%& 779.36 \\
+\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92430.0 & 7.9\% & 10.1\% & 741.57 \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0 & 22.9\% & 6.9\% & 369.52 \\
+\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0   & 22.7\% & 7.2\% & 381.33 \\
+\hline
+\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 18009413.9  & 0.4\%&   - & - \\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 3824548.1  & 1.0\%&  - & - \\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 3828498.1 & 1.0\%&  0.08\% & 28.85 \\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400.0 & 1.1\%&  - & - \\
+\hline \hline
+\end{tabular}
+\caption{List of signal and background samples with the corresponding expected number at  \rootS{3}, for a luminosity of 2000$fb^{-1}$. The number of events, selection efficiency of pre-selection, selection efficiency of MVA after pre-selection, number of events after MVA are shown. - represents no events passing the MVA.
+}
+\label{tab:doubleHiggsQlv3TeVMVA}
+\end{table}
 \section{Couplings extration} 
