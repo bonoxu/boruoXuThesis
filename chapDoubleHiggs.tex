@@ -1431,13 +1431,13 @@ The mutually exclusive cuts divide samples, both signal and background, into two
 \begin{figure}[!tbp]
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{doubleHiggs/mutual6025bbWW}.pdf}
-    \caption{\eeToHHbbWWHad, hadronic}
+    \caption{\eeToHHbbWW, hadronic}
     \label{fig:doubleHiggs3MutualbbWW}
   \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{doubleHiggs/mutual6025bbbb}.pdf}
-    \caption{\eeToHHbbWW}
-    \label{fig:doubleHiggs3MutualbbWW}
+    \caption{\eeToHHbbbb}
+    \label{fig:doubleHiggs3Mutualbbbb}
   \end{subfigure}
 \caption[Sum of b tag against \y{34} at \rootS{3}]%
    {Sum of b tag against \y{34} at \rootS{3}, shown for hadronic decay of \eeToHHbbWWHad and \eeToHHbbWW subchannel. }
@@ -1714,7 +1714,9 @@ When both \sqrtS are combined, the statistical precision on \lambda increases to
 
 The double higgs production, \eeToHH, can occur via processes in \Figure{fig:doubleHiggsFeynman}. As stated in the beginning, \FIGURE{fig:doubleHiggsFeynman1} is sensitive to Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH. Therefore an simultaneous extraction on the coupling uncertainty can be performed by extending the method in the \Section{sec:doubleHiggsResults}. Once a relationship between \gHHH, \gWWHH and significance is established, a contour of the uncertainty in \gHHH and \gWWHH two dimensional phase space can be obtained.
 
-This two dimensional template fitting is performed at  \rootS{3}, as the precision at \rootS{1.4} is too low to support such fitting. The normalised cross section of the \eeToHH as a function of \gHHH and \gWWHH is shown in \Figure{fig:doubleHiggsCouplingCrossSection}. The SM cross section is normalised to 1. Around the SM value, the cross section increases with the decrease of \gHHH and the increase of \gWWHH. Therefore, the cross sections along the anti-diagonal do not vary much, which would be difficult to precisely determine the statistical uncertainty on the coupling measurements.
+This two dimensional template fitting is performed at  \rootS{3}, as the precision at \rootS{1.4} is too low to support such fitting. The luminosity is assumed to be 3000$fb^{-1}$ to reflect the updated \CLIC running scenario.
+
+The normalised cross section of the \eeToHH as a function of \gHHH and \gWWHH is shown in \Figure{fig:doubleHiggsCouplingCrossSection}. The SM cross section is normalised to 1. Around the SM value, the cross section increases with the decrease of \gHHH and the increase of \gWWHH. Therefore, the cross sections along the anti-diagonal do not vary much, which would be difficult to precisely determine the statistical uncertainty on the coupling measurements.
 
 \begin{figure}[!tbp]
     \includegraphics[width=0.45\textwidth]{{doubleHiggs/extraction/crossSectionNew}}
@@ -1724,12 +1726,58 @@ This two dimensional template fitting is performed at  \rootS{3}, as the precisi
 
 To determine the uncertainty on the coupling measurements, the variables proposed in the theoretical study in \Section{sec:theoryHiggsBSM} are used: the invariant mass of the two Higgs system, \mhh, and the sum of their transverse momenta, \HT.  By choosing the kinematic bins,  high-energy behaviour can be disentailed from the physics at threshold, allowing the extraction of the coupling strength $g_{WWHH}$ and $g_{HHH}$.
 
-The strategy for coupling extraction is described below.  Simulated events with non-SM couplings are generated and reconstructed. These events went through the analysis chain discussed in this chapter, with the same cuts and the MVA classifier, trained with the SM coupling sample. The selected events are classified into 8 kinematic bins. 2 bins in \HT are cut at 200\,GeV. 4 bins in \mhh are cut at 500, 700, 1000\,GeV.
+The strategy for coupling extraction is described below.  Simulated events with non-SM couplings are generated and reconstructed. These events went through the analysis chain discussed in this chapter, with the same cuts and the MVA classifier, trained with the SM coupling sample. The significance of the double higgs production with subchannel hadronic decay \eeToHHbbWW as a function of  \gHHH and \gWWHH is shown in \Figure{fig:doubleHiggsCouplingSignificancebbWW}.
 
-A $\chi^2$ function is constructed to access the difference of the \mhh and \HT distributions for  non-SM coupling comparing to SM coupling sample. $\chi^2$ is:
+
+\begin{figure}[!tbp]
+    \includegraphics[width=0.45\textwidth]{{doubleHiggs/extraction/SignificanceBono}}
+\caption{The significance for the \eeToHH process as a function of the $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$ at \rootS{3}, using subchannel hadronic decay \eeToHHbbWW, assuming a luminosity of  3000$fb^{-1}$.}
+   \label{fig:doubleHiggsCouplingSignificancebbWW}
+\end{figure}
+
+The selected events are classified into 8 kinematic bins. 2 bins in \HT are cut at 200\,GeV. 4 bins in \mhh are cut at 500, 700, 1000\,GeV. A $\chi^2$ function is constructed to access the difference of the \mhh and \HT distributions for  non-SM coupling comparing to SM coupling sample. $\chi^2$ is:
 \begin{equation}
-\chi^2 = \sum_{i}^{bins}\frac{\parenths{N_i - N_{i,SM}}^2}{N_{i,SM}},
+\chi^2 = \sum_{i}^{bins}\frac{\parenths{N_i - N_{i,observed}}^2}{N_{i}},
 \end{equation}
-where $N_i$ is the number of event in a kinematic bin $i$ for a non-SM coupling sample. $N_{i,SM}$ is the number of event in a kinematic bin $i$ for the SM coupling sample. The expression is summing over all kinematic bins. \FIGURE{} shows the $\chi^2$  as a function of \gHHH and \gWWHH, for two subchannels, hadronic decay \eeToHHbbWW and \eeToHHbbbb.
+where $N_i$ is the number of event expected in a kinematic bin $i$ for a non-SM coupling sample. $ N_{i,observed}$ is the number of event observed in a kinematic bin $i$. Here the observed set is the  SM coupling sample. The expression is summing over all kinematic bins. By construction, the SM coupling point has a $\chi^2$ of 0. \FIGURE{fig:doubleHiggsCouplingChi2Separate} shows the $\chi^2$  as a function of \gHHH and \gWWHH, for two subchannels, hadronic decay \eeToHHbbWW and \eeToHHbbbb. The $\chi^2$ values for the \eeToHHbbbb subchannel is larger, which is due to larger significance obtained with that subchannel.
+
+\begin{figure}[!tbp]
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{doubleHiggs/extraction/chi2Bono4Mhh2HT}}
+    \caption{\eeToHHbbWWHad, hadronic}
+    \label{fig:doubleHiggsCouplingChi2bbWW}
+  \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{doubleHiggs/extraction/chi2Bono4Mhh2HT}
+    \caption{\eeToHHbbbb, TODO need to update with Rosa}
+    \label{fig:doubleHiggsCouplingChi2bbbb}
+  \end{subfigure}
+\caption[$\chi^2$ as a function of $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$  at \rootS{3}]%
+   {The $\chi^2$ for the \eeToHH process as a function of the $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$ at \rootS{3}, using subchannel hadronic decay \eeToHHbbWW and subchannel, assuming a luminosity of  3000$fb^{-1}$.}
+   \label{fig:doubleHiggsCouplingChi2Separate}
+\end{figure}
+
+Two subchannels, hadronic decay \eeToHHbbWW and \eeToHHbbbb, are combined to increase the statistical precision on the coupling measurements.  Two $\chi^2$ surfaces are summed. To avoid the statistical fluctuation in the sample, a toy MC experiment is performed. The SM coupling samples is treated as data template set. 100000 data sets are generated by fluctuate the event number in each kinematic bin according to poisson distribution.  The $\chi^2$ is performed and summed using these data sets as the observed data. The summed $\chi$ is averaged by the number of  data sets (100000), and normalised such that the $\chi^2$ at the  SM coupling is 0. Since only the difference between the non-SM and SM $\chi^2$ is used for the coupling measurements, the normalisation does not affect the measurements and helps to ease the visualisation. \FIGURE{fig:doubleHiggsCouplingChi2Ave} shows the normalised $\chi^2$, after averaging the toy MC experiments, as a function of $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$. The $\chi^2$ is flat along the anti-diagonal, which is similar to the cross section plot.
+
+\begin{figure}[!tbp]
+    \includegraphics[width=0.45\textwidth]{{doubleHiggs/extraction/chi2Bono4Mhh2HT}}
+\caption{TODO update Normalised $\chi^2$, after averaging the toy MC experiments, as a function of $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$, combining subchannel hadronic decay \eeToHHbbWW and subchannel, assuming a luminosity of  3000$fb^{-1}$ }
+   \label{fig:doubleHiggsCouplingChi2Ave}
+\end{figure}
 
 
+\begin{figure}[!tbp]
+    \includegraphics[width=0.45\textwidth]{{doubleHiggs/extraction/chi2Bono4Mhh2HT}}
+\caption{TODO update Contour plot of $\chi^2$, after averaging the toy MC experiments, as a function of $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$, combining subchannel hadronic decay \eeToHHbbWW and subchannel, assuming a luminosity of  3000$fb^{-1}$ }
+   \label{fig:doubleHiggsCouplingChi2Countour}
+\end{figure}
+
+Since there are two couplings in this $\chi^2$ surface, the degree of freedom for this fit is 2. A contour of 68\% confidence ($\chi^2 = 2.3$) can be drawn by interpolating between points on the surface. \FIGURE{fig:doubleHiggsCouplingChi2Countour} shows the contour. The counter can  be sliced one dimensionally to extract the uncertainty of one coupling for a given value of the other coupling. For example:
+\begin{equation}
+\frac{\Delta\gWWHH}{\gWWHH} \simeq 5\% \text{ for \gHHH = $\gHHH_{SM}$}
+\end{equation}
+\begin{equation}
+\frac{\Delta\gHHH}{\gHHH} \simeq 33\% \text{ for \gWWHH = $\gWWHH_{SM}$}
+\end{equation}
+
+The statistical precisions on \gWWHH and \gHHH are much better than that with \LHC, or high luminosity upgraded \LHC \cite{Contino:2010mh}. 
