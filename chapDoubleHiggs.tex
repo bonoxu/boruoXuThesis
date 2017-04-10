@@ -1710,8 +1710,26 @@ Since the Feynman diagrams for the double Higgs boson productions include t-chan
 \end{equation}
 When both \sqrtS are combined, the statistical precision on \lambda increases to 99\% for the unpolarised beam, and 87\% for the polarised beam with  $P(\Pem) = 80\%$.
 
-\section{Simultaneous couplings extraction} 
+\section{Simultaneous couplings extraction}
 
 The double higgs production, \eeToHH, can occur via processes in \Figure{fig:doubleHiggsFeynman}. As stated in the beginning, \FIGURE{fig:doubleHiggsFeynman1} is sensitive to Higgs triple self coupling \gHHH. \FIGURE{fig:doubleHiggsFeynman2} is sensitive to quartic coupling \gWWHH. Therefore an simultaneous extraction on the coupling uncertainty can be performed by extending the method in the \Section{sec:doubleHiggsResults}. Once a relationship between \gHHH, \gWWHH and significance is established, a contour of the uncertainty in \gHHH and \gWWHH two dimensional phase space can be obtained.
+
+This two dimensional template fitting is performed at  \rootS{3}, as the precision at \rootS{1.4} is too low to support such fitting. The normalised cross section of the \eeToHH as a function of \gHHH and \gWWHH is shown in \Figure{fig:doubleHiggsCouplingCrossSection}. The SM cross section is normalised to 1. Around the SM value, the cross section increases with the decrease of \gHHH and the increase of \gWWHH. Therefore, the cross sections along the anti-diagonal do not vary much, which would be difficult to precisely determine the statistical uncertainty on the coupling measurements.
+
+\begin{figure}[!tbp]
+    \includegraphics[width=0.45\textwidth]{{doubleHiggs/extraction/crossSectionNew}}
+\caption{Normalised cross section for the \eeToHH process as a function of the $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$ at \rootS{3}.}
+   \label{fig:doubleHiggsCouplingCrossSection}
+\end{figure}
+
+To determine the uncertainty on the coupling measurements, the variables proposed in the theoretical study in \Section{sec:theoryHiggsBSM} are used: the invariant mass of the two Higgs system, \mhh, and the sum of their transverse momenta, \HT.  By choosing the kinematic bins,  high-energy behaviour can be disentailed from the physics at threshold, allowing the extraction of the coupling strength $g_{WWHH}$ and $g_{HHH}$.
+
+The strategy for coupling extraction is described below.  Simulated events with non-SM couplings are generated and reconstructed. These events went through the analysis chain discussed in this chapter, with the same cuts and the MVA classifier, trained with the SM coupling sample. The selected events are classified into 8 kinematic bins. 2 bins in \HT are cut at 200\,GeV. 4 bins in \mhh are cut at 500, 700, 1000\,GeV.
+
+A $\chi^2$ function is constructed to access the difference of the \mhh and \HT distributions for  non-SM coupling comparing to SM coupling sample. $\chi^2$ is:
+\begin{equation}
+\chi^2 = \sum_{i}^{bins}\frac{\parenths{N_i - N_{i,SM}}^2}{N_{i,SM}},
+\end{equation}
+where $N_i$ is the number of event in a kinematic bin $i$ for a non-SM coupling sample. $N_{i,SM}$ is the number of event in a kinematic bin $i$ for the SM coupling sample. The expression is summing over all kinematic bins. \FIGURE{} shows the $\chi^2$  as a function of \gHHH and \gWWHH, for two subchannels, hadronic decay \eeToHHbbWW and \eeToHHbbbb.
 
 
