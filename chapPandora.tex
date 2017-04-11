@@ -6,41 +6,26 @@
 
 %As previously stated, this document focus on the \ILD and \CLICILD detectors. Due to the similarity, we often only discuss one detector to avoid the repetition. The difference in detectors will be stated if applicable.
 
-In previous chapters, overviews of the theory and the future linear collider experiments have been described. Since the work presented in this document is for future collider, simulation and monte carlo method is used throughout the document. In this chapter, the simulation and event reconstruction chain are discussed, with emphasis on the \pandora event reconstrcution, which provides the background for the photon reconstruction algorithms in \Chapter{chap:Reconstruction}.
+In previous chapters, overviews of the theory and the future linear collider experiments have been described. Since the work presented in this document is on future colliders, simulation and monte carlo method is used throughout the document. In this chapter, the simulation and event reconstruction chain are discussed, with emphasis on the \pandora event reconstruction. \pandora event reconstruction is the framework fro the photon reconstruction algorithms in \Chapter{chap:Reconstruction}. 
 
-Simulation and reconstruction of events for the future Linear Colliders, \ILC and \CLIC, share common software framework. The noticeable difference will be discussed.
+Simulation and reconstruction of events for the future Linear Colliders, \ILC and \CLIC, share common software framework. The shared reconstruction is discussed, followed by a section on \CLIC specific issues. The analysis and reconstruction tools  are discussed as well.
 
 \section{Monte Carlo event generation}
 
-For the simulated study, Monte Carlo (MC) event generation is the first step. Most events, electron-positron interaction, are generated with WHIZARD software, \cite{whizard,Moretti:2001zz}, with no polarisation of the electron and positrons. Some simple events are generated with HEPEVT. PYTHIA \cite{Sjostrand:1995iq} is used to describe parton showering, hadronisation and fragmentation. The parameters for PYTHIA are tuned to OPAL data from the LEP \cite{Alexander:1995bk}. TAUOLA \cite{Jadach:1993hs} debrides the tau lepton decay with correct spin correlations of the day products. The Initial State Radiation (\ISR) is simulated in WHIZARD with the \ISR photons being collinear with the beam direction. The Final State Radiation (\FSR) is simulated with default parameters in PYTHIA.
-
-For the \CLIC simulated samples, the luminosity spectrum, which is generated with GUINEAPIG \cite{Schulte:1999tx}, is simulated in WHIZARD. The \ggHad background events are hadronised with PYTHIA, and superimposed on the physics process simulations to save computational resources.
-
-TODO
-\ggHad simulation -5 to 25ns etc
-
+Monte Carlo (MC) event generation is the first step for the simulated study. Most events, electron-positron interaction, are generated with WHIZARD software, \cite{whizard,Moretti:2001zz}, with no polarisation of the electron and positrons. Some simple events are generated with HEPEVT. PYTHIA \cite{Sjostrand:1995iq} is used to describe parton showering, hadronisation and fragmentation. The parameters for PYTHIA are tuned to OPAL data from the LEP \cite{Alexander:1995bk}. TAUOLA \cite{Jadach:1993hs} debrides the tau lepton decay with correct spin correlations of the day products. The Initial State Radiation (\ISR) is simulated in WHIZARD with the \ISR photons being collinear with the beam direction. The Final State Radiation (\FSR) is simulated with default parameters in PYTHIA.
 
 \section{Event Simulation}
 
 The event simulation software is GEANT4 \cite{Agostinelli:2002hh}, and the detector geometry description is provided by MOKKA \cite{MoradeFreitas:2002kj}.  QGSP\_BERT physics list is used to describe the hadronic showers decay in the detector.
 
-
-%Simulation and reconstruction of events for the future Linear Colliders share common software framework. Simulated events are generated with Whizard software \cite{}. Pythia describes hadronisation and Tauola simulates correct spins of tau lepton decay products.  Whizard allows events simulation without initial state radiation, and can simulate electron beam interaction. For the \CLIC detector, electron beam induced background events are simulated and reconstructed. These events are superimposed on the physics process to save computational resources.
-
-
 \section{Event Reconstruction}
 
-Reconstruction software runs in Marlin framework \cite{Gaede:2006pj}, as a part of the \ilcsoft. Event reconstruction contains following steps: digitisation of simulated calorimeter hits, reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects (\PFOs)reconstruction with \pandora\cite{Thomson:2009rp,Marshall:2012ry}. Reconstruction does not include calorimeters hits in the forward calorimeters, due to computational reasons  (see \Section{sec:doubleHiggsForwardElectron}).
-
-For the \CLIC detector simulations, suppression of \ggHad background is performed.
-
-Details of the reconstruction can be found in \cite{Brau:2007zza,Linssen:2012hp}. Particle flow reconstruction via \pandora will be discussed in details, which provides the background for the photon reconstructions in \pandora in \Chapter{chap:Reconstruction}.
-
-
+Reconstruction software runs in Marlin framework \cite{Gaede:2006pj}, as a part of the \ilcsoft. Event reconstruction contains following steps: digitisation of simulated calorimeter hits, reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects (\PFOs) reconstruction with \pandora\cite{Thomson:2009rp,Marshall:2012ry}. Details of the reconstruction can be found in \cite{Brau:2007zza,Linssen:2012hp}. Particle flow reconstruction via \pandora will be discussed in details, which provides the software framework for the photon reconstructions in \pandora in \Chapter{chap:Photon}.
 
 \section{\pandora}
 \label{sec:pandoraPandoraPFA}
-Tradition calorimetric approach is unable to meet the mass and energy requirements for the future linear collider. The particle flow approach with \pandora has a proof-of-principle demonstration of its capability to reach required resolution. The particle flow approach also put stringent requirements on the detector design, which is described in \Chapter{chap:Detector}. By associating calorimeter hits to the tracks, around 60\% of the jet energy from charged particles is measured by the tracker, which has a much better resolution than the calorimeter. Small cell sizes of the calorimeters are required to identify hits from different particles. The traditional sum of calorimeter cell energies is replaced by particle flow reconstruction algorithms, a complex pattern recognition problem.  The \pandora algorithm has been developed and used in the \ILC and \CLIC simulation studies.
+
+Tradition calorimetric approach is unable to meet the mass and energy resolution requirements for the future linear collider. The particle flow approach with \pandora has a proof-of-principle demonstration of its capability to reach required resolution. The particle flow approach also put stringent requirements on the detector design, which is described in \Section{sec:detectorPhysicsRequirementPandora}. By associating calorimeter hits to the tracks, around 60\% of the jet energy from charged particles is measured by the tracker, which has a much better resolution than the calorimeter. Small cell sizes of the calorimeters are required to identify hits from different particles. The traditional sum of calorimeter cell energies is replaced by particle flow reconstruction algorithms, a complex pattern recognition problem.  The \pandora algorithm has been developed and used in the \ILC and \CLIC simulation studies.
 
 Started with the \ILD detector concept, \pandora has been adapted to the \CLIC condition and shows its ability to deliver required energy resolutions \cite{Linssen:2012hp}. Recent the code base of the \pandora has been restructured. The core base codes for basic object and memory managements are factorised in the Pandora C++ Software Development Kit\cite{Marshall:2015rfa}. There are over 60 linear collider specific reconstruction algorithms, each aims to address a particular topological in the reconstruction.
 
@@ -129,31 +114,69 @@ PFOs are the output of the \pandora reconstruction. The four-momentum of these P
 Hits contribution to MC particle.
 Main contributed MC particle from energy weighted hits
 Main contributed Jets etc. from hits
+
 \section{\CLIC specific simulation and reconstruction}
 
+For the \CLIC simulated samples, the luminosity spectrum, which is generated with GUINEAPIG \cite{Schulte:1999tx}, is simulated in WHIZARD. The \ggHad background events are hadronised with PYTHIA, and superimposed on the physics process simulations to save computational resources.
+
+TODO
+\subsection{Luminosity spectrum}
+
+The electron-photon interaction where the photon is via Beamstrahlung of the initial state radiation has a different  instantaneous luminosity than the electron-positron interaction. During the same time-frame the total integrated luminosity are different. A simulated study has performed \cite{Sailer:lumi} and the result is summarised in \Table{tab:reconstrcutionBSlumi}. For physics analysis in \Chapter{chap:DoubleHiggs}, event number for processes with initial-state photons from Beamstrahlung should be corrected by factors in \Table{tab:reconstrcutionBSlumi}.
+
+\begin{table}[htbp]
+\centering
+\smallskip
+\begin{tabular}{l r  r }
+\hline
+Luminosity ratio &  \rootS{1.4} & \rootS{3} \\
+\hline
+\textit{L(\ee) / L(\ee)} &1 & 1\\
+\textit{L(\egamma) / L(\ee)} &0.75 & 0.79\\
+\textit{L(\gammae) / L(\ee)} &0.75 & 0.79\\
+\textit{L(\gammagamma) / L(\ee)} &0.64 & 0.69\\
+\hline
+\hline
+\end{tabular}
+\caption[Luminosity ratio for processes with initial-state photons from Beamstrahlung.]%
+{Luminosity ratio for processes with initial-state photons from Beamstrahlung for \CLIC at \rootS{1.4} and 3\,TeV. The table summarises results in \cite{Sailer:lumi}. }
+\label{tab:reconstrcutionBSlumi}
+\end{table}
 
 
-\section{Luminosity spectrum}
-
-
-
-\section{Suppression of \ggHad backgrounds}
+\subsection{Beam induced backgrounds}
 \label{sec:pandoraggHad}
 
 
-For the CLIC, significant \ggHad background is present. It is crucial to remove the beam induced background as they don't represent the underlying physics process.
+The beam induced background are considered in the simulation. \ggHad intergraded over 60 bunch crossing has been overlayed onto the reconstruction. The incoherent pairs are ignored as the \ggHad is the dominant background in all calorimeters except inner part of the \HCAL endcap. The choice of 60 bunch crossing is a conservative estimate  of  the amount of the background \cite{Barklow:1443518,Barklow:1443518}. These background deposit significant amount of energies in the detector and need to be suppressed for physics analysis in \Chapter{chap:DoubleHiggs}.
 
 Two Marlin process has been developed to suppress these background, a track selector and a PFO selector\cite{Marshall:2012ry}.
 
 The track selector aims to remove poor quality and fake tracks. It places simple quality cut and a simple time of arrival cut. If the arrival time of the track at the front of the \ECAL, using the helical fit, differs more than 50\,ns from using a straight line fit, the track will be rejected.
 
-The PFO selector utilise the high spatial resolution from the high granular calorimeter. PFOs from \ggHad often have low \pT and have a range of time. PFOs from physics processes have a range of \pT, and have time close to the brunch crossing time. These two distinctive features allow \ggHad background to be separated. The optimal suppression uses different \pT and time cuts for the central part of the detector, and for the forward part of the detector, and uses different cuts for photons, neutral PFOs and charged PFOs. Three configurations of these cuts are developed, namely ``loose'', ``normal'', and ``tight'' selections. As the name suggested, ``loose'' selection corresponds to a looser cut of \pT and time. The optimal configuration depends on the \sqrtS of the collision, and the physics process to study.
+The PFO selector utilise the high spatial resolution from the high granular calorimeter. PFOs from \ggHad often have low \pT and have a range of time. PFOs from physics processes have a range of \pT, and have time close to the brunch crossing time. These two distinctive features allow \ggHad background to be separated. The optimal suppression uses different \pT and time cuts for the central part of the detector, and for the forward part of the detector, and uses different cuts for photons, neutral PFOs and charged PFOs. Three configurations of these cuts are developed, namely ``loose'', ``normal'', and ``tight'' selections. As the name suggested, ``loose'' selection corresponds to a looser cut of \pT and time. The optimal configuration depends on the \sqrtS of the collision, and the physics process to study. \FIGURE{fig:pandoraEvtDisplayggHad} shows the effect of the suppression of the background with the tight \PFO selection.
 
-The background suppression is used in analysis described in \Chapter{chap:DoubleHiggs}
-TODO add efficiency table pandora
-TODO add timing pT cut and table of energies
 
-\section{\CLIC simulated particle masses} 
+
+\begin{figure}[tdbph]
+\centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{pandora/evtDisplayggHad1}
+    \caption{}
+    \label{fig:pandoraEvtDisplayggHad1}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{pandora/evtDisplayggHad2}
+    \caption{}
+    \label{fig:pandoraEvtDisplayggHad2}
+  \end{subfigure}
+\caption[Effect of the suppression of the background with the tight \PFO selection.]
+{Reconstructed particles for a time window of 10\,ns (100 \,ns in \HCAL barrel) in a simulated \HepProcess{\Pep\Pem \to \PHiggs\PHiggs \to \Ptop\APbottom\Pbottom\APtop} event in the \CLICILD dectro, with 60 bunch crossings of \ggHad background overlaid in \Figure{fig:pandoraEvtDisplayggHad1}. The effect of applying tight \PFO section cuts is shown in \Figure{fig:pandoraEvtDisplayggHad2}.  Figures taken from \cite{Marshall:2012ry}.}
+\label{fig:pandoraEvtDisplayggHad}
+\end{figure}
+
+
+\section{\CLIC simulated particle masses}
 
 \section{Reconstruction Processors}
 
@@ -373,7 +396,7 @@ Using a three-class example, A, B and C, "one v.s. one" scheme trains A against 
 
 TMVA multiclass implementation uses "one v.s. all" scheme. Multiclass is used in falvour tagging of jets, \Section{sec:theoryFalvourTagging}, and in the tau lepton final state separation study, \Section{}.
 
-\section{Event shape varaibles}
+\section{Event shape variables}
 
 % ATTN used in tau chapter
 
