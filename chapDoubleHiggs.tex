@@ -406,15 +406,15 @@ For the signal channel, \eeToHHbbWWHad, one Higgs boson decays to two \Pbottom q
 
 \subsection{Jet reconstruction optimisation}
 \label{sec:doubleHiggsJetOptimisation}
-A overview of the jet algorithms can be found in \Section{}. Longitudinal invariant, \kt, jet algorithm is chosen for the jet clustering. The free parameters for \kt algorithm is the $R$ parameter, which controls the radius of the jet. The other parameter to optimised is the choice of the PFO collection, which incorporates different level of timing and \pT cuts to reduce beam induce background (see \Section{}). 
+A overview of the jet algorithms can be found in \Section{}. Longitudinal invariant, \kt, jet algorithm is chosen for the jet clustering. The free parameters for \kt algorithm is the $R$ parameter, which controls the radius of the jet. The other parameter to optimised is the choice of the PFO collection, which incorporates different level of timing and \pT cuts to reduce beam induce background (see \Section{sec:pandoraggHad}).
 %Both parameters are optimised for \rootS{1.4} and \rootS{3}.
 
-The metric for optimising the $R$ parameter, and the \PFO collection, is the invariant mass and mass resolution of \PHiggs and \PW. With the signal events, jets will be paired to give physical bosons using cheated MC truth information (see \Section{}). 
+The metric for optimising the $R$ parameter, and the \PFO collection, is the invariant mass and mass resolution of \PHiggs and \PW. With the signal events, jets will be paired to give physical bosons using cheated MC truth information (see \Section{sec:pandoraMCtruthLink}).
 
 The sample for the optimisation is \eeToHH. The signal channel, hadronic decay of \eeToHHbbWWHad, is chosen using the MC truth information by  examining the decay chain of MC particles. The signal event is then processed through \kt jet algorithm  in 6-jet exclusive mode. The six jets are paired up using  MC truth information to the corresponding Higgs and \PW boson. Four invariant mass distributions are obtained: two Higgs masses, $m_{\Hbb}$, $m_{\HWW}$, and two \PW masses $m_{\PW}$, $m_{\W*}$. \W* indicates the off-mass-shell \PW boson, because when a Higgs decays into two \PW bosons, one \PW is off the mass shell, as the Higgs mass is less than the sum two \PW masses (see \Section{sec:theoryHiggsBoson}).
 
 \paragraph{Mass resolution fit}
-Three invariant mass resolutions are worth comparing for optimising jet reconstruction,  $m_{\Hbb}$, $m_{\HWW}$, and $m_{\PW}$. The optimal jet reconstruction should produce the a sharp mass peak around the particle's simulated mass (see \Section{}). An example of $m_{\Hbb}$ invariant mass distribution is shown in \Figure{fig:doubleHiggsFitMCMass}. To quantitatively access the mass distribution, a function is fitted. The basic fitting function is a gaussian function. Although the underlying mass distribution of particles like $m_{\PW}$ is a Breit–Wigner distribution, as the detector resolution is worse than the \PW width, the overall mass distribution, which is a convolution between a narrow \PW  Breit–Wigner distribution and  a wide gaussian distribution for the detector resolution, is gaussian like. The $m_{\Hbb}$  mass distribution is gaussian like, but with asymmetrical width. This is due to b quarks decaying to neutrinos, leading to a loss of detectable particles and loss of momentum. Therefore there are more events with lower invariant mass and thus asymmetrical width is obtained. As only the peak region of the mass distribution is Gaussian like, tail parameters are added to the fitting function in order to fit the whole range of the mass distribution. The fitting function takes the form of
+Three invariant mass resolutions are worth comparing for optimising jet reconstruction,  $m_{\Hbb}$, $m_{\HWW}$, and $m_{\PW}$. The optimal jet reconstruction should produce the a sharp mass peak around the particle's simulated mass (see \Section{sec:pandoraCLICsimMass}). An example of $m_{\Hbb}$ invariant mass distribution is shown in \Figure{fig:doubleHiggsFitMCMass}. To quantitatively access the mass distribution, a function is fitted. The basic fitting function is a gaussian function. Although the underlying mass distribution of particles like $m_{\PW}$ is a Breit–Wigner distribution, as the detector resolution is worse than the \PW width, the overall mass distribution, which is a convolution between a narrow \PW  Breit–Wigner distribution and  a wide gaussian distribution for the detector resolution, is gaussian like. The $m_{\Hbb}$  mass distribution is gaussian like, but with asymmetrical width. This is due to b quarks decaying to neutrinos, leading to a loss of detectable particles and loss of momentum. Therefore there are more events with lower invariant mass and thus asymmetrical width is obtained. As only the peak region of the mass distribution is Gaussian like, tail parameters are added to the fitting function in order to fit the whole range of the mass distribution. The fitting function takes the form of
 \begin{equation}
 f(m)=A e^{- \frac{(m - \mu)^2}{g}}
 \begin{cases}
@@ -893,6 +893,7 @@ The minimum number of events in a node &  0.25\% of the total events \\
 Boosting & adaptive boost \\
 learning rate of the adaptive boost & 0.5 \\
 metric for the optimal cuts & Gini Index \\
+bagging fraction & 0.5 \\
 Number of bins per variables & 40 \\
 End node output & x $\in [0,1]$ \\
 \hline \hline
@@ -1522,7 +1523,7 @@ The results for \rootS{1.4} and \rootS{3} analyses are summarised in \Table{tab:
   92\%, & \mbox{at \rootS{3}},
 \end{cases}
 \end{equation}
-where \rootS{3} result combines hadronic and semi-leptonic decay sub-channels. 
+where \rootS{3} result combines hadronic and semi-leptonic decay sub-channels.
 
 As stated in the beginning of the chapter, the double Higgs production cross section is sensitive to the Higgs triple self coupling $\lambda$. The relative uncertainty on the coupling can be related to the uncertainty on the coupling via:
 \begin{equation}
@@ -1647,4 +1648,4 @@ Since there are two couplings in this $\chi^2$ surface, the degree of freedom fo
 \frac{\Delta\gHHH}{\gHHH} \simeq 29\% \text{ for \gWWHH = $\gWWHH_{SM}$}
 \end{equation}
 
-The statistical precisions on \gWWHH and \gHHH are much better than that with \LHC, or high luminosity upgraded \LHC \cite{Contino:2010mh}. 
+The statistical precisions on \gWWHH and \gHHH are much better than that with \LHC, or high luminosity upgraded \LHC \cite{Contino:2010mh}.
