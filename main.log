@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.4.28)  12 APR 2017 16:24
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.4.28)  13 APR 2017 17:45
 entering extended mode
 **main.tex
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.tex"
@@ -954,12 +954,12 @@ LaTeX Info: Redefining \Re on input line 180.
 LaTeX Info: Redefining \d on input line 241.
 LaTeX Info: Redefining \exclude on input line 248.
 )
-LaTeX Info: Redefining \mymath on input line 40.
-LaTeX Info: Redefining \Table on input line 62.
-LaTeX Info: Redefining \Section on input line 64.
-LaTeX Info: Redefining \Chapter on input line 66.
-LaTeX Info: Redefining \Figure on input line 68.
-LaTeX Info: Redefining \Equation on input line 70.
+LaTeX Info: Redefining \mymath on input line 42.
+LaTeX Info: Redefining \Table on input line 47.
+LaTeX Info: Redefining \Section on input line 49.
+LaTeX Info: Redefining \Chapter on input line 51.
+LaTeX Info: Redefining \Figure on input line 53.
+LaTeX Info: Redefining \Equation on input line 55.
 
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\abhep.sty"
 Package: abhep 2005/01/17
@@ -1067,14 +1067,14 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 Package: hepnames 2014/12/01 Pre-defined HEP particle symbols (version 2.0)
 )
 \widthOne=\skip95
-LaTeX Info: Redefining \SM on input line 81.
-LaTeX Info: Redefining \QCD on input line 83.
-LaTeX Info: Redefining \decayPionShort on input line 113.
-LaTeX Info: Redefining \egamma on input line 148.
-LaTeX Info: Redefining \gammagamma on input line 149.
-LaTeX Info: Redefining \W* on input line 168.
-LaTeX Info: Redefining \CERN on input line 196.
-LaTeX Info: Redefining \IP on input line 221.
+LaTeX Info: Redefining \SM on input line 66.
+LaTeX Info: Redefining \QCD on input line 68.
+LaTeX Info: Redefining \decayPionShort on input line 102.
+LaTeX Info: Redefining \egamma on input line 137.
+LaTeX Info: Redefining \gammagamma on input line 138.
+LaTeX Info: Redefining \W* on input line 157.
+LaTeX Info: Redefining \CERN on input line 185.
+LaTeX Info: Redefining \IP on input line 210.
 )
 ("D:\MiKTeX 2.9\tex\latex\csquotes\csquotes.sty"
 Package: csquotes 2016/12/28 v5.2 context-sensitive quotations (JAW)
@@ -1363,22 +1363,26 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 48
 .
 
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.toc" [11]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+
 Underfull \vbox (badness 1701) has occurred while \output is active []
 
  [12]
 [13]
 Overfull \hbox (2.03773pt too wide) detected at line 134
- []\T1/lmr/bx/n/12 139
- []
-
-
-Overfull \hbox (2.03773pt too wide) detected at line 135
  []\T1/lmr/bx/n/12 141
  []
 
 
+Overfull \hbox (2.03773pt too wide) detected at line 135
+ []\T1/lmr/bx/n/12 147
+ []
+
+
 Overfull \hbox (2.03773pt too wide) detected at line 136
- []\T1/lmr/bx/n/12 145
+ []\T1/lmr/bx/n/12 151
  []
 
 )
@@ -1398,29 +1402,9 @@ chapter 1.
 ]) ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapTheory.tex"
 [2]
 chapter 2.
-
-LaTeX Warning: Citation `Aad:2012tfa' on page 3 undefined on input line 11.
-
-
-LaTeX Warning: Citation `Agashe:2014kda' on page 3 undefined on input line 11.
-
-
-LaTeX Warning: Citation `Thomson:2013zua' on page 3 undefined on input line 11.
-
-
-
-LaTeX Warning: Citation `Tong:QFT' on page 3 undefined on input line 11.
-
-
-LaTeX Warning: Citation `Gripaios:GFT' on page 3 undefined on input line 11.
-
 [3
 
 ]
-
-LaTeX Warning: Citation `ALEPH:2005ab' on page 4 undefined on input line 17.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
@@ -1428,11 +1412,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 3590) has occurred while \output is active []
 
  [6]
-
-LaTeX Warning: Citation `Weinberg:1967tq' on page 7 undefined on input line 109
-.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
@@ -1452,7 +1431,7 @@ converted-to.pdf theory/HiggsDecayWidth.eps>
 (epstopdf)             \includegraphics on input line 179.
 Package epstopdf Info: Output file is already uptodate.
 
-<theory/HiggsDecayWidth-eps-converted-to.pdf, id=741, 441.65pt x 337.26pt>
+<theory/HiggsDecayWidth-eps-converted-to.pdf, id=752, 441.65pt x 337.26pt>
 File: theory/HiggsDecayWidth-eps-converted-to.pdf Graphic file (type pdf)
 
 <use theory/HiggsDecayWidth-eps-converted-to.pdf>
@@ -1473,76 +1452,22 @@ eps-converted-to.pdf theory/HiggsBranchingRatio.eps>
 (epstopdf)             \includegraphics on input line 184.
 Package epstopdf Info: Output file is already uptodate.
 
-<theory/HiggsBranchingRatio-eps-converted-to.pdf, id=742, 439.6425pt x 337.26pt
+<theory/HiggsBranchingRatio-eps-converted-to.pdf, id=753, 439.6425pt x 337.26pt
 >
 File: theory/HiggsBranchingRatio-eps-converted-to.pdf Graphic file (type pdf)
  <use theory/HiggsBranchingRatio-eps-converted-to.pdf>
 Package pdftex.def Info: theory/HiggsBranchingRatio-eps-converted-to.pdf used o
 n input line 184.
 (pdftex.def)             Requested size: 201.63182pt x 154.67317pt.
-
-
-LaTeX Warning: Citation `Rainwater:2007cp' on page 10 undefined on input line 1
-89.
-
-
-LaTeX Warning: Citation `Rainwater:2007cp' on page 10 undefined on input line 1
-89.
-
-
-LaTeX Warning: Citation `Kaplan:1983fs' on page 10 undefined on input line 197.
-
-
-
-LaTeX Warning: Citation `Goldberger:2008zz' on page 10 undefined on input line 
-197.
-
-[10 <E:/user/my documents/University/2016-2017/boruoXuThesis/theory/HiggsDecayW
-idth-eps-converted-to.pdf> <E:/user/my documents/University/2016-2017/boruoXuTh
-esis/theory/HiggsBranchingRatio-eps-converted-to.pdf>]
-
-LaTeX Warning: Citation `Giudice:2007fh' on page 11 undefined on input line 199
-.
-
-
-LaTeX Warning: Citation `Contino:2010mh' on page 11 undefined on input line 199
-.
-
-
-LaTeX Warning: Citation `Contino:2013gna' on page 11 undefined on input line 19
-9.
-
-
-LaTeX Warning: Citation `Contino:2010mh' on page 11 undefined on input line 199
-.
-
-
-LaTeX Warning: Citation `Barger:2003rs' on page 11 undefined on input line 199.
-
-
-
-LaTeX Warning: Citation `Contino:2010mh' on page 11 undefined on input line 201
-.
-
-
-LaTeX Warning: Citation `Contino:2013gna' on page 11 undefined on input line 20
-1.
-
-
-LaTeX Warning: Citation `Contino:2013gna' on page 11 undefined on input line 20
-1.
-
-
+ [10 <E:/user/my documents/University/2016-2017/boruoXuThesis/theory/HiggsDecay
+Width-eps-converted-to.pdf> <E:/user/my documents/University/2016-2017/boruoXuT
+hesis/theory/HiggsBranchingRatio-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
 
 LaTeX Warning: Reference `theoryMhhHtDistribution' on page 12 undefined on inpu
 t line 227.
-
-
-LaTeX Warning: Citation `Contino:2013gna' on page 12 undefined on input line 22
-7.
 
 Package epstopdf Info: Source file: <theory/MhhHtDistribution.eps>
 (epstopdf)                    date: 2017-03-30 19:50:28
@@ -1556,22 +1481,13 @@ s-converted-to.pdf theory/MhhHtDistribution.eps>
 (epstopdf)             \includegraphics on input line 231.
 Package epstopdf Info: Output file is already uptodate.
 
-<theory/MhhHtDistribution-eps-converted-to.pdf, id=768, 479.7925pt x 323.2075pt
+<theory/MhhHtDistribution-eps-converted-to.pdf, id=798, 479.7925pt x 323.2075pt
 >
 File: theory/MhhHtDistribution-eps-converted-to.pdf Graphic file (type pdf)
  <use theory/MhhHtDistribution-eps-converted-to.pdf>
 Package pdftex.def Info: theory/MhhHtDistribution-eps-converted-to.pdf used on 
 input line 231.
 (pdftex.def)             Requested size: 448.07378pt x 301.84239pt.
-
-
-LaTeX Warning: Citation `Contino:2013gna' on page 12 undefined on input line 23
-3.
-
-
-LaTeX Warning: Citation `Contino:2013gna' on page 12 undefined on input line 23
-3.
-
 Package epstopdf Info: Source file: <theory/HiggsCLICcrossSection.eps>
 (epstopdf)                    date: 2017-03-30 19:40:26
 (epstopdf)                    size: 1015186 bytes
@@ -1584,7 +1500,7 @@ n-eps-converted-to.pdf theory/HiggsCLICcrossSection.eps>
 (epstopdf)             \includegraphics on input line 241.
 Package epstopdf Info: Output file is already uptodate.
 
-<theory/HiggsCLICcrossSection-eps-converted-to.pdf, id=772, 569.12625pt x 553.0
+<theory/HiggsCLICcrossSection-eps-converted-to.pdf, id=804, 569.12625pt x 553.0
 6625pt>
 File: theory/HiggsCLICcrossSection-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -1592,15 +1508,6 @@ File: theory/HiggsCLICcrossSection-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: theory/HiggsCLICcrossSection-eps-converted-to.pdf used
  on input line 241.
 (pdftex.def)             Requested size: 201.63182pt x 195.93903pt.
-
-
-LaTeX Warning: Citation `Abramowicz:2016zbo' on page 12 undefined on input line
- 244.
-
-
-LaTeX Warning: Citation `Abramowicz:2016zbo' on page 12 undefined on input line
- 244.
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1611,29 +1518,6 @@ bution-eps-converted-to.pdf>])
 [14 <E:/user/my documents/University/2016-2017/boruoXuThesis/theory/HiggsCLICcr
 ossSection-eps-converted-to.pdf>]
 chapter 3.
-
-LaTeX Warning: Citation `Aad:2012tfa' on page 15 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Chatrchyan:2012ufa' on page 15 undefined on input line
- 8.
-
-
-LaTeX Warning: Citation `Brau:2007zza' on page 15 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 15 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Brau:2007zza' on page 15 undefined on input line 12.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 15 undefined on input line 12.
-
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 15 undefined on input line 12.
-
 Package epstopdf Info: Source file: <ILD/ILC2.eps>
 (epstopdf)                    date: 2017-03-28 09:44:02
 (epstopdf)                    size: 3159002 bytes
@@ -1644,62 +1528,23 @@ Package epstopdf Info: Source file: <ILD/ILC2.eps>
 df ILD/ILC2.eps>
 (epstopdf)             \includegraphics on input line 16.
 Package epstopdf Info: Output file is already uptodate.
-<ILD/ILC2-eps-converted-to.pdf, id=855, 380.42125pt x 202.7575pt>
+<ILD/ILC2-eps-converted-to.pdf, id=897, 380.42125pt x 202.7575pt>
 File: ILD/ILC2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ILD/ILC2-eps-converted-to.pdf>
 Package pdftex.def Info: ILD/ILC2-eps-converted-to.pdf used on input line 16.
 (pdftex.def)             Requested size: 201.63182pt x 107.46715pt.
+ [15
 
-
-LaTeX Warning: Citation `Baer:2013cma' on page 15 undefined on input line 18.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 15 undefined on input line 18.
-
-[15
-
-] <ILD/CLIC.jpg, id=863, 409.7709pt x 219.7008pt>
+]
+<ILD/CLIC.jpg, id=911, 409.7709pt x 219.7008pt>
 File: ILD/CLIC.jpg Graphic file (type jpg)
  <use ILD/CLIC.jpg>
 Package pdftex.def Info: ILD/CLIC.jpg used on input line 60.
 (pdftex.def)             Requested size: 201.63182pt x 108.10689pt.
-
-
-LaTeX Warning: Citation `Aicheler:2012bya' on page 16 undefined on input line 6
-2.
-
-
-LaTeX Warning: Citation `Aicheler:2012bya' on page 16 undefined on input line 6
-2.
-
-[16 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILC2-eps-conve
-rted-to.pdf> <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/CLIC.
-jpg>]
-
-LaTeX Warning: Citation `Baer:2013cma' on page 17 undefined on input line 84.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 17 undefined on input line 84.
-
-
-
-LaTeX Warning: Citation `Thomson:2009rp' on page 17 undefined on input line 88.
-
-
-
-LaTeX Warning: Citation `Marshall:2012ry' on page 17 undefined on input line 88
-.
-
-
-LaTeX Warning: Citation `Knowles:1997dk' on page 17 undefined on input line 90.
-
-
-
-LaTeX Warning: Citation `green1998electron' on page 17 undefined on input line 
-90.
-
-
+ [16 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILC2-eps-conv
+erted-to.pdf> <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/CLIC
+.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17]
@@ -1714,32 +1559,17 @@ ed-to.pdf ILD/jetCLIC_ILD.eps>
 (epstopdf)             \includegraphics on input line 100.
 Package epstopdf Info: Output file is already uptodate.
 
-<ILD/jetCLIC_ILD-eps-converted-to.pdf, id=886, 239.89626pt x 209.78375pt>
+<ILD/jetCLIC_ILD-eps-converted-to.pdf, id=947, 239.89626pt x 209.78375pt>
 File: ILD/jetCLIC_ILD-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ILD/jetCLIC_ILD-eps-converted-to.pdf>
 Package pdftex.def Info: ILD/jetCLIC_ILD-eps-converted-to.pdf used on input lin
 e 100.
 (pdftex.def)             Requested size: 201.63182pt x 176.32596pt.
-
-
-LaTeX Warning: Citation `Marshall:2012ry' on page 18 undefined on input line 10
-2.
-
-
-LaTeX Warning: Citation `Marshall:2012ry' on page 18 undefined on input line 10
-2.
-
-[18 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/jetCLIC_ILD-ep
-s-converted-to.pdf>]
-
-LaTeX Warning: Citation `Baer:2013cma' on page 19 undefined on input line 111.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 19 undefined on input line 111
-.
-
+ [18 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/jetCLIC_ILD-e
+ps-converted-to.pdf>]
 LaTeX Font Info:    Try loading font information for OMS+lmr on input line 113.
+
 
 ("D:\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1750,35 +1580,20 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-
-LaTeX Warning: Citation `Brau:2007zza' on page 20 undefined on input line 132.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 21 undefined on input line 134
-.
-
-<ILD/ILDview.jpg, id=918, 2389.92876pt x 1690.315pt>
+<ILD/ILDview.jpg, id=985, 2389.92876pt x 1690.315pt>
 File: ILD/ILDview.jpg Graphic file (type jpg)
  <use ILD/ILDview.jpg>
 Package pdftex.def Info: ILD/ILDview.jpg used on input line 141.
 (pdftex.def)             Requested size: 201.63182pt x 142.60449pt.
 
-<ILD/SiD.jpg, id=919, 264.7178pt x 183.73729pt>
+<ILD/SiD.jpg, id=986, 264.7178pt x 183.73729pt>
 File: ILD/SiD.jpg Graphic file (type jpg)
  <use ILD/SiD.jpg>
 Package pdftex.def Info: ILD/SiD.jpg used on input line 146.
 (pdftex.def)             Requested size: 201.63182pt x 139.95578pt.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 21 undefined on input line 151.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 21 undefined on input line 151.
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1795,45 +1610,27 @@ to.pdf ILD/Tracking.eps>
 (epstopdf)             \includegraphics on input line 243.
 Package epstopdf Info: Output file is already uptodate.
 
-<ILD/Tracking-eps-converted-to.pdf, id=931, 168.63pt x 147.55125pt>
+<ILD/Tracking-eps-converted-to.pdf, id=1000, 168.63pt x 147.55125pt>
 File: ILD/Tracking-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ILD/Tracking-eps-converted-to.pdf>
 Package pdftex.def Info: ILD/Tracking-eps-converted-to.pdf used on input line 2
 43.
 (pdftex.def)             Requested size: 201.63182pt x 176.43243pt.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 22 undefined on input line 245.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 22 undefined on input line 245.
-
-[22] <ILD/ILD_ECAL.jpg, id=938, 173.64333pt x 131.25795pt>
+ [22]
+<ILD/ILD_ECAL.jpg, id=1009, 173.64333pt x 131.25795pt>
 File: ILD/ILD_ECAL.jpg Graphic file (type jpg)
-
-<use ILD/ILD_ECAL.jpg>
+ <use ILD/ILD_ECAL.jpg>
 Package pdftex.def Info: ILD/ILD_ECAL.jpg used on input line 264.
 (pdftex.def)             Requested size: 201.63182pt x 152.41553pt.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 23 undefined on input line 266.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 23 undefined on input line 266.
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/Tracking-eps-
-converted-to.pdf>]
-
-LaTeX Warning: Citation `Collaboration:2011jka' on page 24 undefined on input l
-ine 330.
-
-<ILD/ILD_AHCAL.jpg, id=952, 257.07722pt x 164.32193pt>
+converted-to.pdf>] <ILD/ILD_AHCAL.jpg, id=1026, 257.07722pt x 164.32193pt>
 File: ILD/ILD_AHCAL.jpg Graphic file (type jpg)
- <use ILD/ILD_AHCAL.jpg>
+
+<use ILD/ILD_AHCAL.jpg>
 Package pdftex.def Info: ILD/ILD_AHCAL.jpg used on input line 342.
 (pdftex.def)             Requested size: 201.63182pt x 128.88768pt.
 Package epstopdf Info: Source file: <ILD/HCALoptimise.eps>
@@ -1847,7 +1644,7 @@ ted-to.pdf ILD/HCALoptimise.eps>
 (epstopdf)             \includegraphics on input line 347.
 Package epstopdf Info: Output file is already uptodate.
 
-<ILD/HCALoptimise-eps-converted-to.pdf, id=953, 154.5775pt x 147.55125pt>
+<ILD/HCALoptimise-eps-converted-to.pdf, id=1027, 154.5775pt x 147.55125pt>
 File: ILD/HCALoptimise-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ILD/HCALoptimise-eps-converted-to.pdf>
@@ -1855,73 +1652,33 @@ Package pdftex.def Info: ILD/HCALoptimise-eps-converted-to.pdf used on input li
 ne 347.
 (pdftex.def)             Requested size: 201.63182pt x 192.483pt.
 
-
-LaTeX Warning: Citation `Baer:2013cma' on page 24 undefined on input line 352.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 24 undefined on input line 352.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILD_ECAL.jpg>
 ]
-
-LaTeX Warning: Citation `Parker:21354' on page 25 undefined on input line 416.
-
-
-LaTeX Warning: Citation `CALICE:2012aa' on page 25 undefined on input line 416.
-
-
-<ILD/ILD_Muon.jpg, id=964, 320.5343pt x 227.66922pt>
+<ILD/ILD_Muon.jpg, id=1043, 320.5343pt x 227.66922pt>
 File: ILD/ILD_Muon.jpg Graphic file (type jpg)
  <use ILD/ILD_Muon.jpg>
 Package pdftex.def Info: ILD/ILD_Muon.jpg used on input line 422.
 (pdftex.def)             Requested size: 201.63182pt x 143.2135pt.
 
-
-LaTeX Warning: Citation `Baer:2013cma' on page 25 undefined on input line 424.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 25 undefined on input line 424.
-
-
-LaTeX Warning: Citation `sailer2012radiation' on page 25 undefined on input lin
-e 474.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILD_AHCAL.jpg
 > <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/HCALoptimise-eps
--converted-to.pdf>] <ILD/ILD_forward.jpg, id=979, 187.50464pt x 138.82794pt>
+-converted-to.pdf>] <ILD/ILD_forward.jpg, id=1063, 187.50464pt x 138.82794pt>
 File: ILD/ILD_forward.jpg Graphic file (type jpg)
 
 <use ILD/ILD_forward.jpg>
 Package pdftex.def Info: ILD/ILD_forward.jpg used on input line 479.
 (pdftex.def)             Requested size: 201.63182pt x 149.29007pt.
 
-
-LaTeX Warning: Citation `Baer:2013cma' on page 26 undefined on input line 481.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 26 undefined on input line 481.
-
-
 Underfull \vbox (badness 6995) has occurred while \output is active []
 
  [26 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILD_Muon.jpg>
  <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILD_forward.jpg>]
 
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 27 undefined on input line 571
-.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 27 undefined on input line 571
-.
-
-<ILD/ILD.jpg, id=987, 273.20566pt x 247.30544pt>
+<ILD/ILD.jpg, id=1076, 273.20566pt x 247.30544pt>
 File: ILD/ILD.jpg Graphic file (type jpg)
  <use ILD/ILD.jpg>
 Package pdftex.def Info: ILD/ILD.jpg used on input line 578.
@@ -1937,125 +1694,29 @@ to.pdf ILD/CLIC_ILD.eps>
 (epstopdf)             \includegraphics on input line 583.
 Package epstopdf Info: Output file is already uptodate.
 
-<ILD/CLIC_ILD-eps-converted-to.pdf, id=988, 371.3875pt x 427.5975pt>
+<ILD/CLIC_ILD-eps-converted-to.pdf, id=1077, 371.3875pt x 427.5975pt>
 File: ILD/CLIC_ILD-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ILD/CLIC_ILD-eps-converted-to.pdf>
 Package pdftex.def Info: ILD/CLIC_ILD-eps-converted-to.pdf used on input line 5
 83.
 (pdftex.def)             Requested size: 156.82855pt x 180.5684pt.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 27 undefined on input line 588.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 27 undefined on input line 588
-.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 27 undefined on input line 588.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 27 undefined on input line 588
-.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 27 undefined on input line 598
-.
-
-[27]
+ [27]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [28 <E:/user/my documents/University/2016-2017/boruoXuThesis/ILD/ILD.jpg> <E:/
 user/my documents/University/2016-2017/boruoXuThesis/ILD/CLIC_ILD-eps-converted
--to.pdf>]
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 29 undefined on input line 612
-.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 29 undefined on input line 634
-.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 29 undefined on input line 634
-.
-
-) ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapPandora.tex"
+-to.pdf>])
+("E:\user\my documents\University\2016-2017\boruoXuThesis\chapPandora.tex"
 [29] [30
 
 ]
 chapter 4.
 
-LaTeX Warning: Citation `whizard' on page 31 undefined on input line 16.
-
-
-LaTeX Warning: Citation `Moretti:2001zz' on page 31 undefined on input line 16.
-
-
-
-LaTeX Warning: Citation `Sjostrand:1995iq' on page 31 undefined on input line 1
-6.
-
-
-LaTeX Warning: Citation `Alexander:1995bk' on page 31 undefined on input line 1
-6.
-
-
-LaTeX Warning: Citation `Jadach:1993hs' on page 31 undefined on input line 16.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31]
-
-LaTeX Warning: Citation `Agostinelli:2002hh' on page 32 undefined on input line
- 20.
-
-
-LaTeX Warning: Citation `MoradeFreitas:2002kj' on page 32 undefined on input li
-ne 20.
-
-
-LaTeX Warning: Citation `Gaede:2006pj' on page 32 undefined on input line 24.
-
-
-LaTeX Warning: Citation `Thomson:2009rp' on page 32 undefined on input line 24.
-
-
-
-LaTeX Warning: Citation `Marshall:2012ry' on page 32 undefined on input line 24
-.
-
-
-LaTeX Warning: Citation `Brau:2007zza' on page 32 undefined on input line 24.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 32 undefined on input line 24.
-
-
 [32]
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 33 undefined on input line 31.
-
-
-
-LaTeX Warning: Citation `Marshall:2015rfa' on page 33 undefined on input line 3
-1.
-
-
-LaTeX Warning: Citation `Thomson:2009rp' on page 33 undefined on input line 33.
-
-
-
-LaTeX Warning: Citation `Marshall:2012ry' on page 33 undefined on input line 33
-.
-
-
-LaTeX Warning: Citation `Marshall:2015rfa' on page 33 undefined on input line 3
-3.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33]
@@ -2068,25 +1729,16 @@ f>
 (epstopdf)                    size: 100240 bytes
 (epstopdf)             Command: <epstopdf --outfile=pandora/coneClustering-eps-
 converted-to.pdf pandora/coneClustering.eps>
-(epstopdf)             \includegraphics on input line 60.
+(epstopdf)             \includegraphics on input line 59.
 Package epstopdf Info: Output file is already uptodate.
 
-<pandora/coneClustering-eps-converted-to.pdf, id=1040, 256.96pt x 118.4425pt>
+<pandora/coneClustering-eps-converted-to.pdf, id=1163, 256.96pt x 118.4425pt>
 File: pandora/coneClustering-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pandora/coneClustering-eps-converted-to.pdf>
 Package pdftex.def Info: pandora/coneClustering-eps-converted-to.pdf used on in
-put line 60.
+put line 59.
 (pdftex.def)             Requested size: 224.03688pt x 103.26823pt.
-
-
-LaTeX Warning: Citation `Marshall:pandoraLC' on page 34 undefined on input line
- 61.
-
-
-LaTeX Warning: Citation `Marshall:pandoraLC' on page 34 undefined on input line
- 61.
-
 Package epstopdf Info: Source file: <pandora/coneClustering2.eps>
 (epstopdf)                    date: 2017-04-11 17:03:54
 (epstopdf)                    size: 1007235 bytes
@@ -2096,27 +1748,18 @@ df>
 (epstopdf)                    size: 148203 bytes
 (epstopdf)             Command: <epstopdf --outfile=pandora/coneClustering2-eps
 -converted-to.pdf pandora/coneClustering2.eps>
-(epstopdf)             \includegraphics on input line 70.
+(epstopdf)             \includegraphics on input line 69.
 Package epstopdf Info: Output file is already uptodate.
 
-<pandora/coneClustering2-eps-converted-to.pdf, id=1043, 421.575pt x 389.455pt>
+<pandora/coneClustering2-eps-converted-to.pdf, id=1168, 421.575pt x 389.455pt>
 File: pandora/coneClustering2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pandora/coneClustering2-eps-converted-to.pdf>
 Package pdftex.def Info: pandora/coneClustering2-eps-converted-to.pdf used on i
-nput line 70.
+nput line 69.
 (pdftex.def)             Requested size: 224.03688pt x 206.96877pt.
-
-
-LaTeX Warning: Citation `Marshall:pandoraLC' on page 34 undefined on input line
- 71.
-
-
-LaTeX Warning: Citation `Marshall:pandoraLC' on page 34 undefined on input line
- 71.
-
-[34 <E:/user/my documents/University/2016-2017/boruoXuThesis/pandora/coneCluste
-ring-eps-converted-to.pdf>]
+ [34 <E:/user/my documents/University/2016-2017/boruoXuThesis/pandora/coneClust
+ering-eps-converted-to.pdf>]
 Underfull \vbox (badness 2772) has occurred while \output is active []
 
  [35 <E:/user/my documents/University/2016-2017/boruoXuThesis/pandora/coneClust
@@ -2129,15 +1772,15 @@ Package epstopdf Info: Source file: <pandora/loopTrack.eps>
 (epstopdf)                    size: 110183 bytes
 (epstopdf)             Command: <epstopdf --outfile=pandora/loopTrack-eps-conve
 rted-to.pdf pandora/loopTrack.eps>
-(epstopdf)             \includegraphics on input line 94.
+(epstopdf)             \includegraphics on input line 93.
 Package epstopdf Info: Output file is already uptodate.
 
-<pandora/loopTrack-eps-converted-to.pdf, id=1083, 187.70125pt x 135.50626pt>
+<pandora/loopTrack-eps-converted-to.pdf, id=1211, 187.70125pt x 135.50626pt>
 File: pandora/loopTrack-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pandora/loopTrack-eps-converted-to.pdf>
 Package pdftex.def Info: pandora/loopTrack-eps-converted-to.pdf used on input l
-ine 94.
+ine 93.
 (pdftex.def)             Requested size: 134.4235pt x 97.04956pt.
 Package epstopdf Info: Source file: <pandora/backScattered.eps>
 (epstopdf)                    date: 2017-04-11 17:08:30
@@ -2148,14 +1791,14 @@ Package epstopdf Info: Source file: <pandora/backScattered.eps>
 (epstopdf)                    size: 112443 bytes
 (epstopdf)             Command: <epstopdf --outfile=pandora/backScattered-eps-c
 onverted-to.pdf pandora/backScattered.eps>
-(epstopdf)             \includegraphics on input line 99.
+(epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
 
-<pandora/backScattered-eps-converted-to.pdf, id=1084, 123.46124pt x 158.5925pt>
+<pandora/backScattered-eps-converted-to.pdf, id=1212, 123.46124pt x 158.5925pt>
 File: pandora/backScattered-eps-converted-to.pdf Graphic file (type pdf)
 <use pandora/backScattered-eps-converted-to.pdf>
 Package pdftex.def Info: pandora/backScattered-eps-converted-to.pdf used on inp
-ut line 99.
+ut line 98.
 (pdftex.def)             Requested size: 134.4235pt x 172.68329pt.
 Package epstopdf Info: Source file: <pandora/coneAsso.eps>
 (epstopdf)                    date: 2017-04-11 17:09:42
@@ -2165,25 +1808,16 @@ Package epstopdf Info: Source file: <pandora/coneAsso.eps>
 (epstopdf)                    size: 112602 bytes
 (epstopdf)             Command: <epstopdf --outfile=pandora/coneAsso-eps-conver
 ted-to.pdf pandora/coneAsso.eps>
-(epstopdf)             \includegraphics on input line 104.
+(epstopdf)             \includegraphics on input line 103.
 Package epstopdf Info: Output file is already uptodate.
 
-<pandora/coneAsso-eps-converted-to.pdf, id=1085, 127.47626pt x 184.69pt>
+<pandora/coneAsso-eps-converted-to.pdf, id=1213, 127.47626pt x 184.69pt>
 File: pandora/coneAsso-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pandora/coneAsso-eps-converted-to.pdf>
 Package pdftex.def Info: pandora/coneAsso-eps-converted-to.pdf used on input li
-ne 104.
+ne 103.
 (pdftex.def)             Requested size: 134.4235pt x 194.76437pt.
-
-
-LaTeX Warning: Citation `Marshall:pandoraLC' on page 36 undefined on input line
- 109.
-
-
-LaTeX Warning: Citation `Marshall:pandoraLC' on page 36 undefined on input line
- 109.
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2199,89 +1833,37 @@ Package epstopdf Info: Source file: <pandora/recluster.eps>
 (epstopdf)                    size: 104821 bytes
 (epstopdf)             Command: <epstopdf --outfile=pandora/recluster-eps-conve
 rted-to.pdf pandora/recluster.eps>
-(epstopdf)             \includegraphics on input line 125.
+(epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
 
-<pandora/recluster-eps-converted-to.pdf, id=1131, 284.06125pt x 152.57pt>
+<pandora/recluster-eps-converted-to.pdf, id=1261, 284.06125pt x 152.57pt>
 File: pandora/recluster-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pandora/recluster-eps-converted-to.pdf>
 Package pdftex.def Info: pandora/recluster-eps-converted-to.pdf used on input l
-ine 125.
+ine 124.
 (pdftex.def)             Requested size: 268.847pt x 144.41222pt.
-
-
-LaTeX Warning: Citation `Marshall:pandoraLC' on page 37 undefined on input line
- 127.
-
-
-LaTeX Warning: Citation `Marshall:pandoraLC' on page 37 undefined on input line
- 127.
-
 
 Underfull \vbox (badness 4505) has occurred while \output is active []
 
  [37 <E:/user/my documents/University/2016-2017/boruoXuThesis/pandora/recluster
 -eps-converted-to.pdf>]
-
-LaTeX Warning: Citation `Sailer:lumi' on page 38 undefined on input line 162.
-
-
-LaTeX Warning: Citation `Schulte:1999tx' on page 38 undefined on input line 162
-.
-
-
 Underfull \vbox (badness 6094) has occurred while \output is active []
 
  [38]
-
-LaTeX Warning: Citation `Sailer:lumi' on page 39 undefined on input line 179.
-
-
-LaTeX Warning: Citation `Sailer:lumi' on page 39 undefined on input line 179.
-
-
-LaTeX Warning: Citation `Barklow:1443518' on page 39 undefined on input line 18
-6.
-
-
-LaTeX Warning: Citation `Barklow:1443518' on page 39 undefined on input line 18
-6.
-
-
-LaTeX Warning: Citation `Marshall:2012ry' on page 39 undefined on input line 18
-8.
-
-[39] <pandora/evtDisplayggHad1.jpg, id=1178, 229.85875pt x 170.6375pt>
+[39] <pandora/evtDisplayggHad1.jpg, id=1320, 229.85875pt x 170.6375pt>
 File: pandora/evtDisplayggHad1.jpg Graphic file (type jpg)
 
 <use pandora/evtDisplayggHad1.jpg>
-Package pdftex.def Info: pandora/evtDisplayggHad1.jpg used on input line 197.
+Package pdftex.def Info: pandora/evtDisplayggHad1.jpg used on input line 196.
 (pdftex.def)             Requested size: 201.63182pt x 149.69017pt.
 
-<pandora/evtDisplayggHad2.jpg, id=1179, 229.85875pt x 170.6375pt>
+<pandora/evtDisplayggHad2.jpg, id=1321, 229.85875pt x 170.6375pt>
 File: pandora/evtDisplayggHad2.jpg Graphic file (type jpg)
 
 <use pandora/evtDisplayggHad2.jpg>
-Package pdftex.def Info: pandora/evtDisplayggHad2.jpg used on input line 202.
+Package pdftex.def Info: pandora/evtDisplayggHad2.jpg used on input line 201.
 (pdftex.def)             Requested size: 201.63182pt x 149.69017pt.
-
-
-LaTeX Warning: Citation `Marshall:2012ry' on page 40 undefined on input line 20
-7.
-
-
-LaTeX Warning: Citation `Marshall:2012ry' on page 40 undefined on input line 20
-7.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 40 undefined on input line 232
-.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 40 undefined on input line 232
-.
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2289,131 +1871,40 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 yggHad1.jpg> <E:/user/my documents/University/2016-2017/boruoXuThesis/pandora/e
 vtDisplayggHad2.jpg>] [41]
 
-LaTeX Warning: Citation `Sterman:1977wj' on page 42 undefined on input line 253
-.
-
-
-LaTeX Warning: Citation `Moretti:1998qx' on page 42 undefined on input line 253
-.
-
-
-LaTeX Warning: Citation `Salam:2009jx' on page 42 undefined on input line 253.
-
-
-LaTeX Warning: Citation `Ali:2010tw' on page 42 undefined on input line 253.
-
-
 LaTeX Warning: Reference `sec:pandoraConeClustering' on page 42 undefined on in
-put line 255.
-
-
-LaTeX Warning: Citation `Cacciari:2011ma' on page 42 undefined on input line 26
-0.
-
-
-LaTeX Warning: Citation `Cacciari:2005hq' on page 42 undefined on input line 26
-0.
-
-
-LaTeX Warning: Citation `Cacciari:2011ma' on page 42 undefined on input line 26
-0.
-
-
-LaTeX Warning: Citation `Catani:1993hr' on page 42 undefined on input line 264.
-
-
-
-LaTeX Warning: Citation `Ellis:1993tq' on page 42 undefined on input line 264.
+put line 254.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [42]
 
-LaTeX Warning: Citation `Catani:1991hj' on page 43 undefined on input line 277.
-
-
-
-LaTeX Warning: Reference `' on page 43 undefined on input line 287.
-
-
-LaTeX Warning: Reference `' on page 43 undefined on input line 287.
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 43 undefined on input line 287
-.
-
-
-LaTeX Warning: Citation `LCD-Note-2010-006' on page 43 undefined on input line 
-287.
-
-
-LaTeX Warning: Citation `Boronat:2014hva' on page 43 undefined on input line 28
-9.
-
-
 LaTeX Warning: Reference `sec:doubleHiggsJetAlgorithm' on page 43 undefined on 
-input line 298.
+input line 294.
 
 [43]
 
-LaTeX Warning: Citation `Suehara:2015ura' on page 44 undefined on input line 30
-5.
+LaTeX Warning: Reference `' on page 44 undefined on input line 309.
 
 
-LaTeX Warning: Citation `Bailey:2009ui' on page 44 undefined on input line 305.
-
-
-
-LaTeX Warning: Citation `Abe:2010aa' on page 44 undefined on input line 305.
-
-
-LaTeX Warning: Citation `Aihara:2009ad' on page 44 undefined on input line 305.
-
-
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 44 undefined on input line 305
-.
-
-
-LaTeX Warning: Citation `Hocker:2007ht' on page 44 undefined on input line 313.
-
-
-
-LaTeX Warning: Reference `' on page 44 undefined on input line 313.
-
-
-LaTeX Warning: Reference `' on page 44 undefined on input line 313.
+LaTeX Warning: Reference `' on page 44 undefined on input line 309.
 
 [44]
-
-LaTeX Warning: Citation `PhysRevLett.39.1587' on page 45 undefined on input lin
-e 329.
-
-
-LaTeX Warning: Citation `PhysRevLett.35.1609' on page 45 undefined on input lin
-e 335.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [45]
 
-LaTeX Warning: Citation `Hocker:2007ht' on page 46 undefined on input line 386.
-
-
-
-LaTeX Warning: Reference `' on page 46 undefined on input line 392.
+LaTeX Warning: Reference `' on page 46 undefined on input line 388.
 
 
 Underfull \vbox (badness 6032) has occurred while \output is active []
 
  [46]
-<doubleHiggs/DepthOfTrees.pdf, id=1232, 569.12625pt x 480.79625pt>
+<doubleHiggs/DepthOfTrees.pdf, id=1417, 569.12625pt x 480.79625pt>
 File: doubleHiggs/DepthOfTrees.pdf Graphic file (type pdf)
 
 <use doubleHiggs/DepthOfTrees.pdf>
-Package pdftex.def Info: doubleHiggs/DepthOfTrees.pdf used on input line 401.
+Package pdftex.def Info: doubleHiggs/DepthOfTrees.pdf used on input line 397.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
  [47 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/Depth
 OfTrees.pdf, page is rotated 90 degrees>]
@@ -2427,34 +1918,24 @@ pdf>
 (epstopdf)                    size: 26517 bytes
 (epstopdf)             Command: <epstopdf --outfile=doubleHiggs/mva/BDTcomic-ep
 s-converted-to.pdf doubleHiggs/mva/BDTcomic.eps>
-(epstopdf)             \includegraphics on input line 459.
+(epstopdf)             \includegraphics on input line 455.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/mva/BDTcomic-eps-converted-to.pdf, id=1299, 347.2975pt x 368.37625
+<doubleHiggs/mva/BDTcomic-eps-converted-to.pdf, id=1484, 347.2975pt x 368.37625
 pt>
 File: doubleHiggs/mva/BDTcomic-eps-converted-to.pdf Graphic file (type pdf)
  <use doubleHiggs/mva/BDTcomic-eps-converted-to.pdf>
 Package pdftex.def Info: doubleHiggs/mva/BDTcomic-eps-converted-to.pdf used on 
-input line 459.
+input line 455.
 (pdftex.def)             Requested size: 201.63182pt x 213.87758pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [50 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/mva/B
 DTcomic-eps-converted-to.pdf>]
-
-LaTeX Warning: Citation `FREUND1997119' on page 51 undefined on input line 495.
-
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [51]
-
-LaTeX Warning: Citation `hastie2009elements' on page 52 undefined on input line
- 501.
-
-
 Underfull \vbox (badness 2564) has occurred while \output is active []
 
  [52]
@@ -2462,57 +1943,76 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [53]
 
-LaTeX Warning: Reference `sec:theoryFalvourTagging' on page 54 undefined on inp
-ut line 565.
-
-
-LaTeX Warning: Reference `' on page 54 undefined on input line 565.
+LaTeX Warning: Reference `' on page 54 undefined on input line 561.
 
 ) ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapPhoton.tex"
 [54]
 chapter 5.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [55
+[55
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [56]
-Package epstopdf Info: Source file: <photon/peakFinding.eps>
-(epstopdf)                    date: 2016-02-23 18:43:08
-(epstopdf)                    size: 291835 bytes
-(epstopdf)             Output file: <photon/peakFinding-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-02-23 18:49:20
-(epstopdf)                    size: 49125 bytes
-(epstopdf)             Command: <epstopdf --outfile=photon/peakFinding-eps-conv
-erted-to.pdf photon/peakFinding.eps>
-(epstopdf)             \includegraphics on input line 64.
+LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
+(Font)              using `T1/lmr/bx/n' instead on input line 50.
+
+[56]
+Package epstopdf Info: Source file: <photon/photonRecoFlow.eps>
+(epstopdf)                    date: 2017-04-13 17:41:45
+(epstopdf)                    size: 916798 bytes
+(epstopdf)             Output file: <photon/photonRecoFlow-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2017-04-13 16:48:32
+(epstopdf)                    size: 25893 bytes
+(epstopdf)             Command: <epstopdf --outfile=photon/photonRecoFlow-eps-c
+onverted-to.pdf photon/photonRecoFlow.eps>
+(epstopdf)             \includegraphics on input line 57.
+runsystem(epstopdf --outfile=photon/photonRecoFlow-eps-converted-to.pdf photon/
+photonRecoFlow.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <photon/photonRecoFlow-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2017-04-13 17:45:20
+(epstopdf)                    size: 25907 bytes.
+
+<photon/photonRecoFlow-eps-converted-to.pdf, id=1552, 409.53pt x 593.21625pt>
+File: photon/photonRecoFlow-eps-converted-to.pdf Graphic file (type pdf)
+
+<use photon/photonRecoFlow-eps-converted-to.pdf>
+Package pdftex.def Info: photon/photonRecoFlow-eps-converted-to.pdf used on inp
+ut line 57.
+(pdftex.def)             Requested size: 201.63182pt x 292.07246pt.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+ [57 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/photonReco
+Flow-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <photon/peakFindingMod.eps>
+(epstopdf)                    date: 2017-04-13 15:10:57
+(epstopdf)                    size: 1342838 bytes
+(epstopdf)             Output file: <photon/peakFindingMod-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2017-04-13 15:11:15
+(epstopdf)                    size: 77344 bytes
+(epstopdf)             Command: <epstopdf --outfile=photon/peakFindingMod-eps-c
+onverted-to.pdf photon/peakFindingMod.eps>
+(epstopdf)             \includegraphics on input line 84.
 Package epstopdf Info: Output file is already uptodate.
 
-<photon/peakFinding-eps-converted-to.pdf, id=1359, 569.12625pt x 311.1625pt>
-File: photon/peakFinding-eps-converted-to.pdf Graphic file (type pdf)
-
-<use photon/peakFinding-eps-converted-to.pdf>
-Package pdftex.def Info: photon/peakFinding-eps-converted-to.pdf used on input 
-line 64.
-(pdftex.def)             Requested size: 224.03688pt x 122.49239pt.
- [57]
-
-LaTeX Warning: Reference `' on page 58 undefined on input line 77.
-
-
-LaTeX Warning: Reference `' on page 58 undefined on input line 81.
-
-
-LaTeX Warning: Reference `' on page 58 undefined on input line 81.
-
-[58 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/peakFinding
--eps-converted-to.pdf>] [59] [60] [61]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<photon/peakFindingMod-eps-converted-to.pdf, id=1569, 503.8825pt x 265.99374pt>
+File: photon/peakFindingMod-eps-converted-to.pdf Graphic file (type pdf)
+<use photon/peakFindingMod-eps-converted-to.pdf>
+Package pdftex.def Info: photon/peakFindingMod-eps-converted-to.pdf used on inp
+ut line 84.
+(pdftex.def)             Requested size: 224.03688pt x 118.2674pt.
+ [58 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/peakFindin
+gMod-eps-converted-to.pdf>]
+[59] [60] [61]
+Underfull \vbox (badness 2253) has occurred while \output is active []
 
  [62]
+Underfull \vbox (badness 1092) has occurred while \output is active []
+
+ [63]
 Package epstopdf Info: Source file: <photon/allPhoton.eps>
 (epstopdf)                    date: 2016-02-23 18:19:18
 (epstopdf)                    size: 25496 bytes
@@ -2521,15 +2021,15 @@ Package epstopdf Info: Source file: <photon/allPhoton.eps>
 (epstopdf)                    size: 89126 bytes
 (epstopdf)             Command: <epstopdf --outfile=photon/allPhoton-eps-conver
 ted-to.pdf photon/allPhoton.eps>
-(epstopdf)             \includegraphics on input line 165.
+(epstopdf)             \includegraphics on input line 188.
 Package epstopdf Info: Output file is already uptodate.
 
-<photon/allPhoton-eps-converted-to.pdf, id=1403, 764.8575pt x 565.11125pt>
+<photon/allPhoton-eps-converted-to.pdf, id=1623, 764.8575pt x 565.11125pt>
 File: photon/allPhoton-eps-converted-to.pdf Graphic file (type pdf)
 
 <use photon/allPhoton-eps-converted-to.pdf>
 Package pdftex.def Info: photon/allPhoton-eps-converted-to.pdf used on input li
-ne 165.
+ne 188.
 (pdftex.def)             Requested size: 134.4235pt x 99.31847pt.
 Package epstopdf Info: Source file: <photon/big.eps>
 (epstopdf)                    date: 2016-02-23 18:19:18
@@ -2539,14 +2039,14 @@ Package epstopdf Info: Source file: <photon/big.eps>
 (epstopdf)                    size: 86906 bytes
 (epstopdf)             Command: <epstopdf --outfile=photon/big-eps-converted-to
 .pdf photon/big.eps>
-(epstopdf)             \includegraphics on input line 170.
+(epstopdf)             \includegraphics on input line 193.
 Package epstopdf Info: Output file is already uptodate.
 
-<photon/big-eps-converted-to.pdf, id=1404, 764.8575pt x 565.11125pt>
+<photon/big-eps-converted-to.pdf, id=1624, 764.8575pt x 565.11125pt>
 File: photon/big-eps-converted-to.pdf Graphic file (type pdf)
 
 <use photon/big-eps-converted-to.pdf>
-Package pdftex.def Info: photon/big-eps-converted-to.pdf used on input line 170
+Package pdftex.def Info: photon/big-eps-converted-to.pdf used on input line 193
 .
 (pdftex.def)             Requested size: 134.4235pt x 99.31847pt.
 Package epstopdf Info: Source file: <photon/small.eps>
@@ -2557,20 +2057,20 @@ Package epstopdf Info: Source file: <photon/small.eps>
 (epstopdf)                    size: 7149 bytes
 (epstopdf)             Command: <epstopdf --outfile=photon/small-eps-converted-
 to.pdf photon/small.eps>
-(epstopdf)             \includegraphics on input line 175.
+(epstopdf)             \includegraphics on input line 198.
 Package epstopdf Info: Output file is already uptodate.
 
-<photon/small-eps-converted-to.pdf, id=1405, 764.8575pt x 565.11125pt>
+<photon/small-eps-converted-to.pdf, id=1625, 764.8575pt x 565.11125pt>
 File: photon/small-eps-converted-to.pdf Graphic file (type pdf)
 
 <use photon/small-eps-converted-to.pdf>
 Package pdftex.def Info: photon/small-eps-converted-to.pdf used on input line 1
-75.
+98.
 (pdftex.def)             Requested size: 134.4235pt x 99.31847pt.
- [63 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/allPhoton-
+ [64 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/allPhoton-
 eps-converted-to.pdf> <E:/user/my documents/University/2016-2017/boruoXuThesis/
 photon/big-eps-converted-to.pdf> <E:/user/my documents/University/2016-2017/bor
-uoXuThesis/photon/small-eps-converted-to.pdf>] [64] [65]
+uoXuThesis/photon/small-eps-converted-to.pdf>] [65] [66]
 Package epstopdf Info: Source file: <photon/hcalfrag.eps>
 (epstopdf)                    date: 2016-02-23 18:19:18
 (epstopdf)                    size: 93077 bytes
@@ -2579,198 +2079,151 @@ Package epstopdf Info: Source file: <photon/hcalfrag.eps>
 (epstopdf)                    size: 374384 bytes
 (epstopdf)             Command: <epstopdf --outfile=photon/hcalfrag-eps-convert
 ed-to.pdf photon/hcalfrag.eps>
-(epstopdf)             \includegraphics on input line 251.
+(epstopdf)             \includegraphics on input line 274.
 Package epstopdf Info: Output file is already uptodate.
 
-<photon/hcalfrag-eps-converted-to.pdf, id=2395, 764.8575pt x 565.11125pt>
+<photon/hcalfrag-eps-converted-to.pdf, id=2613, 764.8575pt x 565.11125pt>
 File: photon/hcalfrag-eps-converted-to.pdf Graphic file (type pdf)
 
 <use photon/hcalfrag-eps-converted-to.pdf>
 Package pdftex.def Info: photon/hcalfrag-eps-converted-to.pdf used on input lin
-e 251.
+e 274.
 (pdftex.def)             Requested size: 224.03688pt x 165.52502pt.
-
-Underfull \vbox (badness 7907) has occurred while \output is active []
-
- [66 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/hcalfrag-e
+ [67 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/hcalfrag-e
 ps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [67]
+ [68]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [68]
+ [69]
 
-LaTeX Warning: Reference `fig:fig:photonSingleN_all' on page 69 undefined on in
-put line 347.
+LaTeX Warning: Reference `fig:fig:photonSingleN_all' on page 70 undefined on in
+put line 373.
 
 
 
 pdfTeX warning: pdflatex.exe (file E:/user/my documents/University/2016-2017/bo
 ruoXuThesis/photon/SingleN_pedit.pdf): PDF inclusion: found PDF version <1.6>, 
 but at most version <1.5> allowed
-<photon/SingleN_pedit.pdf, id=4412, 569.12625pt x 480.79625pt>
+<photon/SingleN_pedit.pdf, id=4631, 569.12625pt x 480.79625pt>
 File: photon/SingleN_pedit.pdf Graphic file (type pdf)
 
 <use photon/SingleN_pedit.pdf>
-Package pdftex.def Info: photon/SingleN_pedit.pdf used on input line 355.
+Package pdftex.def Info: photon/SingleN_pedit.pdf used on input line 381.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 
 pdfTeX warning: pdflatex.exe (file E:/user/my documents/University/2016-2017/bo
 ruoXuThesis/photon/SingleN_alledit.pdf): PDF inclusion: found PDF version <1.6>
 , but at most version <1.5> allowed
-<photon/SingleN_alledit.pdf, id=4413, 569.12625pt x 480.79625pt>
+<photon/SingleN_alledit.pdf, id=4632, 569.12625pt x 480.79625pt>
 File: photon/SingleN_alledit.pdf Graphic file (type pdf)
 
 <use photon/SingleN_alledit.pdf>
-Package pdftex.def Info: photon/SingleN_alledit.pdf used on input line 360.
+Package pdftex.def Info: photon/SingleN_alledit.pdf used on input line 386.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [69]
+ [70]
 
 pdfTeX warning: pdflatex.exe (file E:/user/my documents/University/2016-2017/bo
 ruoXuThesis/photon/DoubleCompareN_p3edit.pdf): PDF inclusion: found PDF version
  <1.6>, but at most version <1.5> allowed
-<photon/DoubleCompareN_p3edit.pdf, id=4428, 569.12625pt x 480.79625pt>
+<photon/DoubleCompareN_p3edit.pdf, id=4646, 569.12625pt x 480.79625pt>
 File: photon/DoubleCompareN_p3edit.pdf Graphic file (type pdf)
 
 <use photon/DoubleCompareN_p3edit.pdf>
-Package pdftex.def Info: photon/DoubleCompareN_p3edit.pdf used on input line 37
-7.
+Package pdftex.def Info: photon/DoubleCompareN_p3edit.pdf used on input line 40
+3.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 
 pdfTeX warning: pdflatex.exe (file E:/user/my documents/University/2016-2017/bo
 ruoXuThesis/photon/DoubleCompareN_all2edit.pdf): PDF inclusion: found PDF versi
 on <1.6>, but at most version <1.5> allowed
-<photon/DoubleCompareN_all2edit.pdf, id=4429, 569.12625pt x 480.79625pt>
+<photon/DoubleCompareN_all2edit.pdf, id=4647, 569.12625pt x 480.79625pt>
 File: photon/DoubleCompareN_all2edit.pdf Graphic file (type pdf)
 
 <use photon/DoubleCompareN_all2edit.pdf>
 Package pdftex.def Info: photon/DoubleCompareN_all2edit.pdf used on input line 
-382.
+408.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
- [70 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/SingleN_pe
-dit.pdf, page is rotated 90 degrees> <E:/user/my documents/University/2016-2017
-/boruoXuThesis/photon/SingleN_alledit.pdf, page is rotated 90 degrees> <E:/user
-/my documents/University/2016-2017/boruoXuThesis/photon/DoubleCompareN_p3edit.p
-df, page is rotated 90 degrees> <E:/user/my documents/University/2016-2017/boru
-oXuThesis/photon/DoubleCompareN_all2edit.pdf, page is rotated 90 degrees>]
-<photon/DoubleCompareFragEnergy.pdf, id=4483, 569.12625pt x 480.79625pt>
+
+<photon/DoubleCompareFragEnergy.pdf, id=4653, 569.12625pt x 480.79625pt>
 File: photon/DoubleCompareFragEnergy.pdf Graphic file (type pdf)
 
 <use photon/DoubleCompareFragEnergy.pdf>
 Package pdftex.def Info: photon/DoubleCompareFragEnergy.pdf used on input line 
-397.
+423.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<photon/JERnew.pdf, id=4487, 569.12625pt x 480.79625pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/SingleN_pe
+dit.pdf, page is rotated 90 degrees> <E:/user/my documents/University/2016-2017
+/boruoXuThesis/photon/SingleN_alledit.pdf, page is rotated 90 degrees>] [72 <E:
+/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleCompareN_p3e
+dit.pdf, page is rotated 90 degrees> <E:/user/my documents/University/2016-2017
+/boruoXuThesis/photon/DoubleCompareN_all2edit.pdf, page is rotated 90 degrees> 
+<E:/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleCompareFr
+agEnergy.pdf, page is rotated 90 degrees>]
+<photon/JERnew.pdf, id=4753, 569.12625pt x 480.79625pt>
 File: photon/JERnew.pdf Graphic file (type pdf)
 
 <use photon/JERnew.pdf>
-Package pdftex.def Info: photon/JERnew.pdf used on input line 411.
+Package pdftex.def Info: photon/JERnew.pdf used on input line 437.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
-
-Underfull \vbox (badness 4084) has occurred while \output is active []
-
- [71 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleComp
-areFragEnergy.pdf, page is rotated 90 degrees>]
-<photon/DoubleCompareAlgs.pdf, id=4546, 569.12625pt x 480.79625pt>
+ [73 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/JERnew.pdf
+, page is rotated 90 degrees>]
+<photon/DoubleCompareAlgs.pdf, id=4812, 569.12625pt x 480.79625pt>
 File: photon/DoubleCompareAlgs.pdf Graphic file (type pdf)
 
 <use photon/DoubleCompareAlgs.pdf>
-Package pdftex.def Info: photon/DoubleCompareAlgs.pdf used on input line 428.
+Package pdftex.def Info: photon/DoubleCompareAlgs.pdf used on input line 454.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 
-LaTeX Warning: Reference `{sec:photonFragRemoval}' on page 72 undefined on inpu
-t line 430.
+LaTeX Warning: Reference `{sec:photonFragRemoval}' on page 74 undefined on inpu
+t line 456.
 
 
-LaTeX Warning: Reference `{sec:photonFragRemoval}' on page 72 undefined on inpu
-t line 430.
+LaTeX Warning: Reference `{sec:photonFragRemoval}' on page 74 undefined on inpu
+t line 456.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [72 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/JERnew.pdf
-, page is rotated 90 degrees>]
-<photon/DoubleN_pN_all.pdf, id=4597, 569.12625pt x 480.79625pt>
+<photon/DoubleN_pN_all.pdf, id=4815, 569.12625pt x 480.79625pt>
 File: photon/DoubleN_pN_all.pdf Graphic file (type pdf)
 
 <use photon/DoubleN_pN_all.pdf>
-Package pdftex.def Info: photon/DoubleN_pN_all.pdf used on input line 443.
+Package pdftex.def Info: photon/DoubleN_pN_all.pdf used on input line 469.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<photon/DoubleCompareEnergies.pdf, id=4598, 569.12625pt x 480.79625pt>
+<photon/DoubleCompareEnergies.pdf, id=4816, 569.12625pt x 480.79625pt>
 File: photon/DoubleCompareEnergies.pdf Graphic file (type pdf)
 
 <use photon/DoubleCompareEnergies.pdf>
-Package pdftex.def Info: photon/DoubleCompareEnergies.pdf used on input line 44
-8.
+Package pdftex.def Info: photon/DoubleCompareEnergies.pdf used on input line 47
+4.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
- [73 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleComp
+ [74 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleComp
 areAlgs.pdf, page is rotated 90 degrees>]) ("E:\user\my documents\University\20
 16-2017\boruoXuThesis\chapTau.tex"
-[74 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleN_pN_
+[75 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/DoubleN_pN_
 all.pdf, page is rotated 90 degrees> <E:/user/my documents/University/2016-2017
 /boruoXuThesis/photon/DoubleCompareEnergies.pdf, page is rotated 90 degrees>]
-chapter 6.
-
-LaTeX Warning: Citation `whizard' on page 75 undefined on input line 20.
-
-
-LaTeX Warning: Citation `Sjostrand:1995iq' on page 75 undefined on input line 2
-0.
-
-
-LaTeX Warning: Citation `Jadach:1993hs' on page 75 undefined on input line 20.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [75
+[76
 
 ]
-
-LaTeX Warning: Citation `MoradeFreitas:2002kj' on page 76 undefined on input li
-ne 24.
-
-
-LaTeX Warning: Citation `Agostinelli:2002hh' on page 76 undefined on input line
- 24.
-
-
-LaTeX Warning: Citation `Gaede:82475' on page 76 undefined on input line 25.
-
-
-LaTeX Warning: Citation `Marshall:2015rfa' on page 76 undefined on input line 2
-5.
-
-
-LaTeX Warning: Citation `Agashe:2014kda' on page 76 undefined on input line 45.
-
-
-
-LaTeX Warning: Citation `Agashe:2014kda' on page 76 undefined on input line 45.
-
-
-
-LaTeX Warning: Citation `Agashe:2014kda' on page 76 undefined on input line 63.
-
-
+chapter 6.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [76]
+ [77]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Citation `PhysRevLett.39.1587' on page 77 undefined on input lin
-e 66.
-
-<tau/var/nPhoton_100GeV_improved.png, id=4754, 798.985pt x 674.52pt>
+ [78]
+<tau/var/nPhoton_100GeV_improved.png, id=4988, 798.985pt x 674.52pt>
 File: tau/var/nPhoton_100GeV_improved.png Graphic file (type png)
 
 <use tau/var/nPhoton_100GeV_improved.png>
@@ -2778,7 +2231,7 @@ Package pdftex.def Info: tau/var/nPhoton_100GeV_improved.png used on input line
  79.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/var/nCharge_100GeV_improved.png, id=4755, 798.985pt x 674.52pt>
+<tau/var/nCharge_100GeV_improved.png, id=4989, 798.985pt x 674.52pt>
 File: tau/var/nCharge_100GeV_improved.png Graphic file (type png)
 
 <use tau/var/nCharge_100GeV_improved.png>
@@ -2786,7 +2239,7 @@ Package pdftex.def Info: tau/var/nCharge_100GeV_improved.png used on input line
  81.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/var/mVis_100GeV_improved_zoom.png, id=4756, 798.985pt x 674.52pt>
+<tau/var/mVis_100GeV_improved_zoom.png, id=4990, 798.985pt x 674.52pt>
 File: tau/var/mVis_100GeV_improved_zoom.png Graphic file (type png)
 
 <use tau/var/mVis_100GeV_improved_zoom.png>
@@ -2794,7 +2247,7 @@ Package pdftex.def Info: tau/var/mVis_100GeV_improved_zoom.png used on input li
 ne 83.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/var/mA1A1Fit_100GeV_improved_zoom.png, id=4757, 798.985pt x 674.52pt>
+<tau/var/mA1A1Fit_100GeV_improved_zoom.png, id=4991, 798.985pt x 674.52pt>
 File: tau/var/mA1A1Fit_100GeV_improved_zoom.png Graphic file (type png)
 
 <use tau/var/mA1A1Fit_100GeV_improved_zoom.png>
@@ -2804,11 +2257,11 @@ t line 85.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [77]
+ [79]
 
-LaTeX Warning: Reference `fig:nPfos' on page 78 undefined on input line 94.
+LaTeX Warning: Reference `fig:nPfos' on page 80 undefined on input line 94.
 
-[78 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/var/nPhoton_10
+[80 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/var/nPhoton_10
 0GeV_improved.png> <E:/user/my documents/University/2016-2017/boruoXuThesis/tau
 /var/nCharge_100GeV_improved.png> <E:/user/my documents/University/2016-2017/bo
 ruoXuThesis/tau/var/mVis_100GeV_improved_zoom.png> <E:/user/my documents/Univer
@@ -2821,7 +2274,7 @@ t mass of $\OML/eur/m/n/12 []$ \T1/lmr/m/n/12 (-20) for $\OML/eur/m/n/12 []$
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [79]
+ [81]
 Overfull \hbox (0.49338pt too wide) in paragraph at lines 120--121
 []$\OML/eur/m/n/12 m[]; [][]hypothesis$\T1/lmr/m/n/12 (-20) : First fit-ted in-
 vari-ant mass of $[]$, for $[][]$
@@ -2840,32 +2293,24 @@ n-vari-ant mass of $[][]$,
  []
 
 
-LaTeX Warning: Reference `fig:nPfos' on page 80 undefined on input line 131.
+LaTeX Warning: Reference `fig:nPfos' on page 82 undefined on input line 131.
 
 
-LaTeX Warning: Reference `fig:nPfos' on page 80 undefined on input line 133.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [80]
-
-LaTeX Warning: Citation `Agashe:2014kda' on page 81 undefined on input line 148
-.
-
-
-LaTeX Warning: Reference `fig:nPfos' on page 81 undefined on input line 153.
+LaTeX Warning: Reference `fig:nPfos' on page 82 undefined on input line 133.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [81]
+ [82]
 
-LaTeX Warning: Citation `Therhaag:2009dp' on page 82 undefined on input line 15
-9.
+LaTeX Warning: Reference `fig:nPfos' on page 83 undefined on input line 153.
 
 
-LaTeX Warning: Reference `' on page 82 undefined on input line 169.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [83]
+
+LaTeX Warning: Reference `' on page 84 undefined on input line 169.
 
 
 Overfull \hbox (23.88158pt too wide) in paragraph at lines 179--194
@@ -2875,48 +2320,48 @@ Overfull \hbox (23.88158pt too wide) in paragraph at lines 179--194
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [82]
+ [84]
 
-LaTeX Warning: Reference `' on page 83 undefined on input line 203.
+LaTeX Warning: Reference `' on page 85 undefined on input line 203.
 
 
-LaTeX Warning: Reference `' on page 83 undefined on input line 203.
+LaTeX Warning: Reference `' on page 85 undefined on input line 203.
 
 
 Underfull \vbox (badness 5504) has occurred while \output is active []
 
- [83]
-<tau/decayMode2.png, id=4793, 798.985pt x 674.52pt>
+ [85]
+<tau/decayMode2.png, id=5030, 798.985pt x 674.52pt>
 File: tau/decayMode2.png Graphic file (type png)
  <use tau/decayMode2.png>
 Package pdftex.def Info: tau/decayMode2.png used on input line 229.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/decayMode3.png, id=4794, 798.985pt x 674.52pt>
+<tau/decayMode3.png, id=5031, 798.985pt x 674.52pt>
 File: tau/decayMode3.png Graphic file (type png)
  <use tau/decayMode3.png>
 Package pdftex.def Info: tau/decayMode3.png used on input line 231.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/decayMode4.png, id=4795, 798.985pt x 674.52pt>
+<tau/decayMode4.png, id=5032, 798.985pt x 674.52pt>
 File: tau/decayMode4.png Graphic file (type png)
  <use tau/decayMode4.png>
 Package pdftex.def Info: tau/decayMode4.png used on input line 233.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/decayMode5.png, id=4796, 798.985pt x 674.52pt>
+<tau/decayMode5.png, id=5033, 798.985pt x 674.52pt>
 File: tau/decayMode5.png Graphic file (type png)
  <use tau/decayMode5.png>
 Package pdftex.def Info: tau/decayMode5.png used on input line 235.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/decayMode6.png, id=4797, 798.985pt x 674.52pt>
+<tau/decayMode6.png, id=5034, 798.985pt x 674.52pt>
 File: tau/decayMode6.png Graphic file (type png)
  <use tau/decayMode6.png>
 Package pdftex.def Info: tau/decayMode6.png used on input line 237.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<tau/legend.png, id=4798, 798.985pt x 674.52pt>
+<tau/legend.png, id=5035, 798.985pt x 674.52pt>
 File: tau/legend.png Graphic file (type png)
  <use tau/legend.png>
 Package pdftex.def Info: tau/legend.png used on input line 239.
@@ -2924,14 +2369,14 @@ Package pdftex.def Info: tau/legend.png used on input line 239.
 
 Underfull \vbox (badness 2269) has occurred while \output is active []
 
- [84]
-[85 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/decayMode2.png
+ [86]
+[87 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/decayMode2.png
 > <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/decayMode3.png> 
 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/decayMode4.png> <E
 :/user/my documents/University/2016-2017/boruoXuThesis/tau/decayMode5.png> <E:/
 user/my documents/University/2016-2017/boruoXuThesis/tau/decayMode6.png> <E:/us
 er/my documents/University/2016-2017/boruoXuThesis/tau/legend.png>]
-<tau/hadronicEff.png, id=4809, 798.985pt x 674.52pt>
+<tau/hadronicEff.png, id=5047, 798.985pt x 674.52pt>
 File: tau/hadronicEff.png Graphic file (type png)
  <use tau/hadronicEff.png>
 Package pdftex.def Info: tau/hadronicEff.png used on input line 262.
@@ -2939,46 +2384,23 @@ Package pdftex.def Info: tau/hadronicEff.png used on input line 262.
 
 Underfull \vbox (badness 3601) has occurred while \output is active []
 
- [86 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/hadronicEff.p
+ [88 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/hadronicEff.p
 ng>])
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapDoubleHiggs.tex"
-[87] [88
+[89] [90
 
 ]
 chapter 7.
 
-LaTeX Warning: Citation `Aad:2012tfa' on page 89 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Chatrchyan:2012ufa' on page 89 undefined on input line
- 8.
-
-
-LaTeX Warning: Citation `Contino:2013gna' on page 89 undefined on input line 8.
-
-
-
-LaTeX Warning: Citation `Abramowicz:2016zbo' on page 89 undefined on input line
- 12.
-
-
 Underfull \vbox (badness 2042) has occurred while \output is active []
 
- [89]
-
-LaTeX Warning: Citation `Baer:2013cma' on page 90 undefined on input line 18.
-
-
+ [91]
 Overfull \hbox (13.23438pt too wide) in paragraph at lines 27--28
 []\T1/lmr/m/n/12 (-20) The dou-ble higgs pro-duc-tion, $[][][][][][][][][][][][
 ][][]$ is di-vided into sub-channel $[][][][][][][][][][][][][][]$
  []
 
-[90]
-
-LaTeX Warning: Citation `Linssen:2012hp' on page 91 undefined on input line 37.
-
-
+[92]
 Package epstopdf Info: Source file: <doubleHiggs/Feynman/1.eps>
 (epstopdf)                    date: 2017-04-04 13:42:17
 (epstopdf)                    size: 380246 bytes
@@ -2991,7 +2413,7 @@ onverted-to.pdf doubleHiggs/Feynman/1.eps>
 (epstopdf)             \includegraphics on input line 41.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/Feynman/1-eps-converted-to.pdf, id=4846, 211.79124pt x 225.84375pt
+<doubleHiggs/Feynman/1-eps-converted-to.pdf, id=5089, 211.79124pt x 225.84375pt
 >
 File: doubleHiggs/Feynman/1-eps-converted-to.pdf Graphic file (type pdf)
  <use doubleHiggs/Feynman/1-eps-converted-to.pdf>
@@ -3010,7 +2432,7 @@ onverted-to.pdf doubleHiggs/Feynman/2.eps>
 (epstopdf)             \includegraphics on input line 47.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/Feynman/2-eps-converted-to.pdf, id=4847, 211.79124pt x 225.84375pt
+<doubleHiggs/Feynman/2-eps-converted-to.pdf, id=5090, 211.79124pt x 225.84375pt
 >
 File: doubleHiggs/Feynman/2-eps-converted-to.pdf Graphic file (type pdf)
  <use doubleHiggs/Feynman/2-eps-converted-to.pdf>
@@ -3029,7 +2451,7 @@ onverted-to.pdf doubleHiggs/Feynman/3.eps>
 (epstopdf)             \includegraphics on input line 52.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/Feynman/3-eps-converted-to.pdf, id=4848, 211.79124pt x 225.84375pt
+<doubleHiggs/Feynman/3-eps-converted-to.pdf, id=5091, 211.79124pt x 225.84375pt
 >
 File: doubleHiggs/Feynman/3-eps-converted-to.pdf Graphic file (type pdf)
  <use doubleHiggs/Feynman/3-eps-converted-to.pdf>
@@ -3048,25 +2470,21 @@ onverted-to.pdf doubleHiggs/Feynman/4.eps>
 (epstopdf)             \includegraphics on input line 58.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/Feynman/4-eps-converted-to.pdf, id=4849, 211.79124pt x 225.84375pt
+<doubleHiggs/Feynman/4-eps-converted-to.pdf, id=5092, 211.79124pt x 225.84375pt
 >
 File: doubleHiggs/Feynman/4-eps-converted-to.pdf Graphic file (type pdf)
  <use doubleHiggs/Feynman/4-eps-converted-to.pdf>
 Package pdftex.def Info: doubleHiggs/Feynman/4-eps-converted-to.pdf used on inp
 ut line 58.
 (pdftex.def)             Requested size: 98.57677pt x 105.11618pt.
- [91 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/Feynm
+ [93 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/Feynm
 an/1-eps-converted-to.pdf> <E:/user/my documents/University/2016-2017/boruoXuTh
 esis/doubleHiggs/Feynman/2-eps-converted-to.pdf> <E:/user/my documents/Universi
 ty/2016-2017/boruoXuThesis/doubleHiggs/Feynman/3-eps-converted-to.pdf> <E:/user
 /my documents/University/2016-2017/boruoXuThesis/doubleHiggs/Feynman/4-eps-conv
 erted-to.pdf>]
 
-LaTeX Warning: Citation `Dittmaier:2012vm' on page 92 undefined on input line 8
-3.
-
-
-LaTeX Warning: Reference `' on page 92 undefined on input line 90.
+LaTeX Warning: Reference `' on page 94 undefined on input line 90.
 
 
 LaTeX Warning: Float too large for page by 22.9695pt on input line 145.
@@ -3074,32 +2492,18 @@ LaTeX Warning: Float too large for page by 22.9695pt on input line 145.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [92]
-[93]
-Underfull \vbox (badness 7451) has occurred while \output is active []
-
  [94]
 [95]
-
-LaTeX Warning: Citation `LCD-Note-2010-009' on page 96 undefined on input line 
-237.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7451) has occurred while \output is active []
 
  [96]
 [97]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Citation `sailer2012radiation' on page 98 undefined on input lin
-e 296.
+ [98]
+[99] [100]
 
-[98]
-
-LaTeX Warning: Reference `' on page 99 undefined on input line 298.
-
-
-LaTeX Warning: Citation `Sailer:2017onh' on page 99 undefined on input line 300
-.
+LaTeX Warning: Reference `' on page 101 undefined on input line 298.
 
 Package epstopdf Info: Source file: <doubleHiggs/forward/ForwardBCAL.eps>
 (epstopdf)                    date: 2017-04-06 13:37:33
@@ -3113,7 +2517,7 @@ BCAL-eps-converted-to.pdf doubleHiggs/forward/ForwardBCAL.eps>
 (epstopdf)             \includegraphics on input line 308.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/forward/ForwardBCAL-eps-converted-to.pdf, id=4971, 212.795pt x 177
+<doubleHiggs/forward/ForwardBCAL-eps-converted-to.pdf, id=5221, 212.795pt x 177
 .66376pt>
 File: doubleHiggs/forward/ForwardBCAL-eps-converted-to.pdf Graphic file (type p
 df)
@@ -3133,7 +2537,7 @@ LCAL-eps-converted-to.pdf doubleHiggs/forward/ForwardLCAL.eps>
 (epstopdf)             \includegraphics on input line 314.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/forward/ForwardLCAL-eps-converted-to.pdf, id=4972, 541.02126pt x 3
+<doubleHiggs/forward/ForwardLCAL-eps-converted-to.pdf, id=5222, 541.02126pt x 3
 44.28625pt>
 File: doubleHiggs/forward/ForwardLCAL-eps-converted-to.pdf Graphic file (type p
 df)
@@ -3142,57 +2546,33 @@ Package pdftex.def Info: doubleHiggs/forward/ForwardLCAL-eps-converted-to.pdf u
 sed on input line 314.
 (pdftex.def)             Requested size: 201.63182pt x 128.3085pt.
 
-
-LaTeX Warning: Citation `Sailer:2017onh' on page 99 undefined on input line 319
-.
-
-
-LaTeX Warning: Citation `Lukic:forwardElectron' on page 99 undefined on input l
-ine 319.
-
-
-LaTeX Warning: Citation `Sailer:2017onh' on page 99 undefined on input line 319
-.
-
-
-LaTeX Warning: Citation `Lukic:forwardElectron' on page 99 undefined on input l
-ine 319.
-
-
-LaTeX Warning: Citation `Milutinovic-Dumbelovic:2014uta' on page 99 undefined o
-n input line 323.
-
-
-LaTeX Warning: Citation `Grefe:2012rt' on page 99 undefined on input line 323.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [99]
+ [101]
 
-LaTeX Warning: Reference `' on page 100 undefined on input line 335.
-
-
-LaTeX Warning: Reference `' on page 100 undefined on input line 335.
+LaTeX Warning: Reference `' on page 102 undefined on input line 335.
 
 
-LaTeX Warning: Reference `' on page 100 undefined on input line 335.
+LaTeX Warning: Reference `' on page 102 undefined on input line 335.
 
-[100 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/forwa
+
+LaTeX Warning: Reference `' on page 102 undefined on input line 335.
+
+[102 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/forwa
 rd/ForwardBCAL-eps-converted-to.pdf> <E:/user/my documents/University/2016-2017
-/boruoXuThesis/doubleHiggs/forward/ForwardLCAL-eps-converted-to.pdf>] [101]
+/boruoXuThesis/doubleHiggs/forward/ForwardLCAL-eps-converted-to.pdf>] [103]
 
-LaTeX Warning: Reference `' on page 102 undefined on input line 409.
+LaTeX Warning: Reference `' on page 104 undefined on input line 409.
 
-[102] <doubleHiggs/MCmassFit.png, id=5026, 750.1626pt x 507.8172pt>
+[104] <doubleHiggs/MCmassFit.png, id=5285, 750.1626pt x 507.8172pt>
 File: doubleHiggs/MCmassFit.png Graphic file (type png)
 
 <use doubleHiggs/MCmassFit.png>
 Package pdftex.def Info: doubleHiggs/MCmassFit.png used on input line 429.
 (pdftex.def)             Requested size: 336.05533pt x 227.48505pt.
- [103 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/MCma
+ [105 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/MCma
 ssFit.png>]
-<doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.pdf, id=5038, 569.12625pt x 480.7
+<doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.pdf, id=5298, 569.12625pt x 480.7
 9625pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.pdf Graphic file (type pdf)
  <use doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.pdf>
@@ -3201,7 +2581,7 @@ on input line 448.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR.pdf,
- id=5039, 569.12625pt x 480.79625pt>
+ id=5299, 569.12625pt x 480.79625pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR
 .pdf Graphic file (type pdf)
 
@@ -3211,7 +2591,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_Si
 gmaR_divide_M_testR.pdf used on input line 453.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.pdf, id=5040, 569.12625pt x 480.7
+<doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.pdf, id=5300, 569.12625pt x 480.7
 9625pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.pdf Graphic file (type pdf)
  <use doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.pdf>
@@ -3220,7 +2600,7 @@ on input line 458.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR.pdf,
- id=5041, 569.12625pt x 480.79625pt>
+ id=5301, 569.12625pt x 480.79625pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR
 .pdf Graphic file (type pdf)
 
@@ -3230,7 +2610,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_Si
 gmaR_divide_M_testR.pdf used on input line 463.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.pdf, id=5042, 569.12625pt x 480.79
+<doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.pdf, id=5302, 569.12625pt x 480.79
 625pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.pdf Graphic file (type pdf)
  <use doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.pdf>
@@ -3239,7 +2619,7 @@ n input line 468.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_testR.pdf, id=5
-043, 569.12625pt x 480.79625pt>
+303, 569.12625pt x 480.79625pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_testR.pdf 
 Graphic file (type pdf)
 
@@ -3249,17 +2629,13 @@ divide_M_testR.pdf used on input line 473.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 
-LaTeX Warning: Citation `Suehara:2015ura' on page 104 undefined on input line 5
-11.
-
-
-LaTeX Warning: Reference `' on page 104 undefined on input line 511.
+LaTeX Warning: Reference `' on page 106 undefined on input line 511.
 
 
 Underfull \vbox (badness 1337) has occurred while \output is active []
 
- [104]
-[105 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/resol
+ [106]
+[107 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/resol
 ution/ILD_1.4TeV_Higgs1_M_R.pdf, page is rotated 90 degrees> <E:/user/my docume
 nts/University/2016-2017/boruoXuThesis/doubleHiggs/resolution/ILD_1.4TeV_Higgs1
 _SigmaL_add_SigmaR_divide_M_testR.pdf, page is rotated 90 degrees> <E:/user/my 
@@ -3271,7 +2647,7 @@ ity/2016-2017/boruoXuThesis/doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.pdf, pa
 ge is rotated 90 degrees> <E:/user/my documents/University/2016-2017/boruoXuThe
 sis/doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_testR.pdf, p
 age is rotated 90 degrees>]
-<doubleHiggs/eval-lcfiweights_R0_7_2jets-test.pdf, id=5326, 569.12625pt x 541.0
+<doubleHiggs/eval-lcfiweights_R0_7_2jets-test.pdf, id=5586, 569.12625pt x 541.0
 2126pt>
 File: doubleHiggs/eval-lcfiweights_R0_7_2jets-test.pdf Graphic file (type pdf)
  <use doubleHiggs/eval-lcfiweights_R0_7_2jets-test.pdf>
@@ -3281,13 +2657,13 @@ on input line 517.
 
 Underfull \vbox (badness 6675) has occurred while \output is active []
 
- [106 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/eval
+ [108 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/eval
 -lcfiweights_R0_7_2jets-test.pdf, page is rotated 90 degrees>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [107]
+ [109]
 <doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_prep
-are.pdf, id=5392, 569.12625pt x 480.79625pt>
+are.pdf, id=5652, 569.12625pt x 480.79625pt>
 File: doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2
 _prepare.pdf Graphic file (type pdf)
 
@@ -3298,7 +2674,7 @@ Package pdftex.def Info: doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_M_TMVA20
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_pre
-pare.pdf, id=5393, 569.12625pt x 480.79625pt>
+pare.pdf, id=5653, 569.12625pt x 480.79625pt>
 File: doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag
 2_prepare.pdf Graphic file (type pdf)
 
@@ -3309,7 +2685,7 @@ Package pdftex.def Info: doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA2
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/preSel/nR0_7_6jet_btag2_bTag2_TMVA20161208R0_7_qq_btag2_prepare.pd
-f, id=5394, 569.12625pt x 480.79625pt>
+f, id=5654, 569.12625pt x 480.79625pt>
 File: doubleHiggs/preSel/nR0_7_6jet_btag2_bTag2_TMVA20161208R0_7_qq_btag2_prepa
 re.pdf Graphic file (type pdf)
 
@@ -3318,7 +2694,7 @@ e.pdf>
 Package pdftex.def Info: doubleHiggs/preSel/nR0_7_6jet_btag2_bTag2_TMVA20161208
 R0_7_qq_btag2_prepare.pdf used on input line 602.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
- [108] [109 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHigg
+ [110] [111 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHigg
 s/preSel/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_prepare.pdf, pa
 ge is rotated 90 degrees> <E:/user/my documents/University/2016-2017/boruoXuThe
 sis/doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_
@@ -3350,7 +2726,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 621--621
  []
 
 
-LaTeX Warning: Reference `' on page 110 undefined on input line 672.
+LaTeX Warning: Reference `' on page 112 undefined on input line 672.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 674.
@@ -4835,12 +4211,12 @@ o sub-channels, $[][][][][][][][][][][][][][][][][][][][][][][][][][][][]$
  []
 
 
-LaTeX Warning: Reference `)' on page 110 undefined on input line 680.
+LaTeX Warning: Reference `)' on page 112 undefined on input line 680.
 
 
-LaTeX Warning: Reference `' on page 110 undefined on input line 686.
+LaTeX Warning: Reference `' on page 112 undefined on input line 686.
 
-<doubleHiggs/mutual6022bbWW.pdf, id=5539, 569.12625pt x 480.79625pt>
+<doubleHiggs/mutual6022bbWW.pdf, id=5800, 569.12625pt x 480.79625pt>
 File: doubleHiggs/mutual6022bbWW.pdf Graphic file (type pdf)
 
 <use doubleHiggs/mutual6022bbWW.pdf>
@@ -4848,30 +4224,30 @@ Package pdftex.def Info: doubleHiggs/mutual6022bbWW.pdf used on input line 690.
 
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<doubleHiggs/mutual6022bbbb.pdf, id=5540, 569.12625pt x 480.79625pt>
+<doubleHiggs/mutual6022bbbb.pdf, id=5801, 569.12625pt x 480.79625pt>
 File: doubleHiggs/mutual6022bbbb.pdf Graphic file (type pdf)
 
 <use doubleHiggs/mutual6022bbbb.pdf>
 Package pdftex.def Info: doubleHiggs/mutual6022bbbb.pdf used on input line 695.
 
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
- [110] [111]
+ [112] [113]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [112 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/mutu
+ [114 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/mutu
 al6022bbWW.pdf, page is rotated 90 degrees> <E:/user/my documents/University/20
 16-2017/boruoXuThesis/doubleHiggs/mutual6022bbbb.pdf, page is rotated 90 degree
 s>]
-[113]
+[115]
 
-LaTeX Warning: Reference `' on page 114 undefined on input line 803.
+LaTeX Warning: Reference `' on page 116 undefined on input line 803.
 
 
-LaTeX Warning: Reference `' on page 114 undefined on input line 803.
+LaTeX Warning: Reference `' on page 116 undefined on input line 803.
 
 
 <doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_M_TMVA20161208R0_7_qq_btag2_prepar
-e_testNew2.pdf, id=5658, 569.12625pt x 480.79625pt>
+e_testNew2.pdf, id=5918, 569.12625pt x 480.79625pt>
 File: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_M_TMVA20161208R0_7_qq_btag2_p
 repare_testNew2.pdf Graphic file (type pdf)
 
@@ -4882,7 +4258,7 @@ Package pdftex.def Info: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_M_TMVA2016
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs2_M_TMVA20161208R0_7_qq_btag2_prepar
-e_testNew2.pdf, id=5659, 569.12625pt x 480.79625pt>
+e_testNew2.pdf, id=5919, 569.12625pt x 480.79625pt>
 File: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs2_M_TMVA20161208R0_7_qq_btag2_p
 repare_testNew2.pdf Graphic file (type pdf)
 
@@ -4893,7 +4269,7 @@ Package pdftex.def Info: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs2_M_TMVA2016
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_acolinearity_TMVA20161208R0_7_qq_b
-tag2_prepare_testNew2.pdf, id=5660, 569.12625pt x 480.79625pt>
+tag2_prepare_testNew2.pdf, id=5920, 569.12625pt x 480.79625pt>
 File: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_acolinearity_TMVA20161208R0_7
 _qq_btag2_prepare_testNew2.pdf Graphic file (type pdf)
 
@@ -4904,7 +4280,7 @@ ty_TMVA20161208R0_7_qq_btag2_prepare_testNew2.pdf used on input line 845.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_spin_TMVA20161208R0_7_qq_btag2_pre
-pare_testNew2.pdf, id=5661, 569.12625pt x 480.79625pt>
+pare_testNew2.pdf, id=5921, 569.12625pt x 480.79625pt>
 File: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_spin_TMVA20161208R0_7_qq_btag
 2_prepare_testNew2.pdf Graphic file (type pdf)
 
@@ -4915,13 +4291,13 @@ Package pdftex.def Info: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_spin_TMVA2
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 
-LaTeX Warning: Reference `' on page 114 undefined on input line 879.
+LaTeX Warning: Reference `' on page 116 undefined on input line 879.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [114]
-[115 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/1400v
+ [116]
+[117 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/1400v
 ar/nR0_7_6jet_btag2_Higgs1_M_TMVA20161208R0_7_qq_btag2_prepare_testNew2.pdf, pa
 ge is rotated 90 degrees> <E:/user/my documents/University/2016-2017/boruoXuThe
 sis/doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs2_M_TMVA20161208R0_7_qq_btag2_pre
@@ -4932,15 +4308,15 @@ ty_TMVA20161208R0_7_qq_btag2_prepare_testNew2.pdf, page is rotated 90 degrees>
 0_7_6jet_btag2_Higgs1_spin_TMVA20161208R0_7_qq_btag2_prepare_testNew2.pdf, page
  is rotated 90 degrees>]
 
-LaTeX Warning: Reference `' on page 116 undefined on input line 881.
+LaTeX Warning: Reference `' on page 118 undefined on input line 881.
 
 
-LaTeX Warning: Reference `' on page 116 undefined on input line 903.
+LaTeX Warning: Reference `' on page 118 undefined on input line 903.
 
 
-LaTeX Warning: Reference `' on page 116 undefined on input line 903.
+LaTeX Warning: Reference `' on page 118 undefined on input line 903.
 
-[116]
+[118]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 975.
@@ -6547,8 +5923,8 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 LaTeX Warning: Float too large for page by 22.9695pt on input line 1033.
 
-[117] [118] [119]
-<doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.pdf, id=5883, 569.12625pt x 480.796
+[119] [120] [121]
+<doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.pdf, id=6143, 569.12625pt x 480.796
 25pt>
 File: doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.pdf Graphic file (type pdf)
  <use doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.pdf>
@@ -6557,7 +5933,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.pdf used on
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR.pdf, i
-d=5884, 569.12625pt x 480.79625pt>
+d=6144, 569.12625pt x 480.79625pt>
 File: doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR.p
 df Graphic file (type pdf)
 
@@ -6567,7 +5943,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_Sigm
 aR_divide_M_testR.pdf used on input line 1090.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.pdf, id=5885, 569.12625pt x 480.796
+<doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.pdf, id=6145, 569.12625pt x 480.796
 25pt>
 File: doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.pdf Graphic file (type pdf)
  <use doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.pdf>
@@ -6576,7 +5952,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.pdf used on
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR.pdf, i
-d=5886, 569.12625pt x 480.79625pt>
+d=6146, 569.12625pt x 480.79625pt>
 File: doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR.p
 df Graphic file (type pdf)
 
@@ -6586,7 +5962,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_Sigm
 aR_divide_M_testR.pdf used on input line 1100.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<doubleHiggs/resolution/ILD_3TeV_W_M_testR.pdf, id=5887, 569.12625pt x 480.7962
+<doubleHiggs/resolution/ILD_3TeV_W_M_testR.pdf, id=6147, 569.12625pt x 480.7962
 5pt>
 File: doubleHiggs/resolution/ILD_3TeV_W_M_testR.pdf Graphic file (type pdf)
  <use doubleHiggs/resolution/ILD_3TeV_W_M_testR.pdf>
@@ -6594,7 +5970,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_W_M_testR.pdf used on
 input line 1105.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR.pdf, id=588
+<doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR.pdf, id=614
 8, 569.12625pt x 480.79625pt>
 File: doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR.pdf Gr
 aphic file (type pdf)
@@ -6608,7 +5984,7 @@ vide_M_testR.pdf used on input line 1110.
 LaTeX Warning: Float too large for page by 3.8091pt on input line 1117.
 
 
-<doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.pdf, id=5902, 569.12625pt x
+<doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.pdf, id=6162, 569.12625pt x
  541.02126pt>
 File: doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.pdf Graphic file (type
  pdf)
@@ -6619,8 +5995,8 @@ Package pdftex.def Info: doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.pdf
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [120]
-[121 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/resol
+ [122]
+[123 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/resol
 ution/ILD_3TeV_Higgs1_M_R.pdf, page is rotated 90 degrees> <E:/user/my document
 s/University/2016-2017/boruoXuThesis/doubleHiggs/resolution/ILD_3TeV_Higgs1_Sig
 maL_add_SigmaR_divide_M_testR.pdf, page is rotated 90 degrees> <E:/user/my docu
@@ -6631,11 +6007,11 @@ _M_testR.pdf, page is rotated 90 degrees> <E:/user/my documents/University/2016
 -2017/boruoXuThesis/doubleHiggs/resolution/ILD_3TeV_W_M_testR.pdf, page is rota
 ted 90 degrees> <E:/user/my documents/University/2016-2017/boruoXuThesis/double
 Higgs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR.pdf, page is rotat
-ed 90 degrees>] [122 <E:/user/my documents/University/2016-2017/boruoXuThesis/d
+ed 90 degrees>] [124 <E:/user/my documents/University/2016-2017/boruoXuThesis/d
 oubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.pdf, page is rotated 90 degre
 es>]
 <doubleHiggs/preSel/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag2
-_prepare.pdf, id=6223, 569.12625pt x 480.79625pt>
+_prepare.pdf, id=6484, 569.12625pt x 480.79625pt>
 File: doubleHiggs/preSel/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_
 btag2_prepare.pdf Graphic file (type pdf)
 
@@ -6646,7 +6022,7 @@ Package pdftex.def Info: doubleHiggs/preSel/tR0_7_6jet_btag2_Higgs_all_M_TMVA20
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/preSel/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prepa
-re.pdf, id=6224, 569.12625pt x 480.79625pt>
+re.pdf, id=6485, 569.12625pt x 480.79625pt>
 File: doubleHiggs/preSel/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_
 prepare.pdf Graphic file (type pdf)
 
@@ -6684,12 +6060,12 @@ Overfull \hbox (16.35558pt too wide) in paragraph at lines 1251--1252
  two sub-chan-nels, $[][][][][][][][][][][][][][][][][][][][][][][][][][][][]$
  []
 
-[123 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/preSe
+[125 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/preSe
 l/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag2_prepare.pdf, page
  is rotated 90 degrees> <E:/user/my documents/University/2016-2017/boruoXuThesi
 s/doubleHiggs/preSel/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prep
-are.pdf, page is rotated 90 degrees>] [124]
-<doubleHiggs/mutual6025bbWW.pdf, id=6328, 569.12625pt x 480.79625pt>
+are.pdf, page is rotated 90 degrees>] [126]
+<doubleHiggs/mutual6025bbWW.pdf, id=6588, 569.12625pt x 480.79625pt>
 File: doubleHiggs/mutual6025bbWW.pdf Graphic file (type pdf)
 
 <use doubleHiggs/mutual6025bbWW.pdf>
@@ -6697,7 +6073,7 @@ Package pdftex.def Info: doubleHiggs/mutual6025bbWW.pdf used on input line 1256
 .
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<doubleHiggs/mutual6025bbbb.pdf, id=6329, 569.12625pt x 480.79625pt>
+<doubleHiggs/mutual6025bbbb.pdf, id=6589, 569.12625pt x 480.79625pt>
 File: doubleHiggs/mutual6025bbbb.pdf Graphic file (type pdf)
 
 <use doubleHiggs/mutual6025bbbb.pdf>
@@ -8311,19 +7687,19 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 Underfull \vbox (badness 1776) has occurred while \output is active []
 
- [125 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/mutu
+ [127 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/mutu
 al6025bbWW.pdf, page is rotated 90 degrees> <E:/user/my documents/University/20
 16-2017/boruoXuThesis/doubleHiggs/mutual6025bbbb.pdf, page is rotated 90 degree
-s>] [126]
-[127]
+s>] [128]
+[129]
 
 LaTeX Warning: Float too large for page by 12.76947pt on input line 1496.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [128]
-[129]
+ [130]
+[131]
 Package epstopdf Info: Source file: <doubleHiggs/extraction/oneDrelation.eps>
 (epstopdf)                    date: 2017-04-09 22:47:03
 (epstopdf)                    size: 3672366 bytes
@@ -8336,7 +7712,7 @@ relation-eps-converted-to.pdf doubleHiggs/extraction/oneDrelation.eps>
 (epstopdf)             \includegraphics on input line 1535.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/oneDrelation-eps-converted-to.pdf, id=6451, 213.79875pt
+<doubleHiggs/extraction/oneDrelation-eps-converted-to.pdf, id=6711, 213.79875pt
  x 201.75375pt>
 File: doubleHiggs/extraction/oneDrelation-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -8345,18 +7721,10 @@ Package pdftex.def Info: doubleHiggs/extraction/oneDrelation-eps-converted-to.p
 df used on input line 1535.
 (pdftex.def)             Requested size: 201.63182pt x 190.2704pt.
 
-
-LaTeX Warning: Citation `Abramowicz:2016zbo' on page 130 undefined on input lin
-e 1537.
-
-
-LaTeX Warning: Citation `Abramowicz:2016zbo' on page 130 undefined on input lin
-e 1537.
-
-[130]
+[132]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [131 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/extr
+ [133 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/extr
 action/oneDrelation-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <doubleHiggs/extraction/crossSectionNew.eps
 >
@@ -8371,7 +7739,7 @@ sSectionNew-eps-converted-to.pdf doubleHiggs/extraction/crossSectionNew.eps>
 (epstopdf)             \includegraphics on input line 1590.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/crossSectionNew-eps-converted-to.pdf, id=6486, 569.1262
+<doubleHiggs/extraction/crossSectionNew-eps-converted-to.pdf, id=6748, 569.1262
 5pt x 480.79625pt>
 File: doubleHiggs/extraction/crossSectionNew-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -8380,7 +7748,7 @@ File: doubleHiggs/extraction/crossSectionNew-eps-converted-to.pdf Graphic file
 Package pdftex.def Info: doubleHiggs/extraction/crossSectionNew-eps-converted-t
 o.pdf used on input line 1590.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
- [132]
+ [134]
 Package epstopdf Info: Source file: <doubleHiggs/extraction/SignificanceBono.ep
 s>
 (epstopdf)                    date: 2017-04-10 11:55:08
@@ -8394,7 +7762,7 @@ ificanceBono-eps-converted-to.pdf doubleHiggs/extraction/SignificanceBono.eps>
 (epstopdf)             \includegraphics on input line 1601.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/SignificanceBono-eps-converted-to.pdf, id=6496, 569.126
+<doubleHiggs/extraction/SignificanceBono-eps-converted-to.pdf, id=6758, 569.126
 25pt x 480.79625pt>
 File: doubleHiggs/extraction/SignificanceBono-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -8412,7 +7780,7 @@ Underfull \hbox (badness 1990) in paragraph at lines 1602--1602
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [133 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/extr
+ [135 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/extr
 action/crossSectionNew-eps-converted-to.pdf> <E:/user/my documents/University/2
 016-2017/boruoXuThesis/doubleHiggs/extraction/SignificanceBono-eps-converted-to
 .pdf>]
@@ -8429,7 +7797,7 @@ Bono4Mhh2HT-eps-converted-to.pdf doubleHiggs/extraction/chi2Bono4Mhh2HT.eps>
 (epstopdf)             \includegraphics on input line 1614.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/chi2Bono4Mhh2HT-eps-converted-to.pdf, id=6509, 569.1262
+<doubleHiggs/extraction/chi2Bono4Mhh2HT-eps-converted-to.pdf, id=6772, 569.1262
 5pt x 480.79625pt>
 File: doubleHiggs/extraction/chi2Bono4Mhh2HT-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -8451,7 +7819,7 @@ Rosa4Mhh2HT-eps-converted-to.pdf doubleHiggs/extraction/chi2Rosa4Mhh2HT.eps>
 (epstopdf)             \includegraphics on input line 1619.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/chi2Rosa4Mhh2HT-eps-converted-to.pdf, id=6510, 569.1262
+<doubleHiggs/extraction/chi2Rosa4Mhh2HT-eps-converted-to.pdf, id=6773, 569.1262
 5pt x 480.79625pt>
 File: doubleHiggs/extraction/chi2Rosa4Mhh2HT-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -8463,7 +7831,7 @@ o.pdf used on input line 1619.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [134 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/extr
+ [136 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/extr
 action/chi2Bono4Mhh2HT-eps-converted-to.pdf> <E:/user/my documents/University/2
 016-2017/boruoXuThesis/doubleHiggs/extraction/chi2Rosa4Mhh2HT-eps-converted-to.
 pdf>]
@@ -8481,7 +7849,7 @@ ps>
 (epstopdf)             \includegraphics on input line 1631.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/chi2Combine4Mhh2HT-eps-converted-to.pdf, id=6524, 569.1
+<doubleHiggs/extraction/chi2Combine4Mhh2HT-eps-converted-to.pdf, id=6787, 569.1
 2625pt x 480.79625pt>
 File: doubleHiggs/extraction/chi2Combine4Mhh2HT-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -8510,7 +7878,7 @@ TFit.eps>
 (epstopdf)             \includegraphics on input line 1638.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/chi2Combine4Mhh2HTFit-eps-converted-to.pdf, id=6525, 56
+<doubleHiggs/extraction/chi2Combine4Mhh2HTFit-eps-converted-to.pdf, id=6788, 56
 9.12625pt x 480.79625pt>
 File: doubleHiggs/extraction/chi2Combine4Mhh2HTFit-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -8522,29 +7890,32 @@ rted-to.pdf used on input line 1638.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [135 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/extr
+ [137 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/extr
 action/chi2Combine4Mhh2HT-eps-converted-to.pdf> <E:/user/my documents/Universit
 y/2016-2017/boruoXuThesis/doubleHiggs/extraction/chi2Combine4Mhh2HTFit-eps-conv
-erted-to.pdf>]
-
-LaTeX Warning: Citation `Contino:2010mh' on page 136 undefined on input line 16
-51.
-
-)) Processing 'appendices' comment.
+erted-to.pdf>])) Processing 'appendices' comment.
 Comment 'appendices' writing to comment.cut. Straight input of comment.cut.
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\comment.cut")
 Processing 'backmatter' comment. Comment 'backmatter' writing to comment.cut.
 Straight input of comment.cut.
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\comment.cut"
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\backmatter.tex"
-[136] ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.bbl"
-[137
+[138] ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.bbl"
+[139
 
-] [138
+] [140
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 14.
- ("D:\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [141]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [142]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 165.
+
+
+("D:\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic settings for font family
@@ -8552,40 +7923,64 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--16
+Underfull \hbox (badness 5696) in paragraph at lines 162--167
+[]\T1/lmr/m/n/12 (+20) J. S. Mar-shall,  Pre-sen-ta-tion on pan-do-rapfa with l
+c re-con-struc-tion,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--167
+[][]$\T1/lmtt/m/n/12 https : / / github . com / PandoraPFA / Documentation / bl
+ob / master / Pandora _
+ []
+
+
+Underfull \hbox (badness 5245) in paragraph at lines 169--174
+[]\T1/lmr/m/n/12 (+20) A. Sailer,  Lu-mi-nosi-ties for ee, eg, and gg in-ter-ac
+-tions,  [][]$\T1/lmtt/m/n/12 https :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--174
+\T1/lmtt/m/n/12 / / indico . cern . ch / event / 233706 / contributions / 49905
+3 / attachments /
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [143]
+Underfull \hbox (badness 10000) in paragraph at lines 273--278
 \T1/lmtt/m/n/12 ch / event / 577810 / contributions / 2485070 / attachments / 1
 424897 / 2185427 /
  []
 
-) [139] [140
+
+Underfull \hbox (badness 3907) in paragraph at lines 300--305
+[]\T1/lmr/m/n/12 (+20) S. Luki¢,  For-ward elec-tron tag-ging in the h $[]$ $\O
+ML/eur/m/n/12 $ $$ \T1/lmr/m/n/12 (+20) anal-y-sis at
+ []
+
+
+Underfull \hbox (badness 4608) in paragraph at lines 300--305
+\T1/lmr/m/n/12 (+20) 1.4 tev,  [][]$\T1/lmtt/m/n/12 http : / / indico . cern . 
+ch / event / 262809 / contributions / 1595499 /
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [144])
+[145] [146
 
 ] ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.lof"
-
-LaTeX Warning: Citation `Baer:2013cma' on page 141 undefined on input line 7.
-
-
-LaTeX Warning: Citation `Aicheler:2012bya' on page 141 undefined on input line 
-8.
-
-
-LaTeX Warning: Citation `Baer:2013cma' on page 141 undefined on input line 14.
-
-
-LaTeX Warning: Citation `Marshall:pandoraLC' on page 141 undefined on input lin
-e 18.
-
-
-LaTeX Warning: Citation `Marshall:pandoraLC' on page 141 undefined on input lin
-e 19.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [141]
+ [147]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [142]
-Overfull \hbox (32.71967pt too wide) in paragraph at lines 46--46
+ [148]
+Overfull \hbox (32.71967pt too wide) in paragraph at lines 47--47
  [][]\OML/eur/m/n/12 =[][][]$ \T1/lmr/m/n/12 (-20) and $[][]\OML/eur/m/n/12 =[]
 [][]$\T1/lmr/m/n/12 (-20) , com-bin-ing hadronic de-cay $[][][][][][][][][][][]
 [][][]$ 
@@ -8593,49 +7988,41 @@ Overfull \hbox (32.71967pt too wide) in paragraph at lines 46--46
 
 )
 \tf@lof=\write7
- [143] [144
+ [149] [150
 
 ] ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.lot"
-
-LaTeX Warning: Citation `Agashe:2014kda' on page 145 undefined on input line 14
-.
-
-
 Underfull \vbox (badness 5787) has occurred while \output is active []
 
- [145]
+ [151]
 
-LaTeX Warning: Reference `' on page 146 undefined on input line 29.
+LaTeX Warning: Reference `' on page 152 undefined on input line 29.
 
 )
 \tf@lot=\write8
-)) [146]
+)) [152]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 85.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 85.
  ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 85.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 85.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 2D834C2755C0E2994C37A306453E4C1E;9116.
 
 
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 9203DBB9D1D47D62446C09A540A8FD7E;9123
-(rerunfilecheck)             After:  C12F7FA3341A326A60CBF799CA7AAFE9;9195.
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 28206 strings out of 494045
- 496281 string characters out of 3154005
- 764799 words of memory out of 3000000
- 30128 multiletter control sequences out of 15000+200000
- 166448 words of font info for 278 fonts, out of 3000000 for 9000
+ 28317 strings out of 494045
+ 498332 string characters out of 3154005
+ 767433 words of memory out of 3000000
+ 30148 multiletter control sequences out of 15000+200000
+ 172801 words of font info for 287 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 67i,48n,75p,8816b,1102s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 67i,48n,75p,8816b,1105s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{D:/MiKTeX 2.9/fonts/enc/dvips/lm
 /lm-mathsy.enc}{D:/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<D:/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmmi12.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsf
@@ -8647,18 +8034,19 @@ pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eurm10.pfb><D:/MiKTeX 2.9/
 fonts/type1/public/amsfonts/euler/eurm7.pfb><D:/MiKTeX 2.9/fonts/type1/public/a
 msfonts/euler/eusm10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmbsy10.pfb><D:/M
 iKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm
-/lmbx12.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><D:/MiKTeX 2.9/font
-s/type1/public/lm/lmr10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><D:/
-MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm
-/lmr6.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><D:/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmri12.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><D:/Mi
-KTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/
-lmsy6.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><D:/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmtt12.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
-am10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (162 pages, 6071100 bytes).
+/lmbx12.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><D:/MiKTeX 2.9/fon
+ts/type1/public/lm/lmex10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><D
+:/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><D:/MiKTeX 2.9/fonts/type1/public/
+lm/lmr17.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><D:/MiKTeX 2.9/fonts
+/type1/public/lm/lmr8.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><D:/M
+iKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm
+/lmsy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><D:/MiKTeX 2.9/fonts
+/type1/public/lm/lmsy8.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><D:/
+MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/MiKTeX 2.9/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (168 pages, 6172629 bytes).
 PDF statistics:
- 6887 PDF objects out of 7423 (max. 8388607)
- 457 named destinations out of 1000 (max. 500000)
- 29566 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 7197 PDF objects out of 7423 (max. 8388607)
+ 532 named destinations out of 1000 (max. 500000)
+ 33667 words of extra memory for PDF output out of 35830 (max. 10000000)
 

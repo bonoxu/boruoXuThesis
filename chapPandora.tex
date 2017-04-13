@@ -54,7 +54,6 @@ Isolated hits, often originated from low energy neutrons in a hadronic shower, a
 \label{sec:pandoraConeCluster}
 Before discussing the rest of the \pandora reconstruction, it is necessary to introduce the cone based clustering algorithm, which is widely used in the calorimeter in \pandora. The clustering algorithm produces basic working objects, \clusters.
 
-
 \begin{figure}[tbph]
 \centering
 {\includegraphics[width=0.5\textwidth]{pandora/coneClustering}}%
@@ -284,15 +283,12 @@ Comparing to \kt algorithm, it uses energy instead of \pT in the distance metric
 
 \paragraph{Jet algorithm for the \CLIC}
 
-Although \CLIC is a \ee collider, the significant beam-induced background adds a large amount of energy from \ggHad process (see \Section{}). Therefore, traditional \ee jet algorithms, like Durham algorithm (see \Section{}), is not suitable for the \CLIC environment. Studies has shown that jet algorithms for \pp collider have better performance \cite{Linssen:2012hp,LCD-Note-2010-006}.
+Although \CLIC is a \ee collider, the significant beam-induced background adds a large amount of energy. Therefore, traditional \ee jet algorithms, like Durham algorithm, is not suitable for the \CLIC environment. Studies has shown that jet algorithms for \pp colliders have better performance for \CLIC \cite{Linssen:2012hp,LCD-Note-2010-006}.
 
-A more recent attempt at marrying merits from both Durham and \kt algorithms has resulted in Valencia jet algorithm \cite{Boronat:2014hva}. It had shown promising improvement comparing to \kt algorithm, which is used in the parallel  \eeToHHbbbb  sub-channel analysis.
+A more recent attempt at marrying merits from both Durham and \kt algorithms has resulted in Valencia jet algorithm \cite{Boronat:2014hva}. It had shown promising improvement comparing to \kt algorithm, which is used in the parallel  \eeToHHbbbb  sub-channel analysis in \Chapter{chap:DoubleHiggs} by collaborators.
 
-\begin{comment}
-Why extra C++ implementation
-speed reduce O(n^3) to NlgN
-y, phi space, 2D KNN problem
-\end{comment}
+
+%Why extra C++ implementation speed reduce O(n^3) to NlgN y, phi space, 2D KNN problem
 
 \paragraph{\y{} parameter}
 \y{} parameter is calculated for each specific jet algorithm. It is a measure of the number of jets in an event. \y{} parameter describes the transition of exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets (see \Section{sec:doubleHiggsJetAlgorithm} for jet algorithm). Numerically \y{} parameter is often much smaller than one. A typically way to convert the small number to a human acceptable range is to take the minus logarithm of the number.
@@ -508,7 +504,7 @@ The adaptive boosting algorithm, adapted from \cite{hastie2009elements},  is out
       \item Update $m^{th}$ tree error function, $err_m = \frac{\sum_{i = 1}^{N} w_{i,m-1} B_{i,m} }{\sum_{i = 1}^{N}w_{i,m-1}}$.
       %, where $B_{i,m} = 1$ if $i^{th}$ event is misclassified, 0 if $i^{th}$ event is correctly classified. $w_{i,m-1}$ is the event weight for $i^th$ event generated in previous iteration.
       \item Update $m^{th}$ tree weight,  $\alpha_m = \log\parenths{\frac{1 - err_m}{err_m}}$
-      \item Update $i^{th}$ event weight, $w_{i,m} = w_{i,m-1} e^{\alpha_m B_{i,m} }$. 
+      \item Update $i^{th}$ event weight, $w_{i,m} = w_{i,m-1} e^{\alpha_m B_{i,m} }$.
     \end{itemize}
   \item The output $G(x)$ for testing event $x$ is a weighted vote from all M trees:
   \begin{equation}
@@ -520,7 +516,7 @@ The adaptive boosting algorithm, adapted from \cite{hastie2009elements},  is out
   \end{equation}
 \end{itemize}
 
-In each iteration, if the $i^{th}$ event is misclassified, the weight increases by a factor of $(1 - err_m)/(err_m)$. Otherwise, the event weight does not change. 
+In each iteration, if the $i^{th}$ event is misclassified, the weight increases by a factor of $(1 - err_m)/(err_m)$. Otherwise, the event weight does not change.
 
 The power of the ablative boosting to dramatically improve the performance of a weak classifier. A weak classifier is a classifier is sightly better than random guessing. A small decision tree would be a weak classifier. By sequentially applying many weak classifier with weighted samples, the final ``forest'' is very robust with very good performance.
 
@@ -562,7 +558,7 @@ TMVA multiclass implementation uses ``one v.s. all" scheme. For each class, the 
 
 The advantage of using the multiclass is that the correlation between different classes are accounted for and the classifier output are correctly adjusted for multiple class. Hence one event can only be classified into one final state. The issue with the multiclass is that discriminative variables all classes need enter the training stage, resulting in a large number of variables.
 
-TMVA multiclass implementation uses "one v.s. all" scheme. Multiclass is used in falvour tagging of jets, \Section{sec:theoryFalvourTagging}, and in the tau lepton final state separation study, \Section{}.
+TMVA multiclass implementation uses "one v.s. all" scheme. Multiclass is used in flavour tagging of jets, \Section{sec:pandoraLCFI}, and in the tau lepton final state separation study, \Section{}.
 
 %Computational intensive jobs are processed either on the Cambridge High Energy Physics grid, or the \CLIC computing grid.
 %Thanks computing resources. i.e. ILC VO, CLIC grid, etc. 
