@@ -322,7 +322,6 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chap:Photon}{{5}{55}{Photon Reconstruction in \pandora \relax }{chapter.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}Overview of photon reconstruction in \pandora  }{55}{section.5.1}}
-\citation{Xu:2016rcz}
 \citation{segre1977nuclei}
 \@writefile{toc}{\contentsline {section}{\numberline {5.2}Electromagnetic shower}{56}{section.5.2}}
 \newlabel{sec:photonEMshower}{{5.2}{56}{Electromagnetic shower\relax }{section.5.2}{}}
@@ -353,7 +352,8 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Local peak identifying}{62}{subsection.5.4.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Associate non-peak bins to peaks}{63}{subsection.5.4.4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.5}Peak filtering}{63}{subsection.5.4.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.6}Candidate close to track projection}{63}{subsection.5.4.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.6}Candidate close to track projection}{64}{subsection.5.4.6}}
+\newlabel{sec:photon2Dtrack}{{5.4.6}{64}{Candidate close to track projection\relax }{subsection.5.4.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Flow chart for \peakFinding  algorithm.}}{64}{figure.caption.41}}
 \newlabel{fig:photonPeakFindingFlow}{{\relax 5.5}{64}{Flow chart for \peakFinding algorithm}{figure.caption.41}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.7}Inclusive mode}{65}{subsection.5.4.7}}
@@ -376,44 +376,48 @@
 \newlabel{sub@fig:photonEvtDspPhotonFragSmall}{{c}{68}{\relax \relax }{figure.caption.43}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces An event display of a typical 10\tmspace  +\thinmuskip {.1667em}GeV photon (\Figure  {fig:photonEvtDspPhotonFragAll}), reconstructed into a main photon (\Figure  {fig:photonEvtDspPhotonFragBig}) and a photon fragment (\Figure  {fig:photonEvtDspPhotonFragSmall}). \relax }}{68}{figure.caption.43}}
 \newlabel{fig:photonEvtDspPhotonFrag}{{\relax 5.6}{68}{An event display of a typical 10\,GeV photon (\Figure {fig:photonEvtDspPhotonFragAll}), reconstructed into a main photon (\Figure {fig:photonEvtDspPhotonFragBig}) and a photon fragment (\Figure {fig:photonEvtDspPhotonFragSmall}). \relax \relax }{figure.caption.43}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Illustration of distance metric, $d$.\relax }}{68}{figure.caption.44}}
-\newlabel{fig:photonDistanceMetric}{{\relax 5.7}{68}{Illustration of distance metric, $d$.\relax \relax }{figure.caption.44}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {\relax 5.2}{\ignorespaces The cuts for photon fragment removal algorithm in the \ECAL  .}}{69}{table.caption.45}}
-\newlabel{tab:photonFragRemovalCuts}{{\relax 5.2}{69}{The cuts for photon fragment removal algorithm in the \ECAL }{table.caption.45}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.7}High energy photon fragment recovery algorithm}{71}{section.5.7}}
-\newlabel{sec:photonHighEFragRemoval}{{5.7}{71}{High energy photon fragment recovery algorithm\relax }{section.5.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces An event display of a typical 500\tmspace  +\thinmuskip {.1667em}GeV photon, reconstructed into a main photon in the \ECAL  (yellow) and a neutral hadron fragment in the \HCAL  (blue).\relax }}{71}{figure.caption.46}}
-\newlabel{fig:photonEvtDspHCalFrag}{{\relax 5.8}{71}{An event display of a typical 500\,GeV photon, reconstructed into a main photon in the \ECAL (yellow) and a neutral hadron fragment in the \HCAL (blue).\relax \relax }{figure.caption.46}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {\relax 5.3}{\ignorespaces Cuts for merging high energy photon fragment in the \HCAL  .}}{72}{table.caption.47}}
-\newlabel{tab:photonHighEnergyFragCuts}{{\relax 5.3}{72}{Cuts for merging high energy photon fragment in the \HCAL }{table.caption.47}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.8}Photon splitting algorithm}{73}{section.5.8}}
-\newlabel{sec:photonSplitting}{{5.8}{73}{Photon splitting algorithm\relax }{section.5.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {\relax 5.2}{\ignorespaces The cuts for photon fragment removal algorithm in the \ECAL  .}}{69}{table.caption.44}}
+\newlabel{tab:photonFragRemovalCuts}{{\relax 5.2}{69}{The cuts for photon fragment removal algorithm in the \ECAL }{table.caption.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Illustration of distance metric, $d$.\relax }}{70}{figure.caption.45}}
+\newlabel{fig:photonDistanceMetric}{{\relax 5.7}{70}{Illustration of distance metric, $d$.\relax \relax }{figure.caption.45}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Photon fragment recovery algorithm in the \HCAL  }{71}{section.5.7}}
+\newlabel{sec:photonHighEFragRemoval}{{5.7}{71}{Photon fragment recovery algorithm in the \HCAL \relax }{section.5.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces An event display of a typical 500\tmspace  +\thinmuskip {.1667em}GeV photon, reconstructed into a main photon in the \ECAL  (yellow) and a neutral hadron fragment in the \HCAL  (blue).\relax }}{72}{figure.caption.46}}
+\newlabel{fig:photonEvtDspHCalFrag}{{\relax 5.8}{72}{An event display of a typical 500\,GeV photon, reconstructed into a main photon in the \ECAL (yellow) and a neutral hadron fragment in the \HCAL (blue).\relax \relax }{figure.caption.46}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {\relax 5.3}{\ignorespaces Cuts for merging high energy photon fragment in the \HCAL  .}}{73}{table.caption.47}}
+\newlabel{tab:photonHighEnergyFragCuts}{{\relax 5.3}{73}{Cuts for merging high energy photon fragment in the \HCAL }{table.caption.47}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.8}Photon splitting algorithm}{74}{section.5.8}}
+\newlabel{sec:photonSplitting}{{5.8}{74}{Photon splitting algorithm\relax }{section.5.8}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {\relax 5.4}{\ignorespaces Cuts for splitting photons.}}{74}{table.caption.48}}
 \newlabel{tab:photonPhotonSplitting}{{\relax 5.4}{74}{Cuts for splitting photons}{table.caption.48}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.9}Photon reconstruction performance improvement}{74}{section.5.9}}
-\newlabel{sec:photonPerformanceCompare}{{5.9}{74}{Photon reconstruction performance improvement\relax }{section.5.9}{}}
-\newlabel{fig:photonSingleN_p}{{\relax 5.9a}{75}{\relax \relax }{figure.caption.49}{}}
-\newlabel{sub@fig:photonSingleN_p}{{a}{75}{\relax \relax }{figure.caption.49}{}}
-\newlabel{fig:photonSingleN_all}{{\relax 5.9b}{75}{\relax \relax }{figure.caption.49}{}}
-\newlabel{sub@fig:photonSingleN_all}{{b}{75}{\relax \relax }{figure.caption.49}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Average number of reconstructed photons and reconstructed particles, as a function of their true energy using single photon sample.}}{75}{figure.caption.49}}
-\newlabel{fig:photonSingleN}{{\relax 5.9}{75}{Average number of reconstructed photons and reconstructed particles, as a function of their true energy using single photon sample}{figure.caption.49}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.9}Photon reconstruction performance improvement}{75}{section.5.9}}
+\newlabel{sec:photonPerformanceCompare}{{5.9}{75}{Photon reconstruction performance improvement\relax }{section.5.9}{}}
+\newlabel{fig:photonSingleN_p}{{\relax 5.9a}{76}{\relax \relax }{figure.caption.49}{}}
+\newlabel{sub@fig:photonSingleN_p}{{a}{76}{\relax \relax }{figure.caption.49}{}}
+\newlabel{fig:photonSingleN_all}{{\relax 5.9b}{76}{\relax \relax }{figure.caption.49}{}}
+\newlabel{sub@fig:photonSingleN_all}{{b}{76}{\relax \relax }{figure.caption.49}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Average number of reconstructed photons and reconstructed particles, as a function of their true energy using single photon sample.}}{76}{figure.caption.49}}
+\newlabel{fig:photonSingleN}{{\relax 5.9}{76}{Average number of reconstructed photons and reconstructed particles, as a function of their true energy using single photon sample}{figure.caption.49}{}}
 \newlabel{fig:photonDoubleCompareN_p}{{\relax 5.10a}{76}{\relax \relax }{figure.caption.50}{}}
 \newlabel{sub@fig:photonDoubleCompareN_p}{{a}{76}{\relax \relax }{figure.caption.50}{}}
 \newlabel{fig:photonDoubleCompareN_all}{{\relax 5.10b}{76}{\relax \relax }{figure.caption.50}{}}
 \newlabel{sub@fig:photonDoubleCompareN_all}{{b}{76}{\relax \relax }{figure.caption.50}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Average number of reconstructed photons and reconstructed particles, as a function of the MC distance separation.}}{76}{figure.caption.50}}
 \newlabel{fig:photonDoubleCompareN}{{\relax 5.10}{76}{Average number of reconstructed photons and reconstructed particles, as a function of the MC distance separation}{figure.caption.50}{}}
-\newlabel{fig:photonDoubleFragEnergy}{{\relax 5.11}{76}{\relax }{figure.caption.51}{}}
-\newlabel{fig:photonJER}{{\relax 5.12}{77}{\relax }{figure.caption.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Average fraction fragments energies of the total energy, as a function of the MC distance separation}}{77}{figure.caption.51}}
+\newlabel{fig:photonDoubleFragEnergy}{{\relax 5.11}{77}{Average fraction fragments energies of the total energy, as a function of the MC distance separation\relax }{figure.caption.51}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces Jet energy resolution as a function of the di-jet energy}}{78}{figure.caption.52}}
+\newlabel{fig:photonJER}{{\relax 5.12}{78}{Jet energy resolution as a function of the di-jet energy\relax }{figure.caption.52}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.10}Breakdown of photon reconstruction improvement}{78}{section.5.10}}
-\newlabel{fig:photonDoubleCompareAlgs}{{\relax 5.13}{78}{\relax }{figure.caption.53}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Average number of photons, as a function of the MC distance separation for different algorithms combinations.}}{79}{figure.caption.53}}
+\newlabel{fig:photonDoubleCompareAlgs}{{\relax 5.13}{79}{Average number of photons, as a function of the MC distance separation for different algorithms combinations}{figure.caption.53}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.11}Photon reconstruction performance}{79}{section.5.11}}
-\newlabel{fig:photonDoubleCompareN_pN_all}{{\relax 5.14a}{79}{\relax \relax }{figure.caption.54}{}}
-\newlabel{sub@fig:photonDoubleCompareN_pN_all}{{a}{79}{\relax \relax }{figure.caption.54}{}}
-\newlabel{fig:photonDoubleCompareEnergies}{{\relax 5.14b}{79}{\relax \relax }{figure.caption.54}{}}
-\newlabel{sub@fig:photonDoubleCompareEnergies}{{b}{79}{\relax \relax }{figure.caption.54}{}}
-\newlabel{fig:photonDoublePerformance}{{\relax 5.14}{79}{\relax }{figure.caption.54}{}}
+\newlabel{fig:photonDoubleCompareN_pN_all}{{\relax 5.14a}{80}{\relax \relax }{figure.caption.54}{}}
+\newlabel{sub@fig:photonDoubleCompareN_pN_all}{{a}{80}{\relax \relax }{figure.caption.54}{}}
+\newlabel{fig:photonDoubleCompareEnergies}{{\relax 5.14b}{80}{\relax \relax }{figure.caption.54}{}}
+\newlabel{sub@fig:photonDoubleCompareEnergies}{{b}{80}{\relax \relax }{figure.caption.54}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces Average numbers of photon and particle using two photons of 500 and 50\tmspace  +\thinmuskip {.1667em}GeV per event sample and with different energy pairs.}}{80}{figure.caption.54}}
+\newlabel{fig:photonDoublePerformance}{{\relax 5.14}{80}{Average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample and with different energy pairs}{figure.caption.54}{}}
 \citation{whizard}
 \citation{Sjostrand:1995iq}
 \citation{}
