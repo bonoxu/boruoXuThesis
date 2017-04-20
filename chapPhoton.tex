@@ -39,7 +39,7 @@ Photon identification in \pandora has two main mechanisms. The basic mechanism p
 
 The \PhotonReconstruction algorithm in \pandora version 1 improves jet energy resolution by correctly identifying photon electromagnetic shower cores and leaving a cleaner environment for the track-cluster association. However, peripheral calorimeter hits to the shower cores may be reconstructed as separate particles (fragments). This lowers the reconstructed photon completeness and makes the number of reconstructed photons a less useful physical quantity. Also, the algorithm in \pandora version 1 leaves rooms for improvement of photon separation resolution.
 
-This chapter presents a solution to photon reconstruction issues. The newly introduced algorithms reduces photon fragments and improves the photon separation resolution. 
+This chapter presents a solution to photon reconstruction issues. The newly introduced algorithms reduces photon fragments and improves the photon separation resolution.
 
 %Some part of the work has been published in a conference proceeding \cite{Xu:2016rcz}.
 
@@ -221,6 +221,7 @@ Kinematic variables exploit the differences between a characteristic electromagn
 \begin{table}[htbp] \centering \smallskip
 \begin{tabular}{l r }
 \hline
+\hline
 Categories&  Variables\\
 \hline
 Longitudinal shower profile & $\delta{l}$,$t_0$ \\
@@ -240,7 +241,7 @@ Two variables use the longitudinal shower distribution. $t_0$ is the start layer
 \end{equation}
 $\delta l$ is minimised as a function of the $t_0$. For a proper photon, $t_0$  and $\delta l $ are expected to be close to 0.
 
-Three variables use the transverse shower information. $\langle{w}\rangle$ is the energy weighted r.m.s. distance of a bin to its peak. This is a measure of the transverse shower size. $\delta{\langle{w_{UV}}\rangle}$ is the smallest ratio of the two r.m.s. distances in each U, V axis direction, a measure of the circularity of the transverse shower. Last variable, $\delta E_{cluster}$, is the  ratio between the photon candidate energy to the big cluster energy. This is a measure of the dominance of a photon in a large cluster. 
+Three variables use the transverse shower information. $\langle{w}\rangle$ is the energy weighted r.m.s. distance of a bin to its peak. This is a measure of the transverse shower size. $\delta{\langle{w_{UV}}\rangle}$ is the smallest ratio of the two r.m.s. distances in each U, V axis direction, a measure of the circularity of the transverse shower. Last variable, $\delta E_{cluster}$, is the  ratio between the photon candidate energy to the big cluster energy. This is a measure of the dominance of a photon in a large cluster.
 
 Last variable for the classifier is the distance between the photon candidate and the closest track projection. It is less likely to be a photon if it is close to a track.
 
@@ -305,6 +306,7 @@ The photon-fragment pairs is classified into photon-photon-fragment pairs and ph
 
 \begin{tabular}{l  r  r }
 \hline
+\hline
 Low $E_f$ &  Photon-photon & Photon-neutral-hadron \\
 \hline
 \multicolumn{1}{L{0.3\textwidth}}{transverse shower comparison} & \multicolumn{1}{R{0.3\textwidth}}{$d < 30 $, $\frac{E_{p1}}{E_m + E_f} > 0.9 $, $\frac{E_{p2}}{E_f} < 0.5 $, $E_{p1} > E_m$}  & \multicolumn{1}{R{0.3\textwidth}}{-} \\
@@ -344,7 +346,7 @@ where $i$ indicates $i^{th}$ pseudo-layer of the \ECAL. $d_{l,i}$ is the minimum
 \label{fig:photonDistanceMetric}
 \end{figure}
 
-$E_m$ and $E_f$ are the main photon energy and the fragment energy. $E_{p1}$ and $E_{p2}$ are the two largest peaks and associated calorimeter hits, found by the two dimensional peak finding algorithm (\Section{sec:peakFinding}), ordered by descending energy, using the pair as input. $N_{calo}$ is the number of the \ECAL hits in the fragment. $\absCosTheta$ is the absolute cosine of the polar angle of the main photon, where beam direction is the z-axis. 
+$E_m$ and $E_f$ are the main photon energy and the fragment energy. $E_{p1}$ and $E_{p2}$ are the two largest peaks and associated calorimeter hits, found by the two dimensional peak finding algorithm (\Section{sec:peakFinding}), ordered by descending energy, using the pair as input. $N_{calo}$ is the number of the \ECAL hits in the fragment. $\absCosTheta$ is the absolute cosine of the polar angle of the main photon, where beam direction is the z-axis.
 
 One logic for merging is when the fragment is small with low energy and is close to the main photon. Hence $E_f$  and $N_{calo}$ are required to be small. Alternatively the fragment should be relatively low energy, demanding a small ratio of $E_f$ to $E_m$.
 
@@ -382,6 +384,7 @@ This algorithm would collect photons in the \ECAL and neutral hadrons in the \HC
 \smallskip
 
 \begin{tabular}{l r }
+\hline
 \hline
 High energy fragment recovery&  Cuts\\
 \hline
@@ -423,10 +426,9 @@ Merged photon is typically energetic. The merged photon should be consistent wit
 
 \begin{table}[htbp]
 \centering
-
 \smallskip
-\small
 \begin{tabular}{l r }
+\hline
 \hline
 Photon splitting&  Cuts\\
 \hline
