@@ -133,6 +133,18 @@ The no photon early conversion cuts only effective against final states with \Pp
 %An low visible energy event is discarded if the total energy of the tau lepton visible decay products is below 5\,GeV. Requirement of the tau decay in the barrel or the end cap part of the calorimeter is defined as the polar angle of the tau is $ 17.2\degree < |\theta_{Z}| < 34.4\degree$ or $ 45.8\degree < |\theta_{Z}| < 90\degree$.
 
 
+\section{Select single tau decay}
+
+The \eeToTauTau channel contains two tau leptons travelling in opposite directions. Since the tau decay final state separation is applicable to single tau, \PFOs in one event are divided into two collections, each corresponding to one tau. Separation of \PFOs uses the principle thrust axis vector, explained in the \Section{sec:pandoraEvtShape}, which is the axis that most \PFOs aligned to. Two collections are obtained based on the sign of the scalar product between the thrust axis and the \PFO momentum vector. An example of the simulated \eeToTauTau event is shown in \Figure{fig:tauEvtDsp}.
+
+\begin{figure}[tbph]
+\centering
+\includegraphics[width=0.45\textwidth]{tau/tau_evt_dsp2}
+\caption{ An example event display of simulated \eeToTauTau event. The top tau decay is \decayRhoFinalStateShort final state and the bottom is \decayThreePionPhotonShort final state. Purple clusters are \Ppipm and yellow clusters are photons.  Blue region is the transverse cross section of the \ECAL barrel, looking along the beam line direction.}
+\label{fig:tauEvtDsp}
+\end{figure}
+
+
 
 \section{Discriminative variables}
 
@@ -163,10 +175,48 @@ The no photon early conversion cuts only effective against final states with \Pp
 \caption
 [Normalised distribution for selected variables.]
 {
-Normalised distribution for selected variables showing for seven final states, \decayElectronShort, \decayMuonShort, \decayPionShort, \decayRhoShort, \decayAiPhotonShort, \decayAiPionShort and \decayThreePionPhotonShort, separated using truth information. \FIGURE{fig:tauVarNCharge}, \Figure{fig:tauVarNPhoton}, \Figure{fig:tauVarMVis}, and \Figure{fig:tauVarMA1} show istributions for the number of tracks, the number of photons, the invariant mass of visible \PFOs, and the invariant mass of $a_1$ for \decayAiPhotonShort hypothesis test, respectively. The area for each final state is normalised to 1.
+Normalised distribution for selected variables showing for seven final states, \decayElectronShort, \decayMuonShort, \decayPionShort, \decayRhoShort, \decayAiPhotonShort, \decayAiPionShort and \decayThreePionPhotonShort, separated using truth information. \FIGURE{fig:tauVarNCharge}, \Figure{fig:tauVarNPhoton}, \Figure{fig:tauVarMVis}, and \Figure{fig:tauVarMA1} show distributions for the number of tracks, the number of photons, the invariant mass of visible \PFOs, and the invariant mass of $a_1$ for \decayAiPhotonShort hypothesis test, respectively. The area for each final state is normalised to 1.
 }
 \label{fig:tauVar}
 \end{figure}
+
+Having pre-selected events, a set of discriminating variables are carefully developed the multivariate analysis (MVA). The full list of variables are shown in \Table{tab:tauVaraibles}.
+
+
+\begin{table}[!htbp]\centering
+\begin{tabular}{lr}
+\hline
+\hline
+Category &  Variable \\
+\hline
+Invariant mass &  \multicolumn{1}{R{0.6\textwidth}}{$m_{vis}$, $m_{\charge}$, $m_\neutral$, $m_{\Pgg}$, $m_{\Pgpm}$} \\
+Calorimetric info. &   \multicolumn{1}{R{0.6\textwidth}}{ $\% E_{\charge}$,  $\% E$ } \\
+Energy & \multicolumn{1}{R{0.6\textwidth}}{ $\tilde{E}_{vis}$,  $\tilde{E}_{\charge}$, $\tilde{E}_{\Pmu}$, $\tilde{E}_{\Pe}$, $\tilde{E}_{\Pgg}$,  $\tilde{E}_{\Pgpm}$} \\
+Number of \PFOs & \multicolumn{1}{R{0.6\textwidth}}{  ${N}_{\charge}$, ${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgg}$,  ${N}_{\Pgpm}$} \\
+\decayRhoShort reconstruction & \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\rho}$, $m_\rho$} \\
+\decayAiPhotonShort reconstruction &  \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\Pai}$, $m^*_{\Pgpz}\parenths{\Pai}$, $m_{\Pai}$} \\
+EM shower profile & $\delta{l}$, $t_0$, $\langle{w}\rangle$ \\
+Calorimeter hit info. & $\bar{E}_{hit}$, $\%MIP$ \\
+Track info. & $\Delta E/P$ \\
+\hline
+\hline
+\end{tabular}
+\caption
+{Variables used in MVA}
+\label{tab:tauVaraibles}
+\end{table}
+
+
+These variables allow the multivariate classifier achieves a highly efficient tau decay mode classification. Different variables have discriminative powers against different final states. For convenience, variables are presented sequentially, although they participate the MVA simultaneously.
+
+
+
+\begin{comment}
+Having pre-selected samples, a set of discriminating variables was carefully developed to be used in the later multivariate analysis (MVA). These variables allow the multivariate classifier achieves a highly efficient tau decay mode classification. Different variables have discriminative powers against different final states. For convenience, variables are presented sequentially, although they participate the MVA simultaneously.
+
+To differentiate 1-prong final states from 3-prong final states, number of tracks, shown in figure~\ref{fig:nCharge}, provides excellent separation power. Selection efficiencies are over 95\% for the 1-prong final states, and over 90\% for the 3-prong final states. For the 1-prong final states, they are further separated based on the number of photons reconstructed. Clear distinction between \decayPion, \decayRho and \decayAiPhoton decays mode can be seen in figure~\ref{fig:nPhoton}, where the overlap between any two decay modes is below 15\%. The two leptonic decay modes, \decayMuon and \decayElectron, have very different event topologies to other decay modes. For the \decayMuon decay mode, only muons deposit energies in the muon chamber. For the \decayElectron decay mode, electrons shower in the ECAL can be modelled by electromagnetic shower profiles. This information is used to distinguish a electron from a charged pion, including comparison of the observed and the expected electromagnetic shower profile, the matching between inner detector tracks and calorimeter clusters, and the fraction of calorimeter hits registered as minimum ionised particles.
+
+\end{comment}
 
 Some variables with most discriminative power are shown in figure~\ref{fig:nPfos}. In total 29 variables used in the multivariate analysis. The reason for the large number of variables is due to training seven decay modes at once, which will be discussed later.
 
