@@ -455,6 +455,28 @@ When the candidate is close to a charged \PFO, extra care is taken by demanding 
 
 The restraint on $N_{p}$, the number of peaks identified by the peak finding, is because a reconstructed photon is unlikely to be merged from more than four photons.
 
+
+
+\section{Compare with no photon reconstruction}
+
+\begin{figure}[tbph]
+\centering
+        \includegraphics[width=0.45\textwidth]{photon/nPhotonVSnoPhotonReco}
+\caption[Average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample and with different energy pairs.]
+{\Figure{fig:photonDoubleCompareN_pN_all} shows the average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample. \Figure{fig:photonDoubleCompareEnergies} shows the  average numbers of photon for four different photon pairs: 500 - 50, 500 - 500, 100 - 10 and 10 - 10\,GeV.}
+\label{fig:photonDoublePerformance}
+\end{figure}
+
+\begin{figure}[tbph]
+\centering
+        \includegraphics[width=0.45\textwidth]{photon/JERmuon}
+\caption[Average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample and with different energy pairs.]
+{\Figure{fig:photonDoubleCompareN_pN_all} shows the average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample. \Figure{fig:photonDoubleCompareEnergies} shows the  average numbers of photon for four different photon pairs: 500 - 50, 500 - 500, 100 - 10 and 10 - 10\,GeV.}
+\label{fig:photonDoublePerformance}
+\end{figure}
+
+
+
 \section{Photon reconstruction performance improvement}
 \label{sec:photonPerformanceCompare}
 
@@ -555,7 +577,32 @@ The introduction of the revised photon reconstruction and photon splitting impro
 
 \section{Photon reconstruction performance}
 
+
 In \Section{sec:photonPerformanceCompare}, the improved performance of the photon reconstruction is demonstrated with different metrics, using single photon, double photons and jet samples. In this section, the performance of the photon reconstruction as a function of photon energies will be described.
+
+
+Single particle efficiency
+
+\begin{figure}[tbph]
+\centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{photon/singlePhotonEff2full}
+        \caption{}
+        \label{fig:photonSingleEffLow}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{photon/singlePhotonEff}
+        \caption{}
+        \label{fig:photonSingleEff}
+    \end{subfigure}
+\caption[Average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample and with different energy pairs.]
+{\Figure{fig:photonDoubleCompareN_pN_all} shows the average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample. \Figure{fig:photonDoubleCompareEnergies} shows the  average numbers of photon for four different photon pairs: 500 - 50, 500 - 500, 100 - 10 and 10 - 10\,GeV.}
+\label{fig:photonDoublePerformance}
+\end{figure}
+
+
+
+
 
 For simple samples such as two photons per event, there are very few fragments. Shown in \Figure{fig:photonDoubleCompareN_pN_all} for 500 and 50\,GeV photons pair sample, the average number of photons and particles beyond 20\,mm apart is less than 0.05 above the true value (2).
 
