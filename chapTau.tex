@@ -180,7 +180,7 @@ Normalised distribution for selected variables showing for seven final states, \
 \label{fig:tauVar}
 \end{figure}
 
-Having pre-selected events, a set of discriminating variables are carefully developed the multivariate analysis (MVA). The full list of variables are shown in \Table{tab:tauVaraibles}.
+Having pre-selected events, a set of discriminating variables are carefully developed for the multivariate analysis (MVA). The full list of variables are shown in \Table{tab:tauVaraibles}.
 
 
 \begin{table}[!htbp]\centering
@@ -189,10 +189,10 @@ Having pre-selected events, a set of discriminating variables are carefully deve
 \hline
 Category &  Variable \\
 \hline
+Number of \PFOs & \multicolumn{1}{R{0.6\textwidth}}{  ${N}_{\charge}$, ${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgg}$,  ${N}_{\Pgpm}$} \\
 Invariant mass &  \multicolumn{1}{R{0.6\textwidth}}{$m_{vis}$, $m_{\charge}$, $m_{\neutral}$, $m_{\Pgg}$, $m_{\Pgpm}$} \\
 Calorimetric info. &   \multicolumn{1}{R{0.6\textwidth}}{ $\% E_{\charge}$,  $\% E$ } \\
 Energy & \multicolumn{1}{R{0.6\textwidth}}{ $\tilde{E}_{vis}$,  $\tilde{E}_{\charge}$, $\tilde{E}_{\Pmu}$, $\tilde{E}_{\Pe}$, $\tilde{E}_{\Pgg}$,  $\tilde{E}_{\Pgpm}$} \\
-Number of \PFOs & \multicolumn{1}{R{0.6\textwidth}}{  ${N}_{\charge}$, ${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgg}$,  ${N}_{\Pgpm}$} \\
 \decayRhoShort reconstruction & \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\rho}$, $m_\rho$} \\
 \decayAiPhotonShort reconstruction &  \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\Pai}$, $m^*_{\Pgpz}\parenths{\Pai}$, $m_{\Pai}$} \\
 EM shower profile & $\delta{l}$, $t_0$, $\langle{w}\rangle$ \\
@@ -206,80 +206,39 @@ Track info. & $\Delta E/P$ \\
 \label{tab:tauVaraibles}
 \end{table}
 
+The most crucial variables are the number of \PFOs of different particles. \FIGURE{fig:tauVarNCharge} shows the distribution of ${N}_{\charge}$, the number of  charged \PFOs for different tau final states. Whilst over 98\% 1-prong final states have one track reconstructed, around 95\%  3-prong final states have three tracks reconstructed. This is an excellent variable to separate 1-prong and 3-prong final states. An orthogonal measurement is the number of reconstructed photons,  ${N}_{\Pgg}$, shown in \Figure{fig:tauVarNPhoton}. The overlap between \decayPionShort and \decayRhoShort final states is about 15\% and the confusion between \decayRhoShort and \decayAiPhotonShort is around 15\%. ${N}_{\Pgg}$ can also separate two 3-prong final states. ${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgpm}$ are useful to identify two leptonic final states, and further separate 3-prong final states from 1-prong final states.
 
-These variables allow the multivariate classifier achieves a highly efficient tau decay mode classification. Different variables have discriminative powers against different final states. For convenience, variables are presented sequentially, although they participate the MVA simultaneously.
+Invariant masses of different particles are good at characterising different final states. \FIGURE{fig:tauVarMVis} shows the invariant mass of the system. Clear reasonable peaks can be seen for \Prho and \Pai. The mass peak of  \decayAiPionFinalStateShort are much higher. $m_{\charge}$ and $m_{\neutral}$ are invariant masses of charged and neutral particles respectively. They separate final states with neutral particles from those without neutral particles. Similarly, $m_{\Pgg}$ and $m_{\Pgpm}$ identify final states with photons and with \Pgpm respectively.
 
+Calorimetric information is used to identify electron and muon. An electron deposits most energy in the \ECAL and a muon deposits 5 to 20\% energy in the \ECAL. Two variables, $\% E_{\charge}$ and $\% E$, are the fraction of energy deposited in the \ECAL over total energy in the calorimeter, of charged particles and all \PFOs respectively. Energy fraction for the charged particles does not include contribution from photons, which also deposit most energy in the \ECAL, like electrons.
 
+Energy information further separate different final states. Variables are normalised to the expect tau energy. For example, $\tilde{E}_{\Pgg}$, normalised energy of photons are different for final states with and without photons.
 
-\begin{comment}
-Having pre-selected samples, a set of discriminating variables was carefully developed to be used in the later multivariate analysis (MVA). These variables allow the multivariate classifier achieves a highly efficient tau decay mode classification. Different variables have discriminative powers against different final states. For convenience, variables are presented sequentially, although they participate the MVA simultaneously.
+Extra variables are used to differentiate specific final states. 
 
-To differentiate 1-prong final states from 3-prong final states, number of tracks, shown in figure~\ref{fig:nCharge}, provides excellent separation power. Selection efficiencies are over 95\% for the 1-prong final states, and over 90\% for the 3-prong final states. For the 1-prong final states, they are further separated based on the number of photons reconstructed. Clear distinction between \decayPion, \decayRho and \decayAiPhoton decays mode can be seen in figure~\ref{fig:nPhoton}, where the overlap between any two decay modes is below 15\%. The two leptonic decay modes, \decayMuon and \decayElectron, have very different event topologies to other decay modes. For the \decayMuon decay mode, only muons deposit energies in the muon chamber. For the \decayElectron decay mode, electrons shower in the ECAL can be modelled by electromagnetic shower profiles. This information is used to distinguish a electron from a charged pion, including comparison of the observed and the expected electromagnetic shower profile, the matching between inner detector tracks and calorimeter clusters, and the fraction of calorimeter hits registered as minimum ionised particles.
+\subsection{\texorpdfstring{\decayRhoShort and \decayRhoShort}  resonances reconstruction}
 
-\end{comment}
-
-Some variables with most discriminative power are shown in figure~\ref{fig:nPfos}. In total 29 variables used in the multivariate analysis. The reason for the large number of variables is due to training seven decay modes at once, which will be discussed later.
-
-Here is a full list of all variables used in the multivariate analysis. Energy of the \Pgt is assume to be the same as the energy of \Pepm colliding beam, which is half of the \rootS energy. Recoil momenta were calculated assuming the \Pem\Pep collision happened at the centre of mass energy. Both assumptions are largely valid when there is no ISR contribution.
-
-\begin{itemize}
-\item  $\frac{E_{ECal,HCal}}{E_{tot}}, charged$:  Sum of energy deposited in ECal and HCal, divided by the energy of charged particles
-\item  $\frac{E_{ECal,HCal}}{E_{tot}}, all$:  	 Sum of energy deposited in ECal and HCal, divided by the energy of all particles
-\item  $m_{vis}$:     	 Invariant mass of visible particles in GeV
-\item  $\frac{E_{vis}}{E_{\Ptauon}}$:	 Sum of energy of all particles, divided by the energy of \Ptauon
-\item  $\frac{E_{charged}}{E_{\Ptauon}}$:	 Sum of energy of charged particles, divided by the energy of \Ptauon
-\item  $\frac{E_{\Pgmm}}{E_{\Ptauon}}$:	 Sum of energy of muons, divided by the energy of \Ptauon
-\item  $\frac{E_{\Pem}}{E_{\Ptauon}}$:	 Sum of energy of electrons, divided by the energy of \Ptauon
-\item  $\frac{E_{\Pgg}}{E_{\Ptauon}}$:	 Sum of energy of photons, divided by the energy of \Ptauon
-\item  $\frac{E_{\Pgpm}}{E_{\Ptauon}}$:	 Sum of energy of charged pions, divided by the energy of \Ptauon
-\item  $N_{charged}$:	 Number of charged particles
-\item  $N_{\Pgmm}$:	 Number of muons
-\item  $N_{\Pem}$:	 Number of electrons
-\item  $N_{\Pgg}$:	 Number of photons
-\item  $N_{\Pgpm}$:	 Number of charged pions
-\item  $m_{\Pgg}$:     	 Invariant mass of photons in GeV
-\item  $m_{charged}$:     	 Invariant mass of charged particles in GeV
-\item  $m_{neutral}$:     	 Invariant mass of neutral particles in GeV
-\item  $m_{\Pgpm}$:     	 Invariant mass of charged pions in GeV
-\item  $m_{\Pgpz}, \decayRhoShort hypothesis$:     	 Fitted invariant mass of \Pgpz for \decayRhoShort hypothesis test
-\item  $m_{\decayRhoShort}, \decayRhoShort hypothesis$:     	 Fitted invariant mass of \decayRhoShort for \decayRhoShort hypothesis test
-
-\item  $m_{\Pgpz1}, \decayAiPhotonShort hypothesis$:     	 First fitted invariant mass of \Pgpz, for \decayAiPhotonShort hypothesis test, ordered by closeness to the true \Pgpz mass
-\item  $m_{\Pgpz2}, \decayAiPhotonShort hypothesis$:     	 Second fitted invariant mass of \Pgpz, for \decayAiPhotonShort hypothesis test, ordered by closeness to the true \Pgpz mass
-\item  $m_{\decayAiPhotonShort}, \decayAiPhotonShort hypothesis$:     	 Second fitted invariant mass of \decayAiPhotonShort, for \decayAiPhotonShort hypothesis test
-\item  $\bar{E_{cell}}$:     	 Average energy deposited in a calorimeter cell in GeV
-\item  $d_{trans,shower}$:    Transverse shower width for electromagnetic shower profile, averaged for all clusters in the ECal
-\item  $l_{long,shower}$:    Longitudinal start layer for electromagnetic shower profile, averaged for all clusters in the ECal
-\item  $\Delta{l_{long,shower}}$:    Longitudinal discrepancy for electromagnetic shower profile, averaged for all clusters in the ECal
-\item  $\%MIP$:    Fraction of calorimeter hits registered as minimum ionised particles, averaged for all clusters in the ECal
-\item  $\frac{E}{P}$:   Energy divided by momentum, averaged for all clusters in the ECal
-\end{itemize}
-
-Number of photons is an important variable for separating decay modes. This information is only available due to the excellent photon reconstruction. Shown in \Figure{fig:nPfos}, the majority of \decayMuon, \decayPion and \decayAiPion final states have zero photon reconstructed. The \decayElectron final state event have one photon reconstructed instead of zero, due to the FSR effect. \decayRho and \decayThreePionPhoton have nearly 80\% events with two reconstructed photons, whilst \decayAiPion have over 60\% events with four reconstructed photons. The loss is efficiency is due to the increasing difficulty to separate nearby photons.
-
-The number of charged PFOs can clearly separate the leptonic and 1-prong final states, from the 3-prong final states, shown in \Figure{fig:nPfos}. The efficiency of leptonic final states are over 98\%.
-
-The invariant mass of the visible PFOs shows clear differences between different final states. \decayRho, \decayAiPhoton and \decayAiPion distribution show clear resonance at \Prho and \Pai. \decayElectron, \decayMuon and \decayPion distribution show much smaller invariant mass and \decayThreePionPhoton shows a large invariant mass than \Pai. The \decayElectron final state has a long tail of invariant mass due to the extra photons from the FSR.
-
-$\frac{E_{ECal,HCal}}{E_{tot}}, charged$ and $\frac{E_{ECal,HCal}}{E_{tot}}, all$ are both very effective at picking out leptonic decay modes.
-
-For final states containing \Prho and \Pai resonance, it is useful to use minimisation test for right pairing of the resonance. We will use \decayAiPhotonShort as an example. \decayRhoShort is very similar.
-
-The minimisation of \decayAiPhotonShort hypothesis states
-
+\decayRhoShort and \decayAiPhotonShort are identified further using their resonance structure. For example, \decayRhoShort final state contains a \Pgpm and a \Ppizero decaying to two photons. By selecting \Pgpm and photons consistent with \Prho decay pattern, \decayRhoShort final state could be separated. The particle selection is via minimising a  $\chi^{2}$ function, defined as:
 \begin{equation}
-\label{eq:a1}
-\chi_{\Pai}^{2} = {\left(\frac{m_{\Pai,fit} -  m_{\Pai}}{\sigma_{\Pai}}\right)}^{2} + {\left(\frac{{m_{\Pgpz,fit}} -  m_{\Pgpz}}{\sigma_{\Pgpz}}\right)}^{2} + {\left(\frac{{m_{\Pgpz^*,fit}} -  m_{\Pgpz}}{\sigma_{\Pgpz}}\right)}^{2}  \,,
+\chi^{2} = {\left(\frac{m_{tot} -  m^{MC}_{\Prho}}{\sigma^{MC}_{\Prho}}\right)}^{2} + {\left(\frac{m_{\Pphoton \Pphoton} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2} \,,
 \end{equation}
+where $m_{\Pphoton \Pphoton}$ is the invariant mass of two photons and $m_{tot}$ is the invariant mass of the  photon pair and one \Pgpm. All combinations of photons and \Pgpm are tested. $m^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are expected masses of \Prho and \Ppizero, taken from \cite{Agashe:2014kda}. $\sigma^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are the half width of the invariant mass distribution of reconstructed \Prho and \Ppizero using the truth information. This minimisation allows \decayRhoShort final state to be separated from \decayAiPhotonShort, where failure to reconstruct photons causes  \decayAiPhotonShort events to be simualr to that of \decayRhoShort. 
 
-where $m_{\Pgpz,fit}$ and $m_{\Pgpz^*,fit}$  are the invariant masses of all possible two photons combinations, $\sigma_{\Pai}$ and $\sigma_{\Pgpz}$ are the half width of the invariant mass distribution of reconstructed \Pai and \Pgpz using the truth information, and $m_{\Pai}$ and $m_{\Pgp}$ are the masses of \Pai and \Pgpz, taken from \cite{Agashe:2014kda}. If there are only two or three photons, the $\chi_{\Pai}^{2}$ expression will be reduced and not including $m_{\Pgpz^*,fit}$ term, assuming two photons are merged in the reconstruction. If there are fewer than two photons, the $\chi_{\Pai}^{2}$ expression would only contain $m_{\Pai,fit}$ term.
+Similarly, \decayAiPhotonShort can be separate using a extended minimisation with two extra photons:
+\begin{equation}
+\chi^{2} = {\left(\frac{m_{tot} -  m^{MC}_{\Pai}}{\sigma^{MC}_{\Pai}}\right)}^{2} + {\left(\frac{m_{\Pphoton1 \Pphoton2} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2}  + {\left(\frac{m_{\Pphoton3 \Pphoton4} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2} \,,
+\end{equation} 
+where \Prho has been replace by \Pai. Selected particles for the test are two photon pairs and one \Pgpm. Both photon pairs are required to be consistent with \Ppizero decaying to two photons. \FIGURE{fig:tauVarMA1} shows the distribution of $m_{tot}$ from \decayAiPhotonShort consistency test for selected final states. The main feature is that only \decayAiPhotonShort final state has a mass peak at \Pai resonance position. Comparing to simple invariant mass distribution in \Figure{fig:tauVarMVis}, \decayAiPhotonShort mass peak is enhanced.
 
-For the \decayRho final state, a similar $\chi_{\Pgri}^{2}$ test for \Pgri hypothesis is used to extract $m_{\Pgri,fit}$ and $m_{\Pgpz,fit}$ variables. $\chi_{\Pgri}^{2}$ is similar to $\chi_{\Pai}^{2}$ with \Pgri replacing \Pai and only one $m_{\Pgpz,fit}$ term.
+The $\chi^{2}$ functions for both consistency test are adapted for cases where reconstruction fails to resolve photon pairs. Relevant terms are dropped from the expression if there are fewer photons than required. 
 
+\subsection{Separate \decayElectronShort from \decayPionShort}
 
-\Figure{fig:nPfos} shows the $m_{\Pai,fit}$ where \decayRho, \decayAiPhoton  and \decayThreePionPhoton final states contribute to the \Pai resonance, although only \decayAiPhoton final has a real \Pai resonance. This is due to the structure of the  $\chi_{\Pai}^{2}$ minimisation function allowing final states with more than two photons and one \Pgppm to contribute.
+Particle ID reported from \pandora is used extensively to reconstruct discriminating variables. \pandora uses a wide range of information to determine electron ID. However, extra information is used in this analysis to help identifying electrons, which are mistaken as \Pgpm by \pandora reconstruction.
 
-Last six variables in the list help to differentiate an electron final state to that of a charged pion. A charged pion that starts showering early in the calorimeter could have a similar topology to an electromagnetic shower. Nevertheless, a good separation between the two can be achieved with the help of these variables.
+An electron leaves a characteristic electromagnetic  (EM) shower in the \ECAL (see \Section{sec:photonEMshower}), whilst \Pgpm doesn't. Variables defining the  EM shower helps to identify \Pem, taken from photon reconstruction in \Section{sec:photonLikelihood}. $t_0$, the start layer of the longitudinal shower and $\delta{l}$, the fractional difference between observed and expected longitudinal shower profile describe the longitudinal EM shower. $\langle{w}\rangle$ is a measure of the EM shower transverse width.
+
+Another type of information to differentiate an EM shower from a \Pem and a early hadronic shower from a \Pgpm is the calorimeter hit information. $\bar{E}_{hit}$, the average energy of a hit, and $\%MIP$, fraction of possible minimum ionising particles, are different for EM and hadronic showers. Last information used is the track-calorimeter consistency check. $\Delta E/P$ is the calorimeter energy divided by the track momentum. This variable is found to help to differentiate \decayElectronShort from \decayPionShort final state.
 
 \section{Multivariate Analysis}
 
