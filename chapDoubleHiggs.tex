@@ -188,7 +188,7 @@ Isolation (GeV)& $E_{cone}^2 \leqslant 5.7 \times E - 50$ \\
 \label{sec:doubleHiggsBonoLeptonFinder}
 
 IsolatedLeptonFinderProcessor has strict criterion to find high-energy isolated leptons. However, since the signal cross section is low in this analysis, it would be beneficial to reject more events with leptons identified to improve the signal to background ratio. Hence another isolated lepton finder is developed. The main feature of the BonoLeptonFinderProcessor is that it utilises calorimetric information provided by \pandora.
- 
+
 
 The processor uses two sets of cuts. Its logic is similar to that of the IsolatedLeptonFinderProcessor. The first set of cuts uses the particle ID information from \pandora. The cuts demand a \pandora electron or muon with high \pT and is from a primary track. The lepton should either have a very high transverse momentum or be isolated. The second set of cuts uses \ECAL energy fraction to determine light lepton ID. The rest of the cuts are very similar to the first cuts. The isolation criterion is stricter than it in the first set to reduce fake rate.
 %Not sure the last sentence above makes sense
@@ -304,7 +304,7 @@ The two processors share similar logic: searches cone and isolation cone.  The m
 At high \sqrtS, particles are boosted and it is important to extract information in the forward calorimeters to aid signal selection. Certain background channels, for example photon-electron interactions, can have energetic electrons in  the forward calorimeters, the \LumiCAL and the \BeamCAL. Extracting information from these forward calorimeters is different to extracting information in the barrel and the end cap. As forward calorimeters have very low angular acceptances, most particles in these forward detector would be very forward particles from beam induced background. However,  \cite{sailer2012radiation} shows that sufficiently high energy electrons can be efficiently identified in the \BeamCAL and \LumiCAL.
 
 For the \CLICILD detector concept, energies deposited in the \LumiCAL and the \BeamCAL are not simulated. This is because the thousands of beam induced background particles per bunch crossing (see \Section{}) requires expensive computational resources. The current simulation software could not handle the simulation in a feasible time. Therefore, the adopted approach is to parameterise the background particle energy deposition leading to electron tagging algorithms.
-%I changed 'and leads to' to 'leading to'. Is that what you meant? The original text was mixing tenses  
+%I changed 'and leads to' to 'leading to'. Is that what you meant? The original text was mixing tenses
 
 For the \BeamCAL, \cite{Sailer:2017onh} describes an electron tagging algorithm developed using \rootS{3} collision environment by comparing the simulated electron and background energy distributions. An electron is tagged if the energy is significantly larger than the expected background energy distributions.
 
@@ -908,6 +908,7 @@ metric for the optimal cuts & Gini Index \\
 bagging fraction & 0.5 \\
 Number of bins per variables & 40 \\
 End node output & x $\in [0,1]$ \\
+Do-PreSelection & yes \\
 \hline \hline
 \end{tabular}
 
@@ -1169,7 +1170,7 @@ The flavour tagging processor is trained with the optimal jet parameters at \roo
 \end{figure}
 
 %why have the pre-selection cuts changed?
-The pre-selection cuts at \rootS{3} are largely the same as ones for \rootS{1.4} analysis, listed in \Table{tab:doubleHiggs3TeVPreSel}. The reason for using a differnt b tag cut is because the performance of flavour tagging is poorer at high \sqrt{S}. A different cut is need. \FIGURE{fig:doubleHiggs3PreSelbtag} shows the distribution of the highest b-jet tag, where the cut above 0.7 helps to reduce background events with no b-jets in final states. The cut is aggressive to compensate for the worse performance of the flavour tagging at high \sqrtS.
+The pre-selection cuts at \rootS{3} are largely the same as ones for \rootS{1.4} analysis, listed in \Table{tab:doubleHiggs3TeVPreSel}. The reason for using a differnt b tag cut is because the performance of flavour tagging is poorer at high \sqrtS. A different cut is need. \FIGURE{fig:doubleHiggs3PreSelbtag} shows the distribution of the highest b-jet tag, where the cut above 0.7 helps to reduce background events with no b-jets in final states. The cut is aggressive to compensate for the worse performance of the flavour tagging at high \sqrtS.
  \FIGURE{fig:doubleHiggs3PreSelmHH} shows the distribution of the invariant mass of the two Higgs system, where the cut above 150\,GeV is effective against samples with two quark final states.
 
 \begin{table}[!htbp]

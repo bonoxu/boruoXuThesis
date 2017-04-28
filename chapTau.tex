@@ -214,7 +214,7 @@ Calorimetric information is used to identify electron and muon. An electron depo
 
 Energy information further separate different final states. Variables are normalised to the expect tau energy. For example, $\tilde{E}_{\Pgg}$, normalised energy of photons are different for final states with and without photons.
 
-Extra variables are used to differentiate specific final states. 
+Extra variables are used to differentiate specific final states.
 
 \subsection{\texorpdfstring{\decayRhoShort and \decayRhoShort}  resonances reconstruction}
 
@@ -222,15 +222,15 @@ Extra variables are used to differentiate specific final states.
 \begin{equation}
 \chi^{2} = {\left(\frac{m_{tot} -  m^{MC}_{\Prho}}{\sigma^{MC}_{\Prho}}\right)}^{2} + {\left(\frac{m_{\Pphoton \Pphoton} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2} \,,
 \end{equation}
-where $m_{\Pphoton \Pphoton}$ is the invariant mass of two photons and $m_{tot}$ is the invariant mass of the  photon pair and one \Pgpm. All combinations of photons and \Pgpm are tested. $m^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are expected masses of \Prho and \Ppizero, taken from \cite{Agashe:2014kda}. $\sigma^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are the half width of the invariant mass distribution of reconstructed \Prho and \Ppizero using the truth information. This minimisation allows \decayRhoShort final state to be separated from \decayAiPhotonShort, where failure to reconstruct photons causes  \decayAiPhotonShort events to be simualr to that of \decayRhoShort. 
+where $m_{\Pphoton \Pphoton}$ is the invariant mass of two photons and $m_{tot}$ is the invariant mass of the  photon pair and one \Pgpm. All combinations of photons and \Pgpm are tested. $m^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are expected masses of \Prho and \Ppizero, taken from \cite{Agashe:2014kda}. $\sigma^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are the half width of the invariant mass distribution of reconstructed \Prho and \Ppizero using the truth information. This minimisation allows \decayRhoShort final state to be separated from \decayAiPhotonShort, where failure to reconstruct photons causes  \decayAiPhotonShort events to be simualr to that of \decayRhoShort.
 
 Similarly, \decayAiPhotonShort can be separate using a extended minimisation with two extra photons:
 \begin{equation}
 \chi^{2} = {\left(\frac{m_{tot} -  m^{MC}_{\Pai}}{\sigma^{MC}_{\Pai}}\right)}^{2} + {\left(\frac{m_{\Pphoton1 \Pphoton2} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2}  + {\left(\frac{m_{\Pphoton3 \Pphoton4} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2} \,,
-\end{equation} 
+\end{equation}
 where \Prho has been replace by \Pai. Selected particles for the test are two photon pairs and one \Pgpm. Both photon pairs are required to be consistent with \Ppizero decaying to two photons. \FIGURE{fig:tauVarMA1} shows the distribution of $m_{tot}$ from \decayAiPhotonShort consistency test for selected final states. The main feature is that only \decayAiPhotonShort final state has a mass peak at \Pai resonance position. Comparing to simple invariant mass distribution in \Figure{fig:tauVarMVis}, \decayAiPhotonShort mass peak is enhanced.
 
-The $\chi^{2}$ functions for both consistency test are adapted for cases where reconstruction fails to resolve photon pairs. Relevant terms are dropped from the expression if there are fewer photons than required. 
+The $\chi^{2}$ functions for both consistency test are adapted for cases where reconstruction fails to resolve photon pairs. Relevant terms are dropped from the expression if there are fewer photons than required.
 
 \subsection{Separate \decayElectronShort from \decayPionShort}
 
@@ -242,17 +242,32 @@ Another type of information to differentiate an EM shower from a \Pem and a earl
 
 \section{Multivariate Analysis}
 
-For the multivariate analysis, the multiclass class of the TMVA package \cite{Therhaag:2009dp} was used to perform a multiclass classification, which trains the seven final states simultaneously. The multiclass class is an extension of the standard two-class signal-background classifier.
+For the multivariate analysis, the multiclass class of the TMVA package \cite{Therhaag:2009dp} was used to perform a multiclass classification, which trains the seven final states simultaneously. The multiclass class is an extension of the standard two-class signal-background classifier. The discussion on multivariate analysis can be found in \Section{sec:pandoraMVA}. The multiclass classifier is discussed in \Section{sec:pandoraMVAmulticlass}.
 
-There are two ways for the training. "One v.s. one" is each class is trained against each other class. And the overall likelihood is normalised. The second way to train is called "one v.s. all", which is when each class is trained against all other classes.
+The multiclass classifier used is Boosted Decision Tree with Gradient boost (BDTG). The optimisation of the BDTG classifier follows the strategy in \Section{sec:pandoraMVAoptimisation}. The optimised parameters are listed in \Table{tab:tauBDTparameters}. Explanation of variables can be found in \Section{sec:pandoraMVAbdtVar}.  Half of the randomly selected samples were used in the training process and the other half were used for testing.
 
-Using a three-class example, A, B and C, "one v.s. one" scheme trains A against B, B against C, and C against A. Then the likelihood is normalised. "One v.s. all" would train A against B plus C, B against A plus C, and C against A plus B.
+\begin{table}[!tbp]\centering
+%\small{
+\begin{tabular}{lr}
+\hline \hline
+ Parameter &  Value \\
+\hline
+Depth of tree & 5 \\
+Number of trees & 3000 \\
+Boosting & gradient boost \\
+learning rate of the gradient boost & 0.1 \\
+metric for the optimal cuts & Gini Index \\
+bagging fraction & 0.5 \\
+Number of bins per variables & 100 \\
+End node output & yes/no \\
+\hline \hline
+\end{tabular}
 
-TMVA multiclass implementation uses "one v.s. all" scheme. For each final state, the multiclass classifier will train the final state as the signal against all other final states as the background. This process is repeated for each final state. The classifier output for a single event is a normalised response for each final state, where the sum is one. The response of each final state of a event can be treated as the likelihood. The event is classified into a particular final state if the final state has the highest classifier output response. The advantage of using the multiclass is that the correlation between different final states are accounted for and the classifier output are correctly adjusted for multiple final states, hence one event can only be classified into one final state. The issue with the multiclass is that discriminative variables for each final state need enter the training stage, resulting in a large number of variables.
+\caption
+{Optimised parameters for the Boosted Decision Tree with Gradient boost multiclass classifier. See \Section{sec:pandoraMVAbdtVar} for detailed explanation of variables.}
+\label{tab:tauBDTparameters}
+\end{table}
 
-Half of the randomly selected samples were used in the training process and the other half were used for testing.
-
-The TMVA multiclass classifier used is boosted decision tree with gradient boosting (BDTG), as it was found to give for the best performance. The MVA classifier is trained and optimised to give the best overall separation across all final states. MVA will be discuss further in \Section{}
 
 \section{Result}
 

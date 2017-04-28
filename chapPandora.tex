@@ -388,6 +388,7 @@ Strictly, there should be three statistically independent samples for the MVA. O
 This classification scheme can be easily extended to multiple classes, implemented in TMVA with multiclass class. The multiclass class is used in the tau decay mode classification in \Section{} and in the flavour tagging classifier in \Section{sec:pandoraLCFI}.
 
 \subsection{Optimisation and overfitting}
+\label{sec:pandoraMVAoptimisation}
 
 The optimisation of the model refers to selecting the optimal free parameters of the model. One could build a complex model which fits the training samples very well, but it would not be optimal for another testing sample. A simple model is less prone to statistical fluctuation of samples, however, it might be too simple to achieve the optimal modeling. The former case is known as overfitting, or overtraining. The latter case is called underfitting, or undertraining.
 
@@ -525,18 +526,20 @@ The power of the ablative boosting to dramatically improve the performance of a 
 TMVA implementation of the BDT for the output is using a likelihood estimator, depending on how often a event is classified as signal in the forest. The likelihood number is later used to select signal from background.
 
 \paragraph{Optimisation of Boosted Decision Tree}
-
+\label{sec:pandoraMVAbdtVar}
 Many parameters of the BDT can be tuned. The tuned parameters are described below.
 
 The most important parameter is the depth of a tree, which determines how many end nodes a tree has, or the degrees of freedom of a tree. The related parameter is the number of trees. Experience shows that using many small trees yields the best result. The performance as a function of the depth is shown in \Figure{fig:doubleHiggsMVAovertraining}.
 
-The number of tree is another important parameter. Intuitively large number of trees leads to overfitting. However, it has been shown that a large number does not lead to overfitting, using the definition above. There is a debate on how to determine the optimal number of tree.
+The number of tree is another important parameter. Intuitively large number of trees leads to overfitting. However, it has been shown that a large number does not lead to overfitting, using the definition above. Therefore there is a debate on the metric to determine the optimal number of tree.
 
-The minimum number of events in a node, which is a stopping criteria for tree growing, affects the size of the tree. But it is less influential than the depth of the tree. The chosen value is 0.25\% of the total events.
+The minimum number of events in a node, which is a stopping criteria for tree growing, affects the size of the tree. But it is less influential than the depth of the tree.
 
 The boosting has two variant in TMVA implementation, adaptive boost and gradient boost.
 
 The learning rate of the adaptive boost, which controls how fast the weight changes for events in each boosting iteration. Experience shows small learning rate with many trees work better than large learning rate with few trees.
+
+The shrinkage rate of the gradient boost is similar to the learning rate of the adaptive. It controls how fast the weight changes for events in each boosting iteration. Again a small value is preferable. 
 
 The usual choice of the metric for the optimal cuts is either Gini index or cross-entropy. Typically Gini index metric is chosen. It makes little difference to performances, comparing to the cross-entropy metric.
 
@@ -546,8 +549,10 @@ For the end node, it is determined as either signal-like or background-like, bas
 
 Bagging fraction determines the fraction of randomly selected samples used in each boosting iteration. By choosing a smaller value, samples between each boosting iteration are less correlated. Hence the overall performance improves.
 
+DoPreSelection flag allows the classifier to throw away phases spaces where there is only background events.
 
 \subsection{Multiple classes}
+\label{sec:pandoraMVAmulticlass}
 % ATTN used in tau chapter
 
 The above discussion is done assuming two classes - signal and background. The argument can be easily extended to multiple classes. There are two ways for the training. ``One v.s. one'' is each class is trained against each other class. And the overall likelihood is normalised. The second way to train is called ``one v.s. all'', which is when each class is trained against all other classes.
