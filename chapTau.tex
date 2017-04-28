@@ -216,8 +216,8 @@ Energy information further separate different final states. Variables are normal
 
 Extra variables are used to differentiate specific final states.
 
-\subsection{\texorpdfstring{\decayRhoShort and \decayRhoShort}  resonances reconstruction}
-
+\subsection{\texorpdfstring{\decayRhoShort and \decayRhoShort} \, resonances reconstruction}
+\label{sec:tauResonance}
 \decayRhoShort and \decayAiPhotonShort are identified further using their resonance structure. For example, \decayRhoShort final state contains a \Pgpm and a \Ppizero decaying to two photons. By selecting \Pgpm and photons consistent with \Prho decay pattern, \decayRhoShort final state could be separated. The particle selection is via minimising a  $\chi^{2}$ function, defined as:
 \begin{equation}
 \chi^{2} = {\left(\frac{m_{tot} -  m^{MC}_{\Prho}}{\sigma^{MC}_{\Prho}}\right)}^{2} + {\left(\frac{m_{\Pphoton \Pphoton} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2} \,,
@@ -247,7 +247,7 @@ For the multivariate analysis, the multiclass class of the TMVA package \cite{Th
 The multiclass classifier used is Boosted Decision Tree with Gradient boost (BDTG). The optimisation of the BDTG classifier follows the strategy in \Section{sec:pandoraMVAoptimisation}. The optimised parameters are listed in \Table{tab:tauBDTparameters}. Explanation of variables can be found in \Section{sec:pandoraMVAbdtVar}.  Half of the randomly selected samples were used in the training process and the other half were used for testing.
 
 \begin{table}[!tbp]\centering
-%\small{
+%\small
 \begin{tabular}{lr}
 \hline \hline
  Parameter &  Value \\
@@ -269,52 +269,63 @@ End node output & yes/no \\
 \end{table}
 
 
-\section{Result}
+\section{Classification Efficiency}
+
+The reconstruction efficiencies for the seven tau decay final states are shown in \Table{tab:TauSelExample}. Bold numbers show the correct classification probability. For example, 99.8\%  of true \decayElectronShort are reconstructed correctly.
+
+For the \decayElectronShort decay mode, a high correct classicisation is achieve, due to using particle ID from \pandora and calorimetric information. Similarly for \decayMuonShort decay mode,  99.5\% correct rate is achieved, due to efficient tracking detector and muon reconstruction algorithm.
+
+For the \decayPionShort decay mode, 3.4\% confusion with \decayRhoShortest decay mode  is to due to differentiate two event topologies. Around 15\% of \decayPionShort events have at least one photon reconstructed, mostly due to the FSR. If the reconstruction is unable to identify the photon pair from \Ppizero decay in \decayRhoShortest decay mode, two decay modes would appear to  similar and confusion is caused. The confusion with \decayElectronShort is at percent level, which is low due to the usage of EM shower variables. The percent level confusion with \decayAiPionShortest is because the tracking efficiency is at 98\%, where 2\% \decayPionShort events have more than one track reconstructed.
+
+For the \decayRhoShortest decay mode, biggest confusion is with \decayAiPhotonShortest because of the similar reason of unable to reconstruct all photons form \Ppizero decaying.
+
+For the \decayAiPhotonShortest decay mode, the correct classicisation rate is the lowest as it is most challenging to reconstruct correctly: two photon pairs and  one \Ppipm. The 9.5\% confusion with \decayRhoShortest is due to the same reconstruction failure issue. It should be noted that \Figure{fig:tauVarNPhoton} suggests that 30\% of \decayAiPhotonShortest events have fewer than four photons reconstructed, which overlap with \decayRhoShortest distribution. The \decayAiPhotonShortest resonance reconstruction (\Section{sec:tauResonance}) and the multiclass classifier reduce the confusion to  9.5\% from 30\%.
+
+For the \decayAiPionShortest decay mode, most confusion is with \decayThreePionPhotonShort, due to inability of separating photons. And the reason is the same for the confusion of  \decayThreePionPhotonShort decay mode classified as \decayAiPionShortest decay mode.
+The unprecedented high classification rate has been achieved. The improvement of photon reconstruction described in \Section{} improved the ability to separate 1-prong final state. Most notably,  \Figure{} shows number of photons have a high correct reconstruction efficiency.
 
 
 \begin{table}[htbp]
 \centering
-
-\smallskip
 \small
-\begin{tabular}{| l | r | r | r | r | r | r | r |}
+%\smallskip
+\begin{tabular}{ l   r  r  r  r  r  r  r }
 \hline
-  Reco $\downarrow$ True $\to$  & \decayElectronShort & \decayMuonShort &\decayPionShort & \decayRhoShortest &\decayAiPhotonShortest &\decayAiPionShortest &\decayThreePionPhotonShort \\
+\hline
+Reco $\downarrow$ Truth $\to$  & \decayElectronShort & \decayMuonShort &\decayPionShort & \decayRhoShortest &\decayAiPhotonShortest &\decayAiPionShortest &\decayThreePionPhotonShort \\
 \hline
 
-\decayElectronShort  &\textbf{99.8}&-&0.9&1.1&0.8&-&-\\
-\decayMuonShort   &-&\textbf{99.5}&0.5&-&-&-&-\\
-\decayPionShort  &-&0.3&\textbf{93.2}&0.9&-&0.4&-\\
-\decayRhoShortest&-&-&4.1&\textbf{93.0}&10.5&0.6&2.8\\
-\decayAiPhotonShortest&-&-&-&4.3&\textbf{88.2}&-&1.0\\
-\decayAiPionShortest&-&-&1.0&0.3&-&\textbf{96.6}&6.9\\
-\decayThreePionPhotonShort&-&-&-&0.4&0.4&2.4&\textbf{89.3}\\
+{\decayElectronShort}&\textbf{99.7}&-&0.9&0.6&0.4&-&-\\
+{\decayMuonShort}&-&\textbf{99.5}&0.6&-&-&-&-\\
+{\decayPionShort}&-&0.3&\textbf{94.0}&0.8&-&0.4&-\\
+{\decayRhoShort}&-&-&3.4&\textbf{93.6}&9.5&0.6&2.3\\
+{\decayAiPhotonShort}&-&-&-&4.5&\textbf{89.7}&-&0.6\\
+{\decayAiPionShort}&-&-&0.9&-&-&\textbf{96.8}&6.4\\
+{\decayThreePionPhotonShort}&-&-&-&0.3&-&2.0&\textbf{90.6}\\
 
+\hline
 \hline
 \end{tabular}
 
-\caption[]%
-{The percentage of reconstructed decay modes corresponds to underlying true decay modes, with \rootSGeV{100} for nominal \CLICILD detector model. Bold numbers show the correctly reconstructed percentages. Numbers less than 0.25\% are not shown. Statistical uncertainties are less than 0.25\%. Final states include \Pgngt, which is not shown.}
+\caption[Classification efficiency for tau decay modes.]
+{ Classification efficiency in percentage for tau decay modes using the nominal ILD detector model , for \rootSGeV{100}. Bold numbers show the correct classification probability. Numbers below 0.25\%, and \Pgngt are not shown in decay modes, for display purposes. Statistical uncertainties are less than 0.25\%.}
 \label{tab:TauSelExample}
 \end{table}
 
 
-The reconstruction efficiencies for the seven final state of the tau decaying with c.o.m. energy of 100 \,GeV for the nominal CLIC\_ILD detector are shown in \Table{tab:TauSelExample}. The perfect reconstruction would result in only terms in the diagonal.
-
-The unprecedented high classification rate has been achieved. The improvement of photon reconstruction described in \Section{} improved the ability to separate 1-prong final state. Most notably,  \Figure{} shows number of photons have a high correct reconstruction efficiency.
-
-For leptonic decay, the selection efficiency is above 99.5\% as the tracking system have much better resolution than the calorimeter.
-
-The \decayMuonShort final state has very clear topology, as muon deposits energy in the muon chamber. Therefore, there is little confusion with other final states.
-
-\decayElectronShort final state is well separated, due to the specialised variables aimed to differentiate early hadronic shower to electromagnetic shower. However, there is still about 1\% confusion in one prong final state.
-
-For one prong final states, \decayPionShort, \decayRhoShortest, and \decayAiPhotonShortest, the confusion is mainly due to the imperfect separation of nearby photons, originated form \Ppizero.
 
 
-Similarly the confusion between 3-prong final state, \decayAiPionShortest, and \decayThreePionPhotonShort is caused by the inability to resolve photon pairs.
+\section{Electromagnetic calorimeter  optimisation}
 
-\section{Electromagnetic calorimeter  optimisaiton}
+In the above section, an analysis on tau decay mode classification is presented. Events are \eeToTauTau at \rootSGeV{100} with nominal \ILD detector model. This classification can be applied for different  \sqrtS and with different detector models. The main reconstruction issue is to separate boosted photon pair from \Ppizero decay. High \sqrtS would photon pair more collimated, and therefore more challenging to separate. The \ECAL cell size is crucial in separating the EM showers from photons. As discussed in previous chapter, separating photons requires a high transverse spatial resolution. Therefore, the \ECAL square cell size is expected to affect the classification efficiency.
+
+
+
+The main difficulty in the classification is to classify 1-prong final states.  These final states involves \Ppizero, where two photons from \Ppizero decay could be poorly reconstructed. At high energy, \Ppizero is boosted making the reconstruction more challenging. The ability to reconstruct the two photons as separate entities requires good pattern recognition algorithm for photons and \ECAL spatial resolution. Hence the improved photon reconstruction in \Chapter{chap:Photon} is used in this study. The impact of the \ECAL transverse spatial resolution on the tau decay classification is demonstrated as well.
+
+
+
+To study of the impact of the ECal square cell sizes on the classification of tau decays, the above procedure was repeated for ECal square cell sizes at 3, 5, 7, 10, 15 and 20\,mm, at four  \rootS energy of 100, 200, 500, 1000\,GeV. Other ECAL dimensions were kept constant. Because the lepton reconstruction mostly rely on the tracking system, which was not varied in this study, only the  hadronic tau decays were investigated and compared between different ECAL square cell sizes.
 
 As discussed above, the tau decay mode separation is an benchmark test of detector performance. The ability to resolve photon pairs is crucial to separate different 1-prong states, and different 3-prong state. One of the main feature of calorimeter design affecting the photon resolution is the size of electromagnetic calorimeter (ECal) cell for the high granular calorimeter. The finer ECal cell size is, the better resolution of reconstructing individual photons.
 
@@ -323,27 +334,34 @@ The classification is being tested with the impact of different \sqrtS and diffe
 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
-%\includegraphics[width=.45\textwidth]{plots/decayMode0}
-%\qquad
-%\includegraphics[width=.45\textwidth]{plots/decayMode1}
-%\qquad
-\includegraphics[width=.45\textwidth]{tau/decayMode2}
-\qquad
-\includegraphics[width=.45\textwidth]{tau/decayMode3}
-\qquad
-\includegraphics[width=.45\textwidth]{tau/decayMode4}
-\qquad
-\includegraphics[width=.45\textwidth]{tau/decayMode5}
-\qquad
-\includegraphics[width=.45\textwidth]{tau/decayMode6}
-\qquad
-\includegraphics[width=.45\textwidth]{tau/legend}
-%\qquad
-%\includegraphics[width=.4\textwidth]{plots/hadEff}
-% "\includegraphics" from the "graphicx" permits to crop (trim+clip)
-% and rotate (angle) and image (and much more)
-\caption[]%
-{The selection efficiencies for various final states against the ECal cell size for different c.o.m. energies with the nominal \CLICILD detector model are shown. The top left, top right, middle left, middle right and bottom left plots are for the \decayPion, \decayRho,  \decayAiPhoton, \decayAiPion  and \decayThreePionPhoton  final states respectively. From the top to the bottom, blue, orange, green and red lines are representing the \sqrtS = 100, 200, 500 and 1000\,GeV respectively.}
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/plots3/decayMode2.pdf}
+  \caption{}
+  \label{fig:tauDecayMode2}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/plots3/decayMode3.pdf}
+  \caption{}
+  \label{fig:tauDecayMode3}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/plots3/decayMode4.pdf}
+  \caption{}
+  \label{fig:tauDecayMode4}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/plots3/decayMode5.pdf}
+  \caption{}
+  \label{fig:tauDecayMode5}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/plots3/legend.pdf}
+  \caption{}
+  \label{fig:tauDecayLegend}
+\end{subfigure}
+\caption[The correct classification probabilities for hadronic tau decay final states  as a function of the \ECAL square cell sizes]
+{
+ The correct classification probabilities for hadronic tau decay final states  as a function of the \ECAL square cell sizes, using the nominal \ILD detector model with \sqrtS = 100, 200, 500 and 1000\,GeV. \FIGURE{fig:tauDecayMode2}, ~\ref{fig:decayMode3}, ~\ref{fig:decayMode3}, ~\ref{fig:decayMode4}, ~\ref{fig:decayMode5} show the  \decayPionShort,  \decayRhoShortest, \decayAiPhotonShortest, \decayAiPionShortest, \decayThreePionPhotonShort decay modes, respectively.}
 \label{fig:TauPionEfficiency}
 \end{figure}
 
