@@ -459,32 +459,75 @@ The restraint on $N_{p}$, the number of peaks identified by the peak finding, is
 
 \section{Compare with no photon reconstruction}
 
-\begin{figure}[tbph]
-\centering
-        \includegraphics[width=0.45\textwidth]{photon/nPhotonVSnoPhotonReco}
-\caption[Average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample and with different energy pairs.]
-{\Figure{fig:photonDoubleCompareN_pN_all} shows the average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample. \Figure{fig:photonDoubleCompareEnergies} shows the  average numbers of photon for four different photon pairs: 500 - 50, 500 - 500, 100 - 10 and 10 - 10\,GeV.}
-\label{fig:photonDoublePerformance}
-\end{figure}
+Photon reconstruction improves single photon resolutions and jet energy resolution at high \sqrtS. This section compares the performance with and without photon related algorithms using photon pair and jet samples. The nominal \ILD detector model is used. The single and two photon events were generated with a uniform distribution in the solid angle for a range of the opening angles between the pair. Events are selected such that there is no early photon conversion and the Monte Carlo photon deposits energies in the calorimeter. The events are further restricted to photon decaying in barrel and end cap region only, to minimise the detector effect.
+
+
 
 \begin{figure}[tbph]
 \centering
-        \includegraphics[width=0.45\textwidth]{photon/JERmuon}
-\caption[Average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample and with different energy pairs.]
-{\Figure{fig:photonDoubleCompareN_pN_all} shows the average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample. \Figure{fig:photonDoubleCompareEnergies} shows the  average numbers of photon for four different photon pairs: 500 - 50, 500 - 500, 100 - 10 and 10 - 10\,GeV.}
-\label{fig:photonDoublePerformance}
+\includegraphics[width=0.45\textwidth]{photon/nPhotonVSnoPhotonReco.pdf}
+\caption[Average number of photons using two photons of 500 and 50\,GeV per event sample.]
+{Average number of photons using two photons of 500 and 50\,GeV per event sample.}
+\label{fig:photonDoublePerformanceNoReco}
+\end{figure}
+
+\FIGURE{fig:photonDoublePerformanceNoReco} shows the photon reconstruction for two spatially close photons. Without the photon related algorithms, fragments are produced.  The number of photons between 0 and 10\,mm separation is around 1.5, and it is extremely challenging to separate photons less than two cells apart.  Without the photon related algorithms, photon separation resolution is much worse, as the number of photon appears to be flat between 0 to 30\,mm separation. With the photon related algorithms, two photons start to be separated at 10\,mm and fully separated at 20\,mm separation.
+
+
+
+
+\begin{figure}[tbph]
+\centering
+\includegraphics[width=0.45\textwidth]{photon/JERmuonNew.eps}
+\caption[Jet energy resolution as a function of the di-jet energy without and with photon related algorithms]
+{Jet energy resolution as a function of the di-jet energy using \Zuds sample at barrel region. The top orange and bottom blue dots are reconstructed without and with photon related algorithms.}
+\label{fig:photonJERmuon}
 \end{figure}
 
 
+The improvement in completeness and resolution in photon reconstruction, leads to a considerable improvement in the jet energy resolution at high energy. Jet energy resolution is defined as the root mean squared divided by the mean for the smallest width of distribution that contains 90\% of entries, using \Zuds sample at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \PZ is used as \pandora does not attempt to recover missing momentum from semi-leptonic decay of heavy quarks. The di-jet energy is sampled at 91, 200, 360 and 500\,GeV. Shown in \Figure{fig:photonJERmuon}, the jet energy resolutions are much better at 360 and 500\,GeV with improved photon reconstruction. By identifying photons before reconstructing charged particles in a dense jet environment, the reconstruction task is easier and less likely to make mistake. The improvement are more significant at high energy.
 
+To access the impact of photon algorithms on jet energy resolution, perfect photon reconstruction is used to compare the performances, which identifies calorimeter hits from truth information and separate these photons from rest of the \pandora reconstruction. Same jet samples are used. Photon confusion, which is defined as the quadrature difference between a normal reconstruction and a perfect photon confusion, is listed in \Table{}
+
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ l   r  r  r  r   }
+\hline
+\hline
+ &\rootSGeV{91} & 200\,GeV & 360\,GeV & 500\,GeV  \\
+\hline
+\pandora without photon algorithms & 5 & 10 & 10 & 10  \\
+\pandora with photon algorithms & 5 & 10 & 10 & 10  \\
+\hline
+\hline
+\end{tabular}
+
+\caption[Optimised parameters of \PhotonFragmentRemoval algorithm as a function of \ECAL square cell size.]
+{Optimised parameters of \PhotonFragmentRemoval algorithm as a function of \ECAL square cell size.}
+\label{tab:TauPhotonFragmentRemovalParameter}
+\end{table}
+
+\begin{comment}
+    Double_t y2[nPoints] = {3.56892,2.85493,2.90771,3.08924};// MUON /r02/lc/xu/MarlinPandoraTest/HEAD20151210/20151211am10/
+    Double_t erry2[nPoints] = {0.0460938,0.036756,0.0370356,0.0396873 };// MUON with 20150413 20150929am14
+
+    //Double_t y2[nPoints] = {3.49641, 2.72426, 2.61667, 2.7686};// perfect photon from steve
+    //Double_t erry2[nPoints] = {0.0444942,0.036756,0.0334291,0.0353562 };//
+
+
+    Double_t y1[nPoints] = {3.76354,2.8844,2.77463,2.89704};// new photon with merging 20160107am13
+    Double_t erry1[nPoints] = {0.0482638,0.0371727,0.0357569 ,0.03669   };//
+\end{comment}
 \section{Photon reconstruction performance improvement}
 \label{sec:photonPerformanceCompare}
 
 
-
 Motivations and implementations of four different photon related algorithms have been described above. The main photon reconstruction algorithm in \Section{sec:photonRecostrcution} improves the photon completeness and the photon pair resolution, due to the improved two dimensional peak finding algorithm in \Section{sec:peakFinding}. The fragment removal algorithms in \Section{sec:photonFragRemoval} and \Section{sec:photonHighEFragRemoval} further reduce the photon fragments in the \ECAL and the \HCAL. The photon splitting algorithm in \Section{sec:photonSplitting} exploits the peak finding algorithms to separate photons using transverse shower information, which improves the photon separation resolution. Because of the high photon reconstruction completeness, the jet energy resolution receives a small improvement.
 
-This section reviews the performance improvement with the introduced algorithms, using single photon, photon pair and jet samples. Since the changes to the photon reconstruction is made in \pandora version 2, version 3 contains all the improvement of the photon reconstruction. Therefore, version 1 and version 3 are compared to show the improvement. The \ILD detector model is used. The single and two photon events were generated with a uniform distribution in the solid angle for a range of the opening angles between the pair. Events are selected such that there is no early photon conversion and the Monte Carlo photon deposits energies in the calorimeter. The events are further restricted to photon decaying in barrel and end cap region only, to minimise the detector effect.
+
+
+This section reviews the performance improvement with the introduced algorithms, using single photon, photon pair and jet samples. Since the changes to the photon reconstruction is made in \pandora version 2, version 3 contains all the improvement of the photon reconstruction. Therefore, version 1 and version 3 are compared to show the improvement.
 
 %The \ECAL square cell size is about 5\,mm.
 
@@ -553,7 +596,7 @@ Another metric to reflect the improvement in photon reconstruction is the fracti
 \label{fig:photonJER}
 \end{figure}
 
-The improvement in completeness and resolution in photon reconstruction, as shown in single photon and double photon reconstruction, leads to a small improvement in the jet energy resolution at high energy. Jet energy resolution is defined as the root mean squared divided by the mean for the smallest width of distribution that contains 90\% of entries, using \Zuds sample at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \PZ is used as \pandora does not attempt to recover missing momentum from semi-leptonic decay of heavy quarks. The di-jet energy is sampled at 91, 200, 360 and 500\,GeV. Shown in \Figure{fig:photonJER}, the jet energy resolutions are better at 360 and 500\,GeV with improved photon reconstruction. This is due to more aggressive photon reconstruction especially nearby tracks, which is more useful at a high-energy dense jet environment.
+The improvement in completeness and resolution in photon reconstruction, as shown in single photon and double photon reconstruction, leads to a small improvement in the jet energy resolution at high energy. The di-jet energy is sampled at 91, 200, 360 and 500\,GeV. Shown in \Figure{fig:photonJER}, the jet energy resolutions are better at 360 and 500\,GeV with improved photon reconstruction. This is due to more aggressive photon reconstruction especially nearby tracks, which is more useful at a high-energy dense jet environment.
 
 The improvement of the photon is also demonstrated in \Chapter{chap:Tau}, where tau lepton decay modes are classified. Excellent photon reconstruction leads to a high classification rate.
 
@@ -581,26 +624,28 @@ The introduction of the revised photon reconstruction and photon splitting impro
 In \Section{sec:photonPerformanceCompare}, the improved performance of the photon reconstruction is demonstrated with different metrics, using single photon, double photons and jet samples. In this section, the performance of the photon reconstruction as a function of photon energies will be described.
 
 
-Single particle efficiency
+
+
+
+
+Single particle efficiency is demonstrated in \Figure{fig:photonSingleEffPerformance}. Using single photon samples, an event can have an efficiency of 1, if the photon reconstructed corresponds to the truth photon, or an efficiency of 0. The low efficiency in the first bin, from 0 to 0.25\,GeV is because photon reconstruction does not attempt to reconstruct photons below 0.2\,GeV.  The single photon reconstruction efficiency is above 98\% for photons above 2\GeV and above 99.5\% for photons above 100\,GeV.
 
 \begin{figure}[tbph]
 \centering
     \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{photon/singlePhotonEff2full}
+        \includegraphics[width=\textwidth]{photon/singlePhotonEff2fullEdt}
         \caption{}
         \label{fig:photonSingleEffLow}
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{photon/singlePhotonEff}
+        \includegraphics[width=\textwidth]{photon/singlePhotonEffEdt}
         \caption{}
         \label{fig:photonSingleEff}
     \end{subfigure}
-\caption[Average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample and with different energy pairs.]
-{\Figure{fig:photonDoubleCompareN_pN_all} shows the average numbers of photon and particle using two photons of 500 and 50\,GeV per event sample. \Figure{fig:photonDoubleCompareEnergies} shows the  average numbers of photon for four different photon pairs: 500 - 50, 500 - 500, 100 - 10 and 10 - 10\,GeV.}
-\label{fig:photonDoublePerformance}
+\caption[Single photon reconstruction efficiency as a function of energy.]
+{Single photon reconstruction efficiency as a function of energy. \Figure{fig:photonSingleEffLow} shows the low energy region and \Figure{fig:photonSingleEff} shows high energy region.}
+\label{fig:photonSingleEffPerformance}
 \end{figure}
-
-
 
 
 

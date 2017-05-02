@@ -319,18 +319,50 @@ Reco $\downarrow$ Truth $\to$  & \decayElectronShort & \decayMuonShort &\decayPi
 
 In the above section, an analysis on tau decay mode classification is presented. Events are \eeToTauTau at \rootSGeV{100} with nominal \ILD detector model. This classification can be applied for different  \sqrtS and with different detector models. The main reconstruction issue is to separate boosted photon pair from \Ppizero decay. High \sqrtS would photon pair more collimated, and therefore more challenging to separate. The \ECAL cell size is crucial in separating the EM showers from photons. As discussed in previous chapter, separating photons requires a high transverse spatial resolution. Therefore, the \ECAL square cell size is expected to affect the classification efficiency.
 
-
-
 The main difficulty in the classification is to classify 1-prong final states.  These final states involves \Ppizero, where two photons from \Ppizero decay could be poorly reconstructed. At high energy, \Ppizero is boosted making the reconstruction more challenging. The ability to reconstruct the two photons as separate entities requires good pattern recognition algorithm for photons and \ECAL spatial resolution. Hence the improved photon reconstruction in \Chapter{chap:Photon} is used in this study. The impact of the \ECAL transverse spatial resolution on the tau decay classification is demonstrated as well.
 
+The analysis is repeated with varying \ECAL square cell sizes at 3, 5, 7, 10, 15 and 20\,mm, at four  \sqrtS = 100, 200, 500, 1000\,GeV. The multivariate classifier is trained for each cell size and each \sqrtS. Other \ECAL dimensions are kept the same as the \ILD nominal detector. Because the lepton reconstruction mostly relies on the tracking system, which is not varied in this study, only the  hadronic tau decays were investigated and compared between different \ECAL square cell sizes.
 
 
-To study of the impact of the ECal square cell sizes on the classification of tau decays, the above procedure was repeated for ECal square cell sizes at 3, 5, 7, 10, 15 and 20\,mm, at four  \rootS energy of 100, 200, 500, 1000\,GeV. Other ECAL dimensions were kept constant. Because the lepton reconstruction mostly rely on the tracking system, which was not varied in this study, only the  hadronic tau decays were investigated and compared between different ECAL square cell sizes.
-
-As discussed above, the tau decay mode separation is an benchmark test of detector performance. The ability to resolve photon pairs is crucial to separate different 1-prong states, and different 3-prong state. One of the main feature of calorimeter design affecting the photon resolution is the size of electromagnetic calorimeter (ECal) cell for the high granular calorimeter. The finer ECal cell size is, the better resolution of reconstructing individual photons.
+As \pandora is optimised for the nominal \ILD detector, fragment removal algorithms have a large dependence on the \ECAL cell sizes. One algorithm is re-optimised for the varying \ECAL cell sizes. The \PhotonFragmentRemoval algorithm which merges photon fragments uses a distance metric and it is optimised with values listed in the \Table{tab:TauPhotonFragmentRemovalParameter}. As cell sizes become larger, the distance cut for merging photons are larger.
 
 
-The classification is being tested with the impact of different \sqrtS and different ECal square cell sizes. Around two million events were simulated at each \sqrtS = 100, 200, 500 and 1000\,GeV, with each different ECal square cell sizes of 3, 5, 7, 10, 15 and 20\,mm. Events were simulated and reconstructed in the same way as described above, with same selection applied. MVA classifier was trained individually for each \sqrtS and each ECal square cell size, with same set of discriminative variables.
+
+\begin{table}[htbp]
+\centering
+%\small
+%\smallskip
+\begin{tabular}{ l   r  r  r  r  r  r  }
+\hline
+\hline
+\ECAL square cell size /mm & 3 & 5 & 7 & 10 & 15 & 20  \\
+\hline
+
+ClosestHitDistance & 5 & 10 & 10 & 10 & 20 & 20 \\
+\hline
+\hline
+\end{tabular}
+
+\caption[Optimised parameters of \PhotonFragmentRemoval algorithm as a function of \ECAL square cell size.]
+{Optimised parameters of \PhotonFragmentRemoval algorithm as a function of \ECAL square cell size.}
+\label{tab:TauPhotonFragmentRemovalParameter}
+\end{table}
+
+
+\FIGURE{fig:TauPionEfficiency} shows the correct classification efficiencies for  tau hadronic decay final states  as a function of the \ECAL square cell sizes. For example, plotted values for 5\,mm cell size at \rootSGeV{100} are the same as the bold numbers in \Table{tab:TauSelExample}.
+
+
+
+To access the impact different ECal square size on detector performance, in particular ECal performance, the correct reconstruction efficiency for 1-prong and 3-prong final states is used as metric. The higher \sqrtS of the collision would degrade the performance, as photons are more boosted and more difficult to resolve.
+
+The leptonic decay  correct reconstruction efficiency is not used as a metric as they are similar across different ECal cell sizes. This is because the \Pepm and \Pgmpm identifications mostly rely on the tracking system, which was not varied in this study. The energy deposited in the calorimeter are used for the association to the tracks but it has a small impact on the lepton identification.
+
+\Figure{fig:TauPionEfficiency} shows that as the ECal cell sizes increase, the reconstruction efficiencies generally decrease. Larger cell sizes have lower spatial resolutions, making the separating of nearby photons more difficult.
+
+For the \decayAiPhoton final state, the selection efficiency for 500\,GeV rises from ECal cell sizes 15\,mm to 20\,mm and the one for 1000\,GeV rises from 7\,, to 20\,mm actually goes up as cell size increases. This is because when the algorithm can not reconstruct four photons in the \decayAiPhoton final state, and the event topology would be very similar to the \decayRho final states.
+
+For the \rootS = 100 and 200\,GeV, the selection efficiency of the 5\,mm ECal cell size is better than that of the 3\,mm. One possible explanation is that the  and the PandoraPFA have been optimised for the nominal ILD detector with the 5\,mm ECal cell size, which shares the same ECal structure with the nominal \CLICILD detector.
+
 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
@@ -355,30 +387,26 @@ The classification is being tested with the impact of different \sqrtS and diffe
   \label{fig:tauDecayMode5}
 \end{subfigure}
 \begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/plots3/decayMode6.pdf}
+  \caption{}
+  \label{fig:tauDecayMode6}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
   \includegraphics[width=\textwidth]{tau/plots3/legend.pdf}
   \caption{}
   \label{fig:tauDecayLegend}
 \end{subfigure}
-\caption[The correct classification probabilities for hadronic tau decay final states  as a function of the \ECAL square cell sizes]
+\caption[The correct classification efficiency for  tau hadronic decay final states  as a function of the \ECAL square cell sizes]
 {
- The correct classification probabilities for hadronic tau decay final states  as a function of the \ECAL square cell sizes, using the nominal \ILD detector model with \sqrtS = 100, 200, 500 and 1000\,GeV. \FIGURE{fig:tauDecayMode2}, ~\ref{fig:decayMode3}, ~\ref{fig:decayMode3}, ~\ref{fig:decayMode4}, ~\ref{fig:decayMode5} show the  \decayPionShort,  \decayRhoShortest, \decayAiPhotonShortest, \decayAiPionShortest, \decayThreePionPhotonShort decay modes, respectively.}
+ The correct classification efficiencies for  tau hadronic decay final states  as a function of the \ECAL square cell sizes, using the \ILD detector model with \sqrtS = 100, 200, 500 and 1000\,GeV. \FIGURE{fig:tauDecayMode2}, ~\ref{fig:tauDecayMode3}, ~\ref{fig:tauDecayMode3}, ~\ref{fig:tauDecayMode4},  and ~\ref{fig:tauDecayMode5} show the  \decayPionShort,  \decayRhoShortest, \decayAiPhotonShortest, \decayAiPionShortest, \decayThreePionPhotonShort decay modes, respectively.}
 \label{fig:TauPionEfficiency}
 \end{figure}
 
-To access the impact different ECal square size on detector performance, in particular ECal performance, the correct reconstruction efficiency for 1-prong and 3-prong final states is used as metric. The higher \sqrtS of the collision would degrade the performance, as photons are more boosted and more difficult to resolve.
-
-The leptonic decay  correct reconstruction efficiency is not used as a metric as they are similar across different ECal cell sizes. This is because the \Pepm and \Pgmpm identifications mostly rely on the tracking system, which was not varied in this study. The energy deposited in the calorimeter are used for the association to the tracks but it has a small impact on the lepton identification.
-
-\Figure{fig:TauPionEfficiency} shows that as the ECal cell sizes increase, the reconstruction efficiencies generally decrease. Larger cell sizes have lower spatial resolutions, making the separating of nearby photons more difficult.
-
-For the \decayAiPhoton final state, the selection efficiency for 500\,GeV rises from ECal cell sizes 15\,mm to 20\,mm and the one for 1000\,GeV rises from 7\,, to 20\,mm actually goes up as cell size increases. This is because when the algorithm can not reconstruct four photons in the \decayAiPhoton final state, and the event topology would be very similar to the \decayRho final states.
-
-For the \rootS = 100 and 200\,GeV, the selection efficiency of the 5\,mm ECal cell size is better than that of the 3\,mm. One possible explanation is that the  and the PandoraPFA have been optimised for the nominal ILD detector with the 5\,mm ECal cell size, which shares the same ECal structure with the nominal \CLICILD detector.
 
 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
-\includegraphics[width=.45\textwidth]{tau/hadronicEff}
+\includegraphics[width=.45\textwidth]{tau/plots3/hadronicEff.pdf}
 % "\includegraphics" from the "graphicx" permits to crop (trim+clip)
 % and rotate (angle) and image (and much more)
 \caption[]%
