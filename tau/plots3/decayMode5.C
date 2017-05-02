@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Tue Mar 21 19:51:13 2017) by ROOT version5.34/05
+//=========  (Tue May  2 12:38:33 2017) by ROOT version5.34/30
    TCanvas *c1 = new TCanvas("c1", "c1",12,51,800,700);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -28,7 +28,8 @@
    gre->SetTitle("Graph");
    gre->SetFillColor(1);
 
-   Int_t ci;   // for color index setting
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#7293cb");
    gre->SetLineColor(ci);
    gre->SetLineWidth(2);
