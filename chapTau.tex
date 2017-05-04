@@ -419,15 +419,15 @@ where $Br_{i}$ is the branching fraction of the hadronic decay mode $i$  after t
 
 For \tauHad at \rootSGeV{100}, the efficiency decreases from 94\% at 3\,mm cell size, to 91\% at 20\,mm cell size. The decrease is approximately proportional to the increase in the cell size.
 
-For \tauHad at \rootSGeV{200}, the efficiency decreases from 94\% at 3\,mm cell size, to 86\% at 20\,mm cell size. 
+For \tauHad at \rootSGeV{200}, the efficiency decreases from 94\% at 3\,mm cell size, to 86\% at 20\,mm cell size.
 %There is a large decrease from 15\,mm to 20\,mm cell size.
 
-For \tauHad at \rootSGeV{500}, the efficiency decreases from 92\% at 3\,mm cell size, to 78\% at 20\,mm cell size. Most significant decrease occurs at this \sqrtS. 
+For \tauHad at \rootSGeV{500}, the efficiency decreases from 92\% at 3\,mm cell size, to 78\% at 20\,mm cell size. Most significant decrease occurs at this \sqrtS.
 
-For \tauHad at \rootSGeV{1000}, the efficiency decreases from 85\% at 3\,mm cell size, to 75\% at 20\,mm cell size. 
+For \tauHad at \rootSGeV{1000}, the efficiency decreases from 85\% at 3\,mm cell size, to 75\% at 20\,mm cell size.
 %From 10\,mm cell size onwards, the \tauHad decrease slows down.
 
-The increase in \ECAL cell sizes has a larger impact on high \sqrtS. With decay products spatially close at high \sqrtS, it is more beneficial to have a smaller \EFCAL cell size to reconstruct individual particle.
+The increase in \ECAL cell sizes has a larger impact on high \sqrtS. With decay products spatially close at high \sqrtS, it is more beneficial to have a smaller \ECAL cell size to reconstruct individual particle.
 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
@@ -438,19 +438,53 @@ The increase in \ECAL cell sizes has a larger impact on high \sqrtS. With decay 
 \end{figure}
 
 
-\section{Separate \PHiggs from \PZ with tau pair decay} 
+\section{Separate \PHiggs from \PZ with tau pair decay}
 
-\PHiggs can be separated from  \PZ using  tau pair decay channel.  The difference in the spin of the boson reflects in the different spin correlation of the tau pair. By extracting the spin correlation, parent bosons can be separated. A proof-of-principle analysis is presented to demonstrate the physics usage of the tau decay mode classification. The subsequent sections discuss the ability to reconstruct the spin correlation of the \PZ using tau pair decay, and to match with the truth information.
+\PHiggs can be separated from  \PZ using  tau pair decay channel.  The difference in the spin of the boson reflects in the different spin correlation of the tau pair. By extracting the spin correlation, parent bosons can be separated. A proof-of-principle analysis is presented to demonstrate the physics usage of the tau decay mode classification, motivated by theoretical studies such as in \cite{Bullock:1991my}. The subsequent sections discuss the ability to reconstruct the spin correlation of the \PZ using tau pair decay, and to match with the truth information.
 
 \subsection{Identify tau pairs}
 
-The analysis largely follows the same procedure for the tau decay mode classification. Differences are highlighted in sections below. 
+The analysis largely follows the same procedure for the tau decay mode classification. Differences are highlighted in sections below.
 
-The channel is \HepProcess{\Pep \Pem \to \PZ \PZ}, where one \PZ decays hadronically and the other \PZ decays to a tau lepton pair. The samples were generated at \rootSGeV{350} without ISR contribution for this proof-of-principle study. 
-
-
-
-The final states Two methods are used to identify 
+The channel is \HepProcess{\Pep \Pem \to \PZ \PZ}, where one \PZ decays hadronically and the other \PZ decays to a tau lepton pair. The samples were generated at \rootSGeV{350} without ISR contribution for this proof-of-principle study.
 
 
+
+The final states Two methods are used to identify
+
+
+
+\begin{figure}[htbp]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2DMC}
+  \caption{}
+  \label{fig:TauSpin2DMC}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2Dreco}
+  \caption{}
+  \label{fig:TauSpin2Dreco}
+\end{subfigure}
+\caption[Two-dimensional plot of spin correlations of the tau lepton pair from \PZ decay, using \decayPionShort decay mode.]
+{Two-dimensional plot of spin correlations of the tau lepton pair from \PZ decay, using \decayPionShort decay mode.}
+\label{fig:TauSpin2D}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/1DMC}
+  \caption{}
+  \label{fig:TauSpin1DMC}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/1DrecoNoOverflow}
+  \caption{}
+  \label{fig:TauSpin1Dreco}
+\end{subfigure}
+\caption[One-dimensional plot of spin correlations of the tau lepton pair from \PZ decay, using \decayPionShort decay mode.]
+{One-dimensional plot of spin correlations of the tau lepton pair from \PZ decay, using \decayPionShort decay mode.}
+\label{fig:TauSpin1D}
+\end{figure}
 
