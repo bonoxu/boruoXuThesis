@@ -335,7 +335,7 @@ As \pandora is optimised for the nominal \ILD detector, fragment removal algorit
 \begin{tabular}{ l   r  r  r  r  r  r  }
 \hline
 \hline
-\ECAL square cell size /mm & 3 & 5 & 7 & 10 & 15 & 20  \\
+\ECAL square cell size (mm) & 3 & 5 & 7 & 10 & 15 & 20  \\
 \hline
 ClosestHitDistance & 5 & 10 & 10 & 10 & 20 & 20 \\
 \hline
@@ -448,9 +448,36 @@ The analysis largely follows the same procedure for the tau decay mode classific
 
 The channel is \HepProcess{\Pep \Pem \to \PZ \PZ}, where one \PZ decays hadronically and the other \PZ decays to a tau lepton pair. The samples were generated at \rootSGeV{350} without ISR contribution for this proof-of-principle study.
 
+The final states of this channel contain two tau leptons and two quark jets. Therefore, tau decay products can either found by direct tau searching, or by finding two jets and working out the recoil. Here two approaches are combined for the best tau pair identification.
+
+Tau finder processer is developed by the author, which is a modified version from the one in \Section{sec:doubleHiggsBonoTauFinder}. The basic idea is to find tau decay products consistent with decay topologies, and require the decay products to be isolated from rest of particles in an event. Parameters chosen are loose to find as many as possible tau candidates. The filtering of the candidates is via kinematic constraints.
+
+BonoTauFinderProcessor works as following. Low \pT are not considered. A seed particle is chosen and a search cone is formed around the seed, which requires one or three tracks with the search cone invariant mass less than 3\,GeV. The isolation criteria states that the opening angle between the search cone  and the $2^{nd}$ closest track is larger than 0.6\,rad. If all criterion are satisfied,  the search cone with the tau seed is identified as a tau lepton.
+
+\begin{table}[!htbp]
+\begin{tabular}{lr}
+\hline
+\hline
+BonoTauFinderProcessor  & Selection \\
+\hline
+Veto low \pT (GeV) &  $\pT < 0.5$\\
+Seed particle (GeV) & $\pT > 1$ \\
+Maximum search cone opening angle (rad) & $\theta_S \leqslant \cos^{-1}(0.99)$\\
+Tau candidate rejection & $N_{X^+} \neq 1,3$, $m_{PFO} > 3$   \\
+Isolation (rad)& $\theta_{cone,2^{nd}X^+} > 0.6$\\
+\hline
+\hline
+\end{tabular}
+\caption
+{Optimised parameters of BonoTauFinderProcessor}
+\label{tab:tauBonoTauFinderProcessor}
+\end{table}
+
+Tau hadronically decay can also identified as a small jet. Here we use Durham algorithm \cite{Catani:1991hj}, also known as \ee \kt algorithm. (see \Section{sec:pandoraJetDurham}). The jet algorithm runs in exclusive mode to find four jets.
 
 
-The final states Two methods are used to identify
+
+Two methods are used to identify
 
 
 
@@ -458,12 +485,12 @@ The final states Two methods are used to identify
 \centering % \begin{center}/\end{center} takes some additional vertical space
 \begin{subfigure}[b]{0.45\textwidth}
   \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2DMC}
-  \caption{}
+  \caption{Truth info.}
   \label{fig:TauSpin2DMC}
 \end{subfigure}
 \begin{subfigure}[b]{0.45\textwidth}
   \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2Dreco}
-  \caption{}
+  \caption{Reconstructed}
   \label{fig:TauSpin2Dreco}
 \end{subfigure}
 \caption[Two-dimensional plot of spin correlations of the tau lepton pair from \PZ decay, using \decayPionShort decay mode.]
@@ -475,12 +502,12 @@ The final states Two methods are used to identify
 \centering % \begin{center}/\end{center} takes some additional vertical space
 \begin{subfigure}[b]{0.45\textwidth}
   \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/1DMC}
-  \caption{}
+  \caption{Truth info.}
   \label{fig:TauSpin1DMC}
 \end{subfigure}
 \begin{subfigure}[b]{0.45\textwidth}
   \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/1DrecoNoOverflow}
-  \caption{}
+  \caption{Reconstructed}
   \label{fig:TauSpin1Dreco}
 \end{subfigure}
 \caption[One-dimensional plot of spin correlations of the tau lepton pair from \PZ decay, using \decayPionShort decay mode.]

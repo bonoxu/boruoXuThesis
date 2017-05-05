@@ -260,7 +260,7 @@ Isolation (GeV)&  $ E_{cone} < 3$\\
 \end{table}
 
 \subsubsection{BonoTauFinderProcessor}
-
+\label{sec:doubleHiggsBonoTauFinder}
 For the similar reason of developing a more aggressive light lepton finder, a new more aggressive tau lepton selection processor is developed. Similar to TauFinderProcessor, BonoTauFinderProcessor identifies a high momentum particle as a tau seed. Particles are iteratively added to the search cone according to the opening angle to the seed. After each particle addition, the temporary search cone is then considered as a temporary  tau candidate and required to be alsoated and consistent with tau hadronic decay signature. The temporary tau candidate only needs to pass one of the isolation conditions. The iterative particle addition would stop when the cone opening angle is bigger than a threshold. If multiple temporary tau candidates of the same seed pass the selection, the one with smallest opening angle is chosen to form the final tau candidate. To reduce fake tau decay products from \ggHad background, low energy particles do not participate in the tau finding.
 %tau hypothesis singular or tau hypotheses plural?
 
@@ -271,7 +271,7 @@ For the similar reason of developing a more aggressive light lepton finder, a ne
 \begin{tabular}{lr}
 \hline
 \hline
-TauFinderProcessor  & Selection \\
+BonoTauFinderProcessor  & Selection \\
 \hline
 Veto \ggHad (GeV) &  $E < 1$\\
 Seed particle (GeV) & $\pT > 5$ \\
