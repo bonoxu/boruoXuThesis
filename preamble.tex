@@ -41,6 +41,8 @@
 %% Maths
 % TODO: rework or eliminate maybemath
 \usepackage{abmath}
+
+
 \DeclareRobustCommand{\mymath}[1]{\ensuremath{\maybebmsf{#1}}}
 
 \DeclareRobustCommand{\Rate}{\mymath{\Gamma}\xspace}
@@ -56,7 +58,8 @@
 \DeclareRobustCommand{\FIGURE}[1]{Figure \ref{#1}\xspace}
 \DeclareRobustCommand{\Equation}[1]{equation \ref{#1}\xspace}
 \DeclareRobustCommand{\EQUATION}[1]{Equation \ref{#1}\xspace}
-
+\DeclareRobustCommand{\Reference}[1]{reference \ref{#1}\xspace}
+\DeclareRobustCommand{\REFERENCE}[1]{Reference \ref{#1}\xspace}
 %% High-energy physics stuff
 \usepackage{abhep}
 \usepackage{hepnames}
@@ -86,6 +89,14 @@
 
 \DeclareRobustCommand{\myDagger}{\mymath{\dagger}\xspace}
 
+\DeclareRobustCommand{\TauTau}{\HepProcess{\APtauon\Ptauon}\xspace}
+\DeclareRobustCommand{\TauTauSub}[2]{\HepProcess{\HepParticle{\tau}{#1}{+}\xspace\HepParticle{\tau}{#2}{-}\xspace}\xspace}
+\DeclareRobustCommand{\TauFull}[2]{\HepParticle{\tau}{#1}{#2}\xspace}
+
+\DeclareRobustCommand{\MuMu}{\HepProcess{ \APmuon\Pmuon}\xspace}
+
+\DeclareRobustCommand{\HigssTauTau}{\HepProcess{\PHiggs\APtauon\Ptauon}\xspace}
+\DeclareRobustCommand{\ZTauTau}{\HepProcess{\PZ\APtauon\Ptauon}\xspace}
 \DeclareRobustCommand{\HiggsToTauTau}{\HepProcess{\PHiggs \to \APtauon \Ptauon}\xspace}
 \DeclareRobustCommand{\ZToTauTau}{\HepProcess{\PZ \to \APtauon \Ptauon}\xspace}
 
@@ -93,6 +104,7 @@
 \DeclareRobustCommand{\charge}{\HepParticle{\chi}{}{+}\xspace}
 \DeclareRobustCommand{\neutral}{\HepParticle{\chi}{}{0}\xspace}
 \DeclareRobustCommand{\Pai}{\HepParticle{a}{1}{}\xspace}
+\DeclareRobustCommand{\tauToPion}{\HepProcess{\Ptauon \to \Pgpm\Pgngt}\xspace}
 
 \DeclareRobustCommand{\decayElectron}{\Pem\Pagne\Pgngt\xspace}
 \DeclareRobustCommand{\decayMuon}{\Pgmm\Pagngm\Pgngt\xspace}
@@ -129,6 +141,8 @@
 \DeclareRobustCommand{\decayAiPionShortest}{\HepParticleResonanceFull{a}{1}{}{\Pgpp\Pgpm\Pgpm}{}{}\xspace}
 \DeclareRobustCommand{\tauHad}{\mymath{\varepsilon_{had}}\xspace}
 
+
+
 \DeclareRobustCommand{\PhotonFragmentRemoval}{\textsc{PhotonFragmentRemoval}\xspace}
 
 \DeclareRobustCommand{\gHHH}{\HepParticle{g}{HHH}{}\xspace}
@@ -141,7 +155,7 @@
 \DeclareRobustCommand{\gammae}{\HepProcess{ \Pgamma\Pemp}\xspace}
 \DeclareRobustCommand{\gammagamma}{\HepProcess{ \Pgamma\Pgamma}\xspace}
 
-
+\DeclareRobustCommand{\BonoTauFinder}{\textsc{IsolatedTauIdentifer}\xspace}
 
 \DeclareRobustCommand{\eeToHH}{\HepProcess{ \Pem \Pep \to \PHiggs \PHiggs \Pnue \APnue }\xspace}
 \DeclareRobustCommand{\eeToHHbbWW}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus}\xspace}

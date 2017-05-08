@@ -246,6 +246,57 @@ to unpolarised beams and do not include the effect of beamstrahlung. Plot is tak
 \end{figure}
 
 
+\section{Tau pair polarisation correlations as signature of Higgs boson}
+\label{sec:theoryTauPair}
+For many theories beyond the Standard Model, a common feature is that the coupling of the Higgs particle to leptons increases with the increase of the lepton mass. Unlike \PZ and \Pgamma vector bosons which couples to leptons equally, the \HigssTauTau coupling would dominate. Therefore, if an experiment observes the breaking of the lepton universality by favouring \TauTau events, it could indicates the existence of a scalar Higgs. When such a breaking is observed, a helicity correlation test can be used to show that the \TauTau pair is from a scalar boson or a vector boson. In particular, the polarisation correlations of tau leptons are different for \HiggsToTauTau and \ZToTauTau, as scalar Higgs decays to \TauTauSub{L}{L} or \TauTauSub{R}{R} and \PZ decays to \TauTauSub{L}{R} or \TauTauSub{R}{L}, where L, R denotes the tau lepton helicities.
 
+
+Tau pair polarisation correlations can be studied using various tay decay modes. Here \Reference{Bullock:1991my} is followed and \tauToPion decay mode is used as the example. The boson decay can be represented as:
+\begin{equation}
+\HepProcess{X \to \TauTauSub{\alpha}{\beta} \to \Ppiplus\Ppiminus  + \Pneutrino's},
+\end{equation}
+where $X$ is either \PHiggs or \PZ. $\alpha$, $\beta$ are the helicities, L or R. In the collinear limit where $m^2_{\Ptau}/m^2_X \ \ll \ 1$, the appropriate kinematic variables are the energy fractions:
+\begin{equation}
+\overline{z} = \frac{E_{\Ppiplus}}{E_{\APtauon}},\ z = \frac{E_{\Ppiminus}}{E_{\Ptauon}}.
+\end{equation}
+For a single tau decay, the collinear distribution can be written as:
+\begin{equation}
+\frac{1}{\Gamma_{Ptau}}\frac{d\Gamma}{dz} = Br_{\Ppiminus} f\parenths{\HepProcess{\TauFull{\alpha}{-} \to \Ppiminus} ; z},
+\end{equation}
+where $Br_{\Ppiminus}$ is the branching fraction of \tauToPion. The form $f$ can be obtained from literature \cite{Tsai:1971vv}:
+\begin{equation}
+f\parenths{\HepProcess{\TauFull{\alpha}{-} \to \Ppiminus} ; z} = 1 + P_\alpha\parenths{2z-1},
+\end{equation}
+where $P_L = -1$ and $P_R = +1$. For the tau pair decay, the collinear distribution is of form:
+\begin{equation}
+\frac{d^2N\parenths{\HepProcess{X \to \TauTau \to \Ppiplus\Ppiminus  + \Pneutrino's}}}{dz\,d\overline{z}} = Br^2_{\Ppiminus} \sum_{\alpha,\,\beta}^{} C^X_{\alpha \beta} f\parenths{\HepProcess{\TauFull{\alpha}{-} \to \Ppiminus} ; z} f\parenths{\HepProcess{\TauFull{\beta}{+} \to \Ppiplus} ; \overline{z}},
+\end{equation}
+where the only non-zero correlation coefficients $C_{\alpha \beta}$ for the party-conserving \HiggsToTauTau are:
+\begin{equation}
+C^{\PHiggs}_{LL} = C^{\PHiggs}_{RR} = \frac{1}{2},
+\end{equation}
+and for \ZToTauTau the coefficients are
+\begin{equation}
+C^{\PZ}_{LR} = \frac{1}{2}\parenths{1 - P_{\Ptau}},\ C^{\PZ}_{RL} = \frac{1}{2}\parenths{1 + P_{\Ptau}},
+\end{equation}
+where tau polarisation, $P_{\Ptau}$, is due to the non-parity-conserving tau decay in the \SM. For \PZ:
+\begin{equation}
+P_{\Ptau} = \frac{-2va}{v^2 + a^2},
+\end{equation}
+\begin{equation}
+v = -\frac{1}{2} + \sin^2{\theta_{\PW}},
+\end{equation}
+\begin{equation}
+a = -\frac{1}{2},
+\end{equation}
+where $v$ and $a$ are the vector and axial-vector \ZTauTau couplings. \FIGURE{fig:theoryTauPairCorrelation} shows the two-dimensional distribution of \ZToTauTau and \HiggsToTauTau as a function of the energy fractions $z$ and $\overline{z}$. The difference between \PZ and \PHiggs decaying to a tau pair is clear. Therefore, if an excess of \TauTau events over \ee or \MuMu events is observed, it can be easily identified from the tau pair polarisation correlation, where the excess is from \PHiggs decay or \PZ decay. 
 %Photon - passage through matter. Photon electromagnetic shower
 
+\begin{figure}[htbp]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+\includegraphics[width=0.9\textwidth]{theory/TauPairCorrelation}
+  
+\caption[Two-dimensional distribution of \ZToTauTau and \HiggsToTauTau.]
+{Two-dimensional distribution of \ZToTauTau on the left, and \HiggsToTauTau on the right as a function of the energy fractions $\overline{z} = {E_{\Ppiplus}}/{E_{\APtauon}},\ z = {E_{\Ppiminus}}/{E_{\Ptauon}}$. The figure is adapted from reference \cite{Tsai:1971vv}.}
+\label{fig:theoryTauPairCorrelation}
+\end{figure}
