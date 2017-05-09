@@ -291,6 +291,7 @@ A more recent attempt at marrying merits from both Durham and \kt algorithms has
 %Why extra C++ implementation speed reduce O(n^3) to NlgN y, phi space, 2D KNN problem
 
 \paragraph{\y{} parameter}
+\label{sec:pandoraYparameter}
 \y{} parameter is calculated for each specific jet algorithm. It is a measure of the number of jets in an event. \y{} parameter describes the transition of exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets (see \Section{sec:doubleHiggsJetAlgorithm} for jet algorithm). Numerically \y{} parameter is often much smaller than one. A typically way to convert the small number to a human acceptable range is to take the minus logarithm of the number.
 
 
@@ -438,7 +439,9 @@ Similarly to the rectangular cut method, PDE works better with decorrelated, gau
 
 
 \subsubsection{Decision tree}
- is a non linear tree based model
+\label{sec:pandoraDecisionTree}
+ %is a non linear tree based model
+ 
 Before discussing Boost decision tree (BDT), it is necessary to introduce Decision tree. Decision tree is a non linear tree based model. Its rather complex nature requires a careful explanation of many concepts.
 
 Decision tree is a binary tree, where each node, the splitting point, uses a single discriminative variable to decide whether a event is signal-like (``goes down by a layer to the left''), or background-like (``goes down by a layer to the right''). At each node, samples are divided into signal-like and background-like sub-samples. The tree growing starts at the root node, and stops at certain criterion, which could be the minimum number of events in a node, the number of layers of the tree, or a minimum/maximum signal purity.
@@ -539,7 +542,7 @@ The boosting has two variant in TMVA implementation, adaptive boost and gradient
 
 The learning rate of the adaptive boost, which controls how fast the weight changes for events in each boosting iteration. Experience shows small learning rate with many trees work better than large learning rate with few trees.
 
-The shrinkage rate of the gradient boost is similar to the learning rate of the adaptive. It controls how fast the weight changes for events in each boosting iteration. Again a small value is preferable. 
+The shrinkage rate of the gradient boost is similar to the learning rate of the adaptive. It controls how fast the weight changes for events in each boosting iteration. Again a small value is preferable.
 
 The usual choice of the metric for the optimal cuts is either Gini index or cross-entropy. Typically Gini index metric is chosen. It makes little difference to performances, comparing to the cross-entropy metric.
 

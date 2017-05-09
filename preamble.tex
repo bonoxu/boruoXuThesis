@@ -156,7 +156,11 @@
 \DeclareRobustCommand{\gammagamma}{\HepProcess{ \Pgamma\Pgamma}\xspace}
 
 \DeclareRobustCommand{\BonoTauFinder}{\textsc{IsolatedTauIdentifer}\xspace}
-
+\DeclareRobustCommand{\BonoLeptonFinder}{\textsc{IsolatedLeptonIdentifer}\xspace}
+\DeclareRobustCommand{\IsolatedLeptonFinderProcessor}{\textsc{IsolatedLeptonFinderProcessor}\xspace}
+\DeclareRobustCommand{\TauFinderProcessor}{\textsc{TauFinderProcessor}\xspace}
+ 
+ \DeclareRobustCommand{\WW}{\HepProcess{\PW\PW}\xspace}
 \DeclareRobustCommand{\eeToHH}{\HepProcess{ \Pem \Pep \to \PHiggs \PHiggs \Pnue \APnue }\xspace}
 \DeclareRobustCommand{\eeToHHbbWW}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus}\xspace}
 \DeclareRobustCommand{\eeToHHbbqqqq}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \Pq \Pq \Pq \Pq}\xspace}
@@ -248,8 +252,14 @@
 
 \DeclareRobustCommand{\IP}{IP\xspace}
 
-\DeclareRobustCommand{\Mokka}{Mokka\xspace}
-\DeclareRobustCommand{\TMVA}{TMVA\xspace}
+\DeclareRobustCommand{\Mokka}{\textsc{Mokka}\xspace}
+\DeclareRobustCommand{\TMVA}{\textsc{TMVA}\xspace}
+% TODO
+
+\DeclareRobustCommand{\Pythia}{\textsc{PYTHIA}\xspace}
+%
+
+
 %\DeclareRobustCommand{\bphysics}{\Pbottom-physics\xspace}
 %\DeclareRobustCommand{\bhadron}{\Pbottom-hadron\xspace}
 %\DeclareRobustCommand{\Bmeson}{\PB-meson\xspace}
