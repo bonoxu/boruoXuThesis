@@ -310,7 +310,7 @@ The two processors share similar logic: searches cone and isolation cone.  The m
 
 At high \sqrtS, particles are boosted and it is important to extract information in the forward calorimeters to aid signal selection. Certain background channels, for example photon-electron interactions, can have energetic electrons in  the forward calorimeters, the \LumiCAL and the \BeamCAL.  As forward calorimeters have very low angular acceptances, most particles in these forward detector would be very forward particles from beam induced background. However,  \cite{sailer2012radiation} shows that sufficiently high energy electrons can be efficiently identified in the \BeamCAL and \LumiCAL.
 
-For the \CLICILD detector concept, energies deposited in the \LumiCAL and the \BeamCAL are not reconstructed in simulation. This is because the thousands of beam induced background particles per bunch crossing requires expensive computational resources. However, previous studies \cite{Sailer:2017onh,Lukic:forwardElectron} using parameterise the particle Id efficiency  give equivalent performance to the full detector simulation approach. 
+For the \CLICILD detector concept, energies deposited in the \LumiCAL and the \BeamCAL are not reconstructed in simulation. This is because the thousands of beam induced background particles per bunch crossing requires expensive computational resources. However, previous studies \cite{Sailer:2017onh,Lukic:forwardElectron} using parameterise the particle Id efficiency  give equivalent performance to the full detector simulation approach.
 
 
 %The current simulation software could not handle the simulation in a feasible time. Therefore, the adopted approach is to parameterise the background particle energy deposition leading to electron tagging algorithms.
@@ -807,7 +807,7 @@ The selection efficiencies, after mutually exclusive cuts are made, are listed i
 
 \subsection{Loose cuts for the MVA}
 
-A set of physics-motivated loose cuts aims to reduce the range of invariant masses to increase the effectiveness of MVA. (See \Section{}). The invariant masses of physical bosons are required to be within a certain range to avoid the effect of extreme values on the MVA. The cuts are listed in \Table{tab:doubleHiggsPreSel} and the performance is shown in \Figure{tab:doubleHiggsPreslectionPart2}.
+A set of physics-motivated loose cuts aims to reduce the range of invariant masses to increase the effectiveness of MVA. (See \Section{sec:pandoraMVAbdtVar}). The invariant masses of physical bosons are required to be within a certain range to avoid the effect of extreme values on the MVA. The cuts are listed in \Table{tab:doubleHiggsPreSel} and the performance is shown in \Figure{tab:doubleHiggsPreslectionPart2}.
 
 
 \section{Discriminative variables for MVA}
@@ -826,7 +826,7 @@ where $\theta$ is the polar angle. \acolinearity{12} measures the angle between 
 \end{equation}
 where $\textbf{\^{p}}_1$ is the unit momentum vector of jet 1. \cosStar{12} is the cosine of the angle between the two constituent jets in their decay rest frame. \FIGURE{fig:doubleHiggs1.4varAcolHbb} and \Figure{fig:doubleHiggs1.4varSpinHbb} compares the \acolinearity{\Hbb} and  \cosStar{\Hbb}. Both show clear differences for the signal and background channels. For the signal, \cosStar{\Hbb} has a flat distribution, as expected from a back-to-back decay of \HepProcess{\PHiggs \to \Pbottom \APbottom}. For the background, \cosStar{\Hbb} peaks at 1.
 
-The global event shape variables includes \y{} variables (see \Section{}), and the sphericity,  \sphericity. \sphericity is a measurement of the spherically symmetry of the event (see \Section{}).
+The global event shape variables includes \y{} variables (see \Section{sec:pandoraYparameter}), and the sphericity,  \sphericity. \sphericity is a measurement of the spherically symmetry of the event (see \Section{sec:pandoraEvtShape}).
 
 The flavour tagging variables are discussed in \Section{sec:doubleHiggsFlavourTagging}. For example, \btagFull{1,\Hbb} denotes the highest b jet tag value of two jets forming \Hbb. The number of \PFOs variables are effective against background events with fewer quarks in final states.
 
