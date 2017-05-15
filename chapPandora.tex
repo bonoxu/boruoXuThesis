@@ -427,9 +427,10 @@ Because its simplicity, the cut method is often performed manually, much more of
 
 \subsubsection{Projective Likelihood}
 
-Projective likelihood model (PDE) is used in \pandora for the photon ID  due to its simplicity and low requirement on computing resources. The \pandora implementation is discussed  in \Section{sec:photonPDE}
+Projective likelihood model with probability density estimators (PDE) is used in \pandora for the photon ID  due to its simplicity and low requirement on computing resources. The \pandora implementation is discussed  in \Section{sec:photonPDE}
+%Probability density estimators for each input variable combined in likelihood estimator (ignoring correlations
 
-PDE implemented in the TMVA calculates the probability density for each discriminative variable, for signal and background. The overall signal and background likelihood are defined as products of the individual probability density. The likelihood ratio, $R$, is then defined as the signal likelihood over signal plus background likelihood. TMVA implementation also fits an underlying function to the probability density.
+Likelihood classifier implemented in the TMVA calculates the probability density for each discriminative variable, for signal and background (hence PDE approach). The overall signal and background likelihood are defined as products of the individual probability density. The likelihood ratio, $R$, is then defined as the signal likelihood over signal plus background likelihood. TMVA implementation also fits an underlying function to the probability density.
 
 %The \pandora implementation simply uses binned likelihood ratio, $R$, as the output, due to the simplicity. The sub-categories for the \pandora implementation are determined by the cluster energy.
 
@@ -441,7 +442,7 @@ Similarly to the rectangular cut method, PDE works better with decorrelated, gau
 \subsubsection{Decision tree}
 \label{sec:pandoraDecisionTree}
  %is a non linear tree based model
- 
+
 Before discussing Boost decision tree (BDT), it is necessary to introduce Decision tree. Decision tree is a non linear tree based model. Its rather complex nature requires a careful explanation of many concepts.
 
 Decision tree is a binary tree, where each node, the splitting point, uses a single discriminative variable to decide whether a event is signal-like (``goes down by a layer to the left''), or background-like (``goes down by a layer to the right''). At each node, samples are divided into signal-like and background-like sub-samples. The tree growing starts at the root node, and stops at certain criterion, which could be the minimum number of events in a node, the number of layers of the tree, or a minimum/maximum signal purity.

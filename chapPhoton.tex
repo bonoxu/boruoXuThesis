@@ -6,9 +6,21 @@
 
 %\section{Introduction}
 
-Photon reconstruction is an important part of \pandora reconstruction. A good photon reconstruction should provide a good single photon completeness and purity, as well as a good photon separation resolution. For many physics processes, heavy particles decaying into photons, such as \Ptau lepton and \Ppizero. Photon reconstruction is crucial for reconstructing these heavy particles.
+Correctly reconstructing photon results in an excellent single photon energy resolution. Such a good energy resolution  is  necessary to reconstruct heavy particles using decay channels involving photons, such as tau lepton decay or \Ppizero decay.
 
-The photon reconstruction presented in this chapter has improved the photon reconstruction completeness by reducing the fragments. The photon separation resolution has  also been improved. This work has been published in a conference proceeding \cite{Xu:2016rcz}. The improved  photon reconstruction has benefited many physics analyses involving photons. The most recent example is the  \HepProcess{\PHiggs \to \Pgamma \Pgamma} analysis at \rootS{3} at \CLIC \cite{Kacarevic:higgsToGammaGamma}.
+Another aspect of the photon reconstruction is the photon separation resolution, where spatially close-by  photons should be resolved whenever possible. Hence the photon resolution should provide reconstructed photons with high complexness and purity, making the photon number a good physics quantity for photon-counting experiment. The most recent photon-counting  example benefited from this photon reconstruction is the  \HepProcess{\PHiggs \to \Pgamma \Pgamma} simulation study at \rootS{3} at the \CLIC \cite{Kacarevic:higgsToGammaGamma}.
+
+An efficient photon reconstruction in a dense jet environment improves the overall reconstruction. As the particle flow approach to the calorimetry aims to reconstruct each individual particle, by assigning correct calorimeter hits to photons, assigning the remaining hits to the tracks for charged particles becomes an easier problem. Since the essential part of the particle flow reconstruction is the track-cluster association,  a high-performance photon reconstruction thus leads to a reduced-density environment for charged-particle reconstruction, which in return improves the jet energy resolution.
+
+
+%The ability to reconstruct photons in a collider experiment is important.
+Part of this chapter has been published in a conference proceeding \cite{Xu:2016rcz}.
+
+
+
+%Photon reconstruction is an important part of \pandora reconstruction. A good photon reconstruction should provide a good single photon completeness and purity, as well as a good photon separation resolution. For many physics processes, heavy particles decaying into photons, such as \Ptau lepton and \Ppizero. Photon reconstruction is crucial for reconstructing these heavy particles.
+
+%The photon reconstruction presented in this chapter has improved the photon reconstruction completeness by reducing the fragments. The photon separation resolution has  also been improved. This work has been published in a conference proceeding \cite{Xu:2016rcz}. The improved  photon reconstruction has benefited many physics analyses involving photons. The most recent example is the  \HepProcess{\PHiggs \to \Pgamma \Pgamma} analysis at \rootS{3} at \CLIC \cite{Kacarevic:higgsToGammaGamma}.
 
 %This set of photon related algorithms have been incorporated into the default reconstruction chain in \pandora. The \CLIC simulation studies have benefited from the improved photon reconstructions in various physics process, such as  \HepProcess{ \PHiggs \to \Pgamma \Pgamma}.
 
@@ -33,6 +45,13 @@ Photon reconstruction is an important part of particle reconstruction. For many 
 
 \section{Overview of photon reconstruction in \pandora}
 
+Photon reconstruction consists of various algorithms. Each deals with a particular aspect of the photon reconstruction. The stand-alone \PhotonReconstruction algorithm is the main powerhouse. It carefully reconstruct photons from calorimeter hits in the \ECAL, with special treatments for photons close to charged particles. This algorithm is implemented at the early stage of the reconstruction (see \Section{sec:particleID}), aiming to provide a clean environment for the subsequent charged-particle reconstruction. 
+
+Two photon fragment removal algorithms for fragments in the \ECAL, and one algorithm for fragments in the \HCAL, improve the single photon energy resolution. The photon splitting algorithm separate accidently merged photons, which helps photon separation resolution. 
+
+These algorithms together form the photon reconstruction in the \pandora. This chapter will first introduce the photon-induced electromagnetic shower in a calorimeter, followed by the description of each algorithm. The performance of photon reconstruction will be provided in the last part of the chapter.
+
+\begin{comment}
 \pandora provides a framework for particle reconstruction \cite{Marshall:2015rfa}, as described in \Section{sec:pandoraPandoraPFA}. In the linear collider user case, it has a vast library of algorithms developed over years by many people. Each algorithm addresses one topological issue in the particle reconstruction. The essential part of the \pandora is track-cluster association  to find the best track-cluster pair, and re-clustering to find the best cluster consistent with the track. Other algorithms that identifies trackless clusters, such as muon clusters or photon clusters, would provide a cleaner environment for the track-cluster association, hence improving the jet energy resolution.
 
 Photon identification in \pandora has two main mechanisms. The basic mechanism performs photon identification at the last step of the reconstruction  (see \Section{sec:pandoraPFOcreation}). The second more sophisticated photon identification is performed at an early stage of the reconstruction  (see \Section{sec:particleID}). The second algorithm identifies photon electromagnetic shower cores carefully in a dense jet environment. By removing photons from the environment, fewer calorimeters hits are left for charged particle reconstruction. Hence the overall reconstruction improves.
@@ -45,38 +64,40 @@ This chapter presents a solution to photon reconstruction issues. The newly intr
 
 Firstly an overview of electromagnetic showers is presented. The \PhotonReconstruction algorithm will be described next, followed by fragment removal algorithms and photon splitting algorithms. This chapter will end with a discussion on performances of these photon related algorithms,  including comparisons with the previous photon algorithm.
 %Algorithms related to photon reconstruction, fragmental removal and photon splitting, which are written or introduced by authors, will be discussed below.
-
+\end{comment}
 
 %The testing simulated data in this paper are generated either by WHIZARD \cite{whizard} or by the simple HepEvt generator. Events are simulated with GEANT4 \cite{Agostinelli:2002hh} in MOKKA \cite{MoradeFreitas:2002kj}. Jet fragmentation was performed with PYTHIA \cite{Sjostrand:1995iq} and the particle reconstruction was done by PandoraPFA \cite{Marshall:2015rfa} in MARLIN reconstruction framework \cite{Gaede:2006pj}, in ILD\_o1\_v6 detector model. The iLCSoft v17-01-07 was used. Different versions of PandoraPFA were used for the comparison purpose.
 
 \section{Electromagnetic shower}
 \label{sec:photonEMshower}
-An electromagnetic (EM) shower refers to the pair production and bremsstrahlung when a high energy photon or electron passing though a thick absorber. The interaction generates many low energy photons and electrons, producing a shower-like  structure. Two suitable length scales to describe the EM shower are radiation length and \RM. A radiation length of a material is used to describe the longitudinal shower profile, defined as the mean distance travelled where an electron loses its energy by a factor of $1/e$ via bremsstrahlung. It is also defined as the mean free path  for pair production by a high energy photon\cite{segre1977nuclei}. A \RM is used to describe the transverse shower profile.
+An electromagnetic (EM) shower refers to the pair production and bremsstrahlung when a high energy photon or electron passing though a thick absorber. The interaction generates many low energy photons and electrons, producing a shower-like  structure. Two suitable length scales to describe the EM shower are radiation length and \RM. The radiation length of a material is used to describe the longitudinal shower profile, defined as the mean distance travelled where an electron loses its energy by a factor of $1/e$ via bremsstrahlung. It is also defined as the mean free path  for pair production by a high energy photon\cite{segre1977nuclei}. The \RM of a material is a suitable length describe the transverse shower profile.
 
 \begin{figure}[tbph]
 \centering
-{\includegraphics[width=0.45\textwidth]{photon/EMlong}}
+{\includegraphics[width=0.65\textwidth]{photon/EMlong}}
 \caption[Simulated longitudinal electromagnetic shower profile as a function of depth for electrons and photons.]
 {An EGS4 simulation of a 30\,GeV electron-induced electromagnetic shower in iron. The histogram shows fractional energy deposition as a function of radiation lengths, and the curve is a gamma-function fit to the distribution. Circles and squares are the number of electrons and photons respectively with total energy greater than 1.5\,MeV crossing planes with scale on right. Plot is taken from \cite{Agashe:2014kda}.}
 \label{fig:photonEMlongProfile}
 \end{figure}
 
-\FIGURE{fig:photonEMlongProfile} shows simulated longitudinal electromagnetic shower profile as a function of radiation length for electrons and photons. The mean EM longitudinal shower profile can be described by the following function \cite{Longo:1975wb} :
+\FIGURE{fig:photonEMlongProfile} shows the simulated longitudinal electromagnetic shower profiles as a function of radiation length for electrons and photons. The mean EM longitudinal shower profile can be described by the following function \cite{Longo:1975wb} :
 \begin{equation}
-\frac{dE}{dt} = E_0 b \frac{{bt}^{a-1}e^{-bt}}{\Gamma(a)},
+\frac{dE}{dt} = E_0 b \frac{\parenths{bt}^{a-1}e^{-bt}}{\Gamma(a)},
+\label{eq:photonEMshower}
 \end{equation}
-where $t$ is the number of radiation lengths. $a$ and $b$ are free parameters. $E_0$ is the shower energy. $b$ varies slightly with material but it is sufficient to use $b = 0.5$. $a$ can be calculated and is:
+where $t$ is the number of radiation lengths. $a$ and $b$ are free parameters. $E_0$ is the shower energy. $b$ varies slightly with material but it is sufficient to use $b = 0.5$ for the purpose of photon reconstruction. $a$ is calculated to be:
 \begin{equation}
 a = 1.25 + 0.5ln\left(\frac{E_0}{E_c}\right),
 \end{equation}
-where $E_c$ is the critical energy. This parametrisation should only be used to describe an average behaviour of the EM shower, as the fluctuation is important. For the photon identification, a comparison with the parametrisation is used.
+where $E_c$ is the critical energy. This parametrisation should only be used to describe an average behaviour of the EM shower, as the fluctuation is important. For the photon identification, the longitudinal shower profile is compared with \Equation{eq:photonEMshower}.
 
-The transverse shower profile can be described as  a narrow cone widening as the shower develops. 90\% of the energy  is contained in a fiducial cylinder of 1 \RM. Transverse profile is often represented by a sum of two Gaussian function. This allows the two dimensional peak finding to separate EM showers using transverse shower profiles.
+The transverse shower profile can be described as  a narrow cone widening as the shower develops. 90\% of the energy  is contained in a fiducial cylinder with a radius of one \RM. Transverse profile is often represented by a sum of two Gaussian function. The Gaussian nature of the transverse profile allows the separation of two EM showers using a two dimensional peak finding algorithm. 
 
 \section{\PhotonReconstruction algorithm}
 \label{sec:photonRecostrcution}
 
-The \PhotonReconstruction algorithm refers to the more sophisticated photon identification at the early stage of the reconstruction. It corresponding to ``Particle ID'' stage in \Section{sec:particleID} in the \pandora reconstruction chain.  Main steps of \PhotonReconstruction are: coarsely forming photon clusters, finding photon candidates, photon ID test, and optional fragment removals. The step to find photon candidates uses   a   two dimensional peak finding algorithm, which requires further explanation in \Section{sec:peakFinding}. The photon ID test involves a multi dimensional likelihood classifier, which is described in \Section{sec:photonLikelihood}. The optional fragment removal algorithm shares a common base case with another photon fragment removal algorithm. Hence they are discussed together in \Section{sec:photonFragRemoval} . A flow diagram of the \PhotonReconstruction algorithm is shown in \Figure{fig:photonPhotonRecoFlow}.
+
+The \PhotonReconstruction algorithm is a photon reconstruction and  identification algorithm at the early stage of the reconstruction. It corresponding to ``Particle ID'' stage in \Section{sec:particleID} of the \pandora reconstruction chain.  Main steps of \PhotonReconstruction are: coarsely forming photon clusters, finding photon candidates, photon ID test, and optional fragment removals. Find photon candidates uses the transverse shower profile information, which requires a  two dimensional peak finding algorithm further explained \Section{sec:peakFinding}. The photon ID test involves a multi dimensional likelihood classifier, which is described in \Section{sec:photonLikelihood}. The optional fragment removal algorithm shares a common base case with another photon fragment removal algorithm. Hence they are discussed together in \Section{sec:photonFragRemoval} . A flow diagram of the \PhotonReconstruction algorithm is shown in \Figure{fig:photonPhotonRecoFlow}.
 
 \begin{figure}[tbph]
 \centering
