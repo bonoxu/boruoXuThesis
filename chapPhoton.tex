@@ -168,27 +168,29 @@ The base algorithm treats all clusters as potential photon clusters, hence the n
 
 \subsection{Initialise 2D histogram}
 
+
 A two dimensional histogram is initialised. For the best resolving power between photons, the projection direction is chosen to be cluster's direction. Therefore, two axes for the 2D histogram are chosen such that axes and the direction form a orthogonal bases in three dimensional space. The axes are labelled as  U and V axis in \Figure{fig:photonPeakFinding}.
 
 
 
 \subsection{Project hit energy to histogram}
 
-This step projects calorimeter hits positions onto the 2D histogram defined in previous step. For a finite sized 2D histogram, the projection is chosen such that the cluster centroid position is at the centre of the histogram. The bin size corresponds to one \ECAL square cell length. The relative distance between the calorimeter hit position is converted into a two dimensional coordinates, and subsequently projected onto the histogram. The coordinate of a hit is obtained by:
+This step projects calorimeter hits positions onto the 2D histogram defined in the previous step. For a finite sized 2D histogram, the projection is chosen such that the cluster centroid position is at the centre of the histogram. The bin size corresponds to one \ECAL square cell length. The relative distance between the calorimeter hit position is converted into a two dimensional coordinates, and subsequently projected onto the histogram. The coordinate of a hit is obtained by:
 \begin{equation}
 \vec{s_{i}} = \frac{\vec{a_{i}} -  \vec{\angles{a}}}{d_{cell}},
 \end{equation}
 where $\vec{a}$ is the position of the hit $i$.  $\vec{\angles{a}}$ is the centroid position of cluster $a$. $d_{cell}$ is the  \ECAL square cell length. $\vec{s_{i}}$ is the three dimensional coordinate, subsequently projected to U and V axes via the scalar product.
 
-The projected position on the 2D histogram is binned at integer intervals. The bin height is the sum of the calorimeter hits energy in that particular bin. The issue with a finite histogram size is discussed in \Section{sec:photonPeakFindingInclusive}.
+
+The projected position on the 2D histogram is binned at integer intervals. The bin height is the sum of the calorimeter hits energy in that particular bin. The issue with the histogram size being finite is discussed in \Section{sec:photonPeakFindingInclusive}.
 
 \subsection{Local peak identifying}
 
-This step identifies all local peaks in the 2D histogram. For example, in \Figure{fig:photonPeakFinding}, there are clearly two peaks, both colour coded. A local peak is defined as a bin where its height is above all eight neighbouring bins. The 2D histogram is linearly scanned. %Hence the processing time is $O\left(N^2\right)$, where $N$ is number of bins in one axis.
+This step identifies all local peaks in the 2D histogram. For example, in \Figure{fig:photonPeakFinding}, there are clearly two peaks, both colour coded. A local peak is defined as a bin where its height is above all eight neighbouring bins. The 2D histogram is scanned linearly to identify all peaks. %Hence the processing time is $O\left(N^2\right)$, where $N$ is number of bins in one axis.
 
 \subsection{Associate non-peak bins to peaks}
 
-Having tagged all local peaks, this step associates non-peak bins to peaks. A high energy EM shower has a wider shower width. Therefore bins should be associated based on its distance to the peak and the energy of the peak. This determines the choice of the metric for associating bins. After all local peak bins are found, non-peak bins are associated to a peak bin, by choosing the peak bin that minimise the metric
+Having tagged all local peaks, this step associates non-peak bins to peaks based on the distance to the peak and the energy of the peak. The energy dependence is needed as the transverse EM shower width increases with the increase of the energy. After all local peak bins are found, non-peak bins are associated to a peak bin, by choosing the peak bin that minimise the metric
 \begin{equation}
 \frac{d}{\sqrt{E_{peak}}}
 \end{equation}
@@ -198,7 +200,7 @@ where $d$ is the Euclidean distance between a non-peak bin and a peak bin on the
 
 \subsection{Peak filtering}
 
-The performance of the two dimensional peaking finding algorithm is improved by clever programming and physics arguments. For a given two dimensional histogram, such as the one in \Figure{fig:photonPeakFinding}, major peaks most likely correspond to physical photons, while the minor peaks more likely come from fluctuations in energy deposition. To select major peaks, every time after all non-peak bins are associated with peak bins, minor peaks with fewer than three bins associated (including the peak bin) are discarded. These discarded bins are re-associated with other peak bins. This iterative process stops when all peak bins have at least three bins associated.
+The performance of the two dimensional peaking finding algorithm is improved by clever programming and physics arguments. For a given two dimensional histogram, such as the one in \Figure{fig:photonPeakFinding}, major peaks most likely correspond to physical photons, while the minor peaks more likely come from fluctuations in the energy deposition. To select major peaks, every time after all non-peak bins are associated with peak bins, minor peaks with fewer than three bins associated (including the peak bin) are discarded. These discarded bins are re-associated with other peak bins. This iterative process stops when all peak bins have at least three bins associated.
 
 The peak filtering step also allows bins with height below a critical value to not participate in the peak finding. The default value is set such that only empty bins are not used.
 
@@ -216,12 +218,12 @@ If a cluster or a photon candidate is close to the projection of the track in th
 \label{fig:photonPeakFindingFlow}
 \end{figure}
 
-\FIGURE{fig:photonPeakFindingFlow} shows the flow chart for the full \peakFinding algorithm, including the treatment to clusters close to tracks. If a cluster is less than 3\,mm from the closest track projection, it is treated as a potentially charged cluster. The \ECAL is sliced longitudinally to help identify photon candidates. For example, the default three slices will result in three \ECAL fiducial spaces, which cover from the front of the \ECAL to a third, two thirds and the back of the \ECAL, respectively. The peaking finding algorithm is repeated for sliced clusters contained in each fiducial space. A peak and corresponding \ShowerPeak object  are only preserved as a photon candidate if the peak exists for evert sliced cluter, and if its position is shifted by no more than one neighbouring bin between sliced clusters. Furthermore, if a peak bin is within the eight neighbouring bins of the track projection, the peak and its associated bins are flagged as charged particles (non-photon).
+\FIGURE{fig:photonPeakFindingFlow} shows the flow chart for the full \peakFinding algorithm, including the treatment to clusters close to tracks. If a cluster is less than 3\,mm from the closest track projection, it is treated as a potentially charged cluster. The \ECAL is sliced longitudinally to help identify photon candidates. For example, the default three slices will result in three \ECAL fiducial spaces, which cover spaces from the front of the \ECAL to a third, two thirds and the back of the \ECAL, respectively. The peaking finding algorithm is repeated for sliced clusters contained in each fiducial space. A peak and corresponding \ShowerPeak object  are only preserved as a photon candidate if the peak exists for evert sliced cluster, and if its position is shifted by no more than one neighbouring bin between sliced clusters. Furthermore, if a peak bin is within the eight neighbouring bins of the track projection, the peak and its associated bins are flagged as charged particles (non-photon).
 
 \subsection{Inclusive mode}
 \label{sec:photonPeakFindingInclusive}
 
-The two dimensional histogram is iterated during the algorithm. The time complexity is $O(n^2)$ for a $n \times n$ histogram (Default $n = 41$). Therefore, for the purpose of speed, it is undesirable to have a very large histogram. Having a small finite histogram speeds up the calculation. However, because of the finite size, only energy deposition projected on the histogram would be considered for peak finding. Calorimeter hits outside the histogram would be lost when \ShowerPeak objects are constructed. This behaviour is suitable for \PhotonReconstruction algorithm (\Section{sec:photonRecostrcution}) and for photon fragment removal (\Section{sec:photonFragRemoval}). However, for photon splitting (\Section{sec:photonSplitting}), there should be no calorimeter hits loss from splitting a photon. Hence inclusive mode of the peak finding algorithm is developed, and it allows energy deposition projected outside the histogram to be associated with identified peaks.
+The two dimensional histogram is iterated many times during the algorithm. The time complexity is $O(n^2)$ for a $n \times n$ histogram (Default $n = 41$). Therefore, for the purpose of speed, it is undesirable to have a very large histogram. Having a small finite histogram speeds up the calculation. However, because of the finite size, only energy deposition projected onto the histogram would be considered for peak finding. Calorimeter hits outside the histogram would be lost when \ShowerPeak objects are constructed. This behaviour is suitable for \PhotonReconstruction algorithm (\Section{sec:photonRecostrcution}) and for photon fragment removal (\Section{sec:photonFragRemoval}). However, for photon splitting (\Section{sec:photonSplitting}), there should be no calorimeter hits loss from splitting a photon. Hence inclusive mode of the peak finding algorithm is developed, and it allows energy deposition projected outside the histogram to be associated with identified peaks.
 
 
 \section{Likelihood classifier for photon ID}
@@ -229,13 +231,10 @@ The two dimensional histogram is iterated during the algorithm. The time complex
 
 \SECTION{sec:photonIDtest} outlines the photon ID test in the photon reconstruction algorithm. This section describes the multidimensional likelihood classifier in details, including discriminating variables. For each photon candidate, a set of variables are calculated and used to as inputs to the classifier.
 
-\subsection{Overview of Projective Likelihood}
-\label{sec:photonPDE}
-Projective likelihood model (PDE) is used in \pandora for the photon ID due to its simplicity and low requirement on computing resources.
+%\subsection{Overview of Projective Likelihood}
+%\label{sec:photonPDE}
 
-PDE implemented calculates the probability density for each discriminative variable, for signal and background. The overall signal and background likelihood are defined as products of the individual probability density. The likelihood ratio, $R$, is then defined as the signal likelihood over signal plus background likelihood.
 
-To use the likelihood ratio, one way is to fit an underlying function to the probability density, which is implemented the \TMVA software package. The other way is to use binned likelihood ratio as the output, due to its simplicity. This is implemented in the \pandora. Similarly to classifiers like the rectangular cut method, PDE works better with decorrelated, gaussian like variables. The \pandora implementation does not decorrelate nor transform the variables, to keep implementation fast.
 
 \subsection{Projective Likelihood in \pandora}
 
@@ -268,7 +267,36 @@ Three variables use the transverse shower information. $\langle{w}\rangle$ is th
 
 Last variable for the classifier, $d$, is the distance between the photon candidate and the closest track projection. It is less likely to be a photon if it is close to a track.
 
+\begin{figure}[tbph]
+\centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{photon/likelihood/LongProfileStart.pdf}
+    \caption{}
+    \label{fig:photonLongProfileStart}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{photon/likelihood/LongProfileDiscrepancy.pdf}
+    \caption{}
+    \label{fig:photonLongProfileDiscrepancy}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{photon/likelihood/PeakRms.pdf}
+    \caption{}
+    \label{fig:photonPeakRms}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{photon/likelihood/MinDistanceToTrack.pdf}
+    \caption{}
+    \label{fig:photonMinDistanceToTrack}
+  \end{subfigure}
+\caption
+{Variables for photon ID test, obtained from simulated 500\,GeV di-jet \Zuds events. Photon ID in plots are determined using MC information. \FIGURE{fig:photonLongProfileStart}, }
+\label{fig:photonVarLikelihood}
+\end{figure}
+
 The distributions of these variables are normalised to probability distribution, stored in binned histograms. The classifier is improved by realising the variable distributions varies with photon energies. Thus these distributions are divided by bins of photon candidate energy. The default energy bins edges are 0.2, 0.5, 1, 1.5, 2.5, 5, 10, 20\,GeV, which covers a good range of photon energies. Candidate with energy below 0.2\,GeV would not be examined in this step, as it is very unlikely to be a photon. The classifier training typically uses simulated 250\,GeV jet events. High energy jets allow the training for high energy photon candidates.
+
+Projective likelihood model  with probability density estimators is used in \pandora for the photon ID due to its simplicity and low requirement on computing resources. Its details are described in \Section{sec:pandoraLikelihood}.
 
 After training, for a given photon candidate, the likelihood classifier output is given by
 \begin{equation}
