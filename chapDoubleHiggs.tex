@@ -11,7 +11,7 @@ Since the discovery of Higgs boson at the \LHC in 2012\cite{Aad:2012tfa,Chatrchy
 The first challenge for the double Higgs bosons production analysis is the cross section(0.149\,fb at \rootS{1.4} and 0.588\,fb at \rootS{3}) is very small compared to background processes, making it difficult to select signal events. The second challenge is that at high centre-of-mass energies, events are boosted and many final-state particles are in the forward region of the detector, where the reconstruction performance is inferior to the barrel region and particles can escape detection.
 
 In this chapter, a full \CLICILD detector simulation study has been performed for the double Higgs production, \eeToHH, via \WW fusion. Event generation and simulation will be discussed first. An overview of the analysis, including lepton finding and jet reconstruction, is presented, followed by an optimised multivariate analysis to distinguish signal from background processes. The optimised event selection is used to derive an estimate of the potential for the \CLIC. The results of this analysis have been publish in \Reference{Abramowicz:2016zbo}.
-%The results of the signal selection are interpreted in the context of the Higgs self coupling. 
+%The results of the signal selection are interpreted in the context of the Higgs self coupling.
 
 \section{Analysis Straggly Overview}
 
@@ -46,11 +46,11 @@ Leading-order Feynman diagrams for double Higgs production via \WW fusion are sh
    \label{fig:doubleHiggsFeynman}
 \end{figure}
 
-Double Higgs production can be also produced via {\HepProcess{ \Pep \Pem \to \PZ \PHiggs \PHiggs}\xspace}, where \PZ decays to \HepProcess{\Pnu \APnu}. This \HepProcess{\PZ \PHiggs \PHiggs} channel has also been used to study at future \ee colliders, for example, the \ILC at \rootSGeV{500} \cite{Baer:2013cma}. However, for the relevant \CLIC energies at \rootS{1.4} and 3\,TeV, its contribution to the \HepProcess{\PHiggs \PHiggs \Pnu \APnu} final state is small compared to that of the \WW fusion, and can be neglected at the centre-of-mass energies in this thesis. 
+Double Higgs production can be also produced via {\HepProcess{ \Pep \Pem \to \PZ \PHiggs \PHiggs}\xspace}, where \PZ decays to \HepProcess{\Pnu \APnu}. This \HepProcess{\PZ \PHiggs \PHiggs} channel has also been used to study at future \ee colliders, for example, the \ILC at \rootSGeV{500} \cite{Baer:2013cma}. However, for the relevant \CLIC energies at \rootS{1.4} and 3\,TeV, its contribution to the \HepProcess{\PHiggs \PHiggs \Pnu \APnu} final state is small compared to that of the \WW fusion, and can be neglected at the centre-of-mass energies in this thesis.
 
 %The cross section of {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} is one order of magnitude smaller than \eeToHH via the \WW fusion,  shown in \Figure{fig:theoryHiggsCrossSection},. Therefore, the effect of {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} present in \eeToHH channel at \rootS{1.4} and 3\,TeV is negligible.
 
- 
+
 %However, {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} can be easily identified via the recoil mass. Hence {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} is not considered in this studied.
 
 From an experimental prospective, \eeToHH production has several distinct final-state topologies. In this chapter, \eeToHHbbWW sub-channel  is investigated. Firstly the hadronic decay mode of the \eeToHHbbWW channel is chosen to study because the hadronic decay has the largest cross section and does not produce primary neutrinos, which allows each \PW to be reconstructed. The semi-leptonic final state is also considered. However, the neutrinos produced at the final states make it  difficult to reconstruct the two Higgs bosons, as some momenta of one Higgs boson is missing. This channel is discussed briefly and its analysis strategy is adapted from the hadronic decay analysis.
@@ -169,23 +169,25 @@ Channel  &  $\sigma(\rootS{1.4})$ / fb   \\
 \label{sec:doubleHiggsLepton}
 
 The event reconstruction was performed using the Marlin framework and reconstruction package in \ilcsoft v01-16. Separate software packages (processors) were optimised for lepton identification and for jet reconstruction. %New processors have been developed and existing processors have been optimised for signal selection and background rejection.
-%The reconstruction is done via Marlin in \ilcsoft v01-16. The latest functioning flavour tagging processor exist in \ilcsoft v01-16. Thus newer versions of  \ilcsoft can not be used in this analysis. 
+%The reconstruction is done via Marlin in \ilcsoft v01-16. The latest functioning flavour tagging processor exist in \ilcsoft v01-16. Thus newer versions of  \ilcsoft can not be used in this analysis.
 
 
-For the signal channel, \eeToHHbbWWHad, there is no primary lepton in the final state, whilst many background  processes, such as \HepProcess{\Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}, contain primary leptons in final states. Hence, effectively rejecting events with primary leptons is an important step in the event selection. Primary leptons deposit energies in the tracking calorimeter. The start of the energy deposition is typically within 0.05\,mm to the interaction point. These primary leptons are also typically energetic and often isolated from other particles. Whilst electrons and muons are stable enough to deposit energies in calorimeters, tau leptons are very short lived and decay with a typical decay length of 87\,$\mu{m}$ before reaching vertex detector. Therefore, only decay products of the tau leptons can be reconstructed. 
+For the signal channel, \eeToHHbbWWHad, there is no primary lepton in the final state, whilst many background  processes, such as \HepProcess{\Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}, contain primary leptons in final states. Hence, effectively rejecting events with primary leptons is an important step in the event selection. Primary leptons deposit energies in the tracking calorimeter. The start of the energy deposition is typically within 0.05\,mm to the interaction point. These primary leptons are also typically energetic and often isolated from other particles. Whilst electrons and muons are stable enough to deposit energies in calorimeters, tau leptons are very short lived and decay with a typical decay length of 87\,$\mu{m}$ before reaching vertex detector. Therefore, only decay products of the tau leptons can be reconstructed.
 
 \subsection{Electron and muon identification}
 \label{sec:doubleHiggsLeptonID}
 
-Two Marlin reconstruction for processors for light lepton(\Pe, \Pmu) tagging are used and optimised. As it is important to identify primary light leptons to help to select signal events, two additional light lepton tagging processors are developed and optimised. 
+Two Marlin reconstruction for processors for light lepton(\Pe, \Pmu) tagging are used and optimised. As it is important to identify primary light leptons to help to select signal events, two additional light lepton tagging processors are developed and optimised.
 
  %described followed by their performances. As the signal is very rare comparing to the background, it is necessary to develop high performance isolated lepton finder to veto events with leptons and improve the signal selection efficiency. An existing lepton finder is optimised in \Section{sec:doubleHiggsIsolatedLeptonFinder} and a separate lepton finder is developed by the author in \Section{sec:doubleHiggsBonoLeptonFinder}.
 
 \subsubsection{\IsolatedLeptonFinderProcessor}
 \label{sec:doubleHiggsIsolatedLeptonFinder}
-\IsolatedLeptonFinderProcessor in Marlin package is used, modified, and optimised. This processor identifies high energy electrons and muons that are isolated from other particles'. The optimal parameters below are chosen in collaboration and tested using the signal channel and the \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} channel.
+\IsolatedLeptonFinderProcessor reconstruction package is used, modified, and optimised. This processor identifies high energy electrons and muons that are isolated from other particles. Optimal parameters are chosen and tested using the signal channel and the \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} channel, which is multi quark final state with a primary lepton.
 
-Electron induced electromagnetic showers are mostly contained in the \ECAL, while muons would deposit some energies in the \ECAL. The inner detector tracks of electrons and muons from the electron-positron interaction are primary tracks, which are very close to the interaction point. The isolation criteria requires the lepton to be spatially separated from other high energy particles. This forms the logic behind the \IsolatedLeptonFinderProcessor. Optimal values of the processor are listed in \Table{tab:doubleHiggsIsolatedLeptonFinder}. $E_{\ECAL}$ is the energy deposited in the \ECAL. $E_{cone}$ is the total energy of PFOs within a cone of an opening angle of $\cos^{-1}(0.995)$ around the lepton. $d_0$, $z_0$, and $r_0$ are the Euclidean distance of the track starting point to the interaction point in x-y plane, in z direction, and in x-y-z three dimensional space. Performance of the processor is shown in \Table{tab:doubleHiggsIsoLepPerformance}.
+Electron induced electromagnetic showers are mostly contained in the \ECAL. The primary electrons and muons from the electron-positron interaction leaves primary tracks in the tracking detector, which start typically less than 0.05\,mm from the interaction point. The isolation criteria requires the lepton to be spatially separated from other high energy particles. 
+
+Optimal values of the processor are listed in \Table{tab:doubleHiggsIsolatedLeptonFinder}. $E$ is the energy of the lepton. $E_{\ECAL}$ is the energy of the lepton deposited in the \ECAL. $E_{cone}$ is the total energy within a cone of an opening angle of $\cos^{-1}(0.995)$ around the lepton. $d_0$, $z_0$, and $r_0$ are the Euclidean distance of the lepton track starting point to the interaction point in x-y plane, in z direction, and in x-y-z three dimensional space, respectively. Performance of the processor is shown in \Table{tab:doubleHiggsIsoLepPerformance}.
 
 \begin{table}[!htbp]
 \begin{tabular}{lr}
@@ -210,10 +212,12 @@ Isolation (GeV)& $E_{cone}^2 \leqslant 5.7 \times E - 50$ \\
 \subsubsection{\BonoLeptonFinder}
 \label{sec:doubleHiggsBonoLeptonFinder}
 
-\IsolatedLeptonFinderProcessor has strict criterion to find high-energy isolated leptons to avoid mistakes. However, since the signal cross section is low in this analysis, it would be beneficial to reject more events with leptons identified to improve the signal to background ratio. Hence another isolated lepton finder is developed. The main feature of the \BonoLeptonFinder is that it utilises calorimetric information provided by \pandora.
+A complimentary light lepton finder, \BonoLeptonFinder is developed to further identify energetic isolated light leptons. Comparing to the \IsolatedLeptonFinderProcessor, the main difference is that the \BonoLeptonFinder utilises particle ID information provided by \pandora to identify leptons.
+
+%\IsolatedLeptonFinderProcessor has strict criterion to find high-energy isolated leptons to avoid mistakes. However, since the signal cross section is low in this analysis, it would be beneficial to reject more events with leptons identified to improve the signal to background ratio. Hence another isolated lepton finder is developed. The main feature of the \BonoLeptonFinder is that it utilises calorimetric information provided by \pandora.
 
 
-The processor uses two sets of cuts. Its logic is similar to that of the \IsolatedLeptonFinderProcessor. The first set of cuts uses the particle ID information from \pandora. The cuts demand a \pandora electron or muon with high \pT and is from a primary track. The lepton should either have a very high transverse momentum or be isolated. The second set of cuts uses \ECAL energy fraction to determine light lepton ID. The rest of the cuts are very similar to the first cuts. The isolation criterion is stricter than it in the first set to reduce fake rate.
+The processor uses two sets of cuts to identify energetic isolated light leptons. If a lepton passes either set of cuts, it will be identified by the processor. The first set of cuts uses the particle ID information from \pandora, demanding a \pandora electron or muon with high \pT and a primary track. The identified lepton should either have a very high transverse momentum or be isolated. The second set of cuts uses \ECAL energy fraction to determine the light lepton ID. The rest of the cuts are very similar to the first cuts. The second cuts contain stricter isolation criterion to reduce fake rate.
 %Not sure the last sentence above makes sense
 
 \begin{table}[!htbp]
@@ -239,12 +243,12 @@ b) Isolation (GeV)& $ E \geqslant 28 \times \sqrt{E_{cone2}} + 30$ \\
 \hline
 
 \end{tabular}
-\caption
-{Optimised parameters  of \BonoLeptonFinder}
+\caption[Optimised parameters  of \BonoLeptonFinder.]
+{Optimised parameters  of \BonoLeptonFinder. A lepton needs to pass either sets of cuts to be identified. Within a set, the lepton needs to satisfy either condition a) or b).}
 \label{tab:doubleHiggsBonoLeptonFinder}
 \end{table}
 
-\TABLE{tab:doubleHiggsBonoLeptonFinder} lists  values for the \BonoLeptonFinder lepton selection cut. Variables are defined similarly as those in \Section{sec:doubleHiggsIsolatedLeptonFinder}. \pT is the transverse momentum. $E_{cone1}$ and $E_{cone2}$ are the total energy of PFOs within a cone of an opening angle of $\cos^{-1}(0.995)$ and $\cos^{-1}(0.99)$ respectively around the lepton. The performance of the processor is shown in \Table{tab:doubleHiggsIsoLepPerformance}.
+\TABLE{tab:doubleHiggsBonoLeptonFinder} lists the  selection cuts for \BonoLeptonFinder. Variables are defined same to those for \IsolatedLeptonFinderProcessor. \pT is the transverse momentum. $E_{cone1}$ and $E_{cone2}$ are the total energy of PFOs within a cone of an opening angle of $\cos^{-1}(0.995)$ and $\cos^{-1}(0.99)$ respectively around the lepton. The performance of the processor is shown in \Table{tab:doubleHiggsIsoLepPerformance}.
 
 
 \subsubsection{Comparison: \IsolatedLeptonFinderProcessor versus \BonoLeptonFinder}
