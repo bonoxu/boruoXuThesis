@@ -258,7 +258,7 @@ Sequential combination algorithms typically calculate a pair-wise distance metri
 
 The chosen jet algorithm implementation is FastJet C++ software package \cite{Cacciari:2011ma,Cacciari:2005hq}, providing a wide range of jet finding algorithms. The implementation in Marlin software package is called MarlinFastJet. The symbols in the subsequent discussion follow the convention in \cite{Cacciari:2011ma}.
 
-\paragraph{\kt algorithm}
+\subsubsection{\kt algorithm}
 
 Longitudinally-invariant \kt algorithm \cite{Catani:1993hr,Ellis:1993tq} is one of the common sequential combination algorithms for \pp collider experiment. In the inclusive variant, the symmetrical pair-wise distance metric between particle $i$ and $j$, and the beam distance, are defined as
 \begin{equation}
@@ -271,7 +271,7 @@ If $d_{ij} < d_{iB}$, particle $i$ and $j$ are merged, with the \fourMomentum of
 
 The exclusive variant is similar. First difference is that when  $d_{iB} < d_{ij}$, the particle $i$ is discarded and part of the beam jet. The second difference is that when both $d_{ij}$ and $d_{iB}$ are above some threshold, $d_{cut}$, the clustering will stop. In practise, exclusive mode allows a specified number of jets to be found, which will automatically choose the $d_{cut}$. The inclusive mode would find as many jets as the algorithm allows. The exclusive \kt algorithm is used in \Section{sec:doubleHiggsJetOptimisation}.
 
-\paragraph{Durham algorithm}
+\subsubsection{Durham algorithm}
 \label{sec:pandoraJetDurham}
 Durham algorithm \cite{Catani:1991hj}, also known as \ee \kt algorithm, is commonly used \ee collider experiment. It has a single distance metric:
 \begin{equation}
@@ -281,7 +281,7 @@ where $E_i$ is the energy of particle $i$. $\theta_{ij}$ is the polar angle diff
 
 Comparing to \kt algorithm, it uses energy instead of \pT in the distance metric, and it did not have a beam jet. This is because that for the \ee collider in the past, the beam induced background was not severe and collisions energy is known, \sqrtS.
 
-\paragraph{Jet algorithm for the \CLIC}
+\subsubsection{Jet algorithm for the \CLIC}
 
 Although \CLIC is a \ee collider, the significant beam-induced background adds a large amount of energy. Therefore, traditional \ee jet algorithms, like Durham algorithm, is not suitable for the \CLIC environment. Studies has shown that jet algorithms for \pp colliders have better performance for \CLIC \cite{Linssen:2012hp,LCD-Note-2010-006}.
 
@@ -290,7 +290,7 @@ A more recent attempt at marrying merits from both Durham and \kt algorithms has
 
 %Why extra C++ implementation speed reduce O(n^3) to NlgN y, phi space, 2D KNN problem
 
-\paragraph{\y{} parameter}
+\subsubsection{\y{} parameter}
 \label{sec:pandoraYparameter}
 \y{} parameter is calculated for each specific jet algorithm. It is a measure of the number of jets in an event. \y{} parameter describes the transition of exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets (see \Section{sec:doubleHiggsJetAlgorithm} for jet algorithm). Numerically \y{} parameter is often much smaller than one. A typically way to convert the small number to a human acceptable range is to take the minus logarithm of the number.
 
