@@ -49,9 +49,20 @@ Extra information about calorimeter hits are calculated, stored and to be used i
 
 Isolated hits, often originating from low energy neutrons in a hadronic shower, are difficult to associate to the correct hadronic shower. They are identified and not used during the clustering stage. However, these isolated hits participate in the reconstruction during the  last step, particle flow object (PFO) creation, to contribute to the energy estimation.
 
-\subsection{Cone Clusters Algorithm}
+
+\subsection{Particle Identification}
+\label{sec:particleID}
+
+To improve the reconstruction of the charged particles, where calorimeter hits are associated to tracks, dedicated particle identification algorithms identify muons and photons and remove identified particles from the reconstruction. By removing the hits from muons and photons, the reconstruction of charged particles is improved as fewer hits are left to be reconstructed. Hence the pattern recognition problem is reduced. Identified muons and photons do not participate in the later clustering and re-clustering stages, but re-enter the reconstruction at the fragment removal stage (see \Section{sec:pandoraFragmentRemoval}). The details of the photon reconstruction algorithms and photon related algorithms are described in \Chapter{chap:Photon}.
+%Dedicated particle identification algorithms aim to identify muons and photons before associating calorimeter hits to tracks.
+
+
+\subsection{Clustering}
 \label{sec:pandoraConeCluster}
-Before discussing the rest of the \pandora reconstruction, it is necessary to introduce the cone based clustering algorithm, which is widely used in many reconstruction algorithms in the \pandora. The clustering algorithm produces basic working objects, \clusters.
+
+A cone clustering algorithm is used to group calorimeter hits from innermost to outmost pseduo-layer. The output \clusters are further processed, merged or split based on their topological properties. Since the cone clustering algorithm widely used in many reconstruction algorithms in the \pandora, it is necessary to introduce the cone based clustering algorithm, before discussing the rest of the \pandora reconstruction.
+
+
 
 \begin{figure}[tbph]
 \centering
@@ -71,21 +82,11 @@ In general there are two main types of clustering algorithms: cone based algorit
 \label{fig:pandoraConeClustering2}
 \end{figure}
 
-\FIGURE{fig:pandoraConeClustering2} shows the clustering algorithm used in the \pandora. The seed for the cone clustering is typically the projection of a energetic track to the front of the \ECAL. A high  energy calorimeter hit can also be used as a seed. The initial cluster direction is taken as the direction of the seed. Afterwards, a cone with a specified opening angle and depth will be formed around the seed. The \fourMomentum of calorimeter hits are therefore summed to obtain the cone's \fourMomentum. The building of the cone is iterated from the inner layer of the \ECAL to the outer layer. At each layer, possible associations with hits in previous layers and the same layer are checked. If a hit is not associated with the cone, the hit is used to seed a new cluster. 
-
-
-\subsection{Particle Identification}
-\label{sec:particleID}
-
-Dedicated particle identification algorithms aim to identify muons and photons before associating calorimeter hits to tracks. The details of the photon reconstruction algorithms and photon related algorithms are described in \Chapter{chap:Reconstruction}. By removing the hits from muons and photons, the reconstruction of charged particles is improved as the pattern recognition problem is reduced with fewer hits. Identified muons and photons do not participate in the clustering and re-clustering stages, but re-entre the construction at the fragment removal stage (see \Section{sec:pandoraFragmentRemoval}).
-
-\subsection{Clustering}
-
-The cone clustering algorithm described in \Section{sec:pandoraConeCluster} is used to group calorimeter hits from innermost to outmost pseduo-layer. The output \clusters are further processed, merged or split based on their topological properties.
+\FIGURE{fig:pandoraConeClustering2} shows the clustering algorithm used in the \pandora. The seed for the cone clustering is typically the projection of a energetic track to the front of the \ECAL. A high  energy calorimeter hit can also be used as a seed. The initial cluster direction is taken as the direction of the seed. Afterwards, a cone with a specified opening angle and depth will be formed around the seed. The \fourMomentum of calorimeter hits are therefore summed to obtain the cone's \fourMomentum. The building of the cone is iterated from the inner layer of the \ECAL to the outer layer. At each layer, possible associations with hits in previous layers and the same layer are checked. If a hit is not associated with the cone, the hit is used to seed a new cluster. The clustering algorithm produces basic working objects, \clusters.
 
 \subsection{Topological cluster association}
 
-Initial clustering scheme is aggressive at splitting clusters. Small clusters are merged  based on clear topological signatures. These merging signatures include combining track segments, connecting track segments with gaps, connecting track segment to a hadronic shower, and merging clusters when they are within close proximity. Some association algorithms are shown schematically in \Figure{fig:pandoraTopoAsso}.
+After the initial clustering, clusters are further refined using topological information. This step is necessary because the initial clustering scheme is tends to form small clusters. These small clusters are then merged  based on clear topological signatures. The merging signatures include combining track segments, connecting a track segment with gaps, connecting track segments to  hadronic showers, and merging clusters when they are within close proximity. Some association algorithms are shown schematically in \Figure{fig:pandoraTopoAsso}.  \FIGURE{fig:pandoraTopoAssoLoopTrack}, \Figure{fig:pandoraTopoAssoBackScattered}, and \Figure{fig:pandoraTopoAssoConeAsso} show rules for looping track segments, back-scattered tracks from hadronic showers, and cone association, respectively. In each case, the arrow indicates the tracks. The dark red dots represent the calorimeter hits in the associated cluster. The slightly fainter red dots represent the calorimeter hits in the neutral cluster. The black line represents the front of the \ECAL.
 
 \begin{figure}[tbph]
 \centering
@@ -104,26 +105,28 @@ Initial clustering scheme is aggressive at splitting clusters. Small clusters ar
     \caption{}
     \label{fig:pandoraTopoAssoConeAsso}
   \end{subfigure}
-\caption[Topological association in \pandora.]
-{Examples of topological association in \pandora. \FIGURE{fig:pandoraTopoAssoLoopTrack}, \Figure{fig:pandoraTopoAssoBackScattered}, and \Figure{fig:pandoraTopoAssoConeAsso} show rules for looping tack segments, back-scattered tracks from hadronic showers, and cone association. In each case, the arrow indicates the tracks. The dark red dots represent the calorimeter hits in the associated cluster. The pink dots represent the calorimeter hits in the neutral cluster. The black line represents the front of the \ECAL. Figures are taken from \cite{Marshall:pandoraLC}.}
+\caption[Topological association in the \pandora.]
+{Examples of topological association in the \pandora. \FIGURE{fig:pandoraTopoAssoLoopTrack}, \Figure{fig:pandoraTopoAssoBackScattered}, and \Figure{fig:pandoraTopoAssoConeAsso} show rules for looping track segments, back-scattered tracks from hadronic showers, and cone association, respectively. In each case, the arrow indicates the tracks. The dark red dots represent the calorimeter hits in the associated cluster. The slightly fainter red dots represent the calorimeter hits in the neutral cluster. The black line represents the front of the \ECAL. The figures are taken from \cite{Marshall:pandoraLC}.}
 \label{fig:pandoraTopoAsso}
 \end{figure}
 
 \subsection{Track-cluster association}
 
-Clusters are associated to tracks, according to the proximity of the first layer of the cluster and the track projection to the front of the \ECAL. The track and initial cluster directions are required to consistent, as well as a match between track momentum and cluster energy.
-
+Having refined the clusters in the calorimeter, the next step is to connect the clusters to the tracks from the inner tracking detector. The clusters are associated to tracks, according to the proximity of the first layer of the cluster and the track projection to the front of the \ECAL. The consistency between track and initial cluster directions, as well as a match between track momentum and cluster energy, are required.
 
 
 \subsection{Re-clustering}
 
-The cluster association scheme work well for low energy (less than 50\,GeV) jet. For a high energy jet, particles and the subsequent hadronic showers are more boosted and more likely to overlap each other. Therefore, it is important to re-cluster based on the compatibility of the cluster energy and the associated track momentum. A cluster may be split into two or more clusters. Two clusters maybe be re-clustered based on the track-cluster association. The split up clusters would attempt to be associated using topological association algorithms. The re-clustering scheme is applied iteratively to find a more correct clustering of calorimeter hits. A schematic diagram is shown in \Figure{fig:pandoraRecluster}.
+The cluster association scheme described in the previous section works well for low energy (less than 50\,GeV) jet. For a high energy jet, particles and the subsequent hadronic showers are more boosted and more likely to overlap each other. Therefore, it is important to re-cluster based on the compatibility of the cluster energy and the associated track momentum.
+
+The re-clustering is performed on a statistical basis. If the cluster energy and the associated track momentum do not match, the cluster will be re-clustered using the same clustering algorithm with different parameters, or differen cluster algorithms. Afterwards, out of many clusters obtained with the re-clustering step, the cluster that matches the best with the track momentum is chosen, and the cluster will be associated with that track. A schematic diagram of the re-clustering stage is shown in \Figure{fig:pandoraRecluster}. In the figure, the black upright arrows indicate the tracks. The dark red dots represent the calorimeter hits in the associated cluster. The  slightly fainter red  dots represent the calorimeter hits in the neutral cluster. In this example, the cluster energy is less than the associated track momentum. The topological association algorithms did not add the natural cluster, as it would have formed a cluster with too much energy. The re-clustering scheme tries different cone clustering by splitting the neutral cluster so that the topological association could make correct association.
+
 
 \begin{figure}[tbph]
 \centering
 {\includegraphics[width=0.6\textwidth]{pandora/recluster}}%
 \caption[Illustration of the re-clustering algorithm in \pandora]
-{Illustration of the re-clustering algorithm in \pandora, taken from \cite{Marshall:pandoraLC}. The arrow indicates the tracks. The dark red dots represent the calorimeter hits in the associated cluster. The pink dots represent the calorimeter hits in the neutral cluster. The cluster energy is less than the associated track momentum. The topological association algorithms did not add the natural cluster, as it would have formed a cluster with too much energy. The re-clustering algorithm tries different cone clustering to split the neutral cluster so that the topological association could make correct association.}
+{Illustration of the re-clustering algorithm in \pandora, taken from \cite{Marshall:pandoraLC}. The arrow indicates the tracks. The dark red dots represent the calorimeter hits in the associated cluster. The  slightly fainter red  dots represent the calorimeter hits in the neutral cluster. The cluster energy is less than the associated track momentum. The topological association algorithms did not add the natural cluster, as it would have formed a cluster with too much energy. The re-clustering algorithm tries different cone clustering to split the neutral cluster so that the topological association could make correct association.}
 \label{fig:pandoraRecluster}
 \end{figure}
 
@@ -136,29 +139,30 @@ The neutral clusters are tested against an expected photon electromagnetic showe
 \subsection{Fragment removal}
 \label{sec:pandoraFragmentRemoval}
 
-The late stage of the reconstruction will focus on merging low energy clusters, especially non-photon neutral clusters. These neutral clusters are likely to be fragments of charged clusters, instead of being a physical particle. The merging criterion are mostly based on the proximity and the energy comparison. There are algorithms dealing with photon fragment merging and photon clusters splitting, which are described in details in \Chapter{chap:Photon}.
+This stage of the reconstruction will focus on merging low energy clusters. These neutral clusters are likely to be fragments of other clusters. The merging criterion are mostly based on the proximity and the energy comparison. Algorithms dealing with photon fragment merging and photon splitting are described in details in \Chapter{chap:Photon}.
 
 \subsection{Particle Flow Object Creation}
 \label{sec:pandoraPFOcreation}
 
 % double counting taking care in pandora
-Particle Flow Objects (PFOs) are created at the last step. Tracks are associated to the clusters based on the proximity. Simple but effective particle identification for electrons, muons are applied. Photon identifications have been applied at various stages of the reconstruction.
+The last stage of the reconstruction is the creation of the output objects, Particle Flow Objects (PFOs). The PFOs contain clusters and associated tracks. Simple, but effective, particle identification for electrons and muons are applied. Photon identifications are  applied at various stages of the reconstruction.
 
-\PFOs are the output of the \pandora reconstruction, providing information on positions, four-momenta and other associated information. These \PFOs are  used heavily in physics analyses. The electron, muon and photon identification are  also used in physics analyses in \Chapter{chap:Tau} and in \Chapter{chap:DoubleHiggs}.
+The \PFOs contain information on positions, four-momenta and associated quantities. These \PFOs are  used heavily in physics analyses. The electron, muon and photon identifications are  also used in physics analyses in \Chapter{chap:Tau} and in \Chapter{chap:DoubleHiggs}.
 
 
-\section{\CLIC specific simulation and reconstruction}
+\section{The \CLIC specific simulation and reconstruction}
 
-There are a few  simulation and reconstruction specific to \CLIC, that are used in \Chapter{chap:DoubleHiggs}. Reconstruction does not include calorimeters hits in the forward calorimeters, due to computational reasons. Instead, a fast simulation using MC particles is used and details are laid out in \Section{sec:doubleHiggsForwardElectron}.
+There are a few  simulation and reconstruction issues specific to the \CLIC, which affect the analysis in \Chapter{chap:DoubleHiggs}. One issue is that the luminosity spectrum for  interactions with photon from Beamstrahlung is different to electron-positron interactions. Therefore a solution is presented in \Section{sec:pandoraCLUClumi} to correct for the differences. Another issue is that there is a large amount of beam induced background in \CLIC, which needs to be suppressed before physics analyses. The background suppression is described in \Section{sec:pandoraggHad}. Lastly simulated masses of particles are given in \Table{tab:pandoraCLICparticleMass}, which will be used in \Section{sec:doubleHiggsJetOptimisation}.
 
-The luminosity spectrum for  interactions with photon from Beamstrahlung is different to electron-positron interaction. Therefore it is discussed in \Section{sec:pandoraCLUClumi}. There is a large amount of beam induced background in \CLIC, which needs to be suppressed before physics analyses. The background suppression is described in \Section{sec:pandoraggHad}. Simulated masses of particles are given in \Table{tab:pandoraCLICparticleMass}, which will be used in \Section{sec:doubleHiggsJetOptimisation}.
+%One issue is that the event reconstruction does not include calorimeters hits in the forward calorimeters due to computational reasons. Instead, a fast simulation using MC particles is used and details are laid out in \Section{sec:doubleHiggsForwardElectron}.
+
+
 
 
 \subsection{Luminosity spectrum}
 \label{sec:pandoraCLUClumi}
 
-
-The electron-photon interaction where the photon is via Beamstrahlung of the initial state radiation has a different  instantaneous luminosity than the electron-positron interaction. During the same time-frame the total integrated luminosity are different. A simulated study has performed \cite{Sailer:lumi} with GUINEAPIG \cite{Schulte:1999tx} and simulated in WHIZARD.  The results are summarised in \Table{tab:reconstrcutionBSlumi}. For physics analysis in \Chapter{chap:DoubleHiggs}, event number for processes with initial-state photons from Beamstrahlung should be corrected by factors in \Table{tab:reconstrcutionBSlumi}.
+The electron-photon interaction, where the photon is produced from initial state radiation via Beamstrahlung ,  has a different  instantaneous luminosity than the electron-positron interaction. Hence, for the same time-frame, the total integrated luminosity of the electron-photon interaction is different to that of the electron-positron interaction. To correct for the difference in the luminosity, a simulated study \cite{Sailer:lumi} was performed with the GUINEAPIG \cite{Schulte:1999tx} and was simulated in the WHIZARD, to identify the ratio of the integrated luminosity of the  electron-photon interaction to the electron-positron interaction.  The results are summarised in \Table{tab:reconstrcutionBSlumi}. For the physics analysis in \Chapter{chap:DoubleHiggs}, event number for processes with initial-state photons from Beamstrahlung are corrected with the ratios in \Table{tab:reconstrcutionBSlumi}.
 
 \begin{table}[htbp]
 \centering
@@ -168,27 +172,33 @@ The electron-photon interaction where the photon is via Beamstrahlung of the ini
 Luminosity ratio &  \rootS{1.4} & \rootS{3} \\
 \hline
 \textit{L(\ee) / L(\ee)} &1 & 1\\
-\textit{L(\egamma) / L(\ee)} &0.75 & 0.79\\
+\textit{L(\Egamma) / L(\ee)} &0.75 & 0.79\\
 \textit{L(\gammae) / L(\ee)} &0.75 & 0.79\\
-\textit{L(\gammagamma) / L(\ee)} &0.64 & 0.69\\
+\textit{L(\Gammagamma) / L(\ee)} &0.64 & 0.69\\
 \hline
 \hline
 \end{tabular}
 \caption[Luminosity ratio for processes with initial-state photons from Beamstrahlung.]%
-{Luminosity ratio for processes with initial-state photons from Beamstrahlung for \CLIC at \rootS{1.4} and 3\,TeV. The table summarises results in \cite{Sailer:lumi}. }
+{Luminosity ratio for processes with initial-state photons from Beamstrahlung at the \CLIC, at \rootS{1.4} and 3\,TeV. The table summarises results from \cite{Sailer:lumi}. }
 \label{tab:reconstrcutionBSlumi}
 \end{table}
 
 \subsection{Beam induced backgrounds}
 \label{sec:pandoraggHad}
 
-The beam induced background are considered in the simulation. \ggHad intergraded over 60 bunch crossing has been overlayed onto the reconstruction. The incoherent pairs are ignored as the \ggHad is the dominant background in all calorimeters except inner part of the \HCAL endcap. These \ggHad background events are hadronised with PYTHIA, and superimposed on the physics process simulations to save computational resources. The choice of 60 bunch crossing is a conservative estimate  of  the amount of the background \cite{Barklow:1443518,Barklow:1443518}. These background deposit significant amount of energies in the detector and need to be suppressed for physics analysis in \Chapter{chap:DoubleHiggs}.
+The other issue considered when using the \CLICILD detector concept is the beam induced background. At high \sqrtS, the background becomes important for the event reconstruction. Therefore, the beam induced background are considered in the simulation.
 
-Two Marlin process has been developed to suppress these background, a track selector and a PFO selector\cite{Marshall:2012ry}.
+There are different types of the beam induced background. The dominant one, \ggHad, intergraded over 60 bunch crossing,  is overlayed onto the reconstruction. The \ggHad is the dominant background in all calorimeters except inner part of the \HCAL endcap. Another type of the background, the incoherent pairs,  are ignored.
 
-The track selector aims to remove poor quality and fake tracks. It places simple quality cut and a simple time of arrival cut. If the arrival time of the track at the front of the \ECAL, using the helical fit, differs more than 50\,ns from using a straight line fit, the track will be rejected.
+These \ggHad background events are hadronised with the PYTHIA, and superimposed on the physics process simulations to save computational resources. The choice of 60 bunch crossings is a conservative estimate  of  the amount of background in the experiment condition\cite{Barklow:1443518,Barklow:1443518}.
 
-The PFO selector utilise the high spatial resolution from the high granular calorimeter. PFOs from \ggHad often have low \pT and have a range of time. PFOs from physics processes have a range of \pT, and have time close to the brunch crossing time. These two distinctive features allow \ggHad background to be separated. The optimal suppression uses different \pT and time cuts for the central part of the detector, and for the forward part of the detector, and uses different cuts for photons, neutral PFOs and charged PFOs. Three configurations of these cuts are developed, namely ``loose'', ``normal'', and ``tight'' selections. As the name suggested, ``loose'' selection corresponds to a looser cut of \pT and time. The optimal configuration depends on the \sqrtS of the collision, and the physics process to study. \FIGURE{fig:pandoraEvtDisplayggHad} shows the effect of the suppression of the background with the tight \PFO selection.
+The beam induced background deposits significant amounts of energies in the detector. It needs to be suppressed for physics analyses, like the one in \Chapter{chap:DoubleHiggs}. Two software have been developed to suppress these background: a track selector and a PFO selector\cite{Marshall:2012ry}.
+
+The track selector aims to remove poor quality and fake tracks that are more likely from the beam induced background. It places a simple track-quality cut and a time-of-arrival cut on tracks. If the arrival time of the track at the front of the \ECAL, using the helical fit, differs more than 50\,ns from using a straight line fit, the track will be rejected.
+
+
+The PFO selector discards PFOs that are originated from the beam induced background, based on the transverse momentum (\pT) and time information of the PFOs. The PFOs from \ggHad often have low \pT and have a range of time-of-arrivals. In contrast, the PFOs from physics processes have a range of \pT, and the time-of-arrivals are close to the brunch crossing time. By utilising the high spatial resolution from the high granular calorimeter, individual PFOs can be tracked and reconstructed. The PFO selector uses different \pT and time cuts for the central part of the detector and for the forward part of the detector. There are different cuts for photons, neutral PFOs, and charged PFOs. Three configurations of these cuts are developed, namely ``loose'', ``normal'', and ``tight'' selections. As the name suggested, ``loose'' selection corresponds to a looser cut of \pT and time-of-arrival, allows a larger value of \pT and time-of-arrival. The optimal configuration depends on the \sqrtS of the collision, and the physics process to study. \FIGURE{fig:pandoraEvtDisplayggHad} shows the effect of the suppression of the background with the tight \PFO selection. Reconstructed particles for a time window of 10\,ns (100 \,ns in \HCAL barrel) in a simulated \HepProcess{\Pep\Pem \to \PHiggs\PHiggs \to \Ptop\APbottom\Pbottom\APtop} event in the \CLICILD dectro, with 60 bunch crossings of \ggHad background overlaid in \Figure{fig:pandoraEvtDisplayggHad1}. The effect of applying tight \PFO section cuts is shown in \Figure{fig:pandoraEvtDisplayggHad2}.
+
 
 \begin{figure}[tbph]
 \centering
@@ -203,14 +213,14 @@ The PFO selector utilise the high spatial resolution from the high granular calo
     \label{fig:pandoraEvtDisplayggHad2}
   \end{subfigure}
 \caption[Effect of the suppression of the background with the tight \PFO selection.]
-{Reconstructed particles for a time window of 10\,ns (100 \,ns in \HCAL barrel) in a simulated \HepProcess{\Pep\Pem \to \PHiggs\PHiggs \to \Ptop\APbottom\Pbottom\APtop} event in the \CLICILD dectro, with 60 bunch crossings of \ggHad background overlaid in \Figure{fig:pandoraEvtDisplayggHad1}. The effect of applying tight \PFO section cuts is shown in \Figure{fig:pandoraEvtDisplayggHad2}.  Figures are taken from \cite{Marshall:2012ry}.}
+{Reconstructed particles for a time window of 10\,ns (100 \,ns in \HCAL barrel) in a simulated \HepProcess{\Pep\Pem \to \PHiggs\PHiggs \to \Ptop\APbottom\Pbottom\APtop} event in the \CLICILD dectro, with 60 bunch crossings of \ggHad background overlaid in \Figure{fig:pandoraEvtDisplayggHad1}. The effect of applying tight \PFO section cuts is shown in \Figure{fig:pandoraEvtDisplayggHad2}.  The figures are taken from \cite{Marshall:2012ry}.}
 \label{fig:pandoraEvtDisplayggHad}
 \end{figure}
 
 \subsection{\CLIC simulated particle masses}
 \label{sec:pandoraCLICsimMass}
 
-Mass and width of quarks and bosons used for generating Standard Model samples given in \Table{tab:pandoraCLICparticleMass}. This information will be used in \Section{sec:doubleHiggsJetOptimisation}.
+Another information used in the analysis (\Section{sec:doubleHiggsJetOptimisation}) with the \CLIC detector concept is the simulated mass and width of quarks and bosons. These values are listed in \Table{tab:pandoraCLICparticleMass} and are used for generating Standard Model samples.
 \begin{table}[htbp]
 \centering
 \smallskip
@@ -228,90 +238,92 @@ Particle &  Mass ($GeV/c^2$) & Width ($GeV/c^2$) \\
 \hline
 \end{tabular}
 \caption[Masses of quarks and bosons used for  generating Standard Model samples.]%
-{Masses of quarks and bosons used for  generating Standard Model samples. \PHiggs mass is specific for individual sample. Table is taken from \cite{Linssen:2012hp}.}
+{The masses and widths of quarks and bosons used for  generating Standard Model samples. The \PHiggs mass is specified for individual samples. The table is taken from \cite{Linssen:2012hp}.}
 \label{tab:pandoraCLICparticleMass}
 \end{table}
 
 
 
-\section{Reconstruction Processors}
+\section{Analysis software}
 
-In the last chapter we described the automated reconstruction tools in details. This chapter is dedicated to the common automated analysis software, which will be used in the analysis described in subsequent chapters.
+In the previous sections the automated reconstruction tools are described in detail. This section is dedicated to the common automated analysis software, which will be used in the analysis described in subsequent chapters.
 
-\subsection{MC truth linker}
+\subsection{Monte Carlo truth linker}
 \label{sec:pandoraMCtruthLink}
-It is extremely useful to be able to associate reconstructed objects to the MC particles to develop algorithms or to optimise event selection. The MC truth linker processor provides the link between a MC particle and a  reconstructed calorimeter hit. From the link, the main MC particle contributed to a reconstructed \PFO or a group of \PFOs (jet) can be determined.
+It is extremely useful to be able to associate reconstructed objects to the Monte Carlo (MC) simulated particles, to develop algorithms or to optimise event selection. The MC truth linker processor provides the link between a MC particle and a  reconstructed calorimeter hit. From the link, the main MC particle, contributing to a reconstructed \PFO or a group of \PFOs (jet), can be determined.
 
-\subsection{Jet algorithm}
+\subsection{Jet algorithms}
 \label{sec:pandoraJetAlg}
 
-For the linear collider, thanks to the high granular calorimeter, the starting point for analysis are individual Particle Flow Objects, as well as individual tracks. Each of the PFOs encodes four-momentum and position information. For tracks, they would have momentum and position information. However, sometimes it is interesting to group PFOs and tracks into jets, which is the result of hadronisation process from high energy particles like quarks or gulons.
+For the linear collider, thanks to the high granular calorimeter and advance PFA software, the starting point for analysis are individual Particle Flow Objects (PFOs), as well as individual tracks. Each of the PFOs encodes four-momentum and position information. At the same time, tracks would have momentum and position information. However, sometimes it is useful to group PFOs and tracks into jets, which are the results of hadronisation processes from high energy particles like quarks or gulons.
 
-A jet is typically a visually obvious structure in a event display. The momentum and the direction of a jet tend to resemble the originated particle. Despite the relative easiness of identifying jets visually, it presents a challenge for a pattern recognition program to identify jets effectively and efficiently.
+A jet is typically a visually obvious structure in an event display. The momentum and the direction of a jet tend to resemble the original particle. Despite the relative simplicity of identifying jets visually, it is a challenge for a pattern recognition program to identify jets effectively and efficiently. Early work on jet finding started in 1977 \cite{Sterman:1977wj}, where later development can be found in reviews \cite{Moretti:1998qx,Salam:2009jx,Ali:2010tw}. This section is based on these reviews.
 
-Early work on jet finding started in 1977 \cite{Sterman:1977wj}, where later development can be found in reviews \cite{Moretti:1998qx,Salam:2009jx,Ali:2010tw}.
+There are two large families of jet finding algorithm: cone based algorithms, and sequential combination algorithms. The cone based algorithms are briefly discussed in \Section{sec:pandoraConeCluster} in the context of the \pandora reconstruction. Here the focus is on the sequential combination algorithms.
 
-There are two large families of jet finding algorithm, cone based algorithms, and sequential combination algorithms. Cone based algorithm is briefly discussed in \Section{sec:pandoraConeClustering} in the context of the \pandora reconstruction.
-
-Sequential combination algorithms typically calculate a pair-wise distance metric. Pairs with the smallest metric will be combined. The metric will be calculated and updated after a combination. This procedure will be repeated until some stopping criterion are satisfied. The different jet algorithms typically differ in the distance metric and stopping criterion.
+Sequential combination algorithms typically calculate a pair-wise distance metric between a seed and a other particle. Pairs with the smallest metric are combined into a jet. The distance metric will be updated after a combination. This procedure is repeated until some stopping criterion are satisfied. The different jet algorithms typically differ in the distance metric and stopping criterion.
 %, and a pair with smallest metric will be combined.
 
-The chosen jet algorithm implementation is FastJet C++ software package \cite{Cacciari:2011ma,Cacciari:2005hq}, providing a wide range of jet finding algorithms. The implementation in Marlin software package is called MarlinFastJet. The symbols in the subsequent discussion follow the convention in \cite{Cacciari:2011ma}.
+The chosen jet algorithm implementation for this thesis is the FastJet C++ software package \cite{Cacciari:2011ma,Cacciari:2005hq}, providing a wide range of jet finding algorithms. The implementation in the Marlin software package is called the MarlinFastJet. The symbols in the subsequent discussion follow the convention in \cite{Cacciari:2011ma}.
 
 \subsubsection{\kt algorithm}
 
-Longitudinally-invariant \kt algorithm \cite{Catani:1993hr,Ellis:1993tq} is one of the common sequential combination algorithms for \pp collider experiment. In the inclusive variant, the symmetrical pair-wise distance metric between particle $i$ and $j$, and the beam distance, are defined as
+Longitudinally-invariant \kt algorithm \cite{Catani:1993hr,Ellis:1993tq} is one of the common sequential combination algorithms for \pp collider experiments. There are two variants: inclusive and exclusive. In the inclusive variant, the symmetrical pair-wise distance metric between particle $i$ and $j$, $d_{ij}$ or $d_{ji}$, and the beam distance, $d_{iB}$, are defined as
 \begin{equation}
 &d_{ij} = d_{ji} = \min\!\parenths{\pT_{i}^{2},\!\pT_{j}^{2}}\frac{\DeltaOf{R_{ij}^{2}}}{R^{2}}, \\
 &d_{iB} = \pT_{i}^2,
 \end{equation}
 where $\pT_{i}$ is the transverse momentum of particle $i$ with respect to the beam ($z$) direction, and $\DeltaOf{R_{ij}^{2}}$ is the measurement of angular separation of particle $i$ and $j$, defined as $\DeltaOf{R_{ij}^{2}} = \parenths{y_i - y_j}^2 + \parenths{\phi_i - \phi_j}^2$, where $y_i = \frac{1}{2}\ln\!\frac{E_i + {p_z}_i}{E_i - {p_z}_i}$ and $\phi_i$ are particle $i$'s rapidity and azimuthal angle. $R$ is a free parameter controlling the jet radius.
 
-If $d_{ij} < d_{iB}$, particle $i$ and $j$ are merged, with the \fourMomentum of particle $i$ updated as the sum of the two particles. Otherwise, particle $i$ is set to be a final jet, and deleted from the particle list. The above procedure is repeated until no particle left.
+If $d_{ij} < d_{iB}$, particle $i$ and $j$ are merged, with the \fourMomentum of particle $i$ updated as the sum of the two particles. Otherwise, particle $i$ is set to be a final jet, and deleted from the particle list. The above procedure is repeated until no particles are left.
 
-The exclusive variant is similar. First difference is that when  $d_{iB} < d_{ij}$, the particle $i$ is discarded and part of the beam jet. The second difference is that when both $d_{ij}$ and $d_{iB}$ are above some threshold, $d_{cut}$, the clustering will stop. In practise, exclusive mode allows a specified number of jets to be found, which will automatically choose the $d_{cut}$. The inclusive mode would find as many jets as the algorithm allows. The exclusive \kt algorithm is used in \Section{sec:doubleHiggsJetOptimisation}.
+The exclusive variant is similar to the inclusive variant. First difference is that when  $d_{iB} < d_{ij}$, particle $i$ is discarded and part of the beam jet. The beam jet contains particles that are considered from the beam induced background. The beam jet is not used as a output. The second difference is that when both $d_{ij}$ and $d_{iB}$ are above some threshold, $d_{cut}$, the clustering will stop. In practise, the exclusive mode allows a specified number of jets to be found, which will automatically choose the $d_{cut}$. The inclusive mode would find as many jets as the algorithm allows. An example usage of the exclusive \kt algorithm can be found in \Section{sec:doubleHiggsJetOptimisation}.
 
 \subsubsection{Durham algorithm}
 \label{sec:pandoraJetDurham}
-Durham algorithm \cite{Catani:1991hj}, also known as \ee \kt algorithm, is commonly used \ee collider experiment. It has a single distance metric:
+The Durham algorithm \cite{Catani:1991hj}, also known as \ee \kt algorithm, is commonly used for the \ee collider experiments. It has a single distance metric:
 \begin{equation}
 d_{ij} = 2\min\!\parenths{E_i^2,\!E_j^2}\!\parenths{1 - \cosOf{\theta_{ij}}},
 \end{equation}
-where $E_i$ is the energy of particle $i$. $\theta_{ij}$ is the polar angle difference between particle $i$ and $j$. Durham algorithm can only be run at exclusive mode, which means that the clustering will stop when $d_{ij}$ is above some threshold, $d_{cut}$.
+where $E_i$ is the energy of particle $i$. $\theta_{ij}$ is the polar angle difference between particle $i$ and $j$. The Durham algorithm can only be run at exclusive mode, which means that the clustering will stop when $d_{ij}$ is above some threshold, $d_{cut}$.
 
-Comparing to \kt algorithm, it uses energy instead of \pT in the distance metric, and it did not have a beam jet. This is because that for the \ee collider in the past, the beam induced background was not severe and collisions energy is known, \sqrtS.
+Compared to the \kt algorithm, it uses energy instead of \pT in the distance metric, and it does not have a beam jet. This is because that for the \ee collider at low centre-of-mass energies, the beam induced background is not severe and the collisions energies are known.
 
 \subsubsection{Jet algorithm for the \CLIC}
 
-Although \CLIC is a \ee collider, the significant beam-induced background adds a large amount of energy. Therefore, traditional \ee jet algorithms, like Durham algorithm, is not suitable for the \CLIC environment. Studies has shown that jet algorithms for \pp colliders have better performance for \CLIC \cite{Linssen:2012hp,LCD-Note-2010-006}.
+Although \CLIC is a \ee collider, the significant beam-induced background adds a large amount of energy. Therefore, traditional \ee jet algorithms, like the Durham algorithm, is not suitable for the \CLIC collision environment. Studies have shown that jet algorithms for the \pp colliders give better performances for the \CLIC \cite{Linssen:2012hp,LCD-Note-2010-006}.
 
-A more recent attempt at marrying merits from both Durham and \kt algorithms has resulted in Valencia jet algorithm \cite{Boronat:2014hva}. It had shown promising improvement comparing to \kt algorithm, which is used in the parallel  \eeToHHbbbb  sub-channel analysis in \Chapter{chap:DoubleHiggs} by collaborators.
+%A more recent attempt at marrying merits from both the Durham and the \kt algorithms has resulted in the Valencia jet algorithm \cite{Boronat:2014hva}. It has shown promising improvement compared to the \kt algorithm.
+
+%, which is used in the parallel  \eeToHHbbbb  sub-channel analysis in \Chapter{chap:DoubleHiggs} by collaborators.
 
 
 %Why extra C++ implementation speed reduce O(n^3) to NlgN y, phi space, 2D KNN problem
 
-\subsubsection{\y{} parameter}
+\subsubsection{The \y{} parameter}
 \label{sec:pandoraYparameter}
-\y{} parameter is calculated for each specific jet algorithm. It is a measure of the number of jets in an event. \y{} parameter describes the transition of exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets (see \Section{sec:doubleHiggsJetAlgorithm} for jet algorithm). Numerically \y{} parameter is often much smaller than one. A typically way to convert the small number to a human acceptable range is to take the minus logarithm of the number.
+The \y{} parameter is calculated for each specific jet algorithm. It is a measure of the number of jets in an event. The \y{} parameter describes the transition of  the exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets. Numerically the \y{} parameter is often much smaller than one. A typically way to convert the small number to a human acceptable range is to take the negative logarithm of the number.
 
 
-\subsection{\lcfiplus}
+\subsection{The \lcfiplus}
 \label{sec:pandoraLCFI}
 Another useful analysis technique is to identify jets from \Pbottom and \Pcharm quarks. These jets have signatory topologies. A combination of vertex finding and multivariate analysis is used to identify \Pbottom and \Pcharm jets.
 
-The flavour tagging processor, \lcfiplus \cite{Suehara:2015ura} is based on the LCFIVertex package \cite{Bailey:2009ui}, which was used in the simulation studies for \ILCloi \cite{Abe:2010aa,Aihara:2009ad} and \CLICcdr \cite{Linssen:2012hp}. Current software is built in mind of a future \ee collider. Although the software is modular and can be used in any order, here it will be described in the order used in a physics analysis.
+The flavour tagging processor, \lcfiplus \cite{Suehara:2015ura} is based on the LCFIVertex package \cite{Bailey:2009ui}, which was used in the simulation studies for the \ILCloi \cite{Abe:2010aa,Aihara:2009ad} and the \CLICcdr \cite{Linssen:2012hp}.  The current software is modular and can be used in any order. However here it will be described in the order used in a physics analysis.
 
-The input are \PFOs. The vertex finding algorithms perform vertex fitting and identify primary and secondary vertex. There is a ``V0'' particle rejection step, which is neutral particles decaying or converting into a pair of charged tracks. The topology is similar to the decay of \Pbottom or \Pcharm hadrons. Hence it is important to remove the V0 particles to improve the heavy quark flavour tagging (see \Section{sec:pandoraPandoraTrack} for a similar V0 rejection).
+%The current software is built for a future \ee collider.
 
-Once the primary and secondary vertices are found, \PFOs are clustered in to jets. This jet clustering scheme ensures that the secondary vertices and the muons identified from semi-leptonic decay fall in the same jet. Therefore, it is consistent with the hadronic decay. Jet algorithms used are Durham and Durham modified algorithms(see \Section{sec:pandoraJetDurham}).
+The inputs are \PFOs. The vertex finding algorithms perform vertex fitting and identify primary and secondary vertices. There is a ``V0'' particle rejection step in which neutral particles decay into pairs of charged particles. The topology is similar to the decay of \Pbottom or \Pcharm hadrons. Hence it is important to remove the V0 particles to improve the heavy quark flavour tagging (see \Section{sec:pandoraPandoraTrack} for a similar V0 rejection).
 
-The next step is to refine vertices finding to improve the \Pbottom jet identification from \Pcharm jet. Since the existence of two close by vertices is strongly correlated to a \Pbottom jet, the vertices refining step will reconstruct as many secondary vertices correctly as possible.
+Once the primary and secondary vertices are found, \PFOs are clustered in to jets. This jet clustering scheme ensures that the secondary vertices and the muons, identified from semi-leptonic decay, fall into the same jet. Therefore, it is consistent with  hadronic decay. The jet algorithms used are Durham and Durham modified algorithms(see \Section{sec:pandoraJetDurham}).
 
-The last step is to gather the information about vertices and jets, and deploy a multivariate analysis. The multivariate classier used, Boosted Decision Tree,  is implemented in TMVA software package \cite{Hocker:2007ht}, which is discussed later in \Section{}. A series of flavour sensitive variables are calculated, and the classification is divided into four subset: jet with zero, one, or two properly reconstructed vertices, or a single-track pseudo-vertex. For each subset, a jet can either be classified to a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet (\Pup, \Pdown or \Pstrange). The multiclass classifier's response is normalised across different subset, and they will be referred in the subsequent physics analysis as the tag value. See \Section{} for a discussion on multiclass classifier.
+The next step is to refine vertices to improve the \Pbottom jet identification from the \Pcharm jet. Since the existence of two close by vertices is strongly correlated to a \Pbottom jet, the vertices refining step will reconstruct as many secondary vertices correctly as possible.
+
+The last step is to gather the information about vertices and jets, and deploy a multivariate analysis. The multivariate classier used, Boosted Decision Tree,  is implemented in the TMVA software package \cite{Hocker:2007ht}. A series of flavour sensitive variables are calculated, and the classification is divided into four subset: jets with zero, one, or two properly reconstructed vertices, or a single-track pseudo-vertex. For each subset, a jet can either be classified to a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet (\Pup, \Pdown or \Pstrange). The multiclass classifier's response is normalised across different subset, and they will be referred in the subsequent physics analysis as the tag value. 
 
 %The samples for training the multiclass classifier are \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} at \rootS{1.4}, where \PZ decays to \HepProcess{\Pbottom\APbottom}, \HepProcess{\Pcharm\APcharm}, or \HepProcess{\Pup\APup/\Pdown\APdown/\Pstrange\APstrange}.
 
-The flavour tagging is performed after the initial jet reconstruction, and all the \PFOs in the reconstructed jets are the input to the \lcfiplus flavour tagging processor. Therefore, the classifier in the \lcfiplus processor is trained for a specific \PFO collection and a specific jet reconstruction algorithm. The output of the processor for a jet is three values, corresponding to the likelihood of the jet being a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet.
+The flavour tagging is performed after the initial jet reconstruction, and all the \PFOs in the reconstructed jets are input into the \lcfiplus flavour tagging processor. Therefore, the classifier in the \lcfiplus processor is trained for a specific \PFO collection and a specific jet reconstruction algorithm. The outputs of the processor for a jet are three values, corresponding to the likelihood of the jet being a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet.
 
 %In this analysis, the classifier is trained with the optimal jet reinstruction choice, discussed in \Section{sec:doubleHiggsJetOptimisation}.
  % The selection efficiency of b-jets and c-jets with training samples is shown in \Figure{fig:doubleHiggs1.4Btag}.
