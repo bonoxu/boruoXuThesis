@@ -25,109 +25,108 @@
 \BOOKMARK [2][-]{subsection.3.6.2}{Tracking Detectors}{section.3.6}% 25
 \BOOKMARK [2][-]{subsection.3.6.3}{Electromagnetic Calorimeter}{section.3.6}% 26
 \BOOKMARK [2][-]{subsection.3.6.4}{Hadronic Calorimeter}{section.3.6}% 27
-\BOOKMARK [2][-]{subsection.3.6.5}{Solenoid}{section.3.6}% 28
-\BOOKMARK [2][-]{subsection.3.6.6}{Yoke and Muon system}{section.3.6}% 29
-\BOOKMARK [2][-]{subsection.3.6.7}{Very Forward Calorimeters}{section.3.6}% 30
-\BOOKMARK [1][-]{section.3.7}{CLIC versus ILC}{chapter.3}% 31
-\BOOKMARK [2][-]{subsection.3.7.1}{CLIC\137ILD versus ILD}{section.3.7}% 32
-\BOOKMARK [0][-]{chapter.4}{Simulation and Reconstruction}{}% 33
-\BOOKMARK [1][-]{section.4.1}{Monte Carlo event generation}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.2}{Event Simulation}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.3}{Event Reconstruction}{chapter.4}% 36
-\BOOKMARK [1][-]{section.4.4}{PandoraPFA reconstruction}{chapter.4}% 37
-\BOOKMARK [2][-]{subsection.4.4.1}{Track selection}{section.4.4}% 38
-\BOOKMARK [2][-]{subsection.4.4.2}{Calorimeter selection}{section.4.4}% 39
-\BOOKMARK [2][-]{subsection.4.4.3}{Cone Clusters Algorithm}{section.4.4}% 40
-\BOOKMARK [2][-]{subsection.4.4.4}{Particle Identification}{section.4.4}% 41
-\BOOKMARK [2][-]{subsection.4.4.5}{Clustering}{section.4.4}% 42
-\BOOKMARK [2][-]{subsection.4.4.6}{Topological cluster association}{section.4.4}% 43
-\BOOKMARK [2][-]{subsection.4.4.7}{Track-cluster association}{section.4.4}% 44
-\BOOKMARK [2][-]{subsection.4.4.8}{Re-clustering}{section.4.4}% 45
-\BOOKMARK [2][-]{subsection.4.4.9}{Fragment removal}{section.4.4}% 46
-\BOOKMARK [2][-]{subsection.4.4.10}{Particle Flow Object Creation}{section.4.4}% 47
-\BOOKMARK [1][-]{section.4.5}{CLIC specific simulation and reconstruction}{chapter.4}% 48
-\BOOKMARK [2][-]{subsection.4.5.1}{Luminosity spectrum}{section.4.5}% 49
-\BOOKMARK [2][-]{subsection.4.5.2}{Beam induced backgrounds}{section.4.5}% 50
-\BOOKMARK [2][-]{subsection.4.5.3}{CLIC simulated particle masses}{section.4.5}% 51
-\BOOKMARK [1][-]{section.4.6}{Reconstruction Processors}{chapter.4}% 52
-\BOOKMARK [2][-]{subsection.4.6.1}{MC truth linker}{section.4.6}% 53
-\BOOKMARK [2][-]{subsection.4.6.2}{Jet algorithm}{section.4.6}% 54
-\BOOKMARK [2][-]{subsection.4.6.3}{LCFIPlus}{section.4.6}% 55
-\BOOKMARK [2][-]{subsection.4.6.4}{Event shape variables}{section.4.6}% 56
-\BOOKMARK [1][-]{section.4.7}{Multivariate Analysis}{chapter.4}% 57
-\BOOKMARK [2][-]{subsection.4.7.1}{Optimisation and overfitting}{section.4.7}% 58
-\BOOKMARK [2][-]{subsection.4.7.2}{Choice of models}{section.4.7}% 59
-\BOOKMARK [2][-]{subsection.4.7.3}{Multiple classes}{section.4.7}% 60
-\BOOKMARK [0][-]{chapter.5}{Photon Reconstruction in PandoraPFA}{}% 61
-\BOOKMARK [1][-]{section.5.1}{Overview of photon reconstruction in PandoraPFA}{chapter.5}% 62
-\BOOKMARK [1][-]{section.5.2}{Electromagnetic shower}{chapter.5}% 63
-\BOOKMARK [1][-]{section.5.3}{Photon Reconstruction algorithm}{chapter.5}% 64
-\BOOKMARK [2][-]{subsection.5.3.1}{Form photon clusters}{section.5.3}% 65
-\BOOKMARK [2][-]{subsection.5.3.2}{Find photon candidates}{section.5.3}% 66
-\BOOKMARK [2][-]{subsection.5.3.3}{Photon ID test}{section.5.3}% 67
-\BOOKMARK [2][-]{subsection.5.3.4}{Photon Fragment removal}{section.5.3}% 68
-\BOOKMARK [1][-]{section.5.4}{Two dimensional peak finding algorithm for photon candidate}{chapter.5}% 69
-\BOOKMARK [2][-]{subsection.5.4.1}{Initialise 2D histogram}{section.5.4}% 70
-\BOOKMARK [2][-]{subsection.5.4.2}{Project hit energy to histogram}{section.5.4}% 71
-\BOOKMARK [2][-]{subsection.5.4.3}{Local peak identifying}{section.5.4}% 72
-\BOOKMARK [2][-]{subsection.5.4.4}{Associate non-peak bins to peaks}{section.5.4}% 73
-\BOOKMARK [2][-]{subsection.5.4.5}{Peak filtering}{section.5.4}% 74
-\BOOKMARK [2][-]{subsection.5.4.6}{Candidate close to track projection}{section.5.4}% 75
-\BOOKMARK [2][-]{subsection.5.4.7}{Inclusive mode}{section.5.4}% 76
-\BOOKMARK [1][-]{section.5.5}{Likelihood classifier for photon ID}{chapter.5}% 77
-\BOOKMARK [2][-]{subsection.5.5.1}{Projective Likelihood in PandoraPFA}{section.5.5}% 78
-\BOOKMARK [1][-]{section.5.6}{Photon fragment removal algorithm in the ECAL}{chapter.5}% 79
-\BOOKMARK [1][-]{section.5.7}{Photon fragment recovery algorithm in the HCAL}{chapter.5}% 80
-\BOOKMARK [1][-]{section.5.8}{Photon splitting algorithm}{chapter.5}% 81
-\BOOKMARK [1][-]{section.5.9}{Characterise the performance}{chapter.5}% 82
-\BOOKMARK [1][-]{section.5.10}{Compare with no photon reconstruction}{chapter.5}% 83
-\BOOKMARK [1][-]{section.5.11}{Compare with photon reconstruction in PandoraPFA version 1}{chapter.5}% 84
-\BOOKMARK [1][-]{section.5.12}{Understand photon reconstruction improvement}{chapter.5}% 85
-\BOOKMARK [1][-]{section.5.13}{Current photon reconstruction performance}{chapter.5}% 86
-\BOOKMARK [0][-]{chapter.6}{Tau Lepton Decay Modes Classification}{}% 87
-\BOOKMARK [1][-]{section.6.1}{Overview of the analysis}{chapter.6}% 88
-\BOOKMARK [1][-]{section.6.2}{Decay modes}{chapter.6}% 89
-\BOOKMARK [1][-]{section.6.3}{Simulation and reconstruction}{chapter.6}% 90
-\BOOKMARK [1][-]{section.6.4}{Event pre-selection}{chapter.6}% 91
-\BOOKMARK [1][-]{section.6.5}{Select single tau decay}{chapter.6}% 92
-\BOOKMARK [1][-]{section.6.6}{Discriminative variables}{chapter.6}% 93
-\BOOKMARK [2][-]{subsection.6.6.1}{ resonances reconstruction}{section.6.6}% 94
-\BOOKMARK [2][-]{subsection.6.6.2}{Separate e--0.6mu \040from --0.6mu }{section.6.6}% 95
-\BOOKMARK [1][-]{section.6.7}{Multivariate Analysis}{chapter.6}% 96
-\BOOKMARK [1][-]{section.6.8}{Classification Efficiency}{chapter.6}% 97
-\BOOKMARK [1][-]{section.6.9}{Electromagnetic calorimeter optimisation}{chapter.6}% 98
-\BOOKMARK [2][-]{subsection.6.9.1}{Tau hadronic decay correct classification efficiency}{section.6.9}% 99
-\BOOKMARK [1][-]{section.6.10}{Separate H-0.6mu from Z-0.6mu with tau pair decay}{chapter.6}% 100
-\BOOKMARK [2][-]{subsection.6.10.1}{Event pre-selection}{section.6.10}% 101
-\BOOKMARK [2][-]{subsection.6.10.2}{Identify tau pairs}{section.6.10}% 102
-\BOOKMARK [2][-]{subsection.6.10.3}{Variables}{section.6.10}% 103
-\BOOKMARK [2][-]{subsection.6.10.4}{Multivariate analysis}{section.6.10}% 104
-\BOOKMARK [2][-]{subsection.6.10.5}{Result}{section.6.10}% 105
-\BOOKMARK [0][-]{chapter.7}{Double Higgs Bosons Production Analysis}{}% 106
-\BOOKMARK [1][-]{section.7.1}{Analysis Straggly Overview}{chapter.7}% 107
-\BOOKMARK [1][-]{section.7.2}{Monte Carlo Sample Generation}{chapter.7}% 108
-\BOOKMARK [1][-]{section.7.3}{Lepton identification}{chapter.7}% 109
-\BOOKMARK [2][-]{subsection.7.3.1}{Electron and muon identification}{section.7.3}% 110
-\BOOKMARK [2][-]{subsection.7.3.2}{Tau lepton identification}{section.7.3}% 111
-\BOOKMARK [2][-]{subsection.7.3.3}{Very forward electron identification}{section.7.3}% 112
-\BOOKMARK [2][-]{subsection.7.3.4}{Lepton identification performance}{section.7.3}% 113
-\BOOKMARK [2][-]{subsection.7.3.5}{Other lepton identification processors}{section.7.3}% 114
-\BOOKMARK [1][-]{section.7.4}{Jet reconstruction}{chapter.7}% 115
-\BOOKMARK [2][-]{subsection.7.4.1}{Jet reconstruction optimisation}{section.7.4}% 116
-\BOOKMARK [1][-]{section.7.5}{Jet flavour tagging}{chapter.7}% 117
-\BOOKMARK [1][-]{section.7.6}{Jet pairing}{chapter.7}% 118
-\BOOKMARK [1][-]{section.7.7}{Pre-selection}{chapter.7}% 119
-\BOOKMARK [2][-]{subsection.7.7.1}{Discriminative pre-selection cuts}{section.7.7}% 120
-\BOOKMARK [2][-]{subsection.7.7.2}{Mutually exclusive cuts for \040H-0.6muH-0.6mub-0.6mub1mu1mu-0.6muW+-0.6muW--0.6mu \040and \040H-0.6muH-0.6mub-0.6mub1mu1mu-0.6mub-0.6mub1mu1mu-0.6mu }{section.7.7}% 121
-\BOOKMARK [2][-]{subsection.7.7.3}{Cuts to aid the MVA}{section.7.7}% 122
-\BOOKMARK [1][-]{section.7.8}{Discriminative variables for MVA}{chapter.7}% 123
-\BOOKMARK [1][-]{section.7.9}{Multivariate analysis}{chapter.7}% 124
-\BOOKMARK [1][-]{section.7.10}{Signal selection results}{chapter.7}% 125
-\BOOKMARK [1][-]{section.7.11}{ e+-0.6mue--0.6muH-0.6muH-0.6mue-0.6mu1mue1mu-0.6mu \040 b-0.6mub1mu1mu-0.6muW+-0.6muW--0.6mu-2mu-0.6mu-2mu1mu1mu-0.6mu hadronic decay at s = 3TeV analysis}{chapter.7}% 126
-\BOOKMARK [1][-]{section.7.12}{ e+-0.6mue--0.6muH-0.6muH-0.6mue-0.6mu1mue1mu-0.6mu \040 b-0.6mub1mu1mu-0.6muW+-0.6muW--0.6mu-2mu-0.6mu-2mu1mu1mu-0.6mu semi-leptonic decay at s = 3TeV analysis}{chapter.7}% 127
-\BOOKMARK [1][-]{section.7.13}{Result interpretation}{chapter.7}% 128
-\BOOKMARK [1][-]{section.7.14}{Combined results}{chapter.7}% 129
-\BOOKMARK [1][-]{section.7.15}{Simultaneous couplings extraction}{chapter.7}% 130
-\BOOKMARK [0][-]{chapter*.131}{Bibliography}{}% 131
-\BOOKMARK [0][-]{chapter*.132}{List of figures}{}% 132
-\BOOKMARK [0][-]{chapter*.133}{List of tables}{}% 133
+\BOOKMARK [2][-]{subsection.3.6.5}{Solenoid, Yoke and Muon system}{section.3.6}% 28
+\BOOKMARK [2][-]{subsection.3.6.6}{Very Forward Calorimeters}{section.3.6}% 29
+\BOOKMARK [1][-]{section.3.7}{The CLIC versus the ILC}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.7.1}{The CLIC\137ILD versus the ILD}{section.3.7}% 31
+\BOOKMARK [0][-]{chapter.4}{Simulation, reconstruction and analysis software}{}% 32
+\BOOKMARK [1][-]{section.4.1}{Monte Carlo event generation}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.2}{Event Simulation}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.3}{Event Reconstruction}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.4}{PandoraPFA event reconstruction}{chapter.4}% 36
+\BOOKMARK [2][-]{subsection.4.4.1}{Track selection}{section.4.4}% 37
+\BOOKMARK [2][-]{subsection.4.4.2}{Calorimeter selection}{section.4.4}% 38
+\BOOKMARK [2][-]{subsection.4.4.3}{Cone Clusters Algorithm}{section.4.4}% 39
+\BOOKMARK [2][-]{subsection.4.4.4}{Particle Identification}{section.4.4}% 40
+\BOOKMARK [2][-]{subsection.4.4.5}{Clustering}{section.4.4}% 41
+\BOOKMARK [2][-]{subsection.4.4.6}{Topological cluster association}{section.4.4}% 42
+\BOOKMARK [2][-]{subsection.4.4.7}{Track-cluster association}{section.4.4}% 43
+\BOOKMARK [2][-]{subsection.4.4.8}{Re-clustering}{section.4.4}% 44
+\BOOKMARK [2][-]{subsection.4.4.9}{Fragment removal}{section.4.4}% 45
+\BOOKMARK [2][-]{subsection.4.4.10}{Particle Flow Object Creation}{section.4.4}% 46
+\BOOKMARK [1][-]{section.4.5}{CLIC specific simulation and reconstruction}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.5.1}{Luminosity spectrum}{section.4.5}% 48
+\BOOKMARK [2][-]{subsection.4.5.2}{Beam induced backgrounds}{section.4.5}% 49
+\BOOKMARK [2][-]{subsection.4.5.3}{CLIC simulated particle masses}{section.4.5}% 50
+\BOOKMARK [1][-]{section.4.6}{Reconstruction Processors}{chapter.4}% 51
+\BOOKMARK [2][-]{subsection.4.6.1}{MC truth linker}{section.4.6}% 52
+\BOOKMARK [2][-]{subsection.4.6.2}{Jet algorithm}{section.4.6}% 53
+\BOOKMARK [2][-]{subsection.4.6.3}{LCFIPlus}{section.4.6}% 54
+\BOOKMARK [2][-]{subsection.4.6.4}{Event shape variables}{section.4.6}% 55
+\BOOKMARK [1][-]{section.4.7}{Multivariate Analysis}{chapter.4}% 56
+\BOOKMARK [2][-]{subsection.4.7.1}{Optimisation and overfitting}{section.4.7}% 57
+\BOOKMARK [2][-]{subsection.4.7.2}{Choice of models}{section.4.7}% 58
+\BOOKMARK [2][-]{subsection.4.7.3}{Multiple classes}{section.4.7}% 59
+\BOOKMARK [0][-]{chapter.5}{Photon Reconstruction in PandoraPFA}{}% 60
+\BOOKMARK [1][-]{section.5.1}{Overview of photon reconstruction in PandoraPFA}{chapter.5}% 61
+\BOOKMARK [1][-]{section.5.2}{Electromagnetic shower}{chapter.5}% 62
+\BOOKMARK [1][-]{section.5.3}{Photon Reconstruction algorithm}{chapter.5}% 63
+\BOOKMARK [2][-]{subsection.5.3.1}{Form photon clusters}{section.5.3}% 64
+\BOOKMARK [2][-]{subsection.5.3.2}{Find photon candidates}{section.5.3}% 65
+\BOOKMARK [2][-]{subsection.5.3.3}{Photon ID test}{section.5.3}% 66
+\BOOKMARK [2][-]{subsection.5.3.4}{Photon Fragment removal}{section.5.3}% 67
+\BOOKMARK [1][-]{section.5.4}{Two dimensional peak finding algorithm for photon candidate}{chapter.5}% 68
+\BOOKMARK [2][-]{subsection.5.4.1}{Initialise 2D histogram}{section.5.4}% 69
+\BOOKMARK [2][-]{subsection.5.4.2}{Project hit energy to histogram}{section.5.4}% 70
+\BOOKMARK [2][-]{subsection.5.4.3}{Local peak identifying}{section.5.4}% 71
+\BOOKMARK [2][-]{subsection.5.4.4}{Associate non-peak bins to peaks}{section.5.4}% 72
+\BOOKMARK [2][-]{subsection.5.4.5}{Peak filtering}{section.5.4}% 73
+\BOOKMARK [2][-]{subsection.5.4.6}{Candidate close to track projection}{section.5.4}% 74
+\BOOKMARK [2][-]{subsection.5.4.7}{Inclusive mode}{section.5.4}% 75
+\BOOKMARK [1][-]{section.5.5}{Likelihood classifier for photon ID}{chapter.5}% 76
+\BOOKMARK [2][-]{subsection.5.5.1}{Projective Likelihood in PandoraPFA}{section.5.5}% 77
+\BOOKMARK [1][-]{section.5.6}{Photon fragment removal algorithm in the ECAL}{chapter.5}% 78
+\BOOKMARK [1][-]{section.5.7}{Photon fragment recovery algorithm in the HCAL}{chapter.5}% 79
+\BOOKMARK [1][-]{section.5.8}{Photon splitting algorithm}{chapter.5}% 80
+\BOOKMARK [1][-]{section.5.9}{Characterise the performance}{chapter.5}% 81
+\BOOKMARK [1][-]{section.5.10}{Compare with no photon reconstruction}{chapter.5}% 82
+\BOOKMARK [1][-]{section.5.11}{Compare with photon reconstruction in PandoraPFA version 1}{chapter.5}% 83
+\BOOKMARK [1][-]{section.5.12}{Understand photon reconstruction improvement}{chapter.5}% 84
+\BOOKMARK [1][-]{section.5.13}{Current photon reconstruction performance}{chapter.5}% 85
+\BOOKMARK [0][-]{chapter.6}{Tau Lepton Decay Modes Classification}{}% 86
+\BOOKMARK [1][-]{section.6.1}{Overview of the analysis}{chapter.6}% 87
+\BOOKMARK [1][-]{section.6.2}{Decay modes}{chapter.6}% 88
+\BOOKMARK [1][-]{section.6.3}{Simulation and reconstruction}{chapter.6}% 89
+\BOOKMARK [1][-]{section.6.4}{Event pre-selection}{chapter.6}% 90
+\BOOKMARK [1][-]{section.6.5}{Select single tau decay}{chapter.6}% 91
+\BOOKMARK [1][-]{section.6.6}{Discriminative variables}{chapter.6}% 92
+\BOOKMARK [2][-]{subsection.6.6.1}{ resonances reconstruction}{section.6.6}% 93
+\BOOKMARK [2][-]{subsection.6.6.2}{Separate e--0.6mu \040from --0.6mu }{section.6.6}% 94
+\BOOKMARK [1][-]{section.6.7}{Multivariate Analysis}{chapter.6}% 95
+\BOOKMARK [1][-]{section.6.8}{Classification Efficiency}{chapter.6}% 96
+\BOOKMARK [1][-]{section.6.9}{Electromagnetic calorimeter optimisation}{chapter.6}% 97
+\BOOKMARK [2][-]{subsection.6.9.1}{Tau hadronic decay correct classification efficiency}{section.6.9}% 98
+\BOOKMARK [1][-]{section.6.10}{Separate H-0.6mu from Z-0.6mu with tau pair decay}{chapter.6}% 99
+\BOOKMARK [2][-]{subsection.6.10.1}{Event pre-selection}{section.6.10}% 100
+\BOOKMARK [2][-]{subsection.6.10.2}{Identify tau pairs}{section.6.10}% 101
+\BOOKMARK [2][-]{subsection.6.10.3}{Variables}{section.6.10}% 102
+\BOOKMARK [2][-]{subsection.6.10.4}{Multivariate analysis}{section.6.10}% 103
+\BOOKMARK [2][-]{subsection.6.10.5}{Result}{section.6.10}% 104
+\BOOKMARK [0][-]{chapter.7}{Double Higgs Bosons Production Analysis}{}% 105
+\BOOKMARK [1][-]{section.7.1}{Analysis Straggly Overview}{chapter.7}% 106
+\BOOKMARK [1][-]{section.7.2}{Monte Carlo Sample Generation}{chapter.7}% 107
+\BOOKMARK [1][-]{section.7.3}{Lepton identification}{chapter.7}% 108
+\BOOKMARK [2][-]{subsection.7.3.1}{Electron and muon identification}{section.7.3}% 109
+\BOOKMARK [2][-]{subsection.7.3.2}{Tau lepton identification}{section.7.3}% 110
+\BOOKMARK [2][-]{subsection.7.3.3}{Very forward electron identification}{section.7.3}% 111
+\BOOKMARK [2][-]{subsection.7.3.4}{Lepton identification performance}{section.7.3}% 112
+\BOOKMARK [2][-]{subsection.7.3.5}{Other lepton identification processors}{section.7.3}% 113
+\BOOKMARK [1][-]{section.7.4}{Jet reconstruction}{chapter.7}% 114
+\BOOKMARK [2][-]{subsection.7.4.1}{Jet reconstruction optimisation}{section.7.4}% 115
+\BOOKMARK [1][-]{section.7.5}{Jet flavour tagging}{chapter.7}% 116
+\BOOKMARK [1][-]{section.7.6}{Jet pairing}{chapter.7}% 117
+\BOOKMARK [1][-]{section.7.7}{Pre-selection}{chapter.7}% 118
+\BOOKMARK [2][-]{subsection.7.7.1}{Discriminative pre-selection cuts}{section.7.7}% 119
+\BOOKMARK [2][-]{subsection.7.7.2}{Mutually exclusive cuts for \040H-0.6muH-0.6mub-0.6mub1mu1mu-0.6muW+-0.6muW--0.6mu \040and \040H-0.6muH-0.6mub-0.6mub1mu1mu-0.6mub-0.6mub1mu1mu-0.6mu }{section.7.7}% 120
+\BOOKMARK [2][-]{subsection.7.7.3}{Cuts to aid the MVA}{section.7.7}% 121
+\BOOKMARK [1][-]{section.7.8}{Discriminative variables for MVA}{chapter.7}% 122
+\BOOKMARK [1][-]{section.7.9}{Multivariate analysis}{chapter.7}% 123
+\BOOKMARK [1][-]{section.7.10}{Signal selection results}{chapter.7}% 124
+\BOOKMARK [1][-]{section.7.11}{ e+-0.6mue--0.6muH-0.6muH-0.6mue-0.6mu1mue1mu-0.6mu \040 b-0.6mub1mu1mu-0.6muW+-0.6muW--0.6mu-2mu-0.6mu-2mu1mu1mu-0.6mu hadronic decay at s = 3TeV analysis}{chapter.7}% 125
+\BOOKMARK [1][-]{section.7.12}{ e+-0.6mue--0.6muH-0.6muH-0.6mue-0.6mu1mue1mu-0.6mu \040 b-0.6mub1mu1mu-0.6muW+-0.6muW--0.6mu-2mu-0.6mu-2mu1mu1mu-0.6mu semi-leptonic decay at s = 3TeV analysis}{chapter.7}% 126
+\BOOKMARK [1][-]{section.7.13}{Result interpretation}{chapter.7}% 127
+\BOOKMARK [1][-]{section.7.14}{Combined results}{chapter.7}% 128
+\BOOKMARK [1][-]{section.7.15}{Simultaneous couplings extraction}{chapter.7}% 129
+\BOOKMARK [0][-]{chapter*.131}{Bibliography}{}% 130
+\BOOKMARK [0][-]{chapter*.132}{List of figures}{}% 131
+\BOOKMARK [0][-]{chapter*.133}{List of tables}{}% 132

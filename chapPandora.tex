@@ -1,58 +1,57 @@
-\chapter{Simulation and Reconstruction}
+\chapter{Simulation, reconstruction and analysis software}
 \label{chap:Reconstruction}
 
-\chapterquote{How to open a pandora box?}%
-{A wise Chinese}%: Blackwood's Magazine May 1830
+\chapterquote{All the world's a stage, And all the men and women merely players; They have their exits and their entrances, And one man in his time plays many parts.}%
+{William Shakespeare, 1564 - 1616}%: Blackwood's Magazine May 1830
 
 %As previously stated, this document focus on the \ILD and \CLICILD detectors. Due to the similarity, we often only discuss one detector to avoid the repetition. The difference in detectors will be stated if applicable.
 
-Automated analysis is the only way to deal with the vast amount of data generated in the high energy physics. An analysis involves an event reconstruction and using software to extract information of the event. Reconstruction software and analyses software have the same purpose to extract information. Hence they are discussed together in this chapter. Since the work presented in this document is on future colliders, simulation and monte carlo method is used throughout the document and presented in this chapter as well.
+Automated analysis is the only way to deal with the vast amount of data generated in high energy physics. An analysis often involves monte carlo event generations, event reconstructions, and using software to extract information of the event. Hence, reconstruction software and analyses software largely have the same purpose of extracting information. Hence they are discussed together in this chapter. Since the work is on future colliders,  monte carlo simulation is used throughout the thesis and is discussed in this chapter as well.
 
-In previous chapters, overviews of the theory and the future linear collider experiments have been described. In this chapter, the simulation and event reconstruction chain are discussed, followed by  discussion on  common analyses software. Simulation and reconstruction of events for the future Linear Colliders, \ILC and \CLIC, share common software framework.  Therefore shared reconstruction is discussed first, and the \CLIC specific issues are highlighted afterwards. The event reconstruction with emphasis on the \pandora event reconstruction, which is the framework for the photon reconstruction algorithms in \Chapter{chap:Reconstruction}. Lastly multivariate analysis is presented in a separate section because of its complexity. An overview of the multivariate with focus on boosted decision tree is provided.
-
+In previous chapters, overviews of the theory and the future linear collider experiments have been described. In this chapter, the simulation and event reconstruction chain are discussed, followed by  discussion on  common analyses software to be used in subsequent chapters. Simulation and reconstruction of events of the future Linear Colliders, \ILC and \CLIC, share a  common software framework.  Therefore,  the shared reconstruction is discussed first, and the \CLIC specific issues are highlighted afterwards. The event reconstruction is focused on the \pandora event reconstruction, which is the framework for the photon reconstruction algorithms in \Chapter{chap:Reconstruction}. Lastly analysis software and multivariate analysis are presented.   The multivariate analysis  is discussed in a separate section because of its complexity.
 
 \section{Monte Carlo event generation}
 \label{sec:pandoraMC}
-Monte Carlo (MC) event generation is the first step for the simulated study. Most events, electron-positron interaction, are generated with WHIZARD software, \cite{whizard,Moretti:2001zz}, with no polarisation of the electron and positrons. Some simple events are generated with HEPEVT. PYTHIA \cite{Sjostrand:1995iq} is used to describe parton showering, hadronisation and fragmentation. The parameters for PYTHIA are tuned to OPAL data from the LEP \cite{Alexander:1995bk}. TAUOLA \cite{Jadach:1993hs} debrides the tau lepton decay with correct spin correlations of the day products. The Initial State Radiation (\ISR) is simulated in WHIZARD with the \ISR photons being collinear with the beam direction. The Final State Radiation (\FSR) is simulated with default parameters in PYTHIA.
+Monte Carlo (MC) event generation is the first step for the simulated study. Most events, electron-positron interaction, are generated with the WHIZARD software \cite{whizard,Moretti:2001zz}, with no polarisation of the electron and positrons. Some simple events are generated manually with HEPEVT format. The PYTHIA \cite{Sjostrand:1995iq} is used to describe parton showering, hadronisation and fragmentation. The parameters for the PYTHIA are tuned to OPAL data from the LEP \cite{Alexander:1995bk}. The TAUOLA \cite{Jadach:1993hs} debrides the tau lepton decay with correct spin correlations of the day products. The Initial State Radiation (\ISR) is simulated in WHIZARD, with the \ISR photons being collinear with the beam direction. The Final State Radiation (\FSR) is simulated with default parameters in PYTHIA.
 
 \section{Event Simulation}
 
-The event simulation software is GEANT4 \cite{Agostinelli:2002hh}, and the detector geometry description is provided by MOKKA \cite{MoradeFreitas:2002kj}.  QGSP\_BERT physics list is used to describe the hadronic showers decay in the detector.
+For all the simulated events used in this thesis, the simulation software used is the GEANT4 \cite{Agostinelli:2002hh}. The detector geometry description is provided by the MOKKA \cite{MoradeFreitas:2002kj}.  The QGSP\_BERT physics list is used to describe the hadronic shower decay in the detector.
+
 
 \section{Event Reconstruction}
 
-Reconstruction software runs in Marlin framework \cite{Gaede:2006pj}, as a part of the \ilcsoft. Event reconstruction contains following steps: digitisation of simulated calorimeter hits, reconstruction of tracks in the tracking system using pattern recognition algorithms, and particle flow objects (\PFOs) reconstruction with \pandora\cite{Thomson:2009rp,Marshall:2012ry}. Details of the reconstruction can be found in \cite{Brau:2007zza,Linssen:2012hp}. Particle flow reconstruction via \pandora will be discussed in details, which provides the software framework for the photon reconstructions in \pandora in \Chapter{chap:Photon}.
+With simulated events (or real data in the future) as inputs, the next step is to reconstruct these events. The Reconstruction software runs in the Marlin framework \cite{Gaede:2006pj}, as a part of the \ilcsoft. The event reconstruction contains following steps: digitisation of simulated calorimeter hits, reconstruction of tracks in the tracking system (using pattern recognition algorithms), and particle flow objects (\PFOs) reconstruction with \pandora\cite{Thomson:2009rp,Marshall:2012ry}. Details of the reconstruction can be found in \cite{Brau:2007zza,Linssen:2012hp}. Here particle flow reconstruction via \pandora will be discussed in details, as it provides the software framework for the photon reconstructions in \pandora in \Chapter{chap:Photon} and used in \Chapter{chap:Tau} and \Chapter{chap:DoubleHiggs}.
 
-\section{\pandora reconstruction}
+\section{\pandora event reconstruction}
 \label{sec:pandoraPandoraPFA}
 
-Tradition calorimetric approach is unable to meet the mass and energy resolution requirements for future linear colliders. The particle flow approach with \pandora has a proof-of-principle demonstration of its capability to reach required resolution. The particle flow approach also put stringent requirements on the detector design, which is described in \Section{sec:detectorPhysicsRequirementPandora}. By associating calorimeter hits to the tracks, around 60\% of the jet energy from charged particles is measured by the tracker, which has a much better resolution than the calorimeter. Small cell sizes of the calorimeters are required to identify hits from different particles. The traditional sum of calorimeter cell energies is replaced by particle flow reconstruction algorithms, a complex pattern recognition problem.  The \pandora algorithm has been developed and used in the \ILC and \CLIC simulation studies.
+The tradition energy flow approach to calorimetry is unable to meet the mass and energy resolution requirements for future linear colliders. The particle flow approach with \pandora has a proof-of-principle demonstration of its capability to reach the required resolution. The particle flow approach also put stringent requirements on the detector design, which is described in \Section{sec:detectorPhysicsRequirementPandora}. By associating calorimeter hits to the tracks, around 60\% of the jet energy from charged particles is measured by the tracker, which has a much better resolution than the calorimeter. Small cell sizes of the calorimeters are required to identify hits from different particles. The traditional sum of calorimeter cell energies is replaced by particle flow reconstruction algorithms - a complex pattern recognition problem.  The \pandora algorithm has been developed and used in the \ILC and \CLIC simulation studies. There are over 60 linear collider specific reconstruction algorithms. Each aims to address a particular topological issue in the reconstruction.
 
-Developed with the \ILD detector concept, \pandora has been adapted to the \CLIC condition and shows its ability to deliver required energy resolutions \cite{Linssen:2012hp}. Recent the code base of the \pandora has been restructured. The core base codes for basic object and memory managements are factorised in the Pandora C++ Software Development Kit\cite{Marshall:2015rfa}. There are over 60 linear collider specific reconstruction algorithms, each aims to address a particular topological in the reconstruction.
-
-In the subsequent paragraphs, the main steps in the \pandora reconstructions are described. The details of the reconstruction can be found in \cite{Thomson:2009rp,Marshall:2012ry,Marshall:2015rfa}.
-
-Inputs of \pandora are digitised calorimeter hits and reconstructed tracks. The output are reconstructed particles with four-momenta, Particle Flow Objects (\PFOs).
+Developed with the \ILD detector concept, \pandora has been adapted to the \CLIC condition and shows its ability to deliver required energy resolutions \cite{Linssen:2012hp}.  In the recent development, the core base codes for basic object and memory managements are factorised in the Pandora C++ Software Development Kit\cite{Marshall:2015rfa}.
+% Recent the code base of the \pandora has been restructured.
+In the subsequent sections, the main steps in the \pandora reconstructions are described. The details of the reconstruction can be found in \cite{Thomson:2009rp,Marshall:2012ry,Marshall:2015rfa}. The inputs of \pandora are digitised calorimeter hits and reconstructed tracks, with some detector geometry information to aid the reconstruction. The output are reconstructed particles with four-momenta, also known as the Particle Flow Objects (\PFOs).
 
 \subsection{Track selection}
 \label{sec:pandoraPandoraTrack}
-Tracks from the tracking system are selected based on their topological properties, how likely they are from physical processes, and whether they are consistent with the tracker resolution. Only tracks passed the selection are used for the subsequent reconstruction.
 
-Special topologies of tracks are identified, such as when a neutral particle decays or converts into a pair of charged tracks, leaving a ``V0''  shape tracks. This is identified by searching for a pair of tracks originated from a single point. Another topology is ``kinks'' , when a charged particle decays to a single charged particles with neutral particles. The last special topology is  ``prongs'', when a charged particles decays to multiple charged particles. This information are stored and passed on to the subsequent reconstruction, along side with helical track fit (using last 50 reconstructed tracker hits) and the track projection to the front of the \ECAL.
+Tracks from the inner tracking detectors are important inputs of the \pandora reconstruction. These tracks are selected based on their topological properties, how likely they are from physical processes, and whether they are consistent with the tracker resolution. Only tracks passing the selection are used for the subsequent reconstruction.
+
+Special topologies of tracks are identified, such as when a neutral particle decays or converts into a pair of charged tracks, leaving tracks of a ``V0''  shape. This is identified by searching for a pair of tracks originated from a single point. Another topology is the ``kinks'' when a charged particle decays to a single charged particles with neutral particles. The last special topology are  the ``prongs'' when a charged particle decays to multiple charged particles. This information is stored and passed on to the subsequent reconstruction, along side with helical track fit (using last 50 reconstructed tracker hits) and the track projection to the front of the \ECAL.
 
 \subsection{Calorimeter selection}
 
-The information of a calorimeter hit is its position, its layer in the calorimeter and its energy response from the calorimeter digitiser.
+The other important inputs of  the \pandora reconstruction are the calorimeter hits from calorimeters. The properties of a calorimeter hit include the position, its layer in the calorimeter, and its energy response from the calorimeter digitiser.
 
-Calorimeter hits are selected based on a series of criterion. The selected hits need to have energies above certain thresholds, measured in minimum ionising particle (MIP) equivalent, or measured in directly converted energy. Similar to tracks, only calorimeter passed the selection are used in later steps.
+Calorimeter hits are selected based on a series of criterion. The selected hits need to have energies above certain thresholds, measured in minimum ionising particle (MIP) equivalent or measured in directly converted energy. Similar to tracks, only calorimeter hits that pass the selection are used in later steps.
 
-Geometry information and likelihood of the hit originated from a minimum ionising particle (MIP) are calculated.
+Extra information about calorimeter hits are calculated, stored and to be used in the later steps. The information includes the geometry information of the hit and likelihood of the hit originated from a minimum ionising particle (MIP).
 
-Isolated hits, often originated from low energy neutrons in a hadronic shower, are difficult to associate to the correct hadronic shower. They are identified and not used during the clustering stage. They participate the reconstruction during the  last step, particle flow object (PFO) creation.
+Isolated hits, often originating from low energy neutrons in a hadronic shower, are difficult to associate to the correct hadronic shower. They are identified and not used during the clustering stage. However, these isolated hits participate in the reconstruction during the  last step, particle flow object (PFO) creation, to contribute to the energy estimation.
 
 \subsection{Cone Clusters Algorithm}
 \label{sec:pandoraConeCluster}
-Before discussing the rest of the \pandora reconstruction, it is necessary to introduce the cone based clustering algorithm, which is widely used in the calorimeter in \pandora. The clustering algorithm produces basic working objects, \clusters.
+Before discussing the rest of the \pandora reconstruction, it is necessary to introduce the cone based clustering algorithm, which is widely used in many reconstruction algorithms in the \pandora. The clustering algorithm produces basic working objects, \clusters.
 
 \begin{figure}[tbph]
 \centering
@@ -61,17 +60,18 @@ Before discussing the rest of the \pandora reconstruction, it is necessary to in
 \label{fig:pandoraConeClustering}
 \end{figure}
 
-There are two main types of clustering algorithms: cone based and sequential combination (see \Section{sec:pandoraJetAlg}). The main clustering scheme \pandora is cone based clustering to group calorimeter hits. Illustrated in \Figure{fig:pandoraConeClustering}, cone clustering has a specified opening angle of the seed hit. Because the direction of particle flows is largely unchanged from the originated particle, whether it is a electromagnetic shower, QCD radiation or hadronisation, these cone clusters have similar direction and energy to the originated particle. Therefore it is applicable to use cone based clustering algorithms for building clusters.
+In general there are two main types of clustering algorithms: cone based algorithms and sequential combination algorithms(see \Section{sec:pandoraJetAlg}). The main clustering scheme used in the  \pandora is the cone based algorithms. The clustering algorithm forms clusters to group calorimeter hits. Illustrated in \Figure{fig:pandoraConeClustering}, cone clustering algorithm identifies a seed first, shown as the yellow dot. The algorithm then forms a cone to include hits that are within a specified opening angle to the seed hit. The cone based clustering algorithm is preferred because the direction of particle flow is largely unchanged from the originated particle, whether the particle flow is an electromagnetic shower, QCD radiation, or hadronisation.
 
+%these cone clusters have similar direction and energy to the originated particle. Therefore it is applicable to use cone based clustering algorithms for building clusters.
 
 \begin{figure}[tbph]
 \centering
 {\includegraphics[width=0.5\textwidth]{pandora/coneClustering2}}%
-\caption{Illustration of the clustering algorithm in \pandora, taken from \cite{Marshall:pandoraLC}}
+\caption{Illustration of the clustering algorithm used  in the \pandora, taken from \cite{Marshall:pandoraLC}}
 \label{fig:pandoraConeClustering2}
 \end{figure}
 
-The seed for the cone clustering is typically the projection of a energetic track to the front of the \ECAL. A high  energy calorimeter hit can also be used as a seed. A cone with a specified opening angle and depth will be formed around the seed. The \fourMomentum of calorimeter hits sum to the cone's \fourMomentum. The cone is built up from the inner layer of the \ECAL to the outer layer. At each layer, possible associations with hits in previous layers and same layer are checked. If a hit is not associated, it is used to seed a new cluster. This process is illustrated in \Figure{fig:pandoraConeClustering2}.
+\FIGURE{fig:pandoraConeClustering2} shows the clustering algorithm used in the \pandora. The seed for the cone clustering is typically the projection of a energetic track to the front of the \ECAL. A high  energy calorimeter hit can also be used as a seed. The initial cluster direction is taken as the direction of the seed. Afterwards, a cone with a specified opening angle and depth will be formed around the seed. The \fourMomentum of calorimeter hits are therefore summed to obtain the cone's \fourMomentum. The building of the cone is iterated from the inner layer of the \ECAL to the outer layer. At each layer, possible associations with hits in previous layers and the same layer are checked. If a hit is not associated with the cone, the hit is used to seed a new cluster. 
 
 
 \subsection{Particle Identification}
