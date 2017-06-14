@@ -154,26 +154,28 @@
 \DeclareRobustCommand{\Egamma}{\HepProcess{ \Pepm\Pgamma}\xspace}
 \DeclareRobustCommand{\gammae}{\HepProcess{ \Pgamma\Pepm}\xspace}
 \DeclareRobustCommand{\Gammagamma}{\HepProcess{ \Pgamma\Pgamma}\xspace}
+\DeclareRobustCommand{\BS}{\text{BS}\xspace}
+\DeclareRobustCommand{\EPA}{\text{EPA}\xspace}
 
 \DeclareRobustCommand{\BonoTauFinder}{\textsc{IsolatedTauIdentifer}\xspace}
 \DeclareRobustCommand{\BonoLeptonFinder}{\textsc{IsolatedLeptonIdentifer}\xspace}
 \DeclareRobustCommand{\IsolatedLeptonFinderProcessor}{\textsc{IsolatedLeptonFinder}\xspace}
 \DeclareRobustCommand{\TauFinderProcessor}{\textsc{TauFinder}\xspace}
 
- \DeclareRobustCommand{\WW}{\HepProcess{\PW\PW}\xspace}
+ \DeclareRobustCommand{\WW}{\HepProcess{\PWplus\PWminus}\xspace}
 \DeclareRobustCommand{\eeToHH}{\HepProcess{ \Pep \Pem \to \PHiggs \PHiggs \Pnue \APnue }\xspace}
 \DeclareRobustCommand{\eeToHHbbWW}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus}\xspace}
 \DeclareRobustCommand{\eeToHHbbqqqq}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \Pq \Pq \Pq \Pq}\xspace}
 \DeclareRobustCommand{\eeToHHbbWWFull}{\HepProcess{ \Pep \Pem \to \PHiggs \PHiggs \Pnue \APnue \to \Pbottom \APbottom \PWplus \PWminus}\xspace}
 \DeclareRobustCommand{\eeToHHbbWWHad}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \PWplus \PWminus \to \Pbottom \APbottom \Pq \Pq \Pq \Pq}\xspace}
-\DeclareRobustCommand{\eeToHHbbWWHadFull}{\HepProcess{ \PHiggs \PHiggs \Pnue \APnue \to \Pbottom \APbottom \PWplus \PWminus  \Pnue \APnue \to \Pbottom \APbottom \Pq \Pq \Pq \Pq \Pnue \APnue}\xspace}
+\DeclareRobustCommand{\eeToHHbbWWHadFull}{\HepProcess{ \PHiggs \PHiggs \Pnue \APnue \to \Pbottom \APbottom \PWplus \PWminus  \Pnue \APnue \to \Pbottom \APbottom \Pquark \Pquark \Pquark \Pquark \Pnue \APnue}\xspace}
 \DeclareRobustCommand{\HHvv}{\HepProcess{\PHiggs \PHiggs \Pnue \APnue }\xspace}
 
 \DeclareRobustCommand{\eeToHHbbbb}{\HepProcess{ \PHiggs \PHiggs \to \Pbottom \APbottom \Pbottom \APbottom}\xspace}
 \DeclareRobustCommand{\eeToHHbbbbFull}{\HepProcess{\Pep \Pem \to  \PHiggs \PHiggs  \Pnue \APnue \to \Pbottom \APbottom \Pbottom \APbottom  \Pnue \APnue}\xspace}
 \DeclareRobustCommand{\eeToHHotherFull}{\HepProcess{\Pep \Pem \to  \PHiggs \PHiggs \to \text{others}}\xspace}
 \DeclareRobustCommand{\eeTo}[1]{\HepProcess{ \Pep \Pem \to #1 }\xspace}
-\DeclareRobustCommand{\ggHad}{\HepProcess{ \Pphoton \Pphoton \to hadrons }\xspace}
+\DeclareRobustCommand{\ggHad}{\HepProcess{ \Pphoton \Pphoton \to \text{hadrons} }\xspace}
 \DeclareRobustCommand{\qlight}{\HepGenParticle{q}{l}{}\xspace}
 \DeclareRobustCommand{\Aqlight}{\HepGenAntiParticle{q}{l}{}\xspace}
 \DeclareRobustCommand{\llight}{\HepGenParticle{l}{l}{}\xspace}
@@ -188,7 +190,7 @@
 \DeclareRobustCommand{\btag}{\mymath{B}\xspace}
 \DeclareRobustCommand{\btagFull}[1]{\mymath{B_{#1}}\xspace}
 \DeclareRobustCommand{\sumBtag}[1]{\mymath{\Sigma{\btag}_{#1\xspace{jets}}}\xspace}
-\DeclareRobustCommand{\partialSumBtag}[3]{\mymath{\sum_{#1}^{#2}{\btag}_{#3\!{jets}}}\xspace}
+\DeclareRobustCommand{\partialSumBtag}[3]{\mymath{\sum_{#1}^{#2}{\btag}_{#3\!{\text{jets}}}}\xspace}
 \DeclareRobustCommand{\ctagFull}[1]{\mymath{C_{#1}}\xspace}
 \DeclareRobustCommand{\sphericity}{\mymath{\textbf{S}}\xspace}
 \DeclareRobustCommand{\abs}[1]{\mods{#1}}
