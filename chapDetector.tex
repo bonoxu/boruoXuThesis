@@ -129,9 +129,9 @@ Two detector concepts have been designed for the \ILC to deliver its physics pro
 
 
 
-The International Large Detector, the \ILD, is a detector concept at the International Linear Collider, the \ILC. The \ILD detector concept has been optimised in the view of the particle flow techniques. Particle flow approach to event reconstruction has shown to deliver the best possible jet reconstruction with proof-of-principle implementation such as \pandora (see \Chapter{chap:Reconstruction}). Each individual particles is reconstructed with the PFA. For charged particles, calorimeter hits are associated with the tracks. Therefore measurements of charged particles rely on an excellent tracking system resolution. Neutral particles reconstructions require a high spatial resolution of the calorimeters. 
+The International Large Detector, the \ILD, is a detector concept at the International Linear Collider, the \ILC. The \ILD detector concept has been optimised in the view of the particle flow techniques. Particle flow approach to event reconstruction has shown to deliver the best possible jet reconstruction with proof-of-principle implementation such as \pandora (see \Chapter{chap:Reconstruction}). Each individual particles is reconstructed with the PFA. For charged particles, calorimeter hits are associated with the tracks. Therefore measurements of charged particles rely on an excellent tracking system resolution. Neutral particles reconstructions require a high spatial resolution of the calorimeters.
 
-The particle flow paradigm requires topological information of individual particle reconstructions. The sub-detector systems need to have the spatial resolution to separate charged particles from neutral particles. The result is a highly granular calorimeter and a central tracking system with excellent momentum resolution. Longitudinal cross section of top quadrant of the \ILD detector concept, taken from \cite{Brau:2007zza}, is shown in \Figure{fig:ILD}. From the interaction point (\IP) outwards, there is a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layers, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. 
+The particle flow paradigm requires topological information of individual particle reconstructions. The sub-detector systems need to have the spatial resolution to separate charged particles from neutral particles. The result is a highly granular calorimeter and a central tracking system with excellent momentum resolution. Longitudinal cross section of top quadrant of the \ILD detector concept, taken from \cite{Brau:2007zza}, is shown in \Figure{fig:ILD}. From the interaction point (\IP) outwards, there is a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layers, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes.
 
 The section below will describe the sub-systems of the \ILD detector concept in the \ILD technical design report\cite{Baer:2013cma}, the ILD\_o1\_v05 option in \Mokka simulation. This detector concept has been used in studies described in subsequent chapters. The \ILD detector concept has been optimised and documented in previous documents, such as the letter of intent\cite{Abe:2010aa}. The \CLICILD detector concept for the \CLIC in the conceptual design report\cite{Linssen:2012hp} is a modified version of the \ILD, adapted to the \CLIC colliding environment. As they share similarities, only the differences are addressed. A comparison between \ILD and \CLICILD can be seen in \Figure{fig:detectorILD} and \Table{tab:ILDvsCLICILD}.
 
@@ -475,7 +475,7 @@ The forward region detectors provide luminosity measurements and forward coverag
 \centering
 \includegraphics[width=0.45\textwidth]{ILD/ILD_forward}
 \caption[The forward calorimeters of the \ILD.]
-{The forward calorimeters of the \ILD, taken from \cite{Baer:2013cma}. \LumiCAL, \BeamCAL, and \LHCAL are the luminosity calorimeter, beam calorimeter, and forward hadronic calorimeter.}
+{The forward calorimeters of the \ILD, taken from \cite{Baer:2013cma}. \LumiCAL, \BeamCAL, and \LHCAL are the luminosity calorimeter, beam calorimeter, and forward hadronic calorimeter, respectively.}
 \label{fig:detectorILDForward}
 \end{figure}
 
@@ -536,10 +536,19 @@ ILD, and their integration into a coherent detector concept
 
 
 
-\section{\CLIC versus \ILC}
+\section{The \CLIC versus the \ILC}
 
 
-The two main differences between \CLIC and \ILC are the high centre-of-mass energy and the high bunch charge density leading to significant beam related backgrounds.  Within a bunch train, there is 0.5\,ns between bunch crossings at CLIC.  There are two main sources of beam induced background: incoherent electron pairs from  photon (real or virtual) interactions with individual particles of the other beam, and interactions of two photons from the colliding beams. These differences leads to a modification in the detector design and the reconstruction software for the \CLIC. A comparison of \CLICILD and \ILD longitudinal cross sections can be seen in \Figure{fig:detectorILD}. A comparison of key parameters of the \ILD and \CLICILD detector concepts is shown in \Table{tab:ILDvsCLICILD}.
+The two main differences between the \CLIC and the \ILC are the high centre-of-mass energy and the high bunch charge density leading to significant beam related backgrounds.  Within a bunch train, there is 0.5\,ns between bunch crossings at the \CLIC.  There are two main sources of beam induced background: incoherent electron pairs from  photon (real or virtual) interactions with individual particles of the other beam, and interactions of two photons from the colliding beams. These differences leads to a modification in the detector design and the reconstruction software for the \CLIC.
+
+
+
+\subsection{The \CLICILD versus the \ILD}
+
+
+
+There are two detector concepts studied in the \CLIC conceptual design report \cite{Linssen:2012hp}, the \CLICILD and the \CLICSiD. The \CLICILD detector concept is based on the \ILD design. They share similarities due to similar physics motivations. Only the differences are highlighted here. A comparison of the \CLICILD and the \ILD longitudinal cross sections can be seen in \Figure{fig:detectorILD}. A comparison of key parameters of the \ILD and the \CLICILD detector concepts is shown in \Table{tab:ILDvsCLICILD}.
+
 
 \begin{table}[htbp]
 \centering
@@ -555,7 +564,7 @@ Solenoid Length (m) & 8.0 & 8.3 \\
 \VTX Inner Radius (mm) & 16 & 31 \\
 \ECAL $r_{min}$ (m) & 1.8 & 1.8 \\
 \ECAL $\Delta{r}$ (mm) & 172 & 172 \\
-\HCAL Absorber B / E & Fe & Fe / W \\
+\HCAL Absorber B / E & Fe / Fe & Fe / W \\
 \HCAL Interaction Length & 5.5 & 7.5 \\
 Overall Height (m) & 14.0 & 14.0 \\
 Overall Length (m) & 13.2 & 12.8 \\
@@ -582,31 +591,24 @@ Overall Length (m) & 13.2 & 12.8 \\
     \label{fig:CLIC_ILD}
   \end{subfigure}
 \caption[Longitudinal cross section of top quadrant of the \ILD and the \CLICILD detector concepts.]
-{\FIGURE{fig:ILD} and \FIGURE{fig:ILD} shows longitudinal cross section of top quadrant of the \ILD and the \CLICILD detector concepts, taken from \cite{Baer:2013cma} and \cite{Linssen:2012hp} respectively. From interaction point (\IP) outwards, there is a tracking system compromising a large time projection chamber (\TPC) augmented with silicon tungsten layer, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. Numbers are in units of mm.}
+{\FIGURE{fig:ILD} and \FIGURE{fig:ILD} shows longitudinal cross section of top quadrant of the \ILD and the \CLICILD detector concepts, taken from \cite{Baer:2013cma} and \cite{Linssen:2012hp} respectively. From interaction point (\IP) outwards, there is a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layer, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. The numbers are in units of mm.}
 \label{fig:detectorILD}
 \end{figure}
 
 
+For the \CLICILD vertex detector, the first layer is moved outwards by 15\,mm due to a larger high occupancy region with higher centre-of-mass energy. The detector is also required to provided time stamping at nanoseconds level, which need a different electronically component than that of the \ILD.
 
-\subsection{\CLICILD versus \ILD}
+For the \CLICILD tracking detector, the same silicon-\TPC hybrid structure is used.  At the \CLIC, it is challenging to use a \TPC to sperate two tracks in high energy jets and to identify events in the collection of 312 bunch crossings in 156\,ns. Hence the outer silicon tracking system is important to achieve a high momentum resolution at high centre-of-mass energy. The solid angle coverage of the tracking detector is $12\degree \lesssim \theta \lesssim 168\degree$
 
+The same \ECAL from the \ILD is assumed, as the requirements of a \CLIC detector are satisfied by the \ILD \ECAL. The increased centre-of-mass energy results in extra energy leakage. But only a small fraction of particles are affected and the leakage is also controlled by the \HCAL.
 
+For the \CLICILD \HCAL, extra layers are added to contain the hadronic shower at high energy. The increased thickness is justified by the simulation studies, where the jet energy resolution degrades quickly for a thinner \HCAL. To sustain the same inner bore radius, a more dense material, Tungsten, is chosen as the absorber material in the \HCAL barrel.
 
-There are two detector concepts studied in the \CLIC conceptual design report \cite{Linssen:2012hp}, \CLICILD and \CLICSiD. The \CLICILD detector concept is based on the \ILD design. They share similarities due to similar physics motivations. Only differences are highlighted here.
+The magnetic filed is increased to 4\,T  for a better performance at a high centre-of-mass energy. Due to the different magnetic field strength, the iron yoke thickness is therefore increased to 230\,cm.
 
-For the vertex detector, the first layer is moved outwards by 15\,mm due to a larger high occupancy region with higher centre-of-mass energy. The detector is also required to provided time stamping at nanoseconds level, which would be a different detector.
+The \CLICILD adopted a similar very forward calorimetry system as that of the \ILD. The dimensions of the elements are changed due to a difference in the crossing angle (20\,mrad for the \CLIC and 14\,mrad for the \ILC). A comparison of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD is shown in \Table{tab:detectorForwardILDvsCLICILD}.
 
-For the tracking detector, the same silicon-\TPC hybrid structure is used. The outer silicon tracking system is more important at the \CLIC to achieve a high momentum resolution at high centre-of-mass energy, as it is challenging using a \TPC to sperate two tracks in high energy jets and to identify events in the collection of 312 bunch crossings in 156\,ns. The solid angle coverage of the tracking detector is $12\degree \lesssim \theta \lesssim 168\degree$
-
-The same \ECAL from the \ILD is assumed, as the requirements of a \CLIC detector are satisfied. The increased centre-of-mass energy results in extra energy leakage. But only a small fraction of particles are affected and the leakage is controlled by the \HCAL.
-
-For the \HCAL, extra layers are added to contain the hadronic shower at high energy. The increased thickeners is justified by the simulation studies, where the jet energy resolution degrades quickly for a thinner \HCAL. To sustain the same inner bore radius, a more dense material, Tungsten, is chosen as the absorber material in the \HCAL barrel.
-
-The magnetic filed is increased to 4\,T  for a better performance at a high centre-of-mass energy. Due to the different magnetic field strength, the iron yoke thickness increase to 230\,cm.
-
-The \CLICILD adopted a similar very forward calorimetry system as that of the \ILD. Dimension of the elements are changed due to a difference in the crossing angle (20\,mrad for \CLIC and 14\,mrad for \ILC). A comparison of \LumiCAL and \BeamCAL at \ILD and \CLICILD is shown in \Table{tab:detectorForwardILDvsCLICILD}.
-
-Modifications to the design due to \CLIC 3\,TeV centre-mass-of energy can be found in \cite{Linssen:2012hp}.
+%Modifications to the design due to the \CLIC 3\,TeV centre-mass-of energy can be found in \cite{Linssen:2012hp}.
 
 \begin{table}[htbp]
 \centering
@@ -627,8 +629,8 @@ Modifications to the design due to \CLIC 3\,TeV centre-mass-of energy can be fou
 \hline
 \hline
 \end{tabular}
-\caption[Comparison of \LumiCAL and \BeamCAL at \ILD and \CLICILD .]%
-{Comparison of \LumiCAL and \BeamCAL at \ILD and \CLICILD . The table is adapted from \cite{Linssen:2012hp}. }
+\caption[Comparison of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD .]%
+{Comparison of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD . The table is adapted from \cite{Linssen:2012hp}. }
 \label{tab:detectorForwardILDvsCLICILD}
 \end{table}
 
