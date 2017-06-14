@@ -195,7 +195,7 @@ The \IsolatedLeptonFinderProcessor reconstruction package is used and optimised.
 
 %Electron induced electromagnetic showers are mostly contained in the \ECAL. The primary electrons and muons from the electron-positron interaction leaves primary tracks in the tracking detector, which start typically less than 0.05\,mm from the interaction point. The isolation criteria requires the lepton to be spatially separated from other high energy particles.
 
-Optimal values of the processor are listed in \Table{tab:doubleHiggsIsolatedLeptonFinder}. $E$ is the energy of the lepton. $E_{\ECAL}$ is the energy of the lepton deposited in the \ECAL. $E_{cone}$ is the total energy within a cone of an opening angle of $\cos^{-1}(0.995)$ around the lepton. $d_0$, $z_0$, and $r_0$ are the Euclidean distance of the lepton track starting point to the interaction point in x-y plane, in z direction, and in x-y-z three dimensional space, respectively. Performance of the processor is shown in \Table{tab:doubleHiggsIsoLepPerformance}.
+Optimal values are listed in \Table{tab:doubleHiggsIsolatedLeptonFinder}. $E$ is the energy of the lepton. $E_{\ECAL}$ is the energy of the lepton deposited in the \ECAL in GeV. $E_{cone}$ is the total energy within a cone of an opening angle of $\cos^{-1}(0.995)$ around the lepton, in GeV. $d_0$, $z_0$, and $r_0$ are the Euclidean distance in mm of the lepton track starting point to the interaction point in $x$-$y$ plane, in $z$ direction, and in $x$-$y$-$z$ three dimensional space, respectively.
 
 \begin{table}[!htbp]
 \begin{tabular}{lr}
@@ -203,11 +203,11 @@ Optimal values of the processor are listed in \Table{tab:doubleHiggsIsolatedLept
 \hline
 \IsolatedLeptonFinderProcessor  & Selection \\
 \hline
-High Energy (GeV) &  $E > 15$  \\
+High Energy &  $E > 15$\,GeV  \\
 \Pepm ID & $\frac{E_{\ECAL}}{E} > 0.9$ \\
 \Pmupm ID &  $ 0.25> \frac{E_{ECAL}}{E} > 0.05$\\
-Primary Track (mm) & $d_0 < 0.02, z_0 < 0.03, r_0 < 0.04$ \\
-Isolation (GeV)& $E_{cone}^2 \leqslant 5.7 \times E - 50$ \\
+Primary Track  & $d_0 < 0.02\,mm, z_0 < 0.03\,mm, r_0 < 0.04\,mm$ \\
+Isolation & $E_{cone}^2 \leqslant 5.7 \times E - 50$ \\
 \hline
 \hline
 
@@ -220,13 +220,16 @@ Isolation (GeV)& $E_{cone}^2 \leqslant 5.7 \times E - 50$ \\
 \subsubsection{\BonoLeptonFinder}
 \label{sec:doubleHiggsBonoLeptonFinder}
 
-A complimentary light lepton finder, \BonoLeptonFinder is developed to further identify energetic isolated light leptons. Comparing to the \IsolatedLeptonFinderProcessor, the main difference is that the \BonoLeptonFinder utilises particle ID information provided by \pandora to identify leptons.
+A complimentary electron finder, \BonoLeptonFinder, is developed to further identify energetic isolated electrons and muons. Compared to the \IsolatedLeptonFinderProcessor, the main difference is that the \BonoLeptonFinder utilises particle ID information provided by \pandora to identify leptons.
 
 %\IsolatedLeptonFinderProcessor has strict criterion to find high-energy isolated leptons to avoid mistakes. However, since the signal cross section is low in this analysis, it would be beneficial to reject more events with leptons identified to improve the signal to background ratio. Hence another isolated lepton finder is developed. The main feature of the \BonoLeptonFinder is that it utilises calorimetric information provided by \pandora.
 
 
-The processor uses two sets of cuts to identify energetic isolated light leptons. If a lepton passes either set of cuts, it will be identified by the processor. The first set of cuts uses the particle ID information from \pandora, demanding a \pandora electron or muon with high \pT and a primary track. The identified lepton should either have a very high transverse momentum or be isolated. The second set of cuts uses \ECAL energy fraction to determine the light lepton ID. The rest of the cuts are very similar to the first cuts. The second cuts contain stricter isolation criterion to reduce fake rate.
+The processor uses two sets of cuts to identify energetic isolated leptons. If a PFO passes either set of cuts, it will be identified by the processor. The first set of cuts uses the particle ID information from \pandora, demanding a \pandora electron or muon with high \pT and a associated track that starts depositing energy close to the interaction point. The identified lepton should either have a very high transverse momentum or be isolated. The second set of cuts uses \ECAL energy fraction, which for a PFO is the energy deposited in the \ECAL divided by the total energy, to determine the light lepton ID. The rest of the cuts are very similar to the first cuts. The second set cuts have stricter isolation criterion to reduce fake rate.
 %Not sure the last sentence above makes sense
+
+\TABLE{tab:doubleHiggsBonoLeptonFinder} lists the  selection cuts for \BonoLeptonFinder. Same variables used in the \IsolatedLeptonFinderProcessor and the \BonoLeptonFinder are defined in the same way. \pT is the transverse momentum in GeV. $E_{cone1}$ and $E_{cone2}$ are the total energy of PFOs within a cone of an opening angle of $\cos^{-1}(0.995)$ and $\cos^{-1}(0.99)$ respectively around the lepton in GeV.
+
 
 \begin{table}[!htbp]
 \begin{tabular}{lr}
@@ -234,41 +237,41 @@ The processor uses two sets of cuts to identify energetic isolated light leptons
 \hline
 \BonoLeptonFinder  & Selection \\
 \hline
-High Energy (GeV) &  $E > 10$  \\
+High Energy &  $E > 10$\,GeV  \\
 \Pepm ID & \pandora reconstructed \& $\frac{E_{\ECAL}}{E} > 0.95$ \\
 \Pmupm ID &  \pandora reconstructed\\
-Primary Track (mm) & $r_0 < 0.015$ \\
-a) High Transverse Momentum (GeV) &  $\pT > 40$  \\
-b) Isolation (GeV)& $E \geqslant 23 \times \sqrt{E_{cone1}} + 5$ \\
+Primary Track & $r_0 < 0.015$\,mm \\
+a) High Transverse Momentum  &  $\pT > 40$\,GeV  \\
+b) Isolation & $E \geqslant 23 \times \sqrt{E_{cone1}} + 5$ \\
 \hline
-High Energy (GeV) &  $E > 10$  \\
+High Energy  &  $E > 10$\,GeV  \\
 \Pepm ID & $\frac{E_{\ECAL}}{E} > 0.95$ \\
 \Pmupm ID & $0.2 > \frac{E_{\ECAL}}{E} > 0.05$ \\
-Primary Track (mm) & $r_0 < 0.5$ \\
-a) High Transverse Momentum (GeV) &  $\pT > 40$  \\
-b) Isolation (GeV)& $ E \geqslant 28 \times \sqrt{E_{cone2}} + 30$ \\
+Primary Track & $r_0 < 0.5$\,mm \\
+a) High Transverse Momentum &  $\pT > 40$\,GeV  \\
+b) Isolation & $ E \geqslant 28 \times \sqrt{E_{cone2}} + 30$ \\
 \hline
 \hline
 
 \end{tabular}
 \caption[Optimised parameters  of \BonoLeptonFinder.]
-{Optimised parameters  of \BonoLeptonFinder. A lepton needs to pass either sets of cuts to be identified. Within a set, the lepton needs to satisfy either condition a) or b).}
+{Optimised parameters  of \BonoLeptonFinder. A PFO needs to pass either set of cuts to be identified as a lepton. Within a set of cuts, the PFO needs to satisfy either condition a) or b) to be identified as a lepton.}
 \label{tab:doubleHiggsBonoLeptonFinder}
 \end{table}
 
-\TABLE{tab:doubleHiggsBonoLeptonFinder} lists the  selection cuts for \BonoLeptonFinder. Variables are defined same to those for \IsolatedLeptonFinderProcessor. \pT is the transverse momentum. $E_{cone1}$ and $E_{cone2}$ are the total energy of PFOs within a cone of an opening angle of $\cos^{-1}(0.995)$ and $\cos^{-1}(0.99)$ respectively around the lepton. The performance of the processor is shown in \Table{tab:doubleHiggsIsoLepPerformance}.
 
-
+\begin{comment}
 \subsubsection{Comparison: \IsolatedLeptonFinderProcessor versus \BonoLeptonFinder}
 
 The two processors share similar criterion for light lepton identification. The main difference is that the \BonoLeptonFinder uses particle identification from \pandora, which takes into account extra calorimetric information to determine the particle ID than simple \ECAL energy fraction. \BonoLeptonFinder also allows high \pT light leptons to be identified in a non-isolated environment.
 %aggressive nature of the \BonoLeptonFinder. %The performance of two processors on the signal and selected background samples is shown in \Table{tab:doubleHiggsIsoLepPerformance}.
+\end{comment}
 
 \subsection{Tau lepton identification}
 
-Tau leptons have a short life-time. With a typical decay length of 87\,$\mu{m}$, tau lepton decays before reaching the vertex detector and can only be identified through the reconstruction of their decay products. The leptonic decay of tau lepton can be identified using the isolated lepton finder processors described above. Therefore in this section, tau identification will focus on the tau lepton hadronic decay.
+Tau leptons have a short lifetime and decay before reaching the vertex detector and can only be identified through the reconstruction of their decay products. The leptonic decay of tau lepton can be identified using the isolated lepton finder processors described above. Therefore in this section, tau identification will focus on the hadronic decays.
 
-\TauFinderProcessor reconstruction package is optimised. In addition, \BonoTauFinder is developed to provide additional tau lepton identification.
+The existing \TauFinderProcessor  \cite{LCD-Note-2010-009} reconstruction package has been optimised. In addition, a package, \BonoTauFinder, is developed to provide additional tau lepton identification.
 
 %To improve signal selection, a tau lepton identifier is developed by the author in \Section{sec:doubleHiggsBonoTauFinder}.
 
@@ -276,14 +279,10 @@ Tau leptons have a short life-time. With a typical decay length of 87\,$\mu{m}$,
 
 \subsubsection{\TauFinderProcessor}
 
-% TODO check tau stuff
-
-\TauFinderProcessor \cite{LCD-Note-2010-009} reconstruction package has been optimised.
-
-Tau finder forms a tau search cone, containing tau lepton decay products, using a cone clustering algorithm (see  \Section{sec:pandoraConeCluster}). A high energy track is selected as a seed and a small cone is formed around it. The \PFOs inside the cone are required to be consistent with a tau hadronic decay: no more than 3 charged particles, invariant mass close to tau mass and few \PFOs in the cone. The cone is required to be isolated from other particles. To reduce fake rate, low momentum and very forward particles do not participate in the tau finding, as they more likely come from \ggHad background.
+The \TauFinderProcessor works by identifying tau lepton decay products, and requiring the decay products to be isolated from other PFOs. To find the decay products, the algorithm starts with the highest energy track selected as a seed for the cone clustering algorithm  (see  \Section{sec:pandoraConeCluster}). All tracks above 10\,GeV are iterated as seeds. A cone with opening angle 0.03 rad with respect to the seed is formed and the PFOs within the cone are required to be consistent with the signature of a tau hadronic decay. The signature includes no more than 3 charged particles in the cone, invariant mass less than 2\,GeV, and few than 10 \PFOs in the cone. The cone is also required to be isolated from other particles. To reduce fake rate, low momentum (less than 1\,GeV) and very forward particles ($\absOf{\cos\left(\theta_Z\right)} > 1.1$) do not participate in the tau finding, as they more likely come from \ggHad background.
 
 
-The optimised parameters are listed in \Table{tab:doubleHiggsTauFinderProcessor}. Variables are defined in the same way as in previous sections. $\theta_Z$ is the polar angle w.r.t. the beam axis. $N_{X^+}$ and $N_{tau}$ are the number of charged particles and the number of \PFOs respectively in the tau cone. $m_{tau}$ is the invariant mass of the sum of the PFOs in the tau candidate. $E_{cone}$ is the total energy of \PFOs within a cone of an opening angle between 0.03 and 0.33\,rad  around the tau seed. The performance of the processor is shown in \Table{tab:doubleHiggsIsoLepPerformance}.
+The optimised parameters are listed in \Table{tab:doubleHiggsTauFinderProcessor}. Variables are defined in the same way as in previous sections. $\theta_Z$ is the polar angle in rad with respect to the beam axis. $N_{X^+}$ and $N_{tau}$ are the number of charged particles and the number of \PFOs respectively in the tau cone. $m_{tau}$ is the invariant mass of the sum of the PFOs in the tau candidate in GeV. $E_{cone}$ is the total energy of \PFOs within a cone of an opening angle between 0.03 and 0.33\,rad  around tau seed in GeV.
 
 \begin{table}[!htbp]
 \begin{tabular}{lr}
@@ -291,11 +290,11 @@ The optimised parameters are listed in \Table{tab:doubleHiggsTauFinderProcessor}
 \hline
 \TauFinderProcessor  & Selection \\
 \hline
-Veto \ggHad (GeV) &  $\pT < 1$, $\absOf{\cos\left(\theta_Z\right)} > 1.1$  \\
-Seed particle (GeV) & $\pT > 10$ \\
-Tau candidate cone opening angle (rad) & 0.03 \\
-Tau candidate rejection & $N_{X^+} > 3$, $N_{tau} > 10$, $m_{tau} > 2$   \\
-Isolation (GeV)&  $ E_{cone} < 3$\\
+Veto \ggHad  &  $\pT < 1$\,GeV, $\absOf{\cos\left(\theta_Z\right)} > 1.1$\,rad  \\
+Seed particle & $\pT > 10$ \\
+Tau candidate cone opening angle & 0.03\,rad \\
+Tau candidate rejection & $N_{X^+} > 3$, $N_{tau} > 10$, $m_{tau} > 2$\,rad   \\
+Isolation &  $ E_{cone} < 3$\,GeV\\
 \hline
 \hline
 \end{tabular}
@@ -307,14 +306,14 @@ Isolation (GeV)&  $ E_{cone} < 3$\\
 \subsubsection{\BonoTauFinder}
 \label{sec:doubleHiggsBonoTauFinder}
 
-\BonoTauFinder, developed by the author, identifies high momentum particles as tau seeds. Particles are iteratively added to the search cone in the order of the ascending opening angle to the seed. After each particle addition, the temporary search cone is then considered as a temporary  tau candidate and tested for isolation and consistency  with tau hadronic decay signature. The temporary tau candidate only needs to pass one of the isolation conditions to be identified as a tau candidate. The iterative particle addition procedure stops when the cone opening angle is larger than a threshold. If multiple temporary tau candidates of the same tau seed pass the selection, the one with smallest opening angle is chosen to form the final tau candidate. To reduce fake tau decay products from \ggHad background, low energy particles do not participate.
+The \BonoTauFinder identifies high momentum particles as tau seeds. Particles are iteratively added to a cone in the order of the ascending opening angle to the seed. The cone is called search cone, which contains tau decay products. After each particle addition, the temporary search cone is then considered as a temporary  tau candidate and tested for isolation and consistency  with a tau hadronic decay signature. The temporary tau candidate only needs to pass one of the isolation conditions to be identified as a tau candidate. The multiple isolation conditions for tau 1-prong decay and 3-prong decay, reflecting different topologies of different tau decay final states. The isolation criterion demand few particles around the search cone and the total \pT in the search cone to be greater than a threshold. The iterative particle addition procedure stops when the cone opening angle is larger than a threshold. If multiple temporary tau candidates of the same tau seed pass the selection, the one with smallest opening angle is chosen to form the final tau candidate. To reduce fake tau decay products from \ggHad background, particles with energies less than 1\,GeV do not participate.
 
-This tau finder has different isolation criterion for tau 1-prong decay and 3-prong decay, reflecting different topologies of different tau decay final states.
+This tau finder has different isolation criterion
 
 %tau hypothesis singular or tau hypotheses plural?
 
 
-\TABLE{tab:doubleHiggsTauFinderProcessor} lists the optimised parameters  for \BonoTauFinder. Variables are defined in the same wasy as those in previous sections. $\theta_S$ is the opening angle of the search cone. $cone1$ and $cone2$ are defined as a cone of an opening angle of $\cos^{-1}(0.95)$, and $\cos^{-1}(0.99)$ respectively around the tau seed. $r_0$ is referring to tau seed particle. The performance of the processor is shown in \Table{tab:doubleHiggsIsoLepPerformance}.
+\TABLE{tab:doubleHiggsTauFinderProcessor} lists the optimised parameters  for \BonoTauFinder. Variables are defined in the same way as those in previous sections: $\theta_S$ is the opening angle of the search cone in rad; $cone1$ and $cone2$ are defined as a cone of an opening angle of $\cos^{-1}(0.95)$, and $\cos^{-1}(0.99)$ respectively around the tau seed; $r_0$ is the Euclidean distance in mm of the   tau seed associated track starting point to the interaction point in $x$-$y$-$z$ three dimensional space.
 
 \begin{table}[!htbp]
 \begin{tabular}{lr}
@@ -322,15 +321,15 @@ This tau finder has different isolation criterion for tau 1-prong decay and 3-pr
 \hline
 \BonoTauFinder  & Selection \\
 \hline
-Veto \ggHad (GeV) &  $E < 1$\\
-Seed particle (GeV) & $\pT > 5$ \\
-Maximum search cone opening angle (rad) & $\theta_S \leqslant \cos^{-1}(0.999)$\\
-Tau candidate rejection & $N_{X^+} \neq 1,3$, $m_{PFO} > 3$   \\
-Isolation (GeV) 1& $N_{cone1} = 0$, $ \pT_{cone} \geqslant 10$\\
-Isolation (GeV) 2& $N_{X^+} = 1$, $N_{cone1} = 1$, $r_0 > 0.01$\\
-Isolation (GeV) 3& \multicolumn{1}{R{0.4\textwidth}}{{$N_{X^+} = 3$, $N_{cone1} = 1$, $ \pT_{cone} \geqslant 10$, $\theta_S < \cos^{-1}(0.9995)$}}\\
-Isolation (GeV) 4& \multicolumn{1}{R{0.4\textwidth}}{$N_{X^+} = 1$, $N_{cone2} = 0$, $r_0 > 0.01$, $ \pT_{cone} \geqslant 10$}\\
-Isolation (GeV) 5& \multicolumn{1}{R{0.4\textwidth}}{{$N_{X^+} = 3$, $N_{cone2} = 0$, $ \pT_{cone} \geqslant 10$, $\theta_S < \cos^{-1}(0.9995)$}}\\
+Veto \ggHad&  $E < 1$\,GeV\\
+Seed particle & $\pT > 5$\,GeV \\
+Maximum search cone opening angle & $\theta_S \leqslant \cos^{-1}(0.999)$\,GeV\\
+Tau candidate rejection & $N_{X^+} \neq 1,3$, $m_{PFO} > 3$\,GeV   \\
+Isolation 1& $N_{cone1} = 0$, $ \pT_{cone} \geqslant 10$\,GeV\\
+Isolation 2& $N_{X^+} = 1$, $N_{cone1} = 1$, $r_0 > 0.01$\,mm\\
+Isolation 3& \multicolumn{1}{R{0.4\textwidth}}{{$N_{X^+} = 3$, $N_{cone1} = 1$, $ \pT_{cone} \geqslant 10$\,GeV, $\theta_S < \cos^{-1}(0.9995)$}}\\
+Isolation 4& \multicolumn{1}{R{0.4\textwidth}}{$N_{X^+} = 1$, $N_{cone2} = 0$, $r_0 > 0.01$\,mm, $ \pT_{cone} \geqslant 10$\,GeV}\\
+Isolation 5& \multicolumn{1}{R{0.4\textwidth}}{{$N_{X^+} = 3$, $N_{cone2} = 0$, $ \pT_{cone} \geqslant 10$\,GeV, $\theta_S < \cos^{-1}(0.9995)$}}\\
 \hline
 \hline
 
@@ -340,51 +339,48 @@ Isolation (GeV) 5& \multicolumn{1}{R{0.4\textwidth}}{{$N_{X^+} = 3$, $N_{cone2} 
 \label{tab:doubleHiggsBonoTauFinderProcessor}
 \end{table}
 
-
-\subsubsection{Comparison: \TauFinderProcessor v.s. \BonoTauFinder}
-
-The main difference is that the \BonoTauFinder has an iterative approach to build up a tau candidate, which allows a dynamic tau search cone size. The \BonoTauFinder also has smaller cut values on minimum \pT and invariant mass, but stricter isolation criterions. The performances of processors are shown in \Table{tab:doubleHiggsIsoLepPerformance}.
+Compared to the \TauFinderProcessor algorithm, the main difference is that the \BonoTauFinder has an iterative approach to build up a tau candidate, which allows a dynamic tau search cone size. The \BonoTauFinder also has smaller cut values on minimum \pT and invariant mass, but stricter isolation criterions.
 %I've reworded the first sentence in this para - does it make sense?
 %looser cut - is this the accepted term? if not, maybe replaced the word looser with something else
 
 \subsection{Very forward electron identification}
 \label{sec:doubleHiggsForwardElectron}
 
-At high \sqrtS, particles are boosted and it is important to extract information in the forward calorimeters to aid signal selection. Certain background channels, for example photon-electron interactions, can have energetic primary  electrons in  the forward calorimeters, the \LumiCAL and the \BeamCAL. The signal selection will benefit if these primary electrons in the forward calorimeters are identified.
+At the high centre-of-mass energy at the \CLIC, particles are often boosted.  It is important to extract information in the forward calorimeters to aid signal selection. Certain background channels, for example photon-electron interactions, can have energetic primary  electrons in  the forward calorimeters, the \LumiCAL and/or the \BeamCAL. 
 
-It is challenging to identify electrons in these forward calorimeters. As forward calorimeters have very low angular acceptances, most particles in these forward detector would be very forward particles from beam induced background. However,  \cite{sailer2012radiation} shows that sufficiently high energy electrons can be efficiently identified in the \BeamCAL and \LumiCAL.
+It is challenging to identify electrons in these forward calorimeters.  Most particles in these forward calorimeters are from the beam induced background. Nevertheless, sufficiently high energy electrons can be efficiently identified in the \BeamCAL   and \LumiCAL \cite{sailer2012radiation}.
+\begin{comment}
+The high charge density in the bunches will induce strong electromagnetic fields causing deflection of the
+beam particles and the radiation of
+beamstrahlung
+. In addition, the beamstrahlung photons will interact
+with the beam particles and produce electron–positron and quark–anti-quark pairs.  While the photonic
+component will be radiated practically along the outgoing beam axis, a noticeable fraction of leptonic
+and hadronic pairs will hit the BeamCal calorimeter in the forward region. 
+\end{comment}
 
-For the \CLICILD detector concept, energies deposited in the \LumiCAL and the \BeamCAL are not reconstructed in simulation. This is because the thousands of beam induced background particles per bunch crossing requires expensive computational resources. However, previous studies \cite{Sailer:2017onh,Lukic:forwardElectron} using parameterise the particle ID efficiency using MC particles give equivalent performance to the full detector simulation approach.
+The reconstruction of electrons in the forward calorimeters uses  a parametrisation approach.  By parameterising the  particle ID efficiency using MC particles, the equivalent performance to the full detector simulation approach can be achieved \cite{Sailer:2017onh,Lukic:forwardElectron} .
+
+%For the \CLICILD detector concept, energies deposited in the \LumiCAL and the \BeamCAL are not reconstructed in simulation. This is because the thousands of beam induced background particles per bunch crossing requires expensive computational resources. However, previous studies \cite{Sailer:2017onh,Lukic:forwardElectron} using parameterise the particle ID efficiency using MC particles give equivalent performance to the full detector simulation approach.
 
 
 %The current simulation software could not handle the simulation in a feasible time. Therefore, the adopted approach is to parameterise the background particle energy deposition leading to electron tagging algorithms.
 %I changed 'and leads to' to 'leading to'. Is that what you meant? The original text was mixing tenses
 
-For the \BeamCAL, \cite{Sailer:2017onh} describes an electron tagging algorithm developed using \rootS{3} collision environment by comparing the simulated electron and background energy distributions. An electron is tagged if the energy is significantly larger than the expected background energy distributions. Events are overlaid with background energy deposition integrated over 40 bunch crossing. The tagging efficiency for electrons with energy 500 to 1500\,GeV are binned in histograms at an interval of 100\,GeV. There is no tagging for electrons with energy below 500\,GeV or about 1500\,GeV. In addition, this efficacy tagging approach  most likely underestimates efficiencies due to the coarse binning of energies. I.e. a 650\,GeV particle is treated the same as a 600\,GeV particle. An indicative performance plot of 500\,GeV electron tagging efficiency as a function of polar angle is shown in \Figure{fig:doubleHiggsForwardBCAL}.
+For the \BeamCAL, an electron tagging algorithm is developed using \rootS{3} collision environment by comparing the simulated electron and background energy distributions \cite{Sailer:2017onh}. An indicative performance plot of 500\,GeV electron tagging efficiency as a function of polar angle is shown in \Figure{fig:doubleHiggsForwardBCAL}. An electron is tagged if the energy is significantly larger than the expected background energy distributions integrated over 40 bunch crossing. 
+
+This efficacy tagging approach  most likely underestimates efficiencies due to the coarse binning of energies. I.e. a 650\,GeV particle is treated the same as a 600\,GeV particle. The tagging efficiency for electrons with energy 500 to 1500\,GeV are binned in histograms at an interval of 100\,GeV. Also there is no tagging efficiency for electrons with energy below 500\,GeV or about 1500\,GeV. In addition, 
+
 
 %A C++ code library has been developed and used in this analysis.
 
 The input of the \BeamCAL electron tagging algorithm is the four momenta of the MC electron. Since the algorithm assumes collisions at \rootS{3}, for the \rootS{1.4} user case, the momenta of the MC electron is scaled down by a factor of $\frac{3}{1.4}$.
 
-\begin{figure}[!tbp]
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/forward/ForwardBCAL}}}
-    \caption{}
-    \label{fig:doubleHiggsForwardBCAL}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/forward/ForwardLCAL}}}
-    \caption{}
-    \label{fig:doubleHiggsForwardLCAL}
-  \end{subfigure}
-\caption[\BeamCAL and \LumiCAL electron tagging efficiency.]%
-   {\FIGURE{fig:doubleHiggsForwardBCAL} shows \BeamCAL 500\,GeV electron tagging efficiency as a function of polar angle with different methods to model backgrounds and fittings, taken from \cite{Sailer:2017onh}. \FIGURE{fig:doubleHiggsForwardLCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy, for polar angle $\theta = 50\,mrad$, taken from \cite{Lukic:forwardElectron}. }
-   \label{fig:doubleHiggsForwardCAL}
-\end{figure}
 
-For the \LumiCAL,  \Figure{fig:doubleHiggsForwardCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy for polar angle $\theta = 50\,mrad$ where events are overlaid with background energy deposition integrated over 100 bunch crossings. Assuming that the \LumiCAL electron tagging efficiency in this analysis is the same as in \Figure{fig:doubleHiggsForwardCAL} for all polar angles and for \rootS{1.4} and 3\,TeV, \LumiCAL electron tagging efficiency, $\varepsilon$, is parameterised as
 
+For the \LumiCAL,  \Figure{fig:doubleHiggsForwardCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy for polar angle $\theta = 50\,mrad$ where events are overlaid with background energy deposition integrated over 100 bunch crossings. In this analysis, the \LumiCAL electron tagging efficiency, $\varepsilon$, is parameterised as
+
+%Assuming that the \LumiCAL electron tagging efficiency in this analysis is the same as in \Figure{fig:doubleHiggsForwardCAL} for all polar angles and for \rootS{1.4} and 3\,TeV,
 %The \LumiCAL electron tagging in this analysis is based on the performance plot in \Figure{fig:doubleHiggsForwardCAL}.
 
 %the \HepProcess{\PHiggs \to \Pmu \Pmu} analysis in \cite{Milutinovic-Dumbelovic:2014uta,Grefe:2012rt} has developed an algorithm for electron tagging in the \LumiCAL with similar logic to the algorithm for the \BeamCAL.
@@ -401,7 +397,24 @@ For the \LumiCAL,  \Figure{fig:doubleHiggsForwardCAL} shows the \LumiCAL  electr
 where $E$ is the energy of the electron or the photon and $erf$ is the error function. For each MC electron in the \LumiCAL a random number between 0 and 1 is generated. If the random number is less than \varepsilon the MC electron is tagged.
 
 %(see \Table{tab:detectorForwardILDvsCLICILD} for detector coverage)
-Due to lack of tracking ability in the forward region, electrons and photons can not be differentiated in forward calorimeters. Therefore, both photons and electrons are tagged by the above algorithms.
+Due to lack of tracking ability in the forward region, energy depositions from electrons or photons can not be differentiated in forward calorimeters. Therefore, both photons and electrons are tagged by the above algorithms.
+
+\begin{figure}[!tbp]
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/forward/ForwardBCAL}}}
+    \caption{}
+    \label{fig:doubleHiggsForwardBCAL}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/forward/ForwardLCAL}}}
+    \caption{}
+    \label{fig:doubleHiggsForwardLCAL}
+  \end{subfigure}
+\caption[\BeamCAL and \LumiCAL electron tagging efficiency.]%
+   {\FIGURE{fig:doubleHiggsForwardBCAL} shows \BeamCAL 500\,GeV electron tagging efficiency as a function of polar angle with different methods to model pregenerated and Gaussian backgrounds and two methods to identify electrons:  clustering algorithm and  shower fitting algorithm, taken from \cite{Sailer:2017onh}. \FIGURE{fig:doubleHiggsForwardLCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy, for polar angle $\theta = 50\,mrad$, taken from \cite{Lukic:forwardElectron}. }
+   \label{fig:doubleHiggsForwardCAL}
+\end{figure}
 
 %appear indistinguishable to the \BeamCAL and \LumiCAL and both photons and electrons are tagged by the above algorithms.
 
@@ -421,23 +434,23 @@ The performance of all lepton finding processors on the signal and selected back
 %Second sentence: can you say "" becase this would read better
 
 \begin{table}[!tbp]
-\begin{tabular}{lrr}
+\begin{tabular}{lrrr}
 \hline
 \hline
-Efficiency (1.4\,TeV)  &  Signal & \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} \\
+Efficiency (1.4\,TeV)  &  Signal & \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} & \egamma{\Pem}{\Pphoton}{\BS}{\Pem \Pquark \Pquark \Pquark \Pquark} \\
 \hline
-\IsolatedLeptonFinderProcessor & 99.3\% & 50.3\%  \\
-\BonoLeptonFinder & 99.1\% & 39.9\%  \\
-\TauFinderProcessor & 97.5\% & 52.3\%  \\
-\BonoTauFinder & 89.7\% & 38.5\%  \\
-Forward Finder Processors & 98.9\% & 95.1\%  \\
+\IsolatedLeptonFinderProcessor & 99.3\% & 50.3\%  & 87.3\% \\
+\BonoLeptonFinder & 99.1\% & 39.9\%  & 83.7\%\\
+\TauFinderProcessor & 97.5\% & 52.3\%  & 90.4\% \\
+\BonoTauFinder & 89.7\% & 38.5\%  &  78.5\% \\
+Forward Finder Processors & 98.9\% & 95.1\%  & 53.6 \\
 \hline
-Combined & 86.6\% & 16.8\%  \\
+Combined & 86.6\% & 16.8\%  &  30.8\% \\
 \hline
 \hline
 
 \end{tabular}
-\caption{Isolated lepton finder processors performance on the signal and selected background events at \rootS{1.4}.}
+\caption{The performance of  lepton finders on the signal and selected background events at \rootS{1.4}.}
 \label{tab:doubleHiggsIsoLepPerformance}
 \end{table}
 
@@ -712,21 +725,21 @@ Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.7 \\
 \HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnue \APnue}             &67.6& 90.8\% & 90.5\% & 90.1\% & 80.6\%\\
 \eeToHH $\to$ other & 128.0 & 36.2\% & 35.3\% & 27.7\% & 24.7\%\\
 \hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 1304.0 & 60.7\% & 59.8\% & 44.9\%& 42.0\%\\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 546.1 & 67.4\%& 57.7\%& 46.5\%& 43.4\%\\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 463.0 & 73.9\%& 72.6\%& 68.7\%& 64.2\%\\
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 1290 & 60.7\% & 59.8\% & 44.9\%& 42.0\%\\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 540 & 67.4\%& 57.7\%& 46.5\%& 43.4\%\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 465 & 73.9\%& 72.6\%& 68.7\%& 64.2\%\\
 
-\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1867650.0& 48.8\% & 46.1\%& 17.3\%& 4.7\%\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 93150.0 & 5.0\%& 4.9\%& 1.5\%& 0.3\%\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 165600.0 & 15.1\%& 15.1\%& 12.4\%& 11.4\%\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 34800.0& 50.7\%& 50.0\%& 20.1\%& 18.8\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1867650& 48.8\% & 46.1\%& 17.3\%& 4.7\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 93150 & 5.0\%& 4.9\%& 1.5\%& 0.3\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 165600 & 15.1\%& 15.1\%& 12.4\%& 11.4\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 34800& 50.7\%& 50.0\%& 20.1\%& 18.8\%\\
 
-\eeTo{ \Pquark \Pquark} &  6014250.0 & 54.5\%& 17.5\%& 8.4\%& 2.2\%\\
-\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  6464550.0 & 14.1\%& 5.3\%& 2.0\%& 1.6\%\\
-\eeTo{ \Pquark \Pquark \Pl \Pl} &  4088700.0 & 13.0\%& 1.1\%& 0.6\%& 0.1\%\\
-\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 1181550.0 & 60.1\%& 12.3\%& 6.2\%& 5.8\% \\
+\eeTo{ \Pquark \Pquark} &  6014250 & 54.5\%& 17.5\%& 8.4\%& 2.2\%\\
+\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  6464550 & 14.1\%& 5.3\%& 2.0\%& 1.6\%\\
+\eeTo{ \Pquark \Pquark \Pl \Pl} &  4088700 & 13.0\%& 1.1\%& 0.6\%& 0.1\%\\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 1181550 & 60.1\%& 12.3\%& 6.2\%& 5.8\% \\
 \hline
-\egamma{\Pepm}{\Pphoton}{BS}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 2606625.5  & 23.3\%& 10.6\%& 4.4\%& 0.4\%\\
+\egamma{\Pepm}{\Pphoton}{BS}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 2606625  & 23.3\%& 10.6\%& 4.4\%& 0.4\%\\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 1305787.5  & 23.3\%& 10.6\%& 4.4\%& 0.4\%\\
 %\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 1300837.5 & 23.4\%& 10.5\%& 4.3\%& 0.4\%\\
 \egamma{\Pepm}{\Pphoton}{EPA}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 861000.0 & 11.1\%& 5.4\%& 2.2\%& 0.3\%\\
@@ -735,20 +748,20 @@ Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.7 \\
 \egamma{\Pepm}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 178987.5  & 58.0\%& 56.5\%& 30.7\%& 27.5\%\\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 89775.0  & 58.3\%& 56.8\%& 31.0\%& 27.7\%\\
 %\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 89212.5 & 57.6\% & 56.1\%& 30.3\%& 27.3\%\\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 52050.0  & 29.4\% & 28.7\%& 15.2\%& 13.8\%\\
+\egamma{\Pepm}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 52050  & 29.4\% & 28.7\%& 15.2\%& 13.8\%\\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 26100.0  & 29.6\% & 28.9\%& 15.4\%& 13.9\%\\
 %\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 25950.0  & 29.2\%& 28.5\%& 15.0\% & 13.7\%\\
 \egamma{\Pepm}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 35437.5  & 61.0\% & 59.9\%& 45.5\%& 34.6\%\\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 17775  & 61.0\% & 59.8\%& 45.5\%& 34.6\%\\
 %\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 17662.5  & 61.1\% & 60.0\% & 45.6\% & 34.6\%\\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 10170.0  & 31.8\% & 31.2\% & 23.7\%& 18.3\%\\
+\egamma{\Pepm}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 10170  & 31.8\% & 31.2\% & 23.7\%& 18.3\%\\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 5085  & 31.8\% & 31.2\% & 23.7\%& 18.2\%\\
 %\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 5085   & 31.9\% & 31.3\% & 23.8\% & 18.4\%\\
 \hline
 \gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 2054951.5  & 56.3\%& 23.9\%& 9.6\%& 0.3\%\\
 \gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 4521037.5  &33.6\%& 14.2\%& 5.7\%& 0.4\%\\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 4539150.0 & 33.7\%& 14.2\%& 5.7\%& 0.4\%\\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 1129500.0 & 21.1\% & 9.1\% & 3.7\%& 0.4\%\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 4539150 & 33.7\%& 14.2\%& 5.7\%& 0.4\%\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 1129500 & 21.1\% & 9.1\% & 3.7\%& 0.4\%\\
 \hline \hline
 \end{tabular}
 
@@ -1035,30 +1048,30 @@ Before interpreting the result at \rootS{1.4}, the analyses at \rootS{3} and  th
 \HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnue \APnue}             &67.6& 15.4\%  & 0.5\% & 0.05\\
 \eeToHH $\to$ other                             & 128.0 & 20.4\% & 1.7\% & 0.45\\
 \hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 1304.0 & 39.5\% & 0.05\%& 0.29\\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 546.1 & 31.6\%& 0.1\%& 0.16\\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 463.0 & 24.7\%& 0.3\%& 0.37\\
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 1290 & 39.5\% & 0.05\%& 0.29\\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 540 & 31.6\%& 0.1\%& 0.16\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 465 & 24.7\%& 0.3\%& 0.37\\
 
-\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1867650.0& 3.3\% & - & -\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 93150.0 & 0.3\%& - &  - \\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 165600.0 & 9.8\%& 0.01\%& 2.06\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 34800.0& 16.5\%& 0.002\% & 0.10\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1867650& 3.3\% & - & -\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 93150 & 0.3\%& - &  - \\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 165600 & 9.8\%& 0.01\%& 2.06\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 34800& 16.5\%& 0.002\% & 0.10\\
 
-\eeTo{ \Pquark \Pquark} &  6014250.0 & 0.8\%& - & - \\
-\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  6464550.0 & 0.9\%&  - & - \\
-\eeTo{ \Pquark \Pquark \Pl \Pl} &  4088700.0 & 0.08\%& - & - \\
-\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 1181550.0 & 4.0\%& - & - \\
+\eeTo{ \Pquark \Pquark} &  6014250 & 0.8\%& - & - \\
+\eeTo{ \Pquark \Pquark \Plepton \Pnu} &  6464550 & 0.9\%&  - & - \\
+\eeTo{ \Pquark \Pquark \Pl \Pl} &  4088700 & 0.08\%& - & - \\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 1181550 & 4.0\%& - & - \\
 \hline
-\egamma{\Pepm}{\Pphoton}{BS}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 2606625.0  & 0.3\%& - & -\\
+\egamma{\Pepm}{\Pphoton}{BS}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 2606625 & 0.3\%& - & -\\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 1305787.5  & 0.3\%& - & -\\
 %\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 1300837.5 & 0.4\%& -& -\\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 861000.0 & 0.3\%&  - &  - \\
+\egamma{\Pepm}{\Pphoton}{EPA}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 861000 & 0.3\%&  - &  - \\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 430650.0 & 0.3\%&  - &  - \\
 %\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 430350.0 & 0.3\% & - & -\\
 \egamma{\Pepm}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 178987.5  & 25.7\%& 0.005\%& 2.05\\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 89775.0  & 25.4\%& 0.005\%& 1.09\\
 %\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 89212.5 & 24.9\% & 0.004\%& 0.96\\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 52050.0  & 12.5\% & 0.004\% & 0.27 \\
+\egamma{\Pepm}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 52050  & 12.5\% & 0.004\% & 0.27 \\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 26100.0  & 12.6\% & - &  - \\
 %\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 25950.0  & 12.4\%& 0.008\% & 0.27\\
 \egamma{\Pepm}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 35437.5   & 30.7\% & 0.02\% & 2.16 \\
@@ -1102,9 +1115,9 @@ Channel  &  $\sigma(\rootS{3})$ / fb   \\
 \eeToHHbbbbFull  &0.19 \\
 \eeToHHotherFull &0.34 \\
 \hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu} & 1.78 \\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu} & 1.12\\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 1.91\\
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu} & 3.06 \\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu} & 1.15\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 1.78\\
 
 \eeTo{ \Pquark \Pquark \Pquark \Pquark} & 546.5*\\
 \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}&169.3*\\
@@ -1150,18 +1163,18 @@ Channel  &  $\sigma(\rootS{3})$ / fb   \\
 The lepton finding processors are either developed or optimised with samples at \rootS{1.4}, and checked with samples at \rootS{3} (see \Section{sec:doubleHiggsLepton}).  It was found that the same set of parameters for lepton identifiers works well under \rootS{1.4} and 3\,TeV. The performance of the lepton processors is shown in \Table{tab:doubleHiggs3TeVIsoLepPerformance}.
 
 \begin{table}[!tbp]
-\begin{tabular}{lrr}
+\begin{tabular}{lrrr}
 \hline
 \hline
-Efficiency (3\,TeV)  &  Signal  & \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} \\
+Efficiency (3\,TeV)  &  Signal  & \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu}  & \egamma{\Pem}{\Pphoton}{\BS}{\Pem \Pquark \Pquark \Pquark \Pquark}  \\
 \hline
-\IsolatedLeptonFinderProcessor & 99.5\% & 66.8\%  \\
-\BonoLeptonFinder & 99.0\% & 52.5\%  \\
-\TauFinderProcessor & 97.7\% & 79.5\%  \\
-\BonoTauFinder & 86.3\% & 60.3\%  \\
-Forward Finder Processors & 95.9\% & 80.7\%  \\
+\IsolatedLeptonFinderProcessor & 99.5\% & 66.8\% & 88.8\%  \\
+\BonoLeptonFinder & 99.0\% & 52.5\%  & 82.2\%\\
+\TauFinderProcessor & 97.7\% & 79.5\%  & 76.7\%\\
+\BonoTauFinder & 86.3\% & 60.3\%  & 92.6\% \\
+Forward Finder Processors & 95.9\% & 80.7\%  & 55.4\%  \\
 \hline
-Combined & 81.0\% & 23.3\%  \\
+Combined & 81.0\% & 23.3\% &  33.4\% \\
 \hline
 \hline
 
@@ -1326,43 +1339,43 @@ Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.6 \\
 \HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnue \APnue}             &355.0& 83.4\% & 82.9\% & 81.2\% \\
 \eeToHH $\to$ other & 675.0 & 36.7\% & 35.8\% & 25.2\% \\
 \hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6115.4 & 59.5\% & 58.5\% & 40.4\%\\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 2249.9 & 64.8\%& 58.4\%& 39.3\%\\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 2197.7 & 69.7\%& 68.4\%& 64.2\%\\
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6120 & 59.5\% & 58.5\% & 40.4\%\\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 2300 & 64.8\%& 58.4\%& 39.3\%\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 3560 & 69.7\%& 68.4\%& 64.2\%\\
 
-\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1093000.0& 48.5\% & 39.7\%& 3.0\%\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 338600.0 & 14.7\%& 14.2\%& 0.7\%\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 213200.0 & 19.7\%& 19.4\%& 10.0\%\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 143000.0& 58.4\%& 57.3\%& 11.9\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1093000& 48.5\% & 39.7\%& 3.0\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 338600& 14.7\%& 14.2\%& 0.7\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 213200 & 19.7\%& 19.4\%& 10.0\%\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 143000& 58.4\%& 57.3\%& 11.9\%\\
 
-\eeTo{ \Pquark \Pquark} &  5897800.0 & 62.8\%& 13.2\%& 2.7\%\\
+\eeTo{ \Pquark \Pquark} &  5897800 & 62.8\%& 13.2\%& 2.7\%\\
 \eeTo{ \Pquark \Pquark \Plepton \Pnu} &  11121800 & 28.3\%& 11.9\%& 0.3\%\\
-\eeTo{ \Pquark \Pquark \Pl \Pl} &  6639200.0 & 38.3\%& 2.9\%& 0.7\%\\
-\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 2635000.0 & 71.4\%& 24.1\%& 5.3\% \\
+\eeTo{ \Pquark \Pquark \Pl \Pl} &  6639200 & 38.3\%& 2.9\%& 0.7\%\\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 2635000 & 71.4\%& 24.1\%& 5.3\% \\
 \hline
-\egamma{\Pepm}{\Pphoton}{BS}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 4006722.2  & 23.3\%& 21.5\%& 0.8\%\\
+\egamma{\Pepm}{\Pphoton}{BS}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 4007354  & 23.3\%& 21.5\%& 0.8\%\\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 2004388.1  & 23.3\%& 21.5\%& 0.8\%\\
 %\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 2002334.1 & 23.4\%& 21.6\%& 0.8\%\\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 1151200.0& 12.0\%& 11.0\%& 0.5\%\\
+\egamma{\Pepm}{\Pphoton}{EPA}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 1151200& 12.0\%& 11.0\%& 0.5\%\\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 575600.0& 12.0\%& 11.0\%& 0.5\%\\
 %\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 575600.0 & 12.0\% & 10.9\%& 0.4\%\\
-\egamma{\Pepm}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 829184.0  & 61.5\%& 59.3\%& 19.9\%\\
+\egamma{\Pepm}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 829184  & 61.5\%& 59.3\%& 19.9\%\\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 414750.0  & 61.7\%& 59.5\%& 20.4\%\\
 %\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 414434.0 & 61.2\% & 59.1\%& 19.4\%\\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 216800.0  & 30.8\% & 29.8\%& 9.4\%\\
+\egamma{\Pepm}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 216800  & 30.8\% & 29.8\%& 9.4\%\\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 30.9\% & 29.9\%& 9.6\%\\
 %\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 30.7\%& 29.7\%& 9.1\% \\
 \egamma{\Pepm}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 185018.0  & 58.2\% &56.1\%& 37.2\% \\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92588.0  & 58.3\% &56.2\%& 37.3\% \\
 %\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92430.0 & 58.1\% & 56.0\% & 37.1\% \\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 46800.0 & 29.9\% &28.9\% & 19.1\% \\
+\egamma{\Pepm}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 46800 & 29.9\% &28.9\% & 19.1\% \\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0 & 30.1\% &29.2\% & 19.4\% \\
 %\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0   & 29.7\% & 28.6\% & 18.8\% \\
 \hline
-\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 18009413.9  & 54.2\%& 49.2\%& 1.9\%\\
-\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 3824548.1  &33.5\%& 30.2\%& 1.2\%\\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 3828498.1 & 33.7\%& 30.3\%& 1.2\%\\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400.0 & 22.0\% & 19.8\% & 0.8\%\\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 18009414  & 54.2\%& 49.2\%& 1.9\%\\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 3824548  &33.5\%& 30.2\%& 1.2\%\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 3828498 & 33.7\%& 30.3\%& 1.2\%\\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400 & 22.0\% & 19.8\% & 0.8\%\\
 \hline \hline
 \end{tabular}
 
@@ -1485,43 +1498,43 @@ The same set of variables for the MVA are used at \rootS{3} as in the analysis a
 \HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnue \APnue}             &355.0& 18.8\% & 1.5\% & 1.05 \\
 \eeToHH $\to$ other                             & 675.0 & 20.0\% & 3.6\% & 4.51 \\
 \hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6115.4 & 36.0\% & 0.4\% & 9.42\\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 2249.9 & 26.3\%& 0.5\%& 3.13\\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 2197.7 & 25.8\%& 1.2\%& 6.82\\
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6120 & 36.0\% & 0.4\% & 9.42\\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 2300 & 26.3\%& 0.5\%& 3.13\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 3560 & 25.8\%& 1.2\%& 6.82\\
 
-\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1093000.0& 1.4\% & 0.01\%& 1.43\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 338600.0 & 0.6\%&  - & -\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 213200.0 & 7.3\%& 0.05\%& 8.35\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 143000.0& 9.0\%& 0.05\%& 6.35\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1093000& 1.4\% & 0.01\%& 1.43\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 338600 & 0.6\%&  - & -\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 213200 & 7.3\%& 0.05\%& 8.35\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 143000& 9.0\%& 0.05\%& 6.35\\
 
-\eeTo{ \Pquark \Pquark} &  5897800.0 & 1.4\%&  - & - \\
+\eeTo{ \Pquark \Pquark} &  5897800 & 1.4\%&  - & - \\
 \eeTo{ \Pquark \Pquark \Plepton \Pnu} &  11121800 & 0.1\%& - & - \\
-\eeTo{ \Pquark \Pquark \Pl \Pl} &  6639200.0 & 0.4\%& - & - \\
-\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 2635000.0 & 3.1\%&  - & - \\
+\eeTo{ \Pquark \Pquark \Pl \Pl} &  6639200 & 0.4\%& - & - \\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 2635000 & 3.1\%&  - & - \\
 \hline
-\egamma{\Pepm}{\Pphoton}{BS}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 4006722.2  & 0.7\%&  - & - \\
+\egamma{\Pepm}{\Pphoton}{BS}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 4007354  & 0.7\%&  - & - \\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 2004388.1  & 0.7\%&  - & - \\
 %\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 2002334.1 & 0.7\%&  - & - \\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 1151200.0& 0.4\%&  - & - \\
+\egamma{\Pepm}{\Pphoton}{EPA}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 1151200& 0.4\%&  - & - \\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 575600.0& 0.4\%&  - & - \\
 %\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 575600.0 & 0.3\% &  - & - \\
-\egamma{\Pepm}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 829184.0  & 16.4\%& 0.04\%& 61.0\\
+\egamma{\Pepm}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 829184  & 16.4\%& 0.04\%& 61.0\\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 414750.0  & 16.8\%& 0.04\%& 30.7\\
 %\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 414434.0 & 15.9\% & 0.05\%& 30.3\\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 216800.0  & 7.6\% & 0.04\%& 6.0\\
+\egamma{\Pepm}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 216800  & 7.6\% & 0.04\%& 6.0\\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 7.8\% & 0.04\%& 3.37\\
 %\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 7.3\%& 0.03\%& 2.63 \\
-\egamma{\Pepm}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 185018.0  & 30.2\% & 0.2\%& 121.7 \\
+\egamma{\Pepm}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 185018  & 30.2\% & 0.2\%& 121.7 \\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92588.0  & 30.2\% & 0.2\%& 67.5 \\
 %\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92430.0 & 30.3\% & 0.2\% & 54.2 \\
 \egamma{\Pepm}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 46800.0 & 15.3\% & 0.2\% & 18.1 \\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0 & 15.4\% & 0.2\% & 7.88 \\
 %\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0   & 15.2\% & 0.3\% & 10.2 \\
 \hline
-\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 18009413.9  & 1.6\%&   - & - \\
-\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 3824548.1  & 1.0\%&  - & - \\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 3828498.1 & 1.0\%&  - & - \\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400.0 & 0.6\%&  - & - \\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 18009414  & 1.6\%&   - & - \\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 3824548  & 1.0\%&  - & - \\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 3828498& 1.0\%&  - & - \\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400 & 0.6\%&  - & - \\
 \hline \hline
 \end{tabular}
 \caption[List of signal and background selection efficiencies and event numbers after MVA application at  \rootS{3}.]
@@ -1592,43 +1605,43 @@ Number of \PFOs &  \multicolumn{1}{R{0.6\textwidth}}{$\npfo{\Hbb}$, $\npfo{\PW}$
 \HepProcess{ \Pbottom \APbottom \Pbottom \APbottom \Pnue \APnue}             &355.0& 13.3\% & 10.9\% &  5.38\\
 \eeToHH $\to$ other                             & 724.2 & 13.1\% & 13.6\% &  12.75\\
 \hline
-\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6115.4 & 7.4\% & 13.7\% & 62.63\\
-\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 2249.9 & 6.3\%& 12.1\%& 17.10\\
-\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 2197.7 & 15.9\%& 5.1\%& 18.03\\
+\eeTo{\qlight \qlight \PHiggs \Pnu \APnu}  & 6120 & 7.4\% & 13.7\% & 62.63\\
+\eeTo{\Pcharm \APcharm \PHiggs \Pnu \APnu}  & 2300 & 6.3\%& 12.1\%& 17.10\\
+\eeTo{\Pbottom \APbottom \PHiggs \Pnu \APnu}  & 3560 & 15.9\%& 5.1\%& 18.03\\
 
-\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1093000.0& 0.6\% & 0.2\%& 15.04\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 338600.0 & 1.0\%&  0.06\% & 1.85\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 213200.0 & 27.6\%& 0.5\%& 270.33\\
-\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 143000.0& 1.9\%& 1.6\%& 43.78\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark}   &   1093000& 0.6\% & 0.2\%& 15.04\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Plepton}& 338600 & 1.0\%&  0.06\% & 1.85\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}& 213200 & 27.6\%& 0.5\%& 270.33\\
+\eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} & 143000& 1.9\%& 1.6\%& 43.78\\
 
-\eeTo{ \Pquark \Pquark} &  5897800.0 & 0.4\%&  0.3\% & 60.82 \\
+\eeTo{ \Pquark \Pquark} &  5897800 & 0.4\%&  0.3\% & 60.82 \\
 \eeTo{ \Pquark \Pquark \Plepton \Pnu} &  11121800 & 0.3\%& 0.08\% & 21.24 \\
-\eeTo{ \Pquark \Pquark \Pl \Pl} &  6639200.0 & 0.6\%& 0.2\%& 84.14\\
-\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 2635000.0 & 0.4\%&  0.9\% & 92.55 \\
+\eeTo{ \Pquark \Pquark \Pl \Pl} &  6639200 & 0.6\%& 0.2\%& 84.14\\
+\eeTo{ \Pquark \Pquark \Pnu \Pnu} & 2635000 & 0.4\%&  0.9\% & 92.55 \\
 \hline
-\egamma{\Pepm}{\Pphoton}{BS}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 4006722.2  & 1.2\%&  - & - \\
+\egamma{\Pepm}{\Pphoton}{BS}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 4007354  & 1.2\%&  - & - \\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 2004388.1  & 1.2\%&  - & - \\
 %\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 2002334.1 & 1.2\%&  - & - \\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 1151200.0& 1.1\%&  - & - \\
+\egamma{\Pepm}{\Pphoton}{EPA}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 1151200& 1.1\%&  - & - \\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 575600.0& 1.1\%&  - & - \\
 %\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 575600.0 & 1.1\% &  - & - \\
-\egamma{\Pepm}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 829184.0  & 3.6\%& 1.5\%& 452.45\\
+\egamma{\Pepm}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 829184  & 3.6\%& 1.5\%& 452.45\\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 414750.0  & 3.7\%& 1.5\%& 226.77\\
 %\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 414434.0 & 3.5\% & 1.6\%& 225.68\\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 216800.0  & 11.0\% & 0.9\%& 200.65\\
+\egamma{\Pepm}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 216800  & 11.0\% & 0.9\%& 200.65\\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 11.2\% & 0.9\%& 107.90\\
 %\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 108400.0  & 10.7\%& 0.8\%& 92.75 \\
-\egamma{\Pepm}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 185018.0  & 7.9\% & 10.4\%& 1521.93 \\
+\egamma{\Pepm}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 185018  & 7.9\% & 10.4\%& 1521.93 \\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92588.0  & 7.9\% & 10.7\%& 779.36 \\
 %\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 92430.0 & 7.9\% & 10.1\% & 741.57 \\
-\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 46800.0 & 22.8\% & 7.1\% & 750.85 \\
+\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 46800 & 22.8\% & 7.1\% & 750.85 \\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0 & 22.9\% & 6.9\% & 369.52 \\
 %\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 23400.0   & 22.7\% & 7.2\% & 381.33 \\
 \hline
-\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 18009413.9  & 0.4\%&   - & - \\
-\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 3824548.1  & 1.0\%&  - & - \\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 3828498.1 & 1.0\%&  0.08\% & 28.85 \\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400.0 & 1.1\%&  - & - \\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 18009414  & 0.4\%&   - & - \\
+\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 3824548 & 1.0\%&  - & - \\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 3828498 & 1.0\%&  0.08\% & 28.85 \\
+\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400& 1.1\%&  - & - \\
 \hline \hline
 \end{tabular}
 \caption[List of signal and background selection efficiencies and event numbers after MVA for semi-leptonic analysis at  \rootS{3}.]
