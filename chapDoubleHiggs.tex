@@ -699,9 +699,10 @@ The last step is to gather the information about vertices and jets, and deploy a
 
 %The samples for training the multiclass classifier are \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} at \rootS{1.4}, where \PZ decays to \HepProcess{\Pbottom\APbottom}, \HepProcess{\Pcharm\APcharm}, or \HepProcess{\Pup\APup/\Pdown\APdown/\Pstrange\APstrange}.
 
-The samples for training the multiclass classifier are \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} at \rootS{1.4}, where \PZ decays to \HepProcess{\Pbottom\APbottom}, \HepProcess{\Pcharm\APcharm}, or \HepProcess{\Pup\APup/\Pdown\APdown/\Pstrange\APstrange}. At the training stage, the  jet clustering step is set to find two jets. The outputs for a jet is three values, corresponding to the likelihood of the jet being a b-jet, a c-jet, or a light flavour quark jet.  The selection efficiency of b jets and c jets with training samples is shown in \Figure{fig:doubleHiggs1.4Btag}.
+The samples for training the multiclass classifier are \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} at \rootS{1.4}, where \PZ decays to \HepProcess{\Pbottom\APbottom}, \HepProcess{\Pcharm\APcharm}, or \HepProcess{\Pup\APup/\Pdown\APdown/\Pstrange\APstrange}. At the training stage, the  jet clustering step is set to find two jets. The outputs for a jet is three values, corresponding to the likelihood of the jet being a b-jet, a c-jet, or a light flavour quark jet.  The selection efficiency of b jets and c jets with training samples is shown in \Figure{fig:doubleHiggs1.4Btag}. The normalised distribution of the highest b-jet tag value for the signal events is shown in \Figure{fig:doubleHiggsBtagSignalPerformance}.
 
 %To apply trained  multiclass classifier in the \lcfiplus processor, all the \PFOs in the initial reconstructed jet are fed into the processor. The jet re-clustering step in the \lcfiplus is set to find six jets. For each jet, values for the likelihood of a b-jet and a c-jet are obtained.
+
 
 For the \rootS{3}, the flavour tagging processor is re-trained in the same way as in the \rootS{1.4} analysis. The performance of the flavour tagging  with training samples is shown in \Figure{fig:doubleHiggsBtag3TeV}. Compared to the performance at \rootS{1.4}, the performance is slightly worse, because at high centre-of-mass, particles at more collimated and more difficult to separate.
 %high energy or high energies?
@@ -718,10 +719,17 @@ For the \rootS{3}, the flavour tagging processor is re-trained in the same way a
    \label{fig:doubleHiggs1.4Btag}
   \end{subfigure}
 \caption
-   { Performance of b-jet tagging with training samples at a) \rootS{1.4}, b) \rootS{3}.}
+   {Performance of b-jet tagging with training samples at a) \rootS{1.4}, b) \rootS{3}.}
    \label{fig:doubleHiggsBtag}
 \end{figure}
 
+
+\begin{figure}[!htbp]
+    \includegraphics[width=0.45\textwidth]{{doubleHiggs/jetPairing/nR0_7_6jet_btag2_bTag1_TMVA20170223R0_7_qq_btag2_prepare}.pdf}
+\caption
+   {The normalised distribution of the highest b-jet tag value for the signal events  at \rootS{1.4}}
+   \label{fig:doubleHiggsBtagSignalPerformance}
+\end{figure}
 %The flavour tagging is performed after the initial jet reconstruction, and all the \PFOs in the reconstructed jets are input into the \lcfiplus flavour tagging processor. Therefore, the classifier in the \lcfiplus processor is trained for a specific \PFO collection and a specific jet reconstruction algorithm. The outputs of the processor for a jet are three values, corresponding to the likelihood of the jet being a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet.
 
 %The flavour tagging is performed after the initial jet reconstruction using optimal jet reconstruction parameters.  \PFOs in the reconstructed jets are the inputs to the flavour tagging processor. \lcfiplus processor includes a multiclass classifier which needs to be trained. 
@@ -730,10 +738,14 @@ For the \rootS{3}, the flavour tagging processor is re-trained in the same way a
 
 \section{Jet pairing}
 
-Having optimised the jet reconstruction, and obtained the six jets from the jet clustering step in the \lcfiplus processor, the next step is to group jets according to event topology. Jets are paired up such that there are two jets for \HepProcess{\PHiggs \to \Pbottom \APbottom}, two jets for hadroinc decay of a \PW, two jets  for hadroinc decay  of a \W*, and the two $\PW{s}$ forming a  \PHiggs boson.
+Having optimised the jet reconstruction, and obtained the six jets from the jet re-clustering step in the \lcfiplus processor, the next step is to group jets according to event topology.
+Jets are paired up such that there are two jets for \HepProcess{\PHiggs \to \Pbottom \APbottom}, two jets for hadronic decay of a \PW, two jets  for hadronic decay  of a \W*, and the two $\PW{s}$ forming a  \PHiggs boson.
+
+Six jets are associated to \Hbb, \PW and \W*. There are 90 possible permutations. The best permutation is obtained by minimising a $\chi^2$  based on expected masses and mass widthes:
+
 %off-mass-shell and off the mass shell? Is the "the" pertinent? Should they both be hyphenated?
 
-The jet pairing scheme provides reconstructed invariant masses of \Hbb, \HWW, and \PW. The jet pairing metric states:
+%The jet pairing scheme provides reconstructed invariant masses of \Hbb, \HWW, and \PW. The jet pairing metric states:
 \begin{equation}
 	\chi^2 = \left(\frac{m_{ij}-\mu_{\Hbb}}{\sigma_{\Hbb}^{\prime}}\right)^2 + \left(\frac{m_{klmn}-\mu_{\HWW}}{\sigma_{\HWW}^{\prime}}\right)^2  + \left(\frac{m_{kl}-\mu_{\PW}}{\sigma_{\PW}^{\prime}}\right)^2,
 %\label{eqn:eq_chi2_HHWWbb}
@@ -742,11 +754,13 @@ The jet pairing scheme provides reconstructed invariant masses of \Hbb, \HWW, an
 \begin{equation}
 	\sigma_{\Hbb}^{\prime}=
     \begin{cases}
-      \sigma_{L,\Hbb}, & \text{if}\ m_{ij} < \mu_{\Hbb}\\
-     \sigma_{R,\Hbb}, & \text{otherwise} \\
+      \sigma_{L,\Hbb}, & \text{if}\ m_{ij} < \mu_{\Hbb}\,\
+     \sigma_{R,\Hbb}, & \text{otherwise}, \\
    \end{cases}
+   \,\text{etc.}
 \end{equation}
 
+\begin{comment}
 \begin{equation}
 	\sigma_{\HWW}^{\prime}=
     \begin{cases}
@@ -763,9 +777,8 @@ The jet pairing scheme provides reconstructed invariant masses of \Hbb, \HWW, an
      \sigma_{R,\PW}, & \text{otherwise} \\
    \end{cases}
 \end{equation}
-
-where $i$ to $l$ indicate the one of the six jets with all possible combinations. $\mu$ and $\sigma$ are the fitted invariant mass and the fitted width from \Table{tab:doubleHiggsFitParameters}. The asymmetrical structure of the fitting function is reflected in the jet pairing metric. The paired jets with minimal $\chi^2$ is chosen with an additional requirement of at least one of two jets forming \Hbb having a \Pbottom-jet tag greater than 0.2.
-
+\end{comment}
+where the indices $i$ to $l$ indicate the one of the six jets, $\mu$ and $\sigma$ are the fitted invariant mass and the fitted width from \Table{tab:doubleHiggsFitParameters}. The asymmetrical structure of the fitting function is reflected in the jet pairing $\chi^2$. The jet pairing is only considered when at least one of the jets associated to the \Hbb decay with a b-jet tag > 0.2. Of these combinations of jets, the jet pairing giving smallest  $\chi^2$ is selected. The normalised distribution of $m_{\Hbb}$ after jet pairing, for the signal channel, \eeToHHbbWW and the sum of all background channels can be seen in \Figure{fig:doubleHiggsJetPairing}. For the signal channel, the distribution peaks around the expected mass of $m_{\Hbb}$. It can also be seen from the figures that around 1\% of the signal events have no solutions for the jet pairing, as no jet has a b-jet tag > 0.2.
 
 
 \begin{figure}[!htbp]
@@ -787,6 +800,10 @@ where $i$ to $l$ indicate the one of the six jets with all possible combinations
 
 \section{Pre-selection}
 \label{sec:doubleHiggsPreSelection}
+
+Having made the association of jets to candidate bosons under hypothesis that an event is signal, kinematic and topological variables can be calculated. A set of pre-selection cuts are placed to discard the phase space dominated by background events. Firstly, a set of cuts separate the signal events into two mutually exclusive sets of the \eeToHHbbWW and \eeToHHbbqqqq sub-channels. Another set of loose cuts on invariant masses helps to reduce of the range of the  invariant mass variables. Lastly, cuts on \pT, b-jet tag, and invariant mass of the double Higgs system are used.
+
+
 With reconstructed jets paired up, kinematic and topological variables can be calculated for the signal selection. A set of pre-selection cuts are placed to aid the multivariate analysis. The pre-selection cuts have three categories: discriminative pre-selection cuts, the mutually exclusive cuts with the \eeToHHbbqqqq sub-channel, and cuts to aid the MVA.
 
 \subsection{Discriminative pre-selection cuts}
