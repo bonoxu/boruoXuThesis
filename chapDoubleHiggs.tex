@@ -767,6 +767,24 @@ The jet pairing scheme provides reconstructed invariant masses of \Hbb, \HWW, an
 where $i$ to $l$ indicate the one of the six jets with all possible combinations. $\mu$ and $\sigma$ are the fitted invariant mass and the fitted width from \Table{tab:doubleHiggsFitParameters}. The asymmetrical structure of the fitting function is reflected in the jet pairing metric. The paired jets with minimal $\chi^2$ is chosen with an additional requirement of at least one of two jets forming \Hbb having a \Pbottom-jet tag greater than 0.2.
 
 
+
+\begin{figure}[!htbp]
+ \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{doubleHiggs/jetPairing/nR0_7_6jet_btag2_Higgs1_M_TMVA20170223R0_7_qq_btag2_prepare}.pdf}
+    \caption{Signal}
+    \label{fig:doubleHiggsJetPairingSignal}
+  \end{subfigure}
+ \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{doubleHiggs/jetPairing/nR0_7_6jet_btag2_Higgs1_M_TMVA20170223R0_7_qq_btag2_prepare_bkg}.pdf}
+    \caption{Background}
+   \label{fig:doubleHiggsJetPairingBackground}
+  \end{subfigure}
+\caption
+   {The normalised distribution of $m_{\Hbb}$ after jet pairing, for a) signal channel, \eeToHHbbWW, b) sum of all background channels. All plots are shown for \rootS{1.4}.}
+   \label{fig:doubleHiggsJetPairing}
+\end{figure}
+
+
 \section{Pre-selection}
 \label{sec:doubleHiggsPreSelection}
 With reconstructed jets paired up, kinematic and topological variables can be calculated for the signal selection. A set of pre-selection cuts are placed to aid the multivariate analysis. The pre-selection cuts have three categories: discriminative pre-selection cuts, the mutually exclusive cuts with the \eeToHHbbqqqq sub-channel, and cuts to aid the MVA.
