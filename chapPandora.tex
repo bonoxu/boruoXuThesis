@@ -299,11 +299,11 @@ Although \CLIC is a \ee collider, the significant beam-induced background adds a
 
 
 %Why extra C++ implementation speed reduce O(n^3) to NlgN y, phi space, 2D KNN problem
-
+\begin{comment}
 \subsubsection{The \y{} parameter}
 \label{sec:pandoraYparameter}
 The \y{} parameter is calculated for each specific jet algorithm. It is a measure of the number of jets in an event. The \y{} parameter describes the transition of  the exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets. Numerically the \y{} parameter is often much smaller than one. A typically way to convert the small number to a human acceptable range is to take the negative logarithm of the number.
-
+\end{comment}
 \begin{comment}
 \subsection{The \lcfiplus}
 \label{sec:pandoraLCFI}
@@ -340,7 +340,7 @@ The classical event shape thrust\cite{PhysRevLett.39.1587}, is defined as
 T = \max_{\hat{t}}\!\frac{\sum_{i}\absOf{\hat{t}\!\cdot\!\vec{p_{i}}}}{\sum_{i}\absOf{\vec{p_{i}}}}
 \end{equation}
 where $\vec{p_{i}}$ is the momentum vector of the particle $i$. Summation is over all particles in the event. Thrust axis, $\hat{t}$, is a unit vector. (Principle) Thrust value, $T$, is 1 for a perfect pencillike back-to-back two-jet event, and 0.5 for a perfect spherical event. The thrust value is useful in picking out back-to-back two-jet event. Thrust axis is useful to separate each jet in a back-to-back two-jet event.
-
+\begin{comment}
 A related variable , sphericity is  derived from the sphericity tensor \cite{PhysRevLett.35.1609}. The sphericity tensor is  defined as
 \begin{equation}
 \bm{S^{\alpha\beta}} = \frac{\sum_{i}p^{\alpha}_{i}p^{\beta}_{i}}{\sum_{i}\absOf{\vec{p_{i}}}^2},
@@ -350,7 +350,7 @@ where $\vec{p_{i}}$ is the momentum vector of the particle $i$. Summation is ove
 \sphericity = \frac{3}{2}\parenths{\lambda_{1} \! + \! \lambda_{2}}.
 \end{equation}
 \sphericity, is 0 for a perfect pencil-like back-to-back two-jet event, and 1 for a perfect spherically symmetric event.
-
+\end{comment}
 Aplanarity is another useful event shape variable that distinguishes spherical symmetrical events from planar and linear events. The definition is
 \begin{equation}
 S = \frac{3}{2}\parenths{\lambda_{1}},
