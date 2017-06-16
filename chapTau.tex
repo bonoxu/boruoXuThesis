@@ -1,10 +1,10 @@
 \chapter{Tau Lepton Decay Modes Classification}
 \label{chap:Tau}
 
-\chapterquote{MVA: Turn numbers into gold.}%
-{TMVA}%: Blackwood's Magazine May 1830
+\chapterquote{Give a man a fish and you feed him for a day; teach a man to fish and you feed him for a lifetime.}%
+{}%: Blackwood's Magazine May 1830
 
-The tau lepton has been studied extensively in the past at the Large Electron Positron Collider (LEP)\cite{Schael:2005am}. The tau lepton spin state, which can be derived from kinematic properties of its decay products, can be used to measure the CP (the product of charge conjugation and parity symmetries) of the Higgs, via \HiggsToTauTau channel\cite{Berge:2015nua}.  The polarisation correlation of the tau pairs can be used to infer the spin of the parent boson, departing \HiggsToTauTau from \ZToTauTau.
+The tau lepton has been studied extensively in the past at the Large Electron Positron Collider (LEP)\cite{Schael:2005am}. The tau lepton spin state, which can be derived from kinematic properties of its decay products, can be used to measure the CP (the product of charge conjugation and parity symmetries) of the Higgs, via \HiggsToTauTau channel\cite{Berge:2015nua}.  The polarisation correlation of the tau pairs can be used to infer the spin of the parent boson, differentiating \HiggsToTauTau from \ZToTauTau.
 
 \begin{comment}
 \FIGURE{fig:tauTheorySpin} shows an example of  difference in distributions for the two channels.
@@ -20,13 +20,16 @@ The two-dimensional distribution of (a) \HepProcess{\PZ \to \APtauon \Ptauon \to
 \end{figure}
 \end{comment}
 
-The ability to identify tau decay mode is also a benchmark for detector performance. Since tau lepton has a very short life time \cite{Abreu:1991jn}, only its decay products can be detected via the tracking detectors and calorimeters. Therefore the performance of the calorimetric and track systems determines the ability to separate different tau decay modes.
+The ability to identify tau decay mode can also a benchmark for detector performance. Since tau lepton has a very short lifetime of 290\,fs \cite{Abreu:1991jn,Agashe:2014kda}, only its decay products can be detected with the tracking detectors and calorimeters. Therefore the performance of the calorimetric and track systems determines the ability to reconstruct the tau lepton decay products and identify different tau decay modes.
 
 
-The main difficulty in the classification is to classify 1-prong final states.  These final states involves \Ppizero, where two photons from \Ppizero decay could be poorly reconstructed. At high energy, \Ppizero is boosted making the reconstruction more challenging. The ability to reconstruct the two photons as separate entities requires good pattern recognition algorithm for photons and \ECAL spatial resolution. Hence the improved photon reconstruction in \Chapter{chap:Photon} is used in this study. The impact of the \ECAL transverse spatial resolution on the tau decay classification is demonstrated as well.
+The main challenge in the tau lepton decay modes  classification is to reconstruct and separate spatially close photons. Many final states of the tau decay involves \Ppizero, where \HepProcess{\Ppizero \to \Pphoton \Pphoton}. For some final states, the one difference in the topology is the number of photons. At high centre-of-mass energy, the decay product of the tau decay are often boosted.  To reconstruct two photons from \Ppizero decay  separate entities requires good pattern recognition algorithms for photons and a \ECAL spatial resolution. Hence the photon reconstruction dedicated in \Chapter{chap:Photon} is used in this study to identify photons.
 
+This chapter is organised as follows. Firstly, the analysis chain to identify tau decay modes will be described. The performance of the tau decay mode classification will be given, followed by the \ECAL optimisation study using the decay mode classification as a benchmark. Lastly, the  tau decay mode classification is further used in a proof-of-principle analysis to demonstrate the ability to identify \PHiggs from \PZ using  tau pair decay channel.
 
-This chapter is organised in the following sections. Firstly, the analysis chain to identify tau decay modes will be described, followed by the \ECAL optimisation study using the decay mode classification as a benchmark. Lastly, the classification is further used in a proof-of-principle analysis to demonstrate the ability to identify \PHiggs from \PZ using  tau pair decay channel.
+%
+%The impact of the \ECAL transverse spatial resolution on the tau decay classification is demonstrated as well.
+
 
 \section{Overview of the analysis}
 
