@@ -54,7 +54,7 @@ The classification of the tau lepton decay modes are then  repeated for differen
 \label{sec:tauDecayModes}
 
 %\section{Select single tau decay}
-The sample with simplest tau lepton decay in a \ee collider is chosen: \eeToTauTau. An example of the simulated \eeToTauTau event is shown in \Figure{fig:tauEvtDsp}. The \eeToTauTau channel contains two tau leptons travelling in opposite directions. Since the tau decay final state separation is applicable to a single tau lepton, particles in one event are divided into two collections. Each collection corresponds  to the decay products of one tau lepton.
+Simplest tau lepton decay channel in a \ee collider is chosen: \eeToTauTau, with centre-of-mass energy of 100\,GeV.  An example of the simulated \eeToTauTau event is shown in \Figure{fig:tauEvtDsp}. The \eeToTauTau channel contains two tau leptons travelling in opposite directions. Since the tau decay final state separation is applicable to a single tau lepton, particles in one event are divided into two collections. Each collection corresponds  to the decay products of one tau lepton.
 
 The principle thrust axis vector is used to separation particles into two collections. Two collections are obtained based on the sign of the scalar product between the principle thrust axis vector  and the particle momentum vector. The classical event shape thrust, $T$,  \cite{PhysRevLett.39.1587}, is defined as
 \begin{equation}
@@ -176,43 +176,72 @@ Polar angle acceptance & \multicolumn{1}{R{0.5\textwidth}}{$0.6 > \absOf{\theta_
 \label{sec:tauVar}
 
 
-Having pre-selected events, discriminating variables are carefully developed for the multivariate analysis (MVA). The full list of the variables are shown in \Table{tab:tauVaraibles}. The distribution of the four most power variables are shown in \Figrure{fig:tauVar}.
+Having pre-selected events, discriminating variables are carefully developed for the multivariate analysis (MVA). The full list of the variables are shown in \Table{tab:tauVaraibles}. The distribution of the four most power variables are shown in \Figure{fig:tauVar}.
+
+\subsection{\PFOs number variables}
+
+The most crucial variables are the number of \PFOs of different particles. There are five \PFOs number variables used in MVA event selection: the number of charged particles (${N}_{\charge}$); the number of muons (${N}_{\Pmu}$); the number of electrons (${N}_{\Pe}$); the number of photons (${N}_{\Pgg}$); and the number of charged pions (${N}_{\Pgpm}$).
+
+\FIGURE{fig:tauVarNCharge} shows the distributions of the number of charged particles for selected tau decay modes. Whilst over 98\% 1-prong final states have one track reconstructed, around 95\%  3-prong final states have three tracks reconstructed. The distributions of the number of photons are shown in \Figure{fig:tauVarNPhoton}. The overlap between the distribution for \decayPionShort and \decayRhoShort decay modes is about 10\% of the \decayPionShort events and 20\% of the \decayRhoShort events.
+
+% and the overlap between \decayRhoShort and \decayAiPhotonShort is around 15\%. ${N}_{\Pgg}$ can also separate two 3-prong final states.
+%${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgpm}$ are useful to identify two leptonic final states, and further separate 3-prong final states from 1-prong final states.
+%This is an excellent variable to separate 1-prong and 3-prong final states.  An orthogonal measurement is the number of reconstructed photons,  ${N}_{\Pgg}$, shown in \Figure{fig:tauVarNPhoton}.
+
+\subsection{Invariant mass variables}
+
+Five invariant mass variables participate the MVA event selection: the invariant mass of all visible decay products ($m_{vis}$); the invariant mass of all charged particles ($m_{\charge}$); the invariant mass of all neutral particles ($m_{\neutral}$); the invariant mass of all photons ($m_{\Pgg}$); and the invariant mass of all charged pions ($m_{\Pgpm}$). \FIGURE{fig:tauVarMVis} shows distribution of the invariant mass of all visible decay products for selected tau decay modes. Reasonable structures can be seen for \Prho and \Pai decay modes.
+
+%Invariant masses of different particles are good at characterising different final states. \FIGURE{fig:tauVarMVis} shows the invariant mass of the system. Clear reasonable peaks can be seen for \Prho and \Pai. The mass peak of  \decayAiPionFinalStateShort are much higher. $m_{\charge}$ and $m_{\neutral}$ are invariant masses of charged and neutral particles respectively. They separate final states with neutral particles from those without neutral particles. Similarly, $m_{\Pgg}$ and $m_{\Pgpm}$ identify final states with photons and with \Pgpm respectively.
+
+\subsection{Energy variables}
+
+Energy information further separate different final states. Six energy variables are used in the MVA event selection: the normalised total energy of all visible decay products ($\tilde{E}_{vis}$); the normalised total energy of the charged particles ($\tilde{E}_{\charge}$); the normalised total energy of the muons ($\tilde{E}_{\Pmu}$); the normalised total energy of the electrons ($\tilde{E}_{\Pe}$); the normalised total energy of the photons ($\tilde{E}_{\Pgg}$); and the normalised total energy of the charged pions ($\tilde{E}_{\Pgpm}$). All variables are normalised with respect to the energy of the associated tau lepton.
+
+\subsection{Calorimetric information variable}
+
+
+Two calorimetric information variable are used in the MVA event selection: the fraction of the  deposited in the \ECAL over the total energy in the calorimeters for all charge particles ($\% E_{\charge}$) and the fraction of the  deposited in the \ECAL over the total energy in the calorimeters for all particles ($\% E$). Calorimetric information is used to identify electron and muon. An electron deposits most energy in the \ECAL and a muon deposits 5 to 20\% energy in the \ECAL. The difference between two variables is that the contribution from photons, which also deposit most energy in the \ECAL like electrons, do not participate in the calculation of $\% E_{\charge}$.
 
 
 
-The most crucial variables are the number of \PFOs of different particles. \FIGURE{fig:tauVarNCharge} shows the distribution of ${N}_{\charge}$, the number of  charged \PFOs for different tau final states. Whilst over 98\% 1-prong final states have one track reconstructed, around 95\%  3-prong final states have three tracks reconstructed. This is an excellent variable to separate 1-prong and 3-prong final states. An orthogonal measurement is the number of reconstructed photons,  ${N}_{\Pgg}$, shown in \Figure{fig:tauVarNPhoton}. The overlap between \decayPionShort and \decayRhoShort final states is about 15\% and the confusion between \decayRhoShort and \decayAiPhotonShort is around 15\%. ${N}_{\Pgg}$ can also separate two 3-prong final states. ${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgpm}$ are useful to identify two leptonic final states, and further separate 3-prong final states from 1-prong final states.
-
-Invariant masses of different particles are good at characterising different final states. \FIGURE{fig:tauVarMVis} shows the invariant mass of the system. Clear reasonable peaks can be seen for \Prho and \Pai. The mass peak of  \decayAiPionFinalStateShort are much higher. $m_{\charge}$ and $m_{\neutral}$ are invariant masses of charged and neutral particles respectively. They separate final states with neutral particles from those without neutral particles. Similarly, $m_{\Pgg}$ and $m_{\Pgpm}$ identify final states with photons and with \Pgpm respectively.
-
-Calorimetric information is used to identify electron and muon. An electron deposits most energy in the \ECAL and a muon deposits 5 to 20\% energy in the \ECAL. Two variables, $\% E_{\charge}$ and $\% E$, are the fraction of energy deposited in the \ECAL over total energy in the calorimeter, of charged particles and all \PFOs respectively. Energy fraction for the charged particles does not include contribution from photons, which also deposit most energy in the \ECAL, like electrons.
-
-Energy information further separate different final states. Variables are normalised to the expect tau energy. For example, $\tilde{E}_{\Pgg}$, normalised energy of photons are different for final states with and without photons.
-
-Extra variables are used to differentiate specific final states.
-
-\subsection{\texorpdfstring{\decayRhoShort and \decayRhoShort} \, resonances reconstruction}
+\subsection{\texorpdfstring{\decayRhoShort and \decayRhoShort} \, resonances reconstruction variables}
 \label{sec:tauResonance}
-\decayRhoShort and \decayAiPhotonShort are identified further using their resonance structure. For example, \decayRhoShort final state contains a \Pgpm and a \Ppizero decaying to two photons. By selecting \Pgpm and photons consistent with \Prho decay pattern, \decayRhoShort final state could be separated. The particle selection is via minimising a  $\chi^{2}$ function, defined as:
+\decayRhoShort and \decayAiPhotonShort are identified further using their resonance structure. For example, \decayRhoShort decay mode contains a \Pgpm and a \Ppizero decaying into two photons. By selecting \Pgpm and photons consistent with \Prho decay pattern, \decayRhoShort decay mode could be identified. The  \decayRhoShort decay mode hypothesis test performed by minimising a  $\chi^{2}$ function:
 \begin{equation}
 \chi^{2} = {\left(\frac{m_{tot} -  m^{MC}_{\Prho}}{\sigma^{MC}_{\Prho}}\right)}^{2} + {\left(\frac{m_{\Pphoton \Pphoton} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2} \,,
 \end{equation}
-where $m_{\Pphoton \Pphoton}$ is the invariant mass of two photons and $m_{tot}$ is the invariant mass of the  photon pair and one \Pgpm. All combinations of photons and \Pgpm are tested. $m^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are expected masses of \Prho and \Ppizero, taken from \cite{Agashe:2014kda}. $\sigma^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are the half width of the invariant mass distribution of reconstructed \Prho and \Ppizero using the truth information. This minimisation allows \decayRhoShort final state to be separated from \decayAiPhotonShort, where failure to reconstruct photons causes  \decayAiPhotonShort events to be simualr to that of \decayRhoShort.
+where $m_{\Pphoton \Pphoton}$ is the invariant mass of two photons; $m_{tot}$ is the invariant mass of the  two photons and one \Pgpm; $m^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are expected masses of \Prho and \Ppizero, respectively, taken from \cite{Agashe:2014kda}; and $\sigma^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are the half width of the invariant mass distribution of reconstructed \Prho and \Ppizero, respectively , obtained using the truth information. All combinations of photons and \Pgpm are tested. Two variables obtained in this minimisation and used in the MVA event selection are the invariant mass of the two photons in the fit ($m_{\Pgpz}\parenths{\rho}$) and  the invariant mass of the  two photons and one \Pgpm ($m_\rho$).
 
-Similarly, \decayAiPhotonShort can be separate using a extended minimisation with two extra photons:
+
+Similarly, \decayAiPhotonShort decay mode can be identified using a extended minimisation $\chi^{2}$ with two extra photons:
 \begin{equation}
 \chi^{2} = {\left(\frac{m_{tot} -  m^{MC}_{\Pai}}{\sigma^{MC}_{\Pai}}\right)}^{2} + {\left(\frac{m_{\Pphoton1 \Pphoton2} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2}  + {\left(\frac{m_{\Pphoton3 \Pphoton4} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2} \,,
 \end{equation}
-where \Prho has been replace by \Pai. Selected particles for the test are two photon pairs and one \Pgpm. Both photon pairs are required to be consistent with \Ppizero decaying to two photons. \FIGURE{fig:tauVarMA1} shows the distribution of $m_{tot}$ from \decayAiPhotonShort consistency test for selected final states. The main feature is that only \decayAiPhotonShort final state has a mass peak at \Pai resonance position. Comparing to simple invariant mass distribution in \Figure{fig:tauVarMVis}, \decayAiPhotonShort mass peak is enhanced.
+where \Prho has been replace by \Pai and other variables are defined in the same way as in the previous $\chi^2$ function. Two photon pairs and one \Pgpm are needed for this minimisation. Both photon pairs are required to be consistent with \HepProcess{\Ppizero \to \Pphoton \Pphoton}. Three variables obtained in this minimisation and used in the MVA event selection are the invariant mass of the first two photons in the fit ($m_{\Pgpz}\parenths{\Pai}$); the invariant mass of the last two photons in the fit ($m^*_{\Pgpz}\parenths{\Pai}$); and the invariant mass of the four photons and one \Pgpm ($m_{\Pai}$). The first photon pair is defined to have a invariant mass closer to the invariant mass of the \Ppizero than the second photon pair.  \FIGURE{fig:tauVarMA1} shows the distributions of the invariant mass of the four photons and one \Pgpm under \decayAiPhotonShort hypothesis test for selected tau decay modes. Only the distribution for \decayAiPhotonShort decay mode has a resonance peak at \Pai mass.
 
-The $\chi^{2}$ functions for both consistency test are adapted for cases where reconstruction fails to resolve photon pairs. Relevant terms are dropped from the expression if there are fewer photons than required.
+%Comparing to simple invariant mass distribution in \Figure{fig:tauVarMVis}, \decayAiPhotonShort mass peak is enhanced.
+%\decayAiPhotonShort reconstruction &  \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\Pai}$, $m^*_{\Pgpz}\parenths{\Pai}$, $m_{\Pai}$} \\
+
+The $\chi^{2}$ functions for both hypothesis test are adapted for events where reconstruction fails to reconstruct enough photons. Relevant photon terms are dropped from the expression if there are fewer photons reconstructed  than required in the $\chi^{2}$ functions.
 
 \subsection{Separate \decayElectronShort from \decayPionShort}
 
-Particle ID reported from \pandora is used extensively to reconstruct discriminating variables. \pandora uses a wide range of information to determine electron ID. However, extra information is used in this analysis to help identifying electrons, which are mistaken as \Pgpm by \pandora reconstruction.
+The Particle ID reported from \pandora is used extensively to reconstruct variables. \pandora uses a wide range of information to determine electron the ID. However, extra information is used in this analysis to help identifying electrons, which could be mistaken as \Pgpm by \pandora reconstruction.
 
-An electron leaves a characteristic electromagnetic  (EM) shower in the \ECAL (see \Section{sec:photonEMshower}), whilst \Pgpm doesn't. Variables defining the  EM shower helps to identify \Pem, taken from photon reconstruction in \Section{sec:photonLikelihood}. $t_0$, the start layer of the longitudinal shower and $\delta{l}$, the fractional difference between observed and expected longitudinal shower profile describe the longitudinal EM shower. $\langle{w}\rangle$ is a measure of the EM shower transverse width.
+An electron leaves a characteristic electromagnetic  (EM) shower in the \ECAL (see \Section{sec:photonEMshower}), whilst \Pgpm doesn't. Variables defining the  EM shower helps to identify \Pem, taken from photon reconstruction in \Section{sec:photonLikelihood}. Three variables are used in the MVA event selection: the start layer of the longitudinal shower ($t_0$); the fractional difference between observed and expected longitudinal shower profile describe the longitudinal EM shower ($\delta{l}$); and $\langle{w}\rangle$, a measure of the EM shower transverse width.
 
-Another type of information to differentiate an EM shower from a \Pem and a early hadronic shower from a \Pgpm is the calorimeter hit information. $\bar{E}_{hit}$, the average energy of a hit, and $\%MIP$, fraction of possible minimum ionising particles, are different for EM and hadronic showers. Last information used is the track-calorimeter consistency check. $\Delta E/P$ is the calorimeter energy divided by the track momentum. This variable is found to help to differentiate \decayElectronShort from \decayPionShort final state.
+Another type of information to differentiate an EM shower from a \Pem and a early hadronic shower from a \Pgpm is the calorimeter hit information. Two variables used in the MVA event selection are: the average energy of a calorimeter hit ($\bar{E}_{hit}$) and the fraction of possible minimum ionising particles for all particles ($\%MIP$)
+
+Last information used to separate \Pem from \Pgpm is the track-momentum-calorimeter-energy consistency check. The variable used in the MVA event selection is the calorimeter energy divided by the track momentum for all particles ($\Delta E/P$).
+
+%This variable is found to help to differentiate \decayElectronShort from \decayPionShort final state.
+
+
+%EM shower profile & $\delta{l}$, $t_0$, $\langle{w}\rangle$ \\
+%Calorimeter hit info. & $\bar{E}_{hit}$, $\%MIP$ \\
+%Track info. & $\Delta E/P$ \\
+
 
 
 
@@ -241,9 +270,7 @@ Another type of information to differentiate an EM shower from a \Pem and a earl
 \end{subfigure}
 
 \caption
-{Normalised distribution for a) the number of charged particle (${N}_{\charge}$)
- selected variables showing for seven final states, \decayElectronShort, \decayMuonShort, \decayPionShort, \decayRhoShort, \decayAiPhotonShort, \decayAiPionShort and \decayThreePionPhotonShort, separated using truth information. \FIGURE{fig:tauVarNCharge}, \Figure{fig:tauVarNPhoton}, \Figure{fig:tauVarMVis}, and \Figure{fig:tauVarMA1} show distributions for the number of tracks, the number of photons, the invariant mass of visible \PFOs, and the invariant mass of $a_1$ for \decayAiPhotonShort hypothesis test, respectively. The area for each final state is normalised to 1.
-}
+{Normalised distribution for a) the number of charged particle (${N}_{\charge}$); b) the number of photons (${N}_{\Pgg}$); c) the invariant mass of all visible decay products ($m_{vis}$); and d) the invariant mass of the \Pai, reconstructed with \decayAiPhotonShort hypothesis. Decay modes in all plots are selected with truth information.}
 \label{fig:tauVar}
 \end{figure}
 
@@ -253,10 +280,10 @@ Another type of information to differentiate an EM shower from a \Pem and a earl
 \hline
 Category &  Variable \\
 \hline
-Number of \PFOs & \multicolumn{1}{R{0.6\textwidth}}{  ${N}_{\charge}$, ${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgg}$,  ${N}_{\Pgpm}$} \\
+\PFOs number  & \multicolumn{1}{R{0.6\textwidth}}{  ${N}_{\charge}$, ${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgg}$,  ${N}_{\Pgpm}$} \\
 Invariant mass &  \multicolumn{1}{R{0.6\textwidth}}{$m_{vis}$, $m_{\charge}$, $m_{\neutral}$, $m_{\Pgg}$, $m_{\Pgpm}$} \\
-Calorimetric info. &   \multicolumn{1}{R{0.6\textwidth}}{ $\% E_{\charge}$,  $\% E$ } \\
 Energy & \multicolumn{1}{R{0.6\textwidth}}{ $\tilde{E}_{vis}$,  $\tilde{E}_{\charge}$, $\tilde{E}_{\Pmu}$, $\tilde{E}_{\Pe}$, $\tilde{E}_{\Pgg}$,  $\tilde{E}_{\Pgpm}$} \\
+Calorimetric info. &   \multicolumn{1}{R{0.6\textwidth}}{ $\% E_{\charge}$,  $\% E$ } \\
 \decayRhoShort reconstruction & \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\rho}$, $m_\rho$} \\
 \decayAiPhotonShort reconstruction &  \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\Pai}$, $m^*_{\Pgpz}\parenths{\Pai}$, $m_{\Pai}$} \\
 EM shower profile & $\delta{l}$, $t_0$, $\langle{w}\rangle$ \\
@@ -272,9 +299,9 @@ Track info. & $\Delta E/P$ \\
 
 \section{Multivariate Analysis}
 \label{sec:tauMVA}
-For the multivariate analysis, the multiclass class of the TMVA package \cite{Therhaag:2009dp} was used to perform a multiclass classification, which trains the seven final states simultaneously. The multiclass class is an extension of the standard two-class signal-background classifier. The discussion on multivariate analysis can be found in \Section{sec:pandoraMVA}. The multiclass classifier is discussed in \Section{sec:pandoraMVAmulticlass}.
+For the multivariate analysis, the multiclass class of the TMVA package \cite{Therhaag:2009dp} was used to perform a multiclass classification, which trains seven tau lepton decay final states simultaneously. The multiclass class is an extension of the standard two-class signal-background classifier. The discussion on multivariate analysis can be found in \Section{sec:pandoraMVA}. In particular the multiclass classifier is discussed in \Section{sec:pandoraMVAmulticlass}.
 
-The multiclass classifier used is Boosted Decision Tree with Gradient boost (BDTG). The optimisation of the BDTG classifier follows the strategy in \Section{sec:pandoraMVAoptimisation}. The optimised parameters are listed in \Table{tab:tauBDTparameters}. Explanation of variables can be found in \Section{sec:pandoraMVAbdtVar}.  Half of the randomly selected samples were used in the training process and the other half were used for testing.
+The multiclass classifier used is Boosted Decision Tree with Gradient boost (BDTG). The optimisation of the BDTG classifier follows the strategy in \Section{sec:pandoraMVAoptimisation}. The optimised parameters are listed in \Table{tab:tauBDTparameters}. An explanation of the variables can be found in \Section{sec:pandoraMVAbdtVar}.  Half of the randomly selected samples were used in the training process and the other half were used for testing.
 
 \begin{table}[!tbp]\centering
 %\small
@@ -294,44 +321,53 @@ End node output & yes/no \\
 \end{tabular}
 
 \caption
-{Optimised parameters for the Boosted Decision Tree with Gradient boost multiclass classifier. See \Section{sec:pandoraMVAbdtVar} for detailed explanation of variables.}
+{Optimised parameters for the Boosted Decision Tree with Gradient boost multiclass classifier. See \Section{sec:pandoraMVAbdtVar} for a detailed explanation of variables.}
 \label{tab:tauBDTparameters}
 \end{table}
 
 
 \section{Classification Efficiency}
 
-The reconstruction efficiencies for the seven tau decay final states are shown in \Table{tab:TauSelExample}. Bold numbers show the correct classification probability. For example, 99.8\%  of true \decayElectronShort are reconstructed correctly.
+The Classification efficiencies for the seven tau decay modes are shown in \Table{tab:TauSelExample}. Bold numbers show the correct classification probability.
 
-For the \decayElectronShort decay mode, a high correct classicisation is achieve, due to using particle ID from \pandora and calorimetric information. Similarly for \decayMuonShort decay mode,  99.5\% correct rate is achieved, due to efficient tracking detector and muon reconstruction algorithm.
+%For example, 99.8\% events of true \decayElectronShort decay mode are reconstructed correctly.
 
-For the \decayPionShort decay mode, 3.4\% confusion with \decayRhoShortest decay mode  is to due to differentiate two event topologies. Around 15\% of \decayPionShort events have at least one photon reconstructed, mostly due to the FSR. If the reconstruction is unable to identify the photon pair from \Ppizero decay in \decayRhoShortest decay mode, two decay modes would appear to  similar and confusion is caused. The confusion with \decayElectronShort is at percent level, which is low due to the usage of EM shower variables. The percent level confusion with \decayAiPionShortest is because the tracking efficiency is at 98\%, where 2\% \decayPionShort events have more than one track reconstructed.
+For the \decayElectronShort decay mode,   99.8\%  correct classicisation efficiency is achieved, due to variables dedicated to separation between \Pem and \Ppiminus. For \decayMuonShort decay mode,  99.5\% correct classicisation efficiency is achieved, due to efficient tracking detector and muon reconstruction algorithm.
 
-For the \decayRhoShortest decay mode, biggest confusion is with \decayAiPhotonShortest because of the similar reason of unable to reconstruct all photons form \Ppizero decaying.
+For the \decayPionShort decay mode, 3.4\% events were classified as \decayRhoShortest decay mode. If the reconstruction is unable to reconstruct the photon pair from \Ppizero decay in \decayRhoShortest decay mode, the \decayPionShort and \decayRhoShortest decay modes would appear to  similar and misclassification is caused.
 
-For the \decayAiPhotonShortest decay mode, the correct classicisation rate is the lowest as it is most challenging to reconstruct correctly: two photon pairs and  one \Ppipm. The 9.5\% confusion with \decayRhoShortest is due to the same reconstruction failure issue. It should be noted that \Figure{fig:tauVarNPhoton} suggests that 30\% of \decayAiPhotonShortest events have fewer than four photons reconstructed, which overlap with \decayRhoShortest distribution. The \decayAiPhotonShortest resonance reconstruction (\Section{sec:tauResonance}) and the multiclass classifier reduce the confusion to  9.5\% from 30\%.
+%The confusion with \decayElectronShort is at percent level, which is low due to the usage of EM shower variables. The percent level confusion with \decayAiPionShortest is because the tracking efficiency is at 98\%, where 2\% \decayPionShort events have more than one track reconstructed.
 
-For the \decayAiPionShortest decay mode, most confusion is with \decayThreePionPhotonShort, due to inability of separating photons. And the reason is the same for the confusion of  \decayThreePionPhotonShort decay mode classified as \decayAiPionShortest decay mode.
-The unprecedented high classification rate has been achieved. The improvement of photon reconstruction described in \Section{} improved the ability to separate 1-prong final state. Most notably,  \Figure{} shows number of photons have a high correct reconstruction efficiency.
+ %confusion with \decayRhoShortest decay mode  is to due to differentiate two event topologies. Around 15\% of \decayPionShort events have at least one photon reconstructed, mostly due to the FSR.
+
+For the \decayRhoShortest decay mode, most misclassification comes from \decayAiPhotonShortest decay mode.  If the reconstruction is unable to resolve the all photon pair from \Ppizero decay in \decayRhoShortest and \decayAiPhotonShortest decay mode, the two decay modes would have similar topologies.
+
+For the \decayAiPhotonShortest decay mode, the correct classification rate is the lowest among seven decay modes, as the \decayAiPhotonShortest decay final state is the most challenging to reconstruct correctly: two photon pairs and  one \Ppipm. The 9.5\% confusion with \decayRhoShortest is due to the same photon reconstruction failure issue. It should be noted that \Figure{fig:tauVarNPhoton} suggests that 30\% of \decayAiPhotonShortest events have fewer than four photons reconstructed, which overlaps with \decayRhoShortest distribution. The \decayAiPhotonShortest resonance reconstruction (\Section{sec:tauResonance}) and the multiclass classifier reduce the confusion between two final states  from 30\% to  9.5\%.
+
+For the \decayAiPionShortest decay mode, the biggest source of misclassification  \decayThreePionPhotonShort decay, due to inability to resolve photons. The misclassification of  \decayThreePionPhotonShort decay mode  as \decayAiPionShortest decay mode is caused by the same reason.
+
+%And the reason is the same for
+
+%The unprecedented high classification rate has been achieved. The improvement of photon reconstruction described in \Section{} improved the ability to separate 1-prong final state. Most notably,  \Figure{} shows number of photons have a high correct reconstruction efficiency.
 
 
 \begin{table}[htbp]
 \centering
 \small
-%\smallskip
+\smallskip
 \begin{tabular}{ l   r  r  r  r  r  r  r }
 \hline
 \hline
-Reco $\downarrow$ Truth $\to$  & \decayElectronShort & \decayMuonShort &\decayPionShort & \decayRhoShortest &\decayAiPhotonShortest &\decayAiPionShortest &\decayThreePionPhotonShort \\
+Reco$\downarrow$ Truth$\to$& \decayElectronShort & \decayMuonShort &\decayPionShort & \decayRhoShortest &\decayAiPhotonShortest &\decayAiPionShortest &\decayThreePionPhotonShort \\
 \hline
 
-{\decayElectronShort}&\textbf{99.7}&-&0.9&0.6&0.4&-&-\\
-{\decayMuonShort}&-&\textbf{99.5}&0.6&-&-&-&-\\
-{\decayPionShort}&-&0.3&\textbf{94.0}&0.8&-&0.4&-\\
-{\decayRhoShort}&-&-&3.4&\textbf{93.6}&9.5&0.6&2.3\\
-{\decayAiPhotonShort}&-&-&-&4.5&\textbf{89.7}&-&0.6\\
-{\decayAiPionShort}&-&-&0.9&-&-&\textbf{96.8}&6.4\\
-{\decayThreePionPhotonShort}&-&-&-&0.3&-&2.0&\textbf{90.6}\\
+{\decayElectronShort}&\textbf{99.7}\%&-&0.9\%&0.6\%&0.4\%&-&-\\
+{\decayMuonShort}&-&\textbf{99.5}\%&0.6\%&-&-&-&-\\
+{\decayPionShort}&-&0.3\%&\textbf{94.0}\%&0.8\%&-&0.4\%&-\\
+{\decayRhoShort}&-&-&3.4\%&\textbf{93.6}\%&9.5\%&0.6\%&2.3\%\\
+{\decayAiPhotonShort}&-&-&-&4.5\%&\textbf{89.7}\%&-&0.6\%\\
+{\decayAiPionShort}&-&-&0.9\%&-&-&\textbf{96.8}\%&6.4\%\\
+{\decayThreePionPhotonShort}&-&-&-&0.3\%&-&2.0\%&\textbf{90.6}\%\\
 
 \hline
 \hline
@@ -347,16 +383,13 @@ Reco $\downarrow$ Truth $\to$  & \decayElectronShort & \decayMuonShort &\decayPi
 
 \section{Electromagnetic calorimeter  optimisation}
 \label{sec:tauECAL}
-In the above section, an analysis on tau decay mode classification is presented. Events are \eeToTauTau at \rootSGeV{100} with nominal \ILD detector model. This classification can be applied for different  \sqrtS and with different detector models. The main reconstruction issue is to separate boosted photon pair from \Ppizero decay. High \sqrtS would photon pair more collimated, and therefore more challenging to separate. The \ECAL cell size is crucial in separating the EM showers from photons. As discussed in previous chapter, separating photons requires a high transverse spatial resolution. Therefore, the \ECAL square cell size is expected to affect the classification efficiency.
-
-The main difficulty in the classification is to classify 1-prong final states.  These final states involves \Ppizero, where two photons from \Ppizero decay could be poorly reconstructed. At high energy, \Ppizero is boosted making the reconstruction more challenging. The ability to reconstruct the two photons as separate entities requires good pattern recognition algorithm for photons and \ECAL spatial resolution. Hence the improved photon reconstruction in \Chapter{chap:Photon} is used in this study. The impact of the \ECAL transverse spatial resolution on the tau decay classification is demonstrated as well.
-
-The analysis is repeated with varying \ECAL square cell sizes at 3, 5, 7, 10, 15 and 20\,mm, at four  \sqrtS = 100, 200, 500, 1000\,GeV. The multivariate classifier is trained for each cell size and each \sqrtS. Other \ECAL dimensions are kept the same as the \ILD nominal detector. Because the lepton reconstruction mostly relies on the tracking system, which is not varied in this study, only the  hadronic tau decays were investigated and compared between different \ECAL square cell sizes.
+In the above section, an analysis on tau decay mode classification is presented. Events used in the analysis are \eeToTauTau event at \rootSGeV{100} with nominal \ILD detector model. The analysis is repeated with varying \ECAL square cell sizes at 3, 5, 7, 10, 15 and 20\,mm, at four  \sqrtS = 100, 200, 500, 1000\,GeV. The multivariate classifier is trained for each cell size and each \sqrtS. Other \ECAL dimensions are kept the same as the \ILD nominal detector. Because the lepton reconstruction mostly relies on the tracking system, which is not varied in this study, only the  hadronic tau decays were investigated and compared between different \ECAL square cell sizes. In this way, the impact of the centre-of-mass energy and the \ECAL cell sizes on the classification efficiencies are studied. The correct classification efficiencies for  tau hadronic decay final states  as a function of the \ECAL square cell sizes for different centre-of-mass energies are shown in \Figure{fig:TauPionEfficiency}.
 
 
-As \pandora is optimised for the nominal \ILD detector, fragment removal algorithms have a large dependence on the \ECAL cell sizes. One algorithm is re-optimised for the varying \ECAL cell sizes. The \PhotonFragmentRemoval algorithm which merges photon fragments uses a distance metric and it is optimised with values listed in the \Table{tab:TauPhotonFragmentRemovalParameter}. As cell sizes become larger, the distance cut for merging photons are larger.
+%The analysis is repeated with varying \ECAL square cell sizes at 3, 5, 7, 10, 15 and 20\,mm, at four  \sqrtS = 100, 200, 500, 1000\,GeV.
 
 
+As \pandora is optimised for the nominal \ILD detector, a re-optimisation is required when changing the \ECAL square cell sizes. In particular, fragment removal algorithms have a large dependence on the \ECAL cell sizes. In particular, the \PhotonFragmentRemoval algorithm which merges photon fragments uses a distance metric. The optimised distance metrics as a function of the \ECAL square cell sizes are shown \Table{tab:TauPhotonFragmentRemovalParameter}. As cell sizes become larger, the distance cut for merging photons become larger.
 
 \begin{table}[htbp]
 \centering
@@ -365,7 +398,7 @@ As \pandora is optimised for the nominal \ILD detector, fragment removal algorit
 \begin{tabular}{ l   r  r  r  r  r  r  }
 \hline
 \hline
-\ECAL square cell size (mm) & 3 & 5 & 7 & 10 & 15 & 20  \\
+\ECAL square cell size & 3\,mm & 5\,mm & 7\,mm & 10\,mm & 15\,mm & 20\,mm  \\
 \hline
 ClosestHitDistance & 5 & 10 & 10 & 10 & 20 & 20 \\
 \hline
@@ -377,22 +410,35 @@ ClosestHitDistance & 5 & 10 & 10 & 10 & 20 & 20 \\
 \label{tab:TauPhotonFragmentRemovalParameter}
 \end{table}
 
+The increase in the centre-of-mass energies  would boost photons. The photon pair would be more collimated, and therefore be more challenging to separate. The inability to separate photon pairs will degrade the classicisation performance.
 
-\FIGURE{fig:TauPionEfficiency} shows the correct classification efficiencies for  tau hadronic decay final states  as a function of the \ECAL square cell sizes. For example, plotted values for 5\,mm cell size at \rootSGeV{100} are the same as the bold numbers in \Table{tab:TauSelExample}.
+The change in the \ECAL cell size will change the transverse spatial resolution. Hence a large cell size will result in a low transverse spatial resolution, and leading to inability to separate photon pairs. Consequently, a worse classification performance is expected for a larger \ECAL cell size.
 
-In general,  the correct classification efficiencies generally decreases with increase of \sqrtS and increase of \ECAL cell sizes. As the \sqrtS increases, tau decay products are boosted. It is increasingly difficult to separate identical decay products. For example, the photon pair from \Ppizero decay become very challenging to separate at high \sqrtS. Increase of the \ECAL cell sizes has a similar effect. With a bigger cell size, photons may deposit energy in a same cell, making separating these photons  almost impossible.
+
+In general,  tau decay mode correct classification efficiencies generally decreases with increase of \sqrtS and increase of \ECAL cell sizes, as expected. This trend is observed for almost all tau decay modes. As the centre-of-mass energy increases, tau decay products are often boosted. It is increasingly difficult to separate decay products. For example, the photon pair from \Ppizero decay becomes very challenging to separate at a high centre-of-mass energy. Increase of the \ECAL cell sizes has a similar effect. With a bigger cell size, multiple photons may deposit energy in a same cell, making separating these photons  almost impossible.
 
 For the \decayPionShort decay mode, the general trend is followed. The efficiency for \rootSGeV{200} is slightly better than that of the \rootSGeV{100} for small cell sizes.
 
 For the \decayRhoShort decay mode,the efficiency for  \rootSGeV{500} increases as the cell sizes increases. This is because the multivariate classifier optimises for the overall classification efficiency, which may compensate one decay mode for another. In this case, the small increase in efficiency for \decayRhoShort at \rootSGeV{500} is compensated by the drastic decrease in efficiency for \decayAiPhotonShort at  \rootSGeV{500}.
 
-For the \decayAiPhotonShort decay mode, the loss of efficiency with increase of the cell size and increase in \sqrtS is most significant comparing to other decay modes. With most number of particles in the final state, it is the most challenging decay channel to reconstruct and thus most sensitive to the change in cell sizes and \sqrtS.
+For the \decayAiPhotonShort decay mode, the loss of efficiency with an increasing  cell size and increasing centre-of-mass energy is most significant comparing to other decay modes. With most number of particles in the final state, it is the most challenging decay channel to reconstruct and thus most sensitive to the change in cell sizes and centre-of-mass energy.
 
-For the \decayAiPionShort decay mode, the efficiencies are similar to that of the \decayPionShort. Both final states contain charged particles only. Therefore it is most sensitive to the tracking performance, which is not affected by the \ECAL cell sizes.
+For the \decayAiPionShort decay mode, the efficiencies are similar to that of the \decayPionShort. Both final states contain charged particles only. Therefore it is most sensitive to the tracking performance, which is not affected by varying the \ECAL cell sizes.
 
 For the \decayThreePionPhotonShort decay mode, the decrease in efficiencies are more significant for \rootS{500} and 1000\,GeV.
 
 The leptonic decay  correct reconstruction efficiency is not used as a metric as they are similar across different \ECAL cell sizes. This is because the \Pepm and \Pgmpm identifications mostly rely on the tracking system, which was not varied in this study. The energy deposited in the calorimeter are used for the association to the tracks but it has a small impact on the lepton identification.
+%This classification can be applied for different  \sqrtS and with different detector models. The main reconstruction issue is to separate boosted photon pair from \Ppizero decay. High \sqrtS The \ECAL cell size is crucial in separating the EM showers from photons. As discussed in previous chapter, separating photons requires a high transverse spatial resolution. Therefore, the \ECAL square cell size is expected to affect the classification efficiency.
+
+%The main difficulty in the classification is to classify 1-prong final states.  These final states involves \Ppizero, where two photons from \Ppizero decay could be poorly reconstructed. At high energy, \Ppizero is boosted making the reconstruction more challenging. The ability to reconstruct the two photons as separate entities requires good pattern recognition algorithm for photons and \ECAL spatial resolution. Hence the improved photon reconstruction in \Chapter{chap:Photon} is used in this study. The impact of the \ECAL transverse spatial resolution on the tau decay classification is demonstrated as well.
+
+
+
+
+
+%\FIGURE{fig:TauPionEfficiency} shows the correct classification efficiencies for  tau hadronic decay final states  as a function of the \ECAL square cell sizes. For example, plotted values for 5\,mm cell size at \rootSGeV{100} are the same as the bold numbers in \Table{tab:TauSelExample}.
+
+
 
 
 \begin{figure}[htbp]
@@ -428,28 +474,29 @@ The leptonic decay  correct reconstruction efficiency is not used as a metric as
   \label{fig:tauDecayLegend}
 \end{subfigure}
 \caption[The correct classification efficiency for  tau hadronic decay final states  as a function of the \ECAL square cell sizes]
-{
- The correct classification efficiencies for  tau hadronic decay final states  as a function of the \ECAL square cell sizes, using the \ILD detector model with \sqrtS = 100, 200, 500 and 1000\,GeV. \FIGURE{fig:tauDecayMode2}, ~\ref{fig:tauDecayMode3}, ~\ref{fig:tauDecayMode3}, ~\ref{fig:tauDecayMode4},  and ~\ref{fig:tauDecayMode5} show the  \decayPionShort,  \decayRhoShortest, \decayAiPhotonShortest, \decayAiPionShortest, \decayThreePionPhotonShort decay modes, respectively.}
+{ The correct classification efficiencies for  tau hadronic decay final states  as a function of the \ECAL square cell sizes for a) \decayPionShort decay mode, b) \decayRhoShortest decay mode, c) \decayAiPhotonShortest decay mode, d) \decayAiPionShortest decay mode, and e) \decayThreePionPhotonShort decay mode. The legend is shown in f). All plots are produced using  the \ILD detector model with \sqrtS = 100, 200, 500 and 1000\,GeV.}
 \label{fig:TauPionEfficiency}
 \end{figure}
 
 
 \subsection{Tau hadronic decay correct classification efficiency}
 
-There are two reasons for constructing a single parameter for the overall Tau decay efficiency. First is that multivariate classifier is trained to optimised for the overall classification efficiency. Second is that it is easier to compare the impact of different detector models and different \sqrtS. The choice of the hadronic decay  is because reconstructing hadronic decays is sensitive to the \ECAL cell sizes, which is relevant for this study.
+There are two reasons for constructing a single parameter for the overall Tau decay efficiency. Firstly the multivariate classifier is trained to optimised to achieve the best the overall classification efficiency. Secondly it is easier to compare the impact of different detector models and different \sqrtS. The choice of neglecting the tau leptonic  decay  is because reconstructing hadronic decays is sensitive to the \ECAL cell sizes, which is relevant for this study.
 
-The constructed  Tau hadronic decay correct classification efficiency, \tauHad, is a weighted classification efficiency for all hadronic decay modes:
+The constructed tau hadronic decay correct classification efficiency, \tauHad, is a weighted classification efficiency for all hadronic decay modes:
 \begin{equation}
 \label{eq:had}
 \tauHad = \frac{\sum_{i}^5 {Br}_{i}\varepsilon_{i}}{\sum_{i}^5 {Br}_{i}}  \,,
 \end{equation}
-where $Br_{i}$ is the branching fraction of the hadronic decay mode $i$  after the generator level cut (\Section{sec:tauPreSel}). $\varepsilon_{i}$ is the correct reconstruction efficiency of the decay mode $i$, and $i$ is summing over five tau hadronic decay modes.
+where $Br_{i}$ is the branching fraction of the hadronic decay mode $i$  after the generator level cut (\Section{sec:tauPreSel}); $\varepsilon_{i}$ is the correct reconstruction efficiency of the decay mode $i$; and $i$ is summing over five tau hadronic decay modes.
 
-\FIGURE{fig:TauHadronicEfficiency} shows \tauHad as a function of \ECAL cell sizes with different \sqrtS. The general trend for the \tauHad is that \tauHad decreases with increase of \sqrtS and increase of \ECAL cell sizes for the same reasons stated in the previous section. As the \sqrtS increases, tau decay products are boosted and it is challenging to separate identical decay products. Similarly,  increasing \ECAL cell sizes makes particle separation more difficult.
+\FIGURE{fig:TauHadronicEfficiency} shows \tauHad as a function of \ECAL cell sizes with increasing centre-of-mass energies. The general trend for the \tauHad is that \tauHad decreases with increase of \sqrtS and increase of \ECAL cell sizes for the same reasons stated in the previous section. 
+
+%As the \sqrtS increases, tau decay products are boosted and it is challenging to separate identical decay products. Similarly,  increasing \ECAL cell sizes makes particle separation more difficult.
 
 For \tauHad at \rootSGeV{100}, the efficiency decreases from 94\% at 3\,mm cell size, to 91\% at 20\,mm cell size. The decrease is approximately proportional to the increase in the cell size.
 
-For \tauHad at \rootSGeV{200}, the efficiency decreases from 94\% at 3\,mm cell size, to 86\% at 20\,mm cell size.
+For \tauHad at \rootSGeV{200}, the efficiency decreases from 94\% at 3\,mm cell size, to 86\% for a \ECAL cell size of  20\,mm.
 %There is a large decrease from 15\,mm to 20\,mm cell size.
 
 For \tauHad at \rootSGeV{500}, the efficiency decreases from 92\% at 3\,mm cell size, to 78\% at 20\,mm cell size. Most significant decrease occurs at this \sqrtS.
@@ -457,20 +504,20 @@ For \tauHad at \rootSGeV{500}, the efficiency decreases from 92\% at 3\,mm cell 
 For \tauHad at \rootSGeV{1000}, the efficiency decreases from 85\% at 3\,mm cell size, to 75\% at 20\,mm cell size.
 %From 10\,mm cell size onwards, the \tauHad decrease slows down.
 
-The increase in \ECAL cell sizes has a larger impact on high \sqrtS. With decay products spatially close at high \sqrtS, it is more beneficial to have a smaller \ECAL cell size to reconstruct individual particle.
+The increase in \ECAL cell sizes has a larger impact at high centre-of-mass energies. With decay products spatially close at high centre-of-mass energies, it is more beneficial to have a smaller \ECAL cell size to reconstruct individual particle.
 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
-\includegraphics[width=.45\textwidth]{tau/plots3/hadronicEff.pdf}
-\caption[The tau hadronic decay efficiency as a function of  the \ECAL cell sizes at different \sqrtS with the nominal \ILD detector model.]
-{The tau hadronic decay efficiency, \tauHad, as a function of  the \ECAL cell sizes at different \sqrtS with the nominal \ILD detector model. The blue, orange, green and red lines are representing the \sqrtS = 100, 200, 500 and 1000\,GeV respectively.}
+\includegraphics[width=.85\textwidth]{tau/plots3/hadronicEff.pdf}
+\caption[The tau hadronic decay efficiency as a function of  the \ECAL cell sizes at different \sqrtS with the \ILD detector model.]
+{The tau hadronic decay efficiency, \tauHad, as a function of  the \ECAL cell sizes at different \sqrtS with the \ILD detector model. The blue, orange, green and red lines are representing the analysis at \sqrtS = 100, 200, 500 and 1000\,GeV respectively.}
 \label{fig:TauHadronicEfficiency}
 \end{figure}
 
 
-\section{Separate \PHiggs from \PZ with tau pair decay}
+\section{Separating \PHiggs from \PZ with tau pair decay}
 \label{sec:tauHZ}
-\PHiggs can be separated from  \PZ using  tau pair decay channel.  The difference in the spin of the boson reflects in the different polarisation correlation of the tau pair. By extracting the polarisation correlation, parent bosons can be separated. A proof-of-principle analysis is presented to demonstrate the physics usage of the tau decay mode classification, motivated by theoretical studies such as in \cite{Bullock:1991my}. The theoretical motivation is described in \Section{sec:theoryTauPair}. The subsequent sections discuss the ability to reconstruct the polarisation correlation of the \PZ using tau pair decay, and to match with the truth information.
+\PHiggs can be separated from  \PZ using  tau pair decay channel.  The difference in the spin of the boson reflects in the different polarisation correlation of the tau pair. By extracting the polarisation correlation, parent bosons can be separated. A proof-of-principle analysis is presented to demonstrate the usage of the tau decay mode classification, motivated by theoretical studies such as in \cite{Bullock:1991my}. The theoretical motivation is described in \Section{sec:theoryTauPair}. The subsequent sections discuss the ability to reconstruct the polarisation correlation of the \PZ using tau pair decay, and to match with the truth information.
 
 The analysis largely follows the same procedure for the tau decay mode classification. Differences are highlighted in sections below.
 
@@ -478,19 +525,19 @@ The channel is \HepProcess{\Pep \Pem \to \PZ \PZ}, where one \PZ decays hadronic
 
 \subsection{Event pre-selection}
 
-Same seven tau decay modes in \Section{sec:tauDecayModes} are studied. The \tauToPion decay mode is used to demonstrate tau pair polarisation correlation.
+The same seven tau decay modes in \Section{sec:tauDecayModes} are studied. The \tauToPion decay mode is selected to demonstrate tau pair polarisation correlation, and to complete the proof-of-principle analysis of \PHiggs / \PZ separation with tau pair decay channel.
 
-The event pre-selection is similar to that in \Section{sec:tauPreSel}. The cut on the visible energy of decay products is not used because a large fraction of \ZToTauTau events where \tauToPion have two low-energy \Ppipm. Therefore, the cut on the visible energy of decay products would bias the distribution.
+The event pre-selection is similar to that in \Section{sec:tauPreSel}. The cut on the visible energy of decay products is not used, because a large fraction of \ZToTauTau events, where \tauToPion, have two low-energy charged pions. Therefore, the cut on the visible energy of decay products would bias the distribution.
 
 
-\subsection{Identify tau pairs}
+\subsection{Identifying tau pairs}
 
-The final state of \HepProcess{\Pep \Pem \to \PZ \PZ} channel contains two tau leptons and two quark jets. Therefore, tau decay products can either found by direct tau searching, or by finding two jets and working out the recoil. If a tau lepton decays to a few particles, then the direct tau searching would work. If a tau lepton decays to many particles, finding tau decay products as a jet has a better performance. Here two approaches are combined for the best tau pair identification.
+The final state of \HepProcess{\Pep \Pem \to \PZ \PZ} channel contains two tau leptons and two quark jets. Therefore, tau decay products can either be found by direct tau searching, or by finding two jets and assigning the recoil momenta to the two tau system. If a tau lepton decays into a few particles, then the direct tau searching would work better. If a tau lepton decays into many particles, finding tau decay products as a jet has a better performance, as jet clustering works better with more particles. Hence, two approaches are combined for the best tau pair identification.
 
 \subsubsection{Direct tau search}
-Tau finder processer, \BonoTauFinder, is developed by the author, which is a modified version from the one in \Section{sec:doubleHiggsBonoTauFinder}. The basic idea is to find tau decay products consistent with decay topologies, and require the decay products to be isolated from rest of particles in an event. Parameters chosen are loose to find as many as possible tau candidates. The filtering of the candidates is via kinematic constraints.
-
-The modified \BonoTauFinder works as following. Low \pT are not considered. A seed particle is chosen and a search cone is formed around the seed, which requires one or three tracks with the search cone invariant mass less than 3\,GeV. The isolation criteria states that the opening angle between the search cone  and the $2^{nd}$ closest track is larger than 0.6\,rad. If all criterion are satisfied,  the search cone with the tau seed is identified as a tau lepton.
+Tau finder processer, \BonoTauFinder is a modified version of the one in \Section{sec:doubleHiggsBonoTauFinder}. The basic idea is to find tau decay products consistent with decay topologies, and requires the tau  decay products to be isolated from the rest of the particles in an event. Parameters chosen are set to find as many as possible tau candidates. 
+%The filtering of the candidates is via kinematic constraints.
+The modified \BonoTauFinder works as following. Particles with transverse momentum less than 0.5\,GeV are not considered. A seed particle is chosen and a search cone is formed around the seed, which requires one or three tracks with the invariant mass  of all particles inside the search cone less than 3\,GeV. The isolation criteria states that the opening angle between the search cone  and the $2^{nd}$ closest track is larger than 0.6\,rad. If the criteria is satisfied,  the search cone with the tau seed is identified as a tau lepton.
 
 \begin{table}[!htbp]
 \begin{tabular}{lr}
@@ -498,11 +545,11 @@ The modified \BonoTauFinder works as following. Low \pT are not considered. A se
 \hline
 Modified \BonoTauFinder  & Selection \\
 \hline
-Veto low \pT (GeV) &  $\pT < 0.5$\\
-Seed particle (GeV) & $\pT > 1$ \\
-Maximum search cone opening angle (rad) & $\theta_S \leqslant \cos^{-1}(0.99)$\\
-Tau candidate rejection & $N_{X^+} \neq 1,3$, $m_{PFO} > 3$   \\
-Isolation (rad)& $\theta_{cone,2^{nd}X^+} > 0.6$\\
+Veto low \pT &  $\pT < 0.5$\,GeV\\
+Seed particle & $\pT > 1$\,GeV \\
+Maximum search cone opening angle  & $\theta_S \leqslant \cos^{-1}(0.99)$\\
+Tau candidate rejection & $N_{X^+} \neq 1,3$, $m_{PFO} > 3$\,GeV   \\
+Isolation & $\theta_{cone,2^{nd}X^+} > 0.6$\,rad\\
 \hline
 \hline
 \end{tabular}
@@ -513,31 +560,29 @@ Isolation (rad)& $\theta_{cone,2^{nd}X^+} > 0.6$\\
 
 \subsubsection{Jet clustering}
 
-Tau hadronically decay can be also identified as a small jet. Durham algorithm \cite{Catani:1991hj} was used to jet clustering, also known as \ee \kt algorithm. (see \Section{sec:pandoraJetDurham}). The jet algorithm runs in the exclusive mode to find four jets.
+Tau hadronically decay can be also identified as a small jet. The Durham algorithm \cite{Catani:1991hj} was used to jet clustering, also known as the \ee \kt algorithm. (see \Section{sec:pandoraJetDurham}). The jet algorithm runs in the exclusive mode to find four jets.
 
 \subsubsection{Select tau candidates}
 
-The best tau pair candidates are selected using kinematic constraints. Half of \sqrtS is in the \PZ. The invariant mass of two quarks from \PZ should be close to \PZ mass. Therefore, the minimisation function is
+The best tau pair candidates are selected using kinematic constraints. In the \HepProcess{\Pep \Pem \to \PZ \PZ}, the energy of the \PZ is half of the centre-of-mass energy. The invariant mass of two quarks from \PZ should be close to \PZ mass. Therefore, the minimisation function is
 \begin{equation}
 \chi^2 = \frac{\parenths{m_{\Pquark\Pquark} - m_{\PZ}}^2}{\sigma_{m_{\Pquark\Pquark}}^2} + \frac{\parenths{E_{\Pquark\Pquark} - \frac{\sqrtS}{2}}^2}{\sigma_{E_{\Pquark\Pquark}}^2},
 \label{eq:tauMinimiser}
 \end{equation}
-where $m_{\PZ}$ is the mass of \PZ from reference \cite{Agashe:2014kda}. $\sigma_{m_{\Pquark\Pquark}}$ and $\sigma_{E_{\Pquark\Pquark}}$ are the reconstructed resolution of mass and energy of the \PZ, respectively.  $m_{\Pquark\Pquark}$ and  $E_{\Pquark\Pquark}$ are defined differently for the direct tau searching and the jet clustering method. For the direct tau search method, $m_{\Pquark\Pquark}$ and  $E_{\Pquark\Pquark}$ are defined as the recoil against two tau candidates, assuming collision at \sqrtS, iterating over all  tau candidates. For the jet clustering method,  $m_{\Pquark\Pquark}$ and  $E_{\Pquark\Pquark}$ are defined as the mass and energy of two jets, iterating over all possible jets.
+where $m_{\PZ}$ is the mass of \PZ from reference \cite{Agashe:2014kda}; $\sigma_{m_{\Pquark\Pquark}}$ and $\sigma_{E_{\Pquark\Pquark}}$ are the reconstructed mass resolution  and energy resolution of the \PZ, respectively; and $m_{\Pquark\Pquark}$ and  $E_{\Pquark\Pquark}$ are defined differently for the direct tau searching and the jet clustering method. For the direct tau search method, $m_{\Pquark\Pquark}$ and  $E_{\Pquark\Pquark}$ are defined as the recoil momenta against two tau candidates by iterating over all  tau candidates, assuming collision at \sqrtS. For the jet clustering method,  $m_{\Pquark\Pquark}$ and  $E_{\Pquark\Pquark}$ are defined as the mass and energy of two jets by iterating over all possible jets.
 
-The $\chi^2$ minimiser is repeated for the direct tau search and the jet clustering method. Each method produces a best tau pair candidate. Hence two tau pair candidates are obtained. To find the over best tau candidate, a set of conditions is used. If best tau pair candidates for both methods satisfy the kinematic constraint:
+The $\chi^2$ minimiser is repeated for the direct tau search method and the jet clustering method. Each method choose a best tau pair candidate with a smallest $\chi^2$. Hence two tau pair candidates with $\chi^2$ are obtained. To find the overall best tau candidate, a set of conditions is used. If the best tau pair candidate for both methods satisfies the kinematic constraint:
 \begin{equation}
 \absOf{m_{\Pquark\Pquark} - m_{\PZ}} < \sigma_{m_{\Pquark\Pquark}}\ , \absOf{E_{\Pquark\Pquark} - \frac{\sqrtS}{2}} < \sigma_{E_{\Pquark\Pquark}},
 \label{eq:tauMinimiserSelector}
 \end{equation}
-the pair with smallest $\chi^2$ is chosen.
+the  tau pair candidate  with smallest $\chi^2$ is selected. Otherwise, if only one candidate satisfies the constraint in \Equation{eq:tauMinimiserSelector}, that candidate is chosen. If none of the candidates satisfies the constraint, and if one jet from the jet clustering is close to the beam pipe and there are exactly two tau leptons from \BonoTauFinder, then these two tau leptons are chosen. This is due to the fact that if one jet is close to the beam pipe, it is likely that some particles close to the jet are undetected, which leads to a failure in the kinematic constraint. Lastly, if all conditions above are not satisfied, two smallest jets by the number of \PFOs are chosen to be tau leptons decay products.
 
-If only one candidate satisfies the constraint in \Equation{eq:tauMinimiserSelector}, that candidate is chosen. If none of the candidates satisfies the constraint, and if one jet from the jet clustering is close to the beam pipe and there are exactly two tau leptons from \BonoTauFinder, then these two tau leptons are chosen. This is because if one jet is close to the beam pipe, it is likely that some particles are undetected, which leads to a failure in the kinematic constraint. Lastly, if all conditions above are not satisfied, two smallest jets by number of \PFOs are chosen to be tau leptons decay products.
+\subsection{Boost to \PZ decay rest frame}
 
-\subsubsection{Boost to \PZ decay rest frame}
+The previous section describes the method to identify the tau pair decay products.  To use the tau decay mode classifier, it is necessary to know the tau lepton energy. For the channel \HepProcess{\PZ \to \APtauon \Ptauon}, the  energy of the tau lepton can be calculated in \PZ decay rest frame, which is half of the \PZ energy in the rest frame. The next step is to calculate the energies of tau decay products in the rest frame. The decay products are boosted to the \PZ decay rest frame, which requires the \fourMomentum of the \PZ.
 
-To use the tau decay mode classifier, it is necessary to know the tau lepton energy before decaying. For the channel \PZ decaying to a tau pair, the tau energy can be calculated in \PZ decay rest frame, which is half of the \PZ energy. To calculate the energies of tau decay products in the rest frame, the decay products need to be boosted to the rest frame, which requires the \fourMomentum of the \PZ, the tau pair system.
-
-The previous section describes the method to identify the tau pair decay products. The \fourMomentum of the \PZ decaying to tau pair is calculated from the recoil of non tau decay products:
+The \fourMomentum of the \PZ decaying to tau pair is calculated from the recoil momenta of non tau-decay-products:
 \begin{equation}
 p^{\mu}_{\Ptau\Ptau} =
   \begin{pmatrix}
@@ -545,26 +590,28 @@ p^{\mu}_{\Ptau\Ptau} =
   \end{pmatrix}
   - \sum_{i}^{non-\Ptau}p^{\mu}_{i},
 \end{equation}
-where $\theta_{beam}$ is the beam crossing angle. Index $i$ is summing over all non tau decay \PFOs. Extra kinematic constraint fixes the energy of the $p^{\mu}_{\Ptau\Ptau}$ to be half of \sqrtS:
+where $\theta_{beam}$ is the beam crossing angle and index $i$ is summing over all non-tau-decay-product \PFOs. Extra kinematic constraint fixes the energy of the $p^{\mu}_{\Ptau\Ptau}$ to be half of \sqrtS:
 \begin{equation}
 p^{\mu}_{\Ptau\Ptau,correct} \equiv p^{\mu}_{\Ptau\Ptau} \times \frac{\frac{1}{2}\sqrtS}{E_{\Ptau\Ptau}}.
 \end{equation}
-$p^{\mu}_{\Ptau\Ptau,correct} $ is used as the boost vector to boost tau decay products in the rest frame. The calculation of the variables for the MVA classifier are preformed in the rest frame.
+$p^{\mu}_{\Ptau\Ptau,correct} $ is used as the boost vector to boost tau decay products in the rest frame. The calculation of the variables for the MVA classifier are performed in the \PZ decay rest frame.
 
-\subsection{Variables}
+\subsection{Variables used in the MVA}
 
-Variables for the MVA classifier are largely the same as the ones in \Table{tab:tauVaraibles}. Variables regarding EM shower profiles, calorimeter hit information and track information are not used (last three rows in \Table{tab:tauVaraibles}) as the study focus on the overall tau decay mode separation. Also for the computational reason, it was not feasible to use these variables for the MVA. \Pep and \Ppiplus separation could be improved if these extra variables are included.
+Variables used in  the MVA classifier are a subset as the ones used in the previous analysis, listed in \Table{tab:tauVaraibles}. Variables regarding EM shower profiles, calorimeter hit information and track information are not used (last three rows in \Table{tab:tauVaraibles}) as the study focuses on the overall tau decay mode separation.
+
+%Also for the computational reason, it was not feasible to use these variables for the MVA. \Pep and \Ppiplus separation could be improved if these extra variables are included.
 
 
 \subsection{Multivariate analysis}
 
-Half of the sample is used to train the multivariate classifier,  which follows the procedure in  \Section{sec:tauMVA}. In the applying stage, \tauToPion decay mode is selected with additional criteria that at least one \Ppipm is identified in the tau decay products.
+Half of the sample is used to train the multivariate classifier,  which follows the procedure in  \Section{sec:tauMVA}. The same classifier as in the previous analysis  is used .   In the classifier applying stage, \tauToPion decay mode is selected with an additional criteria that at least one \Ppipm is identified in the tau decay products.
 
 \subsection{Result}
 
-\FIGURE{fig:TauSpin2D} shows the two-dimensional plot of tau pair polarisation correlations from \PZ decay, using \tauToPion decay mode. The energy fractions are the appreciate kinematic variables, motivated in \Section{sec:theoryTauPair}. \FIGURE{fig:TauSpin2DMC} shows the distribution using the truth information. \FIGURE{fig:TauSpin2Dreco} shows the distribution using full detector simulation. In the \ZToTauTau decays, an energetic \Ppipm is likely to be associated with an energetic \Ppipm, shown in both \Figure{fig:TauSpin2DMC} and \Figure{fig:TauSpin2Dreco}. Comparing two figures, some events in the top right quadrant, resembling both \Ppipm being energetic, are not reconstructed correctly. This is due to the incorrect identification of the tau pair decay products.
+\FIGURE{fig:TauSpin2D} shows the two-dimensional plot of tau pair polarisation correlations from \PZ decay,  using \tauToPion decay mode, with \eeZZ channel where one \PZ decays to a tau pair and the other \PZ decays hadronically. The energy fractions are the appropriate kinematic variables, motivated in \Section{sec:theoryTauPair}. \FIGURE{fig:TauSpin2DMC} shows the distribution obtained with the MC particles. \FIGURE{fig:TauSpin2Dreco} shows the distribution using full detector simulation. In the \ZToTauTau decays, an energetic \Ppipm is likely to be associated with an energetic \Ppipm, shown in both \Figure{fig:TauSpin2DMC} and \Figure{fig:TauSpin2Dreco}. Comparing the two figures, some events in the top right quadrant, resembling both \Ppipm being energetic, are not reconstructed correctly. This is due to the incorrect identification of the tau pair decay products.
 
-This proof-of-principle analysis shows the tau polarisation correlations with \ZToTauTau decay where \tauToPion can be observed. With a similar study of \HiggsToTauTau, such  the tau polarisation correlations can be used to sperate \PHiggs from \PZ.
+This proof-of-principle analysis shows the tau polarisation correlations with \ZToTauTau decay where \tauToPion can be observed. With a similar study of \HiggsToTauTau,  the tau polarisation correlations can be used to separate \PHiggs from \PZ.
 
 
 \begin{figure}[htbp]
@@ -576,11 +623,11 @@ This proof-of-principle analysis shows the tau polarisation correlations with \Z
 \end{subfigure}
 \begin{subfigure}[b]{0.45\textwidth}
   \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2Dreco}
-  \caption{Simulated}
+  \caption{Reconstructed}
   \label{fig:TauSpin2Dreco}
 \end{subfigure}
 \caption
-{Two-dimensional plot of tau pair polarisation correlations from \PZ decay, using \tauToPion decay mode.}
+{Two-dimensional plot of tau pair polarisation correlations from \PZ decay, using \tauToPion decay mode, for a) MC particles, and b) simulated and reconstructed particles.}
 \label{fig:TauSpin2D}
 \end{figure}
 \begin{comment}
