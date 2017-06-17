@@ -329,10 +329,11 @@ The flavour tagging is performed after the initial jet reconstruction, and all t
  % The selection efficiency of b-jets and c-jets with training samples is shown in \Figure{fig:doubleHiggs1.4Btag}.
 \end{comment}
 
-\subsection{Event shape variables}
-\label{sec:pandoraEvtShape}
-% ATTN used in tau chapter
 
+%\subsection{Event shape variables}
+%\label{sec:pandoraEvtShape}
+% ATTN used in tau chapter
+\begin{comment}
 Event shape variables are some useful global variables to describe the shape of the event, for example whether it is back-to-back, or homogenous in the solid angle.
 
 The classical event shape thrust\cite{PhysRevLett.39.1587}, is defined as
@@ -340,6 +341,7 @@ The classical event shape thrust\cite{PhysRevLett.39.1587}, is defined as
 T = \max_{\hat{t}}\!\frac{\sum_{i}\absOf{\hat{t}\!\cdot\!\vec{p_{i}}}}{\sum_{i}\absOf{\vec{p_{i}}}}
 \end{equation}
 where $\vec{p_{i}}$ is the momentum vector of the particle $i$. Summation is over all particles in the event. Thrust axis, $\hat{t}$, is a unit vector. (Principle) Thrust value, $T$, is 1 for a perfect pencillike back-to-back two-jet event, and 0.5 for a perfect spherical event. The thrust value is useful in picking out back-to-back two-jet event. Thrust axis is useful to separate each jet in a back-to-back two-jet event.
+\end{comment}
 \begin{comment}
 A related variable , sphericity is  derived from the sphericity tensor \cite{PhysRevLett.35.1609}. The sphericity tensor is  defined as
 \begin{equation}
@@ -350,7 +352,7 @@ where $\vec{p_{i}}$ is the momentum vector of the particle $i$. Summation is ove
 \sphericity = \frac{3}{2}\parenths{\lambda_{1} \! + \! \lambda_{2}}.
 \end{equation}
 \sphericity, is 0 for a perfect pencil-like back-to-back two-jet event, and 1 for a perfect spherically symmetric event.
-\end{comment}
+
 Aplanarity is another useful event shape variable that distinguishes spherical symmetrical events from planar and linear events. The definition is
 \begin{equation}
 S = \frac{3}{2}\parenths{\lambda_{1}},
@@ -358,7 +360,7 @@ S = \frac{3}{2}\parenths{\lambda_{1}},
 where $\lambda_{1}$ is the largest eigenvalue in the diagonalised sphericity tensor, $\bm{S^{\alpha\beta}}$.
 
 
-\begin{comment}
+
 \section{Miscellaneous}
 
 An event in a collider experiment refers to one collision and the subsequent energy deposition in the detector. An event corresponds to a certain type of physics process.

@@ -31,21 +31,51 @@ This chapter is organised as follows. Firstly, the analysis chain to identify ta
 %The impact of the \ECAL transverse spatial resolution on the tau decay classification is demonstrated as well.
 
 
+
 \section{Overview of the analysis}
 
-The study of the tau final state classification in the context for the  \ECAL optimisation allows the analysis to discard reconstruction and detector issue that do not vary with the \ECAL design. For example, the early photon conversion that happens in the tracking detector would complicate the event topology. But since it is affected by the tracker design, it can be ignored in this analysis. \SECTION{sec:tauSim}  and \Section{sec:tauPreSel} discuss the pre-selection cuts to choose the signal samples and events for this analysis.
+The analysis starts with defining the samples for study in \Section{sec:tauDecayModes}. The seven major tau lepton decay modes are chosen for the classification. The simulation and reconstruction of these tau lepton decay are described in \Section{sec:tauSim}.  Pre-selection of the events, discussed in \Section{sec:tauPreSel}, are such that the reconstruction and detector effect, which do not vary with the \ECAL cell sizes, are not included in this analysis. After defining discriminative variables in \Section{sec:tauVar}, the classification is performed with a multivariate classifier. Since one decay mode needs to be classified into one of the seven decay modes, a multiclass classicisation is used to allow simultaneous classification between  multiple final states, which is presented in \Section{sec:tauMVA}.
 
-The classification is performed with a multivariate classifier. Discriminating variables are calculated before feeding into the classifier.  A multiclass classicisation is used to allow simultaneous classification between  multiple final states, described in \Section{}.
+The classification of the tau lepton decay modes are then  repeated for different energies of tau lepton decay to access the impact of the energy on classification. The classification is also used to study the effect of the \ECAL cell size on the classification performance. The impact of the tau energy and the \ECAL cell size on the classification performance is discussed in \Section{sec:tauECAL}. Lastly, the classification is utilised to demonstrate the ability to separate \PHiggs from \PZ using  tau pair decay channel in a proof-of-principle analysis, described in the \Section{sec:tauHZ}.
 
-This classification is repeated for different energies of tau lepton decay to access the impact of energy on classification. The impact of the \ECAL design is studied afterwards, where the \ECAL square cell size is varied. An overall tau hadronic decay classification efficiency is constructed to allow direct and easy comparison between different detector design and different energies of the tau decay.
+% The difference in the spin of the boson reflects in the different spin correlation of the tau pair. By extracting the spin correlation, parent bosons can be separated.
+%This classification is repeated for different energies of tau lepton decay to access the impact of energy on classification. The impact of the \ECAL design is studied afterwards, where the \ECAL square cell size is varied. An overall tau hadronic decay classification efficiency is constructed to allow direct and easy comparison between different detector design and different energies of the tau decay.
 
-A proof-of-principle analysis to demonstrate the ability to identify \PHiggs from \PZ using  tau pair decay channel is presented in the \Section{}. The difference in the spin of the boson reflects in the different spin correlation of the tau pair. By extracting the spin correlation, parent bosons can be separated.
+% The study of the tau final state classification in the context for the  \ECAL optimisation allows the analysis to discard reconstruction and detector issue that do not vary with the \ECAL design. For example, the early photon conversion that happens in the tracking detector would complicate the event topology. But since it is affected by the tracker design, it can be ignored in this analysis. \SECTION{sec:tauSim}  and \Section{sec:tauPreSel} discuss the pre-selection cuts to choose the signal samples and events for this analysis.
 
-The follow sections on the analysis use the a 50\,GeV tau lepton decaying sample, reconstructed with nominal the \ILD detector model.
+%The classification is performed with a multivariate classifier. Discriminating variables are calculated before feeding into the classifier.  A multiclass classicisation is used to allow simultaneous classification between  multiple final states, described in \Section{}.
 
-\section{Decay modes}
+
+%A proof-of-principle analysis to demonstrate the ability to identify \PHiggs from \PZ using  tau pair decay channel is presented in the \Section{}. The difference in the spin of the boson reflects in the different spin correlation of the tau pair. By extracting the spin correlation, parent bosons can be separated.
+
+%The follow sections on the analysis use the a 50\,GeV tau lepton decaying sample, reconstructed with nominal the \ILD detector model.
+
+\section{Samples for the analysis}
 \label{sec:tauDecayModes}
-Tau lepton decays into a numerous number of final states. To study the predominant effect of the tau lepton decays, decay modes with branching ratio above 1\% are studied. This results in seven tau lepton decay modes. Their branching ratios, along with decay mode and final states are  shown in \Table{tab:TauDecayMode}, which in total covers 92.58\,\% tau decay. The most difficult final states to separate are \decayRhoFinalStateShort and \decayAiPhotonFinalStateShort, where photons from boosted \Ppizero are very challenging to reconstruct correctly.
+
+%\section{Select single tau decay}
+The sample with simplest tau lepton decay in a \ee collider is chosen: \eeToTauTau. An example of the simulated \eeToTauTau event is shown in \Figure{fig:tauEvtDsp}. The \eeToTauTau channel contains two tau leptons travelling in opposite directions. Since the tau decay final state separation is applicable to a single tau lepton, particles in one event are divided into two collections. Each collection corresponds  to the decay products of one tau lepton.
+
+The principle thrust axis vector is used to separation particles into two collections. Two collections are obtained based on the sign of the scalar product between the principle thrust axis vector  and the particle momentum vector. The classical event shape thrust, $T$,  \cite{PhysRevLett.39.1587}, is defined as
+\begin{equation}
+T = \max_{\hat{t}}\!\frac{\sum_{i}\absOf{\hat{t}\!\cdot\!\vec{p_{i}}}}{\sum_{i}\absOf{\vec{p_{i}}}}
+\end{equation}
+where $\vec{p_{i}}$ is the momentum vector of the particle $i$;   $\hat{t}$, is a unit principle thrust axis vector; and the summation is over all particles in an event. Thrust axis is useful to separate each jet in a back-to-back two-jet event.
+%Thrust value, $T$, is 1 for a perfect pencillike back-to-back two-jet event, and 0.5 for a perfect spherical event. The thrust value is useful in picking out back-to-back two-jet event.
+
+
+\begin{figure}[tbph]
+\centering
+\includegraphics[width=0.65\textwidth]{tau/tau_evt_dsp2}
+\caption{ An example event display of a simulated \eeToTauTau event using a \ILD detector model. The top half of the event is a tau lepton decaying into \decayRhoFinalStateShort final state and the bottom half of the event is a tau lepton decaying into  \decayThreePionPhotonShort final state. The purple lines are the tracks left by \Ppipm in the tracking detector. The purple clusters are the energy deposition by \Ppipm and the yellow clusters are the energy deposition by photon from \HepProcess{\Ppizero \to \Pphoton \Pphoton}. The blue region is the transverse cross section of the \ECAL barrel along the beam line direction.}
+\label{fig:tauEvtDsp}
+\end{figure}
+
+\subsection{Tau lepton decay modes}
+
+Tau lepton decays into a numerous number of final states. To study the predominant effect of the tau lepton decays, decay modes with branching ratio above 2\% are studied. This results in seven tau lepton decay modes. Their branching ratios, along with decay modes and final states are  shown in \Table{tab:TauDecayMode}. The seven tau lepton decay modes, which cover 92.58\,\% of all tau decay, are chosen to study in this analysis
+
+% The most difficult final states to separate are \decayRhoFinalStateShort and \decayAiPhotonFinalStateShort, where photons from boosted \Ppizero are very challenging to reconstruct correctly.
 
 \begin{table}[htbp]\centering
 \smallskip
@@ -54,13 +84,13 @@ Tau lepton decays into a numerous number of final states. To study the predomina
 \hline
 Decay modes & Detectable final states & Branching ratio\\
 \hline
-\decayElectron   &  \decayElectronShort  & 17.83$\pm$0.04   \\
-\decayMuon &	\decayMuonShort & 17.41$\pm$0.04  \\
-\decayPion  &   \decayPionShort	& 10.83$\pm$0.06   \\
-\decayRho   & \decayRhoFinalStateShort& 25.52$\pm$0.09 \\
-\decayAi   & \decayAiPhotonFinalStateShort	& 9.30$\pm$0.11    \\
-\decayAi  &	\decayAiPionFinalStateShort    & 8.99$\pm$0.06  \\
-\decayThreePionPhoton  &	\decayThreePionPhotonShort    & 2.70$\pm$0.08  \\
+\decayElectron   &  \decayElectronShort  & $17.83\%_{\pm0.04\%}$   \\
+\decayMuon &	\decayMuonShort & $17.41\%_{\pm0.04}$  \\
+\decayPion  &   \decayPionShort	& $10.83\%_{\pm0.06}$   \\
+\decayRho   & \decayRhoFinalStateShort& $25.52\%_{\pm0.09\%}$ \\
+\decayAi   & \decayAiPhotonFinalStateShort	& $9.30\%_{\pm0.11\%}$    \\
+\decayAi  &	\decayAiPionFinalStateShort    & $8.99\%_{\pm0.06\%}$  \\
+\decayThreePionPhoton  &	\decayThreePionPhotonShort    & $2.70\%_{\pm0.08\%}$  \\
 \hline
 \hline
 \end{tabular}
@@ -72,17 +102,23 @@ Decay modes & Detectable final states & Branching ratio\\
 \section{Simulation and reconstruction}
 \label{sec:tauSim}
 
-\eeToTauTau channel is chosen to study the tau lepton decay mode classification, due to its the simplest channel for tau decay. The choice of the detector model for simulation is \ILD. The initial state radiation (ISR) and the beam induced background were not simulated, as they are not significant. These beam specific effects does not vary with the \ECAL design. Hence they are not simulated for the detector optimisation study. Another reason for not simulating ISR is that the energy of the tau lepton would not be a constant with the ISR contribution.
+Two million \eeToTauTau events are simulated and reconstructed. The \ILD detector model was used. As the study is aimed for optimisation study of the \ECAL cell sizes, the beam specific effects does not vary with the \ECAL cell sizes are not simulated.  These effects include the initial state radiation (ISR) and the beam induced background.
 
-Two million events were reconstructed with  \ilcsoft version v01-17-07 \cite{Gaede:82475} and \pandora version 3 \cite{Marshall:2015rfa}, where the photon reconstruction is described in \Chapter{chap:Photon}.
+
+The software used for simulation and reconstruction is described in \Chapter{chap:Reconstruction}. Events are reconstructed with  \ilcsoft version v01-17-07 \cite{Gaede:82475} and \pandora version 3 \cite{Marshall:2015rfa}, where the photon reconstruction is discussed in \Chapter{chap:Photon}.
 
 
 \section{Event pre-selection}
 \label{sec:tauPreSel}
 
+Since the analysis is aimed for the optimisation of the \ECAL cell sizes, pre-selection cuts that are not affected by the \ECAL cell sizes are used. These cuts also allow the analysis to focus on the events with clear topologies. The pre-selection cuts are listed in \Table{tab:tauPreSel}. The fraction of events passing each pre-selection cut for individual decay mode are listed in \Table{tab:tauPreSelEff}.
 
-Some events are very difficult or almost impossible to reconstruct correctly. This can happen if particles are in the forward beam pipe direction, where the forward calorimeters are not simulated due to computational limitations, or if particles carry too little energies to be more significant than noises. Another type of reconstruction failure is when a photon converts into an electron pair in the tracking systems. Instead of reconstructing as a photon, an electron pair is reconstructed, which  alters the event topology and decrease the classification efficiencies. One more issue is that for the \ILD detector model concept, the gap region between barrel part of the calorimeter and the end cap part causes a significant drop in the particle reconstruction efficiency. The \pandora particle reconstruction does not attempt to recover reconstruction in the gap region. These reconstruction and detector issues do not vary with change of the \ECAL design in the later optimisation study. Therefore, these un-reconstructible events are discarded at MC level from the analysis. The selection cuts are listed in \Table{tab:tauPreSel} and the selection efficiency of each cut is presented in \Table{tab:tauPreSelEff}.
+One of the pre-selection cuts is to demand that the event does not have photons converted to electron pairs in the tracking detector. These discarded events would have few photons and more electrons in the final states, which changes the topologies of the final states. Shown in \Table{tab:tauPreSelEff}, only decay modes with photons in the final states are affected by this cut, as expected.
 
+
+Another pre-selection cut is the total energy of the non-neutrinos tau decay products, $E_{vis,MC}$, > 5\,GeV, based on the truth information. If most energy of the tau lepton is carried by the neutrinos, it is difficult to identify the low-energy non-neutrino tau decay products. Hence these events with low energy of the non-neutrinos tau decay products are not used in the analysis. Decay modes with only one non-neutrino particle in the final states are mostly affected by this cut, indicated in \Table{tab:tauPreSelEff}.
+
+The last pre-selection cut is to avoid events with energy deposition in the gap region between barrel and the end cap part of the calorimeter. As the reconstruction   does not attempt to recover reconstruction in the gap region, threw is a significant drop in the particle reconstruction efficiency. The cut demands the absolute value of the polar angle of tau lepton,  $\absOf{\theta_{Z,MC}}$, based on the truth information, is between 0.3 and 0.6\,rad to be contained in the end cap region, or is between 0.8 and 1.57 to be contained in the barrel region. All decay modes are affected almost equally by this cut, suggested by the numbers in \Table{tab:tauPreSelEff}.
 
 
 \begin{table}[htbp]\centering
@@ -92,18 +128,16 @@ Some events are very difficult or almost impossible to reconstruct correctly. Th
 \hline
 Cuts & Values\\
 \hline
-No photon early conversion & - \\
-Visible energy of decay products & $ E_{vis,MC} > 5\,GeV$ \\
-Polar angle acceptance & $0.6 > \absOf{\theta_{Z,MC}} > 0.3$ or $1.57 > \absOf{\theta_{Z,MC}} > 0.8$ \\
+\multicolumn{1}{L{0.4\textwidth}}{Photon conversion in the tracking detector}& No \\
+\multicolumn{1}{L{0.4\textwidth}}{Total energy of non-neutrino decay products} & $E_{vis,MC} > 5\,GeV$ \\
+Polar angle acceptance & \multicolumn{1}{R{0.5\textwidth}}{$0.6 > \absOf{\theta_{Z,MC}} > 0.3$ or $1.57 > \absOf{\theta_{Z,MC}} > 0.8$} \\
 \hline
 \hline
 \end{tabular}
 \caption[Pre-selection cuts for tau lepton decay final state classification.]
-{Pre-selection cuts for tau lepton decay final state classification.}
+{Pre-selection cuts for tau lepton decay modes classification.}
 \label{tab:tauPreSel}
 \end{table}
-
-The reason for no photon early conversion in the tracker has been stated above. The polar angle acceptance requires the MC tau lepton travelling to barrel or endcap only. The visible energy cut requires there is enough energy deposited in the calorimeter to have a proper reconstruction.   The visible energy of the MC tau lepton decay product is defined as the energy of the MC tau minus the energy of the MC tau neutrino. These cuts use MC truth information. Discarded events do not participate in the subsequent reinstruction and analysis.
 
 
 \begin{table}[htbp]\centering
@@ -111,102 +145,40 @@ The reason for no photon early conversion in the tracker has been stated above. 
 \begin{tabular}{ l r r r}
 \hline
 \hline
-Final state   & \multicolumn{1}{R{0.2\textwidth}}{No photon conversion} & \multicolumn{1}{R{0.2\textwidth}}{Visible energy acceptance} &\multicolumn{1}{R{0.2\textwidth}}{Polar angle acceptance} \\
+ \multicolumn{1}{R{0.2\textwidth}}{Detectable final state}   & \multicolumn{1}{R{0.25\textwidth}}{No photon conversion in the tracking detector} & \multicolumn{1}{R{0.25\textwidth}}{Total energy of non-neutrino decay products acceptance} &\multicolumn{1}{R{0.25\textwidth}}{Polar angle acceptance} \\
 \hline
-\decayElectronShort& 100.0 & 84.7& 66.2\\
-\decayMuonShort &100.0& 85.2&66.7\\
-\decayPionShort &100.0& 88.3&60.9\\
-\decayRhoFinalStateShort &77.1&76.9&61.9\\
-\decayAiPhotonFinalStateShort &61.3&61.2&50.5\\
-\decayAiPionFinalStateShort &100.0&100.0&78.0\\
-\decayThreePionPhotonShort &77.0&77.0&61.8\\
+\decayElectronShort& 100.0\% & 84.7\%& 66.2\%\\
+\decayMuonShort &100.0\%& 85.2\%&66.7\%\\
+\decayPionShort &100.0\%& 88.3\%&60.9\%\\
+\decayRhoFinalStateShort &77.1\%&76.9\%&61.9\%\\
+\decayAiPhotonFinalStateShort &61.3\%&61.2\%&50.5\%\\
+\decayAiPionFinalStateShort &100.0\%&100.0\%&78.0\%\\
+\decayThreePionPhotonShort &77.0\%&77.0\%&61.8\%\\
 \hline
 \hline
 \end{tabular}
-\caption[MC level pre-selection cut efficiencies for tau lepton decay final state classification.]
-{MC level pre-selection cut efficiencies for tau lepton decay final state classification in percentages. Cuts are presented in a ``flow'' fashion, where each column contains all the cuts in columns to its left.}
+\caption
+{The fraction of events passing each pre-selection cut for individual decay mode. Cuts are presented in a ``flow'' fashion, where each column contains all the cuts to its left.}
 \label{tab:tauPreSelEff}
 \end{table}
 
-The no photon early conversion cuts only effective against final states with \Ppizero, as \Ppizero decays to a photon pair. For final states with one \Ppizero, about 77\% events survived. For final states with two \Ppizero, about 61\% events survived, which is roughly $0.77^2$. For the visible angle acceptance, final states with only one particle are affected the most, whilst final states with more than one particles typically have more visible energies. The polar angle acceptance efficiencies depend on the final states, as light final states are boosted and more likely in the forward region.
+%The no photon early conversion cuts only effective against final states with \Ppizero, as \Ppizero decays to a photon pair. For final states with one \Ppizero, about 77\% events survived. For final states with two \Ppizero, about 61\% events survived, which is roughly $0.77^2$. For the visible angle acceptance, final states with only one particle are affected the most, whilst final states with more than one particles typically have more visible energies. The polar angle acceptance efficiencies depend on the final states, as light final states are boosted and more likely in the forward region.
 
 
 
 %An low visible energy event is discarded if the total energy of the tau lepton visible decay products is below 5\,GeV. Requirement of the tau decay in the barrel or the end cap part of the calorimeter is defined as the polar angle of the tau is $ 17.2\degree < |\theta_{Z}| < 34.4\degree$ or $ 45.8\degree < |\theta_{Z}| < 90\degree$.
 
 
-\section{Select single tau decay}
-
-The \eeToTauTau channel contains two tau leptons travelling in opposite directions. Since the tau decay final state separation is applicable to single tau, \PFOs in one event are divided into two collections, each corresponding to one tau. Separation of \PFOs uses the principle thrust axis vector, explained in the \Section{sec:pandoraEvtShape}, which is the axis that most \PFOs aligned to. Two collections are obtained based on the sign of the scalar product between the thrust axis and the \PFO momentum vector. An example of the simulated \eeToTauTau event is shown in \Figure{fig:tauEvtDsp}.
-
-\begin{figure}[tbph]
-\centering
-\includegraphics[width=0.45\textwidth]{tau/tau_evt_dsp2}
-\caption{ An example event display of simulated \eeToTauTau event. The top tau decay is \decayRhoFinalStateShort final state and the bottom is \decayThreePionPhotonShort final state. Purple clusters are \Ppipm and yellow clusters are photons.  Blue region is the transverse cross section of the \ECAL barrel, looking along the beam line direction.}
-\label{fig:tauEvtDsp}
-\end{figure}
 
 
 
-\section{Discriminative variables}
-
-\begin{figure}[htbp]
-\centering
-% \begin{center}/\end{center} takes some additional vertical space
-\begin{subfigure}[b]{0.45\textwidth}
- \includegraphics[width=\textwidth]{tau/var2/nCharge_100GeV_improved.pdf}
-  \caption{}
-  \label{fig:tauVarNCharge}
-\end{subfigure}
-\begin{subfigure}[b]{0.45\textwidth}
- \includegraphics[width=\textwidth]{tau/var2/nPhoton_100GeV_improved.pdf}
-  \caption{}
-  \label{fig:tauVarNPhoton}
-\end{subfigure}
-\begin{subfigure}[b]{0.45\textwidth}
- \includegraphics[width=\textwidth]{tau/var2/mVis_100GeV_improved_zoom.pdf}
-  \caption{}
-  \label{fig:tauVarMVis}
-\end{subfigure}
-\begin{subfigure}[b]{0.45\textwidth}
- \includegraphics[width=\textwidth]{tau/var2/mA1A1Fit_100GeV_improved_zoom.pdf}
-  \caption{}
-  \label{fig:tauVarMA1}
-\end{subfigure}
-
-\caption
-[Normalised distribution for selected variables.]
-{
-Normalised distribution for selected variables showing for seven final states, \decayElectronShort, \decayMuonShort, \decayPionShort, \decayRhoShort, \decayAiPhotonShort, \decayAiPionShort and \decayThreePionPhotonShort, separated using truth information. \FIGURE{fig:tauVarNCharge}, \Figure{fig:tauVarNPhoton}, \Figure{fig:tauVarMVis}, and \Figure{fig:tauVarMA1} show distributions for the number of tracks, the number of photons, the invariant mass of visible \PFOs, and the invariant mass of $a_1$ for \decayAiPhotonShort hypothesis test, respectively. The area for each final state is normalised to 1.
-}
-\label{fig:tauVar}
-\end{figure}
-
-Having pre-selected events, a set of discriminating variables are carefully developed for the multivariate analysis (MVA). The full list of variables are shown in \Table{tab:tauVaraibles}.
+\section{Variables used in the MVA}
+\label{sec:tauVar}
 
 
-\begin{table}[!htbp]\centering
-\begin{tabular}{lr}
-\hline
-\hline
-Category &  Variable \\
-\hline
-Number of \PFOs & \multicolumn{1}{R{0.6\textwidth}}{  ${N}_{\charge}$, ${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgg}$,  ${N}_{\Pgpm}$} \\
-Invariant mass &  \multicolumn{1}{R{0.6\textwidth}}{$m_{vis}$, $m_{\charge}$, $m_{\neutral}$, $m_{\Pgg}$, $m_{\Pgpm}$} \\
-Calorimetric info. &   \multicolumn{1}{R{0.6\textwidth}}{ $\% E_{\charge}$,  $\% E$ } \\
-Energy & \multicolumn{1}{R{0.6\textwidth}}{ $\tilde{E}_{vis}$,  $\tilde{E}_{\charge}$, $\tilde{E}_{\Pmu}$, $\tilde{E}_{\Pe}$, $\tilde{E}_{\Pgg}$,  $\tilde{E}_{\Pgpm}$} \\
-\decayRhoShort reconstruction & \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\rho}$, $m_\rho$} \\
-\decayAiPhotonShort reconstruction &  \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\Pai}$, $m^*_{\Pgpz}\parenths{\Pai}$, $m_{\Pai}$} \\
-EM shower profile & $\delta{l}$, $t_0$, $\langle{w}\rangle$ \\
-Calorimeter hit info. & $\bar{E}_{hit}$, $\%MIP$ \\
-Track info. & $\Delta E/P$ \\
-\hline
-\hline
-\end{tabular}
-\caption
-{Variables used in the MVA}
-\label{tab:tauVaraibles}
-\end{table}
+Having pre-selected events, discriminating variables are carefully developed for the multivariate analysis (MVA). The full list of the variables are shown in \Table{tab:tauVaraibles}. The distribution of the four most power variables are shown in \Figrure{fig:tauVar}.
+
+
 
 The most crucial variables are the number of \PFOs of different particles. \FIGURE{fig:tauVarNCharge} shows the distribution of ${N}_{\charge}$, the number of  charged \PFOs for different tau final states. Whilst over 98\% 1-prong final states have one track reconstructed, around 95\%  3-prong final states have three tracks reconstructed. This is an excellent variable to separate 1-prong and 3-prong final states. An orthogonal measurement is the number of reconstructed photons,  ${N}_{\Pgg}$, shown in \Figure{fig:tauVarNPhoton}. The overlap between \decayPionShort and \decayRhoShort final states is about 15\% and the confusion between \decayRhoShort and \decayAiPhotonShort is around 15\%. ${N}_{\Pgg}$ can also separate two 3-prong final states. ${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgpm}$ are useful to identify two leptonic final states, and further separate 3-prong final states from 1-prong final states.
 
@@ -241,6 +213,62 @@ Particle ID reported from \pandora is used extensively to reconstruct discrimina
 An electron leaves a characteristic electromagnetic  (EM) shower in the \ECAL (see \Section{sec:photonEMshower}), whilst \Pgpm doesn't. Variables defining the  EM shower helps to identify \Pem, taken from photon reconstruction in \Section{sec:photonLikelihood}. $t_0$, the start layer of the longitudinal shower and $\delta{l}$, the fractional difference between observed and expected longitudinal shower profile describe the longitudinal EM shower. $\langle{w}\rangle$ is a measure of the EM shower transverse width.
 
 Another type of information to differentiate an EM shower from a \Pem and a early hadronic shower from a \Pgpm is the calorimeter hit information. $\bar{E}_{hit}$, the average energy of a hit, and $\%MIP$, fraction of possible minimum ionising particles, are different for EM and hadronic showers. Last information used is the track-calorimeter consistency check. $\Delta E/P$ is the calorimeter energy divided by the track momentum. This variable is found to help to differentiate \decayElectronShort from \decayPionShort final state.
+
+
+
+\begin{figure}[htbp]
+\centering
+% \begin{center}/\end{center} takes some additional vertical space
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/var2/nCharge_100GeV_improved.pdf}
+  \caption{}
+  \label{fig:tauVarNCharge}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/var2/nPhoton_100GeV_improved.pdf}
+  \caption{}
+  \label{fig:tauVarNPhoton}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/var2/mVis_100GeV_improved_zoom.pdf}
+  \caption{}
+  \label{fig:tauVarMVis}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/var2/mA1A1Fit_100GeV_improved_zoom.pdf}
+  \caption{}
+  \label{fig:tauVarMA1}
+\end{subfigure}
+
+\caption
+{Normalised distribution for a) the number of charged particle (${N}_{\charge}$)
+ selected variables showing for seven final states, \decayElectronShort, \decayMuonShort, \decayPionShort, \decayRhoShort, \decayAiPhotonShort, \decayAiPionShort and \decayThreePionPhotonShort, separated using truth information. \FIGURE{fig:tauVarNCharge}, \Figure{fig:tauVarNPhoton}, \Figure{fig:tauVarMVis}, and \Figure{fig:tauVarMA1} show distributions for the number of tracks, the number of photons, the invariant mass of visible \PFOs, and the invariant mass of $a_1$ for \decayAiPhotonShort hypothesis test, respectively. The area for each final state is normalised to 1.
+}
+\label{fig:tauVar}
+\end{figure}
+
+\begin{table}[!htbp]\centering
+\begin{tabular}{lr}
+\hline
+\hline
+Category &  Variable \\
+\hline
+Number of \PFOs & \multicolumn{1}{R{0.6\textwidth}}{  ${N}_{\charge}$, ${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgg}$,  ${N}_{\Pgpm}$} \\
+Invariant mass &  \multicolumn{1}{R{0.6\textwidth}}{$m_{vis}$, $m_{\charge}$, $m_{\neutral}$, $m_{\Pgg}$, $m_{\Pgpm}$} \\
+Calorimetric info. &   \multicolumn{1}{R{0.6\textwidth}}{ $\% E_{\charge}$,  $\% E$ } \\
+Energy & \multicolumn{1}{R{0.6\textwidth}}{ $\tilde{E}_{vis}$,  $\tilde{E}_{\charge}$, $\tilde{E}_{\Pmu}$, $\tilde{E}_{\Pe}$, $\tilde{E}_{\Pgg}$,  $\tilde{E}_{\Pgpm}$} \\
+\decayRhoShort reconstruction & \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\rho}$, $m_\rho$} \\
+\decayAiPhotonShort reconstruction &  \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\Pai}$, $m^*_{\Pgpz}\parenths{\Pai}$, $m_{\Pai}$} \\
+EM shower profile & $\delta{l}$, $t_0$, $\langle{w}\rangle$ \\
+Calorimeter hit info. & $\bar{E}_{hit}$, $\%MIP$ \\
+Track info. & $\Delta E/P$ \\
+\hline
+\hline
+\end{tabular}
+\caption
+{Variables used in the MVA event selection for the tau lepton decay mode classification.}
+\label{tab:tauVaraibles}
+\end{table}
 
 \section{Multivariate Analysis}
 \label{sec:tauMVA}
@@ -318,7 +346,7 @@ Reco $\downarrow$ Truth $\to$  & \decayElectronShort & \decayMuonShort &\decayPi
 
 
 \section{Electromagnetic calorimeter  optimisation}
-
+\label{sec:tauECAL}
 In the above section, an analysis on tau decay mode classification is presented. Events are \eeToTauTau at \rootSGeV{100} with nominal \ILD detector model. This classification can be applied for different  \sqrtS and with different detector models. The main reconstruction issue is to separate boosted photon pair from \Ppizero decay. High \sqrtS would photon pair more collimated, and therefore more challenging to separate. The \ECAL cell size is crucial in separating the EM showers from photons. As discussed in previous chapter, separating photons requires a high transverse spatial resolution. Therefore, the \ECAL square cell size is expected to affect the classification efficiency.
 
 The main difficulty in the classification is to classify 1-prong final states.  These final states involves \Ppizero, where two photons from \Ppizero decay could be poorly reconstructed. At high energy, \Ppizero is boosted making the reconstruction more challenging. The ability to reconstruct the two photons as separate entities requires good pattern recognition algorithm for photons and \ECAL spatial resolution. Hence the improved photon reconstruction in \Chapter{chap:Photon} is used in this study. The impact of the \ECAL transverse spatial resolution on the tau decay classification is demonstrated as well.
@@ -441,7 +469,7 @@ The increase in \ECAL cell sizes has a larger impact on high \sqrtS. With decay 
 
 
 \section{Separate \PHiggs from \PZ with tau pair decay}
-
+\label{sec:tauHZ}
 \PHiggs can be separated from  \PZ using  tau pair decay channel.  The difference in the spin of the boson reflects in the different polarisation correlation of the tau pair. By extracting the polarisation correlation, parent bosons can be separated. A proof-of-principle analysis is presented to demonstrate the physics usage of the tau decay mode classification, motivated by theoretical studies such as in \cite{Bullock:1991my}. The theoretical motivation is described in \Section{sec:theoryTauPair}. The subsequent sections discuss the ability to reconstruct the polarisation correlation of the \PZ using tau pair decay, and to match with the truth information.
 
 The analysis largely follows the same procedure for the tau decay mode classification. Differences are highlighted in sections below.
