@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: canvas1/
-//=========  (Thu Feb 23 19:20:49 2017) by ROOT version5.34/30
+//=========  (Sat Jun 17 11:29:54 2017) by ROOT version5.34/05
    TCanvas *canvas1 = new TCanvas("canvas1", "",12,51,800,700);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -127,15 +127,14 @@
    0->SetEntries(309811);
    0->SetStats(0);
 
-   Int_t ci;      // for color index setting
-   TColor *color; // for color definition with alpha
+   Int_t ci;   // for color index setting
    ci = TColor::GetColor("#d35e60");
    0->SetFillColor(ci);
    0->SetFillStyle(3004);
 
    ci = TColor::GetColor("#d35e60");
    0->SetLineColor(ci);
-   0->GetXaxis()->SetTitle("M_{tot} / GeV");
+   0->GetXaxis()->SetTitle("m_{vis} / GeV");
    0->GetXaxis()->SetNdivisions(506);
    0->GetXaxis()->SetLabelFont(132);
    0->GetXaxis()->SetLabelOffset(0.015);
@@ -263,7 +262,7 @@
 
    ci = TColor::GetColor("#808585");
    1->SetLineColor(ci);
-   1->GetXaxis()->SetTitle("M_{tot} / GeV");
+   1->GetXaxis()->SetTitle("m_{vis} / GeV");
    1->GetXaxis()->SetNdivisions(506);
    1->GetXaxis()->SetLabelFont(132);
    1->GetXaxis()->SetLabelOffset(0.015);
@@ -394,7 +393,7 @@
 
    ci = TColor::GetColor("#9067a7");
    2->SetLineColor(ci);
-   2->GetXaxis()->SetTitle("M_{tot} / GeV");
+   2->GetXaxis()->SetTitle("m_{vis} / GeV");
    2->GetXaxis()->SetNdivisions(506);
    2->GetXaxis()->SetLabelFont(132);
    2->GetXaxis()->SetLabelOffset(0.015);
@@ -509,7 +508,7 @@
 
    ci = TColor::GetColor("#ab6857");
    3->SetLineColor(ci);
-   3->GetXaxis()->SetTitle("M_{tot} / GeV");
+   3->GetXaxis()->SetTitle("m_{vis} / GeV");
    3->GetXaxis()->SetNdivisions(506);
    3->GetXaxis()->SetLabelFont(132);
    3->GetXaxis()->SetLabelOffset(0.015);
@@ -542,7 +541,7 @@
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
    leg->SetLineWidth(2);
-   leg->SetFillColor(0);
+   leg->SetFillColor(10);
    leg->SetFillStyle(0);
    TLegendEntry *entry=leg->AddEntry("0","#rho(#pi^{-}#pi^{0})","f");
 
@@ -557,7 +556,6 @@
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry->SetTextFont(132);
    entry=leg->AddEntry("1","a_{1}(#pi^{-}#pi^{0}#pi^{0})","f");
 
    ci = TColor::GetColor("#808585");
@@ -571,7 +569,6 @@
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry->SetTextFont(132);
    entry=leg->AddEntry("2","a_{1}(#pi^{-}#pi^{+}#pi^{-})","f");
 
    ci = TColor::GetColor("#9067a7");
@@ -585,7 +582,6 @@
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry->SetTextFont(132);
    entry=leg->AddEntry("3","#pi^{-}#pi^{+}#pi^{-}#pi^{0}","f");
 
    ci = TColor::GetColor("#ab6857");
@@ -599,7 +595,6 @@
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry->SetTextFont(132);
    leg->Draw();
    canvas1->Modified();
    canvas1->cd();
