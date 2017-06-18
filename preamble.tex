@@ -100,28 +100,31 @@
 \DeclareRobustCommand{\HiggsToTauTau}{\HepProcess{\PHiggs \to \APtauon \Ptauon}\xspace}
 \DeclareRobustCommand{\ZToTauTau}{\HepProcess{\PZ \to \APtauon \Ptauon}\xspace}
 \DeclareRobustCommand{\eeZZ}{\HepProcess{\Pep \Pem \to \PZ\PZ}\xspace}
+\DeclareRobustCommand{\eeTauTau}{\HepProcess{\Pep \Pem \to \APtauon\Ptauon}\xspace}
+\DeclareRobustCommand{\eeZZQQ}{\HepProcess{\Pep \Pem \ to\PZ\PZ \to \APtauon\Ptauon \Pquark\Pquark }\xspace}
+
 
 \DeclareRobustCommand{\charge}{\HepParticle{\chi}{}{+}\xspace}
 \DeclareRobustCommand{\neutral}{\HepParticle{\chi}{}{0}\xspace}
 \DeclareRobustCommand{\Pai}{\HepParticle{a}{1}{}\xspace}
 \DeclareRobustCommand{\tauToPion}{\HepProcess{\Ptauon \to \Pgpm\Pgngt}\xspace}
 
-\DeclareRobustCommand{\decayElectron}{\Pem\Pagne\Pgngt\xspace}
-\DeclareRobustCommand{\decayMuon}{\Pgmm\Pagngm\Pgngt\xspace}
-\DeclareRobustCommand{\decayPion}{\Pgpm\Pgngt\xspace}
-\DeclareRobustCommand{\decayRhoFinalState}{\Pgpm\Ppizero\Pgngt\xspace}
-\DeclareRobustCommand{\decayRhoFinalStateShort}{\Pgpm\Ppizero\xspace}
+\DeclareRobustCommand{\decayElectron}{\HepProcess{\Pem\Pagne\Pgngt}\xspace}
+\DeclareRobustCommand{\decayMuon}{\HepProcess{\Pgmm\Pagngm\Pgngt}\xspace}
+\DeclareRobustCommand{\decayPion}{\HepProcess{\Pgpm\Pgngt}\xspace}
+\DeclareRobustCommand{\decayRhoFinalState}{\HepProcess{\Pgpm\Ppizero\Pgngt}\xspace}
+\DeclareRobustCommand{\decayRhoFinalStateShort}{\HepProcess{\Pgpm\Ppizero}\xspace}
 
-\DeclareRobustCommand{\decayRho}{\rho\Pgngt\xspace}
-\DeclareRobustCommand{\decayAi}{$a_1$\Pgngt\xspace}
+\DeclareRobustCommand{\decayRho}{\HepProcess{\rho\Pgngt}\xspace}
+\DeclareRobustCommand{\decayAi}{\HepProcess{a_1\Pgngt}\xspace}
 \DeclareRobustCommand{\decayAiPhoton}{\HepParticleResonanceFull{a}{1}{}{\Pgpm\Pgpz\Pgpz}{}{}\Pgngt\xspace}
-\DeclareRobustCommand{\decayAiPhotonFinalState}{\Pgpm\Pgpz\Pgpz\Pgngt\xspace}
-\DeclareRobustCommand{\decayAiPhotonFinalStateShort}{\Pgpm\Pgpz\Pgpz\xspace}
+\DeclareRobustCommand{\decayAiPhotonFinalState}{\HepProcess{\Pgpm\Pgpz\Pgpz\Pgngt}\xspace}
+\DeclareRobustCommand{\decayAiPhotonFinalStateShort}{\HepProcess{\Pgpm\Pgpz\Pgpz}\xspace}
 \DeclareRobustCommand{\decayAiPion}{\HepParticleResonanceFull{a}{1}{}{\Pgpm\Pgpm\Pgpp}{}{}\Pgngt\xspace}
-\DeclareRobustCommand{\decayAiPionFinalState}{\Pgpp\Pgpm\Pgpm\Pgngt\xspace}
-\DeclareRobustCommand{\decayAiPionFinalStateShort}{\Pgpp\Pgpm\Pgpm\xspace}
+\DeclareRobustCommand{\decayAiPionFinalState}{\HepProcess{\Pgpp\Pgpm\Pgpm\Pgngt}\xspace}
+\DeclareRobustCommand{\decayAiPionFinalStateShort}{\HepProcess{\Pgpp\Pgpm\Pgpm}\xspace}
 
-\DeclareRobustCommand{\decayThreePionPhoton}{\Pgpp\Pgpm\Pgpm\Pgpz\Pgngt\xspace}
+\DeclareRobustCommand{\decayThreePionPhoton}{\HepProcess{\Pgpp\Pgpm\Pgpm\Pgpz\Pgngt}\xspace}
 
 
 \DeclareRobustCommand{\decayElectronShort}{\Pem\xspace}
