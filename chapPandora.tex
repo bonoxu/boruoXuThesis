@@ -394,13 +394,15 @@ When we are describing particles, light lepton, \llight, refer to electrons, \Pe
 \section{Multivariate Analysis}
 \label{sec:pandoraMVA}
 
-Multivariate analysis (MVA) has become increasingly common in high energy physics. MVA is typically used as the last step of the physics analysis to select signal from background. It can be viewed as an advanced tool for regression or classification. Comparing to the traditional cut based method, modern machine learning technique offers much improvement in data analysis. Software package for MVA used throughout this document is TMVA \cite{Hocker:2007ht}.
+Multivariate analysis (MVA) has become increasingly common in high energy physics. MVA is typically used as the last step of the physics analysis to select signal from background. It can be viewed as an advanced tool for regression or classification. Compared to the traditional cut-based method, modern machine learning techniques offer much improvement to the data analysis. The implementation of the machine learning techniques used in this thesis are provided by  TMVA \cite{Hocker:2007ht}.
 
-A typical machine learning MVA classification involves two classes, also known as signal and background. A machine learning model, also known as a classifier in TMVA, needs to be trained with training data. The model requires a set of discriminative variables, which separate the signal from background. The trained model will be applied onto the testing data for signal extraction. Response of the model could be a classification of signal or background, or could  a response in a continuous spectrum, where the user decides the value to separate signal from background.
+A typical machine learning MVA classification involves two classes, also known as signal and background. A machine learning model needs to be trained with training data. The model requires a set of discriminative variables, which separate the signal from background. The trained model will be applied onto the testing data for signal extraction. The response of the model could be a classification with two-class outcome of  signal or background.   The response  could also be a regression with output in a continuous spectrum.
 
-Strictly, there should be three statistically independent samples for the MVA. One sample is for the training. Another sample for the validation, including optimisation and checking for overfitting. The last sample is for testing. However, due to technical reason (TMVA only natively supports two samples), sometimes the same sample is used for the validation and the testing, which is acceptable with large statistics.
+%R, where the user decides the value to separate signal from background.
 
-This classification scheme can be easily extended to multiple classes, implemented in TMVA with multiclass class. The multiclass class is used in the tau decay mode classification in \Section{} and in the flavour tagging classifier in \Section{sec:pandoraLCFI}.
+There should be three statistically independent samples for the MVA: one sample for the training; another sample for the validation, including optimisation and checking for overfitting; and the last sample for testing. However, due to technical reason (TMVA only natively supports two samples), sometimes the same sample is used for the validation and the testing, which is an acceptable usage with samples of large statistics.
+
+This classification scheme can easily be extended to multiple classes, implemented in TMVA with the multiclass class. The multiclass class is used in the tau decay mode classification in \Section{sec:tauMVA} and in the flavour tagging classifier in \Section{sec:doubleHiggsFlavourTagging}.
 
 \subsection{Optimisation and overfitting}
 \label{sec:pandoraMVAoptimisation}
@@ -409,58 +411,57 @@ The optimisation of the model refers to selecting the optimal free parameters of
 
 The compromise is clear. The optimal model is the one between overfitting and underfitting. In practice, this involves building the model with increasing complexity, and finding the point where overfitting occurs.
 
-\begin{figure}[!tbp]
-\includegraphics[width=0.45\textwidth]{doubleHiggs/DepthOfTrees.pdf}
-\caption{Example of model efficiency as a complexity of model parameter. Here the model is boosted decision tree. The model parameter is depth of tree. From tree depth 6 onwards, overfitting occurs.}
-\label{fig:doubleHiggsMVAovertraining}
-\end{figure}
 
-\FIGURE{fig:doubleHiggsMVAovertraining} shows a typical overfitting plot. Overfitting is defined when the efficiency of signal selection in the training samples increases, but the efficiency in the testing sample decreases. The example in \Figure{fig:doubleHiggsMVAovertraining}  is chosen from double Higgs analysis at \rootS{3}, using Boosted Decision Tree model. The efficiency of signal selection is defined as the signal fraction when background fraction is 1\%, report by the TMVA training process. In \Figure{fig:doubleHiggsMVAovertraining} , the depth of the tree, or the number of layers in the tree, reflects the complexity of the model. From tree depth 2 to 5, the efficiency for both testing and training samples increases. From tree depth 6 onwards, the overfitting occurs. In this particular example, one should choose a tree depth fewer than 7 to avoid overfitting.
+\FIGURE{fig:doubleHiggsMVAovertraining} shows a typical overfitting plot. Overfitting is defined when the efficiency of the signal selection in the training samples increases, but the efficiency in the testing sample decreases. The example in \Figure{fig:doubleHiggsMVAovertraining}  is chosen from the double Higgs analysis at \rootS{3}, using the Boosted Decision Tree model. The efficiency of the signal selection is defined as the signal fraction when the background fraction is 1\%, reported by the TMVA training process. In \Figure{fig:doubleHiggsMVAovertraining} , the depth of the tree, or the number of layers in the tree, reflects the complexity of the model. From tree depth two to fix, the efficiency for both testing and training samples increases. From tree depth six onwards, overfitting occurs. In this particular example, one should choose a tree depth fewer than seven to avoid overfitting.
 
-\FIGURE{fig:doubleHiggsMVAovertraining}  can be repeated with different split of training and testing samples to avoid the statistical fluctuation in samples. This allows a better estimation of where overfitting occurs. However this method is not used as the TMVA does not support such a method.
+\FIGURE{fig:doubleHiggsMVAovertraining}  can be repeated with a different split of training and testing samples to avoid the statistical fluctuation in samples. This allows for a better estimation of where overfitting occurs. However, this method is not used as the TMVA does not support such a method.
 
    %There are better methods
 %There are methods to assign the error on the selection efficiency, as the training and testing efficiency would fluctuate wit . Thus one can make a better choice of parameters to avoid overfitting. These methods were not implemented due to the technical capacity provided by the TMVA.
 
+\begin{figure}[!tbp]
+\includegraphics[width=0.45\textwidth]{doubleHiggs/DepthOfTrees.pdf}
+\caption{Example of model efficiency as a complexity of the model parameters. Here the model is a boosted decision tree. The model parameter is the depth of tree. The y-axis is the signal efficiency when the background efficiency is 1\%. From tree depth six onwards, overfitting occurs.}
+\label{fig:doubleHiggsMVAovertraining}
+\end{figure}
+
 
 \subsection{Choice of models}
 
-The model, also known as the classifier in TMVA, can be as simple as cut based, likelihood or linear regression. It can also be as complicated as non linear tree, non linear neutral network or support vector machine. Regardless of model complexity, the choice of most optimal classifier is often data driven. Also, given the free parameters in each model, the comparison between different models without individual tuning is not rigourous. Nevertheless, as researchers in the machine learning suggested, the boosted decision tree is probably the best out-of-the-box machine learning method. Neutral network could potentially be better than the boosted decision, but it requires more tuning, and it is less intuitive to interpret the model. For these reasons, boost decision tree (BDT) is often the choice of machine learning model in the high energy physics. And it is used in various physics analysis in this document.
-
-Before describing BDT in detail, we will first visit some simple models.
+The model can be as simple as a cut-based, a likelihood, or a linear regression model. The model can also be as complicated as non linear tree, non linear neutral network, or support vector machine. Regardless of the model complexity, the choice of the most optimal classifier is often data driven to match the nature of the sample. For example, a non-linear model is the best to model a non-linear response. The  comparison between different models without individual tuning is not rigourous.  Nevertheless, as researchers in the machine learning suggested, the boosted decision tree is probably the best out-of-the-box machine learning method. A neutral network model could potentially be better than the boosted decision tree model, but it requires more tuning, and it is less intuitive to interpret such a model. For these reasons, the boost decision tree model (BDT) is often the choice of machine learning model in high energy physics. And it is used in various physics analysis in this thesis. Before describing the BDT in detail, we will first visit some simpler models.
 
 %the traditional rectangular cut model, and the Projective Likelihood method, which is used in the photon ID in the \pandora in \Section{}.
 
-\subsubsection{Rectangular Cut}
+\subsubsection{Rectangular Cut model}
 
-Probably the most intuitive model, the rectangular cut method optimise cuts to maximise some specific metric. The metric could be the signal efficiency for a particular background efficiency. Alternatively, the metric can be the significance, $\frac{S}{\rootOf{S\!+\!B}}$, where $S$ and $B$ are signal and background numbers, respectively.
+The rectangular cut method, probably the most intuitive model, optimise cuts to maximise some specific pre-defined metrics. The metric could be the signal efficiency for a particular background efficiency. Alternatively, the metric can be the significance, $\frac{S}{\rootOf{S\!+\!B}}$, where $S$ and $B$ are signal and background numbers, respectively.
 
-Discriminative variables gives better separation power when they are gaussian-like and statistically independent. Therefore it is common to decoorelate  the variables and gaussian transform them before using the rectangular cut MVA.
+Discriminative variables give better separation power when they are gaussian-like and statistically independent. Therefore it is common to decoorelate  the variables and gaussian transform them before using the rectangular cut MVA.
 
-Because its simplicity, the cut method is often performed manually, much more often in the time pre-date the wide spread of machine learning methods. It is still commonly used for the pre-selection step before the MVA (see \Section{sec:doubleHiggsPreSelection}), and other simple cases. Unless specified, the optimal cuts proposed in this document for various physics analysis are found using the rectangular cut method manually.
+Because of its simplicity, the cut method is often performed manually, much more often at times pre-dating the spread of machine learning methods. It is still commonly used for the pre-selection step before the MVA (see \Section{sec:doubleHiggsPreSelection}), and other simple cases. Unless specified, the optimal rectangular cuts proposed in this thesis for various physics analyses are found manually.
 
-\subsubsection{Projective Likelihood}
+\subsubsection{Projective Likelihood model}
 \label{sec:pandoraLikelihood}
 
-Projective likelihood model with probability density estimators (PDE) is used in \pandora for the photon ID  due to its simplicity and low requirement on computing resources. The \pandora implementation is discussed  in \Section{sec:photonPDE}.
+The projective likelihood model with probability density estimators (PDE) is used in \pandora for the photon ID,  due to its simplicity and low requirement on computing resources. The \pandora implementation is discussed  in \Section{sec:photonPDE}.
 %Probability density estimators for each input variable combined in likelihood estimator (ignoring correlations
 
-Likelihood classifier implemented in the TMVA calculates the probability density for each discriminative variable, for signal and background (hence PDE approach). The overall signal and background likelihood are defined as products of the individual probability density. The likelihood ratio, $R$, is then defined as the signal likelihood over signal plus background likelihood. TMVA implementation also fits an underlying function to the probability density.
+The likelihood classifier implemented in the TMVA calculates the probability density for each discriminative variable, for signal and background (hence PDE approach). The overall signal and background likelihood are defined as products of the individual probability density. The likelihood ratio, $R$, is then defined as the signal likelihood over signal plus background likelihood. TMVA implementation also fits an underlying function to the probability density.
 
 %The \pandora implementation simply uses binned likelihood ratio, $R$, as the output, due to the simplicity. The sub-categories for the \pandora implementation are determined by the cluster energy.
 
-Similarly to the rectangular cut method, PDE works better with decorrelated, gaussian like variables.
+Similarly to the rectangular cut method, the likelihood model works better with decorrelated, gaussian like variables.
 
 %The \pandora implementation did not decorrelate nor transform the variables, to keep implementation fast.
 
 
-\subsubsection{Decision tree}
+\subsubsection{Decision tree model}
 \label{sec:pandoraDecisionTree}
  %is a non linear tree based model
 
-Before discussing Boost decision tree (BDT), it is necessary to introduce Decision tree. Decision tree is a non linear tree based model. Its rather complex nature requires a careful explanation of many concepts.
+Before discussing Boost decision tree (BDT), it is necessary to introduce the decision tree model. The decision tree is a non linear tree based model. Its rather complex nature requires a careful explanation of many concepts.
 
-Decision tree is a binary tree, where each node, the splitting point, uses a single discriminative variable to decide whether a event is signal-like (``goes down by a layer to the left''), or background-like (``goes down by a layer to the right''). At each node, samples are divided into signal-like and background-like sub-samples. The tree growing starts at the root node, and stops at certain criterion, which could be the minimum number of events in a node, the number of layers of the tree, or a minimum/maximum signal purity.
+The decision tree is a binary tree, where each node, the splitting point, uses a single discriminative variable to decide whether an event is signal-like (``goes down by a layer to the left''), or background-like (``goes down by a layer to the right''). At each node, samples are divided into signal-like and background-like sub-samples. The tree growing starts at the root node, and stops at certain criterion, which could be the minimum number of events in a node, the number of layers of the tree, or a minimum/maximum signal purity.
 
 The training of the decision tree is to determine the optimal cut at the node by minimising the metric. The probability of the cut producing the signal is $p$. Three commonly used metrics for two-class classification are
 \begin{enumerate}
@@ -469,7 +470,7 @@ The training of the decision tree is to determine the optimal cut at the node by
 \item Cross-Entropy or deviance: $-p\log{p}-\parenths{1\!-\!p}\log\parenths{1\!-\!p}$.
 \end{enumerate}
 
-The using of a trained decision tree is to transverse along the tree. The event is classified as signal or background depending on whether it falls in the signal-like or background-like end node.
+The applying of a trained decision tree is to transverse along the tree. The event is classified as signal or background, depending on whether it falls in the signal-like or background-like end node.
 
 \begin{figure}[!tbp]
 \includegraphics[width=0.45\textwidth]{doubleHiggs/mva/BDTcomic}
@@ -478,47 +479,64 @@ The using of a trained decision tree is to transverse along the tree. The event 
    \label{fig:doubleHiggsMVAdecisionTree}
 \end{figure}
 
-\FIGURE{fig:doubleHiggsMVAdecisionTree} illustrate a simple example of a decision tree. The signal is the PhD student and the background is the undergraduate student. The depth of this imbalance binary  tree is 2. A node is represented by a diamond.  The signal-like node is the red rectangle and the background-like nodes are blue rectangles. The tree is constructed with two possible cut, ``Party ends before 1am'' and ``Know where free pizza is''. The attribute of samples is listed in \Table{tab:doubleHiggsDecisionTreeComic}. To demonstrate the choice of the first layer cut, the Gini index metric is used. If the first cut is ``Party ends before 1am'', the probability of the cut producing the signal, $p$, is $\frac{10}{13}$. Gini index is $2p\parenths{1\!-\!p} \backsimeq 0.36 $. If the first cut is ``Know where free pizza is'', $p=\frac{10}{15}$. Gini index is $2p\parenths{1\!-\!p} \backsimeq 0.44 $. Therefore, the first cut is ``Party ends before 1am''.
+\FIGURE{fig:doubleHiggsMVAdecisionTree} illustrate a simple example of a decision tree. The signal class is the PhD student and the background class is the undergraduate student. The depth of this imbalance binary  tree is 2. A node is represented by a diamond.  The signal-like node is the red rectangle and the background-like nodes are blue rectangles. The tree is constructed with two possible cuts, ``Party ends before 1am'' and ``Know where free pizza is''. The attribute of samples is listed in \Table{tab:doubleHiggsDecisionTreeComic} and  \Table{tab:doubleHiggsDecisionTreeComic2}. To demonstrate the choice of the first layer cut, the Gini index metric is used. If the first cut is ``Party ends before 1am'', the probability of the cut producing the signal, $p$, is $\frac{10}{13}$. Gini index is $2p\parenths{1\!-\!p} \backsimeq 0.36 $. If the first cut is ``Know where free pizza is'', $p=\frac{10}{15}$. Gini index is $2p\parenths{1\!-\!p} \backsimeq 0.44 $. Therefore, the first cut is ``Party ends before 1am''.
 
-The simple tree in \Figure{fig:doubleHiggsMVAdecisionTree} is grown fully as each end node contains signal or background only. To use the trained decision tree, if there is student who ends party before 1am and knows where free pizza is, then the student is classified as a PhD student.
+The simple tree in \Figure{fig:doubleHiggsMVAdecisionTree} is grown fully as each end node contains signal or background only. To use the trained decision tree, if there is s student who ends the party before 1am and knows where a free pizza is located, then the student is classified as a PhD student.
 
 \begin{table}[!tbp]\centering
-\small
+
 \begin{tabular}{lrr}
 \hline \hline
-Number & Party ends before 1am  & Know where free pizza is\\
+PhD student & Party ends before 1am  & Party ends after 1am\\
 \hline
-PhD student & 10 & 10 \\
-Undergrad student & 3 & 5 \\
+Know where free pizza is & 10 & 0 \\
+Not know where free pizza is & 0 & 0 \\
 \hline \hline
 \end{tabular}
 \caption
-{The attribute of samples for the decision tree example.}
+{The attribute of the PhD student class for the decision tree example shown in \Figure{fig:doubleHiggsMVAdecisionTree}.}
 \label{tab:doubleHiggsDecisionTreeComic}
 \end{table}
+\begin{table}[!tbp]\centering
 
-\paragraph{Improve decision tree}
+\begin{tabular}{lrr}
+\hline \hline
+Undergraduates & Party ends before 1am  & Party ends after 1am\\
+\hline
+Know where free pizza is & 0 & 5 \\
+Not know where free pizza is & 3 & 2 \\
+\hline \hline
+\end{tabular}
+\caption
+{The attribute of  the undergraduates class for the decision tree example shown in \Figure{fig:doubleHiggsMVAdecisionTree}.}
+\label{tab:doubleHiggsDecisionTreeComic2}
+\end{table}
 
-Decision tree has a low bias, but high variance. This means it is very easy to construct a tree, which is also the best tree, that fits the training data very well, but the tree would not be optimal for the testing sample. To overcome the instability of the decision tree, many methods have been developed. The most successful one is boosting and bagging.
 
-Boosting: it is a technique where the misclassified events receives a higher weight than the correctly classified events. Therefore, when the training is iterated, the misclassified events would receive higher and higher wights and more likely to classify correctly. The boosting is done at every iteration, which can be few hundred or few thousand time. This will create a ``forest'' of many trees. The final output could be a majority vote, by transversing the event to the end node for each tree in the forest.
+\paragraph{To improve decision tree}
 
-Bagging: also known as boot-strap, it is a method that select a simple random sub-set of the training sample, and apply the model. In this case, every boosting iteration takes a bagged sample, rather than the whole sample.
+The decision tree has a low bias, but high variance. This means it is very easy to construct a tree, which is also the best tree, that fits the training data very well, but the tree would not be optimal for the testing sample. To overcome the instability of the decision tree, many methods have been developed. The most successful one is boosting and bagging.
 
-\subsubsection{Boosted decision tree}
+Boosting: it is a technique where the misclassified events receives a higher weight than the correctly classified events. Therefore, when the training is iterated, the misclassified events would receive higher and higher weights and be more likely to be classified correctly. The boosting is done at every iteration, which can be a few hundred or a few thousand times. This will create a ``forest'' of many trees. The final output could be a majority vote, by transversing the event to the end node for each tree in the forest.
+
+Bagging: also known as boot-strap, it is a method that select a simple random sub-sets of the training sample, and apply the model. In this case, every boosting iteration takes a bagged sample, rather than the whole sample.
+
+Random Forest: when a tree is grown, a randomly selected sub-set of all variables are used to grow the tree. This method is know to reduce the variance of the tree.
+
+\subsubsection{Boosted decision tree model}
 \label{sec:analysisBDT}
 
-Boosted decision tree (BDT) contains a forest of decision trees , where each tree is iterated many times using a technique called boosting.   By overcoming the instability of a single  decision tree, BDT is often regards as  the best out-of-the-box machine learning method. There are two common boosting methods: adaptive boosting and gradient boosting. First introduced in \cite{FREUND1997119}, the adaptive boosting is discussed in further details, as it is simpler to understand than gradient boosting.
+Boosted decision tree (BDT) contains a forest of decision trees , where each tree is iterated many times using a technique called boosting.   By overcoming the instability of a single  decision tree, BDT is often regarded as  the best out-of-the-box machine learning method. There are two common boosting methods: adaptive boosting and gradient boosting. First introduced in \cite{FREUND1997119}, the adaptive boosting is discussed in further details, as it is simpler to understand than gradient boosting.
 
-The basic idea of the adaptive boosting is such that the tree making procedure focuses on events which are difficult to classify correctly. By assigning a weight to each event,   after each tree making iteration, the weights for misclassified events are gradually increased. Therefore misclassified events gets more attention.
+The basic idea of adaptive boosting is that the tree making procedure focuses on events which are difficult to classify correctly. By assigning a weight to each event,   after each tree making iteration, the weights for misclassified events are gradually increased. Therefore misclassified events get more attention.
 
-A simple example is provided. Assuming tree classifier output is -1 or 1. One can think of -1 is background and 1 is signal. Suppose there are $N$ events and $M$ iterations (trees). For $i^{th}$ event in $m^{th}$ tree,  $B_{i,m} = 1$ if the event is misclassified, 0 otherwise.
+A simple example is provided. Assuming that the tree classifier output is denoted as  -1 or 1. One can think of -1 as background and 1 as signal. Suppose there are $N$ events and $M$ iterations (trees). $B$ represents if a event is misclassified. For the $i^{th}$ event in the  $m^{th}$ tree,  $B_{i,m} = 1$ if the event is misclassified and 0 if the event is correctly classified.
 
 The adaptive boosting algorithm, adapted from \cite{hastie2009elements},  is outlined below.
 
 \begin{itemize}
-  \item For $N$ events, event weight is $w = 1 / N$ for every event.
-  \item Iterate for $M$ times. M is the total number of trees. For iteration $m$:
+  \item At the initialisation stage,  event weight is initialised to $w = 1 / N$ for every event, for $N$ total events.
+  \item Iterate $M$ times. M is the total number of trees. For iteration $m$:
     \begin{itemize}
       \item Create a $m^{th}$ tree  with weighted samples.
       \item Update $m^{th}$ tree error function, $err_m = \frac{\sum_{i = 1}^{N} w_{i,m-1} B_{i,m} }{\sum_{i = 1}^{N}w_{i,m-1}}$.
@@ -526,7 +544,7 @@ The adaptive boosting algorithm, adapted from \cite{hastie2009elements},  is out
       \item Update $m^{th}$ tree weight,  $\alpha_m = \log\parenths{\frac{1 - err_m}{err_m}}$
       \item Update $i^{th}$ event weight, $w_{i,m} = w_{i,m-1} e^{\alpha_m B_{i,m} }$.
     \end{itemize}
-  \item The output $G(x)$ for testing event $x$ is a weighted vote from all M trees:
+  \item The output, $G(x)$, for testing event $x$ is a weighted vote from all M trees:
   \begin{equation}
     G(x)=
      \begin{cases}
@@ -538,51 +556,51 @@ The adaptive boosting algorithm, adapted from \cite{hastie2009elements},  is out
 
 In each iteration, if the $i^{th}$ event is misclassified, the weight increases by a factor of $(1 - err_m)/(err_m)$. Otherwise, the event weight does not change.
 
-The power of the ablative boosting to dramatically improve the performance of a weak classifier. A weak classifier is a classifier is sightly better than random guessing. A small decision tree would be a weak classifier. By sequentially applying many weak classifier with weighted samples, the final ``forest'' is very robust with very good performance.
+The power of the adaptive boosting  is to dramatically improve the performance of a weak classifier. A weak classifier is a classifier which is sightly better than random guessing. A small decision tree would be a weak classifier. By sequentially applying many weak classifier with weighted samples, the final ``forest'' is very robust with very good performance.
 
 %A weak classifier is one whose error rate is only slightly better than random guessing. The purpose of boosting is to sequentially apply the weak classification algorithm to repeatedly modified versions of the data,
 
-TMVA implementation of the BDT for the output is using a likelihood estimator, depending on how often a event is classified as signal in the forest. The likelihood number is later used to select signal from background.
+TMVA implementation of the BDT for the output is using a likelihood estimator, depending on how often an event is classified as signal in the forest. The likelihood number is later used to select signal from background.
 
 \paragraph{Optimisation of Boosted Decision Tree}
 \label{sec:pandoraMVAbdtVar}
-Many parameters of the BDT can be tuned. The tuned parameters are described below.
+Many parameters of the BDT can be optimised, described below.
 
-The most important parameter is the depth of a tree, which determines how many end nodes a tree has, or the degrees of freedom of a tree. The related parameter is the number of trees. Experience shows that using many small trees yields the best result. The performance as a function of the depth is shown in \Figure{fig:doubleHiggsMVAovertraining}.
+The most important parameter is the depth of a tree, which determines how many end nodes the tree has, or the degrees of freedom of the tree. The related parameter is the number of trees. Experience shows that using many small trees yields the best result. The performance as a function of the depth is shown in \Figure{fig:doubleHiggsMVAovertraining}.
 
-The number of tree is another important parameter. Intuitively large number of trees leads to overfitting. However, it has been shown that a large number does not lead to overfitting, using the definition above. Therefore there is a debate on the metric to determine the optimal number of tree.
+The number of trees is another important parameter. Intuitively large number of trees leads to overfitting. However, it has been shown that a large number does not lead to overfitting. Therefore there is a debate on the metric to determine the optimal number of trees.
 
 The minimum number of events in a node, which is a stopping criteria for tree growing, affects the size of the tree. But it is less influential than the depth of the tree.
 
-The boosting has two variant in TMVA implementation, adaptive boost and gradient boost.
+The boosting has two variants in TMVA implementation: adaptive boost and gradient boost.
 
-The learning rate of the adaptive boost, which controls how fast the weight changes for events in each boosting iteration. Experience shows small learning rate with many trees work better than large learning rate with few trees.
+The learning rate of the adaptive boost  controls how fast the weight changes for events in each boosting iteration. Experience shows that a small learning rate with many trees works better than a large learning rate with fewer trees.
 
-The shrinkage rate of the gradient boost is similar to the learning rate of the adaptive. It controls how fast the weight changes for events in each boosting iteration. Again a small value is preferable.
+The shrinkage rate in the gradient boost is similar to the learning rate in the adaptive boost. The shrinkage rate controls how fast the weight changes for events in each boosting iteration. Again a small value is preferable.
 
-The usual choice of the metric for the optimal cuts is either Gini index or cross-entropy. Typically Gini index metric is chosen. It makes little difference to performances, comparing to the cross-entropy metric.
+The usual choice of the metric for the optimal cuts is either the Gini index or the cross-entropy. Typically the Gini index metric is chosen. It makes little difference to performances, comparing to the cross-entropy metric.
 
-Number of bins per variables for the cut is necessary to make tree growing efficient. Discrete binned variables are faster to computer than continuous variables. The parameter does not impact the performance much. However, variables should be pre-processed before going into the model. For example, the variable should be limited to a sensible range to avoid the extremes. The variable should also be transformed to obtain a more uniform distribution, if the original distribution is highly skewed.
+The number of bins per variable is necessary to make tree growing efficient. Discrete binned variables are faster to computer than continuous variables. The parameter does not impact the performance much. However, variables should be pre-processed before going into the model. For example, the variable should be limited to a sensible range to avoid the extremes. The variable should also be transformed to obtain a more uniform distribution, if the original distribution is highly skewed.
 
-For the end node, it is determined as either signal-like or background-like, based on the majority for the training event in the end node. Numerically, it corresponds to 1/0. However, the end node could also use signal purity as the output, resulting in a continues spectrum of [0,1]. The adaptive boosting algorithm is modified for the output value continues spectrum.
+For the end node, it is determined as either signal-like or background-like, based on the majority of the training events in the end node. Numerically, it corresponds to 1/0. However, the end node could also use signal purity as the output, resulting in a continues spectrum of [0,1]. The adaptive boosting algorithm is modified for the output value continuous spectrum.
 
-Bagging fraction determines the fraction of randomly selected samples used in each boosting iteration. By choosing a smaller value, samples between each boosting iteration are less correlated. Hence the overall performance improves.
+The bagging fraction determines the fraction of randomly selected samples used in each boosting iteration. By choosing a smaller value, samples between each boosting iteration are less correlated. Hence the overall performance improves.
 
-DoPreSelection flag allows the classifier to throw away phases spaces where there is only background events.
+The DoPreSelection flag allows the classifier to throw away phase spaces where there are only background events.
 
 \subsection{Multiple classes}
 \label{sec:pandoraMVAmulticlass}
 % ATTN used in tau chapter
 
-The above discussion is done assuming two classes - signal and background. The argument can be easily extended to multiple classes. There are two ways for the training. ``One v.s. one'' is each class is trained against each other class. And the overall likelihood is normalised. The second way to train is called ``one v.s. all'', which is when each class is trained against all other classes.
+The above discussion is done assuming two classes - signal and background. The argument can be extended to multiple classes. There are two ways for the training. ``One v.s. one'' means that each class is trained against each other class, and the overall likelihood is normalised. The second way to train is called ``one v.s. all'', when each class is trained against all other classes.
 
 Using a three-class example, A, B and C, ``one v.s. one" scheme trains A against B, B against C, and C against A. Then the likelihood is normalised. ``One v.s. all" would train A against B plus C, B against A plus C, and C against A plus B.
 
-TMVA multiclass implementation uses ``one v.s. all" scheme. For each class, the multiclass classifier will train the class as the signal against all other final states as the background. This process is repeated for each class. The classifier output for a single event is a normalised response using all trained classifier, where the sum is one. The response of each class in a event can be treated as the likelihood. In the classicisation stage, The event is classified into a particular class if that class has the highest classifier output response.
+TMVA multiclass implementation uses the ``one v.s. all" scheme. For each class, the multiclass classifier will train the class as the signal against all other final states as the background. This process is repeated for each class. The classifier output for a single event is a normalised response using all trained classifier, where the sum is one. The response of each class in a event can be treated as the likelihood. In the classicisation stage, the event is classified into a particular class if that class has the highest classifier output response.
 
-The advantage of using the multiclass is that the correlation between different classes are accounted for and the classifier output are correctly adjusted for multiple class. Hence one event can only be classified into one final state. The issue with the multiclass is that discriminative variables all classes need enter the training stage, resulting in a large number of variables.
+The advantage of using the multiclass is that the correlation between different classes are accounted for. The classifier outputs are correctly adjusted for multiple classes. Hence one event can only be classified into one final state. The issue with the multiclass is that discriminative variables for all classes need enter the training stage, resulting in a large number of variables.
 
-TMVA multiclass implementation uses "one v.s. all" scheme. Multiclass is used in flavour tagging of jets, \Section{sec:pandoraLCFI}, and in the tau lepton final state separation study, \Section{}.
+%TMVA multiclass implementation uses "one v.s. all" scheme. Multiclass is used in flavour tagging of jets, \Section{sec:pandoraLCFI}, and in the tau lepton final state separation study, \Section{}.
 
 %Computational intensive jobs are processed either on the Cambridge High Energy Physics grid, or the \CLIC computing grid.
 %Thanks computing resources. i.e. ILC VO, CLIC grid, etc. 
