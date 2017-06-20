@@ -1,5 +1,5 @@
-\chapter{Let's make introduction great again}
-\label{chap:SomeStuff}
+\chapter{Introduction}
+\label{chap:Introduction}
 
 %% Restart the numbering to make sure that this is definitely page #1!
 \pagenumbering{arabic}
@@ -14,37 +14,21 @@
 \chapterquote{The journey of a thousand miles begins with a single step.}%
 {Lao Zi, 604 BC - 531 BC}%: Blackwood's Magazine May 1830
 
-―
-Introduction
-
-\section{Future Linear Colliders}
-
-Basic intro. LHC.
-
-Next challenge
-
-Future Options. FCC vs LC
-
-LC options
 
 
-\section{Motivation}
+This thesis contains the work  on the detector and the physics at future electron-positron linear colliders. Necessary background information is provided, followed by detailed discussions on three projects completed.
+
+The thesis begins with a chapter on the theoretical background in \Chapter{chap:Theory}. The chapter discusses the relevant theories in  high energy physics field. Firstly a brief review of the   current best particle theory, Standard Model of Particle Physics, is provided. The Higgs mechanism and the Higgs boson in Standard Model are discussed, followed by a general parametrisation of the Higgs theory beyond the Standard Mode. The last part of the chapter is dedicated to the theoretical discussion on the tau pair polarisation correlations as signature of Higgs boson is presented.
+
+In \Chapter{chap:Detector}, the detector models used in the analysis are described in details. A general overview of two future electron-positron linear colliders, the International Linear Collider (\ILC) and the Compact Linear Collider (\CLIC), is provided. After a short discussion on the physics program for these future colliders, a discussion of the impact of physics requirements on the detector design is presented. Afterwards, the International Large Detector, one detector option for the International Linear Collider, is discussed in details, followed by each sub-detector in the International Large Detector. Lastly, the modified International Large Detector detector concept of the Compact Linear Collider is provided, where the modifications of the detector are highlighted.
+
+In the next chapter, \Chapter{chap:Reconstruction}, the software for event simulation and event reconstruction  are discussed, followed by a discussion on the analysis software. Simulation and reconstruction of events of the future Linear Colliders, \ILC and \CLIC, share a  common software framework.  Therefore,  the  shared software is discussed first, and the \CLIC specific issues are highlighted afterwards. The event reconstruction focuses on the \pandora event reconstruction. Lastly analysis software and multivariate analysis are presented.
+
+From this chapter onwards, the original work is described. \Chapter{chap:Photon} describes in details several \pandora algorithms regarding photon reconstruction. One algorithm is provided on the initial photon forming and ID test. Three algorithms are developed for the photon fragment removals and one algorithm is developed to split the accidently merged photons. The core of identifying the photon is a two dimensional peaking finding algorithm. Having discussed the algorithms, performances of these algorithms are provided. Comparison with no photon reconstruction is discussed.
+
+In \Chapter{chap:Tau}, a classification of the tau lepton decay modes is presented. The analysis contains the sample selection, pre-selection cuts, and the use of the multivariate classifier for the classification.  The performance of the tau decay mode classification will be given, followed by the \ECAL optimisation study using the tau decay mode classification. Lastly, the  tau decay mode classification is further used in a proof-of-principle analysis to demonstrate the ability to identify \PHiggs from \PZ using the tau pair decay channel.
 
 
+In \Chapter{chap:DoubleHiggs}, a full \CLICILD detector simulation study has been performed for the double Higgs production channel, \eeToHH, via \WW fusion. Event generation and simulation will be discussed first. An overview of the analysis, including lepton finding and jet reconstruction, is presented, followed by an optimised multivariate analysis to distinguish signal from background processes. The optimised event selection is used to derive an estimate of the uncertainty on  \gHHH and \gWWHH measurements at the \CLIC. 
 
-Photon - passage through matter. Photon electromagnetic shower
-
-
-Since Higgs discovery in the \LHC in 2012, Higgs
-
-
-
-Ha there is a higgs.
-
-We found higgs. Higgs is cool. It explains mass.
-
-Why double higgs. Double higgs coulpling is unique to linear collider. It can revel much about the BSM models.
-
-Generator level study has performed. ILC has done this this and that. gHHH in CLIC before
-
-Here we do things differently. First subchannels, then extract both couplings simultaneously.
+This thesis finishes with \Chapter{chap:summary}, where a summary is provided.
