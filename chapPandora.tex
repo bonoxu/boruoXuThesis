@@ -22,6 +22,9 @@ Monte Carlo (MC) event generation is often the first step for the simulated stud
 For all the simulated events used in this thesis, the simulation software used to simulate the interaction of particles through the detector material is the GEANT4 software \cite{Agostinelli:2002hh}. The detector geometry description is provided by the MOKKA software \cite{MoradeFreitas:2002kj}.  The QGSP\_BERT physics list is used to describe the hadronic shower decay in the detector.
 
 %The  QGSP\_BERT physics list uses the Bertini model \cite{Proceedings:2003lxa} at low energies, making a transition to the Low Energy Parameterisations (GHEISHA \cite{TechnicalReportPITHA 85-02}) model between 9.5 and 9.9\,GeV, and a further transition to the QGSP model between 12 and 25\,GeV.  QGSP model is a GEANT4 implementation of a string model~\cite PhysRevLett.67.1523 for the high energy interaction, supplemented by the  GEANT4} precompound model\cite{mazzucato2001proceedings}
+%QGSP is the basic physics list applying the quark gluon string model for high energy interactions of protons, neutrons, pions, and Kaons and nuclei. The high energy interaction creates an exited nucleus, which is passed to the precompound model modeling the nuclear de-excitation.
+%QGSP_BERT and QGSP_BERT_EMV
+%Like QGSP, but using Geant4 Bertini cascade for primary protons, neutrons, pions and Kaons below ~10GeV. In comparison to experimental data we find improved agreement to data compared to QGSP which uses the low energy parameterised (LEP) model for all particles at these energies. The Bertini model produces more secondary neutrons and protons than the LEP model, yielding a better agreement to experimental data.
 
 \section{Event Reconstruction}
 
@@ -30,18 +33,20 @@ With simulated events (or real data in the future) as inputs, the next step is t
 \section{\pandora event reconstruction}
 \label{sec:pandoraPandoraPFA}
 
-The tradition energy flow approach to calorimetry is unable to meet the mass and energy resolution requirements for future linear colliders. The particle flow approach to calorimetry with \pandora has a proof-of-principle demonstration of its capability to reach the required resolution. The particle flow approach also put stringent requirements on the detector design, which is described in \Section{sec:detectorPhysicsRequirementPandora}. By associating calorimeter hits to the tracks, around 60\% of the jet energy from charged particles is measured by the tracker, which has a much better resolution than the calorimeter. Small cell sizes of the calorimeters are required to identify hits from different particles. The traditional sum of calorimeter cell energies is replaced by particle flow reconstruction algorithms - a complex pattern recognition problem.  The \pandora algorithm has been developed and used in the \ILC and \CLIC simulation studies. There are over 60 linear collider specific reconstruction algorithms. Each aims to address a particular topological issue in the reconstruction.
+The tradition energy flow approach to calorimetry is unable to meet the mass and energy resolution requirements for future linear colliders. The particle flow approach to calorimetry with \pandora has a proof-of-principle demonstration of its capability to reach the required jet energy resolution. The particle flow approach to calorimetry  also puts stringent requirements on the detector design, which is described in \Section{sec:detectorPhysicsRequirementPandora}. By associating calorimeter hits to the tracks, around 60\% of the jet energy from charged particles is measured by the tracking detector, which has a much better resolution than the calorimeter. Small cell sizes of the calorimeters are required to identify calorimeter hits from different particles. The traditional sum of calorimeter cell energies is hence replaced by particle flow reconstruction algorithms - a complex pattern recognition problem.
 
-Developed with the \ILD detector concept, \pandora has been adapted to the \CLIC condition and shows its ability to deliver required energy resolutions \cite{Linssen:2012hp}.  In the recent development, the core base codes for basic object and memory managements are factorised in the Pandora C++ Software Development Kit\cite{Marshall:2015rfa}.
+%The \pandora algorithm has been developed and used in the \ILC and \CLIC simulation studies.
+Developed with the \ILD detector concept, \pandora has been adapted to the \CLIC condition and shows its ability to deliver required energy resolutions \cite{Linssen:2012hp}.  I There are over 60 electron-positron linear collider specific reconstruction algorithms. Each aims to address a particular topological issue in the reconstruction. In the recent development, the core base codes for basic object and memory managements are factorised in the Pandora C++ Software Development Kit\cite{Marshall:2015rfa}.
 % Recent the code base of the \pandora has been restructured.
-In the subsequent sections, the main steps in the \pandora reconstructions are described. The details of the reconstruction can be found in \cite{Thomson:2009rp,Marshall:2012ry,Marshall:2015rfa}. The inputs of \pandora are digitised calorimeter hits and reconstructed tracks, with some detector geometry information to aid the reconstruction. The output are reconstructed particles with four-momenta, also known as the Particle Flow Objects (\PFOs).
+
+In the subsequent sections, the main steps in the \pandora reconstructions are summarised below. The details of the \pandora event reconstruction can be found in \cite{Thomson:2009rp,Marshall:2012ry,Marshall:2015rfa}.  The inputs of \pandora are digitised calorimeter hits and reconstructed tracks, with some detector geometry information to aid the reconstruction. The output are reconstructed particles with four-momenta, also known as the Particle Flow Objects (\PFOs).
 
 \subsection{Track selection}
 \label{sec:pandoraPandoraTrack}
 
 Tracks from the inner tracking detectors are important inputs of the \pandora reconstruction. These tracks are selected based on their topological properties, how likely they are from physical processes, and whether they are consistent with the tracker resolution. Only tracks passing the selection are used for the subsequent reconstruction.
 
-Special topologies of tracks are identified, such as when a neutral particle decays or converts into a pair of charged tracks, leaving tracks of a ``V0''  shape. This is identified by searching for a pair of tracks originated from a single point. Another topology is the ``kinks'' when a charged particle decays to a single charged particles with neutral particles. The last special topology are  the ``prongs'' when a charged particle decays to multiple charged particles. This information is stored and passed on to the subsequent reconstruction, along side with helical track fit (using last 50 reconstructed tracker hits) and the track projection to the front of the \ECAL.
+Special topologies of tracks are identified, such as when a neutral particle decays or converts into a pair of charged tracks, leaving tracks of a ``V0''  shape. This is identified by searching for a pair of tracks originated from a single point. Another topology is the ``kinks'' when a charged particle decays to a single charged particles with neutral particles. The last special topology are  the ``prongs'' when a charged particle decays to multiple charged particles. This information about special topologies is stored and passed on to the subsequent reconstruction, along side with helical track fit (using last 50 reconstructed tracker hits) and the track projection to the front of the \ECAL.
 
 \subsection{Calorimeter selection}
 
@@ -49,7 +54,7 @@ The other important inputs of  the \pandora reconstruction are the calorimeter h
 
 Calorimeter hits are selected based on a series of criterion. The selected hits need to have energies above certain thresholds, measured in minimum ionising particle (MIP) equivalent or measured in directly converted energy. Similar to tracks, only calorimeter hits that pass the selection are used in later steps.
 
-Extra information about calorimeter hits are calculated, stored and to be used in the later steps. The information includes the geometry information of the hit and likelihood of the hit originated from a minimum ionising particle (MIP).
+Extra information about calorimeter hits are calculated, stored and used in later steps. The extra information includes the geometry information of the hit and likelihood of the hit originated from a minimum ionising particle (MIP).
 
 Isolated hits, often originating from low energy neutrons in a hadronic shower, are difficult to associate to the correct hadronic shower. They are identified and not used during the clustering stage. However, these isolated hits participate in the reconstruction during the  last step, particle flow object (PFO) creation, to contribute to the energy estimation.
 
@@ -57,7 +62,12 @@ Isolated hits, often originating from low energy neutrons in a hadronic shower, 
 \subsection{Particle Identification}
 \label{sec:particleID}
 
-To improve the reconstruction of the charged particles, where calorimeter hits are associated to tracks, dedicated particle identification algorithms identify muons and photons and remove identified particles from the reconstruction. By removing the hits from muons and photons, the reconstruction of charged particles is improved as fewer hits are left to be reconstructed. Hence the pattern recognition problem is reduced. Identified muons and photons do not participate in the later clustering and re-clustering stages, but re-enter the reconstruction at the fragment removal stage (see \Section{sec:pandoraFragmentRemoval}). The details of the photon reconstruction algorithms and photon related algorithms are described in \Chapter{chap:Photon}.
+To improve the reconstruction of the charged particles, where calorimeter hits are associated to tracks, dedicated particle identification algorithms identify calorimeter hits associated with muons and photons. These calorimeter hits are removed from the subsequent reconstruction. As fewer hits are left to be reconstructed, the reconstruction of charged particles is improved and the pattern recognition problem is simplify .
+
+Identified muons and photons do not participate in the later clustering and re-clustering stages, but re-enter the reconstruction at the fragment removal stage (see \Section{sec:pandoraFragmentRemoval}). See \Chapter{chap:Photon} for details of the photon reconstruction  related algorithms..
+
+
+ 
 %Dedicated particle identification algorithms aim to identify muons and photons before associating calorimeter hits to tracks.
 
 
