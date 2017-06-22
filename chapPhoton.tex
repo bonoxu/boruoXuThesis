@@ -220,7 +220,7 @@ The performance of the two dimensional peaking finding algorithm is improved by 
 
 The peak filtering step also allows bins with height below a critical value to not participate in the peak finding. The default value is set such that only empty bins are not used.
 
-The \ShowerPeak  object is created, which contains one peak bin and associated non-peak bins. The associated calorimeter hits with the bins are attached to the \ShowerPeak object as well. If multiple peaks are identified in a cluster, multiple \ShowerPeak objects are created as outputs. 
+The \ShowerPeak  object is created, which contains one peak bin and associated non-peak bins. The associated calorimeter hits with the bins are attached to the \ShowerPeak object as well. If multiple peaks are identified in a cluster, multiple \ShowerPeak objects are created as outputs.
 
 This marks the end of the neutral clusters variant of the \PhotonReconstruction algorithm, outlined in \Figure{fig:photonPeakFindingFlowNeutral}. The  \ShowerPeak object is also referred to as the photon candidate.
 
@@ -310,7 +310,7 @@ Distance to track &  $d$ \\
     \label{fig:photonMinDistanceToTrack}
   \end{subfigure}
 \caption
-{Distributions for a) the start layer from the longitudinal shower profile ($t_0$), b)  the fractional difference of the observed shower profile to the expected EM shower profile ($\delta{l}$), c) the energy weighted root-mean-squared distance of all bins in a \ShowerPeak to its peak bin ($\langle{w}\rangle$), and d) the distance between the photon candidate and the closest track projection in the front of the \ECAL ($d$) are shown. All plots are normalised, shown for photons and non-photons, where the particle ID is determined using the truth information. All plots are generated with  simulated 500\,GeV \Zprime\Zprime events, where  \Zuds.}
+{Distributions for a) the start layer from the longitudinal shower profile ($t_0$), b)  the fractional difference of the observed shower profile to the expected EM shower profile ($\delta{l}$), c) the energy weighted root-mean-squared distance of all bins in a \ShowerPeak to its peak bin ($\langle{w}\rangle$), and d) the distance between the photon candidate and the closest track projection in the front of the \ECAL ($d$) are shown. All plots are normalised, shown for photons and non-photons, where the particle ID is determined using the truth information. All plots are generated with  simulated 500\,GeV \Zprime events, where  \Zuds.}
 \label{fig:photonVarLikelihood}
 \end{figure}
 
@@ -325,7 +325,7 @@ Projective likelihood classifier  with probability density estimators is used in
 
 The probability distribution of each variable for photons and non-photons are obtained in the training stage. The distributions of these variables are normalised to probability distribution, stored in binned histograms. The classifier is improved by realising the variable distributions varies with photon energies. Thus the variables distributions are stored separately for different photon energies. There are default 8 energy bins, cutting at 0.2, 0.5, 1, 1.5, 2.5, 5, 10, 20\,GeV, which covers a good range of photon energies. The classifier training typically uses simulated 250\,GeV jet events, with sample \Zuds. High energy jets allow the training for high energy photon candidates.
 
-%Thus these distributions are divided by a range of photon energies. The default energy bins edges are 
+%Thus these distributions are divided by a range of photon energies. The default energy bins edges are
 
 After training, for a given photon candidate with the energy in the energy bin $\alpha$, the likelihood classifier output is given by
 \begin{equation}
@@ -505,7 +505,7 @@ High energy fragment recovery&  Cuts\\
 
 Algorithms described above deal with forming photons from calorimeter hits in the \ECAL, merging photon fragments in the \ECAL and the \HCAL. Another aspect in photon reconstruction is splitting accidentally merged photons. During the particle reconstruction, it is possible that photons are accidentally merged if they are spatially close. Hence another algorithm at the end of the particle reconstruction addresses this issue and tries to split merged photons. This algorithm focuses on energetic photons with energy > 10\,GeV.
 
-%Merged photons are typically energetic. 
+%Merged photons are typically energetic.
 A merged photon should be consistent with topologies of a spatially closed photon pair. Extra care should be taken if the photon is close to a charged tracks. Many \pandora algorithms deal with track clusters association and there is a great confidence in clusters associated with tracks.
 
 
@@ -705,7 +705,7 @@ The improvement of the photon is also demonstrated in \Chapter{chap:Tau}, where 
 
 
 
-%As stated before, the photon reconstruction algorithm in \Section{sec:photonRecostrcution} and the photon splitting algorithm in \Section{sec:photonSplitting}  improves the photon completeness and the photon pair resolution. The fragment removal algorithm in \Section{sec:photonFragRemoval} removes fragments in the \ECAL. High energy fragment removal algorithm in \Section{sec:photonHighEFragRemoval} removes fragments in the \HCAL. 
+%As stated before, the photon reconstruction algorithm in \Section{sec:photonRecostrcution} and the photon splitting algorithm in \Section{sec:photonSplitting}  improves the photon completeness and the photon pair resolution. The fragment removal algorithm in \Section{sec:photonFragRemoval} removes fragments in the \ECAL. High energy fragment removal algorithm in \Section{sec:photonHighEFragRemoval} removes fragments in the \HCAL.
 
 To show the incremental improvement of individual algorithm, the average number of particle for a high energy photon pair, 500 - 500\,GeV is shown in \Figure{fig:photonDoubleCompareAlgs}. Blue, orange, and green dots represent full photon reconstruction, only fragment removal algorithms in the \ECAL, and fragment removal algorithms in the \ECAL and the \HCAL, respectively.
 
