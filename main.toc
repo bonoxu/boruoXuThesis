@@ -43,26 +43,26 @@
 \contentsline {subsection}{\numberline {4.4.7}Re-clustering}{39}{subsection.4.4.7}
 \contentsline {subsection}{\numberline {4.4.8}Fragment removal}{40}{subsection.4.4.8}
 \contentsline {subsection}{\numberline {4.4.9}Particle Flow Object Creation}{41}{subsection.4.4.9}
-\contentsline {section}{\numberline {4.5}The \CLIC specific simulation and reconstruction}{41}{section.4.5}
+\contentsline {section}{\numberline {4.5}The \CLIC specific simulation and reconstruction issue}{41}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Luminosity spectrum}{41}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Beam induced backgrounds}{42}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}\CLIC simulated particle masses}{43}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Analysis software}{44}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Monte Carlo truth linker}{44}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Jet algorithms}{44}{subsection.4.6.2}
-\contentsline {subsubsection}{\nonumberline \kt algorithm}{45}{section*.25}
-\contentsline {subsubsection}{\nonumberline Durham algorithm}{46}{section*.26}
-\contentsline {subsubsection}{\nonumberline Jet algorithm for the \CLIC }{46}{section*.27}
+\contentsline {section}{\numberline {4.6}Analysis software}{45}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Monte Carlo truth linker}{45}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Jet algorithms}{45}{subsection.4.6.2}
+\contentsline {subsection}{\numberline {4.6.3}\kt algorithm}{46}{subsection.4.6.3}
+\contentsline {subsection}{\numberline {4.6.4}Durham algorithm}{47}{subsection.4.6.4}
+\contentsline {subsection}{\numberline {4.6.5}Jet algorithm for the \CLIC }{47}{subsection.4.6.5}
 \contentsline {section}{\numberline {4.7}Multivariate Analysis}{47}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Optimisation and overfitting}{47}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.1}Optimisation and overfitting}{48}{subsection.4.7.1}
 \contentsline {subsection}{\numberline {4.7.2}Choice of models}{49}{subsection.4.7.2}
-\contentsline {subsubsection}{\nonumberline Rectangular Cut model}{49}{section*.29}
-\contentsline {subsubsection}{\nonumberline Projective Likelihood model}{50}{section*.30}
-\contentsline {subsubsection}{\nonumberline Decision tree model}{50}{section*.31}
-\contentsline {paragraph}{\nonumberline To improve decision tree}{52}{section*.35}
-\contentsline {subsubsection}{\nonumberline Boosted decision tree model}{52}{section*.36}
-\contentsline {paragraph}{\nonumberline Optimisation of Boosted Decision Tree}{54}{section*.37}
-\contentsline {subsection}{\numberline {4.7.3}Multiple classes}{55}{subsection.4.7.3}
+\contentsline {subsection}{\numberline {4.7.3}Rectangular Cut model}{50}{subsection.4.7.3}
+\contentsline {subsection}{\numberline {4.7.4}Projective Likelihood model}{50}{subsection.4.7.4}
+\contentsline {subsection}{\numberline {4.7.5}Decision tree model}{51}{subsection.4.7.5}
+\contentsline {subsection}{\numberline {4.7.6}To improve decision tree}{52}{subsection.4.7.6}
+\contentsline {subsection}{\numberline {4.7.7}Boosted decision tree model}{53}{subsection.4.7.7}
+\contentsline {subsection}{\numberline {4.7.8}Optimisation of Boosted Decision Tree}{55}{subsection.4.7.8}
+\contentsline {subsection}{\numberline {4.7.9}Multiple classes}{56}{subsection.4.7.9}
 \contentsline {chapter}{\numberline {5}Photon Reconstruction in \pandora }{57}{chapter.5}
 \contentsline {section}{\numberline {5.1}Overview of photon reconstruction in \pandora }{58}{section.5.1}
 \contentsline {section}{\numberline {5.2}Electromagnetic shower}{59}{section.5.2}
@@ -110,9 +110,9 @@
 \contentsline {section}{\numberline {6.9}Separating \PHiggs from \PZ with tau pair decay}{105}{section.6.9}
 \contentsline {subsection}{\numberline {6.9.1}Event pre-selection}{106}{subsection.6.9.1}
 \contentsline {subsection}{\numberline {6.9.2}Find tau decay products}{106}{subsection.6.9.2}
-\contentsline {subsubsection}{\nonumberline Direct tau searching}{107}{section*.73}
-\contentsline {subsubsection}{\nonumberline Jet clustering}{107}{section*.75}
-\contentsline {subsubsection}{\nonumberline Select tau candidates}{107}{section*.76}
+\contentsline {subsubsection}{\nonumberline Direct tau searching}{107}{section*.64}
+\contentsline {subsubsection}{\nonumberline Jet clustering}{107}{section*.66}
+\contentsline {subsubsection}{\nonumberline Select tau candidates}{107}{section*.67}
 \contentsline {subsection}{\numberline {6.9.3}Boost tau decay products to \PZ decay rest frame}{108}{subsection.6.9.3}
 \contentsline {subsection}{\numberline {6.9.4}Variables used in the MVA}{109}{subsection.6.9.4}
 \contentsline {subsection}{\numberline {6.9.5}Multivariate analysis}{110}{subsection.6.9.5}
@@ -122,11 +122,11 @@
 \contentsline {section}{\numberline {7.2}Monte Carlo sample generation}{115}{section.7.2}
 \contentsline {section}{\numberline {7.3}Lepton identification}{116}{section.7.3}
 \contentsline {subsection}{\numberline {7.3.1}Electron and muon identification}{118}{subsection.7.3.1}
-\contentsline {subsubsection}{\nonumberline \IsolatedLeptonFinderProcessor }{118}{section*.80}
-\contentsline {subsubsection}{\nonumberline \BonoLeptonFinder }{119}{section*.82}
+\contentsline {subsubsection}{\nonumberline \IsolatedLeptonFinderProcessor }{118}{section*.71}
+\contentsline {subsubsection}{\nonumberline \BonoLeptonFinder }{119}{section*.73}
 \contentsline {subsection}{\numberline {7.3.2}Tau lepton identification}{119}{subsection.7.3.2}
-\contentsline {subsubsection}{\nonumberline \TauFinderProcessor }{120}{section*.84}
-\contentsline {subsubsection}{\nonumberline \BonoTauFinder }{121}{section*.86}
+\contentsline {subsubsection}{\nonumberline \TauFinderProcessor }{120}{section*.75}
+\contentsline {subsubsection}{\nonumberline \BonoTauFinder }{121}{section*.77}
 \contentsline {subsection}{\numberline {7.3.3}Very forward electron identification}{122}{subsection.7.3.3}
 \contentsline {subsection}{\numberline {7.3.4}Lepton identification performance}{124}{subsection.7.3.4}
 \contentsline {section}{\numberline {7.4}Jet reconstruction}{126}{section.7.4}
@@ -154,6 +154,6 @@
 \contentsline {chapter}{\numberline {8}Summary and outlook}{165}{chapter.8}
 \contentsline {chapter}{\numberline {A}Double Higgs Boson Production Analysis}{167}{appendix.A}
 \contentsline {section}{\numberline {A.1}\rootS {3} analysis}{167}{section.A.1}
-\contentsline {chapter}{Bibliography}{173}{chapter*.125}
-\contentsline {chapter}{List of figures}{179}{chapter*.126}
-\contentsline {chapter}{List of tables}{185}{chapter*.127}
+\contentsline {chapter}{Bibliography}{173}{chapter*.116}
+\contentsline {chapter}{List of figures}{179}{chapter*.117}
+\contentsline {chapter}{List of tables}{185}{chapter*.118}
