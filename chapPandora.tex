@@ -73,7 +73,7 @@ Identified muons and photons do not participate in the later clustering and re-c
 
 A cone based clustering algorithm is used to group calorimeter hits into clusters. The output \clusters are further processed, merged, or split based on their topological properties. Since the cone clustering algorithm is widely used in many other reconstruction algorithms in the \pandora, it is necessary to introduce the cone based clustering algorithm, before discussing the rest of the \pandora reconstruction.
 
-There are two main types of clustering algorithms: cone based algorithms and sequential combination algorithms (see \Section{sec:pandoraJetAlg}). The main type of clustering algorithms used in the  \pandora is the cone based algorithms. Illustrated in \Figure{fig:pandoraConeClustering}, cone based clustering algorithm identifies a seed first, shown as the yellow dot. The algorithm then forms a cone to include hits that are within a specified opening angle to the seed. Afterwards the cone with the associated hits form the cluster. 
+There are two main types of clustering algorithms: cone based algorithms and sequential combination algorithms (see \Section{sec:pandoraJetAlg}). The main type of clustering algorithms used in the  \pandora is the cone based algorithms. Illustrated in \Figure{fig:pandoraConeClustering}, cone based clustering algorithm identifies a seed first, shown as the yellow dot. The algorithm then forms a cone to include hits that are within a specified opening angle to the seed. Afterwards the cone with the associated hits form the cluster.
 
 
 
@@ -86,7 +86,7 @@ There are two main types of clustering algorithms: cone based algorithms and seq
 \label{fig:pandoraConeClustering}
 \end{figure}
 
-The cone based clustering algorithm is preferred in \pandora because the direction of the particle flow is largely unchanged from the originated particle, irrespective of  the particle flow being an electromagnetic shower, QCD radiation, or hadronisation. \FIGURE{fig:pandoraConeClustering2} shows the clustering algorithm used in the \pandora. The seed for the cone clustering is typically the projection of a track to the front of the \ECAL. A calorimeter hit can also be used as a seed. The initial cluster direction is taken as the direction of the seed. Afterwards, a cone with a specified opening angle and depth will be formed around the direction of the seed. 
+The cone based clustering algorithm is preferred in \pandora because the direction of the particle flow is largely unchanged from the originated particle, irrespective of  the particle flow being an electromagnetic shower, QCD radiation, or hadronisation. \FIGURE{fig:pandoraConeClustering2} shows the clustering algorithm used in the \pandora. The seed for the cone clustering is typically the projection of a track to the front of the \ECAL. A calorimeter hit can also be used as a seed. The initial cluster direction is taken as the direction of the seed. Afterwards, a cone with a specified opening angle and depth will be formed around the direction of the seed.
 
 The building of the cone is iterated from the inner layer of the \ECAL to the outer layer. At each layer, possible associations with calorimeters hits in previous layers and the same layer are made. If a calorimeter hit is not associated with the cone, the hit is used to seed a new cluster. The clustering algorithm produces basic working objects, \clusters.
 
@@ -130,7 +130,7 @@ Having refined the clusters in the calorimeter, the next step is to associate th
 
 \subsection{Re-clustering}
 
-The cluster association scheme described in the previous section works well for events with low-energy (less than 50\,GeV) jets. For an environment with  high-energy jets, electromagnetic and  hadronic showers are  boosted and are likely to overlap each other. Therefore, it is important to refine the track-cluster association based on the momentum and the energy information. 
+The cluster association scheme described in the previous section works well for events with low-energy (less than 50\,GeV) jets. For an environment with  high-energy jets, electromagnetic and  hadronic showers are  boosted and are likely to overlap each other. Therefore, it is important to refine the track-cluster association based on the momentum and the energy information.
 
 The re-clustering stage improves the on the compatibility of the cluster energy and the associated track momentum. It is performed on a statistical basis. If the cluster energy and the associated track momentum do not match, the cluster will be re-clustered either using the same clustering algorithm with different parameters, or different clustering algorithms. This re-clustering step creates many temporary clusters. Afterwards, out of many temporary clusters, the temporary cluster has the best track-momentum energy-cluster match is chosen, and the temporary cluster is  associated with the track.
 
@@ -213,9 +213,9 @@ The beam induced background deposits significant amounts of energies in the dete
 The track selector aims to remove poor quality and fake tracks that are more likely from the beam induced background. It places a simple track-quality cut and a time-of-arrival cut on tracks. If the arrival time of the track at the front of the \ECAL, using the helical fit of the track, differs more than 50\,ns from using a straight line fit, the track will be rejected.
 
 
-The PFO selector discards PFOs that are originated from the beam induced background from the event reconstruction, based on the transverse momentum (\pT) and time information of the PFOs. The PFOs from \ggHad often have low \pT and have a range of time-of-arrivals. In contrast, the PFOs from physics processes have a range of \pT, and the time-of-arrivals are close to the brunch crossing time. By utilising the high spatial resolution from the high granular calorimeter, individual PFOs can be tracked and reconstructed. 
+The PFO selector discards PFOs that are originated from the beam induced background from the event reconstruction, based on the transverse momentum (\pT) and time information of the PFOs. The PFOs from \ggHad often have low \pT and have a range of time-of-arrivals. In contrast, the PFOs from physics processes have a range of \pT, and the time-of-arrivals are close to the brunch crossing time. By utilising the high spatial resolution from the high granular calorimeter, individual PFOs can be tracked and reconstructed.
 
-The PFO selector uses different \pT and time cuts for the central part of the detector and for the forward part of the detector. For the best performance, there are different cuts for different types of particles: photons, neutral PFOs, and charged PFOs. Three configurations of these cuts are developed, namely ``loose'', ``normal'', and ``tight'' selections. As the name suggested, ``loose'' selection corresponds to a looser cut of \pT and time-of-arrival, allows a larger value of \pT and time-of-arrival. 
+The PFO selector uses different \pT and time cuts for the central part of the detector and for the forward part of the detector. For the best performance, there are different cuts for different types of particles: photons, neutral PFOs, and charged PFOs. Three configurations of these cuts are developed, namely ``loose'', ``normal'', and ``tight'' selections. As the name suggested, ``loose'' selection corresponds to a looser cut of \pT and time-of-arrival, allows a larger value of \pT and time-of-arrival.
 
 The optimal configuration depends on the centre-of-mass energy of the collision, and the physics process to study. \FIGURE{fig:pandoraEvtDisplayggHad} shows the effect of the suppression of the background with the tight \PFO selection. Reconstructed particles  in a simulated \HepProcess{\Pep\Pem \to \PHiggs\PHiggs \to \Ptop\APbottom\Pbottom\APtop}  are integrated over a time window of 10\,ns (100 \,ns in \HCAL barrel) event in the \CLICILD detector model, with 60 bunch crossings of \ggHad background overlaid in \Figure{fig:pandoraEvtDisplayggHad1}. The effect of applying tight \PFO section cuts is shown in \Figure{fig:pandoraEvtDisplayggHad2}. The energy deposited in the detector by the background is reduced from \rootS{1.2} to the level of \rootSGeV{100}.
 
@@ -298,7 +298,7 @@ where $\pT_{i}$ is the transverse momentum of particle $i$ with respect to the b
 
 If $d_{ij} < d_{iB}$, particle $i$ and $j$ are merged.  \fourMomentum of particle $i$ is updated as the sum of the two particles. Otherwise if $d_{ij} \geqslant d_{iB}$, particle $i$ is set to be a final jetThe above procedure is repeated until no particles are left.
 
-The exclusive variant is similar to the inclusive variant. First difference is that when  $d_{iB} < d_{ij}$, particle $i$ forms part of the beam jet. The beam jet contains particles that are considered to be from the beam induced background. The beam jet is not used as a output. The second difference is that when both $d_{ij}$ and $d_{iB}$ are above some threshold, $d_{cut}$, the clustering will stop. In another word, the exclusive mode allows a specified number of jets to be found, where the $d_{cut}$ is automatically determined. The inclusive mode, on the other hand, would find as many jets as the algorithm allows. 
+The exclusive variant is similar to the inclusive variant. First difference is that when  $d_{iB} < d_{ij}$, particle $i$ forms part of the beam jet. The beam jet contains particles that are considered to be from the beam induced background. The beam jet is not used as a output. The second difference is that when both $d_{ij}$ and $d_{iB}$ are above some threshold, $d_{cut}$, the clustering will stop. In another word, the exclusive mode allows a specified number of jets to be found, where the $d_{cut}$ is automatically determined. The inclusive mode, on the other hand, would find as many jets as the algorithm allows.
 
 %An example usage of the exclusive \kt algorithm can be found in \Section{sec:doubleHiggsJetOptimisation}.
 
@@ -458,7 +458,7 @@ The model can be as simple as a cut-based model, a likelihood estimator, or a li
 \subsection{Rectangular Cut model}
 
 The rectangular cut method, probably the most intuitive model, optimise cuts to maximise some pre-defined metrics. The metric could be the signal efficiency for a particular background efficiency. Alternatively, the metric can be the significance, $\frac{S}{\rootOf{S\!+\!B}}$, where $S$ and $B$ are signal and background numbers passing the rectangular cuts, respectively.
- 
+
 Discriminative variables give better separation power when they are gaussian-like and statistically independent. Therefore it is common to decorrelate  the variables and gaussian transform them before using the rectangular cut MVA.
 
 Because of its simplicity, the cut method is often performed manually, much more often at times pre-dating the spread of machine learning methods. It is still commonly used in the analyses in  the pre-selection step before the MVA.
@@ -592,7 +592,7 @@ TMVA implementation of the BDT for the output is using a likelihood estimator, d
 \subsection{Optimisation of Boosted Decision Tree}
 \label{sec:pandoraMVAbdtVar}
 
-Many parameters of the BDT can be optimised. The most important parameter is the depth of a tree, which determines how many end nodes the tree has, or the degrees of freedom of the tree. The related parameter is the number of trees. Experience shows that using many small trees yields the best result. 
+Many parameters of the BDT can be optimised. The most important parameter is the depth of a tree, which determines how many end nodes the tree has, or the degrees of freedom of the tree. The related parameter is the number of trees. Experience shows that using many small trees yields the best result.
 
 The number of trees is another important parameter. Intuitively large number of trees leads to overfitting. However, it has been shown that a large number does not lead to overfitting. Therefore there is a debate on the metric to determine the optimal number of trees.
 

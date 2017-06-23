@@ -52,7 +52,7 @@ The classification of the tau lepton decay modes are then  repeated for differen
 \section{Samples for the analysis}
 \label{sec:tauDecayModes}
 
-%\section{Select single tau decay}  in a \ee collider 
+%\section{Select single tau decay}  in a \ee collider
 The studied tau lepton decay channel is \eeToTauTau, with a centre-of-mass energy of 100\,GeV.  An event display of \eeToTauTau interaction is shown in \Figure{fig:tauEvtDsp}, simulated with the \ILD detector model. The \eeToTauTau channel contains two tau leptons travelling in opposite directions. Since the tau decay mode classification is applied on a per tau lepton basis, the decay products of two taus in one event are divided into two collections for separate classification. Each collection of particles corresponds  to the decay products of one tau lepton.
 
 The principle thrust axis vector is used to separation particles into two collections. Two collections are obtained based on the sign of the scalar product between the principle thrust axis vector  and the momentum vector of a particle. The principle thrust axis vector, $\hat{t}$, is defined via maximising the classical event shape thrust \cite{PhysRevLett.39.1587}, $T$:
@@ -512,13 +512,15 @@ The increase in \ECAL cell sizes has a larger impact in tau decay classification
 \end{figure}
 
 
-\section{Separating \PHiggs from \PZ with tau pair decay}
+\section{Tau pair polarisation correlations as a signature of Higgs boson}
 \label{sec:tauHZ}
-\PHiggs can be separated from  \PZ using  tau pair decay channel. Comparing \HiggsToTauTau  and \ZToTauTau, the difference in the spin of the bosons reflects in the different polarisation correlation of the tau pair. By extracting the polarisation correlation of the tau pair, the parent boson can be identified. A proof-of-principle analysis, motivated by a theoretical study in \cite{Bullock:1991my}, is performed utilising the tau decay mode classification. The theoretical motivation is described in \Section{sec:theoryTauPair}. The subsequent sections discuss the ability to reconstruct the polarisation correlation of the tau pair with \ZToTauTau channel.
 
-The analysis largely follows the same procedure for the tau decay mode classification. Differences are highlighted in sections below.
+Many BSM theories predict the \HigssTauTau coupling would dominate the Higgs boson couplings to leptons. Therefore, if an experiment observes an excess of tau pair decay events, it could be an indication of the Higgs boson. Here, this section follows the theoretical discussion in \Section{sec:theoryTauPair} to present a proof-of-principle analysis using tau pair polarisation correlation as a signature of Higgs boson.
 
 
+\PHiggs can be separated from  \PZ using  tau pair decay channel. Comparing \HiggsToTauTau  and \ZToTauTau, the difference in the spin of the bosons reflects in the different polarisation correlation of the tau pair. By extracting the polarisation correlation of the tau pair, the parent boson can be identified.
+
+The subsequent sections discuss the ability to reconstruct the polarisation correlation of the tau pair with \ZToTauTau channel, where both \tauToPion. The analysis starts with the event pre-selection, followed by identifying the tau decay products in the events. Afterwards, the tau decay mode classification is used to identify \tauToPion decays. Lastly the tau pair polarisation correlation is presented.
 
 \subsection{Event pre-selection}
 
@@ -611,7 +613,7 @@ Half of the sample is used to train the multivariate classifier,  which follows 
 
 \FIGURE{fig:TauSpin2D} shows the two-dimensional plot of tau pair polarisation correlations from \PZ decay,  using \tauToPion decay mode, with \eeZZ channel where one \PZ decays to a tau pair and the other \PZ decays hadronically. The energy fractions of the tau decay product to the tau lepton are the appropriate kinematic variables, motivated in \Section{sec:theoryTauPair}. \FIGURE{fig:TauSpin2DMC} shows the distribution obtained with the MC particles. \FIGURE{fig:TauSpin2Dreco} shows the distribution using full detector simulation. In the \ZToTauTau decays, an energetic \Ppiplus is likely to be associated with an energetic \Ppiminus and a low-energy \Ppiplus is  likely to be associated with a low-energy \Ppiminus. This trend is shown in both the distribution produced with the MC particles and with the full detector simulation. Comparing the two figures in\FIGURE{fig:TauSpin2D}, some events in the top right quadrant, resembling both \Ppipm being energetic, are not reconstructed correctly. This is due to the incorrect finding of the tau pair decay products (\Section{sec:tauHZfindTau}).
 
-This proof-of-principle analysis shows the tau polarisation correlations with \ZToTauTau decay where \tauToPion can be observed with \ILD detector model. With a similar study of \HiggsToTauTau,  the tau polarisation correlations can be used to separate \PHiggs from \PZ.
+This proof-of-principle analysis shows the tau polarisation correlations with \ZToTauTau decay where \tauToPion can be observed with \ILD detector model. With a similar study of \HiggsToTauTau,  the tau polarisation correlations can be used to separate \PHiggs from \PZ, and to identify Higgs boson in an experiment that observes the breaking of the lepton universality by favouring tau pair events.
 
 
 \begin{figure}[htbp]
