@@ -1,4 +1,4 @@
-\chapter{Summary and outlook}
+\chapter{Summary}
 \label{chap:summary}
 
 %% Restart the numbering to make sure that this is definitely page #1!
@@ -19,12 +19,47 @@
 
 %\section{Summary}
 
-This chapter summarises key results presented in the analysis in previous chapters.
+This chapter summarises key results presented in analyses in previous chapters.
 
 In \Chapter{chap:Photon}, a set of photon reconstruction related algorithms are presented. The photon fragments produced during the event reconstruction have been greatly reduced. The photon separation power has improved and the jet reconstruction has been improved, as a result of a better photon reconstruction.
 
-In \Chapter{chap:Tau}, a high classification rate of the tau lepton decay mode is achieved. The classification is applied to different electromagnetic calorimeter cell sizes with different centre-of-mass energies. Wit the classification, a proof-of-principle analysis shows the tau polarisation correlations with \ZToTauTau decay where \tauToPion can be observed with \ILD detector model. With a similar study of \HiggsToTauTau,  the tau polarisation correlations can be used to separate \PHiggs from \PZ.
+The single photon reconstruction efficiency is above 98\% for photons above 2\GeV and above 99.5\% for photons above 100\,GeV.
+
+or 500 and 50\,GeV photons pair sample, the average number of photons and particles beyond 20\,mm apart is less than 0.05 above the true value, 2.
+
+For example, 500 - 500\,GeV photon pair and 10 - 10\,GeV photon pair start to be resolved at 6\,mm apart, which is about 1 \ECAL cell. The asymmetrical photon pair,  500 - 50\,GeV and  100 - 10\,GeV pair, starts to be resolved at 10\,mm apart, which is about 2 \ECAL cells.
+
+At 20\,mm apart, two photons in  500 - 500\,GeV pair are fully resolved, where approximately only 60\% of two photons in 10 - 10\,GeV pair are resolved.
+
+In \Chapter{chap:Tau}, a high classification rate of the tau lepton decay mode is achieved. The classification is applied to different electromagnetic calorimeter cell sizes with different centre-of-mass energies. 
+
+For \tauHad at \rootSGeV{100}, the \tauHad decreases from 94\% at 3\,mm cell size, to 91\% at 20\,mm cell size. The decrease is approximately linear to the increase in the cell size. The decrease in \tauHad is greater at \rootSGeV{200}, where \tauHad declined from 94\% at 3\,mm cell size, to 86\% for a \ECAL cell size of  20\,mm. Most significant decrease in the \tauHad occurs at  \rootSGeV{500}, where the \tauHad decreases from 92\% at 3\,mm cell size, to 78\% at 20\,mm cell size. At \rootSGeV{1000}, the \tauHad drops from 85\% at 3\,mm cell size, to 75\% at 20\,mm cell size.
+
+%From 10\,mm cell size onwards, the \tauHad decrease slows down.
+
+The increase in \ECAL cell sizes has a larger impact in tau decay classification at high centre-of-mass energies. With decay products spatially close at high centre-of-mass energies, it is more beneficial to have a smaller \ECAL cell size to reconstruct individual particle.
+
+With the classification, a proof-of-principle analysis shows the tau polarisation correlations with \ZToTauTau decay where \tauToPion can be observed with \ILD detector model. With a similar study of \HiggsToTauTau,  the tau polarisation correlations can be used to separate \PHiggs from \PZ.
+
+
 
 
  In \Chapter{chap:DoubleHiggs}, the analyses of the \eeToHHbbWWFull channel for the Compact Linear Collider at \rootS{1.4} and \rootS{3} are performed. The significance of the signal events are 0.56 and 1.09 assuming an integrated luminosity of 1500$fb^{-1}$ and 2000$fb^{-1}$, for \rootS{1.4}  and \rootS{3} respectively. The extraction of the Higgs trilinear self coupling, \gHHH, and the quartic coupling, \gWWHH, is provided.
 
+The uncertainty on measurement of the Higgs trilinear self coupling $\lambda$, from  \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue} analysis is obtained via \Equation{eqn:doubleHiggs1Dextration}:
+\begin{equation}
+\frac{\Delta\gHHH}{\gHHH}=
+\begin{cases}
+  218\%, & \mbox{at \rootS{1.4}, }  \\
+  135\%, & \mbox{at \rootS{3}}.
+\end{cases}
+\end{equation}
+
+
+Since there are two couplings in this $\chi^2$ surface, the degree of freedom for this fit is 2. A contour of 68\% confidence ($\chi^2 = 2.3$) can be drawn by interpolating between points on the surface. \FIGURE{fig:doubleHiggsCouplingChi2Countour} shows the contour. The counter can be sliced one dimensionally to extract the uncertainty of one coupling for a given value of the other coupling. For example:
+\begin{equation}
+\frac{\Delta\gWWHH}{\gWWHH} \simeq 4.9\% \text{ for \gHHH = $\gHHH_{SM}$}
+\end{equation}
+\begin{equation}
+\frac{\Delta\gHHH}{\gHHH} \simeq 29\% \text{ for \gWWHH = $\gWWHH_{SM}$}
+\end{equation}
