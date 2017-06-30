@@ -9,15 +9,15 @@ Having discovered a Higgs-like particle the \LHC in 2012\cite{Aad:2012tfa,Chatrc
 
 %The Higgs mechanism and the Higgs boson in the Standard Model have been explained in \Chapter{chap:Theory}. even with 3000$fb^{-1}$ of data
 
-In \ee collisions, there are two main constraints to study the double Higgs production,  \eeToHH. Firstly, the process has a small cross section. With 0.149\,fb at \rootS{1.4} and 0.588\,fb at \rootS{3}, it is challenging to select signal events. The other challenge is that at high centre-of-mass energies, events are often boosted.  Many final-state particles are in the forward region of the detector, where the reconstruction performance is inferior to the barrel region.  Particles can escape detection, causing a degradation in the event reconstruction performance.
+In \ee collisions, there are two main challenges with the study the double Higgs production,  \eeToHH. Firstly, the process has a small cross section; 0.149\,fb at \rootS{1.4} and 0.588\,fb at \rootS{3}. The other challenge is that at high centre-of-mass energies, events are often boosted.  Consequently, many final-state particles are in the forward region of the detector, where the reconstruction performance is inferior to the barrel region. In addition, particles can escape detection, causing a degradation in the event reconstruction performance.
 
 
 In this chapter, a full \CLICILD detector simulation study has been performed for the double Higgs production channel, \eeToHH, via \WW fusion. Event generation and simulation will be discussed first. An overview of the analysis, including lepton finding and jet reconstruction, is presented, followed by an optimised multivariate analysis to distinguish signal from background processes. The optimised event selection is used to derive an estimate of the uncertainty on  \gHHH and \gWWHH measurements at the \CLIC. Part  of this analysis has been published in \cite{Abramowicz:2016zbo}.
 %The results of the signal selection are interpreted in the context of the Higgs self coupling.
 
-\section{Analysis Straggly Overview}
+\section{Analysis Strategy Overview}
 
-The study of the double Higgs production via \WW fusion can probe the Higgs trilinear self coupling, \gHHH and quartic coupling, \gWWHH. Leading-order Feynman diagrams for double Higgs production via \WW fusion are shown in \Figure{fig:doubleHiggsFeynman}. The diagram shown in  \Figure{fig:doubleHiggsFeynman1} contains a triple Higgs vertex, which is sensitive to the Higgs trilinear self coupling \gHHH. The diagram in the \Figure{fig:doubleHiggsFeynman2} is sensitive to the quartic coupling \gWWHH. \FIGURE{fig:doubleHiggsFeynman3} and \Figure{fig:doubleHiggsFeynman4} show the Feynman diagrams for irreducible background processes in the study of \gHHH and \gWWHH.
+The study of double Higgs production via \WW fusion can probe the Higgs trilinear self coupling, \gHHH, and quartic coupling, \gWWHH. Leading-order Feynman diagrams for double Higgs production via \WW fusion are shown in \Figure{fig:doubleHiggsFeynman}. The diagram shown in  \Figure{fig:doubleHiggsFeynman1} contains the triple Higgs vertex, which is sensitive to the Higgs trilinear self coupling \gHHH. The diagram in the \Figure{fig:doubleHiggsFeynman2} is sensitive to the quartic coupling \gWWHH. Figures \ref{fig:doubleHiggsFeynman3} and \ref{fig:doubleHiggsFeynman4} show the Feynman diagrams for irreducible background processes in the study of \gHHH and \gWWHH.
 
 
 \begin{figure}[!htbp]
@@ -42,18 +42,20 @@ The study of the double Higgs production via \WW fusion can probe the Higgs tril
     \label{fig:doubleHiggsFeynman4}
   \end{subfigure}
 \caption
-   {The main Feynman diagrams for the leading-order \eeToHH processes at the \CLIC.}
+   {The main Feynman diagrams for the leading-order \eeToHH processes at \CLIC.}
    \label{fig:doubleHiggsFeynman}
 \end{figure}
 
-Double Higgs production can be also produced via {\HepProcess{ \Pep \Pem \to \PZ \PHiggs \PHiggs}\xspace}, where \PZ decays to \HepProcess{\Pnu \APnu}. This \HepProcess{\PZ \PHiggs \PHiggs} channel has been used for study at future \ee colliders, for example, the \ILC at \rootSGeV{500} \cite{Baer:2013cma}. However, for the relevant \CLIC energies of \rootS{1.4} and 3\,TeV, its contribution to the \HepProcess{\PHiggs \PHiggs \Pnu \APnu} final state is small compared to that of the \WW fusion, and can be neglected.
+Double Higgs production can  be also  proceded via {\HepProcess{ \Pep \Pem \to \PZ \PHiggs \PHiggs}\xspace}, where the \PZ decays to \HepProcess{\Pnu \APnu}. The \HepProcess{\PZ \PHiggs \PHiggs} channel has been studied in  \ee collisions \rootSGeV{500} \cite{Baer:2013cma}. However, for the \CLIC energies of \rootS{1.4} and 3\,TeV, its contribution to the \HepProcess{\PHiggs \PHiggs \Pnu \APnu} final state is small compared to that of the \WW fusion, and it can be neglected.
 
 %The cross section of {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} is one order of magnitude smaller than \eeToHH via the \WW fusion,  shown in \Figure{fig:theoryHiggsCrossSection},. Therefore, the effect of {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} present in \eeToHH channel at \rootS{1.4} and 3\,TeV is negligible.
 
 
 %However, {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} can be easily identified via the recoil mass. Hence {\HepProcess{ \Pem \Pep \to \PZ \PHiggs \PHiggs}\xspace} is not considered in this studied.
 
-From an experimental prospective, the two Higgs in the  \eeToHH decay to a range of particles. Hence the double Higgs production has several distinct final-state topologies. The sub-channel with the largest cross section, \eeToHHbbbb, is studied by  collaborators in the \CERN. In this chapter, the \eeToHHbbWW sub-channel  is investigated. Firstly hadronic decay of the \WW in the \eeToHHbbWW channel is studied, because the hadronic decay has the largest cross section  in the \eeToHHbbWW channel . The hadronic decay sub-channel  does not have   neutrinos in the final state, which allows each \PW to be reconstructed. The semi-leptonic final state of the \WW system in the \eeToHHbbWW is also studied. The presence of the neutrino in the final state makes it  difficult to reconstruct the two Higgs bosons, as some momenta of one Higgs boson is carried by the neutrino. %This channel is discussed briefly and its analysis strategy is adapted from the hadronic decay analysis.
+The two Higgs in the  \eeToHH decay to a range of particles. Hence  double Higgs production has several distinct final-state topologies. The sub-channel with the largest cross section, \eeToHHbbbb, has been studied by  collaborators at \CERN. In this chapter, the \eeToHHbbWW sub-channel  is investigated. Firstly, the \eeToHHbbWW sub-channel is studied for fully hadronic decays of the \WW; fully hadronic \WW decays have the largest branching fraction and the lack of neutrinos in the final states allows each \PW to be reconstructed. The semi-leptonic final state of the \WW system in \eeToHHbbWW is also studied. Here the presence of the neutrino in the final state makes it  difficult to reconstruct the two Higgs bosons.
+
+ %hadronic decay of the \WW in the \eeToHHbbWW channel is studied, because the hadronic decay has the largest cross section  in the \eeToHHbbWW channel . The hadronic decay sub-channel  does not have   neutrinos in the final state, which allows each \PW to be reconstructed. The semi-leptonic final state of the \WW system in the \eeToHHbbWW is also studied. The presence of the neutrino in the final state makes it  difficult to reconstruct the two Higgs bosons, as some momenta of one Higgs boson is carried by the neutrino. %This channel is discussed briefly and its analysis strategy is adapted from the hadronic decay analysis.
 %The double Higgs production, \eeToHH, is divided into two sub-channel: \eeToHHbbWW and \eeToHHbbbb to target the specific kinematic properties if each final state, which provides cross-validation between two sub-channels and an improvement in signal selection when combined.
 
 
@@ -65,7 +67,9 @@ From an experimental prospective, the two Higgs in the  \eeToHH decay to a range
 
 The process, \eeToHHbbWWHadFull, results in a six quark final state with missing momentum. The high number of quarks requires an efficient jet reconstruction and a jet pairing algorithm to select the signal events. The two \Pbottom quarks in the final state can be identified statistically with \Pbottom jet tagging. %Since the final state does not contain leptons, event-level lepton finding - typically for energetic isolated leptons -  would improve the signal selection efficiency.
 
-A fast simulation study of the double Higgs production has already been performed using the \CLICILD detector model for \rootS{1.4} and 3\,TeV\cite{Linssen:2012hp}. Firstly, suitable signal and background channels are identified. In order to select the signal events, events with identified isolated lepton are vetoed.  Vertex information is used to identify \Pbottom quark jets. The \PFOs in an event are then clustered into jets depending on the number of quarks in the final states. Afterwards, the jets are used as inputs for pre-selection and multivariate analysis. The event reconstruction was performed using the Marlin framework and reconstruction package in \ilcsoft v01-16. More details on the reconstruction software can be found in \Chapter{chap:Reconstruction}.
+The chapter is organised as follows. Firstly, suitable signal and background channels are identified. Events with isolated high-energy leptons are discarded.  Vertex information is used to identify \Pbottom quark jets, in return to help to select signal events. The particles are clustered into jets and afterwards, the jets are used as inputs for pre-selection and multivariate analysis. 
+
+The event reconstruction was first performed for \rootS{1.4} and then \rootS{3}, using the Marlin framework and reconstruction package in \ilcsoft v01-16. More details on the reconstruction software can be found in \Chapter{chap:Reconstruction}.
 
 
 
@@ -76,10 +80,10 @@ A fast simulation study of the double Higgs production has already been performe
 
 \section{Monte Carlo sample generation}
 
-
+A full list of generated samples with their cross sections can be found in \Table{tab:doubleHiggsMCSamples}. All samples were generated with the \CLICILD detector model.
 % TODO
 % Understand beamsstrahlung and EPA
-For this simulation study, the first step is to generate Monte Carlo samples. A full list of generated samples with their cross sections can be found in \Table{tab:doubleHiggsMCSamples}. The software for Monte Carlo sample generation used  is described in \Section{sec:pandoraMC}.
+%For this simulation study, the first step is to generate Monte Carlo samples. A full list of generated samples with their cross sections can be found in \Table{tab:doubleHiggsMCSamples}. The software for Monte Carlo sample generation used  is described in \Section{sec:pandoraMC}.
 
 At high centre-of-mass energies, in addition to considering electron-electron interactions, electron-photon and photon-photon interactions are important as their interactions become significant. These photons are produced due to the high electric field generated by the colliding beams. Processes involving real photons from beamsstrahlung (BS) and ``quasi-real'' photons are generated separately. For the ``quasi-real'' photon initiated processes, the Equivalent Photon Approximation (EPA) has been used \cite{lyth:jpa00215525}.
 
@@ -87,25 +91,31 @@ At high centre-of-mass energies, in addition to considering electron-electron in
 %W's decay hadronically? Does this make sense from a physics point of view?
 %The analysis is performed with \CLICILD detector concept at \rootS{1.4} and 3\,TeV, and the semi-leptonic channel. Unless specified, the
 
-Background processes with multiple quarks and missing momentum in the final states are challenging to reject, as the topologies are similar to that of the signal events. Two example background processes are \eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} and \HepProcess{\Pepm\Pphoton \to \Pnu \Pquark \Pquark \Pquark \Pquark}. For the same reason, single Higgs boson production, such as \eeTo{\Pquark \Pquark \PHiggs \Pnu \APnu}, has a similar final state to the signal events and it is also difficult to reject.
+Background processes with multiple quarks and missing momentum in the final states are challenging to reject, as the topologies are similar to that of the signal events. Two example background processes are \eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} and \HepProcess{\Pepm\Pphoton \to \Pnu \Pquark \Pquark \Pquark \Pquark}. For the same reason, single Higgs boson production, such as \eeTo{\Pquark \Pquark \PHiggs \Pnu \APnu}, has a similar final state to the signal events and is also difficult to reject.
 
 Some processes are not considered in this analysis because they either have very different event topologies to the signal, or they have very small cross sections. For example,  \HepProcess{\Egamma   \to \Pquark \Pquark \PHiggs \Plepton} is neglected  as the cross section is very small, even at \rootS{3}.
 
 %For example, six-quark final states were not simulated due to constraints of the simulating software.
-The background processes are generated according to the final states. The final states of background processes could also happen via Higgs production, which would result in double counting of Higgs events with signal sample.  Therefore to separate Higgs production from other processes, all background processes are generated with a Higgs boson mass of 14\,TeV to ensure a negligible Higgs contribution. Processes involving Higgs production are simulated with a Higgs boson mass of 126\,GeV.
+The background processes are generated according to the final states fermions and usually correspond to the contributions from multiple Feynman diagrams. These diagrams are already accounted for in the generated samples for explicit Higgs production.   Therefore, to separate Higgs production from other processes, all background processes are generated with a Higgs boson mass of 14\,TeV to ensure a negligible Higgs contribution. Processes involving Higgs production are simulated with a Higgs boson mass of 126\,GeV.
 
-The cross section of the signal, \eeToHHbbWW, is scaled according to values listed in \cite{Dittmaier:2012vm}, as the default Higgs branching ratios in the generator software are less accurate than the values listed in \cite{Dittmaier:2012vm}.
+%. The final states of background processes could also happen via Higgs production, which would result in double counting of Higgs events with signal sample.  
+
+The cross section of the signal, \eeToHHbbWW, is scaled according to values listed in \cite{Dittmaier:2012vm}, as the values are more updated than the  default Higgs branching ratios in the generator software.
+
+ %the default Higgs branching ratios in the generator software are less accurate than the values listed in \cite{Dittmaier:2012vm}.
 
 %Multi-quark final state background samples could, in principle, contain higgs production. Therefore, they are generated with a Higgs mass of 14\,TeV. This will
 
 % ATTN need to rewrite
-The simulation and reconstruction chain is described in \Chapter{chap:Reconstruction}. For some background processes, events are generated requiring the invariant mass of the total momenta of all quarks above 50\,GeV or 120\,GeV, because the invariant masses of the visible momenta of signal events are mostly above 150\,GeV.
+The simulation and reconstruction chain is described in \Chapter{chap:Reconstruction}. For some background processes, events are generated requiring that the invariant mass of the total momenta of all quarks is above 50\,GeV or 120\,GeV.This restricts the vent generation to the region of phase space that could be populated by the signal processes. 
+
+% because the invariant masses of the visible momenta of signal events are mostly above 150\,GeV.
 
 %   For electron-photon interaction with $\Pquark\Pquark\Pquark\Pquark\Pnu$ final state at \rootS(1.4), events are simulated requiring invariant mass of quarks above 120\,GeV.
 
 % These generator level cuts requires  limits are necessary to generate a large amount of background samples in a feasible timeframe, without losing significant signal samples.
 
-Finally, the beam induced background \ggHad is simulated and overlayed on all events. Details can be found in \Section{sec:pandoraggHad}.
+Finally, the beam induced background, \ggHad, is simulated and overlayed on all events. Details can be found in \Section{sec:pandoraggHad}.
 % according to the integration time of each subdetector
 
 \begin{table}[!tbp]\centering
@@ -115,7 +125,7 @@ Finally, the beam induced background \ggHad is simulated and overlayed on all ev
 %{
 \begin{tabular}{lr}
 \hline \hline
-Channel  &  $\sigma(\rootS{1.4})$ / fb   \\
+Channel \rootS{1.4} &  $\sigma$ / fb   \\
 \hline
 \eeToHH & 0.149 \\
 \hline
@@ -172,7 +182,7 @@ Channel  &  $\sigma(\rootS{1.4})$ / fb   \\
 \section{Lepton identification}
 \label{sec:doubleHiggsLepton}
 
-For the signal channel, \eeToHHbbWWHad, there is no primary lepton in the final state, whilst many background  processes, such as \HepProcess{\Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}, contain primary leptons in final states. Hence, efficiently rejecting events with primary leptons is an important step in the event selection. Primary leptons deposit energies in the tracking detector. The start of the energy deposition is typically very close to the interaction point. The primary leptons often have energies above 10\,GeV and are  isolated from other particles. Whilst electrons and muons are stable enough to deposit energies in the calorimeters, tau leptons are very short lived. With a typical decay lifetime of 290\,fs\cite{Abreu:1991jn}, it decays before reaching the vertex detector. Therefore, only decay products of the tau leptons can be reconstructed.
+For the signal channel, \eeToHHbbWWHad, there is no primary lepton in the final state, whilst many background  processes, such as \HepProcess{\Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}, contain primary leptons in final states. Hence, efficiently rejecting events with primary leptons is an important step in the event selection. Primary leptons deposit energies in the tracking detector. The impact parameter to the interaction point of the fitted track of the primary lepton is typically small. At the same time, the primary leptons often have energies above 10\,GeV and are  isolated from other particles. High-energy electrons and muons are stable enough to deposit energies in the calorimeters. However,  tau leptons are short lived with a typical decay lifetime of 290\,fs\cite{Abreu:1991jn}. They decay before reaching the vertex detector. Therefore, only the decay products of the tau leptons can be reconstructed.
 
 
 %New processors have been developed and existing processors have been optimised for signal selection and background rejection.
@@ -191,11 +201,17 @@ Two approaches to electron and muon identification were utilised, which are desc
 
 \subsubsection{\IsolatedLeptonFinderProcessor}
 \label{sec:doubleHiggsIsolatedLeptonFinder}
-The \IsolatedLeptonFinderProcessor reconstruction package is used and optimised. This processor identifies high energy electrons and muons that are isolated from other particles. The algorithm parameters wer optimised using the signal channel and the \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} channel, which is a multi-quark final state containing a primary lepton.
+An optimised version of the existing  \IsolatedLeptonFinderProcessor reconstruction package is used. This algorithm identifies high energy electrons and muons that are isolated from other particles. The algorithm parameters were optimised by the collaborator using the \eeToHHbbbb as the signal channel and the \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} as the background channel, as the background channels are the same for this analysis with \eeToHHbbWW channel.
+
+%, which is a multi-quark final state containing a primary lepton.
 
 %Electron induced electromagnetic showers are mostly contained in the \ECAL. The primary electrons and muons from the electron-positron interaction leaves primary tracks in the tracking detector, which start typically less than 0.05\,mm from the interaction point. The isolation criteria requires the lepton to be spatially separated from other high energy particles.
 
-Optimal values of the \IsolatedLeptonFinderProcessor are listed in \Table{tab:doubleHiggsIsolatedLeptonFinder}. $E$ is the energy of the lepton. $E_{\ECAL}$ is the energy of the lepton deposited in the \ECAL in GeV. $E_{cone}$ is the total energy within a cone of an opening angle of $\cos^{-1}(0.995)$ around the lepton, in GeV. $d_0$, $z_0$, and $r_0$ are the Euclidean distance in mm of the lepton track starting point to the interaction point in $x$-$y$ plane, in $z$ direction, and in $x$-$y$-$z$ three dimensional space, respectively.
+Optimal values of the parameters of the \IsolatedLeptonFinderProcessor are listed in \Table{tab:doubleHiggsIsolatedLeptonFinder}: $E$ is the energy of the lepton; $E_{\ECAL}$ is the energy of the lepton deposited in the \ECAL; $E_{cone}$ is the total energy within a cone of an opening angle of $\cos^{-1}(0.995)$ around the lepton; and the impact parameters, $d_0$, $z_0$, and $r_0$ are the closest Euclidean distance of the fitted track of the primary lepton to the interaction point  in $x$-$y$ plane, in $z$ direction, and in $x$-$y$-$z$ three dimensional space, respectively.
+
+
+
+%in mm of the lepton track starting point to the interaction point
 
 \begin{table}[!htbp]
 \begin{tabular}{lr}
@@ -206,29 +222,37 @@ Optimal values of the \IsolatedLeptonFinderProcessor are listed in \Table{tab:do
 High Energy &  $E > 15$\,GeV  \\
 \Pepm ID & $\frac{E_{\ECAL}}{E} > 0.9$ \\
 \Pmupm ID &  $ 0.25> \frac{E_{ECAL}}{E} > 0.05$\\
-Primary Track  & $d_0 < 0.02\,mm, z_0 < 0.03\,mm, r_0 < 0.04\,mm$ \\
-Isolation & $E_{cone}^2 \leqslant 5.7 \times E - 50$ \\
+Primary Track  & $d_0$ < 0.02\,mm, $z_0$ < 0.03\,mm, $r_0$ < 0.04\,mm \\
+Isolation & $E_{cone}^2 \leqslant 5.7\,\uprightMath{GeV} \times E - 50\,\uprightMath{GeV^{2}}$ \\
 \hline
 \hline
 
 \end{tabular}
 \caption
-{Optimised parameters of \IsolatedLeptonFinderProcessor}
+{Optimised parameters for the \IsolatedLeptonFinderProcessor processor.}
 \label{tab:doubleHiggsIsolatedLeptonFinder}
 \end{table}
 
 \subsubsection{\BonoLeptonFinder}
 \label{sec:doubleHiggsBonoLeptonFinder}
 
-A complimentary electron finder, \BonoLeptonFinder, is developed to further identify isolated electrons and muons. Compared to the \IsolatedLeptonFinderProcessor, the main difference is that the \BonoLeptonFinder utilises particle ID information provided by the \pandora to identify leptons.
+A complimentary electron finder, \BonoLeptonFinder, was developed to further identify isolated electrons and muons. Compared to the \IsolatedLeptonFinderProcessor, the main difference is that the \BonoLeptonFinder utilises particle ID information provided by the \pandora reconstruction to identify leptons.
 
 %\IsolatedLeptonFinderProcessor has strict criterion to find high-energy isolated leptons to avoid mistakes. However, since the signal cross section is low in this analysis, it would be beneficial to reject more events with leptons identified to improve the signal to background ratio. Hence another isolated lepton finder is developed. The main feature of the \BonoLeptonFinder is that it utilises calorimetric information provided by \pandora.
 
+\TABLE{tab:doubleHiggsBonoLeptonFinder} lists the  selection cuts for \BonoLeptonFinder. The variables in the \IsolatedLeptonFinderProcessor and the \BonoLeptonFinder are defined in the same way. In addition: \pT is the transverse momentum; $E_{cone1}$ and $E_{cone2}$ are the total energy of PFOs within a cone around the lepton  of an opening angle of $\cos^{-1}(0.995)$ and $\cos^{-1}(0.99)$ respectively.
 
-The processor uses two sets of cuts to identify isolated leptons. If a PFO passes either set of cuts, it will be identified by the processor. The first set of cuts uses the particle ID information from \pandora, demanding a \pandora electron or muon with high \pT and the associated track depositing energy close to the interaction point. The identified lepton should either have a very high transverse momentum or be isolated. The second set of cuts uses \ECAL energy fraction, which for a PFO is the energy deposited in the \ECAL divided by the total energy, to determine the lepton ID. The rest of the cuts are very similar to the first cuts. The second set cuts have stricter isolation criterion to reduce fake rate.
+
+The algorithm uses two sets of cuts to identify isolated leptons. If a PFO passes either set of cuts, it will be identified by the processor. The first set of cuts uses the particle ID information from \pandora, demanding a \pandora electron or muon with high energy above 10\,GeV and $r_0$ < 0.015\,mm. Afterwards, the lepton should either have $\pT > 40$\,GeV, or $E \geqslant 23\,\uprightMath{GeV^{\frac{1}{2}}} \times \sqrt{E_{cone1}} + 5\,\uprightMath{GeV}$. \FIGURE{fig:doubleHiggsBonoIsoLepE1HighPTSgl} and \ref{fig:doubleHiggsBonoIsoLepE1HighPTBkg} show the distributions of the \pT of identified electrons after  $E$  and $r_0$ cuts, for  \eeToHHbbWWHad signal channel and \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}  background channel respectively. A cut of $\pT > 40$\,GeV preserves most signal events. \FIGURE{fig:doubleHiggsBonoIsoLepE1LowPTSgl} and \ref{fig:doubleHiggsBonoIsoLepE1LowPTBkg} show the distributions of the $23\,\uprightMath{GeV^{\frac{1}{2}}} \times \sqrt{E_{cone1}} + 5\,\uprightMath{GeV}$ as a function of $E$ of identified electrons after  $E$  and $r_0$ cuts, for  \eeToHHbbWWHad signal channel and \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}  background channel respectively. A cut along the two-dimensional histogram would discard background events and leave signal events intact.
+
+%which is 
+
+The second set of cuts is similar to the first set of cuts. Apart of the differences in the values of the cuts, lepton ID in the second set cuts is determined using the fraction of the energy deposited in the \ECAL as a function of the total energy,  $\frac{E_{\ECAL}}{E}$: if $\frac{E_{\ECAL}}{E}$  > 0.95 then the PFO is an electron; and if  $0.2 > \frac{E_{\ECAL}}{E} > 0.05$  then the PFO is a muon.
+
+% uses \ECAL energy fraction, which for a PFO is the energy deposited in the \ECAL divided by the total energy, to determine the lepton ID. The rest of the cuts are very similar to the first cuts. The second set cuts have stricter isolation criterion to reduce fake rate.
 %Not sure the last sentence above makes sense
 
-\TABLE{tab:doubleHiggsBonoLeptonFinder} lists the  selection cuts for \BonoLeptonFinder. Same variables used in the \IsolatedLeptonFinderProcessor and the \BonoLeptonFinder are defined in the same way. \pT is the transverse momentum in GeV. $E_{cone1}$ and $E_{cone2}$ are the total energy of PFOs within a cone of an opening angle of $\cos^{-1}(0.995)$ and $\cos^{-1}(0.99)$ respectively around the lepton in GeV.
+
 
 
 \begin{table}[!htbp]
@@ -241,48 +265,50 @@ High Energy &  $E > 10$\,GeV  \\
 \Pepm ID & \pandora reconstructed \& $\frac{E_{\ECAL}}{E} > 0.95$ \\
 \Pmupm ID &  \pandora reconstructed\\
 Primary Track & $r_0 < 0.015$\,mm \\
-a) High Transverse Momentum  &  $\pT > 40$\,GeV  \\
-b) Isolation & $E \geqslant 23 \times \sqrt{E_{cone1}} + 5$ \\
+\hspace{3mm} a) High Transverse Momentum, or  &  $\pT > 40$\,GeV  \\
+\hspace{3mm} b) Isolation & $E \geqslant 23\,\uprightMath{GeV^{\frac{1}{2}}} \times \sqrt{E_{cone1}} + 5\,\uprightMath{GeV}$ \\
 \hline
 High Energy  &  $E > 10$\,GeV  \\
 \Pepm ID & $\frac{E_{\ECAL}}{E} > 0.95$ \\
 \Pmupm ID & $0.2 > \frac{E_{\ECAL}}{E} > 0.05$ \\
 Primary Track & $r_0 < 0.5$\,mm \\
-a) High Transverse Momentum &  $\pT > 40$\,GeV  \\
-b) Isolation & $ E \geqslant 28 \times \sqrt{E_{cone2}} + 30$ \\
+\hspace{3mm} a) High Transverse Momentum, or &  $\pT > 40$\,GeV  \\
+\hspace{3mm} b) Isolation & $ E \geqslant 28\,\uprightMath{GeV^{\frac{1}{2}}} \times \sqrt{E_{cone2}} + 30\,\uprightMath{GeV}$ \\
 \hline
 \hline
 
 \end{tabular}
-\caption[Optimised parameters  of \BonoLeptonFinder.]
-{Optimised parameters  of \BonoLeptonFinder. A PFO needs to pass either set of cuts to be identified as a lepton. Within a set of cuts, the PFO needs to satisfy either condition a) or b) to be identified as a lepton.}
+\caption[Optimised parameters  for \BonoLeptonFinder.]
+{Optimised parameters  for  the \BonoLeptonFinder processor. A PFO needs to pass either set of cuts to be identified as a isolated electron or muon. Within a set of cuts, the PFO needs to satisfy either condition a) or b).}
 \label{tab:doubleHiggsBonoLeptonFinder}
 \end{table}
+
+
 
 \begin{figure}[!tbp]
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{{doubleHiggs/isoLep/electron1highPTSignal}}}
     \caption{}
-    \label{fig:doubleHiggsForwardBCAL}
+    \label{fig:doubleHiggsBonoIsoLepE1HighPTSgl}
   \end{subfigure}
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{{doubleHiggs/isoLep/electron1highPTbkg}}}
     \caption{}
-    \label{fig:doubleHiggsForwardLCAL}
+    \label{fig:doubleHiggsBonoIsoLepE1HighPTBkg}
   \end{subfigure}
  \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{{doubleHiggs/isoLep/electron1lowPTSignal}}}
     \caption{}
-    \label{fig:doubleHiggsForwardBCAL}
+    \label{fig:doubleHiggsBonoIsoLepE1LowPTSgl}
   \end{subfigure}
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{{doubleHiggs/isoLep/electron1lowPTbkg}}}
     \caption{}
-    \label{fig:doubleHiggsForwardLCAL}
+    \label{fig:doubleHiggsBonoIsoLepE1LowPTBkg}
   \end{subfigure}
-\caption[\BeamCAL and \LumiCAL electron tagging efficiency.]%
-   {Figure a) shows  500\,GeV electron tagging efficiency in the \BeamCAL as a function of polar angle, with different methods to model backgrounds: pregenerated and Gaussian,  and two methods to identify electrons:  clustering algorithm and  shower fitting algorithm, taken from \cite{Sailer:2017onh}. Figure b) shows the  electron tagging efficiency in the \LumiCAL as a function of the electron energy, for polar angle $\theta = 50$\,mrad, taken from \cite{Lukic:forwardElectron}. }
-   \label{fig:doubleHiggsForwardCAL}
+\caption
+   {Distributions shown for \pT  of identified electrons after  $E$  and $r_0$ cuts, for a)  \eeToHHbbWWHad signal channel; and b) \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}  background channel. Distributions shown for  $23\,\uprightMath{GeV^{\frac{1}{2}}} \times \sqrt{E_{cone1}} + 5\,\uprightMath{GeV}$ as a function of $E$  after  $E$  and $r_0$ cuts, for c)  \eeToHHbbWWHad signal channel; and d) \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}  background channel.}
+   \label{fig:doubleHiggsBonoIsoLepE1}
 \end{figure}
 
 
@@ -295,9 +321,9 @@ The two processors share similar criterion for light lepton identification. The 
 
 \subsection{Tau lepton identification}
 
-Tau lepton has a short lifetime and decays before reaching the vertex detector. It can only be identified through the reconstruction of its decay products. The leptonic decay of tau lepton can be identified using the isolated lepton finder processors described above. Therefore in this section, tau identification will focus on the hadronic decays.
+The tau lepton has a short lifetime and decays before reaching the vertex detector and  can only be identified through the reconstruction of its decay products. The leptonic decay of tau lepton can be identified using the isolated lepton finder processors described above. Therefore in this section, tau identification will focus on the hadronic decay modes.
 
-The existing \TauFinderProcessor  \cite{LCD-Note-2010-009} reconstruction package has been optimised. In addition, a package, \BonoTauFinder, is developed to provide additional tau lepton identification.
+The existing \TauFinderProcessor  \cite{LCD-Note-2010-009} reconstruction package has been optimised. In addition, a package, \BonoTauFinder, was developed to provide additional tau lepton identification.
 
 %To improve signal selection, a tau lepton identifier is developed by the author in \Section{sec:doubleHiggsBonoTauFinder}.
 
@@ -305,10 +331,10 @@ The existing \TauFinderProcessor  \cite{LCD-Note-2010-009} reconstruction packag
 
 \subsubsection{\TauFinderProcessor}
 
-The \TauFinderProcessor works by identifying tau lepton decay products, and requiring the decay products to be isolated from other PFOs. To find the decay products, the algorithm starts with the highest energy track selected as a seed for the cone clustering algorithm  (see  \Section{sec:pandoraConeCluster}). All tracks above 10\,GeV are iterated as seeds. A cone with opening angle 0.03 rad with respect to the seed is formed. The PFOs within the cone are required to be consistent with the signature of a tau hadronic decay. The signature includes no more than 3 charged particles in the cone, invariant mass less than 2\,GeV, and few than 10 \PFOs in the cone. The cone is also required to be isolated from other particles. To reduce fake rate, low momentum (less than 1\,GeV) and very forward particles ($\absOf{\cos\left(\theta_Z\right)} > 1.1$) do not participate in the tau finding, as they more likely come from \ggHad background.
+The \TauFinderProcessor works by identifying tau lepton decay products, and requiring the decay products to be isolated from other PFOs. To find the decay products, the algorithm starts with the highest energy track as a seed for the cone clustering algorithm. A cone with opening angle 0.03 rad with respect to the seed is formed. The PFOs within the cone are required to be consistent with the signature of a tau hadronic decay: no more than 3 charged particles in the cone; invariant mass of all PFOs in the cone less than 2\,GeV; and few than 10 \PFOs in the cone. The cone is also required to be isolated from other particles. To reduce fake rate, PFOs with low momentum (less than 1\,GeV) are not used  in tau finding, as they more likely come from \ggHad background. The identified tau lepton and associated decay products are then not used in further tau finding. This tau lepton finding procedure iterates with other high-energy tracks as seeds.
 
 
-The optimised parameters are listed in \Table{tab:doubleHiggsTauFinderProcessor}. Variables are defined in the same way as in previous sections. $\theta_Z$ is the polar angle with respect to the beam axis. $N_{X^+}$ and $N_{tau}$ are the number of charged particles and the number of \PFOs respectively in the tau cone. $m_{tau}$ is the invariant mass of the sum of the PFOs in the tau candidate in GeV. $E_{cone}$ is the total energy of \PFOs within a cone of an opening angle between 0.03 and 0.33\,rad  around tau seed in GeV.
+The optimised parameters are listed in \Table{tab:doubleHiggsTauFinderProcessor}. The optimisation is performed by the collaborator using \eeToHHbbbb signal channel and the \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} background channel, by scanning the parameters to obtain a good background rejection rate with lowest signal rejection rate.  Variables are defined in the same way as in previous sections. In addition: $\theta_Z$ is the polar angle with respect to the beam axis; $N_{X^+}$ and $N_{tau}$ are the number of charged particles and the number of \PFOs  in the tau cone respectively; $m_{tau}$ is the invariant mass of the sum of the PFOs in the tau candidate; and $E_{cone}$ is the total energy of \PFOs within a cone of an opening angle between 0.03 and 0.33\,rad  around tau seed track.
 
 \begin{table}[!htbp]
 \begin{tabular}{lr}
@@ -316,16 +342,16 @@ The optimised parameters are listed in \Table{tab:doubleHiggsTauFinderProcessor}
 \hline
 \TauFinderProcessor  & Selection \\
 \hline
-Veto \ggHad  &  $\pT < 1$\,GeV, $\absOf{\cos\left(\theta_Z\right)} > 1.1$\,rad  \\
-Seed particle & $\pT > 10$ \\
+Veto \ggHad  &  $\pT < 1$\,GeV \\
+Seed particle & $\pT > 10$\,GeV \\
 Tau candidate cone opening angle & 0.03\,rad \\
-Tau candidate rejection & $N_{X^+} > 3$, $N_{tau} > 10$, $m_{tau} > 2$\,rad   \\
+Tau candidate rejection & $N_{X^+} > 3$, $N_{tau} > 10$, $m_{tau} > 2$\,GeV   \\
 Isolation &  $ E_{cone} < 3$\,GeV\\
 \hline
 \hline
 \end{tabular}
 \caption
-{Optimised parameters of \TauFinderProcessor.}
+{Optimised parameters for the  \TauFinderProcessor processor.}
 \label{tab:doubleHiggsTauFinderProcessor}
 \end{table}
 
