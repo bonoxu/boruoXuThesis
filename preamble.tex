@@ -25,6 +25,10 @@
 % \let\@OldCite\cite
 % \renewcommand{\cite}[1]{\mbox{\!\!\!\@OldCite{#1}}}
 
+\renewcommand*{\figureformat}{\figurename~\thefigure}
+\renewcommand*{\tableformat}{\tablename~\thetable}
+
+
 \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
 \DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
 \DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
