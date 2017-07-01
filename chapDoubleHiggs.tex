@@ -67,7 +67,7 @@ The two Higgs in the  \eeToHH decay to a range of particles. Hence  double Higgs
 
 The process, \eeToHHbbWWHadFull, results in a six quark final state with missing momentum. The high number of quarks requires an efficient jet reconstruction and a jet pairing algorithm to select the signal events. The two \Pbottom quarks in the final state can be identified statistically with \Pbottom jet tagging. %Since the final state does not contain leptons, event-level lepton finding - typically for energetic isolated leptons -  would improve the signal selection efficiency.
 
-The chapter is organised as follows. Firstly, suitable signal and background channels are identified. Events with isolated high-energy leptons are discarded.  Vertex information is used to identify \Pbottom quark jets, in return to help to select signal events. The particles are clustered into jets and afterwards, the jets are used as inputs for pre-selection and multivariate analysis. 
+The chapter is organised as follows. Firstly, suitable signal and background channels are identified. Events with isolated high-energy leptons are discarded.  Vertex information is used to identify \Pbottom quark jets, in return to help to select signal events. The particles are clustered into jets and afterwards, the jets are used as inputs for pre-selection and multivariate analysis.
 
 The event reconstruction was first performed for \rootS{1.4} and then \rootS{3}, using the Marlin framework and reconstruction package in \ilcsoft v01-16. More details on the reconstruction software can be found in \Chapter{chap:Reconstruction}.
 
@@ -98,7 +98,7 @@ Some processes are not considered in this analysis because they either have very
 %For example, six-quark final states were not simulated due to constraints of the simulating software.
 The background processes are generated according to the final states fermions and usually correspond to the contributions from multiple Feynman diagrams. These diagrams are already accounted for in the generated samples for explicit Higgs production.   Therefore, to separate Higgs production from other processes, all background processes are generated with a Higgs boson mass of 14\,TeV to ensure a negligible Higgs contribution. Processes involving Higgs production are simulated with a Higgs boson mass of 126\,GeV.
 
-%. The final states of background processes could also happen via Higgs production, which would result in double counting of Higgs events with signal sample.  
+%. The final states of background processes could also happen via Higgs production, which would result in double counting of Higgs events with signal sample.
 
 The cross section of the signal, \eeToHHbbWW, is scaled according to values listed in \cite{Dittmaier:2012vm}, as the values are more updated than the  default Higgs branching ratios in the generator software.
 
@@ -107,7 +107,7 @@ The cross section of the signal, \eeToHHbbWW, is scaled according to values list
 %Multi-quark final state background samples could, in principle, contain higgs production. Therefore, they are generated with a Higgs mass of 14\,TeV. This will
 
 % ATTN need to rewrite
-The simulation and reconstruction chain is described in \Chapter{chap:Reconstruction}. For some background processes, events are generated requiring that the invariant mass of the total momenta of all quarks is above 50\,GeV or 120\,GeV.This restricts the vent generation to the region of phase space that could be populated by the signal processes. 
+The simulation and reconstruction chain is described in \Chapter{chap:Reconstruction}. For some background processes, events are generated requiring that the invariant mass of the total momenta of all quarks is above 50\,GeV or 120\,GeV.This restricts the vent generation to the region of phase space that could be populated by the signal processes.
 
 % because the invariant masses of the visible momenta of signal events are mostly above 150\,GeV.
 
@@ -222,7 +222,7 @@ Optimal values of the parameters of the \IsolatedLeptonFinderProcessor are liste
 High Energy &  $E > 15$\,GeV  \\
 \Pepm ID & $\frac{E_{\ECAL}}{E} > 0.9$ \\
 \Pmupm ID &  $ 0.25> \frac{E_{ECAL}}{E} > 0.05$\\
-Primary Track  & $d_0$ < 0.02\,mm, $z_0$ < 0.03\,mm, $r_0$ < 0.04\,mm \\
+Primary Track  & $d_0$ < 0.02\,mm;\, $z_0$ < 0.03\,mm;\, $r_0$ < 0.04\,mm \\
 Isolation & $E_{cone}^2 \leqslant 5.7\,\uprightMath{GeV} \times E - 50\,\uprightMath{GeV^{2}}$ \\
 \hline
 \hline
@@ -245,7 +245,7 @@ A complimentary electron finder, \BonoLeptonFinder, was developed to further ide
 
 The algorithm uses two sets of cuts to identify isolated leptons. If a PFO passes either set of cuts, it will be identified by the processor. The first set of cuts uses the particle ID information from \pandora, demanding a \pandora electron or muon with high energy above 10\,GeV and $r_0$ < 0.015\,mm. Afterwards, the lepton should either have $\pT > 40$\,GeV, or $E \geqslant 23\,\uprightMath{GeV^{\frac{1}{2}}} \times \sqrt{E_{cone1}} + 5\,\uprightMath{GeV}$. \FIGURE{fig:doubleHiggsBonoIsoLepE1HighPTSgl} and \ref{fig:doubleHiggsBonoIsoLepE1HighPTBkg} show the distributions of the \pT of identified electrons after  $E$  and $r_0$ cuts, for  \eeToHHbbWWHad signal channel and \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}  background channel respectively. A cut of $\pT > 40$\,GeV preserves most signal events. \FIGURE{fig:doubleHiggsBonoIsoLepE1LowPTSgl} and \ref{fig:doubleHiggsBonoIsoLepE1LowPTBkg} show the distributions of the $23\,\uprightMath{GeV^{\frac{1}{2}}} \times \sqrt{E_{cone1}} + 5\,\uprightMath{GeV}$ as a function of $E$ of identified electrons after  $E$  and $r_0$ cuts, for  \eeToHHbbWWHad signal channel and \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}  background channel respectively. A cut along the two-dimensional histogram would discard background events and leave signal events intact.
 
-%which is 
+%which is
 
 The second set of cuts is similar to the first set of cuts. Apart of the differences in the values of the cuts, lepton ID in the second set cuts is determined using the fraction of the energy deposited in the \ECAL as a function of the total energy,  $\frac{E_{\ECAL}}{E}$: if $\frac{E_{\ECAL}}{E}$  > 0.95 then the PFO is an electron; and if  $0.2 > \frac{E_{\ECAL}}{E} > 0.05$  then the PFO is a muon.
 
@@ -262,7 +262,7 @@ The second set of cuts is similar to the first set of cuts. Apart of the differe
 \BonoLeptonFinder  & Selection \\
 \hline
 High Energy &  $E > 10$\,GeV  \\
-\Pepm ID & \pandora reconstructed \& $\frac{E_{\ECAL}}{E} > 0.95$ \\
+\Pepm ID & \pandora reconstructed;\, $\frac{E_{\ECAL}}{E} > 0.95$ \\
 \Pmupm ID &  \pandora reconstructed\\
 Primary Track & $r_0 < 0.015$\,mm \\
 \hspace{3mm} a) High Transverse Momentum, or  &  $\pT > 40$\,GeV  \\
@@ -345,7 +345,7 @@ The optimised parameters are listed in \Table{tab:doubleHiggsTauFinderProcessor}
 Veto \ggHad  &  $\pT < 1$\,GeV \\
 Seed particle & $\pT > 10$\,GeV \\
 Tau candidate cone opening angle & 0.03\,rad \\
-Tau candidate rejection & $N_{X^+} > 3$, $N_{tau} > 10$, $m_{tau} > 2$\,GeV   \\
+Tau candidate rejection & $N_{X^+} > 3$;\, $N_{tau} > 10$;\, $m_{tau} > 2$\,GeV   \\
 Isolation &  $ E_{cone} < 3$\,GeV\\
 \hline
 \hline
@@ -358,15 +358,39 @@ Isolation &  $ E_{cone} < 3$\,GeV\\
 \subsubsection{\BonoTauFinder}
 \label{sec:doubleHiggsBonoTauFinder}
 
-The \BonoTauFinder works in a similar way as the \TauFinderProcessor. It identifies high momentum particles as tau seeds. Particles are iteratively added to a cone in the order of the ascending opening angle to the seed. The cone is called search cone, which contains tau decay products. After each particle addition, the temporary search cone is then considered as a temporary  tau candidate and tested for isolation and consistency  with a tau hadronic decay signature. The temporary tau candidate only needs to pass one of the isolation conditions to be identified as a tau candidate. There are multiple isolation conditions for tau 1-prong decay and 3-prong decay, reflecting different topologies of tau decay final states. The isolation criterion typically demand few particles around the search cone and the total \pT in the search cone to be greater than a threshold.
+The \BonoTauFinder works in a similar way to the \TauFinderProcessor. It identifies high momentum particles as tau seeds. Particles are iteratively added to a cone in the order of the ascending opening angle to the seed. The cone is called search cone, which contains candidate tau decay products. After each particle addition, the temporary search cone is then considered as a temporary  tau candidate and tested for isolation and consistency  with a tau hadronic decay signature. The temporary tau candidate only needs to pass one of the isolation conditions to be identified as a tau candidate. There are multiple isolation conditions for tau 1-prong decay and 3-prong decay, reflecting different topologies of tau decay final states. The isolation criterion typically demand few particles around the search cone and the total \pT in the search cone to be greater than a threshold.
 
-The iterative particle addition procedure stops when the cone opening angle is larger than a threshold. If multiple temporary tau candidates of the same tau seed pass the selection, the one with smallest opening angle is chosen to form the final tau candidate. To reduce fake tau decay products from \ggHad background, particles with energies less than 1\,GeV do not participate.
+The iterative particle addition procedure stops when the cone opening angle is larger than a threshold. If multiple temporary tau candidates of the same tau seed pass the selection, the one with smallest opening angle is chosen to form the final tau candidate. To reduce the fake rate from \ggHad background, particles with energies less than 1\,GeV are not considered.
+
+\FIGURE{fig:doubleHiggsBonoIsoTau} show the isolation criterion of tau candidate for \eeToHHbbWWHad signal channel (blue) and  \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu}  background channel (orange). \FIGURE{fig:doubleHiggsBonoIsoTau1} shows the isolation criteria 1, where the cut at  $ \pT_{cone} \geqslant 10$\,GeV selects more tau candidates in background events than in the signal events. Similarly, in \Figure{fig:doubleHiggsBonoIsoTau2}, the cut at $r_0 > 0.01$\,mm, and in \Figure{fig:doubleHiggsBonoIsoTau3}, the cut at $ \pT_{cone} \geqslant 10$\,GeV select more tau candidates in background events.
 
 
 %tau hypothesis singular or tau hypotheses plural?
 
 
-\TABLE{tab:doubleHiggsTauFinderProcessor} lists the optimised parameters  for \BonoTauFinder. Variables are defined in the same way as those in previous sections: $\theta_S$ is the opening angle of the search cone in rad; $cone1$ and $cone2$ are defined as a cone of an opening angle of $\cos^{-1}(0.95)$, and $\cos^{-1}(0.99)$ respectively around the tau seed; $r_0$ is the Euclidean distance in mm of the   tau seed associated track starting point to the interaction point in $x$-$y$-$z$ three dimensional space.
+\begin{figure}[!tbp]
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/isoLep/tau1}}}
+    \caption{}
+    \label{fig:doubleHiggsBonoIsoTau1}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/isoLep/tau2real}}}
+    \caption{}
+    \label{fig:doubleHiggsBonoIsoTau2}
+  \end{subfigure}
+ \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/isoLep/tau3}}}
+    \caption{}
+    \label{fig:doubleHiggsBonoIsoTau3}
+  \end{subfigure}
+\caption
+   { Distributions to show isolation criterion. a) Distribution of $\pT_{cone}$ for isolation criteria 1  after  $N_{cone1} = 0$;  b) distribution of $r_0$ for isolation criteria 2  after  $N_{X^+} = 1$, $N_{cone1} = 1$; and c) distribution of $\pT_{cone}$ for isolation criteria 3  after  $N_{X^+} = 3$, $N_{cone1} = 1$, $\theta_S < \cos^{-1}(0.9995)$.}
+   \label{fig:doubleHiggsBonoIsoTau}
+\end{figure}
+
+
+\TABLE{tab:doubleHiggsTauFinderProcessor} lists the optimised parameters  for \BonoTauFinder. Variables are defined in the same way as those in previous sections In addition, $\theta_S$ is the opening angle of the search cone in rad; $cone1$ and $cone2$ are defined as a cone around the tau seed of an opening angle of $\cos^{-1}(0.95)$, and $\cos^{-1}(0.99)$ respectively.
 
 \begin{table}[!htbp]
 \begin{tabular}{lr}
@@ -376,53 +400,58 @@ The iterative particle addition procedure stops when the cone opening angle is l
 \hline
 Veto \ggHad&  $E < 1$\,GeV\\
 Seed particle & $\pT > 5$\,GeV \\
-Maximum search cone opening angle & $\theta_S \leqslant \cos^{-1}(0.999)$\,GeV\\
-Tau candidate rejection & $N_{X^+} \neq 1,3$, $m_{PFO} > 3$\,GeV   \\
-Isolation 1& $N_{cone1} = 0$, $ \pT_{cone} \geqslant 10$\,GeV\\
-Isolation 2& $N_{X^+} = 1$, $N_{cone1} = 1$, $r_0 > 0.01$\,mm\\
-Isolation 3& \multicolumn{1}{R{0.4\textwidth}}{{$N_{X^+} = 3$, $N_{cone1} = 1$, $ \pT_{cone} \geqslant 10$\,GeV, $\theta_S < \cos^{-1}(0.9995)$}}\\
-Isolation 4& \multicolumn{1}{R{0.4\textwidth}}{$N_{X^+} = 1$, $N_{cone2} = 0$, $r_0 > 0.01$\,mm, $ \pT_{cone} \geqslant 10$\,GeV}\\
-Isolation 5& \multicolumn{1}{R{0.4\textwidth}}{{$N_{X^+} = 3$, $N_{cone2} = 0$, $ \pT_{cone} \geqslant 10$\,GeV, $\theta_S < \cos^{-1}(0.9995)$}}\\
+\multicolumn{1}{L{0.3\textwidth}}{Maximum search cone opening angle} & $\theta_S \leqslant \cos^{-1}(0.999)$\,GeV\\
+Tau candidate rejection & $N_{X^+} \neq 1,3$;\, $m_{PFO} > 3$\,GeV   \\
+\hspace{3mm} Isolation 1 or& $N_{cone1} = 0$;\, $ \pT_{cone} \geqslant 10$\,GeV\\
+\hspace{3mm} Isolation 2 or& $N_{X^+} = 1$;\, $N_{cone1} = 1$;\, $r_0 > 0.01$\,mm\\
+\hspace{3mm} Isolation 3 or& \multicolumn{1}{R{0.7\textwidth}}{{$N_{X^+} = 3$;\, $N_{cone1} = 1$;\, $ \pT_{cone} \geqslant 10$\,GeV;\, $\theta_S < \cos^{-1}(0.9995)$}}\\
+\hspace{3mm} Isolation 4 or& \multicolumn{1}{R{0.7\textwidth}}{$N_{X^+} = 1$;\, $N_{cone2} = 0$;\, $r_0 > 0.01$\,mm;\, $ \pT_{cone} \geqslant 10$\,GeV}\\
+\hspace{3mm} Isolation 5& \multicolumn{1}{R{0.7\textwidth}}{{$N_{X^+} = 3$;\, $N_{cone2} = 0$;\, $ \pT_{cone} \geqslant 10$\,GeV;\, $\theta_S < \cos^{-1}(0.9995)$}}\\
 \hline
 \hline
 
 \end{tabular}
 \caption
-{Optimised parameters of \BonoTauFinder}
+{Optimised parameters of \BonoTauFinder processor}
 \label{tab:doubleHiggsBonoTauFinderProcessor}
 \end{table}
 
-Compared to the \TauFinderProcessor algorithm, the main difference is that the \BonoTauFinder has an iterative approach to build up a tau candidate, which allows a dynamic tau search cone size. The \BonoTauFinder also has smaller cut values on minimum \pT and invariant mass, but stricter isolation criterions.
+Relative to the \TauFinderProcessor algorithm, the main difference is that the \BonoTauFinder adopts an iterative approach to build up a tau candidate, which allows a dynamic tau search cone size. The \BonoTauFinder also has smaller cut values on the minimum \pT and invariant mass of the tau candidate, but stricter isolation criterions.
 %I've reworded the first sentence in this para - does it make sense?
 %looser cut - is this the accepted term? if not, maybe replaced the word looser with something else
 
-\begin{figure}[!tbp]
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/isoLep/tau1}}}
-    \caption{}
-    \label{fig:doubleHiggsForwardBCAL}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/isoLep/tau2real}}}
-    \caption{}
-    \label{fig:doubleHiggsForwardLCAL}
-  \end{subfigure}
- \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{{{doubleHiggs/isoLep/tau3}}}
-    \caption{}
-    \label{fig:doubleHiggsForwardBCAL}
-  \end{subfigure}
-\caption[\BeamCAL and \LumiCAL electron tagging efficiency.]%
-   {Figure a) shows  500\,GeV electron tagging efficiency in the \BeamCAL as a function of polar angle, with different methods to model backgrounds: pregenerated and Gaussian,  and two methods to identify electrons:  clustering algorithm and  shower fitting algorithm, taken from \cite{Sailer:2017onh}. Figure b) shows the  electron tagging efficiency in the \LumiCAL as a function of the electron energy, for polar angle $\theta = 50$\,mrad, taken from \cite{Lukic:forwardElectron}. }
-   \label{fig:doubleHiggsForwardCAL}
-\end{figure}
 
 \subsection{Very forward electron identification}
 \label{sec:doubleHiggsForwardElectron}
 
-At the high centre-of-mass energy at the \CLIC, particles are often boosted.  It is important to identify leptons in the forward calorimeters to aid the signal selection because  certain background channels, for example photon-electron interactions, can have energetic primary  electrons in  the forward calorimeters, the \LumiCAL and/or the \BeamCAL.
 
-It is challenging to identify electrons in these forward calorimeters.  Most particles in these forward calorimeters are from the beam induced background. Nevertheless, sufficiently high energy electrons can be efficiently identified in the \BeamCAL   and \LumiCAL \cite{sailer2012radiation}.
+At the high centre-of-mass energy of \CLIC, particles produced are often highly boosted.  Because of this, it is important to identify leptons in the forward calorimeters to aid the signal selection. In particular, photon-electron interactions, can have energetic primary  electrons in  the forward calorimeters, the \LumiCAL and/or the \BeamCAL.
+
+Because of the large background in the forward region, it is challenging to identify primary leptons. In the Monte Carlo production, particles including the primary leptons and beam induced background in the forward calorimeters are not simulated, due to the high demand on the computational resources. Instead, studies have been performed with particles simulated in the forward calorimeters to understand the primary lepton identification efficiencies \cite{sailer2012radiation,Sailer:2017onh,Lukic:forwardElectron}. The studied  primary lepton identification efficiencies are then parameterised as a function of lepton energies. The parametrisation approach is adopted in this analysis.
+
+\FIGURE{fig:doubleHiggsForwardBCAL} shows the primary electron identification efficiencies in the \BeamCAL as a function of polar angle for a 500\,GeV electron.  An external processor \cite{Sailer:2017onh} has developed to parameterise the primary electron identification efficiencies in the \BeamCAL at \rootS{3} as a function of electron energy and the polar angle. The full simulation study to obtain the primary electron identification efficiencies in the \BeamCAL assumes a background integrated over 40 bunch crossings.  The same primary electron identification efficiency is assumed for \rootS{1.4} and \rootS{3}. In the analysis for \rootS{1.4}, the momenta of the electron is scaled down by a ratio of the centre-of-mass energy to use the external processor.
+
+\FIGURE{fig:doubleHiggsForwardLCAL} shows the primary electron identification efficiencies in the \LumiCAL as a function of electron energy for a polar angle $\theta = 50$\,mrad. The efficiency is obtained from a full simulation study \cite{Lukic:forwardElectron}, assuming a background integrated over 100 bunch crossings. In this analysis, the primary electron identification efficiency is assumed to be parasitised as a function of electron energy by the curve in \Figure{fig:doubleHiggsForwardLCAL}. The polar angle dependency of the efficiency is not considered, due to the lack of study. The primary electron identification efficiency curve in \Figure{fig:doubleHiggsForwardLCAL} takes the functional form of:
+\begin{equation}
+\varepsilon=
+\begin{cases}
+  0, & \text{if}\ E < 50\,\text{GeV},\\
+  0.99 \times \frac{(erf(E / \text{GeV} - 100) + 1 )}{2}, & \text{otherwise},
+\end{cases}
+\end{equation}
+where $E$ is the energy of the electron and $erf$ is the error function.
+
+Due to lack of tracking ability in the forward region, electrons and photons can not be differentiated. Therefore, both photons and electrons are identifer in the forward calorimeters. Events with identified high-energy electrons and/or photons in the \BeamCAL and/or \LumiCAL are rejected.
+
+%For each MC electron in the \LumiCAL, a random number between 0 and 1 is generated. If the random number is less than \varepsilon, the MC electron is tagged.
+
+%It is important to identify leptons in the forward calorimeters to aid the signal selection because  certain background channels, for example
+
+
+
+%At the high centre-of-mass energy at the \CLIC, particles are often boosted.  It is important to identify leptons in the forward calorimeters to aid the signal selection because  certain background channels, for example photon-electron interactions, can have energetic primary  electrons in  the forward calorimeters, the \LumiCAL and/or the \BeamCAL.
+
+%It is challenging to identify electrons in these forward calorimeters.  Most particles in these forward calorimeters are from the beam induced background. Nevertheless, sufficiently high energy electrons can be efficiently identified in the \BeamCAL   and \LumiCAL \cite{sailer2012radiation}.
 \begin{comment}
 The high charge density in the bunches will induce strong electromagnetic fields causing deflection of the
 beam particles and the radiation of
@@ -433,7 +462,7 @@ component will be radiated practically along the outgoing beam axis, a noticeabl
 and hadronic pairs will hit the BeamCal calorimeter in the forward region.
 \end{comment}
 
-The reconstruction of electrons in the forward calorimeters uses  a parametrisation approach.  By parameterising the  particle ID efficiency using MC particles, the equivalent performance to the full detector simulation approach can be achieved \cite{Sailer:2017onh,Lukic:forwardElectron} .
+%The reconstruction of electrons in the forward calorimeters uses  a parametrisation approach.  By parameterising the  particle ID efficiency using MC particles, the equivalent performance to the full detector simulation approach can be achieved \cite{Sailer:2017onh,Lukic:forwardElectron} .
 
 %For the \CLICILD detector concept, energies deposited in the \LumiCAL and the \BeamCAL are not reconstructed in simulation. This is because the thousands of beam induced background particles per bunch crossing requires expensive computational resources. However, previous studies \cite{Sailer:2017onh,Lukic:forwardElectron} using parameterise the particle ID efficiency using MC particles give equivalent performance to the full detector simulation approach.
 
@@ -441,18 +470,18 @@ The reconstruction of electrons in the forward calorimeters uses  a parametrisat
 %The current simulation software could not handle the simulation in a feasible time. Therefore, the adopted approach is to parameterise the background particle energy deposition leading to electron tagging algorithms.
 %I changed 'and leads to' to 'leading to'. Is that what you meant? The original text was mixing tenses
 
-For the \BeamCAL, an existing electron tagging algorithm was developed using \rootS{3} collision environment by comparing the simulated electron and background energy distributions \cite{Sailer:2017onh}. An indicative performance plot of 500\,GeV electron tagging efficiency as a function of polar angle is shown in \Figure{fig:doubleHiggsForwardBCAL}. An electron is tagged if the energy is significantly larger than the expected background energy distributions integrated over 40 bunch crossing.
+%For the \BeamCAL, an existing electron tagging algorithm was developed using \rootS{3} collision environment by comparing the simulated electron and background energy distributions \cite{Sailer:2017onh}. An indicative performance plot of 500\,GeV electron tagging efficiency as a function of polar angle is shown in \Figure{fig:doubleHiggsForwardBCAL}. An electron is tagged if the energy is significantly larger than the expected background energy distributions integrated over 40 bunch crossing.
 
-This parametric tagging approach  most likely underestimates efficiencies due to the coarse binning of energies. For example,  a 650\,GeV particle is treated in the same way as a 600\,GeV particle, as the tagging efficiency for electrons with energy 500 to 1500\,GeV are binned in histograms at an interval of 100\,GeV. Also there is no tagging efficiency for electrons with energy below 500\,GeV or above 1500\,GeV.
+%This parametric tagging approach  most likely underestimates efficiencies due to the coarse binning of energies. For example,  a 650\,GeV particle is treated in the same way as a 600\,GeV particle, as the tagging efficiency for electrons with energy 500 to 1500\,GeV are binned in histograms at an interval of 100\,GeV. Also there is no tagging efficiency for electrons with energy below 500\,GeV or above 1500\,GeV.
 
 
 %A C++ code library has been developed and used in this analysis.
 
-The input of the \BeamCAL electron tagging algorithm is the four momenta of the MC electron. Since the algorithm assumes collisions at \rootS{3}, for the \rootS{1.4} user case, the momenta of the MC electron is scaled down by a factor of $\frac{3}{1.4}$.
+%The input of the \BeamCAL electron tagging algorithm is the four momenta of the MC electron. Since the algorithm assumes collisions at \rootS{3}, for the \rootS{1.4} user case, the momenta of the MC electron is scaled down by a factor of $\frac{3}{1.4}$.
 
 
 
-For the \LumiCAL,  \Figure{fig:doubleHiggsForwardCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy for polar angle $\theta = 50$\,mrad where events are overlaid with background energy deposition integrated over 100 bunch crossings \cite{Lukic:forwardElectron}. In this analysis, the \LumiCAL electron tagging efficiency, $\varepsilon$, is parameterised as
+%For the \LumiCAL,  \Figure{fig:doubleHiggsForwardCAL} shows the \LumiCAL  electron tagging efficiency as a function of the electron energy for polar angle $\theta = 50$\,mrad where events are overlaid with background energy deposition integrated over 100 bunch crossings \cite{Lukic:forwardElectron}. In this analysis, the \LumiCAL electron tagging efficiency, $\varepsilon$, is parameterised as
 
 %Assuming that the \LumiCAL electron tagging efficiency in this analysis is the same as in \Figure{fig:doubleHiggsForwardCAL} for all polar angles and for \rootS{1.4} and 3\,TeV,
 %The \LumiCAL electron tagging in this analysis is based on the performance plot in \Figure{fig:doubleHiggsForwardCAL}.
@@ -460,18 +489,6 @@ For the \LumiCAL,  \Figure{fig:doubleHiggsForwardCAL} shows the \LumiCAL  electr
 %the \HepProcess{\PHiggs \to \Pmu \Pmu} analysis in \cite{Milutinovic-Dumbelovic:2014uta,Grefe:2012rt} has developed an algorithm for electron tagging in the \LumiCAL with similar logic to the algorithm for the \BeamCAL.
 % as this is the only study available for comparison.
 
-
-\begin{equation}
-\varepsilon=
-\begin{cases}
-  0, & \text{if}\ E < 50\,GeV,\\
-  0.99 \times \frac{(erf(E - 100) + 1 )}{2}, & \text{otherwise},
-\end{cases}
-\end{equation}
-where $E$ is the energy of the electron and $erf$ is the error function. For each MC electron in the \LumiCAL, a random number between 0 and 1 is generated. If the random number is less than \varepsilon, the MC electron is tagged.
-
-%(see \Table{tab:detectorForwardILDvsCLICILD} for detector coverage)
-Due to lack of tracking ability in the forward region, electrons and photons can not be differentiated as they have very similar EM shower profiles. Therefore, both photons and electrons are tagged by the algorithms above.
 
 \begin{figure}[!tbp]
   \begin{subfigure}[b]{0.45\textwidth}
@@ -485,7 +502,7 @@ Due to lack of tracking ability in the forward region, electrons and photons can
     \label{fig:doubleHiggsForwardLCAL}
   \end{subfigure}
 \caption[\BeamCAL and \LumiCAL electron tagging efficiency.]%
-   {Figure a) shows  500\,GeV electron tagging efficiency in the \BeamCAL as a function of polar angle, with different methods to model backgrounds: pregenerated and Gaussian,  and two methods to identify electrons:  clustering algorithm and  shower fitting algorithm, taken from \cite{Sailer:2017onh}. Figure b) shows the  electron tagging efficiency in the \LumiCAL as a function of the electron energy, for polar angle $\theta = 50$\,mrad, taken from \cite{Lukic:forwardElectron}. }
+   {a) shows  the 500\,GeV electron identification efficiency in the \BeamCAL as a function of polar angles, with different methods to model backgrounds: pregenerated and Gaussian,  and two methods to identify electrons:  clustering algorithm and  shower fitting algorithm, obtained from a full simulation study in \cite{Sailer:2017onh}. b) shows the  electron tagging efficiency in the \LumiCAL as a function of the electron energy, for a polar angle $\theta = 50$\,mrad, obtained from a full simulation study in  \cite{Lukic:forwardElectron}. }
    \label{fig:doubleHiggsForwardCAL}
 \end{figure}
 
@@ -503,10 +520,10 @@ Due to lack of tracking ability in the forward region, electrons and photons can
 
 \subsection{Lepton identification performance}
 
-The performances of the different lepton finding processors for signal events and the selected background processes are shown in \Table{tab:doubleHiggsIsoLepPerformance}. Numbers in the table  represent the fractions of events  where no leptons are identified by the individual lepton finder.  \BonoLeptonFinder and \BonoTauFinder reject more background events than the \IsolatedLeptonFinderProcessor and \TauFinderProcessor. By combining the processors, 86.6\% of the signal events remain and 16.8\% of the \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} events survive after rejecting events where leptons are identified.
+The performances of the different lepton finding processors for signal events and the selected background processes are shown in \Table{tab:doubleHiggsIsoLepPerformance} for \rootS{1.4}. Numbers in the table  represent the fractions of events  where no leptons are identified by the individual lepton finder.  \BonoLeptonFinder and \BonoTauFinder reject more background events than the \IsolatedLeptonFinderProcessor and \TauFinderProcessor. By combining the processors, 86.6\% of the signal events remain and 16.8\% of the \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} events survive after rejecting events where leptons are identified.
 %Second sentence: can you say "" becase this would read better
 
-The forward lepton finders are most effective at rejecting background events with primary leptons in the forward region. \TABLE{tab:doubleHiggsIsoLepPerformance} shows the performance of the processors with the signal events and the  \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background events. 53.6\% of the \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background events survive after rejecting events with leptons identified by the forward lepton finder. The full list of fraction of events  after rejecting events with leptons identified by any lepton finders for individual channel can be found in \Table{tab:doubleHiggs1.4TeVPreslection}.
+The forward lepton finders are most effective at rejecting background events with primary leptons in the forward region. \TABLE{tab:doubleHiggsIsoLepPerformance} shows the performance of the processors for signal events and the  \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background events. Only 1\% of signal events are rejected, but 47.4\% of the \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background events are rejected. \TABLE{tab:doubleHiggs1.4TeVPreslection} list the number of events surviving lepton rejection for signal and all background channels.
 
 \begin{table}[!tbp]
 \begin{tabular}{lrrr}
@@ -525,15 +542,17 @@ Combined & 86.6\% & 16.8\%  &  30.8\% \\
 \hline
 
 \end{tabular}
-\caption{The performances of  lepton finders on the signal events and selected background events at \rootS{1.4}.  Numbers represent the fractions of events where no leptons are identified by the individual lepton finder.  \Pphoton(BS) represents a real photon from beamstrahlung (BS).}
+\caption{The performances of the lepton finding algorithms for the signal events and selected background events at \rootS{1.4}.  Numbers represent the fractions of events where no leptons are identified by the individual lepton finder.}
 \label{tab:doubleHiggsIsoLepPerformance}
 \end{table}
 
 
-The lepton finding processors are optimised with events at \rootS{1.4}, and checked with events at \rootS{3}.  It was found that the same set of parameters for lepton identifiers works well under \rootS{1.4} and 3\,TeV. The performances of the lepton finders with the signal and selected background events at \rootS{3} are shown in \Table{tab:doubleHiggs3TeVIsoLepPerformance}.
+The lepton finding processors were optimised with events at \rootS{1.4}.  It was found that the same set of parameters is also effective for \rootS{3}. The performances of the lepton finders at \rootS{3} are shown in \Table{tab:doubleHiggs3TeVIsoLepPerformance}.
+
+
 
 %Would this read better if you explained why 1.4 is better rather than why 3 is worse? Better should be the focus, no?
-When comparing the lepton finding performances at \rootS{1.4} and \rootS{3}, the performance for \rootS{1.4} is better. This is because at \rootS{3}, particles are often boosted and spatial separation between particles is smaller. Therefore particles are less isolated from each other. The higher centre-of-mass energy at \rootS{3} also affects on the performance of the forward lepton finder. Whilst at \rootS{1.4}, the forward finder only rejects 5\% of the \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} background events and 1\% of the signal events, at \rootS{3} it rejects 19\% of events from the same background process and 4\% of the signal events, as more leptons are boosted into the forward region.
+When comparing the lepton finding performances at \rootS{1.4} and \rootS{3}, the performance for \rootS{1.4} is better. This is because at \rootS{3}, particles ten to be boosted more and the spatial separation between particles is smaller due to the higher multiplicities. Coonsequently particles are less isolated from each other. The higher centre-of-mass energy also affects the performance of the forward lepton finder. Whilst at \rootS{1.4}, the forward finder only rejects 5\% of the \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} background events and 1\% of the signal events, at \rootS{3} it rejects 19\% of events from the same background process and 4\% of the signal events, as more leptons are boosted into the forward region.
 
 
 \begin{table}[!tbp]
@@ -553,7 +572,7 @@ Combined & 81.0\% & 23.3\% &  33.4\% \\
 \hline
 
 \end{tabular}
-\caption{The performances of  lepton finders on the signal events and selected background events at \rootS{3}.  Numbers represent the fractions of events where no leptons are identified by the individual lepton finder. \Pphoton(BS) represents a real photon from beamstrahlung (BS).}
+\caption{The performances of the lepton finding algorithms for the signal events and selected background events at \rootS{3}.  Numbers represent the fractions of events where no leptons are identified by the individual lepton finder.}
 \label{tab:doubleHiggs3TeVIsoLepPerformance}
 \end{table}
 
@@ -587,7 +606,7 @@ Other isolated lepton identification processors have been tested, including Isol
 
 \section{Jet reconstruction}
 
-Another important aspect of this analysis is to pair jets to reconstruct the physical bosons. The signal channel, \eeToHHbbWWHad, results in a six quark final state.  In this section, the optimisation of the jet reconstruction is discussed.
+The signal channel, \eeToHHbbWWHad, is a six-quark final state, which will result in multiple reconstructed jets. The pairing of jets to form the \PH, \PWplus and \PWminus in the event is an essential part of the event reconstruction. In this section, the optimisation of the jet reconstruction is discussed.
 
 
 
@@ -596,10 +615,14 @@ Another important aspect of this analysis is to pair jets to reconstruct the phy
 \subsection{Jet reconstruction optimisation}
 \label{sec:doubleHiggsJetOptimisation}
 
-Jet reconstruction algorithms cluster particles into jets. For this analysis, longitudinal invariant, \kt, jet algorithm is chosen for the jet clustering, as discussed in \Section{sec:pandoraJetAlg}. The free parameter for \kt algorithm is the $R$ parameter, which controls the radius of the jet. Another choice affecting the jet reconstruction is the choice of the \PFO collection, which incorporates different level of timing and \pT cuts to reduce the beam induce background (see \Section{sec:pandoraggHad}).
+Jet reconstruction algorithms cluster particles into jets. For this analysis, longitudinal invariant \kt jet algorithm is chosen for the jet clustering, as discussed in \Section{sec:pandoraJetAlg}. The free parameter for \kt algorithm is the $R$ parameter, which controls the radius of the jet. The jet clustering will also depend on the centre-of-mass energy of the event. This is particularly important at the \CLIC because of the large beam induced background from relative low  \pT particles. Hence a suitable level of background suppression needs to be chosen, which is incorporated in the choice of the \PFO  collection.
+
+%another choice affecting the jet reconstruction is the choice of the \PFO collection, which incorporates different level of timing and \pT cuts to reduce the beam induce background (see \Section{sec:pandoraggHad}).
 %Both parameters are optimised for \rootS{1.4} and \rootS{3}.
 
-The value of the $R$ parameter and the \PFO collection are chosen to optimise the invariant mass and mass resolution of \PHiggs and \PW. To choose the optimal parameters, \eeToHHbbWWHad events  are processed through \kt jet algorithm  in the 6-jet exclusive mode. The six jets are paired using the MC truth information (see \Section{sec:pandoraMCtruthLink}) by examining the decay chain of MC particles. Four invariant mass distributions are obtained: two Higgs masses ($m_{\Hbb}$ and $m_{\HWW}$) and two \PW masses ($m_{\PW}$ and $m_{\W*}$). Here \W* indicates the off-mass-shell \PW boson.
+The use of the \kt jet algorithm in exclusive modes allows some particles to be clustered into beam jet, which is not used in the subsequent event reconstruction.
+
+The value of the $R$ parameter and the \PFO collection are chosen to optimise the invariant mass and mass resolution of \PHiggs and \PW. To choose the optimal parameters, \eeToHHbbWWHad events  are processed through \kt jet algorithm  in the 6-jet exclusive mode. The six jets are paired using the MC truth information by examining the decay chain of MC particles. Four invariant mass distributions are obtained: two Higgs masses ($m_{\Hbb}$ and $m_{\HWW}$) and two \PW masses ($m_{\PW}$ and $m_{\W*}$). Here \W* indicates the off-mass-shell \PW boson. The MC paring is old used to optimised the choice of parameters. It is not used in the subsequent analysis.
 
 %The metric for optimising the $R$ parameter, and the \PFO collection, is the invariant mass and mass resolution of \PHiggs and \PW. An optimised jet reconstruction is chosen such that invariant masses of \PHiggs and \PW are close to their true masses, and invariant mass widths are small.
 
@@ -613,9 +636,9 @@ The value of the $R$ parameter and the \PFO collection are chosen to optimise th
 
 %An example of $m_{\Hbb}$ invariant mass distribution is shown in .  Although the underlying mass distribution of particles like $m_{\PW}$ is a Breit-Wigner distribution, the overall mass distribution is Gaussian like, as the overall mass distribution is a convolution of a narrow \PW Breit-Wigner distribution and a wide Gaussian distribution for the detector resolution. The $m_{\Hbb}$  mass distribution is gaussian like but with asymmetrical width, due to \Pbottom quarks decaying to neutrinos, leading to a loss of detectable particles.
 %\paragraph{Mass resolution fit}
-Three invariant mass distributions are considered:  $m_{\Hbb}$, $m_{\HWW}$, and $m_{\PW}$. The optimal jet reconstruction should produce a sharp mass peak around the simulated particle masses (see \Section{sec:pandoraCLICsimMass}). For example, \Figure{fig:doubleHiggsFitMCMass} shows the $m_{\Hbb}$ invariant mass distribution for $R = 1.3$ using the loose \PFO collection for samples at \rootS{3}. An analytical functional form is fitted to quantitatively describe the shape. The fitting function is a Gaussian-like function. Free parameters are used in the fitting function to fit the tail distribution. The fitting function takes the form of
+Three invariant mass distributions are considered:  $m_{\Hbb}$, $m_{\HWW}$, and $m_{\PW}$. The optimal jet reconstruction should produce sharp mass peaks around the simulated particle masses. For example, \Figure{fig:doubleHiggsFitMCMass} shows the $m_{\Hbb}$ invariant mass distribution for $R = 1.3$ using the loose \PFO collection for samples at \rootS{3}. An analytical functional form is fitted to describe the shape. The fitting function is a Gaussian-like function. Additional parameters are used in the fitting function to describe the tails of the  distribution. The fitting function takes the form of
 \begin{equation}
-f(m)=A e^{- \frac{(m - \mu)^2}{g}},
+f(m)=A \exp\braces{- \frac{(m - \mu)^2}{g}},
 \end{equation}
 \begin{equation}
 g=
@@ -624,27 +647,27 @@ g=
 2\sigma_R + \alpha_R(m - \mu), & \text{if}\ m \geqslant \mu,
 \end{cases}
 \end{equation}
-where: $\mu$ is the fitted mass peak position; $\sigma_L$ and $\sigma_R$ allow an asymmetrical width of the distribution; $\alpha_L$ and  $\alpha_R$  fit the tail of the distribution; and $A$ is the normalisation factor.
+where: $\mu$ is the fitted mass peak position; $\sigma_L$ and $\sigma_R$ allow for an asymmetrical width of the distribution; $\alpha_L$ and  $\alpha_R$  account for a constant tail of the distribution; and $A$ is a normalisation factor.
 
 
 \begin{figure}[!htbp]
 \includegraphics[width=\largefigwidth]{doubleHiggs/MCmassFit2}
 \caption[Example MC mass fit for jet optimisation in double Higgs analysis]%
-   {A typical example of  $m_{\Hbb}$  mass distribution for $R$ = 1.3 using loose PFO collection for signal samples at \rootS{3}.  Fitting function is superimposed in red. The arrow shows the fitted mean peak position. }
+   {A typical example of the reconstructed $m_{\Hbb}$  mass distribution for $R$ = 1.3 using loose PFO collection for signal samples at \rootS{3}.  The fitting function is superimposed in red. The arrow shows the fitted peak position. }
    \label{fig:doubleHiggsFitMCMass}
 \end{figure}
 
 %\paragraph{Optimal $R$ and \PFO collection}
 
 %The mass fit is performed for $m_{\Hbb}$, $m_{\HWW}$, and $m_{\PW}$ distributions.  The optimal jet reconstruction should have the mass peak close to the particle's simulated mass and a narrow peak width.
-The overall relative width is defined as $\left(\sigma_L  + \sigma_R\right)/M$. A smaller width indicates a  better mass resolution. The fitted \Hbb, \HWW, and \PW masses are studied for $R$ values between 0.5 and 1.3, at an interval of 0.1, and with three \PFO collections: loose, normal, and tight.
+To parameterise the performance of different jet algorithm settings, the overall relative width is used, defined as $\left(\sigma_L  + \sigma_R\right)/M$. A smaller width indicates a  better mass resolution. The fitted \Hbb, \HWW, and \PW masses are studied for $R$ values between 0.5 and 1.3, and with the three possible \PFO collections: loose, normal, and tight.
 
 
-\FIGURE{fig:doubleHiggs1.4TeVMassFit} shows the variation of the mass peak position and the relative width as a function of $R$ and \PFO collections, for $m_{\Hbb}$, $m_{\HWW}$, and $m_{\PW}$. The mass peak position, $\mu$, increases as $R$ increases. This is because more particles are included in jets with increasing jet radius. For the relative width, the values for \Hbb  increase with increasing jet radius, but the values for \HWW decrease  with increasing jet radius. This is due to a compensating effect. The invariant mass for \HWW is formed from four jets, which prefers a large jet radius. The invariant mass for \Hbb is obtained from two jets, which favours a small jet radius.
+\FIGURE{fig:doubleHiggs1.4TeVMassFit} shows the variation of the mass peak position and its relative width as a function of $R$ and \PFO collections, for $m_{\Hbb}$, $m_{\HWW}$, and $m_{\PW}$. The mass peak position, $\mu$, increases as $R$ increases. This is because more particles are included in jets with increasing jet radius. For the relative width, the values for \Hbb  increase with increasing jet radius, but the values for \HWW decrease  with increasing jet radius. This is due to a compensating effect; the invariant mass for \HWW is formed from four jets, which prefers a large jet radius, whereas the invariant mass for \Hbb is obtained from two jets, which favours a small jet radius.
 
 The choice of \PFO collection impacts number of \PFOs in the event. The loose \PFO selection has the most \PFOs in the event and, therefore, the largest invariant mass and worst mass resolution.
 
-Based on the results summarised in \Figure{fig:doubleHiggs1.4TeVMassFit}, it was decided to use  $R = 0.7$  with the \normalPFO for this analysis. This choice  gives good fitted mass peak positions for \Hbb, \HWW and \PW. The extracted fitted parameters of optimal jet reconstructions are summarised in \Table{tab:doubleHiggsFitParameters}.
+Based on the results summarised in \Figure{fig:doubleHiggs1.4TeVMassFit} for this analysis, it was decided to use  $R = 0.7$  with the \normalPFO. This choice  gives good fitted mass peak positions for \Hbb, \HWW and \PW. The extracted fitted parameters of optimal jet reconstructions are summarised in \Table{tab:doubleHiggsFitParameters}.
 
 \begin{figure}[!tbp]
   \begin{subfigure}[b]{0.45\textwidth}
@@ -678,7 +701,7 @@ Based on the results summarised in \Figure{fig:doubleHiggs1.4TeVMassFit}, it was
     \label{fig:doubleHiggs1.4WSigma}
   \end{subfigure}
 \caption[Fitted mass, and resolution of \Hbb, \HWW and \PW at \rootS{1.4}]%
-   {Distributions of a) fitted mass peak positions of \Hbb, b) relative mass peak width of \Hbb, c) fitted mass peak positions of \HWW, and f) relative mass peak width of \HWW, e) fitted mass peak positions of \PW, b) relative mass peak width of \PW. All plots show the variation of the fitted masses and mass resolutions as a function of $R$ for  loose, normal and tight selected \PFO collections at \rootS{1.4}.}
+   {Distributions of a) fitted mass peak positions for \Hbb, b) relative mass peak width for \Hbb, c) fitted mass peak positions for \HWW, and f) relative mass peak width for \HWW, e) fitted mass peak positions for \PW, b) relative mass peak width for \PW. All plots show the variation of the fitted masses and mass resolutions as a function of $R$ for  loose, normal and tight selected \PFO collections at \rootS{1.4}.}
    \label{fig:doubleHiggs1.4TeVMassFit}
 \end{figure}
 
@@ -708,7 +731,7 @@ $\sigma_{R,\PW}$ & $9.03_{\pm0.16}$  &  $9.5_{\pm0.2}$  \\
 \label{tab:doubleHiggsFitParameters}
 \end{table}
 
-For the jet reconstruction optimisation at \rootS{3},  \FIGURE{fig:doubleHiggs3TeVMassFit} shows the variation of fitted mass peak positions and  the relative mass resolutions for \Hbb, \HWW, and \PW as function of $R$ and \PFO collections. The relative mass resolution of \PW worsen quickly with increasing $R$. The fitted mass peak positions also increases quicker with the increase of $R$, compared with the fitted positions at \rootS{1.4}. This is due to at a higher centre-of-mass energy, more beam induced background particles are produced. The background particles, if included in the jets, will increase the invariant masses of the fitted physical bosons. Therefore,  $R = 0.7$  with the \tightPFO is chosen for the \rootS{3} analysis. With chosen parameters, the excellent mass resolutions compensate for the invariant masses slightly smaller than simulated values. The extracted fitted parameters of optimal jet reconstructions at \rootS{3} are summarised in \Table{tab:doubleHiggsFitParameters}.
+A separate jet reconstruction optimisation is performed for \rootS{3} analysis. \FIGURE{fig:doubleHiggs3TeVMassFit} shows the variation of fitted mass peak positions and  the relative mass resolutions for \Hbb, \HWW, and \PW as function of $R$ and \PFO collections. The relative mass resolution of \PW boson quickly degrades with increasing $R$. The fitted mass peak positions also increases more rapidly with the increase of $R$, compared with the fitted positions at \rootS{1.4}. This is because at a higher centre-of-mass energy, more beam induced background particles are produced. The background particles, if included in the jets, will increase the invariant masses of the fitted physical bosons. Based on this study,  $R = 0.7$  with the \tightPFO was chosen for the \rootS{3} analysis. With chosen parameters, the better relative mass resolutions compensate for the invariant masses being slightly smaller than simulated values. The extracted fitted parameters of optimal jet reconstructions at \rootS{3} are summarised in \Table{tab:doubleHiggsFitParameters}.
 
 
 %This choice  gives good fitted mass peak positions for \Hbb, \HWW and \PW. The extracted fitted parameters of optimal jet reconstructions are summarised in \Table{tab:doubleHiggsFitParameters}.
