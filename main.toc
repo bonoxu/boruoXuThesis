@@ -53,107 +53,108 @@
 \contentsline {subsection}{\numberline {4.6.3}Longitudinally-invariant \kt algorithm}{52}{subsection.4.6.3}
 \contentsline {subsection}{\numberline {4.6.4}Durham algorithm}{53}{subsection.4.6.4}
 \contentsline {subsection}{\numberline {4.6.5}Jet algorithm for the \CLIC }{53}{subsection.4.6.5}
-\contentsline {section}{\numberline {4.7}Multivariate Analysis}{53}{section.4.7}
+\contentsline {subsection}{\numberline {4.6.6}The \y {} parameter}{53}{subsection.4.6.6}
+\contentsline {section}{\numberline {4.7}Multivariate Analysis}{54}{section.4.7}
 \contentsline {subsection}{\numberline {4.7.1}Optimisation and overfitting}{54}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Choice of models}{55}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.2}Choice of models}{56}{subsection.4.7.2}
 \contentsline {subsection}{\numberline {4.7.3}Rectangular Cut model}{56}{subsection.4.7.3}
 \contentsline {subsection}{\numberline {4.7.4}Projective Likelihood model}{56}{subsection.4.7.4}
 \contentsline {subsection}{\numberline {4.7.5}Decision Tree model}{57}{subsection.4.7.5}
-\contentsline {subsection}{\numberline {4.7.6}To improve decision tree}{58}{subsection.4.7.6}
-\contentsline {subsection}{\numberline {4.7.7}Boosted Decision Tree model}{59}{subsection.4.7.7}
+\contentsline {subsection}{\numberline {4.7.6}To improve decision tree}{59}{subsection.4.7.6}
+\contentsline {subsection}{\numberline {4.7.7}Boosted Decision Tree model}{60}{subsection.4.7.7}
 \contentsline {subsection}{\numberline {4.7.8}Optimisation of Boosted Decision Tree}{61}{subsection.4.7.8}
 \contentsline {subsection}{\numberline {4.7.9}Multiple classes}{62}{subsection.4.7.9}
-\contentsline {chapter}{\numberline {5}Photon Reconstruction in \pandora }{63}{chapter.5}
-\contentsline {section}{\numberline {5.1}Overview of photon reconstruction in \pandora }{64}{section.5.1}
-\contentsline {section}{\numberline {5.2}Electromagnetic shower}{65}{section.5.2}
-\contentsline {section}{\numberline {5.3}\PhotonReconstruction algorithm}{66}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Form photon clusters}{66}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Find photon candidates}{67}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Photon ID test}{69}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Photon Fragment removal}{69}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Two dimensional peak finding algorithm for photon candidate}{69}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Initialise the two-dimensional histogram}{70}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Project calorimeter hits to histogram}{71}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Local peak identifying}{71}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Associate non-peak bins to peaks}{71}{subsection.5.4.4}
-\contentsline {subsection}{\numberline {5.4.5}Peak filtering}{72}{subsection.5.4.5}
-\contentsline {subsection}{\numberline {5.4.6}Candidate close to track projection}{73}{subsection.5.4.6}
-\contentsline {subsection}{\numberline {5.4.7}Inclusive mode}{73}{subsection.5.4.7}
-\contentsline {section}{\numberline {5.5}Likelihood classifier for photon ID}{75}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Variable used in the likelihood classifier}{75}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Projective Likelihood classifier}{76}{subsection.5.5.2}
-\contentsline {section}{\numberline {5.6}Photon fragment removal algorithm in the \ECAL }{78}{section.5.6}
-\contentsline {section}{\numberline {5.7}Photon fragment recovery algorithm in the \HCAL }{81}{section.5.7}
-\contentsline {section}{\numberline {5.8}Photon splitting algorithm}{83}{section.5.8}
-\contentsline {section}{\numberline {5.9}Characterise the performance}{85}{section.5.9}
-\contentsline {section}{\numberline {5.10}Compare with no photon reconstruction}{86}{section.5.10}
-\contentsline {section}{\numberline {5.11}Compare with photon reconstruction in \pandora version 1}{88}{section.5.11}
-\contentsline {section}{\numberline {5.12}Understand photon reconstruction improvement}{91}{section.5.12}
-\contentsline {section}{\numberline {5.13}Current photon reconstruction performance}{92}{section.5.13}
-\contentsline {chapter}{\numberline {6}Tau Lepton Decay Modes Classification}{95}{chapter.6}
-\contentsline {section}{\numberline {6.1}Overview of the analysis}{96}{section.6.1}
-\contentsline {section}{\numberline {6.2}Samples for the analysis}{97}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Tau lepton decay modes}{97}{subsection.6.2.1}
-\contentsline {section}{\numberline {6.3}Simulation and reconstruction}{97}{section.6.3}
-\contentsline {section}{\numberline {6.4}Event pre-selection}{99}{section.6.4}
-\contentsline {section}{\numberline {6.5}Variables used in the MVA}{100}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}\PFOs number variables}{101}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Invariant mass variables}{101}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}Energy variables}{101}{subsection.6.5.3}
-\contentsline {subsection}{\numberline {6.5.4}Calorimetric information variables}{102}{subsection.6.5.4}
-\contentsline {subsection}{\numberline {6.5.5}\decayRhoShort and \decayAiPhotonShort resonances reconstruction variables}{102}{subsection.6.5.5}
-\contentsline {subsection}{\numberline {6.5.6}Separate \decayElectronShort from \decayPionShort }{103}{subsection.6.5.6}
-\contentsline {section}{\numberline {6.6}Multivariate Analysis}{105}{section.6.6}
-\contentsline {section}{\numberline {6.7}Tau decay mode classification efficiency}{105}{section.6.7}
-\contentsline {section}{\numberline {6.8}Electromagnetic calorimeter optimisation}{107}{section.6.8}
-\contentsline {subsection}{\numberline {6.8.1}Tau hadronic decay correct classification efficiency}{109}{subsection.6.8.1}
-\contentsline {section}{\numberline {6.9}Tau pair polarisation correlations as a signature of Higgs boson}{112}{section.6.9}
-\contentsline {subsection}{\numberline {6.9.1}Event pre-selection}{112}{subsection.6.9.1}
-\contentsline {subsection}{\numberline {6.9.2}Find tau decay products}{113}{subsection.6.9.2}
-\contentsline {subsubsection}{\numberline {6.9.2.1}Direct tau searching}{113}{subsubsection.6.9.2.1}
-\contentsline {subsubsection}{\numberline {6.9.2.2}Jet clustering}{114}{subsubsection.6.9.2.2}
-\contentsline {subsubsection}{\numberline {6.9.2.3}Select tau candidates}{114}{subsubsection.6.9.2.3}
-\contentsline {subsection}{\numberline {6.9.3}Boost tau decay products to \PZ decay rest frame}{115}{subsection.6.9.3}
-\contentsline {subsection}{\numberline {6.9.4}Variables used in the MVA}{116}{subsection.6.9.4}
-\contentsline {subsection}{\numberline {6.9.5}Multivariate analysis}{116}{subsection.6.9.5}
-\contentsline {subsection}{\numberline {6.9.6}Result}{116}{subsection.6.9.6}
-\contentsline {chapter}{\numberline {7}Double Higgs Boson Production Analysis}{119}{chapter.7}
-\contentsline {section}{\numberline {7.1}Analysis Strategy Overview}{120}{section.7.1}
-\contentsline {section}{\numberline {7.2}Monte Carlo sample generation}{121}{section.7.2}
-\contentsline {section}{\numberline {7.3}Lepton identification}{122}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Electron and muon identification}{124}{subsection.7.3.1}
-\contentsline {subsubsection}{\numberline {7.3.1.1}\IsolatedLeptonFinderProcessor }{124}{subsubsection.7.3.1.1}
-\contentsline {subsubsection}{\numberline {7.3.1.2}\BonoLeptonFinder }{124}{subsubsection.7.3.1.2}
-\contentsline {subsection}{\numberline {7.3.2}Tau lepton identification}{125}{subsection.7.3.2}
-\contentsline {subsubsection}{\numberline {7.3.2.1}\TauFinderProcessor }{127}{subsubsection.7.3.2.1}
-\contentsline {subsubsection}{\numberline {7.3.2.2}\BonoTauFinder }{128}{subsubsection.7.3.2.2}
-\contentsline {subsection}{\numberline {7.3.3}Very forward electron identification}{130}{subsection.7.3.3}
-\contentsline {subsection}{\numberline {7.3.4}Lepton identification performance}{131}{subsection.7.3.4}
-\contentsline {section}{\numberline {7.4}Jet reconstruction}{133}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Jet reconstruction optimisation}{134}{subsection.7.4.1}
-\contentsline {section}{\numberline {7.5}Jet flavour tagging}{136}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Mutually exclusive cuts for \eeToHHbbWW and \eeToHHbbbb }{141}{subsection.7.5.1}
-\contentsline {section}{\numberline {7.6}Jet pairing}{142}{section.7.6}
-\contentsline {section}{\numberline {7.7}Pre-selection}{143}{section.7.7}
-\contentsline {section}{\numberline {7.8}MVA variables}{148}{section.7.8}
-\contentsline {subsection}{\numberline {7.8.1}Invariant mass variables}{148}{subsection.7.8.1}
-\contentsline {subsection}{\numberline {7.8.2}Energy and momentum variables}{148}{subsection.7.8.2}
-\contentsline {subsection}{\numberline {7.8.3}Lab-frame angle variables}{150}{subsection.7.8.3}
-\contentsline {subsection}{\numberline {7.8.4}Boosted-frame angle variables}{151}{subsection.7.8.4}
-\contentsline {subsection}{\numberline {7.8.5}Event shape variables}{151}{subsection.7.8.5}
-\contentsline {subsection}{\numberline {7.8.6}\Pbottom and \Pcharm tag variables}{152}{subsection.7.8.6}
-\contentsline {subsection}{\numberline {7.8.7}\PFOs number variables}{152}{subsection.7.8.7}
-\contentsline {subsection}{\numberline {7.8.8}Cuts to aid the MVA}{154}{subsection.7.8.8}
-\contentsline {section}{\numberline {7.9}Multivariate analysis}{154}{section.7.9}
-\contentsline {section}{\numberline {7.10}Signal selection results}{155}{section.7.10}
-\contentsline {section}{\numberline {7.11}\rootS {3} analysis}{157}{section.7.11}
-\contentsline {section}{\numberline {7.12}Semi-leptonic decay at \rootS {3} analysis}{162}{section.7.12}
-\contentsline {section}{\numberline {7.13}Result interpretation}{163}{section.7.13}
-\contentsline {section}{\numberline {7.14}Combined results}{166}{section.7.14}
-\contentsline {section}{\numberline {7.15}Simultaneous couplings extraction}{166}{section.7.15}
-\contentsline {chapter}{\numberline {8}Summary}{173}{chapter.8}
-\contentsline {chapter}{\numberline {A}Double Higgs Boson Production Analysis}{175}{appendix.A}
-\contentsline {section}{\numberline {A.1}Hadronic decay at \rootS {3} analysis}{175}{section.A.1}
-\contentsline {chapter}{Bibliography}{181}{chapter*.114}
-\contentsline {chapter}{List of Figures}{187}{chapter*.115}
-\contentsline {chapter}{List of Tables}{193}{chapter*.116}
+\contentsline {chapter}{\numberline {5}Photon Reconstruction in \pandora }{65}{chapter.5}
+\contentsline {section}{\numberline {5.1}Overview of photon reconstruction in \pandora }{66}{section.5.1}
+\contentsline {section}{\numberline {5.2}Electromagnetic shower}{67}{section.5.2}
+\contentsline {section}{\numberline {5.3}\PhotonReconstruction algorithm}{68}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Form photon clusters}{68}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Find photon candidates}{69}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Photon ID test}{71}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Photon Fragment removal}{71}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Two dimensional peak finding algorithm for photon candidate}{71}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Initialise the two-dimensional histogram}{72}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Project calorimeter hits to histogram}{73}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Local peak identifying}{73}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Associate non-peak bins to peaks}{73}{subsection.5.4.4}
+\contentsline {subsection}{\numberline {5.4.5}Peak filtering}{74}{subsection.5.4.5}
+\contentsline {subsection}{\numberline {5.4.6}Candidate close to track projection}{75}{subsection.5.4.6}
+\contentsline {subsection}{\numberline {5.4.7}Inclusive mode}{75}{subsection.5.4.7}
+\contentsline {section}{\numberline {5.5}Likelihood classifier for photon ID}{77}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Variable used in the likelihood classifier}{77}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Projective Likelihood classifier}{78}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}Photon fragment removal algorithm in the \ECAL }{80}{section.5.6}
+\contentsline {section}{\numberline {5.7}Photon fragment recovery algorithm in the \HCAL }{83}{section.5.7}
+\contentsline {section}{\numberline {5.8}Photon splitting algorithm}{85}{section.5.8}
+\contentsline {section}{\numberline {5.9}Characterise the performance}{87}{section.5.9}
+\contentsline {section}{\numberline {5.10}Compare with no photon reconstruction}{88}{section.5.10}
+\contentsline {section}{\numberline {5.11}Compare with photon reconstruction in \pandora version 1}{90}{section.5.11}
+\contentsline {section}{\numberline {5.12}Understand photon reconstruction improvement}{93}{section.5.12}
+\contentsline {section}{\numberline {5.13}Current photon reconstruction performance}{94}{section.5.13}
+\contentsline {chapter}{\numberline {6}Tau Lepton Decay Modes Classification}{97}{chapter.6}
+\contentsline {section}{\numberline {6.1}Overview of the analysis}{98}{section.6.1}
+\contentsline {section}{\numberline {6.2}Samples for the analysis}{99}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Tau lepton decay modes}{99}{subsection.6.2.1}
+\contentsline {section}{\numberline {6.3}Simulation and reconstruction}{99}{section.6.3}
+\contentsline {section}{\numberline {6.4}Event pre-selection}{101}{section.6.4}
+\contentsline {section}{\numberline {6.5}Variables used in the MVA}{102}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}\PFOs number variables}{103}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Invariant mass variables}{103}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}Energy variables}{103}{subsection.6.5.3}
+\contentsline {subsection}{\numberline {6.5.4}Calorimetric information variables}{104}{subsection.6.5.4}
+\contentsline {subsection}{\numberline {6.5.5}\decayRhoShort and \decayAiPhotonShort resonances reconstruction variables}{104}{subsection.6.5.5}
+\contentsline {subsection}{\numberline {6.5.6}Separate \decayElectronShort from \decayPionShort }{105}{subsection.6.5.6}
+\contentsline {section}{\numberline {6.6}Multivariate Analysis}{107}{section.6.6}
+\contentsline {section}{\numberline {6.7}Tau decay mode classification efficiency}{107}{section.6.7}
+\contentsline {section}{\numberline {6.8}Electromagnetic calorimeter optimisation}{109}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}Tau hadronic decay correct classification efficiency}{111}{subsection.6.8.1}
+\contentsline {section}{\numberline {6.9}Tau pair polarisation correlations as a signature of Higgs boson}{114}{section.6.9}
+\contentsline {subsection}{\numberline {6.9.1}Event pre-selection}{114}{subsection.6.9.1}
+\contentsline {subsection}{\numberline {6.9.2}Find tau decay products}{115}{subsection.6.9.2}
+\contentsline {subsubsection}{\numberline {6.9.2.1}Direct tau searching}{115}{subsubsection.6.9.2.1}
+\contentsline {subsubsection}{\numberline {6.9.2.2}Jet clustering}{116}{subsubsection.6.9.2.2}
+\contentsline {subsubsection}{\numberline {6.9.2.3}Select tau candidates}{116}{subsubsection.6.9.2.3}
+\contentsline {subsection}{\numberline {6.9.3}Boost tau decay products to \PZ decay rest frame}{117}{subsection.6.9.3}
+\contentsline {subsection}{\numberline {6.9.4}Variables used in the MVA}{118}{subsection.6.9.4}
+\contentsline {subsection}{\numberline {6.9.5}Multivariate analysis}{118}{subsection.6.9.5}
+\contentsline {subsection}{\numberline {6.9.6}Result}{118}{subsection.6.9.6}
+\contentsline {chapter}{\numberline {7}Double Higgs Boson Production Analysis}{121}{chapter.7}
+\contentsline {section}{\numberline {7.1}Analysis Strategy Overview}{122}{section.7.1}
+\contentsline {section}{\numberline {7.2}Monte Carlo sample generation}{123}{section.7.2}
+\contentsline {section}{\numberline {7.3}Lepton identification}{124}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Electron and muon identification}{126}{subsection.7.3.1}
+\contentsline {subsubsection}{\numberline {7.3.1.1}\IsolatedLeptonFinderProcessor }{126}{subsubsection.7.3.1.1}
+\contentsline {subsubsection}{\numberline {7.3.1.2}\BonoLeptonFinder }{126}{subsubsection.7.3.1.2}
+\contentsline {subsection}{\numberline {7.3.2}Tau lepton identification}{127}{subsection.7.3.2}
+\contentsline {subsubsection}{\numberline {7.3.2.1}\TauFinderProcessor }{129}{subsubsection.7.3.2.1}
+\contentsline {subsubsection}{\numberline {7.3.2.2}\BonoTauFinder }{130}{subsubsection.7.3.2.2}
+\contentsline {subsection}{\numberline {7.3.3}Very forward electron identification}{132}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.4}Lepton identification performance}{133}{subsection.7.3.4}
+\contentsline {section}{\numberline {7.4}Jet reconstruction}{135}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Jet reconstruction optimisation}{136}{subsection.7.4.1}
+\contentsline {section}{\numberline {7.5}Jet flavour tagging}{141}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Mutually exclusive cuts for \eeToHHbbWW and \eeToHHbbbb }{143}{subsection.7.5.1}
+\contentsline {section}{\numberline {7.6}Jet pairing}{144}{section.7.6}
+\contentsline {section}{\numberline {7.7}Pre-selection}{145}{section.7.7}
+\contentsline {section}{\numberline {7.8}MVA variables}{147}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}Invariant mass variables}{152}{subsection.7.8.1}
+\contentsline {subsection}{\numberline {7.8.2}Energy and momentum variables}{152}{subsection.7.8.2}
+\contentsline {subsection}{\numberline {7.8.3}Lab-frame angle variables}{153}{subsection.7.8.3}
+\contentsline {subsection}{\numberline {7.8.4}Boosted-frame angle variables}{153}{subsection.7.8.4}
+\contentsline {subsection}{\numberline {7.8.5}Event shape variables}{154}{subsection.7.8.5}
+\contentsline {subsection}{\numberline {7.8.6}\Pbottom and \Pcharm tag variables}{154}{subsection.7.8.6}
+\contentsline {subsection}{\numberline {7.8.7}\PFOs number variables}{155}{subsection.7.8.7}
+\contentsline {subsection}{\numberline {7.8.8}Cuts to aid the MVA}{155}{subsection.7.8.8}
+\contentsline {section}{\numberline {7.9}Multivariate analysis}{157}{section.7.9}
+\contentsline {section}{\numberline {7.10}Signal selection results}{157}{section.7.10}
+\contentsline {section}{\numberline {7.11}\rootS {3} analysis}{158}{section.7.11}
+\contentsline {section}{\numberline {7.12}Semi-leptonic decay at \rootS {3} analysis}{165}{section.7.12}
+\contentsline {section}{\numberline {7.13}Result interpretation}{166}{section.7.13}
+\contentsline {section}{\numberline {7.14}Combined results}{169}{section.7.14}
+\contentsline {section}{\numberline {7.15}Simultaneous couplings extraction}{169}{section.7.15}
+\contentsline {chapter}{\numberline {8}Summary}{177}{chapter.8}
+\contentsline {chapter}{\numberline {A}Double Higgs Boson Production Analysis}{179}{appendix.A}
+\contentsline {section}{\numberline {A.1}Hadronic decay at \rootS {3} analysis}{179}{section.A.1}
+\contentsline {chapter}{Bibliography}{185}{chapter*.114}
+\contentsline {chapter}{List of Figures}{191}{chapter*.115}
+\contentsline {chapter}{List of Tables}{197}{chapter*.116}

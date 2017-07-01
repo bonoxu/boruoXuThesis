@@ -653,7 +653,7 @@ where: $\mu$ is the fitted mass peak position; $\sigma_L$ and $\sigma_R$ allow f
 \begin{figure}[!htbp]
 \includegraphics[width=\largefigwidth]{doubleHiggs/MCmassFit2}
 \caption[Example MC mass fit for jet optimisation in double Higgs analysis]%
-   {A typical example of the reconstructed $m_{\Hbb}$  mass distribution for $R$ = 1.3 using loose PFO collection for signal samples at \rootS{3}.  The fitting function is superimposed in red. The arrow shows the fitted peak position. }
+   {A typical example of the reconstructed $m_{\Hbb}$  mass distribution for $R$ = 1.3 using loose PFO collection for \eeToHHbbWWHad samples at \rootS{3}.  The fitting function is superimposed in red. The arrow shows the fitted peak position. }
    \label{fig:doubleHiggsFitMCMass}
 \end{figure}
 
@@ -701,7 +701,7 @@ Based on the results summarised in \Figure{fig:doubleHiggs1.4TeVMassFit} for thi
     \label{fig:doubleHiggs1.4WSigma}
   \end{subfigure}
 \caption[Fitted mass, and resolution of \Hbb, \HWW and \PW at \rootS{1.4}]%
-   {Distributions of a) fitted mass peak positions for \Hbb, b) relative mass peak width for \Hbb, c) fitted mass peak positions for \HWW, and f) relative mass peak width for \HWW, e) fitted mass peak positions for \PW, b) relative mass peak width for \PW. All plots show the variation of the fitted masses and mass resolutions as a function of $R$ for  loose, normal and tight selected \PFO collections at \rootS{1.4}.}
+   {Distributions of a) fitted mass peak positions for \Hbb, b) relative mass peak width for \Hbb, c) fitted mass peak positions for \HWW, and f) relative mass peak width for \HWW, e) fitted mass peak positions for \PW, b) relative mass peak width for \PW. All plots show the variation of the fitted masses and mass resolutions as a function of $R$ for  loose, normal, and tight selected \PFO collections at \rootS{1.4}, using \eeToHHbbWWHad.}
    \label{fig:doubleHiggs1.4TeVMassFit}
 \end{figure}
 
@@ -770,54 +770,70 @@ A separate jet reconstruction optimisation is performed for \rootS{3} analysis. 
     \label{fig:doubleHiggs3WSigma}
   \end{subfigure}
 \caption[Fitted mass peak positions and relative mass resolution of \Hbb, \HWW and \PW at \rootS{3}.]%
-{Distributions of a) fitted mass peak positions of \Hbb, b) relative mass peak widths of \Hbb, c) fitted mass peak positions of \HWW, d) relative mass peak widths of \HWW, e) fitted mass peak positions of \PW, and f) relative mass peak widths of \PW. All plots show the variation of fitted masses and mass resolutions as a function of $R$ for  loose, normal and tight selected \PFO collections at \rootS{3}.}
+{Distributions of a) fitted mass peak positions of \Hbb, b) relative mass peak widths of \Hbb, c) fitted mass peak positions of \HWW, d) relative mass peak widths of \HWW, e) fitted mass peak positions of \PW, and f) relative mass peak widths of \PW. All plots show the variation of fitted masses and mass resolutions as a function of $R$ for loose, normal, and tight selected \PFO collections at \rootS{3}, using \eeToHHbbWWHad channel.}
    \label{fig:doubleHiggs3TeVMassFit}
 \end{figure}
 
 \section{Jet flavour tagging}
 \label{sec:doubleHiggsFlavourTagging}
 
-As the signal channel, \eeToHHbbWWHad,  has two \Pbottom quarks in the final state, identifying jets originated from \Pbottom quarks is an important part of the event selection. To establish the likelihood of a \Pbottom jet (b-jet tag value), \lcfiplus \cite{Suehara:2015ura} software package is used.
+As the signal channel, \eeToHHbbWWHad,  contains two \Pbottom quarks in the final state, identifying jets originated from \Pbottom quarks is an important part of the event selection.
+
+%Pbottom jet (b-jet tag value), \lcfiplus \cite{Suehara:2015ura} software package is used.
 
 %Another useful analysis technique is to identify jets from \Pbottom and \Pcharm quarks. These jets have signatory topologies. A combination of vertex finding and multivariate analysis is used to identify \Pbottom and \Pcharm jets.
 
-The flavour tagging processor, \lcfiplus \cite{Suehara:2015ura} is based on the LCFIVertex package \cite{Bailey:2009ui}, which was used in the simulation studies for the \ILCloi \cite{Abe:2010aa,Aihara:2009ad} and the \CLICcdr \cite{Linssen:2012hp}.  \lcfiplus is modular and can be used in any order. However here it will be described in the order that is used in this analysis.
+The flavour tagging processor, \lcfiplus \cite{Suehara:2015ura} is used. The processor is based on the LCFIVertex package \cite{Bailey:2009ui}, which was used in the simulation studies for the \ILCloi \cite{Abe:2010aa,Aihara:2009ad} and the \CLICcdr \cite{Linssen:2012hp}.  
+%\lcfiplus is modular and can be used in any order. However here it will be described in the order that is used in this analysis.
 
 %The current software is built for a future \ee collider.
+After the previous jet clustering step, PFOs, which are not in the beam jet, are used as inputs for the flavour tagging. The flavour tagging algorithm identifies vertices, then re-cluster PFOs into jets. Lastly, the algorithm decides if a jet us a \Pbottom jet or a \Pcharm jet.
 
-The inputs are \PFOs, after jet clustering using $R = 0.7$ and the \normalPFO. The vertex finding algorithms in the \lcfiplus perform vertex fitting and identify primary and secondary vertices. There is a ``V0'' particle rejection step.  A ``V0'' particle is a  neutral particle that decays into pairs of charged particles. The topology of the ``V0'' particles can be  similar to the decay of \Pbottom or \Pcharm quarks. Hence it is important to remove the ``V0' particles to improve the b-quark and c-quark flavour tagging.
 
-Once the primary and secondary vertices are found, \PFOs are re-clustered into jets. This jet re-clustering scheme ensures that the secondary vertices and the muons which is identified from semi-leptonic decay of the quarks, fall into the same jet. Therefore, the topology of the jet is consistent with the  hadronic decay of heavy quarks. The jet re-clustering scheme are modified Durham algorithms.
+The vertex finding algorithms perform vertex fitting and identify primary and secondary vertices. There are two vertex refining algorithm. First algorithm rejects the topology of a  neutral particle that decays into pairs of charged particles, which can be mistaken as  the decay of \Pbottom or \Pcharm quarks. The second algorithm is performed after the re-clustering step to reconstruct more secondary vertices, with additional information from the jet clustering.
 
-The next step is to refine vertices to improve the \Pbottom jet sparation from the \Pcharm jet.  Additional information is applied to improve the vertex reconstruction. Since the existence of two close by vertices is strongly correlated to a \Pbottom jet, the vertices refining step will reconstruct as many secondary vertices correctly as possible.
+The jet re-clustering algorithm is a modified Durham algorithm, with additional constraint of the secondary vertices and the muons, which ares identified from semi-leptonic decay of the quarks, falling into the same  jet as the quarks. This ensures the topology of the jet remains consistent with the hadronic decays of heavy quarks.
 
-The last step is to gather the information about vertices and jets, and deploy a multivariate analysis. The multivariate classier used, Boosted Decision Tree,  is implemented in the TMVA software package \cite{Hocker:2007ht}. A number of flavour sensitive variables are calculated. The jets are is divided into four subsets: jets with zero, one, two properly reconstructed vertices, or a single-track pseudo-vertex. For each subset, a jet can either be classified to a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet (\Pup, \Pdown or \Pstrange). The multiclass classifier's response is normalised across different subsets.
+
+Having obtained re-cluster jets, the next step is the flavour tagging, which uses a multivariate classifier to determine if a jet is from \Pbottom quark or \Pcharm quark. \lcfiplus uses the Boosted Decision Tree MVA multiclass classifier as implemented in the TMVA software package \cite{Hocker:2007ht}. There are four categories for classification:  jets with zero, one, two properly reconstructed vertices, or a single-track pseudo-vertex. A jet can be classified into one of three classes: a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet (\Pup, \Pdown or \Pstrange). 
+
+The MVA multiclass classifier was trained with \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} event at \rootS{1.4}, where \PZ decays to \HepProcess{\Pbottom\APbottom}, \HepProcess{\Pcharm\APcharm}, or \HepProcess{\Pup\APup/\Pdown\APdown/\Pstrange\APstrange}. The training sample contains missing momentum, which is similar to the signal sample. The training sample only has two quarks in the final states, which reduces the error in jet clustering and provides a good ground truth for training. The MVA classicisation efficiency with the training samples is shown in \Figure{fig:doubleHiggs1.4Btag}.
+
+Having trained the MVA classifier, the MVA classifier is applied to the samples. Under the signal hypothesis, the re-cluster algorithm is set to find six jets. The normalised distribution of the highest b-jet tag value for the \eeToHHbbWWHad sample is shown in \Figure{fig:doubleHiggsBtagSignalPerformance}.
+
+For the \rootS{3} analysis, the MVA classifier is re-trained with  \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} event at \rootS{3}. The performance of the flavour tagging  with training samples is shown in \Figure{fig:doubleHiggsBtag3TeV}. The performance at \rootS{3} is slightly worse than at \rootS{1.4}, because at the higher centre-of-mass energy, jets are more collimated and more difficult to separate.  
+
+Compared to the performance at \rootS{1.4}, the performance is slightly worse, because at a high centre-of-mass energy, particles at more collimated and more difficult to separate. Therefore, the vertex identification and the flavour tagging performance are worse.
+
+
+
+%The last step is to gather the information about vertices and jets, and deploy a multivariate analysis. The multivariate classier used, Boosted Decision Tree,  is implemented in the TMVA software package \cite{Hocker:2007ht}. A number of flavour sensitive variables are calculated. The jets are is divided into four subsets: jets with zero, one, two properly reconstructed vertices, or a single-track pseudo-vertex. For each subset, a jet can either be classified to a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet (\Pup, \Pdown or \Pstrange). The multiclass classifier's response is normalised across different subsets.
 %, and they will be referred in the subsequent physics analysis as the tag value.
 
 %The samples for training the multiclass classifier are \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} at \rootS{1.4}, where \PZ decays to \HepProcess{\Pbottom\APbottom}, \HepProcess{\Pcharm\APcharm}, or \HepProcess{\Pup\APup/\Pdown\APdown/\Pstrange\APstrange}.
 
-The events to train the multiclass classifier are \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} event at \rootS{1.4}, where \PZ decays to \HepProcess{\Pbottom\APbottom}, \HepProcess{\Pcharm\APcharm}, or \HepProcess{\Pup\APup/\Pdown\APdown/\Pstrange\APstrange}. The selection efficiency of b jets and c jets with the training samples is shown in \Figure{fig:doubleHiggs1.4Btag}. The normalised distribution of the highest b-jet tag value for the signal events is shown in \Figure{fig:doubleHiggsBtagSignalPerformance}.
+%The events to train the multiclass classifier are \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} event at \rootS{1.4}, where \PZ decays to \HepProcess{\Pbottom\APbottom}, \HepProcess{\Pcharm\APcharm}, or \HepProcess{\Pup\APup/\Pdown\APdown/\Pstrange\APstrange}. The selection efficiency of b jets and c jets with the training samples is shown in \Figure{fig:doubleHiggs1.4Btag}. The normalised distribution of the highest b-jet tag value for the signal events is shown in \Figure{fig:doubleHiggsBtagSignalPerformance}.
 
 %To apply trained  multiclass classifier in the \lcfiplus processor, all the \PFOs in the initial reconstructed jet are fed into the processor. The jet re-clustering step in the \lcfiplus is set to find six jets. For each jet, values for the likelihood of a b-jet and a c-jet are obtained.
 %At the training stage, the  jet re-clustering step is set to find two jets.  he outputs for a jet is three values, corresponding to the likelihood of the jet being a b-jet, a c-jet, or a light flavour quark jet.
 
 
-For the \rootS{3}, the flavour tagging processor is re-trained in the same way as in the \rootS{1.4} analysis. The training events are from the same channel but at \rootS{3}. The performance of the flavour tagging  with training samples is shown in \Figure{fig:doubleHiggsBtag3TeV}. Compared to the performance at \rootS{1.4}, the performance is slightly worse, because at a high centre-of-mass energy, particles at more collimated and more difficult to separate. Therefore, the vertex identification and the flavour tagging performance are worse.
+F%or the \rootS{3}, the flavour tagging processor is re-trained in the same way as in the \rootS{1.4} analysis. The training events are from the same channel but at \rootS{3}. The performance of the flavour tagging  with training samples is shown in \Figure{fig:doubleHiggsBtag3TeV}. Compared to the performance at \rootS{1.4}, the performance is slightly worse, because at a high centre-of-mass energy, particles at more collimated and more difficult to separate. Therefore, the vertex identification and the flavour tagging performance are worse.
 %high energy or high energies?
 
 \begin{figure}[!htbp]
  \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{doubleHiggs/eval-lcfiweights_R0_7_2jets-test}.pdf}
     \caption{\rootS{1.4}}
-    \label{fig:doubleHiggsBtag3TeV}
+    \label{fig:doubleHiggs1.4Btag}
   \end{subfigure}
  \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test}.pdf}
     \caption{\rootS{3}}
-   \label{fig:doubleHiggs1.4Btag}
+   \label{fig:doubleHiggsBtag3TeV}
   \end{subfigure}
 \caption
-   {Performance of b-jet tagging with training samples at a) \rootS{1.4}, and b) \rootS{3}.}
+   {Performance of b-jet tagging with \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} samples, where \PZ decays to \HepProcess{\Pbottom\APbottom}, \HepProcess{\Pcharm\APcharm}, or \HepProcess{\Pup\APup/\Pdown\APdown/\Pstrange\APstrange} at a) \rootS{1.4}, and b) \rootS{3}.}
    \label{fig:doubleHiggsBtag}
 \end{figure}
 
@@ -825,7 +841,7 @@ For the \rootS{3}, the flavour tagging processor is re-trained in the same way a
 \begin{figure}[!htbp]
     \includegraphics[width=0.45\textwidth]{{doubleHiggs/jetPairing/nR0_7_6jet_btag2_bTag1_TMVA20170223R0_7_qq_btag2_prepare2}}
 \caption
-   {The normalised distribution of the highest b-jet tag value for the signal events  at \rootS{1.4}}
+   {The distribution of the highest b-jet value for the \eeToHHbbWWHad events  at \rootS{1.4}. Area under the curve is normalised to 1.}
    \label{fig:doubleHiggsBtagSignalPerformance}
 \end{figure}
 %The flavour tagging is performed after the initial jet reconstruction, and all the \PFOs in the reconstructed jets are input into the \lcfiplus flavour tagging processor. Therefore, the classifier in the \lcfiplus processor is trained for a specific \PFO collection and a specific jet reconstruction algorithm. The outputs of the processor for a jet are three values, corresponding to the likelihood of the jet being a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet.
@@ -836,22 +852,23 @@ For the \rootS{3}, the flavour tagging processor is re-trained in the same way a
 \subsection{Mutually exclusive cuts for \eeToHHbbWW and \eeToHHbbbb}
 \label{sec:doubleHiggsMutualExclusive}
 
-Two \eeToHH final states with largest branching fractions are \eeToHHbbbb (31.5\%) and \eeToHHbbWW (25.9\%). Two final states have different topologies and are subject of two analysis strategies. The \eeToHHbbWW final state is the subject of this thesis.  The study of the \eeToHHbbbb final state is the subject of an independent analysis. A set of cuts are designed to separate  samples, for both signal and background events, into two mutually exclusive sets for  two independent analyses. This ensures there are no correlations between two analyses.
+The two \eeToHH final states with the largest branching fractions are \eeToHHbbbb (31.5\%) and \eeToHHbbWW (25.9\%). These two final states have different topologies and are subject of two analysis strategies. The \eeToHHbbWW final state is the subject of this thesis.  The study of the \eeToHHbbbb final state is the subject of an independent analysis.Because the results of the two studies are subsequently combined, a set of cuts are designed to separate  samples, for both signal and background events, into two mutually exclusive sets for  two independent analyses. This ensures there are no correlations between two analyses.
 
 %This eases the difficulty of combining sub-channels as correlations between sub-channels need not to be considered where samples are mutually exclusive.
 %With the jet clustering and b-jet tagging information,
 
-The most distinctive difference between the two sub-channels is the different total number of jets and the different number of b-jets in the final state. Variables relating to the number of b-jets and total number of jets are suitable for separating two sub-channels.
+The most distinctive difference between the \eeToHHbbWW and \eeToHHbbbb sub-channels is the different jet multiplicity  and the different number of b-jets in the final state. Consequently variables relating to the number of b-jets and total number of jets are suitable for separating the two sub-channels.
 
- \FIGURE{fig:doubleHiggsMutualPreselection} shows the sum of b-jet tag values, when the event is clustered into four jets, as a function of $-\log\parenths{\y{34}}$ for the hadronic \WW decay in \eeToHHbbWW and \eeToHHbbbb. \y{} parameter is a measure of number of jets. As expected,  two sub-channels can be clearly separated in this two dimensional phase space. A rectangular cut will separate the phase space into two spaces, donated as $S$ and $\neg{S}$. The hadronic \WW decay in \eeToHHbbWW events should  be contained in  $S$, and the \eeToHHbbbb events should be contained in $\neg{S}$.
+ \FIGURE{fig:doubleHiggsMutualPreselection} shows the sum of b-jet tag values, when the event is clustered into four jets, as a function of $-\log\parenths{\y{34}}$ for the hadronic \WW decay in \eeToHHbbWW and \eeToHHbbbb. As expected,  the two sub-channels can be clearly separated in this two dimensional phase space. A rectangular cut can be used to  separate the phase space into two spaces, donated as $S$ and $\neg{S}$. The hadronic \WW decay in \eeToHHbbWW events should  be contained in  $S$, and the \eeToHHbbbb events should be contained in $\neg{S}$.
 
-To maximise the separation of two sub-channels, a set of cuts are found by maximising the product of the fraction of the sub-channel events in each space:
+%To maximise the separation of two sub-channels, a set of cuts are found by maximising the product of the fraction of the sub-channel events in each space:
+The optimal cuts are chosen such that they maximise:
 \begin{equation}
 \varepsilon = \frac{N_{\text{\eeToHHbbWW, hadronic}} \in S} {N_{\text{\eeToHHbbWW, hadronic}}} \times \frac{N_{\eeToHHbbbb} \in \neg{S}} {N_{\eeToHHbbbb}} ,
 \end{equation}
 where $N \in S$ indicates number of events in the phase space $S$.
 
-Several variables are tested to maximise $\varepsilon$. The best cuts found defining $S$ is $\sumBtag{4} < 2.3, \,-\log\parenths{\y{34}} < 3.7$. With the cuts, 86\% of  the hadronic \WW decay in \eeToHHbbWW events are in $S$ and 78\% of the \eeToHHbbbb events are in $\neg{S}$. The full list of fraction of events after passing mutually exclusive cuts for individual background channel can be found in \Table{tab:doubleHiggs1.4TeVPreslection}.
+Several combinations of pairs of variables were considered. In each case, the product of the fraction of the sub-channel events in each space, $\varepsilon$ was maximised. This procedure identified $\sumBtag{4} < 2.3, \,-\log\parenths{\y{34}} < 3.7$ as the best choice with 86\% of  the hadronic \WW decay in \eeToHHbbWW events are in $S$ and 78\% of the \eeToHHbbbb events are in $\neg{S}$. The full list of fraction of events after passing mutually exclusive cuts for individual background processes are listed in \Table{tab:doubleHiggs1.4TeVPreslection}.
 
 
 \begin{figure}[!tbp]
@@ -866,26 +883,22 @@ Several variables are tested to maximise $\varepsilon$. The best cuts found defi
     \label{fig:doubleHiggs1.4Mutualbbbb}
   \end{subfigure}
 \caption[Sum of b-jet tag values as a function of $-\log\parenths{\y{34}}$ at \rootS{1.4}]%
-   {Sum of b-jet tag values, when the event is clustered into four jets, as a function of $-\log\parenths{\y{34}}$ at \rootS{1.4}, shown for a) hadronic \WW decay of \eeToHHbbWW, and b) \eeToHHbbbb sub-channel. }
+   {The two-dimensional distribution of sum of b-jet tag values against $-\log\parenths{\y{34}}$. The plots show a)  a) hadronic \WW decay of \eeToHHbbWW, and b) \eeToHHbbbb events at \rootS{1.4}. The sum of b-jet tag values is calculated for the case where events are clustered into four jets.}
    \label{fig:doubleHiggsMutualPreselection}
 \end{figure}
 
 
 \section{Jet pairing}
 
-Having optimised the jet reconstruction, and obtained the six jets from the jet re-clustering step in the \lcfiplus processor, the next step is to group jets according to signal event topology.
-Jets are paired up such that there are two jets for \HepProcess{\PHiggs \to \Pbottom \APbottom}, two jets for hadronic decay of a \PW, two jets  for hadronic decay  of a \W*, and the two $\PW$s forming a  \PHiggs boson.
+Events are reconstructed assuming the \eeToHHbbWW signal topology. The six jets are obtained from the jet re-clustering step in the \lcfiplus processor.  The next step is to group jets according to signal event topology.
+Jets are paired up such that there are two jets for \HepProcess{\PHiggs \to \Pbottom \APbottom}, two jets for hadronic decay of a \PW, and two jets  for hadronic decay  of a \W*. In addition, the two $\PW$s should be from the  \PHiggs boson decay.
 
-Six jets are associated to \Hbb, \PW and \W*. There are 90 possible permutations. The best permutation is obtained by minimising a $\chi^2$  based on expected masses and mass widthes:
-
-%off-mass-shell and off the mass shell? Is the "the" pertinent? Should they both be hyphenated?
-
-%The jet pairing scheme provides reconstructed invariant masses of \Hbb, \HWW, and \PW. The jet pairing metric states:
+Six jets are associated to \Hbb, \PW and \W*. There are 90 possible permutations for associating six jets to \Hbb, \PW and \W*. The best permutation is obtained by minimising a $\chi^2$  quantity representing the consistency of the hypothesis with the signal topology:
 \begin{equation}
 	\chi^2 = \left(\frac{m_{ij}-\mu_{\Hbb}}{\sigma_{\Hbb}^{\prime}}\right)^2 + \left(\frac{m_{klmn}-\mu_{\HWW}}{\sigma_{\HWW}^{\prime}}\right)^2  + \left(\frac{m_{kl}-\mu_{\PW}}{\sigma_{\PW}^{\prime}}\right)^2,
 %\label{eqn:eq_chi2_HHWWbb}
 \end{equation}
-
+where the indices represent the six jets. The parameter $\mu$ and $\sigma^{\prime}$ are the expected peak and (asymmetric) width of the reconstructed mass distributions given in \Table{tab:doubleHiggsFitParameters}, defined as:
 \begin{equation}
 	\sigma_{\Hbb}^{\prime}=
     \begin{cases}
@@ -913,7 +926,7 @@ Six jets are associated to \Hbb, \PW and \W*. There are 90 possible permutations
    \end{cases}
 \end{equation}
 \end{comment}
-where the indices $i$ to $l$ indicate the one of the six jets; $\mu$ and $\sigma$ are the fitted invariant mass and the fitted width from \Table{tab:doubleHiggsFitParameters}; The asymmetrical structure of the fitting function is reflected the definition of $\sigma_{\Hbb}^{\prime}$, $\sigma_{\HWW}^{\prime}$, and $\sigma_{\PW}^{\prime}$. The jet pairing is only considered when at least one of the jets associated to the \Hbb decay with a b-jet tag > 0.2. Of these combinations of jets, the jet pairing giving smallest  $\chi^2$ is selected. The normalised distribution of $m_{\Hbb}$ after jet pairing, for the signal channel, \eeToHHbbWW and the sum of all background channels can be seen in \Figure{fig:doubleHiggsJetPairing}. For the signal channel, the distribution peaks around the expected mass of $m_{\Hbb}$. It can also be seen from the figures that around 1\% of the signal events have no solutions for the jet pairing, as no jet has a b-jet tag > 0.2. The full list of fraction of events after jet pairing selection can be found in \Table{tab:doubleHiggs1.4TeVPreslection}.
+A jet pairing is only considered when at least one of the jets associated to the \Hbb decay has a b-jet tag > 0.2. Of these combinations of jets, the jet pairing giving smallest  $\chi^2$ is selected. \FIGURE{fig:doubleHiggsJetPairing} shows the normalised distribution of $m_{\Hbb}$ after jet pairing, for the signal channel, \eeToHHbbWW and the sum of all background channels. For the signal channel, the distribution peaks around the expected mass of $m_{\Hbb}$. Around I\% of signal events have no solutions for the jet pairing, as no jet has a b-jet tag > 0.2. These events are no longer considered in the analysis. The full list of fraction of events surviving after this jet pairing selection are listed in \Table{tab:doubleHiggs1.4TeVPreslection} for signal \eeToHHbbWW and all background channels.
 
 
 \begin{figure}[!htbp]
@@ -928,7 +941,7 @@ where the indices $i$ to $l$ indicate the one of the six jets; $\mu$ and $\sigma
    \label{fig:doubleHiggsJetPairingBackground}
   \end{subfigure}
 \caption
-   {The normalised distribution of $m_{\Hbb}$ after jet pairing, for a) signal channel, hadronic \WW decay of \eeToHHbbWW, b) sum of all background channels. All plots are shown for \rootS{1.4}.}
+   {The distribution of $m_{\Hbb}$ for a) the signal channel, hadronic \WW decay of \eeToHHbbWW, and b) the sum of all background channels normalised to the respective cross sections. The area under the curve is normalised to 1. All plots are shown for \rootS{1.4}.}
    \label{fig:doubleHiggsJetPairing}
 \end{figure}
 
@@ -937,10 +950,10 @@ where the indices $i$ to $l$ indicate the one of the six jets; $\mu$ and $\sigma
 % TODO fix lumi correction for e gamma, gamma e
 % TODO change some of sample cross section for  electron-photon interaction with four quarks and a neutrino final state
 %\small{
-
+\small
 \begin{tabular}{lrrrr}
 \hline \hline
- \multicolumn{1}{m{3.5cm}}{Channel / Efficiency \rootS{1.4}} &  \multicolumn{1}{m{2cm}}{Expected number of events}  & \multicolumn{1}{m{1.5cm}}{Lepton evto} & \multicolumn{1}{m{1.5cm}}{Mutually exclusive} & \multicolumn{1}{m{1.5cm}}{Jet Pairing} \\
+ \multicolumn{1}{L{3.5cm}}{\rootS{1.4}} &  \multicolumn{1}{R{2cm}}{N}  & \multicolumn{1}{R{2cm}}{Lepton evto} & \multicolumn{1}{R{2cm}}{\bbWW / \bbWW separation} & \multicolumn{1}{R{2cm}}{Valid jet Pairing} \\
 \hline
 \eeToHH $\to$ \\
 \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}, hadronic             &27.9& 89.7\% & 79.1\% & 78.3\%\\
@@ -990,7 +1003,7 @@ where the indices $i$ to $l$ indicate the one of the six jets; $\mu$ and $\sigma
 \end{tabular}
 
 \caption
-{Number of events and fraction of events passing lepton veto, the mutually exclusive cuts, and the jet pairing  for the signal and background events at \rootS{1.4}, assuming an integrated luminosity of 1500\,$fb^{-1}$. The selection efficiencies are presented in a ``flow'' fashion. Every selection cut contains all the cuts to the left of it. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation.}
+{The table show the expected number of events, before cuts and after successive cuts: the lepton veto, \eeToHHbbWW/\eeToHHbbbb separation, and valid jet pairing, for the signal and background events at \rootS{1.4}, assuming an integrated luminosity of 1500\,\uprightMath{fb^{-1}}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles.}
 \label{tab:doubleHiggs1.4TeVPreslection}
 \end{table}
 
@@ -1004,7 +1017,7 @@ Since both Higgs bosons are on mass shell,  the invariant mass of the double Hig
 
 \begin{figure}[!tbp]
     \includegraphics[width=0.95\textwidth]{{doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_prepare}.pdf}
-   \caption{Distributions of the invariant mass of the two Higgs system for \rootS{1.4}, assuming an intergraded luminosity of 1500\,\text{$fb^{-1}$}.}
+   \caption{Distributions of the invariant mass of the two Higgs system for \rootS{1.4}, assuming an intergraded luminosity of 1500\,\uprightMath{fb^{-1}}. }
     \label{fig:doubleHiggs1.4PreSelmHH}
 
 \end{figure}
@@ -1015,7 +1028,7 @@ Many background events do not have b-quark jets in the final state. Therefore, b
 \begin{figure}[!tbp]
     \includegraphics[width=0.95\textwidth]{{doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_prepare}.pdf}
 
-    \caption{Distributions of the  second highest b-jet tag value for \rootS{1.4}, assuming an intergraded luminosity of 1500\,\text{$fb^{-1}$}.}
+    \caption{Distributions of the  second highest b-jet tag value for \rootS{1.4}, assuming an intergraded luminosity of 1500\,\uprightMath{fb^{-1}}. }
     \label{fig:doubleHiggs1.4PreSelbtag}
 \end{figure}
 
@@ -1024,7 +1037,7 @@ The signal final states have neutrinos and hence missing momentum in the events.
 \begin{figure}[!tbp]
     \includegraphics[width=0.95\textwidth]{{doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_prepare}.pdf}
 
-    \caption{Distributions of the transverse momentum  of the two Higgs system for \rootS{1.4}, assuming an intergraded luminosity of 1500\,\text{$fb^{-1}$}.}
+    \caption{Distributions of the transverse momentum  of the two Higgs system for \rootS{1.4}, assuming an intergraded luminosity of 1500\,\uprightMath{fb^{-1}}. }
     \label{fig:doubleHiggs1.4PreSelpT}
 \end{figure}
 
@@ -1105,7 +1118,7 @@ Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.7 \\
 \hline \hline
 \end{tabular}
 \caption[List of signal and background samples after pre-selection cuts at \rootS{1.4}.]
-{List of signal and background events after each pre-selection cut at \rootS{1.4}.  The selection efficiencies are presented in a ``flow'' fashion. Every selection cut contains all the cuts to the left of it and all  cuts in \Table{tab:doubleHiggs1.4TeVPreslection}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation.}
+{The tables show the expected number of events after successive cuts:  invariant mass of the two Higgs system > 150\,GeV,  the  second highest b-jet tag value > 0.2, and the transverse momentum  of the two Higgs system  > 30\,GeV.  All cuts include the lepton veto, \eeToHHbbWW/\eeToHHbbbb separation, and valid jet pairing. The table shows  for the signal and background events at \rootS{1.4}, assuming an integrated luminosity of 1500\,\uprightMath{fb^{-1}}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles.}
 \label{tab:doubleHiggsPreslectionPart2}
 \end{table}
 
@@ -1177,7 +1190,7 @@ where $\vec{p_{i}}$ is the momentum vector of the particle $i$; index $i$ is sum
 \end{equation}
 \sphericity, is 0 for a perfect pencil-like back-to-back two-jet event, and 1 for a perfect spherically symmetric event.
 
-The \y{} parameter is a measure of the number of jets in an event.  It describes the transition of  the exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets. Numerically the \y{} parameter is often much smaller than 1. A typically way to convert the small number to a machine acceptable range is to take the negative logarithm of the number. See \Section{sec:pandoraJetAlg} for discussion on jet algorithms and $d_{cut}$.
+%The \y{} parameter is a measure of the number of jets in an event.  It describes the transition of  the exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets. Numerically the \y{} parameter is often much smaller than 1. A typically way to convert the small number to a machine acceptable range is to take the negative logarithm of the number. See \Section{sec:pandoraJetAlg} for discussion on jet algorithms and $d_{cut}$.
 
 \subsection{\Pbottom and \Pcharm tag  variables}
 
@@ -1236,7 +1249,7 @@ Event shape & \multicolumn{1}{R{0.6\textwidth}}{$\abs{\sphericity}$, $-\ln(\y{23
     \label{fig:doubleHiggs1.4varSpinHbb}
   \end{subfigure}
 \caption
-   {Distributions of the four variables with highest discriminating power: a) the invariant mass of \Hbb, b) the invariant mas of \HWW, c) the acolinearity of the two jets associated with \Hbb, and d) the opening angles of the two jets associated with \Hbb in the decay rest frame of the \Hbb. All plots assumes an intergraded luminosity of  1500\,$fb^{-1}$ at \rootS{1.4} after all pre-selection cuts applied before the MVA.}
+   {Distributions of the four variables with highest discriminating power: a) the invariant mass of \Hbb, b) the invariant mas of \HWW, c) the acolinearity of the two jets associated with \Hbb, and d) the opening angles of the two jets associated with \Hbb in the decay rest frame of the \Hbb. All plots assumes an intergraded luminosity of  1500\,\uprightMath{fb^{-1}} at \rootS{1.4} after all pre-selection cuts applied before the MVA.}
    \label{fig:doubleHiggs1.4var}
 \end{figure}
 
@@ -1311,7 +1324,7 @@ Do-PreSelection & yes \\
 \label{sec:doubleHiggsSignalSelResult}
 %first sentence doesn't make sense. Should there be an "and" in there?
 
-Number of events passed the MVA event selection at \rootS{1.4}, assuming a luminosity of 1500\,$fb^{-1}$  are listed in \Table{tab:doubleHiggs1.4TeVMVA} for individual channels. A few  background channels have non-zero events after the MVA event selection. \eeTo{\Pquark \APquark \PHiggs \Pnu \APnu} events are difficult to discard because its topology, one Higgs plus neutrino, is very similar to the signal event topology. Similarly, \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} events can be confused with the signal events when the lepton is undetected in the forward region, or the energy of the lepton is too low to be tagged. \eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} events can also have a similar topology to the signal events. Other background channels that are not discarded after the MVA are the electron-photon and photon interactions with the same final states as the channels above.
+Number of events passed the MVA event selection at \rootS{1.4}, assuming a luminosity of 1500\,\uprightMath{fb^{-1}}  are listed in \Table{tab:doubleHiggs1.4TeVMVA} for individual channels. A few  background channels have non-zero events after the MVA event selection. \eeTo{\Pquark \APquark \PHiggs \Pnu \APnu} events are difficult to discard because its topology, one Higgs plus neutrino, is very similar to the signal event topology. Similarly, \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} events can be confused with the signal events when the lepton is undetected in the forward region, or the energy of the lepton is too low to be tagged. \eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} events can also have a similar topology to the signal events. Other background channels that are not discarded after the MVA are the electron-photon and photon interactions with the same final states as the channels above.
 
 
 Before interpreting the result for analysis at \rootS{1.4}, the analyses at \rootS{3} and  the semi-leptonic channel of \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue} are presented.
@@ -1375,7 +1388,7 @@ Before interpreting the result for analysis at \rootS{1.4}, the analyses at \roo
 \end{tabular}
 
 \caption[Selection efficiency and number of events for signal and background at \rootS{1.4}.]%
-{List of signal and background events with selection efficiency and number of events at \rootS{1.4}, assuming a luminosity of 1500$fb^{-1}$. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of MVA after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after MVA ($N_{MVA}$) are shown. - represents a number less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation.}
+{List of signal and background events with selection efficiency and number of events at \rootS{1.4}, assuming a luminosity of 1500\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of MVA after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after MVA ($N_{MVA}$) are shown. - represents a number less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop.}
 \label{tab:doubleHiggs1.4TeVMVA}
 \end{table}
 
@@ -1464,7 +1477,7 @@ Channel  &  $\sigma(\rootS{3})$ / fb   \\
     \label{fig:doubleHiggs3Mutualbbbb}
   \end{subfigure}
 \caption[Sum of b-jet tag as a function of \y{34} at \rootS{3}]%
-   {Sum of b-jet tag, when the event is clustered into four jets, as a function of \y{34} at \rootS{3}, shown for a) hadronic \WW decay of \eeToHHbbWW, and b) \eeToHHbbbb sub-channels. }
+   {The two-dimensional distribution of sum of b-jet tag values against $-\log\parenths{\y{34}}$. The plots show a)  a) hadronic \WW decay of \eeToHHbbWW, and b) \eeToHHbbbb events at \rootS{3}. The sum of b-jet tag values is calculated for the case where events are clustered into four jets.}
    \label{fig:doubleHiggs3TeVMutualPreselection}
 \end{figure}
 
@@ -1473,13 +1486,13 @@ The pre-selection cuts at \rootS{3} use the same cut on $m_{\HH}$. The cut on  b
 
 \begin{figure}[!tbp]
     \includegraphics[width=0.85\textwidth]{{doubleHiggs/preSel/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag2_prepare}.pdf}
-    \caption{Distributions of the invariant mass  of the two Higgs system for \rootS{3}, assuming an intergraded luminosity of 2000\,\text{$fb^{-1}$}.}
+    \caption{Distributions of the invariant mass  of the two Higgs system for \rootS{3}, assuming an intergraded luminosity of 2000\,\uprightMath{fb^{-1}}.}
     \label{fig:doubleHiggs3PreSelmHH}
 \end{figure}
 
 \begin{figure}[!tbp]
     \includegraphics[width=0.85\textwidth]{{doubleHiggs/preSel/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prepare}.pdf}
-    \caption{Distributions of the highest b-jet tag value for \rootS{3}, assuming an intergraded luminosity of 2000\,\text{$fb^{-1}$}.}
+    \caption{Distributions of the highest b-jet tag value for \rootS{3}, assuming an intergraded luminosity of 2000\,\uprightMath{fb^{-1}}.}
     \label{fig:doubleHiggs3PreSelbtag}
 \end{figure}
 
@@ -1640,7 +1653,7 @@ The same set of variables are used in the MVA as in the analysis at \rootS{1.4}.
 \hline \hline
 \end{tabular}
 \caption[List of signal and background selection efficiencies and event numbers after MVA application at  \rootS{3}.]
-{List of signal and background events with selection efficiency and number of events at \rootS{3}, assuming a luminosity of 2000$fb^{-1}$. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of MVA after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after MVA ($N_{MVA}$) are shown. - represents a number less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation.}
+{List of signal and background events with selection efficiency and number of events at \rootS{3}, assuming a luminosity of 2000\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of MVA after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after MVA ($N_{MVA}$) are shown. - represents a number less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation.}
 \label{tab:doubleHiggs3TeVMVA}
 \end{table}
 
@@ -1656,7 +1669,7 @@ Variables used in the MVA classifier, listed in  \Table{tab:doubleHiggsVaraibles
 
 
 
-\FIGURE{tab:doubleHiggsQlv3TeVMVA} lists the  selection efficiency and number of events after the MVA event selection for individual channel at \rootS{3}, assuming a luminosity of 2000$\,fb^{-1}$.  Almost all background channels are non-zero after the MVA event selection. Nevertheless,  dominant background channels are almost identical to the hadronic decay analysis  at \rootS{3}. Hence discussion of the MVA event selection is provided in \Section{sec:doubleHiggsSignalSelResult}.
+\FIGURE{tab:doubleHiggsQlv3TeVMVA} lists the  selection efficiency and number of events after the MVA event selection for individual channel at \rootS{3}, assuming a luminosity of 2000\,\uprightMath{fb^{-1}}.  Almost all background channels are non-zero after the MVA event selection. Nevertheless,  dominant background channels are almost identical to the hadronic decay analysis  at \rootS{3}. Hence discussion of the MVA event selection is provided in \Section{sec:doubleHiggsSignalSelResult}.
 %"dominant background channels"?
 \begin{comment}
 \begin{table}[!htbp]
@@ -1755,7 +1768,7 @@ Event shape & \multicolumn{1}{R{0.6\textwidth}}{$\abs{\sphericity}$, $-\ln(\y{23
 \hline \hline
 \end{tabular} semi-leptonic \WW decay of \eeToHHbbWW
 \caption
-{List of signal and background events with selection efficiency and number of events at \rootS{3}  for semi-leptonic \WW decay of \eeToHHbbWW analysis , assuming a luminosity of 2000$fb^{-1}$. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of MVA after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after MVA ($N_{MVA}$) are shown. - represents a number less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation.}
+{List of signal and background events with selection efficiency and number of events at \rootS{3}  for semi-leptonic \WW decay of \eeToHHbbWW analysis , assuming a luminosity of 2000\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of MVA after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after MVA ($N_{MVA}$) are shown. - represents a number less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation.}
 \label{tab:doubleHiggsQlv3TeVMVA}
 \end{table}
 
@@ -1856,7 +1869,7 @@ This translates to the uncertainty on the Higgs trilinear self coupling \gHHH, v
 
 As stated in the beginning of the chapter the study of the double Higgs production via \WW fusion can probe the Higgs trilinear self coupling, \gHHH and quartic coupling, \gWWHH. Therefore, a simultaneous extraction on the coupling uncertainty can be performed by extending the method in the previous sections. Once a relationship between \gHHH , \gWWHH and difference in kinematic variable distributions is established, a contour of the uncertainty of the measurements of  \gHHH and \gWWHH in two-dimensional phase space can be obtained.
 
-This two dimensional template fitting is performed at  \rootS{3}, as the precision at \rootS{1.4} is too low to support such a fitting. The integrated luminosity is assumed to be 3000\,$fb^{-1}$ to reflect the updated \CLIC running scenario.
+This two dimensional template fitting is performed at  \rootS{3}, as the precision at \rootS{1.4} is too low to support such a fitting. The integrated luminosity is assumed to be 3000\,\uprightMath{fb^{-1}} to reflect the updated \CLIC running scenario.
 
 The normalised cross section of the \eeToHH as a function of \gHHH and \gWWHH is shown in \Figure{fig:doubleHiggsCouplingCrossSection}. The SM cross section is normalised to 1. Around the SM coupling value, the cross section increases with the decrease of \gHHH and with the increase of \gWWHH. Hence the cross sections along the anti-diagonal are nearly constant, which would be difficult to precisely determine the statistical uncertainty on the coupling measurements.
 
@@ -1882,7 +1895,7 @@ where $N_i$ is the number of event expected in a kinematic bin $i$ for a non-SM 
 
 \begin{figure}[!tbp]
     \includegraphics[width=0.8\textwidth]{doubleHiggs/extraction/SignificanceBono3}
-\caption{The significance for the \eeToHH process as a function of the $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$ at \rootS{3}, using sub-channel hadronic \WW decay of \eeToHHbbWW, assuming an integrated luminosity of  3000$fb^{-1}$.}
+\caption{The significance for the \eeToHH process as a function of the $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$ at \rootS{3}, using sub-channel hadronic \WW decay of \eeToHHbbWW, assuming an integrated luminosity of  3000\,\uprightMath{fb^{-1}}.}
    \label{fig:doubleHiggsCouplingSignificancebbWW}
 \end{figure}
 
@@ -1898,7 +1911,7 @@ where $N_i$ is the number of event expected in a kinematic bin $i$ for a non-SM 
     \label{fig:doubleHiggsCouplingChi2bbbb}
   \end{subfigure}
 \caption[$\chi^2$ as a function of $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$  at \rootS{3}]%
-   {The $\chi^2$ for the \eeToHH process as a function of the $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$ at \rootS{3}, using a) hadronic \WW decay of \eeToHHbbWW, b) and \eeToHHbbbb sub-channel, assuming an integrated luminosity of  3000\,$fb^{-1}$.}
+   {The $\chi^2$ for the \eeToHH process as a function of the $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$ at \rootS{3}, using a) hadronic \WW decay of \eeToHHbbWW, b) and \eeToHHbbbb sub-channel, assuming an integrated luminosity of  3000\,\uprightMath{fb^{-1}}.}
    \label{fig:doubleHiggsCouplingChi2Separate}
 \end{figure}
 
@@ -1906,14 +1919,14 @@ Two sub-channels, hadronic \WW decay of \eeToHHbbWW and \eeToHHbbbb, are combine
 
 \begin{figure}[!tbp]
     \includegraphics[width=0.85\textwidth]{{doubleHiggs/extraction/new/chi2CombineAve4mhh2HT2}}
-\caption{Normalised $\chi^2$, after averaging the toy MC experiments, as a function of $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$, combining hadronic decay \eeToHHbbWW and \eeToHHbbbb sub-channels, assuming an integrated luminosity of  3000$fb^{-1}$.}
+\caption{Normalised $\chi^2$, after averaging the toy MC experiments, as a function of $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$, combining hadronic decay \eeToHHbbWW and \eeToHHbbbb sub-channels, assuming an integrated luminosity of  3000\,\uprightMath{fb^{-1}}.}
    \label{fig:doubleHiggsCouplingChi2Ave}
 \end{figure}
 
 
 \begin{figure}[!tbp]
     \includegraphics[width=0.85\textwidth]{doubleHiggs/extraction/new/contourCOmbineAve3}
-\caption{Contour plot of 68\% confidence ($\chi^2 = 2.3$) , after averaging the toy MC experiments, as a function of $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$,  combining hadronic \WW  decay of \eeToHHbbWW and \eeToHHbbbb sub-channels, assuming an integrated luminosity of  3000$fb^{-1}$.}
+\caption{Contour plot of 68\% confidence ($\chi^2 = 2.3$) , after averaging the toy MC experiments, as a function of $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$,  combining hadronic \WW  decay of \eeToHHbbWW and \eeToHHbbbb sub-channels, assuming an integrated luminosity of  3000\,\uprightMath{fb^{-1}}.}
    \label{fig:doubleHiggsCouplingChi2Countour}
 \end{figure}
 

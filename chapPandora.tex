@@ -322,11 +322,11 @@ Although \CLIC is a \ee collider, the significant beam-induced background adds a
 
 
 %Why extra C++ implementation speed reduce O(n^3) to NlgN y, phi space, 2D KNN problem
-\begin{comment}
-\subsubsection{The \y{} parameter}
+
+\subsection{The \y{} parameter}
 \label{sec:pandoraYparameter}
-The \y{} parameter is calculated for each specific jet algorithm. It is a measure of the number of jets in an event. The \y{} parameter describes the transition of  the exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets. Numerically the \y{} parameter is often much smaller than one. A typically way to convert the small number to a human acceptable range is to take the negative logarithm of the number.
-\end{comment}
+The \y{} parameter is a measure of the number of jets in an event.  It describes the transition of  the exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets. Numerically the \y{} parameter is often much smaller than 1. A typically way to convert the small number to a machine acceptable range is to take the negative logarithm of the number.
+
 \begin{comment}
 \subsection{The \lcfiplus}
 \label{sec:pandoraLCFI}
