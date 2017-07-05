@@ -783,7 +783,7 @@ As the signal channel, \eeToHHbbWWHad,  contains two \Pbottom quarks in the fina
 
 %Another useful analysis technique is to identify jets from \Pbottom and \Pcharm quarks. These jets have signatory topologies. A combination of vertex finding and multivariate analysis is used to identify \Pbottom and \Pcharm jets.
 
-The flavour tagging processor, \lcfiplus \cite{Suehara:2015ura} is used. The processor is based on the LCFIVertex package \cite{Bailey:2009ui}, which was used in the simulation studies for the \ILCloi \cite{Abe:2010aa,Aihara:2009ad} and the \CLICcdr \cite{Linssen:2012hp}.  
+The flavour tagging processor, \lcfiplus \cite{Suehara:2015ura} is used. The processor is based on the LCFIVertex package \cite{Bailey:2009ui}, which was used in the simulation studies for the \ILCloi \cite{Abe:2010aa,Aihara:2009ad} and the \CLICcdr \cite{Linssen:2012hp}.
 %\lcfiplus is modular and can be used in any order. However here it will be described in the order that is used in this analysis.
 
 %The current software is built for a future \ee collider.
@@ -795,13 +795,13 @@ The vertex finding algorithms perform vertex fitting and identify primary and se
 The jet re-clustering algorithm is a modified Durham algorithm, with additional constraint of the secondary vertices and the muons, which ares identified from semi-leptonic decay of the quarks, falling into the same  jet as the quarks. This ensures the topology of the jet remains consistent with the hadronic decays of heavy quarks.
 
 
-Having obtained re-cluster jets, the next step is the flavour tagging, which uses a multivariate classifier to determine if a jet is from \Pbottom quark or \Pcharm quark. \lcfiplus uses the Boosted Decision Tree MVA multiclass classifier as implemented in the TMVA software package \cite{Hocker:2007ht}. There are four categories for classification:  jets with zero, one, two properly reconstructed vertices, or a single-track pseudo-vertex. A jet can be classified into one of three classes: a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet (\Pup, \Pdown or \Pstrange). 
+Having obtained re-cluster jets, the next step is the flavour tagging, which uses a multivariate classifier to determine if a jet is from \Pbottom quark or \Pcharm quark. \lcfiplus uses the Boosted Decision Tree MVA multiclass classifier as implemented in the TMVA software package \cite{Hocker:2007ht}. There are four categories for classification:  jets with zero, one, two properly reconstructed vertices, or a single-track pseudo-vertex. A jet can be classified into one of three classes: a \Pbottom jet, a \Pcharm jet, or a light flavour quark jet (\Pup, \Pdown or \Pstrange).
 
 The MVA multiclass classifier was trained with \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} event at \rootS{1.4}, where \PZ decays to \HepProcess{\Pbottom\APbottom}, \HepProcess{\Pcharm\APcharm}, or \HepProcess{\Pup\APup/\Pdown\APdown/\Pstrange\APstrange}. The training sample contains missing momentum, which is similar to the signal sample. The training sample only has two quarks in the final states, which reduces the error in jet clustering and provides a good ground truth for training. The MVA classicisation efficiency with the training samples is shown in \Figure{fig:doubleHiggs1.4Btag}.
 
 Having trained the MVA classifier, the MVA classifier is applied to the samples. Under the signal hypothesis, the re-cluster algorithm is set to find six jets. The normalised distribution of the highest b-jet tag value for the \eeToHHbbWWHad sample is shown in \Figure{fig:doubleHiggsBtagSignalPerformance}.
 
-For the \rootS{3} analysis, the MVA classifier is re-trained with  \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} event at \rootS{3}. The performance of the flavour tagging  with training samples is shown in \Figure{fig:doubleHiggsBtag3TeV}. The performance at \rootS{3} is slightly worse than at \rootS{1.4}, because at the higher centre-of-mass energy, jets are more collimated and more difficult to separate.  
+For the \rootS{3} analysis, the MVA classifier is re-trained with  \HepProcess{\Pep \Pem \to \PZ \APnu \Pnu} event at \rootS{3}. The performance of the flavour tagging  with training samples is shown in \Figure{fig:doubleHiggsBtag3TeV}. The performance at \rootS{3} is slightly worse than at \rootS{1.4}, because at the higher centre-of-mass energy, jets are more collimated and more difficult to separate.
 
 Compared to the performance at \rootS{1.4}, the performance is slightly worse, because at a high centre-of-mass energy, particles at more collimated and more difficult to separate. Therefore, the vertex identification and the flavour tagging performance are worse.
 
@@ -1118,7 +1118,7 @@ Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.7 \\
 \hline \hline
 \end{tabular}
 \caption[List of signal and background samples after pre-selection cuts at \rootS{1.4}.]
-{The tables show the expected number of events after successive cuts:  invariant mass of the two Higgs system > 150\,GeV,  the  second highest b-jet tag value > 0.2, and the transverse momentum  of the two Higgs system  > 30\,GeV.  All cuts include the lepton veto, \eeToHHbbWW/\eeToHHbbbb separation, and valid jet pairing. The table shows  for the signal and background events at \rootS{1.4}, assuming an integrated luminosity of 1500\,\uprightMath{fb^{-1}}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles.}
+{The table shows the expected number of events after successive cuts:  invariant mass of the two Higgs system > 150\,GeV,  the  second highest b-jet tag value > 0.2, and the transverse momentum  of the two Higgs system  > 30\,GeV.  All cuts include the lepton veto, \eeToHHbbWW/\eeToHHbbbb separation, and valid jet pairing. The table shows  for the signal and background events at \rootS{1.4}, assuming an integrated luminosity of 1500\,\uprightMath{fb^{-1}}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles.}
 \label{tab:doubleHiggsPreslectionPart2}
 \end{table}
 
