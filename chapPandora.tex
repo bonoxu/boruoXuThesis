@@ -6,9 +6,9 @@
 
 %As previously stated, this document focus on the \ILD and \CLICILD detectors. Due to the similarity, we often only discuss one detector to avoid the repetition. The difference in detectors will be stated if applicable.
 
-In previous chapters, overviews of the particle physics theory and the detectors of the future linear collider experiments have been described. In this chapter, simulation, reconstruction and analysis software are discussed. Automated analysis is the only way to deal with the vast amount of data generated in high energy physics. Hence the software supporting the automated analysis are important. An analysis often consists of  monte carlo event generation, event reconstruction, and using software to extract information of the event. Hence they are discussed together in this chapter.
+In previous chapters, overviews of the particle physics theory and the detectors of the future linear collider experiments have been provided. In this chapter, simulation, reconstruction and analysis software are discussed. Automated analysis is the only way to deal with the vast amount of data generated in high energy physics. Hence the software supporting the automated analysis are important. An analysis often consists of  Monte Carlo event generation, event reconstruction, and using software to extract information of the event.
 
-Simulation and reconstruction software of the  \ILC and the \CLIC shares a  common software framework.  Therefore,  the shared simulation and  reconstruction software is discussed first, and the \CLIC specific issues are highlighted afterwards. The event reconstruction focuses on the \pandora event reconstruction, which is the framework for the photon reconstruction algorithms in \Chapter{chap:Photon}. Lastly analysis software is presented.   The multivariate analysis  is discussed  in lengthy details due to its complexity.
+Simulation and reconstruction software of the  \ILC and the \CLIC shares a  common software framework.  Therefore,  the shared  software is discussed first, and the \CLIC specific issues are highlighted afterwards. The event reconstruction focuses on the \pandora event reconstruction, which is the framework for the photon reconstruction algorithms in \Chapter{chap:Photon}. Afterwards analysis software is presented.   The multivariate analysis  is discussed  in lengthy details due to its complexity.
 
 \section{Monte Carlo event generation}
 \label{sec:pandoraMC}
@@ -28,7 +28,7 @@ For all the simulated events used in this thesis, the simulation software used t
 
 \section{Event Reconstruction}
 
-With simulated events (or real data in the future) as inputs, the next step is to reconstruct these events. The reconstruction software runs in the Marlin framework \cite{Gaede:2006pj}, as a part of the \ilcsoft software package. The event reconstruction contains following steps: digitisation of simulated calorimeter hits, reconstruction of tracks in the tracking system (using pattern recognition algorithms), and particle flow objects (\PFOs) reconstruction with \pandora\cite{Thomson:2009rp,Marshall:2012ry}. Details of the reconstruction can be found in \cite{Brau:2007zza,Linssen:2012hp}. Here particle flow reconstruction via \pandora will be discussed in details, as \pandora provides the software framework for the photon reconstruction in \Chapter{chap:Photon}. The \pandora event reconstruction is also used in the analyses in  \Chapter{chap:Tau} and \Chapter{chap:DoubleHiggs}.
+With simulated events (or real data in the future) as inputs, the next step is to reconstruct these events. The reconstruction software runs in the Marlin framework \cite{Gaede:2006pj}, as a part of the \ilcsoft software package. The event reconstruction contains following steps: digitisation of simulated calorimeter hits, reconstruction of tracks in the tracking system (using pattern recognition algorithms), and particle flow objects (\PFOs) reconstruction with \pandora\cite{Thomson:2009rp,Marshall:2012ry}. Details of the event reconstruction can be found in \cite{Brau:2007zza,Linssen:2012hp}. Here particle flow reconstruction via \pandora will be discussed in details, as \pandora provides the software framework for the photon reconstruction in \Chapter{chap:Photon}. The \pandora event reconstruction is also used in the analyses in  \Chapter{chap:Tau} and \Chapter{chap:DoubleHiggs}.
 
 \section{\pandora event reconstruction}
 \label{sec:pandoraPandoraPFA}
@@ -36,7 +36,7 @@ With simulated events (or real data in the future) as inputs, the next step is t
 The tradition energy flow approach to calorimetry is unable to meet the mass and energy resolution requirements for future linear colliders. The particle flow approach to calorimetry with \pandora has a proof-of-principle demonstration of its capability to reach the required jet energy resolution. The particle flow approach to calorimetry  also puts stringent requirements on the detector design, which is described in \Section{sec:detectorPhysicsRequirementPandora}. By associating calorimeter hits to the tracks, around 60\% of the jet energy from charged particles is measured by the tracking detector, which has a much better resolution than the calorimeter. Small cell sizes of the calorimeters are required to identify calorimeter hits from different particles. The traditional sum of calorimeter cell energies is hence replaced by particle flow reconstruction algorithms - a complex pattern recognition problem.
 
 %The \pandora algorithm has been developed and used in the \ILC and \CLIC simulation studies.
-Developed with the \ILD detector concept, \pandora has been adapted to the \CLIC condition and shows its ability to deliver required energy resolutions \cite{Linssen:2012hp}.  There are over 60 electron-positron linear collider specific reconstruction algorithms. Each aims to address a particular topological issue in the reconstruction. In the recent development, the core base codes for basic object and memory managements are factorised in the Pandora C++ Software Development Kit\cite{Marshall:2015rfa}.
+Developed with the \ILD detector concept, \pandora has been adapted to the \CLIC condition and shows its ability to deliver required energy resolutions \cite{Linssen:2012hp}.  There are over 60 electron-positron linear collider specific reconstruction algorithms. Each algorithm aims to address a particular topological issue in the reconstruction. In the recent development, the core base codes for basic object and memory managements are factorised in the Pandora C++ Software Development Kit\cite{Marshall:2015rfa}.
 % Recent the code base of the \pandora has been restructured.
 
 In the subsequent sections, the main steps in the \pandora reconstructions are summarised below. The details of the \pandora event reconstruction can be found in \cite{Thomson:2009rp,Marshall:2012ry,Marshall:2015rfa}.  The inputs of \pandora are digitised calorimeter hits and reconstructed tracks, with some detector geometry information to aid the reconstruction. The output are reconstructed particles with four-momenta, also known as the Particle Flow Objects (\PFOs).
@@ -46,13 +46,13 @@ In the subsequent sections, the main steps in the \pandora reconstructions are s
 
 Tracks from the inner tracking detectors are important inputs of the \pandora reconstruction. These tracks are selected based on their topological properties, how likely they are from physical processes, and whether they are consistent with the tracker resolution. Only tracks passing the selection are used for the subsequent reconstruction.
 
-Special topologies of tracks are identified, such as when a neutral particle decays or converts into a pair of charged tracks, leaving tracks of a ``V0''  shape. This is identified by searching for a pair of tracks originated from a single point. Another topology is the ``kinks'' when a charged particle decays to a single charged particles with neutral particles. The last special topology are  the ``prongs'' when a charged particle decays to multiple charged particles. This information about special topologies is stored and passed onto the subsequent reconstruction, along side with helical track fit (using last 50 reconstructed hits in the tracking detector) and the track projection to the front of the \ECAL.
+Special topologies of tracks are identified, such as when a neutral particle decays or converts into a pair of charged tracks, leaving tracks of a ``V0''  shape. This is identified by searching for a pair of tracks originated from a single point. Another topology is the ``kinks'' when a charged particle decays to a single charged particles with neutral particles. The last special topology are  the ``prongs'' when a charged particle decays to multiple charged particles. This information about special topologies, along side with helical track fit (using last 50 reconstructed hits in the tracking detector) and the track projection to the front of the \ECAL, is stored and passed onto the subsequent reconstruction.
 
 \subsection{Calorimeter selection}
 
-The other important inputs of  the \pandora reconstruction are the calorimeter hits from calorimeters. The properties of a calorimeter hit include the position, its layer in the calorimeter, and its energy response from the calorimeter digitiser.
+The other important inputs of  the \pandora reconstruction are the calorimeter hits from calorimeters. The properties of a calorimeter hit include its position, its layer in the calorimeter, and its energy response from the calorimeter digitiser.
 
-Calorimeter hits are selected based on a series of criterion. The selected hits need to have energies above certain thresholds, measured in minimum ionising particle (MIP) equivalent or measured in directly converted energy. Similar to tracks, only calorimeter hits that pass the selection are used in later steps.
+Calorimeter hits are selected based on a series of criterion. The selected hits need to have energies above certain thresholds, measured in minimum ionising particle (MIP) equivalent or measured in directly converted energy. Only calorimeter hits that pass the selection are used in later steps.
 
 Extra information about calorimeter hits are calculated, stored and used in later steps. The extra information includes the geometry information of the hit and likelihood of the hit originated from a minimum ionising particle (MIP).
 
@@ -62,7 +62,7 @@ Isolated hits, often originating from low energy neutrons in a hadronic shower, 
 \subsection{Particle Identification}
 \label{sec:particleID}
 
-To improve the reconstruction of the charged particles, where calorimeter hits are associated to tracks, dedicated particle identification algorithms identify calorimeter hits associated with muons and photons. These calorimeter hits are removed from the subsequent reconstruction. As fewer hits are left to be reconstructed, the reconstruction of charged particles is improved and the pattern recognition problem is simplified.
+To improve the reconstruction of the charged particles, where calorimeter hits are associated to tracks, dedicated particle identification algorithms find calorimeter hits associated with muons and photons. These calorimeter hits are removed from the subsequent reconstruction. As fewer hits are left to be reconstructed, the reconstruction of charged particles is improved and the pattern recognition problem is simplified.
 
 Identified muons and photons do not participate in the later clustering and re-clustering stages, but re-enter the reconstruction at the fragment removal stage (see \Section{sec:pandoraFragmentRemoval}). See \Chapter{chap:Photon} for details on the photon reconstruction  related algorithms..
 
@@ -71,9 +71,9 @@ Identified muons and photons do not participate in the later clustering and re-c
 \subsection{Clustering}
 \label{sec:pandoraConeCluster}
 
-A cone based clustering algorithm is used to group calorimeter hits into clusters. The output \clusters are further processed, merged, or split based on their topological properties. Since the cone clustering algorithm is widely used in many other reconstruction algorithms in the \pandora, it is necessary to introduce the cone based clustering algorithm, before discussing the rest of the \pandora reconstruction.
+A cone-based clustering algorithm is used to group calorimeter hits into clusters. The output \clusters are further processed, merged, or split based on their topological properties. Since the cone clustering algorithm is widely used in many other reconstruction algorithms in the \pandora, it is necessary to introduce the cone based clustering algorithm, before discussing the rest of the \pandora reconstruction.
 
-There are two main types of clustering algorithms: cone based algorithms and sequential combination algorithms (see \Section{sec:pandoraJetAlg}). The main type of clustering algorithms used in the  \pandora is the cone based algorithms. Illustrated in \Figure{fig:pandoraConeClustering}, cone based clustering algorithm identifies a seed first, shown as the yellow dot. The algorithm then forms a cone to include hits that are within a specified opening angle to the seed. Afterwards the cone with the associated hits form the cluster.
+There are two main types of clustering algorithms: cone-based algorithms and sequential combination algorithms. The main type of clustering algorithms used in the  \pandora is the cone based algorithms. Illustrated in \Figure{fig:pandoraConeClustering}, cone based clustering algorithm identifies a seed first, shown as the yellow dot. The algorithm then forms a cone to include hits that are within a specified opening angle to the seed. Afterwards the cone with the associated hits form the cluster.
 
 
 
@@ -86,7 +86,7 @@ There are two main types of clustering algorithms: cone based algorithms and seq
 \label{fig:pandoraConeClustering}
 \end{figure}
 
-The cone based clustering algorithm is preferred in \pandora because the direction of the particle flow is largely unchanged from the originated particle, irrespective of  the particle flow being an electromagnetic shower, QCD radiation, or hadronisation. \FIGURE{fig:pandoraConeClustering2} shows the clustering algorithm used in the \pandora. The seed for the cone clustering is typically the projection of a track to the front of the \ECAL. A calorimeter hit can also be used as a seed. The initial cluster direction is taken as the direction of the seed. Afterwards, a cone with a specified opening angle and depth will be formed around the direction of the seed.
+The cone-based clustering algorithm is preferred in \pandora because the direction of the particle flow is largely unchanged from the originated particle, irrespective of  the particle flow being an electromagnetic shower, QCD radiation, or hadronisation. \FIGURE{fig:pandoraConeClustering2} shows the clustering algorithm used in the \pandora. The seed for the cone clustering is typically the projection of a track to the front of the \ECAL. A calorimeter hit can also be used as a seed. The initial cluster direction is taken as the direction of the seed. Afterwards, a cone with a specified opening angle and depth will be formed around the direction of the seed.
 
 The building of the cone is iterated from the inner layer of the \ECAL to the outer layer. At each layer, possible associations with calorimeters hits in previous layers and the same layer are made. If a calorimeter hit is not associated with the cone, the hit is used to seed a new cluster. The clustering algorithm produces basic working objects, \clusters.
 
@@ -125,14 +125,14 @@ After the initial clustering, clusters are further refined using topological inf
 
 \subsection{Track-cluster association}
 
-Having refined the clusters in the calorimeter, the next step is to associate the clusters to the tracks obtained from the inner tracking detector. The associations  are made according to the proximity of the first layer of the cluster and the track projection to the front of the \ECAL. The consistency between the track direction and the initial cluster direction, as well as a match between the track momentum and the cluster energy, are required.
+Having refined the clusters in the calorimeter, the next step is to associate the clusters to the tracks obtained from the inner tracking detectors. The associations  are made according to the proximity of the first layer of the cluster and the track projection to the front of the \ECAL. The consistency between the track direction and the initial cluster direction, as well as a match between the track momentum and the cluster energy, are required.
 
 
 \subsection{Re-clustering}
 
 The cluster association scheme described in the previous section works well for events with low-energy (less than 50\,GeV) jets. For an environment with  high-energy jets, electromagnetic and  hadronic showers are  boosted and are likely to overlap each other. Therefore, it is important to refine the track-cluster association based on the momentum and the energy information.
 
-The re-clustering stage improves the compatibility of the cluster energy and the associated track momentum. It is performed on a statistical basis. If the cluster energy and the associated track momentum do not match, the cluster will be re-clustered either using the same clustering algorithm with different parameters, or different clustering algorithms. This re-clustering step creates many temporary clusters. Afterwards, out of many temporary clusters, the temporary cluster has the best track-momentum cluster-energy match is chosen, and the temporary cluster is  associated with the track.
+The re-clustering stage improves the compatibility of the cluster energy and the associated track momentum. It is performed on a statistical basis. If the cluster energy and the associated track momentum do not match, the cluster will be re-clustered either using the same clustering algorithm with different parameters, or different clustering algorithms. This re-clustering step creates many temporary clusters. Afterwards, out of many temporary clusters, the temporary cluster with the best track-momentum cluster-energy match is chosen, and the temporary cluster is  associated with the track.
 
 
 A schematic diagram of the re-clustering stage is shown in \Figure{fig:pandoraRecluster}. In the figure, the black upright arrows indicate the tracks. The dark red dots represent the calorimeter hits in the associated cluster. The  slightly fainter red  dots represent the calorimeter hits in the neutral cluster. In this example, the initial cluster energy is less than the associated track momentum. The topological association algorithms did not add the natural cluster, as it would have formed a cluster with too much energy. The re-clustering scheme tries different cone clustering algorithms by splitting the neutral cluster so that the topological association could make a correct association.
@@ -178,7 +178,7 @@ There are a few  simulation and reconstruction issues specific to the \CLIC, whi
 \subsection{Luminosity spectrum}
 \label{sec:pandoraCLUClumi}
 
-The electron-photon interaction, where the photon is produced from initial state radiation via Beamstrahlung ,  has a different  instantaneous luminosity than the electron-positron interaction. Hence, for the same time-frame, the total integrated luminosity of the electron-photon interaction is different to that of the electron-positron interaction. To correct for the difference in the luminosities, a simulated study \cite{Sailer:lumi} was performed with the GUINEAPIG \cite{Schulte:1999tx} and was simulated in the WHIZARD, to identify the ratio of the integrated luminosity of the  electron-photon interaction to the electron-positron interaction.  The results are summarised in \Table{tab:reconstrcutionBSlumi}. For the physics analysis in \Chapter{chap:DoubleHiggs}, event number for processes with initial-state photons from Beamstrahlung are corrected with the ratios in \Table{tab:reconstrcutionBSlumi}.
+The electron-photon interaction, where the photon is produced from initial state radiation via Beamstrahlung,  has a different  instantaneous luminosity than the electron-positron interaction. Hence, for the same time-frame, the total integrated luminosity of the electron-photon interaction is different to that of the electron-positron interaction. To correct for the difference in the luminosities, a simulated study \cite{Sailer:lumi} was performed with the GUINEAPIG \cite{Schulte:1999tx} and was simulated in the WHIZARD, to identify the ratio of the integrated luminosity of the  electron-photon interaction to the electron-positron interaction.  The results are summarised in \Table{tab:reconstrcutionBSlumi}. For the physics analysis in \Chapter{chap:DoubleHiggs}, event number for processes with initial-state photons from Beamstrahlung are corrected with the ratios in \Table{tab:reconstrcutionBSlumi}.
 
 \begin{table}[htbp]
 \centering
@@ -204,7 +204,7 @@ Luminosity ratio &  \rootS{1.4} & \rootS{3} \\
 
 The other issue considered when using the \CLICILD detector concept is the beam induced background. At a high centre-of-mass energy, the background becomes important for the event reconstruction. Therefore, the beam induced background are considered in the simulation.
 
-There are different types of the beam induced background. The \ggHad is the dominant background in all calorimeters except inner part of the \HCAL endcap. Another type of the background, the incoherent pairs,  are ignored. Therefore  \ggHad, intergraded over 60 bunch crossing,  is overlayed onto the reconstruction.
+There are different types of the beam induced background. The \ggHad is the dominant background in all calorimeters except inner part of the \HCAL endcap. Hence another type of the background, the incoherent pairs,  is ignored. Consequently, the  \ggHad, background, intergraded over 60 bunch crossing,  is overlayed onto the reconstruction.
 
 The hadronisation of  \ggHad background events are performed with the PYTHIA. The  \ggHad background events are superimposed on the physics process simulations to save computational resources. The choice of 60 bunch crossings is an estimate  of  the amount of background in the experiment condition\cite{Barklow:1443518}.
 
@@ -215,7 +215,7 @@ The track selector aims to remove poor quality and fake tracks that are more lik
 
 The PFO selector discards PFOs that are originated from the beam induced background from the event reconstruction, based on the transverse momentum (\pT) and time information of the PFOs. The PFOs from \ggHad often have low \pT and have a range of time-of-arrivals. In contrast, the PFOs from physics processes have a range of \pT, and the time-of-arrivals are close to the brunch crossing time. By utilising the high spatial resolution from the high granular calorimeter, individual PFOs can be tracked and reconstructed.
 
-The PFO selector uses different \pT and time cuts for the central part of the detector and for the forward part of the detector. For the best performance, there are different cuts for different types of particles: photons, neutral PFOs, and charged PFOs. Three configurations of these cuts are developed: ``loose'', ``normal'', and ``tight'' selections. As the name suggested, ``loose'' selection corresponds to a looser cut of \pT and time-of-arrival, allows a larger value of \pT and time-of-arrival.
+The PFO selector uses different \pT and time-of-arrivals cuts for the central part of the detector and for the forward part of the detector. For the best performance, there are different cuts for different types of particles: photons, neutral PFOs, and charged PFOs. Three configurations of these cuts are developed: ``loose'', ``normal'', and ``tight'' selections. As the name suggested, ``loose'' selection corresponds to a looser cut of \pT and time-of-arrival, allows a larger value of \pT and time-of-arrival.
 
 The optimal configuration depends on the centre-of-mass energy of the collision, and the physics process to study. \FIGURE{fig:pandoraEvtDisplayggHad} shows the effect of the suppression of the background with the tight \PFO selection. Reconstructed particles  in a simulated \HepProcess{\Pep\Pem \to \PHiggs\PHiggs \to \Ptop\APbottom\Pbottom\APtop} event  are integrated over a time window of 10\,ns (100 \,ns in \HCAL barrel) in the \CLICILD detector model, with 60 bunch crossings of \ggHad background overlaid in \Figure{fig:pandoraEvtDisplayggHad1}. The effect of applying tight \PFO section cuts is shown in \Figure{fig:pandoraEvtDisplayggHad2}. The energy deposited in the detector by the background is reduced from 1.2\,TeV to the level of 100\,GeV.
 
@@ -419,7 +419,7 @@ When we are describing particles, light lepton, \llight, refer to electrons, \Pe
 
 Multivariate analysis (MVA) has become increasingly important in high energy physics. MVA is typically used in the physics analysis to classify signal events from background events. The MVA can be viewed as an advanced tool for regression or classification. Compared to the traditional cut-based method, modern machine learning techniques offer much improvement to the data analysis. The implementation of the machine learning techniques used in this thesis are provided by  TMVA \cite{Hocker:2007ht}.
 
-A typical machine learning MVA can be used for classification or regression. Classification classifies events into one of several classes. Regression gives an output in a continuous range. The focus in this section is on the classification, as the MVA is often used to select one type events from another type.
+A typical machine learning MVA can be used for classification or regression. Classification classifies events into one of several classes. Regression gives an output in a continuous range. The focus in this section is on the classification, as the MVA is often used to select one type of events from another type of events.
 
 A typical machine learning MVA classification involves two classes, also known as signal and background. A machine learning model needs to be trained with training data. The model requires a set of discriminative variables, which separate the signal from background. The trained model will be applied onto the testing data for signal extraction. The response of the model is a classification with two-class outcome of  signal or background.
 
@@ -443,7 +443,7 @@ The optimal model is the one between overfitting and underfitting. In practice, 
 %There are methods to assign the error on the selection efficiency, as the training and testing efficiency would fluctuate wit . Thus one can make a better choice of parameters to avoid overfitting. These methods were not implemented due to the technical capacity provided by the TMVA.
 
 \begin{figure}[!tbp]
-\includegraphics[width=0.45\textwidth]{doubleHiggs/DepthOfTrees.pdf}
+\includegraphics[width=0.85\textwidth]{doubleHiggs/DepthOfTrees.pdf}
 \caption{Example of model efficiency as function of the model complexity. Here the model is a boosted decision tree. The model parameter reflecting the model complexity is the depth of tree. The y-axis is the signal efficiency when the background efficiency is 1\%. From the tree depth of six onwards, overfitting occurs.}
 \label{fig:doubleHiggsMVAovertraining}
 \end{figure}
@@ -451,7 +451,7 @@ The optimal model is the one between overfitting and underfitting. In practice, 
 
 \subsection{Choice of models}
 
-The model can be as simple as a cut-based model, a likelihood estimator, or a linear regression model. The model can also be as complicated as a non-linear tree, a non-linear neutral network, or a support vector machine. Regardless of the model complexity, the choice of the most optimal classifier is often data driven to match the nature of the sample. For example, a non-linear model is the best to model a non-linear response. The  comparison between different models without individual optimisation is not rigourous.  Nevertheless, as researchers in the machine learning suggested, the boosted decision tree is probably the best out-of-the-box machine learning method. A neutral network model could potentially be better than the boosted decision tree model, but it requires more tuning, and it is less intuitive to interpret such a model. For these reasons, the boost decision tree model (BDT) is often the choice of machine learning model in high energy physics. And it is used in various physics analysis in this thesis. Before describing the BDT in detail, we will first visit some simpler models.
+The model to fit the data can be as simple as a cut-based model, a likelihood estimator, or a linear regression model. The model can also be as complicated as a non-linear tree, a non-linear neutral network, or a support vector machine. Regardless of the model complexity, the choice of the most optimal classifier is often data driven to match the nature of the sample. For example, a non-linear model is the best to model a non-linear response. The  comparison between different models without individual optimisation is not rigourous.  Nevertheless, as researchers in the machine learning suggested, the boosted decision tree is probably the best out-of-the-box machine learning method. A neutral network model could potentially be better than the boosted decision tree model, but it requires more tuning, and it is less intuitive to interpret the neural network model. For these reasons, the boost decision tree model (BDT) is often the choice of machine learning model in high energy physics. And it is used in various physics analysis in this thesis. Before describing the BDT in detail, we will first visit some simpler models.
 
 %the traditional rectangular cut model, and the Projective Likelihood method, which is used in the photon ID in the \pandora in \Section{}.
 
@@ -499,10 +499,10 @@ The applying of a trained decision tree is performed by transversion the tree fr
 
 \FIGURE{fig:doubleHiggsMVAdecisionTree} illustrates a simple example of a decision tree. The signal class is the PhD student and the background class is the undergraduate student. The depth of this imbalance binary  tree is 2. A splitting node is represented by a diamond.  The signal-like end node is represented by the red rectangle and the background-like end nodes are represented by blue rectangles. The tree is constructed with two possible cuts, ``Party ends before 1am'' and ``Know where free pizza is''. The attribute of samples is listed in \Table{tab:doubleHiggsDecisionTreeComic} and  \Table{tab:doubleHiggsDecisionTreeComic2}. The Gini index metric to determine the optimal cut. If the first cut is ``Party ends before 1am'', the probability of the cut producing the signal, $p$, is $\frac{10}{13}$, as there are 10 PhD students and 3 undergraduate students who end part before 1\,am. Gini index give $2p\parenths{1\!-\!p} \backsimeq 0.36 $. If the first cut is ``Know where free pizza is'', $p=\frac{10}{15}$, as there are  10 PhD students and 5 undergraduate students who know where the free pizza is located. Gini index is $2p\parenths{1\!-\!p} \backsimeq 0.44 $. Therefore, by choosing the cut that minimise the Gini Index, the first cut is ``Party ends before 1am''.
 
-The simple tree in \Figure{fig:doubleHiggsMVAdecisionTree} is grown fully as each end node contains signal or background only. An example of applying the trained decision tree is provided. if there is s student who ends the party before 1\,am and knows where a free pizza is located, then the student is classified as a PhD student.
+The simple tree in \Figure{fig:doubleHiggsMVAdecisionTree} is grown fully as each end node contains signal or background only. An example of applying the trained decision tree is provided: if there is a student who ends the party before 1\,am and knows where a free pizza is located, then the student is classified as a PhD student.
 
 \begin{figure}[!tbp]
-\includegraphics[width=0.45\textwidth]{doubleHiggs/mva/BDTcomic}
+\includegraphics[width=0.65\textwidth]{doubleHiggs/mva/BDTcomic}
 \caption[Example of a decision tree. ]
 {Example of a decision tree. Numbers in each node represent number of PhD student (red) and number of undergraduate student (blue) after each cut. Diamond boxes represent splitting nodes. Rectangular boxes represent end nodes. Blue boxes are background-like end nodes. Red boxes are signal-like end-nodes.}
    \label{fig:doubleHiggsMVAdecisionTree}
@@ -578,7 +578,7 @@ The adaptive boosting algorithm, adapted from \cite{hastie2009elements},  is out
     \end{cases}
   \end{equation}
 \end{itemize}
-The tree classifier output, $G$ is denoted as  -1 or 1. One can think of -1 as background and 1 as signal. There are $N$ events and $M$ iterations (trees). $B$ represents if a event is misclassified. For the $i^{th}$ event in the  $m^{th}$ tree,  $B_{i,m} = 1$ if the event is misclassified and 0 if the event is correctly classified. $w_{i,m}$ represent the event weight for $i^{th}$ event  in $m^{th}$ tree.
+The tree classifier output, $G$, is denoted as  -1 or 1. One can think of -1 as background and 1 as signal. There are $N$ events and $M$ iterations (trees). $B$ represents if a event is misclassified. For the $i^{th}$ event in the  $m^{th}$ tree,  $B_{i,m} = 1$ if the event is misclassified and 0 if the event is correctly classified. $w_{i,m}$ represent the event weight for $i^{th}$ event  in $m^{th}$ tree.
 
 
 In each iteration, if the $i^{th}$ event is misclassified, the weight increases by a factor of $(1 - err_m)/(err_m)$. Otherwise, the event weight does not change.
