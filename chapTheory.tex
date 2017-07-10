@@ -4,33 +4,138 @@
 \chapterquote{I believe it is impossible to be sure of anything.}%
 {Han Fei Zi, 280 BC - 233 BC}%: Blackwood's Magazine May 1830
 
-This chapter provides a theoretical overview, which will be used in the subsequent  chapters. A short review of the Standard Model of Particle Physics, the current best particle physics theory, is provided, with an emphasis on the Higgs mechanism and the Higgs boson. A general parametrisation of the Higgs theory, beyond the Standard Model, is discussed, which supplies the theoretical background for the physics analysis in \Chapter{chap:DoubleHiggs}. Lastly a theoretical discussion on the tau pair polarisation correlations as signature of Higgs boson is presented, which motivates the study in \Chapter{chap:Tau}.
+This chapter provides a review of the Standard Model of Particle Physics, with an emphasis on the Higgs mechanism and the Higgs boson.  A general parametrisation of the Higgs theory is discussed, which supplies the theoretical background for the physics analysis in \Chapter{chap:DoubleHiggs}. Lastly a discussion of the possible usage of  the tau pair polarisation correlations as a signature of Higgs boson is presented, which motivates the study in \Chapter{chap:Tau}.
+
 
 \section{Overview of the Standard Model}
 
-The Standard Model (\SM) is a quantum field theory concerning three fundamental interactions of nature: the electromagnetic, the weak, and the strong interactions. The \SM also describes the interactions between sub-atomic particles. The deployment and the experimental verification of the \SM throughout the second half of the 20th century is one of the greatest triumphs of particle physics. The recent discovery of the Higgs boson in 2012 \cite{Aad:2012tfa,Chatrchyan:2012ufa} further verified the theory. This chapter summarises the \SM based on the reviews of the \SM presented in \cite{Agashe:2014kda,Thomson:2013zua,Tong:QFT,Gripaios:GFT}.
+The Standard Model (\SM) \cite{Agashe:2014kda,Thomson:2013zua,Tong:QFT,Gripaios:GFT} is a quantum field theory concerning the fundamental particles and three fundamental interactions of nature: the electromagnetic; the weak; and the strong interactions.  The fundamental particles in the \SM consist of bosons and fermions. The bosons mediate the fundamental forces between particles: the photon is the force carrier of the electromagnetic force; \PWp, \PWm, and \PZ  bosons are the force carriers of the weak force; And the gluon, \Pg, is the force carrier of the strong force. The properties of the force-exchange bosons are listed in \Table{tab:theoryBoson}.
 
-The fundamental particles in the \SM consist of three categories: force exchange bosons, leptons and neutrinos, and quarks. In the \SM, the force exchange bosons mediate the fundamental forces between particles. For example, the photon is the force carrier of the electromagnetic force. \PWp, \PWm, and \PZ  bosons are the force carriers of the weak force. And the gluon, \Pg, is the force carrier of the strong force.
+
+\begin{table}[htbp]
+\centering
+\smallskip
+\begin{tabular}{l  r r r }
+\hline
+\hline
+Force &  Boson & Mass & Charge / \Pe \\
+\hline
+Electromagnetic & photon & 0 & 0 \\
+\hline
+\multirow{3}{*}{Weak}   & \PWplus & 80.385(15)\,GeV & 1 \\
+  & \PWminus & 80.385(15)\,GeV &  $-1$ \\
+  & \PZ & 91.1876(21)\,GeV &  0 \\
+\hline
+Strong  & gluon & 0 & 0 \\
+\hline
+\hline
+\end{tabular}
+
+\caption
+{Listed masses and charges of fundamental force-exchange bosons in the \SM. All bosons are spin-1 particles. All numbers are taken from \cite{Agashe:2014kda}.}
+\label{tab:theoryBoson}
+\end{table}
+
+
+
+
+
+Another category of fundamental particles is spin-$\frac{1}{2}$ fermions. For each fermion in the \SM, there is an anti-fermion with the same mass and spin, but opposite charge. These fermions  have three generations. Each generation of fermions has the same interaction properties, but different masses. Experimental evidence of three generations include the measurements of the \PZ decay-width, which strongly suggested three generations of neutrinos \cite{ALEPH:2005ab}.
+
+These fermions came in two distinct categories: leptons and quarks.  Leptons experience weak forces and electromagnetic forces, whereas quarks experience all three fundamental forces described by the \SM. Properties of the fermions are listed in \Table{tab:theoryFermion}.
+
+
+\begin{table}[htbp]
+\centering
+\smallskip
+\begin{tabular}{l  r r r r }
+\hline
+\hline
+Type&Generation &  Fermion & Mass & Charge / \Pe \\
+\hline
+\multirow{6}{*}{Lepton} & \multirow{2}{*}{1}  & \Pem & 548.579909070(16)\,MeV & $-1$ \\
+ &   & \Pnue & - & 0 \\\cline{2-5}
+ & \multirow{2}{*}{2}  & \Pmuon & 105.6583745(24)\,MeV & $-1$ \\
+ &   & \Pnum & - & 0 \\\cline{2-5}
+ & \multirow{2}{*}{3}  & \Ptauon & 1776.86(12)\,MeV & $-1$ \\
+ &   & \Pnut & - & 0 \\
+\hline
+\multirow{6}{*}{Quark} & \multirow{2}{*}{1}  & \Pup & 2.2$+$0.6$-$0.4\,MeV & $+\frac{2}{3}$ \\
+ &   & \Pdown & 4.7$+0.5-0.4$\,MeV & $-\frac{1}{2}$ \\\cline{2-5}
+ & \multirow{2}{*}{2}  & \Pcharm & 1270$\pm$30\,MeV & $+\frac{2}{3}$ \\
+ &   & \Pstrange & 98$+8-4$\,MeV & $-\frac{1}{3}$ \\\cline{2-5}
+ & \multirow{2}{*}{3}  & \Ptop & 173210$\pm510\pm710$\,MeV & $+\frac{2}{3}$ \\
+ &   & \Pbottom & 4180$+40-30$\,MeV & $-\frac{1}{3}$ \\
+\hline
+\hline
+\end{tabular}
+
+\caption
+{Listed masses and charges of fundamental fermions in the \SM. All fermions are spin-$\frac{1}{2}$ particles. For each fermion in the \SM, there is an anti-fermion with the same mass and spin, but opposite charge. Neutrinos are known to have non-zero mass from the observation of the neutrino flavour oscillations. The upper bound of the neutrino mass is 2\,eV. All numbers are taken from \cite{Agashe:2014kda}.}
+\label{tab:theoryFermion}
+\end{table}
+
+\begin{comment}
+
+
+In theoretical physics, quantum field theory (QFT) is the theoretical framework for constructing quantum mechanical models of subatomic particles in particle physics and quasiparticles in condensed matter physics. QFT treats particles as excited states of the underlying physical field, so these are called field quanta.
+
+In quantum field theory, quantum mechanical interactions among particles are described by interaction terms among the corresponding underlying quantum fields. These interactions are conveniently visualized by Feynman diagrams, which are a formal tool of relativistically covariant perturbation theory, serving to evaluate particle processes.
+
+In physics, a gauge theory is a type of field theory in which the Lagrangian is invariant under a continuous group of local transformations. An invariant is a model that holds true no matter the mathematical procedure applied to it. This is the concept behind gauge invariance. The idea of fields as described by Michael Faraday in his study of electromagnetism led to the postulate that fields could be described mathematically as scalars and vectors. When a field is transformed, but the result is not, this is called gauge invariance or gauge symmetry.[1] Applying gauge theory creates a unification which describes mathematical formulas or models that hold well for all fields of the same class.
+
+
+
+The \SM also describes the interactions between sub-atomic particles. The deployment and the experimental verification of the \SM throughout the second half of the 20th century is one of the greatest triumphs of particle physics. The recent discovery of the Higgs boson in 2012 \cite{Aad:2012tfa,Chatrchyan:2012ufa} further verified the theory. This chapter summarises the \SM based on the reviews of the \SM presented in \cite{Agashe:2014kda,Thomson:2013zua,Tong:QFT,Gripaios:GFT}.
+
+
 
 %A summary of the selected properties of these force exchange bosons can be found in \Table{}.
 
 Another category of fundamental particles contains leptons and neutrinos. These particles are fermions. For each fermion in the \SM, there is an anti-fermion with the same mass and spin, but opposite charge. Leptons and neutrinos have three generations. Each generation has the same interaction properties, but different masses. Although neutrinos could not be directly detected, measurements of the \PZ decay-width strongly suggested three generations of neutrinos \cite{ALEPH:2005ab}. Leptons and neutrinos experience weak forces as well as electromagnetic forces.
 
-The last category of fundamental particles are quarks, which are also fermions and have three generations. Each generation has a positively charged up-type quark and a negatively charged down-type quark. Quarks experience all three fundamental forces described by the \SM.
+\end{comment}
 
-The \SM has enjoyed a great success with theoretical predictions being experimentally verified. Some highlights include the discovery of the top quark in 1995 \cite{Abachi:1995iq}, the tau neutrino in 2000 \cite{Kodama:2000mp}, and the Higgs boson in 2012 \cite{Aad:2012tfa,Chatrchyan:2012ufa}. However, there are observations which are not explained by the \SM. One issue is that the \SM does not incorporate the gravitational force. There have been attempts to modify the \SM, but no conclusive theory exists yet. Another issue is that the \SM does not allow neutrino masses and mixings. Because of these issues that are not fully explained by the \SM, there are many theories beyond the Standard Model (BSM) trying to provide an explanation for these issues. One such example is the generalisation of the Higgs theory to allow non-SM coupling strengths \cite{Kaplan:1983fs,Goldberger:2008zz}. Many BSM theories also predict that the Higgs couples to tau leptons more strongly then other leptons \cite{Duperrin:2008in}. Therefore, tau pair polarisation correlations as a signature for Higgs boson is discussed.
+Many \SM predications have been experimentally verified. Some recent highlights included the discovery of the top quark in 1995 \cite{Abachi:1995iq}, the tau neutrino in 2000 \cite{Kodama:2000mp}, and the Higgs boson in 2012 \cite{Aad:2012tfa,Chatrchyan:2012ufa}. However, there are observations which are not explained by the \SM. One issue is that the \SM does not incorporate the gravitational force. Another issue is that the \SM does not natively allow neutrino masses and mixings. The \SM also could not explain the existence of the dark matter. Because of these issues, there are many theories beyond the Standard Model (BSM) trying to provide an explanation for these issues. One such example is the generalisation of the Higgs theory to allow non-SM coupling strengths \cite{Kaplan:1983fs,Goldberger:2008zz}.
 
-The overview of the Standard Model starts with the quantum electrodynamics, and its generalisation to quantum chromodynamics. The unification of electromagnetism and the weak interaction, the electroweak gauge theory, will be discussed. Afterwards, the Higgs mechanism and Yukawa couplings will be introduced to explain masses of bosons and fermions whilst preserving the Lagrangian symmetry. This will be followed by a detailed discussion on the Standard Model Higgs boson, its mass and interactions with other particles. The chapter moves to an explanation of possible Higgs theories beyond the Standard Model, with their  Lagrangian of the Higgs interaction and observables. Lastly the discussion is provided on  the tau pair polarisation correlation as a signature for Higgs boson. This signature could be used to identify Higgs boson if an excess of tau pair decay events observed among all lepton pair decay events.
+%The overview of the Standard Model starts with the quantum electrodynamics, and its generalisation to quantum chromodynamics. The unification of electromagnetism and the weak interaction, the electroweak gauge theory, will be discussed. Afterwards, the Higgs mechanism and Yukawa couplings will be introduced to explain masses of bosons and fermions whilst preserving the Lagrangian symmetry. This will be followed by a detailed discussion on the Standard Model Higgs boson, its mass and interactions with other particles. The chapter moves to an explanation of possible Higgs theories beyond the Standard Model, with their  Lagrangian of the Higgs interaction and observables. Lastly the discussion is provided on  the tau pair polarisation correlation as a signature for Higgs boson. This signature could be used to identify Higgs boson if an excess of tau pair decay events observed among all lepton pair decay events.
 
-
+\begin{comment}
 \section{Notations and conventions}
 
 Natural unit is used in this thesis: $\hbar = c = 1$. The metric is mostly-minus, $\eta^{\mu\nu} = \text{diag}(1,-1,-1,-1)$. The Dirac gamma matrices are represented with $\gamma^{\mu}$, with $\mu\in\braces{0,1,2,3}$. $\gamma^5 = i \gamma^{0}\gamma^{1}\gamma^{2}\gamma^{3}$. $\overline{\psi} = \psi^{\dagger}\gamma^0$. Einstein summation convention is also used in this thesis.
 
 This set of notations allow a contracted pair to be a Lorentz invariant. For a Weyl spinor, $\psi_\alpha$, the mass term in the Lagrangian is of the form $\psi^{\alpha}\psi_\alpha$, which is the Majorana mass term. The contracted pair between two different Weyl spinors would form a Dirac mass term.
-
+\end{comment}
 
 \section{Quantum electrodynamics}
+
+
+ \QED is a gauge quantum field theory explaining electromagnetic interactions. Quantum field theory (QFT) is the theoretical framework for constructing quantum mechanical models of fundamental particles in particle physics. Particles are treated as excited states of the underlying physical field in the QFT.  A gauge theory is a type of field theory in which the Lagrangian is invariant under a continuous group of local transformations.  Gauge invariance or gauge symmetry refers to when a field is transformed, but the Lagrangian is not.
+
+\QED is an abelian gauge theory with the symmetry group U(1). The gauge field, which mediates the interaction between the charged spin-$\frac{1}{2}$ fields, is the electromagnetic field. The \QED Lagrangian \cite{peskin1995introduction} for a spin-$\frac{1}{2}$ field interacting with the electromagnetic field is given by the real part of:
+\begin{equation}
+\Lagr_{QED} = \overline{\psi} \left( i\Dstroke - m \right)\psi -  \frac{1}{4}F_{\mu\nu}F^{\mu\nu},
+\end{equation}
+where $\psi$ is the spin-$\frac{1}{2}$ Dirac field satisfying the Dirac equation, given by the Lagrangian density:
+\begin{equation}
+\Lagr =  \overline{\psi} \left( i\Dstroke - m \right)\psi,
+\end{equation}
+where $\gamma^{\mu}$ is the Dirac gamma matrices, $\mu\in\braces{0,1,2,3}$; $\overline{\psi}$ is defined as $\psi^{\dagger}\gamma^0$; $D_{\mu} \equiv \partial_{\mu} + ieA_{\mu}$ is the gauge covariant derivative; $A_{\mu}$ is the covariant four-vector potential of the electromagnetic field generated by the electron itself;  $F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}$ is the electromagnetic field tensor; $e$ is the coupling constant, equal to the electric charge; and m is the mass of the electron.
+
+
+
+\begin{comment}
+
+\QED describes the interaction between a spin-$\frac{1}{2}$ Dirac field, $\psi$, and a vector field, $A_{\mu}$. The Dirac field, $\psi$, satisfies the Dirac equation, given by the Lagrangian density:
+\begin{equation}
+\Lagr =  \overline{\psi} \left( i\Dstroke - m \right)\psi,
+\end{equation}
+where
+
+
+QED is an abelian gauge theory with the symmetry group U(1). The gauge field, which mediates the interaction between the charged spin-1/2 fields, is the electromagnetic field.
+
 
 The natural starting point to introduce the \SM is with quantum electrodynamics (\QED). The \QED is a quantum field theory explaining electromagnetic interactions. The theory involves a spin-half Dirac (electron) field, $\psi$, and a vector (photon) field, $A_{\mu}$. When the local (gauge) symmetry is imposed, which is equivalent to the Lagrangian invariance under transformations,
 \begin{equation}
@@ -43,6 +148,7 @@ the Lagrangian is fixed to be:
 if up to cubic terms are allowed in the fields. Here $D_{\mu} = \partial_{\mu} + ieA_{\mu}$ and $F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}$. There are two free parameters in \QED: $m$, the electron mass, and $e$, the electron charge. The mass term for the photon, $\nu^{2}A_{nu}A^{\nu}$, is forbidden by gauge invariance.
 
 \QED has been verified experimentally. One of its greatest prediction is the spin magnetic dipole moment of the electron, $g_{s}$, which is predicted to be  2 from the Dirac equations, plus small corrections to the value that comes from the electron's interaction with virtual photons, so called higher ``loop'' corrections in Feynman diagrams. The current best calculated \QED prediction states $g=2.001159652181643(764)$ \cite{Aoyama:2014sxa}, where the best experimental value and uncertainty is $g = 2.00115965218073(28)$ \cite{Hanneke:2010au}. Precise agreement of the theoretical prediction and the experimental value, 1 part in \text{$10^{12}$}, is a success of the \QED.
+\end{comment}
 % , defined as $\vec{\mu} = g_{s}\frac{Qq}{2m} \vec{s}$
 \begin{comment}
 The Standard Model of particle physics is a theory concerning the electromagnetic, weak, and strong interactions, as well as classifying all the elementary particles known. It was developed throughout the latter half of the 20th century, as a collaborative effort of scientists around the world.[1] The current formulation was finalized in the mid-1970s upon experimental confirmation of the existence of quarks. Since then, discoveries of the top quark (1995), the tau neutrino (2000), and the Higgs boson (2012) have given further credence to the Standard Model. Because of its success in explaining a wide variety of experimental results, the Standard Model is sometimes regarded as the "theory of almost everything".
@@ -54,81 +160,119 @@ The development of the Standard Model was driven by theoretical and experimental
 
 \section{Quantum chromodynamics}
 
-Like \QED, quantum chromodynamics (\QCD) is also a quantum field theory. It explains strong interactions. There are eight gauge bosons, called gluons, coupling to nine fermions, called quarks. Unlike \QED, \QCD theory is invariant under local non-Abelian SU(3) transformations. Gulons can interact with other gluons, and carry colour charge (red, green, and blue). Nine quarks transform as colour triplets. The \QCD Lagrangian is
+Quantum chromodynamics (\QCD) is the quantum field theory of strong interactions. \QCD theory is invariant under local non-Abelian SU(3) transformations. There are eight gauge bosons, gluons ( $8 = 3^2 - 1$ for SU(3)). Gluons carry three different types of colour charges, sometimes labelled as red, green, and blue. Anti-particles carry anti-colour. Quarks are associated with a single colour. Gluons are made up of a colour and an anti-colour (or superposition of colour-anti-colour pair). The \QCD Lagrangian is given by:
 \begin{equation}
-\Lagr_{QCD} = \sum_{f\in{u,d,s,c,b,t}} \overline{\psi} \left( i\gamma^{\mu}\partial_{\mu} - g_{s}\gamma^{\mu}G^a_{\mu}\frac{\lambda^a}{2} - m_f \right)\psi -  \frac{1}{4}G^a_{\mu\nu}G^{a\mu\nu},
+\Lagr_{QCD} = \sum_{f\in{u,d,s,c,b,t}} \overline{\psi_i} \left(\parenths{ i\gamma^{\mu}\partial_{\mu} - g_{s}\gamma^{\mu}G^a_{\mu}\frac{\lambda^a}{2}}_{ij} - m_f\delta_{ij} \right)\psi_j -  \frac{1}{4}G^a_{\mu\nu}G^{a\mu\nu},
 \end{equation}
-where $g_s$ is the strong coupling constant; $a$ is the colour charge; $\lambda$ is the Gell-Mann matrices; and $G^a_{\mu\nu}$ is the gluon field strength, given by
+where $\psi$ represents a quark  with a colour charge, indicated by $i$ or $j$; $m$ controls the mass of the quark; $g_s$ is the strong coupling constant; $a$ is the colour charge; $\lambda^a$ represents one of the eight Gell-Mann matrices; and $G^a_{\mu\nu}$ represents the gauge invariant gluon field strength tensor, given by:
 \begin{equation}
 G^a_{\mu\nu} = \partial_{\mu}\gamma_{\nu}^a - \partial_{\nu}\gamma_{\mu}^a  - g_{s}f_{abc}G_{\mu}^{b}G_{\nu}^c.
 \end{equation}
-The last extra term in the $G^a_{\mu\nu} $, comparing to the $F_{\mu\nu}$ in the \QED, indicates the non-Abelian nature of \QCD.
+
 
 \section{The electroweak interaction}
 \label{sec:theoryElectroweak}
-The electroweak interaction can be thought as an extension to \QED to incorporate the weak force, and to explain different coupling strength of left-handed and right-handed fermions. The Lagrangian  does not allow massive  electroweak force exchange bosons and fermions, which are explained by the Higgs mechanism  and  the Yukawa interactions in later sections.
+The electroweak interaction can be thought as an extension to \QED to incorporate the weak force - the force describing the nuclear decay. The unification of the electromagnetic and the weak force is accomplished under an $SU(2)_L \times$ U(1) gauge group. The corresponding gauge bosons are the three \PW bosons from $SU(2)_L$ ($W^1$, $W^2$, and $W^3$), and the $B$ boson from U(1), respectively, all of which are massless.
 
-There are four vector boson fields in the electroweak theory: three $W$ fields and one $B$ field. The Lagrangian can be divided into two parts: the bosonic self interaction part and the couplings to the fermions part:
+The electroweak Lagrangian can be written as
 \begin{equation}
-\Lagr_{Electroweak} = \Lagr_{Boson} + \Lagr_{Fermion}.
+\Lagr_{Electroweak} = \Lagr_{Boson} + \Lagr_{Fermion} + \Lagr_{Higgs} + \Lagr_{Yukawa}.
 \end{equation}
 
-The bosonic self interaction Lagrangian, $\Lagr_{Boson}$, is given by:
+First consider $\Lagr_{Boson}$, given by:
 \begin{equation}
 \Lagr_{Boson} = - \frac{1}{4} W^i_{\mu\nu} W^{i\mu\nu} - \frac{1}{4}B_{\mu\nu} B^{\mu\nu},
+\label{eq:theoryEWBoson}
 \end{equation}
-where
 \begin{equation}
 W^i_{\mu\nu} = \partial_{\nu}W^i_{\mu} - \partial_{\mu}W^i_{\nu} - g\varepsilon^{ijk}W^j_{\mu}W^k_\nu ,
 \end{equation}
 \begin{equation}
 B_{\mu\nu} = \partial_{\nu}B_{\mu} - \partial_{\mu}B_{\nu},
 \end{equation}
-where the $B$ field  is invariant under U(1) transformations; the $W$ field is invariant under non-Abelian SU(2) transformations; $g$ is the coupling strength of the $W$ field; and the indices,$i$, $j$, and $k$, indicate three $W$ fields, going from 1 to 3.
+where the $B$ field  is invariant under U(1) transformations; the $W$ field is invariant under non-Abelian SU(2) transformations; and the indices,$i$, $j$, and $k$, indicate three $W$ fields.
 
-The fermionic part of the Lagrangian,   $\Lagr_{Fermion}$, has different components for the left-handed and right-handed fermions, given by:
+
+The term $\Lagr_{Fermion}$ describes the massless fermion fields coupling to the fermions, and the propagation of the fermion fields. The left-handed ($ \psi_L $) and the right-handed fermions ($ \psi_R $) are dealt differently. The right-handed fermions are singlets. The left-handed fermions are in doublets with the corresponding fermion of the same generation. The $\Lagr_{Fermion}$ is given by:
 \begin{equation}
-\Lagr_{Fermion} = \sum_{\psi\in{fermions}} {\overline{\psi}}_L \gamma^{\mu}D^L_{\mu} \psi_L +  \overline{\psi}_R \gamma^{\mu}D^R_{\mu} \psi_R .
+\Lagr_{Fermion} = \sum_{\psi\in{fermions}} {\overline{\psi}}_L \gamma^{\mu}D^L_{\mu} \psi_L +  \overline{\psi}_R \gamma^{\mu}D^R_{\mu} \psi_R ,
 \end{equation}
-$D^L_{\mu}$ and $D^R_{\mu}$ are defined as:
+where $D^L_{\mu}$ and $D^R_{\mu}$ are defined as
 \begin{equation}
 D^L_{\mu} = \partial_{\mu} + ig\frac{\tau_i}{2}W^i_{\mu} + ig'Y_{\psi}B_{\mu} ,
 \end{equation}
 \begin{equation}
 D^R_{\mu} = \partial_{\mu}  + ig'Y_{\psi}B_{\mu} .
 \end{equation}
-This Lagrangian allows $W$ and $B$ fields to couple with left-handed fermions, but only allows the $B$ field to couple with right-handed fermions. The $\tau_i$ matrices are the generators of SU(2) (Pauli spin matrices are one of the representations of the $\tau_i$ matrices). $Y_{\psi}$ is the hypercharge associated with the fermion field $\psi$. $g'$ is the $B$ field strength.
+This structure of this Lagrangian allows $W$ and $B$ fields to couple with left-handed fermions, but only allows the $B$ field to couple with right-handed fermions. The $\tau_i$ matrices are the generators of SU(2) . $Y_{\psi}$ is the hypercharge associated with the fermion field $\psi$. The $W$ field couples with strength $g$ to the fermion field;  The $B$ filed couples with strength $g'$ to the particles carrying weak hypercharge $Y$. 
 
-For mass eigenstates, \PWp and \PWm bosons only couple to left-handed fermions. \PZ boson and photon couple to both left-handed and right-handed fermions. Hence, by inspection, $W^1$ and $W^2$ are associated with \PWp and \PWm. On the other hand, mass eigenstates for \PZ boson and photon, $Z_{\mu}$ and $A_{\mu}$, are mixtures of $W^3_{\mu}$ and $B_{\mu}$. $Z_{\mu}$ and $A_{\mu}$ are defined as:
+%The four vector fields ($W^1$, $W^2$, and $W^3$, $B$) are massless.
+
+
+The mass of the physical bosons and fermions are obtained via electroweak symmetry breaking. Firstly a general   spontaneous symmetry breaking mechanism is provided. Then the Higgs mechanism is discussed.
+
+\subsection{Spontaneous symmetry breaking}
+
+Consider a complex scalar field, with the Klein-Gordon Lagrangian:
 \begin{equation}
-Z_{\mu} = \cos\left(\theta_W\right)W^3_{\mu} - \sin\left(\theta_W\right)B_{\mu},
+\Lagr = \partial^\mu{\psi}^*\partial_\mu\psi - m^2 \absOf{\psi}^2 =  \partial_\mu{\psi}^*\partial_\mu\psi - V\parenths{\psi} ,
+\end{equation}
+where m is the mass term and $V\parenths{\psi} $ is the potential of the field $\psi$. This Lagrangian has a global symmetry $\psi \to e^{i\phi}\psi$. The potential can be modified to add an interaction term without breaking the  invariance of the global symmetry:
+\begin{equation}
+V\parenths{\psi} =  m^2 \absOf{\psi}^2 + \lambda\absOf{\psi}^4,
+\end{equation}
+where $\lambda$ controls the interaction strength. This modified potential has a minimum at $ \absOf{\psi}=0$ for $m^2>0$. However, if $m^2<0$, the minimum of the potential occurs when:
+\begin{equation}
+\frac{\partial{V}\parenths{\psi}}{\partial{\absOf{\psi}}} =  2 m^2 \absOf{\psi} + 4\lambda\absOf{\psi}^3 = 0
 \end{equation}
 \begin{equation}
-A_{\mu} = \sin\left(\theta_W\right)W^3_{\mu} + \cos\left(\theta_W\right)B_{\mu},
+\absOf{\psi} = \sqrt{\frac{-m^2}{2\lambda}}\equiv \frac{\nu}{\sqrt{2}}.
 \end{equation}
-where $\theta_W$ is the Weinberg mixing angle \cite{Weinberg:1967tq}, which is determined experimentally.
+The solution that minimise the potential is not unique; it corresponds to a circle of points in the complex $\psi$ plane. By choosing any one of these points, which are degenerate in energy, the symmetry of   $\psi \to e^{i\phi}\psi$ is broken by the vacuum configuration. This phenomenon is know as the spontaneous symmetry breaking.
 
-So far the SU(2)$\otimes$U(1) gauge theory explains the parity violating nature of the weak interaction. However, explicit mass terms are not allowed in the gauge symmetry.
+A consequence of the  spontaneous symmetry breaking is that the fluctuation along the degenerate energy direction, which is the circle in complex $\psi$ plane, have no associated potential energy. This is formalised as Goldstone's theorem \cite{Nambu:1960tm,Goldstone:1961eq}. In Lorentz-invariant theory, the theorem states that spontaneous symmetry breaking always implies the existence of a massless particle.
+
+Using the example Lagrangian here, by choosing the vacuum direction and expand the $\psi$ field along the real $\psi$ axis
+\begin{equation}
+\psi = \frac{1}{\sqrt{2}}\parenths{\nu+\psi_1+i\psi_2},
+\end{equation}
+where $\nu=\sqrt{\frac{-m^2}{\lambda}}$ refers to the minimum point in the potential, and $\psi_1$ and $\psi_2$ are real scalar fields. By substituting $\psi$ into the Lagrangian:
+\begin{equation}
+\Lagr = \frac{1}{2}\partial^\mu{\psi_1}\partial_\mu\psi_1 + \frac{1}{2}\partial^\mu{\psi_2}\partial_\mu\psi_2 - m^2 \psi_1^2 + \hdots
+\end{equation}
+the mass term for the $\psi_1$ field is $\sqrt{-m^2}$ whilst there no mass term for the $\psi_2$ field, as stated by the Goldstone's theorem.
+
+In the previous example, the Lagrangian possesses  the global symmetry of $\psi \to e^{i\phi}\psi$. Instead, if there is only local U(1) symmetry of  $\phi\to\phi(x)$ and $D_\mu = \partial_\mu+ieA_\mu$, where $A_\mu$ is a gauge field transforming as $A_\mu \to A_\mu - \partial_mu\phi(x)$, the Lagrangian is given by:
+\begin{equation}
+\Lagr = \parenths{D^\mu{\psi}}^*\parenths{D_\mu\psi} - m^2 \absOf{\psi}^2    - \lambda\absOf{\psi}^4.
+\end{equation}
+When the field expands around the minimum of the potential of   $\nu=\sqrt{\frac{-m^2}{\lambda}}$, with $m^2<0$,  the gauge boson mass term:
+\begin{equation}
++\frac{e^2\nu^2}{2}A^\mu{A}_\mu,
+\end{equation}
+ is obtained from the $\parenths{D^\mu{\psi}}^*\parenths{D_\mu\psi} $ term.
 
 \section{Higgs Mechanism}
 \label{sec:theoryHiggs}
-The higgs mechanism via spontaneous symmetry breaking introduces mass terms for electroweak bosons. A complex  scalar Higgs field, $\Phi_{\PH}$, is added to the electroweak Lagrangian. $\Phi_{\PH}$ transforms as a doublet of SU(2) with hypercharge $Y = \frac{1}{2}$. The Higgs Lagrangian is therefore:
+
+The Higgs mechanism via spontaneous symmetry breaking introduces mass terms for electroweak bosons. A complex  scalar Higgs field, $\Phi_{\PH}$, transforms as a doublet of SU(2) with hypercharge $Y = \frac{1}{2}$. The Lagrangian is given by:
 \begin{equation}
-\Lagr_{Higgs} = \left(D_\mu\Phi_{\PH}\right)^\dagger\left(D^\mu\Phi_{\PH}\right) - \mu^2\Phi_{\PH}^\dagger\Phi_{\PH} - \lambda\left(\Phi_{\PH}^\dagger\Phi_{\PH}\right)^2,
+\Lagr_{Higgs} = \left(D_\mu\Phi_{\PH}\right)^\dagger\left(D^\mu\Phi_{\PH}\right) - \mu^2\Phi_{\PH}^\dagger\Phi_{\PH} + \lambda\left(\Phi_{\PH}^\dagger\Phi_{\PH}\right)^2,
 \end{equation}
-with
+where $\lambda$ and $\mu$ are constant.
+The $SU(2)_L\times U(1)$ symmetry of the electroweak  Lagrangian demands the covariant derivative of the  Higgs field, $\Phi_{\PH}$, takes the form of
 \begin{equation}
-D_\mu\Phi_{\PH} = \left(\partial_{\mu} + ig\frac{\tau_i}{2}W^i_{\mu} + ig'\frac{1}{2}B_{\mu}\right)\Phi_{\PH}.
+D_\mu\Phi_{\PH} = \left(\partial_{\mu} + ig\frac{\tau_i}{2}W^i_{\mu} + ig'\frac{1}{2}B_{\mu}\right)\Phi_{\PH},
 \end{equation}
-For a  negative $\mu^2$, the Higgs field potential:
+where $g$ is the coupling constant of the $SU(2)_L$ gauge symmetry; $g'$ is the coupling constant of the $U(1)$ gauge symmetry; and $\tau_i$ is one of the Pauli matrixes. The Higgs potential is given by:
 \begin{equation}
-\mu^2\Phi_{\PH}^\dagger\Phi_{\PH} + \lambda\left(\Phi_{\PH}^\dagger\Phi_{\PH}\right)^2 ,
+V(\PH) = \mu^2\Phi_{\PH}^\dagger\Phi_{\PH} - \lambda\left(\Phi_{\PH}^\dagger\Phi_{\PH}\right)^2.
 \end{equation}
-is minimised with a Higgs vacuum expectation value:
+The Higgs potential is minimised when
 \begin{equation}
 \sqrt{\Phi_{\PH}\Phi_{\PH}^\dagger} =  \frac{\nu}{\sqrt{2}}=\sqrt{\frac{\mu^2}{2\lambda}}.
 \end{equation}
- Without the loss of generality, one can choose:
+By expanding the Higgs field about the minimum point of the potential, the non-zero vacuum expectation value (VEV) can be written as:
  \begin{equation}
 \angles{\Phi_{\PH}} =
 \begin{pmatrix}
@@ -137,31 +281,64 @@ is minimised with a Higgs vacuum expectation value:
 \end{pmatrix}
 ,
 \end{equation}
-with a real $\nu$. Therefore, after the spontaneous symmetry breaking, the $\Lagr_{Higgs}$ provides  the mass terms for \PWp, \PWm, \PZ and photon via terms in the Lagrangian:
+with a real $\nu$. Substituting the  Higgs VEV to the $\Lagr_{boson}$ in \Equation{eq:theoryEWBoson}, the gauge boson mass matrix is obtained:
+ \begin{equation}
+\frac{1}{8}
+\begin{pmatrix}
+0 \\
+\nu
+\end{pmatrix}
+\begin{pmatrix}
+gW^3_\mu+g'B_\mu & g\parenths{W^1_\mu-iW^2_\mu} \\
+g\parenths{W^1_\mu+iW^2_\mu} &  -gW^3_\mu+g'B_\mu
+\end{pmatrix}
+\begin{pmatrix}
+gW^3_\mu+g'B_\mu & g\parenths{W^1_\mu-iW^2_\mu} \\
+g\parenths{W^1_\mu+iW^2_\mu} &  -gW^3_\mu+g'B_\mu
+\end{pmatrix}
+\begin{pmatrix}
+0 \\
+\nu
+\end{pmatrix}.
+\label{eq:theoryEWBosonMass1}
+\end{equation}
+Assuming there is a mixing of the $SU(2)_L$ and $U(1)$ fields:
+\begin{equation}
+Z_{\mu} = \cos\left(\theta_W\right)W^3_{\mu} - \sin\left(\theta_W\right)B_{\mu},
+\end{equation}
+\begin{equation}
+A_{\mu} = \sin\left(\theta_W\right)W^3_{\mu} + \cos\left(\theta_W\right)B_{\mu},
+\end{equation}
+\begin{equation}
+W^+_{\mu} = \frac{1}{2}\parenths{W^1_\mu-iW^2\mu},
+\end{equation}
+\begin{equation}
+W^-_{\mu} = \frac{1}{2}\parenths{W^1_\mu+iW^2\mu},
+\end{equation}
+the gauge boson mass matrix in \Equation{eq:theoryEWBosonMass1} can be simplify to:
 \begin{equation}
 \frac{{\left(g\nu\right)}^2}{4}W^+_{\mu}W^{-\mu} + \frac{\left(g^2 + g^{'2}\right)\mu^2}{8}Z_{\mu}Z^{\mu}.
 \label{eq:theoryBoson}
 \end{equation}
-This provides an equal mass for \PWp and \PWm, a mass term for $\PZ$, and no mass term for photon.
-
-\section{Yukawa couplings}
-
-The previous section explains the Higgs mechanism for gauge bosons gaining masses. The fermions gain masses via Yukawa couplings. Consider a Higgs field transforming as a doublet of SU(2) with hypercharge $Y = \frac{1}{2}$, the Yukawa couplings are given by:
-
+Hence the gauge boson masses obtained from the spontaneous symmetry breaking of the Higgs fields are:
 \begin{equation}
-\Lagr_{Yukawa} = -\lambda^{u}\overline{q_L}\Phi_{\PH}^{c}u_R  - \lambda^{d}\overline{q_L}\Phi_{\PH}{d}_R - \lambda^{e}\overline{l_L}\Phi_{\PH}e_R + h.c. ,
+m_{\PWplus} = m_{\PWminus} = \frac{g\nu}{2},
 \end{equation}
-where $\Phi_{\PH}^{c} \equiv i \sigma^2{\PH}^*$ is an SU(2) doublet field with hypercharge $Y = -\frac{1}{2}$; $\sigma$ is the Pauli spin matrix; $u$, $d$, and $e$ are fields for the up-type quarks, the down-type quarks, and the leptons, respectively; and the Lagrangian is summed over all possible quarks and leptons. Interaction terms in the $\Lagr_{Yukawa}$ become mass terms when the Higgs vacuum expectation value is substituted. The fermion masses are therefore given by:
 \begin{equation}
-m_{u} = \frac{\lambda^u{\nu}}{\sqrt{2}},\ m_{d} = \frac{\lambda^d{\nu}}{\sqrt{2}},\ m_{e} = \frac{\lambda^e{\nu}}{\sqrt{2}}.
+m_{\PZ} = \frac{\nu\sqrt{g^2+{g'}^2}}{2} = \frac{m_{\PW}}{\cos\parenths{\theta{\PW}}},
 \end{equation}
+\begin{equation}
+m_{A} = 0,
+\end{equation}
+where $\theta_{\PW}$ is the Weinberg mixing angle \cite{Weinberg:1967tq}, which is determined experimentally. This produces  a massless gauge boson with the $A_\mu$ field, associated with the physical photon; two massive  gauge bosons with $W^+_{\mu}$ and $W^-_{\mu}$ field, associated with physical \PWplus and \PWminus bosons; and a massive boson with $Z_{\mu}$ field, associated with physical \PZ boson. Consequently, the spontaneous symmetry breaking of the Higgs field breaks the electroweak  $SU(2)_L\times U(1)$ symmetry to electromagnetism U(1) symmetry.
 
-\section{Standard Model Higgs boson}
+
+\section{Higgs boson}
 \label{sec:theoryHiggsBoson}
 
-So far, interactions between different fields in the Standard Model, as well as the boson and fermion masses obtaining mechanisms, have been discussed. The only thing left for discussion is the Higgs boson, and  interactions between the Higgs boson and other fields.
+%So far, interactions between different fields in the Standard Model, as well as the boson and fermion masses obtaining mechanisms, have been discussed. The only thing left for discussion is the Higgs boson, and  interactions between the Higgs boson and other fields.
 
-For the Higgs doublet complex field in the \SM, there are four real scalar degrees of freedom. By choosing the unitary gauge, three degrees of freedom are manifestly eaten. The Higgs field becomes:
+For the Higgs doublet complex field in the \SM, there are four real scalar degrees of freedom. Three degrees of freedom are ``eaten'' to form the longitudinal polarisations of the $W^{\pm}_\mu$ and $Z_\mu$ fields. The remaining one real scalar degree of freedom form the Higgs boson. To show properties of the Higgs bosons,  one can choose the unitary gauge where three degrees of freedom are manifestly eaten. In the \SM, this is equivalent to choose the Higgs field:
 \begin{equation}
 H(x) = \frac{1}{\sqrt{2}}
  \begin{pmatrix}
@@ -169,23 +346,23 @@ H(x) = \frac{1}{\sqrt{2}}
   \nu + h(x) \\
  \end{pmatrix},
 \end{equation}
-where $h(x)$ is the real scalar field of the Higgs boson. It is not charged under electromagnetism as the filed is real. The Higgs boson interaction terms with other particles in the Lagrangian   can be shown by replacing $\nu$  with $\nu + h(x)$ in previous Lagrangians. For example, for a fermions  field, $\psi_i$, the Higgs boson interaction term is given by:
+where $h(x)$ is the real scalar field of the Higgs boson and $\nu$ the Higgs vacuum expectation value. Higgs boson is not charged under electromagnetism as the filed is real. The coupling of the Higgs boson to other fields  can be worked out by replacing $\nu$  with $\nu + h(x)$ in previous expression. For example, the Yukawa coupling to a fermions  field, $\psi_i$, is given by:
 \begin{equation}
-\Lagr\supset-\frac{m_i}{\nu}h\overline{\psi}_i\psi_i ,
+-\frac{m_i}{\nu}h\overline{\psi}_i\psi_i ,
 \end{equation}
-where the $m_i$ is the mass of the fermion $i$. The Higgs boson interaction terms with bosons can be shown from the \Equation{eq:theoryBoson} as:
+where the $m_i$ is the mass of the fermion $i$. From \Equation{eq:theoryBoson}, couplings to gauge bosons are given by:
 \begin{equation}
+m^2_W\left(\frac{2h}{\nu} + \frac{{h}^2}{\nu^2}\right)W^+_{\mu}W^{-\mu} + \frac{m^2_Z}{2}\left(\frac{2h}{\nu} + \frac{{h}^2}{\nu^2}  \right)Z_{\mu}Z^{\mu}.
 \label{eq:theoryHiggsBosonic}
-\Lagr\supset m^2_W\left(\frac{2h}{\nu} + \frac{{h}^2}{\nu^2}\right)W^+_{\mu}W^{-\mu} + \frac{m^2_Z}{2}\left(\frac{2h}{\nu} + \frac{{h}^2}{\nu^2}  \right)Z_{\mu}Z^{\mu}.
 \end{equation}
 The Higgs boson self interactions are obtained from the Higgs field potential:
 \begin{equation}
+\frac{\mu^2}{2}\left(\nu+h\right)^2 - \frac{\lambda}{4}\left(\nu+h\right)^4 \supset -\lambda\nu^2{h}^2-\lambda\nu{h}^3 - \frac{\lambda}{4}h^4 = -\frac{\Hmass^2}{2}h^2 - \frac{\Hmass^2}{2\nu}h^3 - \frac{\Hmass^2}{8\nu^2}h^4.
 \label{eq:theoryHiggsSelfCoupling}
-\Lagr\supset \frac{\mu^2}{2}\left(\nu+h\right)^2 - \frac{\lambda}{4}\left(\nu+h\right)^4 \supset -\lambda\nu^2{h}^2-\lambda\nu{h}^3 - \frac{\lambda}{4}h^4 = -\frac{\Hmass^2}{2}h^2 - \frac{\Hmass^2}{2\nu}h^3 - \frac{\Hmass^2}{8\nu^2}h^4.
 \end{equation}
-The Higgs boson mass, ${\Hmass}^2 = 2\lambda\nu^2$. The trilinear and quadlinear Higgs self interaction strengths are $- \frac{\Hmass^2}{2\nu}$ and $\frac{\Hmass^2}{8\nu^2}$, respectively. Once \Hmass is known, $\lambda$ can be determined and the Higgs boson decay width and branching fraction can be approximately calculated. For example, \Figure{fig:theoryHiggsDecayWidth} and \Figure{fig:theoryHiggsBranchingRatio} show the Higgs boson partial decay width and the branching ratios as a function of the Higgs boson mass.
+Thus the Higgs boson mass satisfies ${\Hmass}^2 = 2\lambda\nu^2$. The trilinear and quadlinear Higgs self interaction strengths are $- \frac{\Hmass^2}{2\nu}$ and $\frac{\Hmass^2}{8\nu^2}$, respectively. Once the Higgs boson mass is known, $\lambda$ can be determined and the Higgs boson decay widthes and branching fractions can be calculated. For example, \Figure{fig:theoryHiggsDecayWidth} and \Figure{fig:theoryHiggsBranchingRatio} show the Higgs boson partial decay widthes and the branching ratios as a function of the Higgs boson mass for different Higgs decay modes.
 
-Higgs boson decaying to a pair of heavier particles, such as \HepProcess{\PWp\PWm} or \HepProcess{\PZ\PZ}, is forbidden kinematically. However, \Figure{fig:theoryHiggsPhenomenology} shows that the Higgs decaying to  $\PWp\PWm$  dominates before the mass threshold, $\Hmass = 2m_W \sim 160$\,GeV. This is   allowed by the quantum field theory, because one of the $\PWpm$ gauge bosons is virtual and not on the mass shell. The virtual gauge boson subsequently decays to real on-mass-shell particles.
+Higgs boson is measured to be $125.09\pm0.24$\,GeV \cite{Agashe:2014kda}. Because the Higgs boson is lighter than a pair of heavier particles such as \HepProcess{\PWp\PWm} or \HepProcess{\PZ\PZ}, processes like \HepProcess{\PH \to \PWp\PWm} and \HepProcess{\PH \to \PZ\PZ} are forbidden kinematically. However,  the quantum field theory allows such processes to happen, as long as one of the decay products is virtual and not on the mass shell. The virtual gauge boson subsequently decays to real on-mass-shell particles. Shown in \Figure{fig:theoryHiggsBranchingRatio}, the branching ratio of  \HepProcess{\PH \to \PWp\PWm} process is the second largest for a Higgs boson mass of 125\,GeV.
 
 %Higgs prefers to decay to the most massive possible final state. The ratio of fermionic branching ratios are proportional to fermion masses squared, modulo color factors and radiative corrections.
 \begin{figure}[tbph]
@@ -201,9 +378,21 @@ Higgs boson decaying to a pair of heavier particles, such as \HepProcess{\PWp\PW
         \label{fig:theoryHiggsBranchingRatio}
     \end{subfigure}
 \caption[SM Higgs boson decay width and branching ratios]%
-{a) the Higgs boson partial decay widths, and b) selected Standard Model Higgs boson branching ratios. Both figures are shown a function of the Higgs boson mass, \Hmass. In a), the black curve shows the total decay width. Both figures are taken from \cite{Rainwater:2007cp}.}
+{a) the Higgs boson partial decay widths, and b) selected Higgs boson branching ratios, plotted as a function of the Higgs boson mass, \Hmass. In a), the black curve shows the total decay width. Both figures are taken from \cite{Rainwater:2007cp}.}
 \label{fig:theoryHiggsPhenomenology}
 \end{figure}
+
+
+\section{Yukawa couplings}
+
+The Yukawa sector of the electroweak Lagrangian provides the mass terms for quarks and charged leptons after the spontaneous symmetry breaking of the Higgs field. The   $\Lagr_{Yukawa}$ is given by:
+\begin{equation}
+\Lagr_{Yukawa} = -\lambda^{u}\overline{q_L}\Phi_{\PH}^{c}u_R  - \lambda^{d}\overline{q_L}\Phi_{\PH}{d}_R - \lambda^{e}\overline{l_L}\Phi_{\PH}e_R + h.c. ,
+\end{equation}
+where $q_L$ is the left-handed quark doublet field; $u_R$ is the up-type right-handed quark singlet field;  $d_R$ is the down-type right-handed quark singlet field; $l_L$ is the left-handed lepton doublet field; $e_R$ is the right-handed charged lepton singlet field; $\lambda$ is a constant; $\Phi_{\PH}^{c} \equiv i \sigma^2{\PH}^*$ is an SU(2) doublet field with hypercharge $Y = -\frac{1}{2}$; and  the Lagrangian is summed over all possible quarks and leptons. When the Higgs vacuum expectation value is substituted in the $\Lagr_{Yukawa}$, the interaction terms become mass terms:
+\begin{equation}
+m_{u} = \frac{\lambda^u{\nu}}{\sqrt{2}},\ m_{d} = \frac{\lambda^d{\nu}}{\sqrt{2}},\ m_{e} = \frac{\lambda^e{\nu}}{\sqrt{2}}.
+\end{equation}
 
 
 \section{Higgs beyond the Standard Model}
@@ -211,7 +400,7 @@ Higgs boson decaying to a pair of heavier particles, such as \HepProcess{\PWp\PW
 
 Since the SM-like Higgs boson discovery in 2012, it has become important to understand the role of the Higgs boson in the electroweak spontaneous symmetry breaking. In the absence of the Higgs boson, the coupling strength of the longitudinally polarised vector bosons grows with energy and becomes strong at the TeV scale. The \SM Higgs boson moderates the interacting strength, allowing the extraction of the weak coupling at short distances. In this scenario, the \SM Higgs couplings are constrained and predicted in one parameter only, the Higgs mass. But other alternative scenarios could allow the behaviour of the \SM Higgs at a low energy, but non \SM Higgs behaviour at a high energy. One such example, motivated by the hierarchy problem and the electroweak data, is that the light and narrow Higgs-scalar is a composite bound state of some strongly interacting sector at the TeV scale.   At the TeV scale, the couplings of the Higgs to fermions and bosons would be different to those in the \SM. If the composite Higgs is the pseudo Nambu-Goldstone boson from a spontaneous global symmetry breaking, the Higgs can be naturally light \cite{Kaplan:1983fs}. Another scenario is that a composite dilaton, the pseudo Nambu-Goldstone boson arose from a spontaneous scale invariance breaking, partially behaves like a light Higgs \cite{Goldberger:2008zz}. In both scenarios, the interaction of Higgs becomes strong at a high energy. The coupling of the Higgs would deviate to those in the \SM at a high energy.
 
-An important physics channel for testing the Higgs theory is the double Higgs production via vector boson fusion at high energy \cite{Giudice:2007fh,Contino:2010mh,Contino:2013gna}. For the composite Higgs scenario, the scattering amplitude increases with energy. For the dilaton scenario, no energy dependence on the scattering amplitude is expected. It is difficult for the Large Hardon Collider to measure the cross section due to the large \SM background rate \cite{Contino:2010mh}. However, a multi-TeV linear electron-position collider, such as the Compact Linear Collider, would be able to precisely measure the cross section of the double Higgs production \cite{Barger:2003rs}.
+An important physics channel for testing the Higgs theory is the double Higgs production via vector boson fusion at high energy \cite{Giudice:2007fh,Contino:2010mh,Contino:2013gna}. For the composite Higgs scenario, the scattering amplitude increases with energy. For the dilaton scenario, no energy dependence on the scattering amplitude is expected. It is difficult for the Large Hadron Collider to measure the cross section due to the large \SM background rate \cite{Contino:2010mh}. However, a multi-TeV linear electron-position collider, such as the Compact Linear Collider, would be able to precisely measure the cross section of the double Higgs production \cite{Barger:2003rs}.
 
 Following the assumption made in  \cite{Contino:2010mh,Contino:2013gna}, the self interaction of the light scalar Higgs, $h$, and its coupling to other \SM bosons can be described by a Lagrangian using the notation in  \cite{Contino:2013gna}. After the electroweak symmetry breaking, the bosonic part of the Lagrangian reads:
 \begin{equation}
