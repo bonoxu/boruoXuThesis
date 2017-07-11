@@ -32,7 +32,7 @@ where $t$ is the number of radiation lengths; the parameter $E_0$ is the shower 
 \begin{equation}
 a = 1.25 + 0.5\ln\left(\frac{E_0}{E_c}\right),
 \end{equation}
-where $E_c$ is the critical energy. The critical energy is defined as the energy at which the rate of losing energy by bremsstrahlung is the same as losing energy by ionisation \cite{1964NASSP3012.....B}. The alternative definition is the energy at which the energy loss by ionisation per radiation length is the same of the particle energy \cite{rossi1952high}. This parametrisation of the EM longitudinal shower profile should only be used to describe an average behaviour of the EM shower, as the fluctuation is important.
+where $E_c$ is the critical energy. The critical energy is defined as the energy at which the rate of losing energy by bremsstrahlung is the same as the rate of losing energy by ionisation \cite{1964NASSP3012.....B}. The alternative definition is the energy at which the energy loss by ionisation per radiation length is the same of the particle energy \cite{rossi1952high}. This parametrisation of the EM longitudinal shower profile should only be used to describe an average behaviour of the EM shower, as the fluctuation is important.
 
 %For the photon identification, the longitudinal shower profile is compared with \Equation{eq:photonEMshower}.
 
@@ -75,7 +75,7 @@ Photon reconstruction is an important part of particle reconstruction. For many 
 
 \section{Overview of photon reconstruction in \pandora}
 
-\pandora is a multi-algorithm pattern-recognition software package for the event reconstruction and an implementation of the particle flow approach to calorimetry. A detailed discussion of the \pandora and the main steps of the \pandora event reconstruction can be found in \Section{sec:pandoraPandoraPFA}. The multi-algorithm approach of the \pandora allows each algorithm to deal with a particular issue in the reconstruction. 
+\pandora is a multi-algorithm pattern-recognition software package for the event reconstruction and an implementation of the particle flow approach to calorimetry. A detailed discussion of the \pandora and the main steps of the \pandora event reconstruction can be found in \Section{sec:pandoraPandoraPFA}. The multi-algorithm approach of the \pandora allows each algorithm to deal with a particular issue in the reconstruction.
 
 
 Five algorithms are developed to tackle different issues in the photon reconstruction. The most important photon algorithm is the \PhotonReconstruction algorithm. It reconstructs photons from calorimeter hits in the \ECAL, including forming a photon candidate and applying a photon ID test, with special treatments for photons close to charged particles. %This algorithm is implemented at the early stage of the reconstruction.
@@ -111,7 +111,7 @@ Firstly an overview of electromagnetic showers is presented. The \PhotonReconstr
 \label{sec:photonRecostrcution}
 
 
-The \PhotonReconstruction algorithm is a photon reconstruction  algorithm at the early stage of the reconstruction. It corresponds to ``Particle ID'' stage of the \pandora reconstruction chain.  Main steps of the \PhotonReconstruction algorithm, shown in \Figure{fig:photonPhotonRecoFlow}, are:  coarsely forming photon clusters; finding photon candidates; photon ID test; and optional fragment removals. 
+The \PhotonReconstruction algorithm is a photon reconstruction  algorithm at the early stage of the reconstruction. It corresponds to ``Particle ID'' stage of the \pandora reconstruction chain.  Main steps of the \PhotonReconstruction algorithm, shown in \Figure{fig:photonPhotonRecoFlow}, are:  coarsely forming photon clusters; finding photon candidates; photon ID test; and optional fragment removals.
 
 %Finding photon candidates uses the transverse EM shower profile information, which requires a  two dimensional peak finding algorithm, further explained in \Section{sec:peakFinding}. The photon ID test involves a multi dimensional likelihood classifier, which is described in \Section{sec:photonLikelihood}. The optional fragment removal algorithm shares a common code base case class with another photon fragment removal algorithm. Hence two photon fragment removal algorithms are discussed together in \Section{sec:photonFragRemoval}.
 
@@ -135,7 +135,7 @@ This step finds large potential photon clusters in the \ECAL. The clusters are f
 
 The next stage is to refine large photon clusters into smaller photon candidates. Each photon candidate should contain calorimeter hits from one photon only.
 
-The method for refining clusters is to split a three-dimensional cluster into several smaller clusters. The three-dimensional splitting problem is harder a two-dimensional one. Therefore, a translation is needed to map the three-dimensional problem to a more manageable two-dimensional problem. This translation relies on the characteristic  transverse EM shower profile, which is characterised by a narrow cone, widening while the shower develops. Along the direction of the shower, an  EM shower can be modelled as a dense shower core with peripheral hits around the core. When the energy deposition is projected on to a two-dimensional plane, an EM shower core would appear as a mountain-like structure in the plane. One example  a large photon cluster projected onto a two-dimensional plane, where two EM showers are identified, is shown in \FIGURE{fig:photonPeakFinding}. Hence, by identifying a peak in the two-dimensional plane, an EM shower core is identified.
+The method for refining clusters is to split a three-dimensional cluster into several smaller clusters. The three-dimensional splitting problem is harder than a two-dimensional one. Therefore, a translation is needed to map the three-dimensional problem to a more manageable two-dimensional problem. This translation relies on the characteristic  transverse EM shower profile, which is characterised by a narrow cone, widening while the shower develops. Along the direction of the shower, an  EM shower can be modelled as a dense shower core with peripheral calorimeter hits around the core. When the energy deposition is projected on to a two-dimensional plane, an EM shower core would appear as a mountain-like structure in the plane. One example  a large photon cluster projected onto a two-dimensional plane, where two EM showers are identified, is shown in \FIGURE{fig:photonPeakFinding}. Hence, by identifying a peak in the two-dimensional plane, an EM shower core is identified.
 
 %the energy deposition projection of two photons candidates. U and V axis are two arbitrary orthogonal axis in the transverse plane perpendicular to the direction of photons. Z axis shows the sum of the calorimeter hit energy in GeV. The bin size corresponds to the square \ECAL cell size.
 
@@ -159,7 +159,7 @@ A high-performance two-dimensional peak finding algorithm is the key to identify
 \subsection{Photon ID test}
 \label{sec:photonIDtest}
 
-This step applies the photon ID test on the \ShowerPeak object. The photon ID test uses  a multidimensional likelihood classifier, which is discussed in \Section{sec:photonLikelihood}. A set of variables, which exploit features of electromagnetic showers, are used. The response from the classifier determines if a \ShowerPeak object is a photon. If it is a photon, the \ShowerPeak object would be tagged as a photon and the \ShowerPeak object  does not participate in the subsequent event reconstruction. The identified photon reenters the event reconstruction until at the fragment removal stage after the charged particle reconstruction. If \ShowerPeak object  is not a photon, the \ShowerPeak object  will be discarded. Associated calorimeter hits will be passed on to the next stage of the reconstruction. 
+This step applies the photon ID test on the \ShowerPeak object. The photon ID test uses  a multidimensional likelihood classifier, which is discussed in \Section{sec:photonLikelihood}. A set of variables, which exploit features of electromagnetic showers, are used. The response from the classifier determines if a \ShowerPeak object is a photon. If it is a photon, the \ShowerPeak object would be tagged as a photon and the \ShowerPeak object  does not participate in the subsequent event reconstruction. The identified photon reenters the event reconstruction at the fragment removal stage after the charged particle reconstruction. If \ShowerPeak object  is not a photon, the \ShowerPeak object  will be discarded. Associated calorimeter hits will be passed on to the next stage of the reconstruction.
 
 
 
@@ -170,7 +170,7 @@ The  photon fragment removal algorithm merges small photon fragments to identifi
 
 %only differing in the cut-off values for merging metrics, this step be discussed in \Section{}.
 
-This step marks the end of the photon reconstruction algorithm. The output are a collection of reconstructed photons, separated from non-photon calorimeter hits. 
+This step marks the end of the photon reconstruction algorithm. The output are a collection of reconstructed photons, separated from non-photon calorimeter hits.
 %The candidate passed the test will be kept in a separate container for photons only
 
 \section{Two-dimensional peak-finding algorithm}
@@ -233,13 +233,13 @@ The peak filtering step also allows bins with height below a critical value to n
 
 The \ShowerPeak  object is created after peak filtering. One \ShowerPeak object contains one peak bin and associated non-peak bins. The associated calorimeter hits within the bins are attached to the \ShowerPeak object as well. If multiple peaks are identified in a cluster, multiple \ShowerPeak objects are created as outputs.
 
-This marks the end of the neutral clusters variant of the \PhotonReconstruction algorithm, outlined in \Figure{fig:photonPeakFindingFlowNeutral}. 
+This marks the end of the neutral clusters variant of the \PhotonReconstruction algorithm, outlined in \Figure{fig:photonPeakFindingFlowNeutral}.
 
 %The  \ShowerPeak object is also referred to as the photon candidate.
 
 \subsection{Candidate close to track projection}
 \label{sec:photon2Dtrack}
-If  a photon candidate is close to the projection of the track in the front of the \ECAL, it is more likely that the candidate is a charged hadron. Misidentifying a charged hadron as a photon leads to significant degradation in reconstruction performance, because there will be double counting of energy of the track and from the charged hadron misidentified as a photon. However, if a photon next to a charged hadron is carefully reconstructed, the overall reconstruction is improved. 
+If  a photon candidate is close to the projection of the track in the front of the \ECAL, it is more likely that the candidate is a charged hadron. Misidentifying a charged hadron as a photon leads to significant degradation in reconstruction performance, because there will be double counting of energy of the track and from the charged hadron misidentified as a photon. However, if a photon next to a charged hadron is carefully reconstructed, the overall reconstruction is improved.
 
 This step aims to carefully identifies photon candidates next to charged hadrons, by using track information and features of EM showers. The important information is the electromagnetic shower typically starting in first few layers of the \ECAL with direction of the EM shower largely unchanged.
 
@@ -423,7 +423,7 @@ Here each set of logics for merging fragments are discussed. Fragments passing e
 
 One logic of merging is when the fragment is close to the main photon, and the fragment-photon pair looks like one photon in the two-dimensional energy deposition projection. The transverse shower comparison requires $\frac{E_{p1}}{E_m + E_f} > 0.9 $, demanding  most energy of the cluster contains in the first \ShowerPeak object.
 
-The other logic of merging is when 
+The other logic of merging is when
 
 \subsection{Close proximity}
 
@@ -435,7 +435,7 @@ The logic of merging  is when the fragment has low energy and is close to the ma
 
 \subsection{Small fragment}
 
-Fragments that are close to the main photon and have very few number of associated calorimeter hits will be merged. 
+Fragments that are close to the main photon and have very few number of associated calorimeter hits will be merged.
 
 \subsection{Small fragment forward region}
 
@@ -493,7 +493,7 @@ High $E_f$ &  Photon-photon & Photon-neutral-hadron \\
 \section{Photon fragment recovery algorithm in the \HCAL}
 \label{sec:photonHighEFragRemoval}
 
-The previous section describes an effective algorithm to remove photon fragments that are peripheral to the main photon, the electromagnetic shower core. There is another type of fragments originated from the leakage effect of the \ECAL. An example of a 500\,GeV photon reconstructed into a main photon in the \ECAL (yellow) and a neutral hadron fragment in the \HCAL (blue) is shown in \Figure{fig:photonEvtDspHCalFrag}.  
+The previous section describes an effective algorithm to remove photon fragments that are peripheral to the main photon, the electromagnetic shower core. There is another type of fragments originated from the leakage effect of the \ECAL. An example of a 500\,GeV photon reconstructed into a main photon in the \ECAL (yellow) and a neutral hadron fragment in the \HCAL (blue) is shown in \Figure{fig:photonEvtDspHCalFrag}.
 When a high-energy EM shower is not fully contained in the \ECAL, the shower deposits energy in the \HCAL, which often forms a neutral hadron in the \HCAL. This section presents an algorithm to merge photon fragments in the \HCAL. This photon fragment recovery algorithm is important when reconstructing  high energy photons. For the \ILD detector, this \ECAL leakage effect appears when the photon energy is above 50\,GeV.
 
 
@@ -571,7 +571,7 @@ Algorithms described above deal with forming photons from calorimeter hits in th
 A merged photon should be consistent with topologies of a spatially closed photon pair. Extra care should be taken if the photon is close to a charged tracks.
 
 
-\TABLE{tab:photonPhotonSplitting} lists the cuts used in the algorithm.  If an energetic photon is identified, and two energetic EM showers  can be found at the same time, the algorithm applies the cut logic. If energy of the photon is bigger than $E_{c1}$ and the energy of the $2^{nd}$ energetic EM shower found is bigger than $E_{c2}$, the photon will be split according to the \peakFinding results. 
+\TABLE{tab:photonPhotonSplitting} lists the cuts used in the algorithm.  If an energetic photon is identified, and two energetic EM showers  can be found at the same time, the algorithm applies the cut logic. If energy of the photon is bigger than $E_{c1}$ and the energy of the $2^{nd}$ energetic EM shower found is bigger than $E_{c2}$, the photon will be split according to the \peakFinding results.
 
 The values of $E_{c1}$ and $E_{c2}$ depends on if the candidate is close to a charged track. The cut is more careful if the candidate is close to tracks. The number of nearby charged tracks is counted as number of tracks with the track projection on the front of the \ECAL less than 100\,mm to the candidate position. If there is no nearby tracks, the $E_{c1}$ is set to 10\,GeV and $E_{c2}$ is set to 1\,GeV. If there is one nearby track, the $E_{c1}$ is set to 10\,GeV and $E_{c2}$ is set to 5\,GeV. If there is more than one nearby track,t he $E_{c1}$ is set to 20\,GeV and $E_{c2}$ is set to 10\,GeV.
 
