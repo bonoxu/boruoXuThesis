@@ -9,30 +9,32 @@ This chapter provides a review of the Standard Model of Particle Physics, with a
 
 \section{Overview of the Standard Model}
 
-The Standard Model (\SM) \cite{Agashe:2014kda,Thomson:2013zua,Tong:QFT,Gripaios:GFT} is a quantum field theory concerning the fundamental particles and three fundamental interactions of nature: the electromagnetic; the weak; and the strong interactions.  The fundamental particles in the \SM consist of bosons and fermions. The bosons mediate the fundamental forces between particles: the photon is the force carrier of the electromagnetic force; \PWp, \PWm, and \PZ  bosons are the force carriers of the weak force; And the gluon, \Pg, is the force carrier of the strong force. The properties of the force-exchange bosons are listed in \Table{tab:theoryBoson}.
+The Standard Model (\SM) \cite{Agashe:2014kda,Thomson:2013zua,Tong:QFT,Gripaios:GFT} is a quantum field theory concerning the fundamental particles and three fundamental interactions of nature: the electromagnetic; the weak; and the strong interactions.  The fundamental particles in the \SM consist of bosons and fermions. The bosons mediate the fundamental forces between particles: the photon is the force carrier of the electromagnetic force; \PWp, \PWm, and \PZ  bosons are the force carriers of the weak force; And the gluon, \Pg, is the force carrier of the strong force. The properties of the force-exchange bosons and Higgs boson are listed in \Table{tab:theoryBoson}.
 
 
 \begin{table}[htbp]
 \centering
 \smallskip
-\begin{tabular}{l  r r r }
+\begin{tabular}{l  r r rr }
 \hline
 \hline
-Force &  Boson & Mass & Charge / \Pe \\
+Force &  Boson & Mass & Spin & Charge / \Pe \\
 \hline
-Electromagnetic & photon & 0 & 0 \\
+Electromagnetic & photon & 0 & 1 & 0 \\
 \hline
-\multirow{3}{*}{Weak}   & \PWplus & 80.385(15)\,GeV & 1 \\
-  & \PWminus & 80.385(15)\,GeV &  $-1$ \\
-  & \PZ & 91.1876(21)\,GeV &  0 \\
+\multirow{3}{*}{Weak}   & \PWplus & 80.385(15)\,GeV & 1 & 1 \\
+  & \PWminus & 80.385(15)\,GeV & 1 &  $-1$ \\
+  & \PZ & 91.1876(21)\,GeV & 1 &  0 \\
 \hline
-Strong  & gluon & 0 & 0 \\
+Strong  & gluon & 0 & 1 & 0 \\
+\hline
+ - & Higgs & 125.1(3)\,GeV & 0 & 0 \\
 \hline
 \hline
 \end{tabular}
 
 \caption
-{Listed masses and charges of fundamental force-exchange bosons in the \SM. All bosons are spin-1 particles. All numbers are taken from \cite{Agashe:2014kda}.}
+{Listed masses and charges of fundamental force-exchange bosons in the \SM. All force-exchange bosons are spin-1 particles. All numbers are taken from \cite{Agashe:2014kda}.}
 \label{tab:theoryBoson}
 \end{table}
 
@@ -71,7 +73,7 @@ Type&Generation &  Fermion & Mass & Charge / \Pe \\
 \end{tabular}
 
 \caption
-{Listed masses and charges of fundamental fermions in the \SM. All fermions are spin-$\frac{1}{2}$ particles. For each fermion in the \SM, there is an anti-fermion with the same mass and spin, but opposite charge. Neutrinos are known to have non-zero mass from the observation of the neutrino flavour oscillations. The upper bound of the neutrino mass is 2\,eV. All numbers are taken from \cite{Agashe:2014kda}.}
+{Listed masses and charges of fundamental fermions in the \SM. All fermions are spin-$\frac{1}{2}$ particles. For each fermion in the \SM, there is an anti-fermion with the same mass and spin, but opposite charge. Neutrinos are known to have non-zero mass from the observation of the neutrino flavour oscillations. The upper bound of the neutrino mass is 2\,eV. All numbers are taken from \cite{Agashe:2014kda}. Each quark corresponds to three fermion fields, each carrying one of the three colour charges from the SU(3) symmetry.}
 \label{tab:theoryFermion}
 \end{table}
 
@@ -172,7 +174,7 @@ G^a_{\mu\nu} = \partial_{\mu}\gamma_{\nu}^a - \partial_{\nu}\gamma_{\mu}^a  - g_
 
 \section{The electroweak interaction}
 \label{sec:theoryElectroweak}
-The electroweak interaction can be thought as an extension to \QED to incorporate the weak force - the force describing the nuclear decay. The unification of the electromagnetic and the weak force is accomplished under an $SU(2)_L \times$ U(1) gauge group. The corresponding gauge bosons are the three \PW bosons from $SU(2)_L$ ($W^1$, $W^2$, and $W^3$), and the $B$ boson from U(1), respectively, all of which are massless.
+The electroweak interaction can be thought as an extension to \QED to incorporate the weak force - the force describing the nuclear decay. The unification of the electromagnetic and the weak force is accomplished under an $SU(2)_L \times$ U(1) gauge group. The corresponding gauge bosons are the three \PW bosons from $SU(2)_L$ ($W^1$, $W^2$, and $W^3$), and the $B$ boson from U(1), respectively, all of which are massless. Fermion mass terms are forbidden under  $SU(2)_L$ symmetry.
 
 The electroweak Lagrangian can be written as
 \begin{equation}
@@ -204,7 +206,7 @@ D^L_{\mu} = \partial_{\mu} + ig\frac{\tau_i}{2}W^i_{\mu} + ig'Y_{\psi}B_{\mu} ,
 \begin{equation}
 D^R_{\mu} = \partial_{\mu}  + ig'Y_{\psi}B_{\mu} .
 \end{equation}
-This structure of this Lagrangian allows $W$ and $B$ fields to couple with left-handed fermions, but only allows the $B$ field to couple with right-handed fermions. The $\tau_i$ matrices are the generators of SU(2) . $Y_{\psi}$ is the hypercharge associated with the fermion field $\psi$. The $W$ field couples with strength $g$ to the fermion field;  The $B$ filed couples with strength $g'$ to the particles carrying weak hypercharge $Y$. 
+This structure of this Lagrangian allows $W$ and $B$ fields to couple with left-handed fermions, but only allows the $B$ field to couple with right-handed fermions. The $\tau_i$ matrices are the generators of SU(2) . $Y_{\psi}$ is the hypercharge associated with the fermion field $\psi$. The $W$ field couples with strength $g$ to the fermion field;  The $B$ filed couples with strength $g'$ to the particles carrying weak hypercharge $Y$.
 
 %The four vector fields ($W^1$, $W^2$, and $W^3$, $B$) are massless.
 
@@ -398,21 +400,51 @@ m_{u} = \frac{\lambda^u{\nu}}{\sqrt{2}},\ m_{d} = \frac{\lambda^d{\nu}}{\sqrt{2}
 \section{Higgs beyond the Standard Model}
 \label{sec:theoryHiggsBSM}
 
-Since the SM-like Higgs boson discovery in 2012, it has become important to understand the role of the Higgs boson in the electroweak spontaneous symmetry breaking. In the absence of the Higgs boson, the coupling strength of the longitudinally polarised vector bosons grows with energy and becomes strong at the TeV scale. The \SM Higgs boson moderates the interacting strength, allowing the extraction of the weak coupling at short distances. In this scenario, the \SM Higgs couplings are constrained and predicted in one parameter only, the Higgs mass. But other alternative scenarios could allow the behaviour of the \SM Higgs at a low energy, but non \SM Higgs behaviour at a high energy. One such example, motivated by the hierarchy problem and the electroweak data, is that the light and narrow Higgs-scalar is a composite bound state of some strongly interacting sector at the TeV scale.   At the TeV scale, the couplings of the Higgs to fermions and bosons would be different to those in the \SM. If the composite Higgs is the pseudo Nambu-Goldstone boson from a spontaneous global symmetry breaking, the Higgs can be naturally light \cite{Kaplan:1983fs}. Another scenario is that a composite dilaton, the pseudo Nambu-Goldstone boson arose from a spontaneous scale invariance breaking, partially behaves like a light Higgs \cite{Goldberger:2008zz}. In both scenarios, the interaction of Higgs becomes strong at a high energy. The coupling of the Higgs would deviate to those in the \SM at a high energy.
+Because if issues that can not be explained by the \SM, a number of BSM Higgs theories have been proposed. The light Higgs could be a composite bound state of new strongly-interacting sector at the TeV scale. If the composite Higgs is the pseudo Nambu-Goldstone boson from a spontaneous global symmetry breaking, the Higgs can be naturally light \cite{Kaplan:1983fs}.  The coupling of the Higgs would deviate to those in the \SM at a high energy.
 
-An important physics channel for testing the Higgs theory is the double Higgs production via vector boson fusion at high energy \cite{Giudice:2007fh,Contino:2010mh,Contino:2013gna}. For the composite Higgs scenario, the scattering amplitude increases with energy. For the dilaton scenario, no energy dependence on the scattering amplitude is expected. It is difficult for the Large Hadron Collider to measure the cross section due to the large \SM background rate \cite{Contino:2010mh}. However, a multi-TeV linear electron-position collider, such as the Compact Linear Collider, would be able to precisely measure the cross section of the double Higgs production \cite{Barger:2003rs}.
 
-Following the assumption made in  \cite{Contino:2010mh,Contino:2013gna}, the self interaction of the light scalar Higgs, $h$, and its coupling to other \SM bosons can be described by a Lagrangian using the notation in  \cite{Contino:2013gna}. After the electroweak symmetry breaking, the bosonic part of the Lagrangian reads:
+
+An important physics channel for testing the Higgs theory is the double Higgs production via vector boson fusion at high energy \cite{Giudice:2007fh,Contino:2010mh,Contino:2013gna}. For the composite Higgs scenario, the scattering amplitude this channel increases with energy. It is difficult for the Large Hadron Collider to measure the double Higgs production due to the large \SM background rate \cite{Contino:2010mh}. However, a multi-TeV linear electron-position collider, such as the Compact Linear Collider, would be able to measure the cross section for the this process \cite{Barger:2003rs}.
+
+The study of double Higgs production via \WW fusion can probe the Higgs trilinear self coupling, \gHHH, and quartic coupling, \gWWHH. Leading-order Feynman diagrams for double Higgs production via \WW fusion are shown in \Figure{fig:theorydoubleHiggsFeynman}. The diagram shown in  \Figure{fig:theorydoubleHiggsFeynman1} contains the triple Higgs vertex, which is sensitive to the Higgs trilinear self coupling \gHHH. The diagram in the \Figure{fig:theorydoubleHiggsFeynman2} is sensitive to the quartic coupling \gWWHH. Figures \ref{fig:theorydoubleHiggsFeynman3} and \ref{fig:theorydoubleHiggsFeynman4} show the Feynman diagrams for irreducible background processes in the study of \gHHH and \gWWHH.
+
+\begin{figure}[!htbp]
+  \begin{subfigure}[b]{0.22\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/Feynman/1}}}
+    \caption{}
+    \label{fig:theorydoubleHiggsFeynman1}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.22\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/Feynman/2}}}
+    \caption{}
+    \label{fig:theorydoubleHiggsFeynman2}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.22\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/Feynman/3}}}
+    \caption{}
+    \label{fig:theorydoubleHiggsFeynman3}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.22\textwidth}
+    \includegraphics[width=\textwidth]{{{doubleHiggs/Feynman/4}}}
+    \caption{}
+    \label{fig:theorydoubleHiggsFeynman4}
+  \end{subfigure}
+\caption
+   {The main Feynman diagrams for the leading-order \eeToHH processes.}
+   \label{fig:theorydoubleHiggsFeynman}
+\end{figure}
+
+Following the assumption made in  \cite{Contino:2010mh,Contino:2013gna}, the self interaction of the light scalar Higgs, $h$, and its coupling to other \SM bosons can be described by a Lagrangian using the notation in  \cite{Contino:2013gna}. After the electroweak symmetry breaking with vacuum expectation value $\nu \approx$246\,GeV, the  Lagrangian is given by:
 \begin{equation}
-\Lagr =\frac{1}{2}\left(\partial_\mu{h}\right)  - V(h) + \parenths{m_W^2{W}_\mu^+{W}^{-\mu} + \frac{m_Z^2}{2}Z_{\mu}Z^\mu}\sqbracs{1 + 2a\frac{h}{\nu} + b \frac{h^2}{\nu^2} + \hdots},
+\Lagr =\frac{1}{2}\left(\partial_\mu{h}\right)^2  - V(h) + \parenths{m_W^2{W}_\mu^+{W}^{-\mu} + \frac{m_Z^2}{2}Z_{\mu}Z^\mu}\sqbracs{1 + 2a\frac{h}{\nu} + b \frac{h^2}{\nu^2} + \hdots},
 \end{equation}
-where $V(h)$ is the $h$ field potential:
+where $V(h)$ is the $h$ field potential
 \begin{equation}
 V(h) = \frac{1}{2}m_h^2h^2 + d_3\parenths{\frac{m_h^2}{2\nu}}h^3 + d_4\parenths{\frac{m_h^2}{8{\nu}^2}}h^4 + \hdots ,
 \end{equation}
-where $a$, $b$, $d_3$ and $d_4$ are  dimensionless parameters; higher order terms in $h$ are omitted; $a$ and $b$ are proportional to the coupling strength of the $VVh$ and $VVhh$ vertices, where $V$ is the vector boson, \PWpm and \PZ; and $d_3$ and $d_4$ are proportional to the trilinear and quadlinear $h$ self coupling strength, respectively. Comparing with \Equation{eq:theoryHiggsBosonic} and \Equation{eq:theoryHiggsSelfCoupling}, the \SM Higgs suggests $a=b=d_3=d_4=1$, and all higher order terms vanish. Other BSM Higgs theory allow $a,b,d_3,d_4$ to take different values with different constraints. For example, the dilaton scenario imposes the relation, $a = b^2$.
+and $a$, $b$, $d_3$ and $d_4$ are  dimensionless parameters; higher order terms in $h$ are omitted; the parameters $a$ and $b$ are proportional to the coupling strength of the $VVh$ and $VVhh$ vertices, where $V$ is the vector boson: \PWpm and \PZ; and the parameters $d_3$ and $d_4$ are proportional to the trilinear and quadlinear $h$ self coupling strength, respectively. Comparing the Lagrangian with the  $\Lagr_{Higgs} $ in the \SM,  the \SM suggests $a=b=d_3=d_4=1$, and all higher order terms vanish. However, BSM Higgs theories allow $a,b,d_3,d_4$ to take different values with different constraints.
 
-The scattering amplitude for \HepProcess{{V}_L{V}_L \to hh} can be written as:
+Consider a pair of the longitudinal polarised  vector boson coupling to two $h$ field, the scattering amplitude for \HepProcess{{V}_L{V}_L \to hh} can be written as:
 \begin{equation}
 A = a^2\parenths{A_{SM} + A_1\delta_b + A_2\delta_{d_3}},
 \end{equation}
@@ -423,12 +455,12 @@ where $A_{SM}$ is the \SM amplitude and:
 \begin{equation}
 \delta_{d_3} \equiv 1 - \frac{d_3}{a}.
 \end{equation}
-$A_1$ grows like the squared of energy at a large center-of-mass energy, $E\gg{m_V}$. $A_{SM}$ and $A_2$ have no energy dependencies. Therefore, $\delta_b$ controls the magnitude of the increasing of the scattering amplitude as a function of energy. $\delta_{d_3}$, on the other hand, determines the magnitude at the higgs mass threshold. In an electron-positron collider, this scattering process can be studied via the \HepProcess{\Ppositron\Pelectron \to \Pneutrino\APneutrino hh} channel. The cross section of the channel can be written as
+The term $A_1$ grows like the squared of energy at a large center-of-mass energy, $E\gg{m_V}$. The terms $A_{SM}$ and $A_2$ have no energy dependence. Therefore, the parameter $\delta_b$ controls the magnitude of the increasing of the scattering amplitude as a function of energy. The parameter $\delta_{d_3}$, on the other hand, determines the magnitude at the higgs mass threshold. In an electron-positron collider, this scattering process can be studied via the double Higgs production \HepProcess{\Ppositron\Pelectron \to \Pneutrino\APneutrino hh} channel. The cross section can be written as
 \begin{equation}
 \label{eq:theoryGeneralHiggsCrossSection}
 \sigma = a^4\sigma_{SM}\parenths{1 + A\delta_b + B\delta_{d_3} + C\delta_b\delta_{d_3} + D\delta_b^2 + E\delta_{d_3}^2},
 \end{equation}
-where $\sigma_{SM}$ is the cross section predicted by the \SM. With suitable kinematic cuts, high-energy behaviour can be disentailed from the physics at the threshold, allowing the extraction of $\delta_{b}$, $\delta_{d_3}$ and hence the coupling strengths, $g_{VVHH}$ and $g_{HHH}$. Suitable observables are variables that increase with the increasing of the centre-of-mass energies. Two examples of such variables are the invariant mass of the two Higgs system, $m_{hh}$, and the scalar sum of two Higgs transverse momenta, $H_T$. \FIGURE{fig:theoryMhhHtDistribution} shows that the $m_{hh}$ and $H_T$ distributions are sensitive to the values of $\delta_{b}$ and $\delta_{d_3}$. The figure shows the result of a generator-level study performed in \cite{Contino:2013gna}.
+where $\sigma_{SM}$ is the \SM cross section. Suitable observables are variables that increase with the increasing of the centre-of-mass energies. Two examples of such variables are the invariant mass of the two Higgs system, $m_{hh}$, and the scalar sum of two Higgs transverse momenta, $H_T$. \FIGURE{fig:theoryMhhHtDistribution} shows that the $m_{hh}$ and $H_T$ distributions are sensitive to the values of $\delta_{b}$ and $\delta_{d_3}$  \cite{Contino:2013gna}. Around the \SM value of $\delta_{d_3}$, a large value of $\delta_{b}$(0.3) favours events with large values of $m_{hh}$ and $H_T$. By studying the large value part and the low value part of the  $m_{hh}$ and $H_T$ distributions, the cross section of the double Higgs production can be related to the  $\delta_{b}$ and $\delta_{d_3}$, and a study of sensitivity of the $\delta_{b}$ and $\delta_{d_3}$ can be established if a non-SM cross section is measured. It should be noted that the \Figure{fig:theoryMhhHtDistribution} is obtained from a generator-level study.
 
 \begin{figure}[htbp]
 \centering
@@ -438,62 +470,89 @@ where $\sigma_{SM}$ is the cross section predicted by the \SM. With suitable kin
 \label{fig:theoryMhhHtDistribution}
 \end{figure}
 
-In the \Equation{eq:theoryGeneralHiggsCrossSection}, $a$, which is proportional to $g_{VVH}$, only enters as an overall factor. However, $a$ also appears in the definition of $\delta_{b}$ and $\delta_{d_3}$. To extract $\delta_{b}$ and $\delta_{d_3}$, $a$ should ideally be a constant. For a multi-TeV electron-positron collider, the cross section for single Higgs production is far greater than that of the double Higgs production. \FIGURE{fig:theoryHiggsCrossSection} shows the comparison of the cross section as a function of the centre-of-mass energy. Up to a centre-of-mass energy of \rootS{3}, the cross sections of the signal Higgs are two orders of magnitude larger than the cross sections of the double higgs production. Therefore, $g_{VVH}$, and $a$, will be measured precisely using the single Higgs production before investigating the double Higgs production. Consequently, for the purpose of measuring $g_{VVHH}$ and $g_{HHH}$ via double Higgs production, $a$ in the \Equation{eq:theoryGeneralHiggsCrossSection} can be treated as a constant.
+In the cross section of the double Higgs production via \HepProcess{\Ppositron\Pelectron \to \Pneutrino\APneutrino hh}  in \Equation{eq:theoryGeneralHiggsCrossSection}, the parameter $a$, which is proportional to $g_{VVH}$, only enters as an overall factor. However, $a$ also appears in the definition of $\delta_{b}$ and $\delta_{d_3}$. Hence a three-dimensional fit of the parameters $a$, $\delta_{b}$, and $\delta_{d_3}$ would be needed to extract the values of the three parameters. However,  for a multi-TeV electron-positron collider, the cross section for single Higgs production is far greater than that of the double Higgs production. Consequently, the measurement of the parameter $a$, using  \HepProcess{\Ppositron\Pelectron \to \Pneutrino\APneutrino h}  channel, would be performed before the measurement of the $\delta_{b}$ and $\delta_{d_3}$ for the double Higgs production.  \FIGURE{fig:theoryHiggsCrossSection} shows the comparison of the cross section as a function of the centre-of-mass energy. Up to a centre-of-mass energy of \rootS{3}, the cross sections of the signal Higgs are two orders of magnitude larger than the cross sections of the double higgs production. Therefore, for the purpose of measuring $g_{VVHH}$ and $g_{HHH}$ via double Higgs production, it is sufficient to treat the parameter $a$ as a known constant. Hence only a two-dimensional fit of the parameters $\delta_{b}$, and $\delta_{d_3}$ would be performed.
 
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.45\textwidth]{theory/HiggsCLICcrossSection}
 \caption[]
-{Cross section as a function of centre-of-mass energy for the Higgs production processes at an electron-positron collider for a Higgs mass of 126GeV. The values shown correspond
-to unpolarised beams and do not include the effect of beamstrahlung. The plot is taken from \cite{Abramowicz:2016zbo}.}
+{Cross section as a function of centre-of-mass energy for the Higgs production processes at an electron-positron collider for a Higgs mass of 126\,GeV. The values shown correspond to unpolarised beams and do not include the effect of beamstrahlung. The plot is taken from \cite{Abramowicz:2016zbo}.}
 \label{fig:theoryHiggsCrossSection}
 \end{figure}
 
 
 \section{Tau pair polarisation correlations as a signature of Higgs boson}
 \label{sec:theoryTauPair}
-For many theories beyond the Standard Model, a common feature is that the coupling of the Higgs particle to leptons increases with the increase of the lepton mass \cite{Duperrin:2008in}.  In these BSM theories, unlike vector bosons coupling to all flavours of leptons equally, the \HigssTauTau coupling would dominate the Higgs coupling to leptons. Therefore, if an experiment observes the breaking of the lepton universality by favouring \TauTau events, it could indicate the existence of a scalar Higgs. When such a universality breaking is observed, a helicity correlation test can be used to show that the \TauTau pair is from a scalar boson or a vector boson. In particular, the polarisation correlations of tau leptons are different for \HiggsToTauTau and \ZToTauTau, as scalar Higgs decays to \TauTauSub{L}{L} or \TauTauSub{R}{R} and \PZ decays to \TauTauSub{L}{R} or \TauTauSub{R}{L}, where L, R denotes the tau lepton helicities.
 
 
-Tau pair polarisation correlations can be studied using various tay decay modes. Here \Reference{Bullock:1991my} is followed and \tauToPion decay mode is used as the example. The boson decay to tau pair  via  \tauToPion can be represented as:
+The tau lepton is an fundamental particle similar to the electron, with negative electric charge and a spin of $\frac{1}{2}$. It has the same interaction properties as an electron, but much bigger mass. The tau lepton has a corresponding antiparticle of opposite charge but equal mass and spin. Tau mean lifetime is $(290.3\pm0.5)\times10^{-15}s$. Tau has many decay modes. Decay modes with branching ratio above 2\% are listed in table \Table{tab:theoryTauDecayMode}.
+
+% The most difficult final states to separate are \decayRhoFinalStateShort and \decayAiPhotonFinalStateShort, where photons from boosted \Ppizero are very challenging to reconstruct correctly.
+
+\begin{table}[htbp]\centering
+\smallskip
+\begin{tabular}{l l r}
+\hline
+\hline
+Decay modes & Detectable final states & Branching ratio\\
+\hline
+\decayElectron   &  \decayElectronShort  & $17.83\%_{\pm0.04\%}$   \\
+\decayMuon &	\decayMuonShort & $17.41\%_{\pm0.04\%}$  \\
+\decayPion  &   \decayPionShort	& $10.83\%_{\pm0.06\%}$   \\
+\decayRho   & \decayRhoFinalStateShort& $25.52\%_{\pm0.09\%}$ \\
+\decayAi   & \decayAiPhotonFinalStateShort	& $9.30\%_{\pm0.11\%}$    \\
+\decayAi  &	\decayAiPionFinalStateShort    & $8.99\%_{\pm0.06\%}$  \\
+\decayThreePionPhoton  &	\decayThreePionPhotonShort    & $2.70\%_{\pm0.08\%}$  \\
+\hline
+\hline
+\end{tabular}
+\caption[Decay modes, detectable final state particles and branching ratios of the seven major \Pgtm decays.]
+{Decay modes, detectable final state particles and branching ratios of the seven major \Pgtm decays, taken from \cite{Agashe:2014kda}. \Pgtp decays similarly to \Pgtm.}
+\label{tab:theoryTauDecayMode}
+\end{table}
+
+A scalar Higgs boson with spin-0 would decay to \TauTauSub{L}{L} or \TauTauSub{R}{R}; A vector boson \PZ with spin-1, on the other hand,  decays to \TauTauSub{L}{R} or \TauTauSub{R}{L}, where L, R denotes the tau lepton helicities. Therefore, by studying the tau pair polarisation correlation from a boson decay, one could identify if the parent boson is a  scalar Higgs boson or a vector \PZ boson.
+
+%For many theories beyond the Standard Model, a common feature is that the coupling of the Higgs particle to leptons increases with the increase of the lepton mass \cite{Duperrin:2008in}.  In these BSM theories, unlike vector bosons coupling to all flavours of leptons equally, the \HigssTauTau coupling would dominate the Higgs coupling to leptons. Therefore, if an experiment observes the breaking of the lepton universality by favouring \TauTau events, it could indicate the existence of a scalar Higgs. When such a universality breaking is observed, a helicity correlation test can be used to show that the \TauTau pair is from a scalar boson or a vector boson. In particular, the polarisation correlations of tau leptons are different for \HiggsToTauTau and \ZToTauTau, as scalar Higgs decays to \TauTauSub{L}{L} or \TauTauSub{R}{R} and \PZ decays to \TauTauSub{L}{R} or \TauTauSub{R}{L}, where L, R denotes the tau lepton helicities.
+
+
+Tau pair polarisation correlations can be studied using various tay decay modes. Here \Reference{Bullock:1991my} is followed and the \tauToPion decay mode is used as the example. The Higgs and \PZ boson decay to tau pair  via  \tauToPion can be represented as:
 \begin{equation}
-\HepProcess{X \to \TauTauSub{\alpha}{\beta} \to \Ppiplus\Ppiminus  + \Pneutrino's},
+\HepProcess{X \to \TauTauSub{\alpha}{\beta} \to \Ppiplus\Ppiminus  + \Pneutrino{s}},
 \end{equation}
 where $X$ is either \PHiggs or \PZ; and $\alpha$, $\beta$ are the helicities, L or R. In the collinear limit where $m^2_{\Ptau}/m^2_X \ \ll \ 1$, the appropriate kinematic variables are the energy fractions:
 \begin{equation}
-\overline{z} = \frac{E_{\Ppiplus}}{E_{\APtauon}},\ z = \frac{E_{\Ppiminus}}{E_{\Ptauon}}.
+\overline{z} = \frac{E_{\Ppiplus}}{E_{\APtauon}},\text{and}\ z = \frac{E_{\Ppiminus}}{E_{\Ptauon}}.
 \end{equation}
-For a single tau decay, the collinear distribution can be written as:
+For a single tau decay, the differential cross section distribution can be written as:
 \begin{equation}
-\frac{1}{\Gamma_{\Ptau}}\frac{d\Gamma}{dz} = Br_{\Ppiminus} f\parenths{\HepProcess{\TauFull{\alpha}{-} \to \Ppiminus} ; z},
+\frac{1}{\Gamma_{\Ptau}}\frac{d\Gamma}{dz} = Br_{\parenths{\tauToPion}} f\parenths{\HepProcess{\TauFull{\alpha}{-} \to \Ppiminus} ; z},
 \end{equation}
-where $Br_{\Ppiminus}$ is the branching fraction of \tauToPion. The form $f$ can be obtained from literature \cite{Tsai:1971vv}:
+where $Br_{\parenths{\tauToPion}}$ is the branching fraction of \tauToPion. The form $f$ can be obtained by working outing the matrix element from the Feynman diagram and integrating  the squared of the matrix element over the phase space \cite{Tsai:1971vv}:
 \begin{equation}
 f\parenths{\HepProcess{\TauFull{\alpha}{-} \to \Ppiminus} ; z} = 1 + P_\alpha\parenths{2z-1},
 \end{equation}
-where $P_L = -1$ and $P_R = +1$. For the tau pair decay, the collinear distribution is of form:
+where $P_L = -1$ and $P_R = +1$. Hence for the tau pair decay, the differential cross section distribution is of form:
 \begin{equation}
-\frac{d^2N\parenths{\HepProcess{X \to \TauTau \to \Ppiplus\Ppiminus  + \Pneutrino's}}}{dz\,d\overline{z}} = Br^2_{\Ppiminus} \sum_{\alpha,\,\beta}^{} C^X_{\alpha \beta} f\parenths{\HepProcess{\TauFull{\alpha}{-} \to \Ppiminus} ; z} f\parenths{\HepProcess{\TauFull{\beta}{+} \to \Ppiplus} ; \overline{z}},
+\frac{d^2N\parenths{\HepProcess{X \to \TauTau \to \Ppiplus\Ppiminus  + \Pneutrino's}}}{dz\,d\overline{z}} = Br^2_{\parenths{\tauToPion}} \sum_{\alpha,\,\beta}^{} C^X_{\alpha \beta} f\parenths{\HepProcess{\TauFull{\alpha}{-} \to \Ppiminus} ; z} f\parenths{\HepProcess{\TauFull{\beta}{+} \to \Ppiplus} ; \overline{z}},
 \end{equation}
-where the only non-zero correlation coefficients $C_{\alpha \beta}$ for the party-conserving \HiggsToTauTau are:
+where the only non-zero correlation coefficients $C_{\alpha \beta}$ for the parity-conserving \HiggsToTauTau are:
 \begin{equation}
 C^{\PHiggs}_{LL} = C^{\PHiggs}_{RR} = \frac{1}{2},
 \end{equation}
-and for \ZToTauTau the non-zero correlation coefficients are
+and the non-zero correlation coefficients  for the non-parity-conserving  \ZToTauTau are:
 \begin{equation}
 C^{\PZ}_{LR} = \frac{1}{2}\parenths{1 - P_{\Ptau}},\ C^{\PZ}_{RL} = \frac{1}{2}\parenths{1 + P_{\Ptau}},
 \end{equation}
-where tau polarisation, $P_{\Ptau}$, arises from the non-parity-conserving tau decay in the \SM. For \PZ:
+where non-zero tau polarisation, $P_{\Ptau}$, because  \ZToTauTau  is not parity-conserving in the \SM.
 \begin{equation}
 P_{\Ptau} = \frac{-2va}{v^2 + a^2},
 \end{equation}
-\begin{equation}
-v = -\frac{1}{2} + \sin^2{\theta_{\PW}},
-\end{equation}
-\begin{equation}
-a = -\frac{1}{2},
-\end{equation}
-where $v$ and $a$ are the vector and axial-vector \ZTauTau couplings. \FIGURE{fig:theoryTauPairCorrelation} shows two-dimensional distributions of  tau pair polarisation correlation using both \tauToPion channel for \ZToTauTau and \HiggsToTauTau. The difference of the tau pair polarisation correlation between \PZ and \PHiggs  is clear. The distribution for \ZToTauTau has more entries along the diagonal, whilst the distribution for  \HiggsToTauTau has more entries along the anti-diagonal. Therefore, if an excess of \TauTau events over \ee or \MuMu events is observed, it can be easily identified where the excess is from \PHiggs decay or \PZ decay, using the tau pair polarisation correlation.
+where the parameter $v= -\frac{1}{2} + \sin^2{\theta_{\PW}},$ and  the parameter $a= -\frac{1}{2}$ are the vector and axial-vector \ZTauTau couplings, respectively.
+
+
+\FIGURE{fig:theoryTauPairCorrelation} shows two-dimensional distributions of  $\frac{E_{\Ppiplus}}{E_{\APtauon}}$ as a function of $\frac{E_{\Ppiminus}}{E_{\Ptauon}}$ using both \tauToPion channel for \ZToTauTau and \HiggsToTauTau. The difference of the tau pair polarisation correlation between \PZ and \PHiggs  is clear. The energy distribution of the pion from \ZToTauTau has the form of $f\sim z$, whilst from  \HiggsToTauTau is has the form of $f\sim (1-z)$. Therefore, in \ZToTauTau, a high-energy \Pgppm (a large $z$) is likely to be associated with a high-energy \Pgpmp (a large $\overline{z} $); in \HiggsToTauTau, the opposite is favoured. If the tau pair decay from Higgs boson is observed, the decay can be recongised in the \tauToPion mode as a high-energy \Pgppm with a low-energy \Pgpmp. Hence, the tau decay product energy distribution can be a clean signature for \HiggsToTauTau.
+
 %Photon - passage through matter. Photon electromagnetic shower
 
 \begin{figure}[htbp]
@@ -510,6 +569,6 @@ where $v$ and $a$ are the vector and axial-vector \ZTauTau couplings. \FIGURE{fi
     \label{fig:theoryTauPairCorrelationH}
   \end{subfigure}
 \caption[Two-dimensional distribution of \ZToTauTau and \HiggsToTauTau.]
-{Two-dimensional distribution of  tau pair polarisation correlation using both \tauToPion channel for a) \ZToTauTau, and b) \HiggsToTauTau.  $\overline{z} = {E_{\Ppiplus}}/{E_{\APtauon}},\ z = {E_{\Ppiminus}}/{E_{\Ptauon}}$. Both figures are adapted from reference \cite{Tsai:1971vv}.}
+{Two-dimensional distribution of $\overline{z} ={E_{\Ppiplus}}/{E_{\APtauon}}$ as a function of $ z ={E_{\Ppiminus}}/{E_{\Ptauon}}$  using both \tauToPion channel for a) \ZToTauTau, and b) \HiggsToTauTau.  Both figures are adapted from reference \cite{Tsai:1971vv}.}
 \label{fig:theoryTauPairCorrelation}
 \end{figure} 
