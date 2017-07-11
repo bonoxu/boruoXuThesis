@@ -63,14 +63,14 @@
 \BOOKMARK [2][-]{subsection.4.7.8}{Optimisation of Boosted Decision Tree}{section.4.7}% 63
 \BOOKMARK [2][-]{subsection.4.7.9}{Multiple classes}{section.4.7}% 64
 \BOOKMARK [0][-]{chapter.5}{Photon Reconstruction in PandoraPFA}{}% 65
-\BOOKMARK [1][-]{section.5.1}{Overview of photon reconstruction in PandoraPFA}{chapter.5}% 66
-\BOOKMARK [1][-]{section.5.2}{Electromagnetic shower}{chapter.5}% 67
+\BOOKMARK [1][-]{section.5.1}{Electromagnetic shower}{chapter.5}% 66
+\BOOKMARK [1][-]{section.5.2}{Overview of photon reconstruction in PandoraPFA}{chapter.5}% 67
 \BOOKMARK [1][-]{section.5.3}{Photon Reconstruction algorithm}{chapter.5}% 68
 \BOOKMARK [2][-]{subsection.5.3.1}{Form photon clusters}{section.5.3}% 69
 \BOOKMARK [2][-]{subsection.5.3.2}{Find photon candidates}{section.5.3}% 70
 \BOOKMARK [2][-]{subsection.5.3.3}{Photon ID test}{section.5.3}% 71
 \BOOKMARK [2][-]{subsection.5.3.4}{Photon Fragment removal}{section.5.3}% 72
-\BOOKMARK [1][-]{section.5.4}{Two dimensional peak finding algorithm for photon candidate}{chapter.5}% 73
+\BOOKMARK [1][-]{section.5.4}{Two-dimensional peak-finding algorithm}{chapter.5}% 73
 \BOOKMARK [2][-]{subsection.5.4.1}{Initialise the two-dimensional histogram}{section.5.4}% 74
 \BOOKMARK [2][-]{subsection.5.4.2}{Project calorimeter hits to histogram}{section.5.4}% 75
 \BOOKMARK [2][-]{subsection.5.4.3}{Local peak identifying}{section.5.4}% 76
@@ -82,77 +82,88 @@
 \BOOKMARK [2][-]{subsection.5.5.1}{Variable used in the likelihood classifier}{section.5.5}% 82
 \BOOKMARK [2][-]{subsection.5.5.2}{Projective Likelihood classifier}{section.5.5}% 83
 \BOOKMARK [1][-]{section.5.6}{Photon fragment removal algorithm in the ECAL}{chapter.5}% 84
-\BOOKMARK [1][-]{section.5.7}{Photon fragment recovery algorithm in the HCAL}{chapter.5}% 85
-\BOOKMARK [1][-]{section.5.8}{Photon splitting algorithm}{chapter.5}% 86
-\BOOKMARK [1][-]{section.5.9}{Characterise the performance}{chapter.5}% 87
-\BOOKMARK [1][-]{section.5.10}{Compare with no photon reconstruction}{chapter.5}% 88
-\BOOKMARK [1][-]{section.5.11}{Compare with photon reconstruction in PandoraPFA version 1}{chapter.5}% 89
-\BOOKMARK [1][-]{section.5.12}{Understand photon reconstruction improvement}{chapter.5}% 90
-\BOOKMARK [1][-]{section.5.13}{Current photon reconstruction performance}{chapter.5}% 91
-\BOOKMARK [0][-]{chapter.6}{Tau Lepton Decay Modes Classification}{}% 92
-\BOOKMARK [1][-]{section.6.1}{Overview of the analysis}{chapter.6}% 93
-\BOOKMARK [1][-]{section.6.2}{Samples for the analysis}{chapter.6}% 94
-\BOOKMARK [2][-]{subsection.6.2.1}{Tau lepton decay modes}{section.6.2}% 95
-\BOOKMARK [1][-]{section.6.3}{Simulation and reconstruction}{chapter.6}% 96
-\BOOKMARK [1][-]{section.6.4}{Event pre-selection}{chapter.6}% 97
-\BOOKMARK [1][-]{section.6.5}{Variables used in the MVA}{chapter.6}% 98
-\BOOKMARK [2][-]{subsection.6.5.1}{PFOs number variables}{section.6.5}% 99
-\BOOKMARK [2][-]{subsection.6.5.2}{Invariant mass variables}{section.6.5}% 100
-\BOOKMARK [2][-]{subsection.6.5.3}{Energy variables}{section.6.5}% 101
-\BOOKMARK [2][-]{subsection.6.5.4}{Calorimetric information variables}{section.6.5}% 102
-\BOOKMARK [2][-]{subsection.6.5.5}{ resonances reconstruction variables}{section.6.5}% 103
-\BOOKMARK [2][-]{subsection.6.5.6}{Separate e--0.6mu \040from --0.6mu }{section.6.5}% 104
-\BOOKMARK [1][-]{section.6.6}{Multivariate Analysis}{chapter.6}% 105
-\BOOKMARK [1][-]{section.6.7}{Tau decay mode classification efficiency}{chapter.6}% 106
-\BOOKMARK [1][-]{section.6.8}{Electromagnetic calorimeter optimisation}{chapter.6}% 107
-\BOOKMARK [2][-]{subsection.6.8.1}{Tau hadronic decay correct classification efficiency}{section.6.8}% 108
-\BOOKMARK [1][-]{section.6.9}{Tau pair polarisation correlations as a signature of Higgs boson}{chapter.6}% 109
-\BOOKMARK [2][-]{subsection.6.9.1}{Event pre-selection}{section.6.9}% 110
-\BOOKMARK [2][-]{subsection.6.9.2}{Find tau decay products}{section.6.9}% 111
-\BOOKMARK [3][-]{subsubsection.6.9.2.1}{Direct tau searching}{subsection.6.9.2}% 112
-\BOOKMARK [3][-]{subsubsection.6.9.2.2}{Jet clustering}{subsection.6.9.2}% 113
-\BOOKMARK [3][-]{subsubsection.6.9.2.3}{Select tau candidates}{subsection.6.9.2}% 114
-\BOOKMARK [2][-]{subsection.6.9.3}{Boost tau decay products to Z-0.6mu decay rest frame}{section.6.9}% 115
-\BOOKMARK [2][-]{subsection.6.9.4}{Variables used in the MVA}{section.6.9}% 116
-\BOOKMARK [2][-]{subsection.6.9.5}{Multivariate analysis}{section.6.9}% 117
-\BOOKMARK [2][-]{subsection.6.9.6}{Result}{section.6.9}% 118
-\BOOKMARK [0][-]{chapter.7}{Double Higgs Boson Production Analysis}{}% 119
-\BOOKMARK [1][-]{section.7.1}{Analysis Strategy Overview}{chapter.7}% 120
-\BOOKMARK [1][-]{section.7.2}{Monte Carlo sample generation}{chapter.7}% 121
-\BOOKMARK [1][-]{section.7.3}{Lepton identification}{chapter.7}% 122
-\BOOKMARK [2][-]{subsection.7.3.1}{Electron and muon identification}{section.7.3}% 123
-\BOOKMARK [3][-]{subsubsection.7.3.1.1}{IsolatedLeptonFinder}{subsection.7.3.1}% 124
-\BOOKMARK [3][-]{subsubsection.7.3.1.2}{IsolatedLeptonIdentifer}{subsection.7.3.1}% 125
-\BOOKMARK [2][-]{subsection.7.3.2}{Tau lepton identification}{section.7.3}% 126
-\BOOKMARK [3][-]{subsubsection.7.3.2.1}{TauFinder}{subsection.7.3.2}% 127
-\BOOKMARK [3][-]{subsubsection.7.3.2.2}{IsolatedTauIdentifer}{subsection.7.3.2}% 128
-\BOOKMARK [2][-]{subsection.7.3.3}{Very forward electron identification}{section.7.3}% 129
-\BOOKMARK [2][-]{subsection.7.3.4}{Lepton identification performance}{section.7.3}% 130
-\BOOKMARK [1][-]{section.7.4}{Jet reconstruction}{chapter.7}% 131
-\BOOKMARK [2][-]{subsection.7.4.1}{Jet reconstruction optimisation}{section.7.4}% 132
-\BOOKMARK [1][-]{section.7.5}{Jet flavour tagging}{chapter.7}% 133
-\BOOKMARK [2][-]{subsection.7.5.1}{Mutually exclusive cuts for \040H-0.6muH-0.6mub-0.6mub1mu1mu-0.6muW+-0.6muW--0.6mu \040and \040H-0.6muH-0.6mub-0.6mub1mu1mu-0.6mub-0.6mub1mu1mu-0.6mu }{section.7.5}% 134
-\BOOKMARK [1][-]{section.7.6}{Jet pairing}{chapter.7}% 135
-\BOOKMARK [1][-]{section.7.7}{Pre-selection}{chapter.7}% 136
-\BOOKMARK [1][-]{section.7.8}{MVA variables}{chapter.7}% 137
-\BOOKMARK [2][-]{subsection.7.8.1}{Invariant mass variables}{section.7.8}% 138
-\BOOKMARK [2][-]{subsection.7.8.2}{Energy and momentum variables}{section.7.8}% 139
-\BOOKMARK [2][-]{subsection.7.8.3}{Lab-frame angle variables}{section.7.8}% 140
-\BOOKMARK [2][-]{subsection.7.8.4}{Boosted-frame angle variables}{section.7.8}% 141
-\BOOKMARK [2][-]{subsection.7.8.5}{Event shape variables}{section.7.8}% 142
-\BOOKMARK [2][-]{subsection.7.8.6}{b-0.6mu and c-0.6mu tag variables}{section.7.8}% 143
-\BOOKMARK [2][-]{subsection.7.8.7}{PFOs number variables}{section.7.8}% 144
-\BOOKMARK [2][-]{subsection.7.8.8}{Cuts to aid the MVA}{section.7.8}% 145
-\BOOKMARK [1][-]{section.7.9}{Multivariate analysis}{chapter.7}% 146
-\BOOKMARK [1][-]{section.7.10}{Signal selection results}{chapter.7}% 147
-\BOOKMARK [1][-]{section.7.11}{s = 3TeV analysis}{chapter.7}% 148
-\BOOKMARK [1][-]{section.7.12}{Semi-leptonic decay at s = 3TeV analysis}{chapter.7}% 149
-\BOOKMARK [1][-]{section.7.13}{Result interpretation}{chapter.7}% 150
-\BOOKMARK [1][-]{section.7.14}{Combined results}{chapter.7}% 151
-\BOOKMARK [1][-]{section.7.15}{Simultaneous couplings extraction}{chapter.7}% 152
-\BOOKMARK [0][-]{chapter.8}{Summary}{}% 153
-\BOOKMARK [0][-]{appendix.A}{Double Higgs Boson Production Analysis}{}% 154
-\BOOKMARK [1][-]{section.A.1}{Hadronic decay at s = 3TeV analysis}{appendix.A}% 155
-\BOOKMARK [0][-]{chapter*.118}{Bibliography}{}% 156
-\BOOKMARK [0][-]{chapter*.119}{List of Figures}{}% 157
-\BOOKMARK [0][-]{chapter*.120}{List of Tables}{}% 158
+\BOOKMARK [2][-]{subsection.5.6.1}{Transverse shower comparison}{section.5.6}% 85
+\BOOKMARK [2][-]{subsection.5.6.2}{Close proximity}{section.5.6}% 86
+\BOOKMARK [2][-]{subsection.5.6.3}{Low energy fragment}{section.5.6}% 87
+\BOOKMARK [2][-]{subsection.5.6.4}{Small fragment}{section.5.6}% 88
+\BOOKMARK [2][-]{subsection.5.6.5}{Small fragment forward region}{section.5.6}% 89
+\BOOKMARK [2][-]{subsection.5.6.6}{Relative low energy fragment}{section.5.6}% 90
+\BOOKMARK [1][-]{section.5.7}{Photon fragment recovery algorithm in the HCAL}{chapter.5}% 91
+\BOOKMARK [2][-]{subsection.5.7.1}{distance comparison}{section.5.7}% 92
+\BOOKMARK [2][-]{subsection.5.7.2}{projection comparison}{section.5.7}% 93
+\BOOKMARK [2][-]{subsection.5.7.3}{shower width comparison}{section.5.7}% 94
+\BOOKMARK [2][-]{subsection.5.7.4}{cone comparison}{section.5.7}% 95
+\BOOKMARK [2][-]{subsection.5.7.5}{energy comparison}{section.5.7}% 96
+\BOOKMARK [1][-]{section.5.8}{Photon splitting algorithm}{chapter.5}% 97
+\BOOKMARK [1][-]{section.5.9}{Characterise the performance}{chapter.5}% 98
+\BOOKMARK [1][-]{section.5.10}{Compare with no photon reconstruction}{chapter.5}% 99
+\BOOKMARK [1][-]{section.5.11}{Compare with photon reconstruction in PandoraPFA version 1}{chapter.5}% 100
+\BOOKMARK [1][-]{section.5.12}{Understand photon reconstruction improvement}{chapter.5}% 101
+\BOOKMARK [1][-]{section.5.13}{Current photon reconstruction performance}{chapter.5}% 102
+\BOOKMARK [0][-]{chapter.6}{Tau Lepton Decay Modes Classification}{}% 103
+\BOOKMARK [1][-]{section.6.1}{Overview of the analysis}{chapter.6}% 104
+\BOOKMARK [1][-]{section.6.2}{Samples for the analysis}{chapter.6}% 105
+\BOOKMARK [2][-]{subsection.6.2.1}{Tau lepton decay modes}{section.6.2}% 106
+\BOOKMARK [1][-]{section.6.3}{Simulation and reconstruction}{chapter.6}% 107
+\BOOKMARK [1][-]{section.6.4}{Event pre-selection}{chapter.6}% 108
+\BOOKMARK [1][-]{section.6.5}{Variables used in the MVA}{chapter.6}% 109
+\BOOKMARK [2][-]{subsection.6.5.1}{PFOs number variables}{section.6.5}% 110
+\BOOKMARK [2][-]{subsection.6.5.2}{Invariant mass variables}{section.6.5}% 111
+\BOOKMARK [2][-]{subsection.6.5.3}{Energy variables}{section.6.5}% 112
+\BOOKMARK [2][-]{subsection.6.5.4}{Calorimetric information variables}{section.6.5}% 113
+\BOOKMARK [2][-]{subsection.6.5.5}{ resonances reconstruction variables}{section.6.5}% 114
+\BOOKMARK [2][-]{subsection.6.5.6}{Separate e--0.6mu \040from --0.6mu }{section.6.5}% 115
+\BOOKMARK [1][-]{section.6.6}{Multivariate Analysis}{chapter.6}% 116
+\BOOKMARK [1][-]{section.6.7}{Tau decay mode classification efficiency}{chapter.6}% 117
+\BOOKMARK [1][-]{section.6.8}{Electromagnetic calorimeter optimisation}{chapter.6}% 118
+\BOOKMARK [2][-]{subsection.6.8.1}{Tau hadronic decay correct classification efficiency}{section.6.8}% 119
+\BOOKMARK [1][-]{section.6.9}{Tau pair polarisation correlations as a signature of Higgs boson}{chapter.6}% 120
+\BOOKMARK [2][-]{subsection.6.9.1}{Event pre-selection}{section.6.9}% 121
+\BOOKMARK [2][-]{subsection.6.9.2}{Find tau decay products}{section.6.9}% 122
+\BOOKMARK [3][-]{subsubsection.6.9.2.1}{Direct tau searching}{subsection.6.9.2}% 123
+\BOOKMARK [3][-]{subsubsection.6.9.2.2}{Jet clustering}{subsection.6.9.2}% 124
+\BOOKMARK [3][-]{subsubsection.6.9.2.3}{Select tau candidates}{subsection.6.9.2}% 125
+\BOOKMARK [2][-]{subsection.6.9.3}{Boost tau decay products to Z-0.6mu decay rest frame}{section.6.9}% 126
+\BOOKMARK [2][-]{subsection.6.9.4}{Variables used in the MVA}{section.6.9}% 127
+\BOOKMARK [2][-]{subsection.6.9.5}{Multivariate analysis}{section.6.9}% 128
+\BOOKMARK [2][-]{subsection.6.9.6}{Result}{section.6.9}% 129
+\BOOKMARK [0][-]{chapter.7}{Double Higgs Boson Production Analysis}{}% 130
+\BOOKMARK [1][-]{section.7.1}{Analysis Strategy Overview}{chapter.7}% 131
+\BOOKMARK [1][-]{section.7.2}{Monte Carlo sample generation}{chapter.7}% 132
+\BOOKMARK [1][-]{section.7.3}{Lepton identification}{chapter.7}% 133
+\BOOKMARK [2][-]{subsection.7.3.1}{Electron and muon identification}{section.7.3}% 134
+\BOOKMARK [3][-]{subsubsection.7.3.1.1}{IsolatedLeptonFinder}{subsection.7.3.1}% 135
+\BOOKMARK [3][-]{subsubsection.7.3.1.2}{IsolatedLeptonIdentifer}{subsection.7.3.1}% 136
+\BOOKMARK [2][-]{subsection.7.3.2}{Tau lepton identification}{section.7.3}% 137
+\BOOKMARK [3][-]{subsubsection.7.3.2.1}{TauFinder}{subsection.7.3.2}% 138
+\BOOKMARK [3][-]{subsubsection.7.3.2.2}{IsolatedTauIdentifer}{subsection.7.3.2}% 139
+\BOOKMARK [2][-]{subsection.7.3.3}{Very forward electron identification}{section.7.3}% 140
+\BOOKMARK [2][-]{subsection.7.3.4}{Lepton identification performance}{section.7.3}% 141
+\BOOKMARK [1][-]{section.7.4}{Jet reconstruction}{chapter.7}% 142
+\BOOKMARK [2][-]{subsection.7.4.1}{Jet reconstruction optimisation}{section.7.4}% 143
+\BOOKMARK [1][-]{section.7.5}{Jet flavour tagging}{chapter.7}% 144
+\BOOKMARK [2][-]{subsection.7.5.1}{Mutually exclusive cuts for \040H-0.6muH-0.6mub-0.6mub1mu1mu-0.6muW+-0.6muW--0.6mu \040and \040H-0.6muH-0.6mub-0.6mub1mu1mu-0.6mub-0.6mub1mu1mu-0.6mu }{section.7.5}% 145
+\BOOKMARK [1][-]{section.7.6}{Jet pairing}{chapter.7}% 146
+\BOOKMARK [1][-]{section.7.7}{Pre-selection}{chapter.7}% 147
+\BOOKMARK [1][-]{section.7.8}{MVA variables}{chapter.7}% 148
+\BOOKMARK [2][-]{subsection.7.8.1}{Invariant mass variables}{section.7.8}% 149
+\BOOKMARK [2][-]{subsection.7.8.2}{Energy and momentum variables}{section.7.8}% 150
+\BOOKMARK [2][-]{subsection.7.8.3}{Lab-frame angle variables}{section.7.8}% 151
+\BOOKMARK [2][-]{subsection.7.8.4}{Boosted-frame angle variables}{section.7.8}% 152
+\BOOKMARK [2][-]{subsection.7.8.5}{Event shape variables}{section.7.8}% 153
+\BOOKMARK [2][-]{subsection.7.8.6}{b-0.6mu and c-0.6mu tag variables}{section.7.8}% 154
+\BOOKMARK [2][-]{subsection.7.8.7}{PFOs number variables}{section.7.8}% 155
+\BOOKMARK [2][-]{subsection.7.8.8}{Cuts to aid the MVA}{section.7.8}% 156
+\BOOKMARK [1][-]{section.7.9}{Multivariate analysis}{chapter.7}% 157
+\BOOKMARK [1][-]{section.7.10}{Signal selection results}{chapter.7}% 158
+\BOOKMARK [1][-]{section.7.11}{s = 3TeV analysis}{chapter.7}% 159
+\BOOKMARK [1][-]{section.7.12}{Semi-leptonic decay at s = 3TeV analysis}{chapter.7}% 160
+\BOOKMARK [1][-]{section.7.13}{Result interpretation}{chapter.7}% 161
+\BOOKMARK [1][-]{section.7.14}{Combined results}{chapter.7}% 162
+\BOOKMARK [1][-]{section.7.15}{Simultaneous couplings extraction}{chapter.7}% 163
+\BOOKMARK [0][-]{chapter.8}{Summary}{}% 164
+\BOOKMARK [0][-]{appendix.A}{Double Higgs Boson Production Analysis}{}% 165
+\BOOKMARK [1][-]{section.A.1}{Hadronic decay at s = 3TeV analysis}{appendix.A}% 166
+\BOOKMARK [0][-]{chapter*.118}{Bibliography}{}% 167
+\BOOKMARK [0][-]{chapter*.119}{List of Figures}{}% 168
+\BOOKMARK [0][-]{chapter*.120}{List of Tables}{}% 169
