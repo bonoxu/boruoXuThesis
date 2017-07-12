@@ -111,15 +111,15 @@ Firstly an overview of electromagnetic showers is presented. The \PhotonReconstr
 \label{sec:photonRecostrcution}
 
 
-The \PhotonReconstruction algorithm is a photon reconstruction  algorithm at the early stage of the reconstruction. It corresponds to ``Particle ID'' stage of the \pandora reconstruction chain.  Main steps of the \PhotonReconstruction algorithm, shown in \Figure{fig:photonPhotonRecoFlow}, are:  coarsely forming photon clusters; finding photon candidates; photon ID test; and optional fragment removals.
+The \PhotonReconstruction algorithm is a photon reconstruction  algorithm at the early stage of the reconstruction. It corresponds to ``Particle ID'' stage of the \pandora reconstruction chain.  Main steps of the \PhotonReconstruction algorithm, shown in \Figure{fig:photonPhotonRecoFlow}, are:  forming photon clusters; finding photon candidates; photon ID test; and optional fragment removals.
 
 %Finding photon candidates uses the transverse EM shower profile information, which requires a  two dimensional peak finding algorithm, further explained in \Section{sec:peakFinding}. The photon ID test involves a multi dimensional likelihood classifier, which is described in \Section{sec:photonLikelihood}. The optional fragment removal algorithm shares a common code base case class with another photon fragment removal algorithm. Hence two photon fragment removal algorithms are discussed together in \Section{sec:photonFragRemoval}.
 
 \begin{figure}[tbph]
 \centering
-{\includegraphics[width=0.45\textwidth]{photon/photonRecoFlow}}
+{\includegraphics[width=0.45\textwidth]{photon/photonRecoFlow2}}
 \caption[A flow diagram of the \PhotonReconstruction algorithm.]
-{A flow diagram showing main steps in the \PhotonReconstruction algorithm.}
+{Main steps in the \PhotonReconstruction algorithm.}
 \label{fig:photonPhotonRecoFlow}
 \end{figure}
 
@@ -642,7 +642,9 @@ $E_{c1}$ and $E_{c2}$ values &  \\
 \section{Characterise the performance}
 
 
-Motivations and implementations of four different photon related algorithms have been described above. The main photon reconstruction algorithm in \Section{sec:photonRecostrcution} improves the photon completeness and the photon pair resolution, due to the improved \peakFinding algorithm in \Section{sec:peakFinding}. The fragment removal algorithms in \Section{sec:photonFragRemoval} and \Section{sec:photonHighEFragRemoval} reduce the photon fragments in the \ECAL and the \HCAL. The photon splitting algorithm in \Section{sec:photonSplitting} exploits the \peakFinding algorithms to separate photons using transverse shower information, which improves the photon separation resolution. Photon reconstruction improves single photon resolutions. It also improves jet energy resolution at a high centre-of-mass energy because of the high photon reconstruction completeness.
+%Motivations and implementations of four different photon related algorithms have been described above. 
+
+The main photon reconstruction algorithm in \Section{sec:photonRecostrcution} improves the photon completeness and the photon pair resolution, due to the improved \peakFinding algorithm in \Section{sec:peakFinding}. The fragment removal algorithms in \Section{sec:photonFragRemoval} and \Section{sec:photonHighEFragRemoval} reduce the photon fragments in the \ECAL and the \HCAL. The photon splitting algorithm in \Section{sec:photonSplitting} exploits the \peakFinding algorithms to separate photons using transverse shower information, which improves the photon separation resolution. Photon reconstruction improves single photon resolutions. It also improves jet energy resolution at a high centre-of-mass energy because of the high photon reconstruction completeness.
 
 Three different versions of the \pandora are used to characterise  the performance.
 \begin{itemize}
@@ -820,9 +822,9 @@ The introduction of the revised photon reconstruction and photon splitting impro
 
 \begin{figure}[tbph]
 \centering
-\includegraphics[width=0.85\textwidth]{photon/DoubleCompareAlg2.pdf}
+\includegraphics[width=0.85\textwidth]{photon/DoubleCompareAlg3.pdf}
 \caption[Average number of photons, as a function of the MC distance separation for different algorithms combinations.]
-{Figure shows the average number of photons, as a function of the Monte Carlo distance separation between the photon pair in the calorimeter, using two-photon-per-event sample of 500 - 500\,GeV. TheBlue, orange, green, and red dots represent the reconstruction with \pandora version 3, with fragment removal in the \ECAL, and with fragment removal in the \ECAL and the \HCAL, with \pandora version 1, respectively. The photon reconstruction is changed in \pandora version 2.}
+{Average number of photons, as a function of the Monte Carlo distance separation between the photon pair in the calorimeter, using two-photon-per-event sample of 500 - 500\,GeV. The blue, orange, green, and red dots represent the reconstruction with \pandora version 3, with fragment removal in the \ECAL, and with fragment removal in the \ECAL and the \HCAL, with \pandora version 1, respectively. The photon reconstruction is changed in \pandora version 2.}
 \label{fig:photonDoubleCompareAlgs}
 \end{figure}
 
