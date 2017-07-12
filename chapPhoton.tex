@@ -809,9 +809,9 @@ The improvement in the completeness of the photon reconstruction, as shown in si
 
 %As stated before, the photon reconstruction algorithm in \Section{sec:photonRecostrcution} and the photon splitting algorithm in \Section{sec:photonSplitting}  improves the photon completeness and the photon pair resolution. The fragment removal algorithm in \Section{sec:photonFragRemoval} removes fragments in the \ECAL. High energy fragment removal algorithm in \Section{sec:photonHighEFragRemoval} removes fragments in the \HCAL.
 
-To show the incremental improvement of individual algorithm, the average number of particle for a high energy photon pair, 500 - 500\,GeV is shown in \Figure{fig:photonDoubleCompareAlgs}. Blue, orange, and green dots represent full photon reconstruction, reconstructed with only fragment removal algorithms in the \ECAL, and reconstructed with fragment removal algorithms in the \ECAL and the \HCAL, respectively.
+To show the incremental improvement of individual algorithm, the average number of particle for a high energy photon pair, 500 - 500\,GeV is shown in \Figure{fig:photonDoubleCompareAlgs}. Blue, orange, green, and red dots represent full photon reconstruction, reconstructed with only fragment removal algorithms in the \ECAL, reconstructed with fragment removal algorithms in the \ECAL and the \HCAL, and reconstructed with \pandora version 1, respectively.
 
-With fragment removal algorithm in the \ECAL (orange), the number of fragment is reduced significantly, comparing with no photon reconstruction. With the additional fragment removal in the \HCAL (green), the number of fragments is reduced further. At 40\,mm apart, with both fragment removal algorithms (green), there is less than 0.05 fragment per photon pair.
+With fragment removal algorithm in the \ECAL, the number of fragment is reduced significantly, comparing with photon reconstruction in \pandora version 1. With the additional fragment removal in the \HCAL, the number of fragments is reduced further. At 40\,mm apart, with both fragment removal algorithms, there is less than 0.05 fragment per photon pair.
 
 The introduction of the revised photon reconstruction and photon splitting improves the photon separation resolution. Photons pair starts to be resolved at 5\,mm apart, and fully resolved at 15\,mm apart, for a two-photon-per-event sample of 500 - 500\,GeV.
 
@@ -820,9 +820,9 @@ The introduction of the revised photon reconstruction and photon splitting impro
 
 \begin{figure}[tbph]
 \centering
-\includegraphics[width=0.85\textwidth]{photon/DoubleCompareAlgs.pdf}
+\includegraphics[width=0.85\textwidth]{photon/DoubleCompareAlg2.pdf}
 \caption[Average number of photons, as a function of the MC distance separation for different algorithms combinations.]
-{Figure shows the average number of photons, as a function of the Monte Carlo distance separation between the photon pair in the calorimeter, using two-photon-per-event sample of 500 - 500\,GeV. The blue, orange, and green dots represent the reconstruction with \pandora version 3, with fragment removal in the \ECAL, and with fragment removal in the \ECAL and the \HCAL. The photon reconstruction is changed in \pandora version 2.}
+{Figure shows the average number of photons, as a function of the Monte Carlo distance separation between the photon pair in the calorimeter, using two-photon-per-event sample of 500 - 500\,GeV. TheBlue, orange, green, and red dots represent the reconstruction with \pandora version 3, with fragment removal in the \ECAL, and with fragment removal in the \ECAL and the \HCAL, with \pandora version 1, respectively. The photon reconstruction is changed in \pandora version 2.}
 \label{fig:photonDoubleCompareAlgs}
 \end{figure}
 
