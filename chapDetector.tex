@@ -105,21 +105,32 @@ The physics program for the \CLIC and the \ILC, which is a driving force for the
 
 \section{Detector requirements}
 
-The detector requirements for both the \ILC and \CLIC share similarities, as both detectors have similar physics goals. The detector requirements for the \CLIC are more stringent as the \CLIC detector needs to operate at a centre-of-mass energy of 3\,TeV. The most challenging prospect is the 0.5\,ns brunch structure and the background from \ggHad, which deposits 20\,TeV of energy in the calorimeter of the  entire 312 bunch trains. Therefore, an excellent time resolution for all detector components are needed, as well as a highly segmented calorimeter to keep each cell occupancies to an acceptable level. Here the requirement on the jet energy resolution is presented in details.
+The detector requirements for both the \ILC and \CLIC share similarities, as both detectors have similar physics goals. The detector requirements for the \CLIC are more stringent as the \CLIC detector needs to operate at a centre-of-mass energy of 3\,TeV. The most challenging prospect is the 0.5\,ns brunch structure and the background from \ggHad, which deposits 20\,TeV of energy in the calorimeter of the  entire 312 bunch trains. Therefore, an excellent time resolution for all detector components are needed, as well as a highly segmented calorimeter to keep each cell occupancies to an acceptable level. Here the requirement on the jet energy resolution at a future linear collider is presented in details.
 
 \subsection{Jet energy resolution requirements}
 \label{sec:detectorPhysicsRequirementPandora}
 
 
-Many interesting physics processes at a future linear collider can be described as multi-jet final states, often with charged leptons or missing momentum associated with neutrinos. The reconstruction of the invariant masses of two or more jets is critical for event reconstruction and event selection. One goal for jet energy resolution it is to separate  \PW and \PZ bosons, by reconstructing the invariant mass via quark-jets using the hadronic decay channel.
-
-The physics goal of jet energy resolution at the \ILC and the \CLIC is to separate \PW and \PZ, using \Wqq and \Zqq channels, by reconstructing the invariant mass via quark-jets \cite{Baer:2013cma,Linssen:2012hp}. This translates to a requirement of 3.5-5\% of the jet energy resolution. 
+Many interesting physics processes at a future linear collider can be described as multi-jet final states, often with charged leptons or missing momentum associated with neutrinos. The reconstruction of the invariant masses of two or more jets is critical for event reconstruction and event selection. At \LEP, kinematic fitting \cite{Thomson:2004zx} allowed precise invariant mass reconstruction. At a future collider, reconstruction invariant mass of multi jets for final states with missing momentum will rely heavily on the intrinsic jet energy resolution of the detector.
 
 
+One goal for jet energy resolution at a future linear collider it is to separate  \PW and \PZ bosons, by reconstructing the invariant mass via quark-jets using the hadronic decay channel. The idealised reconstructed \PW and \PZ boson mass distribution of different assumed jet mass resolutions is shown in \Figure{fig:detectorWZseparation}. As the invariant mass resolution is comparable to the gauge boson widths, i.e. $\sigma_m/m\approx\Gamma_{\PW}/m_{\PW}\approx\Gamma_{\PZ}/m_{\PZ}$, a separation of 2.5$\sigma$ implies a jet energy resolution of 3.5\,\% \cite{Thomson:2009rp} for a range of jet energies from 50\,GeV to 1\,TeV.
+
+%The physics goal of jet energy resolution at the \ILC and the \CLIC is to separate \PW and \PZ, using \Wqq and \Zqq channels, by reconstructing the invariant mass via quark-jets \cite{Baer:2013cma,Linssen:2012hp}. This translates to a requirement of 3.5-5\% of the jet energy resolution.
 
 
 
+\begin{figure}[tbph]
+\centering
+\includegraphics[width=0.45\textwidth]{{ILD/wzSeparation.pdf}}
+\caption
+{Ideal \PW/\PZ separation as a function of jet mass resolution obtained using a Gaussian smearing of Breit-Wigner distribution, taken from \cite{Linssen:2012hp}.}
+\label{fig:detectorWZseparation}
+\end{figure}
 
+
+
+\section{Particle Flow Calorimetry}
 
 
 This level of precision is unlikely to be achieved with a traditional calorimetry design. A traditional energy flow approach to calorimetry measures jet energies as a sum of the energy in the calorimeters. The jet energy resolution is parameterised by:
