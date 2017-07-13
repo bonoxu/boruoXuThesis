@@ -69,7 +69,14 @@ established by a mandate of ICFA.
 The other potential next-generation electron-positron linear collider \CLIC \cite{Linssen:2012hp}, has a higher reach of the centre-of-mass energy, up to 3\,TeV. \CLIC is designed to built in stages as well.  The first stage, with a centre-of-mass energy of 380\,GeV. The final stage of a centre-of-mass energy of 3\,TeV. The second stage has a centre-of-mass energy of 1.4\,TeV, which bridges between the first stage and the final stage. The layout of the \CLIC complex at final stage of a centre-of-mass of energy of  3\,TeV is shown in \Figure{fig:detectorCILC}.
 
 
-The \ILC and the \CLIC shares some common design features. Both colliders will be the linear colliders as oppose to the circular colliders like the \LHC. Detectors for both colliders will use the high granularity particle flow calorimetry \cite{Baer:2013cma,Linssen:2012hp}. The conceptual design of two the \CLIC detectors was based on the \ILC detectors. Two detectors have similar designs for the barrel and the endcap geometry. One of the major differences of two colliders is that the \ILC is designed to operate from 91\,GeV to 1\,TeV, while the \CLIC will cover a range of 350\,GeV to 3\,TeV. Due to the high energy of the beam in the \CLIC, reducing the photon-photon collision background would be a major consideration for the \CLIC detector. Another difference is that the separation of brunch crossing in the CLIC is shorter than it is in is the ILC.
+The \ILC and the \CLIC share some common design features. Both colliders will be the linear colliders as oppose to the circular colliders like the \LHC. Detectors for both colliders will use the high granularity particle flow calorimetry \cite{Baer:2013cma,Linssen:2012hp}. The conceptual designs of two the \CLIC detectors ware based on the \ILC detectors \cite{Linssen:2012hp}. One of the major differences of two colliders is operating energies. There are significant beam related backgrounds at the \CLIC. The \ee incoherent pair background has a major influence on the design of the inner region of the detector and the forward region. The pile-up of 3.2 \ggHad events per bunch is significant and needs to be removed for physics analyses. Also, the \CLIC beam contains 312 bunch trains with a train repetition rate of 50\,Hz. The bunches are  separated by 0.5\,ns within each bunch train. The short timing separation between bunches suggests that the detector will integrate over a number of bunch crossings. This, together with the significant \ggHad backgrounds, has a significant impact on the detector design.
+
+%The beam related background needs to be suppressed in all physics analyses.
+
+
+%Due to the high energy of the beam in the \CLIC, reducing the photon-photon collision background would be a major consideration for the \CLIC detector.
+
+%Another difference is that the separation of brunch crossing in the CLIC is shorter than it is in is the ILC.
 
 
 %Although the accelerating systems would be different, the calorimeter designs are similar, both highly granular for the optimal particle flow.
@@ -103,18 +110,16 @@ The physics program for the \CLIC and the \ILC, which is a driving force for the
 %\ILC has a reach of a centre-of-mass energy from 200\,GeV to 1\,TeV, whilst \CLIC can reach a centre-of-mass energy from 350\,GeV to 3\,TeV. Both machines are capable of precision higgs coupling measurements, top mass and coupling measurements, and search for new physics such as supersymmertry particles. The \ILC can also operate at low energy to be a \PZ and a \PHiggs factory for ultra precise \PZ mass and \PHiggs mass measurements. \CLIC, on the other hand, has the advantage of a higher energy reach, which allows measurements of rare events, such as higgs trilinear self-couplings and quartic couplings.
 
 
+
+
 \section{Detector requirements}
-
-The detector requirements for both the \ILC and \CLIC share similarities, as both detectors have similar physics goals. The detector requirements for the \CLIC are more stringent as the \CLIC detector needs to operate at a centre-of-mass energy of 3\,TeV. The most challenging prospect is the 0.5\,ns brunch structure and the background from \ggHad, which deposits 20\,TeV of energy in the calorimeter of the  entire 312 bunch trains. Therefore, an excellent time resolution for all detector components are needed, as well as a highly segmented calorimeter to keep each cell occupancies to an acceptable level. Here the requirement on the jet energy resolution at a future linear collider is presented in details.
-
-\subsection{Jet energy resolution requirements}
 \label{sec:detectorPhysicsRequirementPandora}
 
 
 Many interesting physics processes at a future linear collider can be described as multi-jet final states, often with charged leptons or missing momentum associated with neutrinos. The reconstruction of the invariant masses of two or more jets is critical for event reconstruction and event selection. At \LEP, kinematic fitting \cite{Thomson:2004zx} allowed precise invariant mass reconstruction. At a future collider, reconstruction invariant mass of multi jets for final states with missing momentum will rely heavily on the intrinsic jet energy resolution of the detector.
 
 
-One goal for jet energy resolution at a future linear collider it is to separate  \PW and \PZ bosons, by reconstructing the invariant mass via quark-jets using the hadronic decay channel. The idealised reconstructed \PW and \PZ boson mass distribution of different assumed jet mass resolutions is shown in \Figure{fig:detectorWZseparation}. As the invariant mass resolution is comparable to the gauge boson widths, i.e. $\sigma_m/m\approx\Gamma_{\PW}/m_{\PW}\approx\Gamma_{\PZ}/m_{\PZ}$, a separation of 2.5$\sigma$ implies a jet energy resolution of 3.5\,\% \cite{Thomson:2009rp} for a range of jet energies from 50\,GeV to 1\,TeV.
+One goal for jet energy resolution at a future linear collider it is to be able to separate  \PW and \PZ bosons, by reconstructing the invariant mass via quark-jets using the hadronic decay channel. The idealised reconstructed \PW and \PZ boson mass distribution of different assumed jet mass resolutions is shown in \Figure{fig:detectorWZseparation}. As the invariant mass resolution is comparable to the gauge boson widths, i.e. $\sigma_m/m\approx\Gamma_{\PW}/m_{\PW}\approx\Gamma_{\PZ}/m_{\PZ}$, a separation of 2.5$\sigma$ implies a jet energy resolution of 3.5\% \cite{Thomson:2009rp} for a range of jet energies from 50\,GeV to 1\,TeV.
 
 %The physics goal of jet energy resolution at the \ILC and the \CLIC is to separate \PW and \PZ, using \Wqq and \Zqq channels, by reconstructing the invariant mass via quark-jets \cite{Baer:2013cma,Linssen:2012hp}. This translates to a requirement of 3.5-5\% of the jet energy resolution.
 
@@ -133,15 +138,47 @@ One goal for jet energy resolution at a future linear collider it is to separate
 \section{Particle Flow Calorimetry}
 
 
-This level of precision is unlikely to be achieved with a traditional calorimetry design. A traditional energy flow approach to calorimetry measures jet energies as a sum of the energy in the calorimeters. The jet energy resolution is parameterised by:
+This level of precision,  a jet energy resolution of 3.5\%, is unlikely to be achieved with a traditional calorimeter design. Traditionally, jet energies is measured as a sum of energies deposited in the electromagnetic  (\ECAL)  and hadronic calorimeter (\HCAL), giving a jet energy resolution of the form
 \begin{equation}
-\frac{\sigma_{E}}{E} = \frac{\alpha}{\sqrt{E(GeV)}}\oplus\beta .
+\frac{\sigma_{E}}{E} = \frac{\alpha}{\sqrt{E(\text{GeV})}}\oplus\beta .
 \end{equation}
-The stochastic term $a$ is typically greater than 60\% and $b$ is of the order of a few percents. For the jet energy resolution of 3.5\%, $a$  should be less than 30\%, which is unlikely to be achieved by a traditional calorimeter.  On the contrary, the particle flow approach to calorimetry  has demonstrated it ability to reach the goal \cite{Thomson:2009rp,Marshall:2012ry}.
+The stochastic term $\alpha$ is typically greater than 60\% \cite{Abe:2010aa,Behnke:2013lya}, and the constant term $\beta$ is of the order of a few percents \cite{Abe:2010aa,Behnke:2013lya}. To achieve a the jet energy resolution of 3.5\% or better, the stochastic term should be less than 30\% with a small constant term, which is unlikely to be achieved by a traditional calorimeter.
 
-In a typical jet, using measurements of the particle composition from the \LEP\cite{Knowles:1997dk,green1998electron}, about 62\% of the jet energy is from charged particles, 27\% from photons, 10\% from long-lived neutral hadrons, and 1.5\% from neutrinos. In a traditional approach to calorimetry, about 72\% jet energy is measured in the electromagnetic (\ECAL) and the hadronic (\HCAL) calorimeters combined. The jet energy resolution is thus limited by the energy resolution of the hadronic calorimeters, which typically is $\gtrsim 55\% / \sqrt{E(GeV)}$ \cite{Behnke:2013lya}.
+%On the contrary, the particle flow approach to calorimetry  has demonstrated it ability to reach the goal \cite{Thomson:2009rp,Marshall:2012ry}.
 
-The particle flow approach to calorimetry improves the jet energy resolution by fully reconstructing  all visible particles in the detector. The jet energy is the sum of energy of individual particles, where the energy of the charge particles are measured in the tracking detectors, and the energy of neutral particles are measured in calorimeters. In this approach, the hadronic calorimeter only measures about 10\% of the energy, which would greatly improve the overall energy measurement. Assuming 30\% of the jet energy (photon energy) is measured with ${\sigma_{E}}/{E} = 15\% / \sqrt{E(GeV)}$, and 10\% of the jet energy (hadron energy) is measured with ${\sigma_{E}}/{E} = 55\% / \sqrt{E(GeV)}$ \cite{Behnke:2013lya}, a jet energy of ${\sigma_{E}}/{E} = 19\% / \sqrt{E(GeV)}$ can be obtained. This satisfies the jet energy resolution requirement for separating \PW and \PZ via their hadronic decays. In reality, this level of performance is unattainable due to incorrect association of energy deposits to particles. At jet energies beyond tens of GeVs, the ``confusion'' rather than the intrinsic detector performance limits the particle flow performance.
+
+In a typical jet, about 62\% of the jet energy is from charged particles, 27\% from photons, 10\% from long-lived neutral hadrons, and 1.5\% from neutrinos \cite{Knowles:1997dk,green1998electron}. In a traditional approach to calorimetry, the jet energy resolution is limited by the relative poor energy resolution of the hadronic calorimeters.
+
+The particle flow approach to calorimetry improves the jet energy resolution by fully reconstructing  all visible particles in the detector. The jet energy is the sum of energy of individual particles, where the energy of the charge particles are measured in the tracking detectors, and the energy of neutral particles are measured in calorimeters. In this approach, the hadronic calorimeter only measures about 10\% of the jet energy, which would greatly improve the overall jet energy measurement.
+
+As shown in \Table{tab:detectorJetComponent}, assuming 30\% of the jet energy (photon energy) is measured with ${\sigma_{E}}/{E} = 15\% / \sqrt{E(\text{GeV})}$, and 10\% of the jet energy (hadron energy) is measured with ${\sigma_{E}}/{E} = 55\% / \sqrt{E(\text{GeV})}$ \cite{Behnke:2013lya}, a jet energy of ${\sigma_{E}}/{E} = 19\% / \sqrt{E(\text{GeV})}$ can be obtained. This satisfies the jet energy resolution requirement for separating \PW and \PZ via their hadronic decays. In reality, this level of performance is unattainable due to incorrect association of energy deposits to particles. At jet energies beyond tens of GeVs, the ``confusion'' rather than the intrinsic detector performance limits the particle flow performance \cite{Thomson:2009rp}.
+
+\begin{table}[htbp]
+\small
+\centering
+\smallskip
+\begin{tabular}{l  l r r r }
+\hline
+\hline
+ Component &  Detector & Energy fraction & Energy resolution & Jet energy resolution \\
+\hline
+Charged particles (\charge) & Tracker  & $\sim0.6E_j$ & $10^{-4}E^2_{\charge}$ & < $3.6 \times 10^{-5} E^2_j$ \\
+Photons (\Pphoton) & \ECAL  & $\sim0.3E_j$ & 0.15$\sqrt{E_{\Pphoton}}$ & 0.08$\sqrt{E_{j}}$ \\
+Neutral hadrons(\neutral) & \HCAL  & $\sim0.1E_j$ & 0.55$\sqrt{E_{\neutral}}$ & 0.17$\sqrt{E_{j}}$ \\
+\hline
+\hline
+\end{tabular}
+
+\caption
+{Contributions from the different particle components to the jet energy resolutions (all energies in GeV). The table lists the approximate fractions of charged particles, photons, and neutral hadrons in a jet of energy $E_j$, and the assumed single particle energy resolution. The table is adapted from \cite{Thomson:2009rp}.}
+\label{tab:detectorJetComponent}
+\end{table}
+
+
+
+In the particle flow approach to calorimetry, the sum of calorimeter energies is replaced by a complex pattern-recognition problem, the Particle Flow reconstruction Algorithm (PFA). Detailed simulation of the \ILC and the \CLIC detector concepts using the \pandora \cite{Thomson:2009rp,Marshall:2012ry} particle flow reconstruction algorithms have demonstrated that a jet energy resolution of approximately 3\% an be achieved for jet energies in the range of 100\,GeV to 1\,TeV.
+
+\begin{comment}
 
 The particle flow calorimetry requires to fully reconstruct particles and to associate calorimeter hits to tracks in tracking detectors. This is a demanding task for the software design and the detector design. The software details of the \pandora, which is a successful particle flow implementation, are described in \Section{sec:pandoraPandoraPFA}. For the detector design, the detector needs to be highly granular for an excellent spatial resolution, which is needed to correctly associate calorimeter hits to the inner detector tracks. This imposes stringent requirements in the \ECAL and the \HCAL designs.
 
@@ -175,9 +212,13 @@ The requirement of tracking momentum resolution is driven by the Higgs boson mas
 
 The lepton identification should be over 95\% for effective lepton tagging. The forward converge of the detector should be down to a very low angle, i.e. a few mrad, with respect to the beam axis. This is more critical for the \CLIC as particles are boosted at a high centre-of-mass energy.
 \end{comment}
+
 \section{The International Large Detector}
 
-Two detector concepts have been designed for the \ILC to deliver the physics program. The motivation for two detectors is to have multiple independent measurements within one collider for cross-checking, complementary measurements, and competition between collaborations. The two detectors are both designed to be general purpose detectors. The Silicon Detector, \SiD, is a compact detector with a large magnetic filed of 5\,T. It uses silicon tracking modules. The second detector, the International Large Detector, \ILD, is a larger detector with a time projection chamber as the main tracking unit. Both detectors have highly granular calorimeters optimised for the particle flow. A view of both detector concepts can be seen in \Figure{fig:detectorILDSiD}
+Two detector concepts have been developed for the \ILC. The motivation for two detectors is to have multiple independent measurements within one collider for cross-checking, complementary measurements, and competition between collaborations. The two detectors are both designed to be general purpose detectors. The Silicon Detector, \SiD, is a compact detector with a large magnetic filed of 5\,T. It uses silicon tracking modules. The second detector, the International Large Detector, \ILD, is a larger detector with a time projection chamber as the main tracking unit.
+
+%A view of the \ILD and the \SiD detector concepts can be seen in \Figure{fig:detectorILDSiD}
+% Both detectors have highly granular calorimeters optimised for the particle flow.
 
 %Precision tests for the Standard Model requires an excellent jet energy resolution and mass reconstruction. Particle low algorithms (PFA), based event reconstruction, meet the requirements. For the best performance of the PFA, high granular calorimeter systems and highly efficient tracking systems are needed. The requirement to separate \PW and \PZ bosons in hadronic decay final states requires a jet energy resolution below 3.5\%. The momentum resolution of $5\times10^{-5}$\,GeV is motivated by the Higgs boson recoil reconstruction in the Higgsstrahlung.
 
@@ -186,15 +227,60 @@ Two detector concepts have been designed for the \ILC to deliver the physics pro
 
 The International Large Detector, the \ILD, is a detector concept at the \ILC. The \ILD detector concept has been optimised in the view of the particle flow techniques. Particle flow approach to event reconstruction has shown to deliver the best possible jet reconstruction with proof-of-principle implementation such as \pandora. Each individual particle is reconstructed with the particle flow algorithms. For charged particles, calorimeter hits are associated with the tracks. Therefore measurements of charged particles rely on an excellent momentum resolution from the tracking system. Neutral particles reconstruction requires a high spatial resolution of the calorimeters.
 
-The particle flow paradigm requires topological information of individual particle reconstructions. The sub-detector systems need to have the spatial resolution to separate charged particles from neutral particles. The result is a highly granular calorimeter and a central tracking system with excellent momentum resolution. Longitudinal cross section of top quadrant of the \ILD detector concept is shown in \Figure{fig:ILD}. From the interaction point (\IP) outwards, there is a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layers, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes.
+
+The particle flow calorimetry requires to fully reconstruct particles and to associate calorimeter hits to tracks in tracking detectors. This places stringent requires on the calorimeter designs.  The \ECAL and the \HCAL need to be highly granular for an excellent spatial resolution to correctly associate calorimeter hits to the inner detector tracks. The tracking system needs to have an excellent momentum resolution for the momentum measurements of the charged particles.
+
+
+%This is a demanding task for the software design and the detector design. The software details of the \pandora, which is a successful particle flow implementation, are described in \Section{sec:pandoraPandoraPFA}. For the detector design, the detector needs to be highly granular for an excellent spatial resolution, which is needed to correctly associate calorimeter hits to the inner detector tracks. This imposes stringent requirements in the \ECAL and the \HCAL designs.
 
 The section below will describe the sub-systems of the \ILD detector concept referred to as the ILD\_o1\_v05 option in \Mokka simulation in the \ILD technical design report\cite{Baer:2013cma}. This detector concept has been optimised \cite{Abe:2010aa} and used in studies described in subsequent chapters.
 
-The \CLICILD detector concept for the \CLIC in the conceptual design report\cite{Linssen:2012hp} is a modified version of the \ILD, adapted to the \CLIC colliding environment. As they share similarities, an overview of the \ILD sub-detectors is provided, followed by a discussion on the difference between the \ILD and the \CLICILD detector concepts.  A comparison of the longitudinal cross section of the top quadrants of between \ILD and \CLICILD can be seen in \Figure{fig:detectorILD}. A comparison of the key parameters between the \ILD and the \CLICILD can be found in \Table{tab:ILDvsCLICILD}.
+\FIGURE{fig:ILD} shows the longitudinal cross section of top quadrant of the \ILD detector concept. From the interaction point (\IP) outwards, there is a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layers, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. The key parameters of the \ILD are listed in \Table{tab:ILDvsCLICILD}.
+
+
+%The particle flow paradigm requires topological information of individual particle reconstructions. The sub-detector systems need to have the spatial resolution to separate charged particles from neutral particles. The result is a highly granular calorimeter and a central tracking system with excellent momentum resolution.
 
 
 
+%The \CLICILD detector concept for the \CLIC in the conceptual design report\cite{Linssen:2012hp} is a modified version of the \ILD, adapted to the \CLIC colliding environment. As they share similarities, an overview of the \ILD sub-detectors is provided, followed by a discussion on the difference between the \ILD and the \CLICILD detector concepts.  A comparison of the longitudinal cross section of the top quadrants of between \ILD and \CLICILD can be seen in \Figure{fig:detectorILD}.
 
+
+\begin{figure}[tbph]
+\centering
+\includegraphics[width=0.8\textwidth]{ILD/ILD}
+\caption
+{The longitudinal cross section of top quadrant of a) the \ILD, taken from  \cite{Baer:2013cma}. From interaction point (\IP) outwards, there is a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layer, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. The numbers are in units of mm.}
+\label{fig:ILD}
+\end{figure}
+
+
+\begin{table}[htbp]
+\centering
+\smallskip
+\begin{tabular}{l  r  r }
+\hline
+\hline
+Component &  \ILD & \CLICILD \\
+\hline
+Tracker & TPC; Silicon & TPC; Silicon \\
+Solenoid Field & 3.5\,T & 4\,T \\
+Solenoid Field Bore & 3.3\,m & 3.4\,m \\
+Solenoid Length & 8.0\,m & 8.3\,m \\
+\VTX Inner Radius  & 16\,mm & 31\,mm \\
+\ECAL $r_{min}$ & 1.8\,m & 1.8\,m \\
+\ECAL $\Delta{r}$  & 172\,mm & 172\,mm \\
+\HCAL Absorber Barrel / Endcap & Fe / Fe & Fe / W \\
+\HCAL Interaction Length & 5.5\,\uprightMath{\lambda_I} & 7.5\,\uprightMath{\lambda_I} \\
+Overall Height  & 14.0\,m & 14.0\,m \\
+Overall Length  & 13.2\,m & 12.8\,m \\
+\hline
+\hline
+\end{tabular}
+
+\caption[A comparison of key parameters of the \ILD and \CLICILD detector concepts.]
+{A comparison of key parameters of the \ILD and \CLICILD detector concepts. \ECAL $r_{min}$ is the smallest distance from the calorimeter to the main detector axis. The table is adapted from \cite{Linssen:2012hp}.}
+\label{tab:ILDvsCLICILD}
+\end{table}
 
 
 
@@ -248,7 +334,7 @@ significant challenge, including the need for quiescent currents.
 
 \section{Overview of \ILD sub-detectors}
 
-The \ILD detector concept is designed as a general purpose detector. As shown in \Figure{fig:ILD}, closest to the interaction points are a precision vertex detector and a tracking system. The tracking system consists of silicon tracking components and a time projection chamber. Surrounding the tracking system is a highly granular calorimeter system. The outer solenoid provides a magnetic field of 3.5\,T. The most outer iron return yoke also acts as a muon calorimeter.
+The \ILD detector concept is designed as a general purpose detector. Closest to the interaction points are a precision vertex detector and a tracking system. The tracking system consists of silicon tracking components and a time projection chamber. Surrounding the tracking system is a highly granular calorimeter system. The outer solenoid provides a magnetic field of 3.5\,T. The most outer iron return yoke also acts as a muon calorimeter.
 
 
 \subsection{Vertex Detector}
@@ -282,18 +368,6 @@ Layer 6 & 60\,mm & 125\,mm & 0.90 & 4\,$\mu$m & 100 \,$\mu$s \\
 
 
 
-
-\FIGURE{fig:detectorVertexResolution} shows the impact parameter resolution as a function of the particle momentum for  two different particle production angles. The desired impact parameter resolution (dashed line) is achievable.
-
-
-
-\begin{figure}[tbph]
-\centering
-\includegraphics[width=0.55\textwidth]{ILD/vertexResolution}
-\caption
-{Impact parameter resolution of the \ILD vertex detector for two different particle production angles (20\degree and 85\degree), assuming the baseline point resolution given in \Table{tab:detectorVertex} for CMOS option (solid line), and the FPCCD option (dotted line). The curves with long dashes show the performance goal. The figure is taken from \cite{Behnke:2013lya}.}
-\label{fig:detectorVertexResolution}
-\end{figure}
 
 
 \subsection{Tracking Detectors}
@@ -378,25 +452,14 @@ From test beam data and simulation studies \cite{Ramilli:2012dva,Adloff:2009zz,A
 
 The longitudinal segregation is a compromise between the cost and the performance. The total of 30 layers, which is about 20\,cm, provides about 24 radiation lengths. The first 20 layers use 2.1\,mm thick absorber plates, which is twice finer sampling than the last 10 layers with 4.2\,mm   thick absorber plates. The test beam data with electrons shows the energy resolution of the \ECAL concept to be $16.6/\sqrt{E(\ GeV)}\oplus1.1\%$ \cite{Behnke:2013lya}, which is compatible with the values assumed for the full \ILD detector simulation.
 
-The optimisation of the \ECAL design as a function of the number of longitudinal layers is performed, whilst keeping other geometry constant, using the jet energy resolution. The jet energy resolution is defined as the root mean squared divided by the mean for the smallest width of distribution that contains 90\% of entries, using \Zuds sample at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \Zprime is used as \pandora does not attempt to recover missing momentum from semi-leptonic decay of heavy quarks. Using 90\% of the entries is robust and focus on the Gaussian part of the distribution. The total jet energy is sampled at 91, 200, 360 and 500\,GeV. \FIGURE{fig:detectorILDECALjer} shows the jet energy resolution for a single jet. For a 45\,GeV jet, a degradation  of 10\% in the jet energy resolution is observed when the number of layers decreases from 30 to 20. The degradation in the jet energy resolution is significant for number of layers fewer than 20, although the impact is smaller for high energy jets.
 
 
 \begin{figure}[tbph]
 \centering
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{ILD/ILD_ECAL}
-    \caption{}
-    \label{fig:detectorILDECAL}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{ILD/ILD_ECAL_JER}
-    \caption{}
-    \label{fig:detectorILDECALjer}
-  \end{subfigure}
-
+    \includegraphics[width=0.45\textwidth]{ILD/ILD_ECAL}
 \caption
-{a) a cross section through the electromagnetic calorimeter layers, and b) jet energy resolution as a function of the  total jet energy using \Zuds sample at barrel region for  optimisation of the \ECAL design as a function of the number of longitudinal layers. Both plots are  taken from \cite{Behnke:2013lya}.}
-\label{fig:detectorILDECALfull}
+{A a cross section through the electromagnetic calorimeter layers,  taken from \cite{Behnke:2013lya}.}
+ \label{fig:detectorILDECAL}
 \end{figure}
 
 \begin{comment}
@@ -468,19 +531,11 @@ For the absorber material, stainless steel is chosen for mechanical and calorime
 
 \begin{figure}[tbph]
 \centering
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{ILD/ILD_AHCAL}
-    \caption{}
+    \includegraphics[width=0.45\textwidth]{ILD/ILD_AHCAL}
+
+\caption
+{The schematic view of a CALICE AHCAL technological prototype module, taken from \cite{Baer:2013cma}.}
     \label{fig:detectorAHCAL}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{ILD/HCALoptimise}
-    \caption{}
-    \label{fig:detectorHCALoptimise}
-  \end{subfigure}
-\caption[CALICE AHCAL technological prototype module and  jet energy resolution.]
-{a) the schematic view of a CALICE AHCAL technological prototype module.  b) the jet energy resolution as a function of the hadronic calorimeter scintillator cell sizes, with different energies. Both figures are taken from \cite{Baer:2013cma}.}
-\label{fig:detectorHCAL}
 \end{figure}
 
 
@@ -596,7 +651,7 @@ needed to built a muon system for ILD.
 
 \subsection{Very Forward Calorimeters}
 
-The forward region detectors provide luminosity measurements and forward coverage of calorimeters. A system of precision and radiation resistent calorimeters are required. The luminosity calorimeter counts  Bhabha scattering to measure the luminosity to precision of $10^{-3}$ at a 500\,GeV centre-of-mass energy \cite{1748-0221-3-10-P10004}. The beam calorimeter (\BeamCAL), which is hit by many beamstrahlung pairs after each bunch corssing, extends the forward coverage. The \BeamCAL also estimates a bunch-by-bunch luminosity. An additional hadron calorimeter at the forward region, \LHCAL,  extends the angular coverage of the \HCAL to that of the \LumiCAL. Electron tagging is possible with the very forward calorimeters\cite{sailer2012radiation}, which aids event reconstruction at a high centre-of-mass energy.
+The forward region detectors provide luminosity measurements and forward coverage of calorimeters. A system of precision and radiation resistent calorimeters are required. The luminosity calorimeter counts  Bhabha scattering to measure the luminosity to precision of $10^{-3}$ at a 500\,GeV centre-of-mass energy \cite{1748-0221-3-10-P10004}. The beam calorimeter (\BeamCAL), which is hit by many beamstrahlung pairs after each bunch corssing, extends the forward coverage. The \BeamCAL also estimates a bunch-by-bunch luminosity. An additional hadron calorimeter at the forward region, \LHCAL,  extends the angular coverage of the \HCAL to that of the \LumiCAL. Electron tagging is possible with the very forward calorimeters\cite{sailer2012radiation}, which aids event reconstruction at a high centre-of-mass energy. \Table{tab:detectorForwardILDvsCLICILD} lists the key parameters of the \LumiCAL and the \BeamCAL at the \ILD.
 
 
 \begin{figure}[tbph]
@@ -636,6 +691,30 @@ radiation hard sensors are needed.
 %This section will describe sub-systems from small to large radius.
 
 
+\begin{table}[htbp]
+\centering
+\smallskip
+\begin{tabular}{l l r  r }
+\hline
+\hline
+ & &  \ILD & \CLICILD \\
+\hline
+\LumiCAL & geometrical acceptance (mrad)& 31 - 77 & 38 - 110 \\
+& fiducial acceptance (mrad) & 41 - 67 & 44 - 80 \\
+& z (start) (mm) & 2450 & 2654 \\
+& number of layers (W + Si) & 30 & 40 \\
+\hline
+\BeamCAL & geometrical acceptance (mrad)& 5 - 40 & 10 - 40 \\
+& z (start) (mm) & 3600 & 3281 \\
+& number of layers (W + sensor) & 30 & 40 \\
+& graphite layer thickness (mm) & 100 & 100 \\
+\hline
+\hline
+\end{tabular}
+\caption[Comparison of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD .]%
+{Comparison of the key parameters of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD. The table is adapted from \cite{Linssen:2012hp}. }
+\label{tab:detectorForwardILDvsCLICILD}
+\end{table}
 
 \begin{comment}
 The International Large Detector (ILD) is a concept for a detector at the International Linear Collider,
@@ -662,50 +741,89 @@ ILD, and their integration into a coherent detector concept
 \end{comment}
 
 
-
-
-\section{The \CLIC versus the \ILC}
-
-
-The two main differences between the \CLIC and the \ILC are the high centre-of-mass energy and the high bunch charge density at the \CLIC, which leads to significant beam related backgrounds.  At the \CLIC, within a bunch train, there is 0.5\,ns between bunch crossings.  There are two main sources of beam induced background at the \CLIC colliding environment: incoherent electron pairs from  photon (real or virtual) interactions with individual particles of the other beam, and interactions of two photons from the colliding beams. These differences leads to a modification in the detector design and the reconstruction software for the \CLIC.
+\section{Detector optimisation}
 
 
 
-\subsection{The \CLICILD versus the \ILD}
+
+\FIGURE{fig:detectorVertexResolution} shows the impact parameter resolution as a function of the particle momentum for  two different particle production angles. The desired impact parameter resolution (dashed line) is achievable.
 
 
 
-There are two detector concepts studied in the \CLIC conceptual design report \cite{Linssen:2012hp}, the \CLICILD and the \CLICSiD. The \CLICILD detector concept is based on the \ILD design. The \CLICILD and \ILD share similarities due to similar physics motivations. Only the differences are highlighted here. A comparison of the \CLICILD and the \ILD longitudinal cross sections can be seen in \Figure{fig:detectorILD}. A comparison of key parameters of the \ILD and the \CLICILD detector concepts is shown in \Table{tab:ILDvsCLICILD}.
-
-
-\begin{table}[htbp]
+\begin{figure}[tbph]
 \centering
-\smallskip
-\begin{tabular}{l  r  r }
-\hline
-\hline
-Concept &  \ILD & \CLICILD \\
-\hline
-Tracker & TPC/Silicon & TPC/Silicon \\
-Solenoid Field (T) & 3.5 & 4 \\
-Solenoid Field Bore (m) & 3.3 & 3.4 \\
-Solenoid Length (m) & 8.0 & 8.3 \\
-\VTX Inner Radius (mm) & 16 & 31 \\
-\ECAL $r_{min}$ (m) & 1.8 & 1.8 \\
-\ECAL $\Delta{r}$ (mm) & 172 & 172 \\
-\HCAL Absorber B / E & Fe / Fe & Fe / W \\
-\HCAL Interaction Length & 5.5 & 7.5 \\
-Overall Height (m) & 14.0 & 14.0 \\
-Overall Length (m) & 13.2 & 12.8 \\
-\hline
+\includegraphics[width=0.55\textwidth]{ILD/vertexResolution}
+\caption
+{Impact parameter resolution of the \ILD vertex detector for two different particle production angles (20\degree and 85\degree), assuming the baseline point resolution given in \Table{tab:detectorVertex} for CMOS option (solid line), and the FPCCD option (dotted line). The curves with long dashes show the performance goal. The figure is taken from \cite{Behnke:2013lya}.}
+\label{fig:detectorVertexResolution}
+\end{figure}
 
-\hline
-\end{tabular}
+tacking performance section
 
-\caption[A comparison of key parameters of the \ILD and \CLICILD detector concepts.]
-{ A comparison of key parameters of the \ILD and \CLICILD detector concepts. \ECAL $r_{min}$ is the smallest distance from the calorimeter to the main detector axis. \HCAL Absorber B / E indicates the absorber material for the barrel (B) and the endcap (E). The table is adapted from \cite{Linssen:2012hp}.}
-\label{tab:ILDvsCLICILD}
-\end{table}
+
+%\section{The \CLIC versus the \ILC}
+
+
+%The two main differences between the \CLIC and the \ILC are the high centre-of-mass energy and the high bunch charge density at the \CLIC, which leads to significant beam related backgrounds.  At the \CLIC, within a bunch train, there is 0.5\,ns between bunch crossings.  There are two main sources of beam induced background at the \CLIC colliding environment: incoherent electron pairs from  photon (real or virtual) interactions with individual particles of the other beam, and interactions of two photons from the colliding beams. These differences leads to a modification in the detector design and the reconstruction software for the \CLIC.
+
+
+The optimisation of the \ECAL design as a function of the number of longitudinal layers is performed, whilst keeping other geometry constant, using the jet energy resolution. The jet energy resolution is defined as the root mean squared divided by the mean for the smallest width of distribution that contains 90\% of entries, using \Zuds sample at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \Zprime is used as \pandora does not attempt to recover missing momentum from semi-leptonic decay of heavy quarks. Using 90\% of the entries is robust and focus on the Gaussian part of the distribution. The total jet energy is sampled at 91, 200, 360 and 500\,GeV. \FIGURE{fig:detectorILDECALjer} shows the jet energy resolution for a single jet. For a 45\,GeV jet, a degradation  of 10\% in the jet energy resolution is observed when the number of layers decreases from 30 to 20. The degradation in the jet energy resolution is significant for number of layers fewer than 20, although the impact is smaller for high energy jets.
+
+\begin{figure}[tbph]
+\centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{ILD/ILD_ECAL}
+    \caption{}
+    \label{fig:detectorILDECAL}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{ILD/ILD_ECAL_JER}
+    \caption{}
+    \label{fig:detectorILDECALjer}
+  \end{subfigure}
+
+\caption
+{a) a cross section through the electromagnetic calorimeter layers, and b) jet energy resolution as a function of the  total jet energy using \Zuds sample at barrel region for  optimisation of the \ECAL design as a function of the number of longitudinal layers. Both plots are  taken from \cite{Behnke:2013lya}.}
+\label{fig:detectorILDECALfull}
+\end{figure}
+
+
+\begin{figure}[tbph]
+\centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{ILD/ILD_AHCAL}
+    \caption{}
+    \label{fig:detectorAHCAL}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{ILD/HCALoptimise}
+    \caption{}
+    \label{fig:detectorHCALoptimise}
+  \end{subfigure}
+\caption[CALICE AHCAL technological prototype module and  jet energy resolution.]
+{a) the schematic view of a CALICE AHCAL technological prototype module.  b) the jet energy resolution as a function of the hadronic calorimeter scintillator cell sizes, with different energies. Both figures are taken from \cite{Baer:2013cma}.}
+\label{fig:detectorHCAL}
+\end{figure}
+
+\subsection{\CLICILD}
+
+
+%he detector requirements for both the \ILC and \CLIC share similarities, as both detectors have similar physics goals. The detector requirements for the \CLIC are more stringent as the \CLIC detector needs to operate at a centre-of-mass energy of 3\,TeV. The most challenging prospect is the 0.5\,ns brunch structure and the background from \ggHad, which deposits 20\,TeV of energy in the calorimeter of the  entire 312 bunch trains. Therefore, an excellent time resolution for all detector components are needed, as well as a highly segmented calorimeter to keep each cell occupancies to an acceptable level. Here the requirement on the jet energy resolution at a future linear collider is presented in details.
+
+
+There are two detector concepts studied in the \CLIC conceptual design report \cite{Linssen:2012hp}, the \CLICILD and the \CLICSiD. The \CLICILD detector concept is based on the \ILD design. \FIGURE{fig:CLIC_ILD} shows the longitudinal cross section of the \CLICILD detector. As the \CLICILD is similar to the \ILD, only the differences are highlighted here.  A comparison of key parameters of the \ILD and the \CLICILD detector concepts is shown in \Table{tab:ILDvsCLICILD}.
+
+
+\begin{figure}[tbph]
+\centering
+
+    \includegraphics[width=0.85\textwidth]{ILD/CLIC_ILD}
+
+\caption
+{The longitudinal cross section of top quadrant the \CLICILD, taken from  and \cite{Linssen:2012hp}. For both plots, from interaction point (\IP) outwards, there is a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layer, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes.}
+    \label{fig:CLIC_ILD}
+\end{figure}
+
 
 
 For the \CLICILD vertex detector, the first layer is moved outwards by 15\,mm due to a larger high occupancy region with a higher centre-of-mass energy. The detector is also required to provided time stamping at nanoseconds level, which need a different electronically component than that of the \ILD.
@@ -714,57 +832,18 @@ For the \CLICILD tracking detector, the same silicon-\TPC hybrid structure is us
 
 For the \CLICILD design, the same \ECAL from the \ILD is assumed, as the requirements of a \CLIC detector are satisfied by the  \ECAL design at the \ILD. The increased centre-of-mass energy results in extra energy leakage. The leakage is controlled by the \HCAL.  And only a small fraction of particles are affected by the leakage.
 
-For the \HCAL at the \CLICILD , extra layers are added to contain the hadronic shower at a high centre-of-mass energy. The increased thickness is justified by the simulation studies \cite{Linssen:2012hp}, where the jet energy resolution degrades quickly for a thinner \HCAL. To sustain the same inner bore radius, a more dense material, Tungsten, is chosen as the absorber material in the \HCAL barrel.
+For the \CLICILD \HCAL, extra layers are added to contain the hadronic shower at a high centre-of-mass energy. The increased thickness is justified by the simulation studies \cite{Linssen:2012hp}, where the jet energy resolution degrades quickly for a thinner \HCAL. To sustain the same inner bore radius of the \ILC detector solenoids, a more dense material, Tungsten, is chosen as the absorber material in the \HCAL barrel.
 
 The magnetic filed is increased to 4\,T  for a better performance at a high centre-of-mass energy. Due to the different magnetic field strength, the iron yoke thickness is therefore increased to 230\,cm.
 
-The \CLICILD adopted a similar very forward calorimetry system as that of the \ILD. The dimensions of the elements are changed due to a difference in the crossing angle (20\,mrad for the \CLIC and 14\,mrad for the \ILC). A comparison of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD is shown in \Table{tab:detectorForwardILDvsCLICILD}.
+The \CLICILD adopted a similar very forward calorimetry system as that of the \ILD. The dimensions of the elements are changed due to a difference in the crossing angle (20\,mrad for the \CLIC and 14\,mrad for the \ILC). A comparison of the key parameters of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD is shown in \Table{tab:detectorForwardILDvsCLICILD}.
 
 %Modifications to the design due to the \CLIC 3\,TeV centre-mass-of energy can be found in \cite{Linssen:2012hp}.
 
-\begin{figure}[tbph]
-\centering
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{ILD/ILD}
-    \caption{}
-    \label{fig:ILD}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.35\textwidth}
-    \includegraphics[width=\textwidth]{ILD/CLIC_ILD}
-    \caption{}
-    \label{fig:CLIC_ILD}
-  \end{subfigure}
-\caption[Longitudinal cross section of top quadrant of the \ILD and the \CLICILD detector concepts.]
-{The longitudinal cross section of top quadrant of a) the \ILD, taken from  \cite{Baer:2013cma}, and b) the \CLICILD, taken from  and \cite{Linssen:2012hp}. For both plots, from interaction point (\IP) outwards, there is a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layer, highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL), muon chambers, forward calorimeters (\FCAL), magnetic coils and iron yokes. The numbers are in units of mm.}
-\label{fig:detectorILD}
-\end{figure}
 
 
 
-\begin{table}[htbp]
-\centering
-\smallskip
-\begin{tabular}{l l r  r }
-\hline
-\hline
- & &  \ILD & \CLICILD \\
-\hline
-\LumiCAL & geometrical acceptance (mrad)& 31 - 77 & 38 - 110 \\
-& fiducial acceptance (mrad) & 41 - 67 & 44 - 80 \\
-& z (start) (mm) & 2450 & 2654 \\
-& number of layers (W + Si) & 30 & 40 \\
-\hline
-\BeamCAL & geometrical acceptance (mrad)& 5 - 40 & 10 - 40 \\
-& z (start) (mm) & 3600 & 3281 \\
-& number of layers (W + sensor) & 30 & 40 \\
-& graphite layer thickness (mm) & 100 & 100 \\
-\hline
-\hline
-\end{tabular}
-\caption[Comparison of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD .]%
-{Comparison of the key parameters of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD . The table is adapted from \cite{Linssen:2012hp}. }
-\label{tab:detectorForwardILDvsCLICILD}
-\end{table}
+
 
 %Beam Calorimeter acceptance is defined as \absCosTheta is between  0.01 and 0.04\,rad and length in z direction is between 3181 and 3441\,mm. Luminosity Calorimeter acceptance is defined as \absCosTheta is between  0.038 and 0.11\,rad and length in z direction is between 2539 and 2714\,mm.
 
