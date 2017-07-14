@@ -339,7 +339,8 @@ The \ILD detector concept is designed as a general purpose detector. Closest to 
 
 \subsection{Vertex Detector}
 
-The pixel-vertex detector (\VTX) needs to be close to the interaction point to reconstruct secondary vertices. As the \TPC is the main tracking  detector, the \VTX mainly measures the impact parameter of tracks. Its structure is  of three double layers with a barrel geometry. The double layers lower the material budget and improves the impact parameter measurements. The first double layer is of the half length of the other two, to avoid the high occupancy region of direct low momentum hits from the incoherent pair background. The baseline geometry of the vertex detector can be found in \Table{tab:detectorVertex}.
+The pixel-vertex detector (\VTX) needs to be close to the interaction point to reconstruct secondary vertices. As the \TPC is the main tracking  detector, the \VTX mainly measures the impact parameter of tracks. The structure of is three, nearly cylindrical, concentric layers of double-sided ladders. Each ladder contains pixel sensors on both sides at 2\,mm interval. This results in six measured impact positions for each charged particle traversing the detector. The double layers lower the material budget and improves the impact parameter measurements. The first double layer is of the half length of the other two, to avoid the high occupancy region of direct low momentum hits from the incoherent pair background. The baseline geometry of the vertex detector can be found in \Table{tab:detectorVertex}.  The radii covered by the detector range from 16 mm to 60 mm.
+
 
 \begin{table}[htbp]
 \centering
@@ -374,13 +375,30 @@ Layer 6 & 60\,mm & 125\,mm & 0.90 & 4\,$\mu$m & 100 \,$\mu$s \\
 
 The hybrid  tracking system consists of a large time projection chamber (\TPC), a Silicon Inner Tracker (\SIT), a Silicon External Tracker (\SET) in the barrel region, a end cap tracking component (\ETD) behind the endplate of the \TPC, and a silicon forward tracker (\FTD) in the forward region. The \SIT, \SET, and \ETD are made up of two single-sided strip layers tilted by a small angle. The \FTD is a system of two silicon-pixel disks and five silicon-strip disks.  The silicon envelope tracking system and the \TPC are shown in \Figure{fig:detectorTrackingFull}. The main parameters of the silicon system and the \TPC can be found in \Table{tab:detectorTracking}.
 
+A \TPC tracking detector has several advantages: a) Tracks can be measured with a large number of three-dimensional ($r,\phi,z$) spatial points. The continuous tracking allows precise reconstruction of tracks, which is important for particle identification via the specific energy loss $dE/dx$; b) the \TPC uses a minimum amount of material, which minimises the effects due to the $10^3$ beamstrahlung photons per bunch-crossing in the barrel region \cite{Vogel:2008zza}. The \TPC is optimised for point resolution and minimum material, as required for the best calorimeter performance and the best particle flow performance.
 
-The main part of the tracking system, the \TPC, can measure a large number of three dimensional spatial points. Continuous tracking allows precise reconstruction of non-pointing tracks. The \TPC is optimised for point resolution and minimum material, as required for the best calorimeter performance and the best particle flow performance.
-
-The additional barrel silicon trackers improve the overall momentum resolution. They provide extra high precision space points and additional redundancy between the \TPC, the \VTX, and the calorimeters. The \FTD provides the low angle coverage of the tracking system, which is not covered by the \TPC.
+The silicon detector \SIT and the \SET in the barrel region provide spatial point measurements before and after the \TPC. This helps to  improve the overall momentum resolution by providing points to link the vertex detector with the \TPC, and to extrapolate tracks from the \TPC to the calorimeters.  The \FTD improves the low angle coverage of the tracking system, which is not covered by the \TPC.
 
 
 \begin{comment}
+The central tracker of ILD is a Time Projection Chamber (TPC). A TPC tracker in a linear collider
+experiment offers several advantages. Tracks can be measured with a large number of three-dimensional
+ space points. The point resolution, point, and double-hit resolution, which are moderate when
+compared to silicon detectors, are compensated by continuous tracking. The TPC presents a minimum
+amount of material as required for the best calorimeter and PFA performance. A low material budget
+also minimises the effects due to the  103 beamstrahlung photons per bunch-crossing which traverse
+the barrel region [255]. Topological time-stamping in conjunction with inner silicon detectors is an
+important tool that is explained in section 6.1.2.5. To obtain good momentum resolution and to
+suppress backgrounds, the detector will be situated in a strong magnetic field of 3.5 T. Under this
+condition a point resolution of better than 100 \mu m for the complete drift and a double hit resolution
+of < 2 mm are possible.
+Continuous tracking facilitates the reconstruction of non-pointing tracks which are significant for
+the particle-flow measurement and for the reconstruction of physics signatures in many scenarios.
+The TPC yields particle identification via the specific energy loss dE/dx which is valuable for many
+physics analyses.
+
+
+
 A system of silicon strip and pixel detectors surrounds the VTX detector. In the barrel, two
 layers of silicon strip detectors (SIT) are arranged to bridge the gap between the VTX and the TPC.
 In the forward region, a system of two silicon-pixel disks and five silicon-strip disks (FTD) provides
@@ -444,7 +462,7 @@ silicon system as sketched in the quadrant view in a). Both plots are adapted fr
 
 \subsection{Electromagnetic Calorimeter}
 
-The Silicon-Tungsten sampling electromagnetic calorimeters in the \ILD consist of a nearly cylindrical barrel and two end cap systems, optimised for particle flow. The fine granular \ECAL is located inside the \HCAL. The \ECAL measures photon energies and separates photons from other particles. The \ECAL also hosts the first part of the hadronic showers and greatly assists the separation of hadronic showers.
+The Silicon-Tungsten sampling electromagnetic calorimeters in the \ILD consist of a nearly cylindrical barrel and two end cap systems, optimised for particle flow. The fine granular \ECAL is located inside the \HCAL. The \ECAL measures photon energies and separates photons from other particles. The \ECAL also hosts the first part of the hadronic showers and greatly assists the separation of hadronic showers. \FIGURE{fig:detectorILDECAL2} shows the position of the electromagnetic calorimeter in the \ILD detector and the trapezoidal form of the modules.
 
 The particle flow paradigm has a large impact on the \ECAL design with many requirements. In addition, for the \ECAL to measure and separate photons, it also needs to reconstruct detailed shower profiles to separate electromagnetic showers from hadronic showers, as approximately 50\% of hadronic showers starts in the \ECAL. These requirements can be fulfilled with an excellent three-dimensional granular \ECAL.
 
@@ -454,11 +472,21 @@ The longitudinal segregation is a compromise between the cost and the performanc
 
 
 
+
 \begin{figure}[tbph]
 \centering
-    \includegraphics[width=0.45\textwidth]{ILD/ILD_ECAL}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{ILD/ILD_ECAL2}
+        \caption{}
+        \label{fig:detectorILDECAL2}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{ILD/ILD_ECAL}
+        \caption{}
+        \label{fig:detectorILDECAL}
+    \end{subfigure}
 \caption
-{A a cross section through the electromagnetic calorimeter layers,  taken from \cite{Behnke:2013lya}.}
+{ a) The electromagnetic calorimeter (in blue) within the \ILD detector. b) A a cross section through the electromagnetic calorimeter layers. Both plots are  taken from \cite{Behnke:2013lya}.}
  \label{fig:detectorILDECAL}
 \end{figure}
 
@@ -518,15 +546,12 @@ are segmented into cells with a lateral size of 5 mm.
 
 \subsection{Hadronic Calorimeter}
 
-The requirements of the sampling hadronic calorimeter is, again, driven by the need of the particle flow. The need of three dimensional granularity in transverse and longitudinal directions is satisfied by a sampling calorimeter.
+The requirements of the sampling hadronic calorimeter is, again, driven by the need of the particle flow. The need of three dimensional granularity in transverse and longitudinal directions is satisfied by a sampling calorimeter with steel absorber and scintillator tiles as active medium.
 
-The principal role of the \HCAL is to separate neutral hadron showers from other particles, and to measure neutral hadron energies. The neutral hadron contribution of  the jet energy is around 10\% on average. A moderate fine  granular \HCAL is a good balance between cost and performance. The chosen layout is 48 longitudinal layers with 3 by 3\,cm scintillator tiles, using an analogue read out system. The layout of a technological prototype, the "EUDET prototype"  \cite{Collaboration:2011jka} is shown in \Figure{fig:detectorAHCAL}.
-
-The longitudinal system including the \ECAL provides about 6 radiation lengths, which is sufficient to contain the hadronic showers. The transverse cell sizes has been optimised for the best jet energy resolution. The jet energy resolution as a function of \HCAL scintillator cell size for different jet energies is shown in \Figure{fig:detectorHCALoptimise}. There is no substantial gain in the jet energy resolution for cell sizes below 3\,cm. However, the jet energy resolution degrades for cell sizes above 3\,cm. Hence 3\,cm cell size is chosen for the \HCAL design.
-
-For the absorber material, stainless steel is chosen for mechanical and calorimetric reasons. Steel allows a self-supporting structure without auxiliary supports. Also steel has a moderate ratio of interaction length to radiation length.
+The principal role of the \HCAL is to separate neutral hadron showers from other particles, and to measure neutral hadron energies. The neutral hadron contribution of  the jet energy is around 10\% on average. A moderate fine  granular \HCAL is a good balance between cost and performance. The chosen layout is 48 longitudinal layers with 3 by 3\,cm scintillator tiles, using an analogue read out system. The longitudinal system including the \ECAL provides about 6 radiation lengths, which is sufficient to contain the hadronic showers.  The layout of a technological prototype, the "EUDET prototype"  \cite{Collaboration:2011jka} is shown in \Figure{fig:detectorAHCAL}.
 
 
+For the absorber material, stainless steel is chosen for mechanical and calorimetric reasons. Steel allows a self-supporting structure without auxiliary supports. Moreover, iron has a moderate ratio of hadronic interaction length ($\lambda_I = 17$\,cm) to electromagnetic radiation length ($X_0=1.8$\,cm), which allows a fine longitudinal sampling in $X_0$ with a reasonable number of layers in a given total hadronic absorption length.
 
 
 \begin{figure}[tbph]
@@ -534,7 +559,7 @@ For the absorber material, stainless steel is chosen for mechanical and calorime
     \includegraphics[width=0.45\textwidth]{ILD/ILD_AHCAL}
 
 \caption
-{The schematic view of a CALICE AHCAL technological prototype module, taken from \cite{Baer:2013cma}.}
+{The schematic view of a CALICE analogue HCAL technological prototype module, taken from \cite{Baer:2013cma}.}
     \label{fig:detectorAHCAL}
 \end{figure}
 
@@ -745,8 +770,7 @@ ILD, and their integration into a coherent detector concept
 
 
 
-
-\FIGURE{fig:detectorVertexResolution} shows the impact parameter resolution as a function of the particle momentum for  two different particle production angles. The desired impact parameter resolution (dashed line) is achievable.
+For the \ILD vertex detector, \Figure{fig:detectorVertexResolution} shows the impact parameter resolution as a function of the particle momentum for  two different particle production angles. The curves with long dashes show the performance goal. The figure shows that the desired impact parameter resolution is achievable.
 
 
 
@@ -758,51 +782,34 @@ ILD, and their integration into a coherent detector concept
 \label{fig:detectorVertexResolution}
 \end{figure}
 
-tacking performance section
-
-
 %\section{The \CLIC versus the \ILC}
 
 
 %The two main differences between the \CLIC and the \ILC are the high centre-of-mass energy and the high bunch charge density at the \CLIC, which leads to significant beam related backgrounds.  At the \CLIC, within a bunch train, there is 0.5\,ns between bunch crossings.  There are two main sources of beam induced background at the \CLIC colliding environment: incoherent electron pairs from  photon (real or virtual) interactions with individual particles of the other beam, and interactions of two photons from the colliding beams. These differences leads to a modification in the detector design and the reconstruction software for the \CLIC.
 
 
-The optimisation of the \ECAL design as a function of the number of longitudinal layers is performed, whilst keeping other geometry constant, using the jet energy resolution. The jet energy resolution is defined as the root mean squared divided by the mean for the smallest width of distribution that contains 90\% of entries, using \Zuds sample at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \Zprime is used as \pandora does not attempt to recover missing momentum from semi-leptonic decay of heavy quarks. Using 90\% of the entries is robust and focus on the Gaussian part of the distribution. The total jet energy is sampled at 91, 200, 360 and 500\,GeV. \FIGURE{fig:detectorILDECALjer} shows the jet energy resolution for a single jet. For a 45\,GeV jet, a degradation  of 10\% in the jet energy resolution is observed when the number of layers decreases from 30 to 20. The degradation in the jet energy resolution is significant for number of layers fewer than 20, although the impact is smaller for high energy jets.
+The optimisation of the \ILD \ECAL design as a function of the number of longitudinal layers is performed, whilst keeping other geometry constant. The metric for optimisation is the jet energy resolution, which defined as the root-mean-squared divided by the mean for the smallest width of distribution that contains 90\% of entries, using \eeZuds sample at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \Zprime is used as \pandora does not attempt to recover missing momentum from semi-leptonic decay of heavy quarks. Using 90\% of the entries is robust and focus on the Gaussian part of the distribution. The total jet energy is sampled at 91, 200, 360 and 500\,GeV.
+
+\FIGURE{fig:detectorILDECALjer} shows the jet energy resolution for a single jet. For a 45\,GeV jet, a degradation  of 10\% in the jet energy resolution is observed when the number of layers decreases from 30 to 20. The degradation in the jet energy resolution is significant for number of layers fewer than 20, although the impact is smaller for high energy jets.
 
 \begin{figure}[tbph]
 \centering
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{ILD/ILD_ECAL}
-    \caption{}
-    \label{fig:detectorILDECAL}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{ILD/ILD_ECAL_JER}
-    \caption{}
-    \label{fig:detectorILDECALjer}
-  \end{subfigure}
-
+    \includegraphics[width=0.55\textwidth]{ILD/ILD_ECAL_JER}
 \caption
-{a) a cross section through the electromagnetic calorimeter layers, and b) jet energy resolution as a function of the  total jet energy using \Zuds sample at barrel region for  optimisation of the \ECAL design as a function of the number of longitudinal layers. Both plots are  taken from \cite{Behnke:2013lya}.}
-\label{fig:detectorILDECALfull}
+{The jet energy resolution as a function of the number of longitudinal \ECAL layers, with  different  total jet energy using \eeZuds sample at barrel region, taken from \cite{Behnke:2013lya}.}
+    \label{fig:detectorILDECALjer}
 \end{figure}
 
+For the \ILD \HCAL design, the transverse cell sizes has been optimised for the best jet energy resolution. The jet energy resolutions as a function of \HCAL scintillator square cell sizes for different jet energies are shown in \Figure{fig:detectorHCALoptimise}. There is no substantial gain in the jet energy resolution for cell sizes below 3\,cm. However, the jet energy resolution degrades for cell sizes above 3\,cm. Hence 3 by 3\,cm scintillator cell size is chosen for the \HCAL design.
+
 
 \begin{figure}[tbph]
 \centering
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{ILD/ILD_AHCAL}
-    \caption{}
-    \label{fig:detectorAHCAL}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{ILD/HCALoptimise}
-    \caption{}
+    \includegraphics[width=0.55\textwidth]{ILD/HCALoptimise}
+
+\caption
+{The jet energy resolution as a function of the hadronic calorimeter scintillator cell sizes, with different total jet energy using \eeZuds sample at barrel region, taken from \cite{Baer:2013cma}.}
     \label{fig:detectorHCALoptimise}
-  \end{subfigure}
-\caption[CALICE AHCAL technological prototype module and  jet energy resolution.]
-{a) the schematic view of a CALICE AHCAL technological prototype module.  b) the jet energy resolution as a function of the hadronic calorimeter scintillator cell sizes, with different energies. Both figures are taken from \cite{Baer:2013cma}.}
-\label{fig:detectorHCAL}
 \end{figure}
 
 \subsection{\CLICILD}
