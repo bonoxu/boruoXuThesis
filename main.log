@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.4.28)  17 JUL 2017 13:37
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.4.28)  17 JUL 2017 15:05
 entering extended mode
 **main.tex
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.tex"
@@ -1043,7 +1043,7 @@ chapter 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 37.
 [5] [6] [7]
-Underfull \vbox (badness 1199) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
 [9]
@@ -1062,7 +1062,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-[15]
+
+LaTeX Warning: Reference `eq:theoryHiggsPotential' on page 15 undefined on inpu
+t line 422.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
 Package epstopdf Info: Source file: <theory/HiggsDecayWidth.eps>
 (epstopdf)                    date: 2017-03-30 14:58:48
 (epstopdf)                    size: 728222 bytes
@@ -1072,7 +1079,7 @@ f>
 (epstopdf)                    size: 42395 bytes
 (epstopdf)             Command: <epstopdf --outfile=theory/HiggsDecayWidth-eps-
 converted-to.pdf theory/HiggsDecayWidth.eps>
-(epstopdf)             \includegraphics on input line 444.
+(epstopdf)             \includegraphics on input line 445.
 Package epstopdf Info: Output file is already uptodate.
 
 <theory/HiggsDecayWidth-eps-converted-to.pdf, id=1116, 441.65pt x 337.26pt>
@@ -1080,7 +1087,7 @@ File: theory/HiggsDecayWidth-eps-converted-to.pdf Graphic file (type pdf)
 
 <use theory/HiggsDecayWidth-eps-converted-to.pdf>
 Package pdftex.def Info: theory/HiggsDecayWidth-eps-converted-to.pdf used on in
-put line 444.
+put line 445.
 (pdftex.def)             Requested size: 201.63182pt x 153.9733pt.
 Package epstopdf Info: Source file: <theory/HiggsBranchingRatio.eps>
 (epstopdf)                    date: 2017-03-30 14:59:43
@@ -1091,7 +1098,7 @@ o.pdf>
 (epstopdf)                    size: 49831 bytes
 (epstopdf)             Command: <epstopdf --outfile=theory/HiggsBranchingRatio-
 eps-converted-to.pdf theory/HiggsBranchingRatio.eps>
-(epstopdf)             \includegraphics on input line 449.
+(epstopdf)             \includegraphics on input line 450.
 Package epstopdf Info: Output file is already uptodate.
 
 <theory/HiggsBranchingRatio-eps-converted-to.pdf, id=1117, 439.6425pt x 337.26p
@@ -1099,8 +1106,11 @@ t>
 File: theory/HiggsBranchingRatio-eps-converted-to.pdf Graphic file (type pdf)
  <use theory/HiggsBranchingRatio-eps-converted-to.pdf>
 Package pdftex.def Info: theory/HiggsBranchingRatio-eps-converted-to.pdf used o
-n input line 449.
+n input line 450.
 (pdftex.def)             Requested size: 201.63182pt x 154.67317pt.
+
+Underfull \vbox (badness 1472) has occurred while \output is active []
+
  [16 <E:/user/my documents/University/2016-2017/boruoXuThesis/theory/HiggsDecay
 Width-eps-converted-to.pdf> <E:/user/my documents/University/2016-2017/boruoXuT
 hesis/theory/HiggsBranchingRatio-eps-converted-to.pdf>]
@@ -1113,15 +1123,15 @@ Package epstopdf Info: Source file: <doubleHiggs/Feynman/1.eps>
 (epstopdf)                    size: 18394 bytes
 (epstopdf)             Command: <epstopdf --outfile=doubleHiggs/Feynman/1-eps-c
 onverted-to.pdf doubleHiggs/Feynman/1.eps>
-(epstopdf)             \includegraphics on input line 483.
+(epstopdf)             \includegraphics on input line 484.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/Feynman/1-eps-converted-to.pdf, id=1144, 211.79124pt x 225.84375pt
+<doubleHiggs/Feynman/1-eps-converted-to.pdf, id=1143, 211.79124pt x 225.84375pt
 >
 File: doubleHiggs/Feynman/1-eps-converted-to.pdf Graphic file (type pdf)
  <use doubleHiggs/Feynman/1-eps-converted-to.pdf>
 Package pdftex.def Info: doubleHiggs/Feynman/1-eps-converted-to.pdf used on inp
-ut line 483.
+ut line 484.
 (pdftex.def)             Requested size: 98.57677pt x 105.11618pt.
 Package epstopdf Info: Source file: <doubleHiggs/Feynman/2.eps>
 (epstopdf)                    date: 2017-06-14 16:57:57
@@ -1132,15 +1142,15 @@ Package epstopdf Info: Source file: <doubleHiggs/Feynman/2.eps>
 (epstopdf)                    size: 18171 bytes
 (epstopdf)             Command: <epstopdf --outfile=doubleHiggs/Feynman/2-eps-c
 onverted-to.pdf doubleHiggs/Feynman/2.eps>
-(epstopdf)             \includegraphics on input line 488.
+(epstopdf)             \includegraphics on input line 489.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/Feynman/2-eps-converted-to.pdf, id=1145, 211.79124pt x 225.84375pt
+<doubleHiggs/Feynman/2-eps-converted-to.pdf, id=1144, 211.79124pt x 225.84375pt
 >
 File: doubleHiggs/Feynman/2-eps-converted-to.pdf Graphic file (type pdf)
  <use doubleHiggs/Feynman/2-eps-converted-to.pdf>
 Package pdftex.def Info: doubleHiggs/Feynman/2-eps-converted-to.pdf used on inp
-ut line 488.
+ut line 489.
 (pdftex.def)             Requested size: 98.57677pt x 105.11618pt.
 Package epstopdf Info: Source file: <doubleHiggs/Feynman/3.eps>
 (epstopdf)                    date: 2017-06-28 10:31:04
@@ -1151,15 +1161,15 @@ Package epstopdf Info: Source file: <doubleHiggs/Feynman/3.eps>
 (epstopdf)                    size: 17354 bytes
 (epstopdf)             Command: <epstopdf --outfile=doubleHiggs/Feynman/3-eps-c
 onverted-to.pdf doubleHiggs/Feynman/3.eps>
-(epstopdf)             \includegraphics on input line 493.
+(epstopdf)             \includegraphics on input line 494.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/Feynman/3-eps-converted-to.pdf, id=1146, 211.79124pt x 225.84375pt
+<doubleHiggs/Feynman/3-eps-converted-to.pdf, id=1145, 211.79124pt x 225.84375pt
 >
 File: doubleHiggs/Feynman/3-eps-converted-to.pdf Graphic file (type pdf)
  <use doubleHiggs/Feynman/3-eps-converted-to.pdf>
 Package pdftex.def Info: doubleHiggs/Feynman/3-eps-converted-to.pdf used on inp
-ut line 493.
+ut line 494.
 (pdftex.def)             Requested size: 98.57677pt x 105.11618pt.
 Package epstopdf Info: Source file: <doubleHiggs/Feynman/4.eps>
 (epstopdf)                    date: 2017-06-14 16:58:16
@@ -1170,25 +1180,28 @@ Package epstopdf Info: Source file: <doubleHiggs/Feynman/4.eps>
 (epstopdf)                    size: 17575 bytes
 (epstopdf)             Command: <epstopdf --outfile=doubleHiggs/Feynman/4-eps-c
 onverted-to.pdf doubleHiggs/Feynman/4.eps>
-(epstopdf)             \includegraphics on input line 498.
+(epstopdf)             \includegraphics on input line 499.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/Feynman/4-eps-converted-to.pdf, id=1147, 211.79124pt x 225.84375pt
+<doubleHiggs/Feynman/4-eps-converted-to.pdf, id=1146, 211.79124pt x 225.84375pt
 >
 File: doubleHiggs/Feynman/4-eps-converted-to.pdf Graphic file (type pdf)
  <use doubleHiggs/Feynman/4-eps-converted-to.pdf>
 Package pdftex.def Info: doubleHiggs/Feynman/4-eps-converted-to.pdf used on inp
-ut line 498.
+ut line 499.
 (pdftex.def)             Requested size: 98.57677pt x 105.11618pt.
- [17 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/Feynm
+
+Underfull \vbox (badness 4543) has occurred while \output is active []
+
+ [17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/Feynm
 an/1-eps-converted-to.pdf> <E:/user/my documents/University/2016-2017/boruoXuTh
 esis/doubleHiggs/Feynman/2-eps-converted-to.pdf> <E:/user/my documents/Universi
 ty/2016-2017/boruoXuThesis/doubleHiggs/Feynman/3-eps-converted-to.pdf> <E:/user
 /my documents/University/2016-2017/boruoXuThesis/doubleHiggs/Feynman/4-eps-conv
 erted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18]
 Package epstopdf Info: Source file: <theory/MhhHtDistribution.eps>
 (epstopdf)                    date: 2017-03-30 19:50:28
 (epstopdf)                    size: 396267 bytes
@@ -1198,16 +1211,19 @@ pdf>
 (epstopdf)                    size: 66273 bytes
 (epstopdf)             Command: <epstopdf --outfile=theory/MhhHtDistribution-ep
 s-converted-to.pdf theory/MhhHtDistribution.eps>
-(epstopdf)             \includegraphics on input line 540.
+(epstopdf)             \includegraphics on input line 541.
 Package epstopdf Info: Output file is already uptodate.
 
-<theory/MhhHtDistribution-eps-converted-to.pdf, id=1220, 479.7925pt x 323.2075p
+<theory/MhhHtDistribution-eps-converted-to.pdf, id=1219, 479.7925pt x 323.2075p
 t>
 File: theory/MhhHtDistribution-eps-converted-to.pdf Graphic file (type pdf)
  <use theory/MhhHtDistribution-eps-converted-to.pdf>
 Package pdftex.def Info: theory/MhhHtDistribution-eps-converted-to.pdf used on 
-input line 540.
+input line 541.
 (pdftex.def)             Requested size: 448.07378pt x 301.84239pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [19 <E:/user/my documents/University/2016-2017/boruoXuThesis/theory/MhhHtDistr
 ibution-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <theory/HiggsCLICcrossSection.eps>
@@ -1219,23 +1235,26 @@ Package epstopdf Info: Source file: <theory/HiggsCLICcrossSection.eps>
 (epstopdf)                    size: 38581 bytes
 (epstopdf)             Command: <epstopdf --outfile=theory/HiggsCLICcrossSectio
 n-eps-converted-to.pdf theory/HiggsCLICcrossSection.eps>
-(epstopdf)             \includegraphics on input line 554.
+(epstopdf)             \includegraphics on input line 555.
 Package epstopdf Info: Output file is already uptodate.
 
-<theory/HiggsCLICcrossSection-eps-converted-to.pdf, id=1283, 569.12625pt x 553.
+<theory/HiggsCLICcrossSection-eps-converted-to.pdf, id=1282, 569.12625pt x 553.
 06625pt>
 File: theory/HiggsCLICcrossSection-eps-converted-to.pdf Graphic file (type pdf)
 
  <use theory/HiggsCLICcrossSection-eps-converted-to.pdf>
 Package pdftex.def Info: theory/HiggsCLICcrossSection-eps-converted-to.pdf used
- on input line 554.
+ on input line 555.
 (pdftex.def)             Requested size: 201.63182pt x 195.93903pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [20 <E:/user/my documents/University/2016-2017/boruoXuThesis/theory/HiggsCLICc
 rossSection-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21]
-Overfull \hbox (10.54362pt too wide) in paragraph at lines 629--629
+Overfull \hbox (10.54362pt too wide) in paragraph at lines 630--630
 [] 
  []
 
@@ -1251,15 +1270,15 @@ Package epstopdf Info: Source file: <theory/TauZ.eps>
 (epstopdf)                    size: 107728 bytes
 (epstopdf)             Command: <epstopdf --outfile=theory/TauZ-eps-converted-t
 o.pdf theory/TauZ.eps>
-(epstopdf)             \includegraphics on input line 653.
+(epstopdf)             \includegraphics on input line 654.
 Package epstopdf Info: Output file is already uptodate.
 
-<theory/TauZ-eps-converted-to.pdf, id=1332, 310.15875pt x 316.18124pt>
+<theory/TauZ-eps-converted-to.pdf, id=1329, 310.15875pt x 316.18124pt>
 File: theory/TauZ-eps-converted-to.pdf Graphic file (type pdf)
 
 <use theory/TauZ-eps-converted-to.pdf>
 Package pdftex.def Info: theory/TauZ-eps-converted-to.pdf used on input line 65
-3.
+4.
 (pdftex.def)             Requested size: 201.63182pt x 205.54431pt.
 Package epstopdf Info: Source file: <theory/TauH.eps>
 (epstopdf)                    date: 2017-06-23 12:07:37
@@ -1269,15 +1288,15 @@ Package epstopdf Info: Source file: <theory/TauH.eps>
 (epstopdf)                    size: 109500 bytes
 (epstopdf)             Command: <epstopdf --outfile=theory/TauH-eps-converted-t
 o.pdf theory/TauH.eps>
-(epstopdf)             \includegraphics on input line 658.
+(epstopdf)             \includegraphics on input line 659.
 Package epstopdf Info: Output file is already uptodate.
 
-<theory/TauH-eps-converted-to.pdf, id=1333, 311.1625pt x 321.2pt>
+<theory/TauH-eps-converted-to.pdf, id=1330, 311.1625pt x 321.2pt>
 File: theory/TauH-eps-converted-to.pdf Graphic file (type pdf)
 
 <use theory/TauH-eps-converted-to.pdf>
 Package pdftex.def Info: theory/TauH-eps-converted-to.pdf used on input line 65
-8.
+9.
 (pdftex.def)             Requested size: 201.63182pt x 208.13548pt.
 )
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapDetector.tex"
@@ -5646,17 +5665,20 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19024 strings out of 494045
- 303113 string characters out of 3154005
- 588126 words of memory out of 3000000
- 20730 multiletter control sequences out of 15000+200000
- 161465 words of font info for 285 fonts, out of 3000000 for 9000
+ 19027 strings out of 494045
+ 303158 string characters out of 3154005
+ 588162 words of memory out of 3000000
+ 20731 multiletter control sequences out of 15000+200000
+ 161552 words of font info for 286 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 69i,48n,75p,8816b,1056s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,48n,75p,8816b,1059s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{D:/MiKTeX 2.9/fonts/enc/dvips/lm
 /lm-rm.enc}{D:/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{D:/MiKTeX 2.9/fonts
 /enc/dvips/lm/lm-mathit.enc}{D:/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<D:
@@ -5678,7 +5700,7 @@ c/lm/lmssbx10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><D:/MiKTeX 2.
 b><D:/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><D:/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmtt12.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (230 pages, 16087353 bytes).
+Output written on main.pdf (230 pages, 16087868 bytes).
 PDF statistics:
  40625 PDF objects out of 45951 (max. 8388607)
  727 named destinations out of 1000 (max. 500000)
