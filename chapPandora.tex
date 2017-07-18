@@ -248,7 +248,7 @@ This stage of the \pandora reconstruction will focus on merging low-energy clust
 \label{sec:pandoraPFOcreation}
 
 % double counting taking care in pandora
-The last stage of the reconstruction is the creation of the output objects, Particle Flow Objects (PFOs). The PFOs contain clusters and associated tracks. Simple, but effective, particle identification for electrons and muons are applied.
+The last stage of the reconstruction is the creation of the output objects, Particle Flow Objects (PFOs). The PFOs contain clusters and associated tracks. Simple, but effective, particle identification for electrons, muons , and photons are applied.
 
 The output objects, \PFOs, contain information of positions, four-momenta, particle ID, and other quantities. These \PFOs are heavily used  in physics analyses.
 
@@ -267,7 +267,7 @@ Following the discussion on \CLIC beam induced background,  two software have be
 The track selector aims to remove poor quality and fake tracks that are more likely from the beam induced background. It places a simple track-quality cut and a time-of-arrival cut on tracks. If the arrival time of the track at the front of the \ECAL, using the helical fit of the track, differs more than 50\,ns from using a straight line fit, the track will be rejected.
 
 
-The PFO selector discards PFOs that are originated from the beam induced background from the event reconstruction, based on the transverse momentum (\pT) and time information of the PFOs. The PFOs from \ggHad often have low \pT and have a range of time-of-arrivals. In contrast, the PFOs from physics processes have a range of \pT, and the time-of-arrivals are close to the brunch crossing time. 
+The PFO selector discards PFOs that are originated from the beam induced background from the event reconstruction, based on the transverse momentum (\pT) and time information of the PFOs. The PFOs from \ggHad often have low \pT and have a range of time-of-arrivals. In contrast, the PFOs from physics processes have a range of \pT, and the time-of-arrivals are close to the brunch crossing time.
 
 %By utilising the high spatial resolution from the high granular calorimeter, individual PFOs can be tracked and reconstructed.
 
