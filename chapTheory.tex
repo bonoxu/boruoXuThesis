@@ -227,7 +227,6 @@ Consider a complex scalar field, with the Klein-Gordon Lagrangian:
 where $m$ is the mass term and $V\parenths{\psi} $ is the potential of the field $\psi$. This Lagrangian has a global symmetry $\psi \to e^{i\phi}\psi$. The potential can be modified to add an interaction term without breaking the  invariance of the global symmetry:
 \begin{equation}
 V\parenths{\psi} =  m^2 \absOf{\psi}^2 + \lambda\absOf{\psi}^4,
-\label{eq:theoryHiggsPotential}
 \end{equation}
 where $\lambda$ controls the interaction strength. This modified potential has a minimum at $ \absOf{\psi}=0$ for $m^2>0$. However, if $m^2<0$, the minimum of the potential occurs when:
 \begin{equation}
@@ -264,7 +263,7 @@ When the field is expanded around the minimum of the potential,  $\nu=\sqrt{\fra
 \section{Higgs Mechanism}
 \label{sec:theoryHiggs}
 
-The Higgs mechanism is an extension of the example of the spontaneous symmetry breaking introduced in the previous section. It can provided mass terms for bosons and fermions. A complex  scalar Higgs field, $\Phi_{\PH}$, transforms as a doublet of SU(2) with hypercharge $Y = \frac{1}{2}$. The Lagrangian is given by:
+The Higgs mechanism is an extension of the example of the spontaneous symmetry breaking introduced in the previous section. It can provide mass terms for bosons and fermions. A complex  scalar Higgs field, $\Phi_{\PH}$, transforms as a doublet of SU(2) with hypercharge $Y = \frac{1}{2}$. The Lagrangian is given by:
 \begin{equation}
 \Lagr_{Higgs} = \left(D_\mu\Phi_{\PH}\right)^\dagger\left(D^\mu\Phi_{\PH}\right) - \mu^2\Phi_{\PH}^\dagger\Phi_{\PH} + \lambda\left(\Phi_{\PH}^\dagger\Phi_{\PH}\right)^2,
 \label{eq:theoryEWSBhiggs}
@@ -276,6 +275,7 @@ D_\mu = \left(\partial_{\mu} + ig\frac{\tau_i}{2}W^i_{\mu} + ig'\frac{1}{2}B_{\m
 where $g$ is the coupling constant of the \uprightMath{SU(2)_L} gauge symmetry; $g'$ is the coupling constant of the U(1) gauge symmetry; and $\tau_i$ is one of the Pauli matrices. The Higgs potential is given by:
 \begin{equation}
 V(\PH) = \mu^2\Phi_{\PH}^\dagger\Phi_{\PH} - \lambda\left(\Phi_{\PH}^\dagger\Phi_{\PH}\right)^2.
+\label{eq:theoryHiggsPotential}
 \end{equation}
 The Higgs potential is minimised when
 \begin{equation}
@@ -335,12 +335,12 @@ A convenient way to connect $g$ and $g'$ is to use the Weinberg mixing angle  \c
 \begin{equation}
 \sin\parenths{\theta_{\PW}} = \frac{g'}{\sqrt{g^2+{g'}^2}}.
 \end{equation}
-The \Equation{eq:theoryEWBosonMass2} can be rewritten in terms of the Weinberg mixing angle:
+The \Equation{eq:theoryEWBosonMass2} can be rewritten using the Weinberg mixing angle:
 \begin{equation}
 \frac{\nu^2\parenths{g^2+{g'}^2}}{8}\parenths{\cos\parenths{\theta_{\PW}}W^3_\mu - \sin\parenths{\theta_{\PW}}B_\mu}^2.
 \label{eq:theoryEWBosonMass3}
 \end{equation}
-The physical field $Z_{\mu}$ can be immediately identified as: 
+The physical field $Z_{\mu}$ can be immediately identified as:
 \begin{equation}
 Z_{\mu} = \cos\left(\theta_W\right)W^3_{\mu} - \sin\left(\theta_W\right)B_{\mu}.
 \end{equation}
@@ -408,12 +408,12 @@ H(x) = \frac{1}{\sqrt{2}}
   \nu + h(x) \\
  \end{pmatrix},
 \end{equation}
-where $h(x)$ is the real scalar field of the Higgs boson and $\nu$ the Higgs vacuum expectation value. The Higgs boson is not charged under electromagnetism as the field is real. The coupling of the Higgs boson to other fields  can be calculated out by replacing $\nu$  with $\nu + h(x)$ in \Equation{eq:theoryBoson}: 
+where $h(x)$ is the real scalar field of the Higgs boson and $\nu$ the Higgs vacuum expectation value. The Higgs boson is not charged under electromagnetism as the field is real. The coupling of the Higgs boson to other fields  can be calculated out by replacing $\nu$  with $\nu + h(x)$ in \Equation{eq:theoryBoson}:
 %For example, the Yukawa coupling to a fermions  field, $\psi_i$, is given by:
 %\begin{equation}
 %-\frac{m_i}{\nu}h\overline{\psi}_i\psi_i ,
 %\end{equation}
-%where the $m_i$ is the mass of the fermion $i$. 
+%where the $m_i$ is the mass of the fermion $i$.
 %From \Equation{eq:theoryBoson}, couplings to gauge bosons are given by:
 \begin{equation}
 m^2_W\left(\frac{2h}{\nu} + \frac{{h}^2}{\nu^2}\right)W^+_{\mu}W^{-\mu} + \frac{m^2_Z}{2}\left(\frac{2h}{\nu} + \frac{{h}^2}{\nu^2}  \right)Z_{\mu}Z^{\mu}.
@@ -431,10 +431,10 @@ Once the Higgs boson mass is known, $\lambda$ can be determined and the Higgs bo
 
 
 
-%Thus the Higgs boson mass satisfies ${\Hmass}^2 = 2\lambda\nu^2$. The trilinear and quadlinear Higgs self interaction strengths are $- \frac{\Hmass^2}{2\nu}$ and $\frac{\Hmass^2}{8\nu^2}$, respectively. 
+%Thus the Higgs boson mass satisfies ${\Hmass}^2 = 2\lambda\nu^2$. The trilinear and quadlinear Higgs self interaction strengths are $- \frac{\Hmass^2}{2\nu}$ and $\frac{\Hmass^2}{8\nu^2}$, respectively.
 
 
-The Higgs boson mass is measured to be $125.09\pm0.24$\,GeV \cite{Agashe:2014kda}. Because the Higgs boson is lighter than a pair of heavier particles such as \HepProcess{\PWp\PWm} or \HepProcess{\PZ\PZ}, the process \HepProcess{\PH \to \PWp\PWm} and \HepProcess{\PH \to \PZ\PZ} are forbidden kinematically. However,  the quantum field theory allows such processes to happen, if one of the decay products is virtual and not on the mass shell. The virtual gauge boson subsequently decays to real on-mass-shell particles. 
+The Higgs boson mass is measured to be $125.09\pm0.24$\,GeV \cite{Agashe:2014kda}. Because the Higgs boson is lighter than a pair of heavier particles such as \HepProcess{\PWp\PWm} or \HepProcess{\PZ\PZ}, the process \HepProcess{\PH \to \PWp\PWm} and \HepProcess{\PH \to \PZ\PZ} are forbidden kinematically. However,  the quantum field theory allows such processes to happen, if one of the decay products is virtual and not on the mass shell. The virtual gauge boson subsequently decays to real on-mass-shell particles.
 
 %Shown in \Figure{fig:theoryHiggsBranchingRatio}, the branching ratio of  \HepProcess{\PH \to \PWp\PWm} process is the second largest for a Higgs boson mass of 125\,GeV.
 
@@ -561,7 +561,7 @@ where $\Delta{a}\equiv 1 - a$ is the change in $a$, and $A$ and $B$ are two dime
 
 Therefore, for the purpose of measuring $g_{VVHH}$ and $g_{HHH}$ via double Higgs production, it is sufficient to treat the parameter $a$ as a known constant. Hence only a two-dimensional fit of the parameters $\delta_{b}$ and $\delta_{d_3}$ would be performed to extract values of $\delta_{b}$ and $\delta_{d_3}$.
 
-%However,  for a multi-TeV electron-positron collider, the cross section for single Higgs production is far greater than that of the double Higgs production. 
+%However,  for a multi-TeV electron-positron collider, the cross section for single Higgs production is far greater than that of the double Higgs production.
 
 %Therefore, for the purpose of measuring $g_{VVHH}$ and $g_{HHH}$ via double Higgs production, it is sufficient to treat the parameter $a$ as a known constant. Hence only a two-dimensional fit of the parameters $\delta_{b}$, and $\delta_{d_3}$ would be performed.
 
