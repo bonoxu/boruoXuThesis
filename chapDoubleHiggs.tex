@@ -118,7 +118,7 @@ The simulation and reconstruction chain is described in \Chapter{chap:Reconstruc
 Finally, the beam induced background, \ggHad, is simulated and overlayed on all events. Details can be found in \Section{sec:pandoraggHad}.
 % according to the integration time of each subdetector
 
-\begin{table}[!tbp]\centering
+\begin{table}[!htbp]\centering
 % TODO fix lumi correction for e gamma, gamma e
 % TODO change some of sample cross section for  electron-photon interaction with four quarks and a neutrino final state
 
@@ -285,7 +285,7 @@ Primary Track & $r_0 < 0.5$\,mm \\
 
 
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{{doubleHiggs/isoLep/electron1highPTSignal}}}
     \caption{}
@@ -368,7 +368,7 @@ The iterative particle addition procedure stops when the cone opening angle is l
 %tau hypothesis singular or tau hypotheses plural?
 
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{{doubleHiggs/isoLep/tau1}}}
     \caption{}
@@ -490,7 +490,7 @@ and hadronic pairs will hit the BeamCal calorimeter in the forward region.
 % as this is the only study available for comparison.
 
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{{doubleHiggs/forward/ForwardBCAL}}}
     \caption{}
@@ -525,7 +525,7 @@ The performances of the different lepton finding processors for signal events an
 
 The forward lepton finders are most effective at rejecting background events with primary leptons in the forward region. \TABLE{tab:doubleHiggsIsoLepPerformance} shows the performance of the processors for signal events and the  \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background events. Only 1\% of signal events are rejected, but 47.4\% of the \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background events are rejected. \TABLE{tab:doubleHiggs1.4TeVPreslection} list the number of events surviving lepton rejection for signal and all background channels.
 
-\begin{table}[!tbp]
+\begin{table}[!htbp]
 \begin{tabular}{lrrr}
 \hline
 \hline
@@ -555,7 +555,7 @@ The lepton finding processors were optimised with events at \rootS{1.4}.  It was
 When comparing the lepton finding performances at \rootS{1.4} and \rootS{3}, the performance for \rootS{1.4} is better. This is because at \rootS{3}, particles ten to be boosted more and the spatial separation between particles is smaller due to the higher multiplicities. Coonsequently particles are less isolated from each other. The higher centre-of-mass energy also affects the performance of the forward lepton finder. Whilst at \rootS{1.4}, the forward finder only rejects 5\% of the \HepProcess{\Pep \Pem \to \Pquark\Pquark\Pquark\Pquark\Plepton\Pnu} background events and 1\% of the signal events, at \rootS{3} it rejects 19\% of events from the same background process and 4\% of the signal events, as more leptons are boosted into the forward region.
 
 
-\begin{table}[!tbp]
+\begin{table}[!htbp]
 \begin{tabular}{lrrr}
 \hline
 \hline
@@ -578,7 +578,7 @@ Combined & 81.0\% & 23.3\% &  33.4\% \\
 
 
 \begin{comment}
-\begin{table}[!tbp]
+\begin{table}[!htbp]
 \begin{tabular}{lrr}
 \hline
 \hline
@@ -669,7 +669,7 @@ The choice of \PFO collection impacts number of \PFOs in the event. The loose \P
 
 Based on the results summarised in \Figure{fig:doubleHiggs1.4TeVMassFit} for this analysis, it was decided to use  $R = 0.7$  with the \normalPFO. This choice  gives good fitted mass peak positions for \Hbb, \HWW and \PW. The extracted fitted parameters of optimal jet reconstructions are summarised in \Table{tab:doubleHiggsFitParameters}.
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R}.pdf}
     \caption{}
@@ -738,7 +738,7 @@ A separate jet reconstruction optimisation is performed for \rootS{3} analysis. 
 %The relative mass resolution of \PW worsen with increasing $R$, hence optimal choice favours a small $R$ and \tightPFO. The optimal jet reconstruction parameters is  \tightPFO with $R = 0.7$. The excellent mass resolution with the optimal choice compensates for the invariant masses being slightly smaller than simulated values. The fitted mass peak positions and mass resolutions  1of the chosen jet reconstruction are listed in \Table{tab:doubleHiggs3TeVFitParameters}
 
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R}.pdf}
     \caption{}
@@ -818,7 +818,7 @@ Compared to the performance at \rootS{1.4}, the performance is slightly worse, b
 %At the training stage, the  jet re-clustering step is set to find two jets.  he outputs for a jet is three values, corresponding to the likelihood of the jet being a b-jet, a c-jet, or a light flavour quark jet.
 
 
-F%or the \rootS{3}, the flavour tagging processor is re-trained in the same way as in the \rootS{1.4} analysis. The training events are from the same channel but at \rootS{3}. The performance of the flavour tagging  with training samples is shown in \Figure{fig:doubleHiggsBtag3TeV}. Compared to the performance at \rootS{1.4}, the performance is slightly worse, because at a high centre-of-mass energy, particles at more collimated and more difficult to separate. Therefore, the vertex identification and the flavour tagging performance are worse.
+%For the \rootS{3}, the flavour tagging processor is re-trained in the same way as in the \rootS{1.4} analysis. The training events are from the same channel but at \rootS{3}. The performance of the flavour tagging  with training samples is shown in \Figure{fig:doubleHiggsBtag3TeV}. Compared to the performance at \rootS{1.4}, the performance is slightly worse, because at a high centre-of-mass energy, particles at more collimated and more difficult to separate. Therefore, the vertex identification and the flavour tagging performance are worse.
 %high energy or high energies?
 
 \begin{figure}[!htbp]
@@ -871,7 +871,7 @@ where $N \in S$ indicates number of events in the phase space $S$.
 Several combinations of pairs of variables were considered. In each case, the product of the fraction of the sub-channel events in each space, $\varepsilon$ was maximised. This procedure identified $\sumBtag{4} < 2.3, \,-\log\parenths{\y{34}} < 3.7$ as the best choice with 86\% of  the hadronic \WW decay in \eeToHHbbWW events are in $S$ and 78\% of the \eeToHHbbbb events are in $\neg{S}$. The full list of fraction of events after passing mutually exclusive cuts for individual background processes are listed in \Table{tab:doubleHiggs1.4TeVPreslection}.
 
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{doubleHiggs/preSel/mutual6022bbWW2}
     \caption{\eeToHHbbWW, hadronic}
@@ -946,7 +946,7 @@ A jet pairing is only considered when at least one of the jets associated to the
 \end{figure}
 
 
-\begin{table}[!tbp]\centering
+\begin{table}[!htbp]\centering
 % TODO fix lumi correction for e gamma, gamma e
 % TODO change some of sample cross section for  electron-photon interaction with four quarks and a neutrino final state
 %\small{
@@ -1003,7 +1003,7 @@ A jet pairing is only considered when at least one of the jets associated to the
 \end{tabular}
 
 \caption
-{The table show the expected number of events, before cuts and after successive cuts: the lepton veto, \eeToHHbbWW/\eeToHHbbbb separation, and valid jet pairing, for the signal and background events at \rootS{1.4}, assuming an integrated luminosity of 1500\,\uprightMath{fb^{-1}}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles.}
+{The table show the expected number of events, before cuts and after successive cuts: the lepton veto, \eeToHHbbWW/\eeToHHbbbb separation, and valid jet pairing.  \HiggsTableLow }
 \label{tab:doubleHiggs1.4TeVPreslection}
 \end{table}
 
@@ -1015,7 +1015,7 @@ After the association of jets to candidate bosons are made under hypothesis that
 
 Since both Higgs bosons are on mass shell,  the invariant mass of the double Higgs system is large. Consequently, a cut on $m_{\HH} > 150$\,GeV, as shown in \FIGURE{fig:doubleHiggs1.4PreSelmHH}, removes a small amount of signal events, but discard lots of  background events, especially  \HepProcess{\Gammagamma \to \Pquark \Pquark \Pquark \Pquark} events.
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
     \includegraphics[width=0.95\textwidth]{{doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_prepare}.pdf}
    \caption{Distributions of the invariant mass of the two Higgs system for \rootS{1.4}, assuming an intergraded luminosity of 1500\,\uprightMath{fb^{-1}}. }
     \label{fig:doubleHiggs1.4PreSelmHH}
@@ -1025,7 +1025,7 @@ Since both Higgs bosons are on mass shell,  the invariant mass of the double Hig
 
 Many background events do not have b-quark jets in the final state. Therefore, by requiring the second highest b-jet tag value greater than 0.2, as shown in \FIGURE{fig:doubleHiggs1.4PreSelbtag},  background events with no b-jets in final states are removed.
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
     \includegraphics[width=0.95\textwidth]{{doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_prepare}.pdf}
 
     \caption{Distributions of the  second highest b-jet tag value for \rootS{1.4}, assuming an intergraded luminosity of 1500\,\uprightMath{fb^{-1}}. }
@@ -1034,7 +1034,7 @@ Many background events do not have b-quark jets in the final state. Therefore, b
 
 The signal final states have neutrinos and hence missing momentum in the events. Therefore, the transverse  momentum  of the two Higgs system is non zero. A cut of $\pT>30$\,GeV, as shown in \Figure{fig:doubleHiggs1.4PreSelpT}, is extremely effective against background channels with no neutrinos in the final state.
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
     \includegraphics[width=0.95\textwidth]{{doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_prepare}.pdf}
 
     \caption{Distributions of the transverse momentum  of the two Higgs system for \rootS{1.4}, assuming an intergraded luminosity of 1500\,\uprightMath{fb^{-1}}. }
@@ -1065,7 +1065,7 @@ Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.7 \\
 
 
 
-\begin{table}[!tbp]\centering
+\begin{table}[!htbp]\centering
 
 \begin{tabular}{lrrr}
 \hline \hline
@@ -1118,7 +1118,7 @@ Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.7 \\
 \hline \hline
 \end{tabular}
 \caption[List of signal and background samples after pre-selection cuts at \rootS{1.4}.]
-{The table shows the expected number of events after successive cuts:  invariant mass of the two Higgs system > 150\,GeV,  the  second highest b-jet tag value > 0.2, and the transverse momentum  of the two Higgs system  > 30\,GeV.  All cuts include the lepton veto, \eeToHHbbWW/\eeToHHbbbb separation, and valid jet pairing. The table shows  for the signal and background events at \rootS{1.4}, assuming an integrated luminosity of 1500\,\uprightMath{fb^{-1}}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles.}
+{The table shows the expected number of events after successive cuts:  invariant mass of the two Higgs system > 150\,GeV,  the  second highest b-jet tag value > 0.2, and the transverse momentum  of the two Higgs system  > 30\,GeV.  All cuts include the lepton veto, \eeToHHbbWW/\eeToHHbbbb separation, and valid jet pairing. \HiggsTableLow}
 \label{tab:doubleHiggsPreslectionPart2}
 \end{table}
 
@@ -1204,7 +1204,7 @@ The last four variables used in the MVA event selection are the \PFOs number  va
 
 An optimal set of 32 variables are chosen for the best MVA performance, whilst no strong ($>80\%$) pair-wise correlation exists between any two variables. %shown in \Figure{fig:doubleHiggs1.4Corr}.
 
- \begin{table}[!tbp]\centering
+ \begin{table}[!htbp]\centering
 \begin{tabular}{lr}
 \hline
 \hline
@@ -1227,7 +1227,7 @@ Event shape & \multicolumn{1}{R{0.6\textwidth}}{$\abs{\sphericity}$, $-\ln(\y{23
 
 
 
- \begin{figure}[!tbp]
+ \begin{figure}[!htbp]
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_M_TMVA20161208R0_7_qq_btag2_prepare_testNew2}.pdf}
     \caption{}
@@ -1254,7 +1254,7 @@ Event shape & \multicolumn{1}{R{0.6\textwidth}}{$\abs{\sphericity}$, $-\ln(\y{23
 \end{figure}
 
 \begin{comment}
- \begin{figure}[!tbp]
+ \begin{figure}[!htbp]
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{doubleHiggs/mva/1400signalCorr}}
     \caption{}
@@ -1289,7 +1289,7 @@ After dividing all events into a training set and a testing set, in the training
 %The optimisation of the BDT follows the strategy outlined in \Section{sec:pandoraMVAbdtVar}. The optimal values are obtained by choosing the best performance without overfitting.
 %at \rootS{3}. The same optimised parameters are used for \rootS{1.4} analysis.
 
-\begin{table}[!tbp]\centering
+\begin{table}[!htbp]\centering
 %\small{
 
 \begin{tabular}{lr}
@@ -1333,7 +1333,7 @@ Before interpreting the result for analysis at \rootS{1.4}, the analyses at \roo
 
 
 
-\begin{table}[!tbp]\centering
+\begin{table}[!htbp]\centering
 %\small{
 
 \begin{tabular}{lrrrr}
@@ -1388,7 +1388,7 @@ Before interpreting the result for analysis at \rootS{1.4}, the analyses at \roo
 \end{tabular}
 
 \caption[Selection efficiency and number of events for signal and background at \rootS{1.4}.]%
-{List of signal and background events with selection efficiency and number of events at \rootS{1.4}, assuming a luminosity of 1500\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of MVA after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after MVA ($N_{MVA}$) are shown. - represents a number less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop.}
+{List of signal and background events with selection efficiency and number of events at \rootS{1.4}, assuming  an integrated  of 1500\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of the MVA event selection after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after the MVA event selection ($N_{MVA}$) are shown. - represents a number less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop.}
 \label{tab:doubleHiggs1.4TeVMVA}
 \end{table}
 
@@ -1400,7 +1400,7 @@ The the hadronic \WW decay of the \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom 
 
 Cross sections of used samples are listed in \Table{tab:doubleHiggs3crossSection}. The mutually exclusive cuts to separate events into two independent sets are almost identical to the cuts used in the \rootS{1.4} analysis. \FIGURE{fig:doubleHiggs3TeVMutualPreselection} shows the sum of b-jet tag values, when the event is clustered into four jets, as a function of $-\log\parenths{\y{34}}$ for the hadronic \WW decay in \eeToHHbbWW and \eeToHHbbbb sub-channels. The optimised cuts are  $\sumBtag{4} < 2.3, \, -\log\parenths{\y{34}} < 3.6$. The selection efficiencies of evens after lepton veto, the  mutually exclusive cuts  and the jet pairing for individual channel are shown in \Table{tab:doubleHiggs3TeVPreslection}.
 
-\begin{table}[!tbp]\centering
+\begin{table}[!htbp]\centering
 % TODO fix lumi correction for e gamma, gamma e
 % TODO change some of sample cross section for  electron-photon interaction with four quarks and a neutrino final state
 
@@ -1465,7 +1465,7 @@ Channel  &  $\sigma(\rootS{3})$ / fb   \\
 
 
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
   \begin{subfigure}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{{doubleHiggs/preSel/mutual6025bbWW2}}
     \caption{\eeToHHbbWW, hadronic}
@@ -1484,13 +1484,13 @@ Channel  &  $\sigma(\rootS{3})$ / fb   \\
 The pre-selection cuts at \rootS{3} use the same cut on $m_{\HH}$. The cut on  b-jet tag is different because the performance of flavour tagging is worse at \rootS{3} in comparison to the performance at \rootS{1.4}. \FIGURE{fig:doubleHiggs3PreSelbtag} shows the distribution of the highest b-jet tag value, where the cut above 0.7 helps to reduce background events with no b-jet in final states.  \FIGURE{fig:doubleHiggs3PreSelmHH} shows the distribution of the invariant mass of the two Higgs system, where the cut above 150\,GeV is effective against samples with two-quark final states.  The fraction of events passing each pre-section cut for individual channel are listed in  \Table{tab:doubleHiggs3TeVPreslectionPart2}.
 
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
     \includegraphics[width=0.85\textwidth]{{doubleHiggs/preSel/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag2_prepare}.pdf}
     \caption{Distributions of the invariant mass  of the two Higgs system for \rootS{3}, assuming an intergraded luminosity of 2000\,\uprightMath{fb^{-1}}.}
     \label{fig:doubleHiggs3PreSelmHH}
 \end{figure}
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
     \includegraphics[width=0.85\textwidth]{{doubleHiggs/preSel/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prepare}.pdf}
     \caption{Distributions of the highest b-jet tag value for \rootS{3}, assuming an intergraded luminosity of 2000\,\uprightMath{fb^{-1}}.}
     \label{fig:doubleHiggs3PreSelbtag}
@@ -1500,7 +1500,7 @@ The cuts to aid the MVA at \rootS{3} are largely the same as the ones at \rootS{
 
 
 \begin{comment}
-\begin{table}[!tbp]
+\begin{table}[!htbp]
 \begin{tabular}{lrr}
 \hline
 \hline
@@ -1522,7 +1522,7 @@ Combined & 81.0\% &  33.4\%  \\
 % The optimal "what?" chosen is tight tightPFO?
 
 \begin{comment}
-\begin{table}[!tbp]
+\begin{table}[!htbp]
 \begin{tabular}{lrr}
 \hline
 \hline
@@ -1598,7 +1598,7 @@ Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.6 \\
 
 The same set of variables are used in the MVA as in the analysis at \rootS{1.4}. The optimised parameters for the Boosted Decision Tree classifier are the same. The efficiencies of the MVA event selections and the number of events after the MVA event selection are listed in \Table{tab:doubleHiggs3TeVMVA}. Background channels that are dominant after the MVA event selection are almost identical to those at \rootS{1.4}. Hence see \Section{sec:doubleHiggsSignalSelResult} for discussion.
 
-\begin{table}[!tbp]\centering
+\begin{table}[!htbp]\centering
 %\small{
 \small
 \begin{tabular}{lrrrr}
@@ -1653,7 +1653,7 @@ The same set of variables are used in the MVA as in the analysis at \rootS{1.4}.
 \hline \hline
 \end{tabular}
 \caption[List of signal and background selection efficiencies and event numbers after MVA application at  \rootS{3}.]
-{List of signal and background events with selection efficiency and number of events at \rootS{3}, assuming a luminosity of 2000\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of MVA after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after MVA ($N_{MVA}$) are shown. - represents a number less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation.}
+{List of signal and background events with selection efficiency and number of events at \rootS{3}, assuming an integrated  luminosity of 2000\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of the MVA event selection after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after the MVA event selection ($N_{MVA}$) are shown. - represents a number less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles.}
 \label{tab:doubleHiggs3TeVMVA}
 \end{table}
 
@@ -1689,7 +1689,7 @@ Loose cuts for MVA &  \multicolumn{1}{R{0.5\textwidth}}{$m_{\Hbb} < 500\,GeV$, $
 \end{table}
 \end{comment}
 
- \begin{table}[!tbp]\centering
+ \begin{table}[!htbp]\centering
 \begin{tabular}{lr}
 \hline
 \hline
@@ -1714,7 +1714,7 @@ Event shape & \multicolumn{1}{R{0.6\textwidth}}{$\abs{\sphericity}$, $-\ln(\y{23
 
 
 
-\begin{table}[!tbp]\centering
+\begin{table}[!htbp]\centering
 %\small{
 
 \begin{tabular}{lrrrr}
@@ -1766,36 +1766,28 @@ Event shape & \multicolumn{1}{R{0.6\textwidth}}{$\abs{\sphericity}$, $-\ln(\y{23
 \gammagamma{\Pphoton}{\EPA}{\Pphoton}{\BS}{ \Pquark \Pquark \Pquark \Pquark}& 3828498 & 1.0\%&  0.08\% & 28.85 \\
 \gammagamma{\Pphoton}{\EPA}{\Pphoton}{\EPA}{ \Pquark \Pquark \Pquark \Pquark}& 805400& 1.1\%&  - & - \\
 \hline \hline
-\end{tabular} semi-leptonic \WW decay of \eeToHHbbWW
+\end{tabular}
 \caption
-{List of signal and background events with selection efficiency and number of events at \rootS{3}  for semi-leptonic \WW decay of \eeToHHbbWW analysis , assuming a luminosity of 2000\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of MVA after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after MVA ($N_{MVA}$) are shown. - represents a number less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation.}
+{List of signal and background events with selection efficiency and number of events at \rootS{3}  for semi-leptonic \WW decay of \eeToHHbbWW analysis , assuming an integrated luminosity of 2000\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of MVA after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after MVA ($N_{MVA}$) are shown. - represents a number less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles.}
 \label{tab:doubleHiggsQlv3TeVMVA}
 \end{table}
-
+%semi-leptonic \WW decay of \eeToHHbbWW
 \section{Result interpretation}
 \label{sec:doubleHiggsResults}
 
 
 
-The results of analyses at the \rootS{1.4} and \rootS{3}  are summarised in \Table{tab:doubleHiggsResult}. For the hadronic \WW decay of \eeToHHbbWW analyses at \rootS{1.4} and \rootS{3}, numbers of the signal events passing the MVA event selection are 1.79 and 15.45, respectively; the numbers of background events passing the MVA event selection are 8.41 and 242.28, respectively. For  the semi-leptonic \WW decay of \eeToHHbbWW analyses \rootS{3}, the number of the signal events passing the MVA event selection is 31.24, whilst the  numbers of background events passing the MVA event selection is 3612.39.
+The numbers of signal events and background events and significance after the MVA event selection for analyses at the \rootS{1.4} and \rootS{3}  are listed in \Table{tab:doubleHiggsResult}. The significance is defined as the number of signal events divided by the square root of the sum of the number of the signal and background events. The \ee collision at \rootS{1.4} assumes an integrated luminosity of 1500\,\uprightMath{fb^{-1}}, whilst that of the \rootS{3} assumes an integrated luminosity of 2000\,\uprightMath{fb^{-1}}.  For the hadronic \WW decay of \eeToHHbbWW analysis at \rootS{1.4}, the number of selected signal events is 1.79, and the number of selected background events is 8.41. For the hadronic analysis at \rootS{3}, the number of the signal is 15.45, and the number of the background is 242.28. For the semi-leptonic \WW decay of \eeToHHbbWW analysis at \rootS{3}, the number of the signal is 31.24, and the number of the background is 3612.39.
 
+ %and \rootS{3}, numbers of the signal events passing the MVA event selection are 1.79 and 15.45, respectively, and the numbers of background events passing the MVA event selection are 8.41 and 242.28, respectively. For  the semi-leptonic \WW decay of \eeToHHbbWW analyses \rootS{3}, the number of the signal events passing the MVA event selection is 31.24, whilst the  numbers of background events passing the MVA event selection is 3612.39.
 
-
-The expected uncertainty on the measurement of the cross sections, which is roughly $\sqrt{N_S + N_B} / N_S$ at \rootS{1.4} and 3\,TeV, are:
-\begin{equation}
-\frac{\Delta\left[\sigma\left(\HHvv\right)\right]}{\sigma\left(\HHvv\right)}=
-\begin{cases}
-  179\%, & \mbox{at \rootS{1.4}, }  \\
-  92\%, & \mbox{at \rootS{3}},
-\end{cases}
-\end{equation}
-where $N_S$ is the number of  \eeToHH events passing the MVA event selection and $N_B$ is the number of background events passing the MVA event selection. The result at \rootS{3} combines both the hadronic and semi-leptonic decay sub-channels.
+% which is roughly $\sqrt{N_S + N_B} / N_S$ at \rootS{1.4} and 3\,TeV,
 
 \begin{table}[!htbp]
 \begin{tabular}{lrrr}
 \hline
 \hline
-Channel  &  $N_{S}$ & $N_{B}$ & $N_S / \sqrt{N_S + N_B}$ \\
+Channel  &  $N_{S}$ & $N_{B}$ & $\frac{N_S} { \sqrt{N_S + N_B}}$ \\
 \hline
 \multicolumn{1}{L{0.3\textwidth}}{\eeToHHbbWW, hadronic, \rootS{1.4}} & 1.79 & 8.41 & 0.56 \\
 \multicolumn{1}{L{0.3\textwidth}}{\eeToHHbbWW, hadronic, \rootS{3}} & 15.45 & 242.28 & 0.96 \\
@@ -1804,61 +1796,75 @@ Channel  &  $N_{S}$ & $N_{B}$ & $N_S / \sqrt{N_S + N_B}$ \\
 \hline
 \end{tabular}
 \caption
-{Number of signal and background events, and significance after MVA for all \eeToHHbbWW analyses.}
+{Number of signal ($N_S$) and background  ($N_B$) events, and significance ($N_S / \sqrt{N_S + N_B}$) after MVA event selections for \eeToHHbbWW analyses at \rootS{1.4} and 3\,TeV. The \ee collision at \rootS{1.4} assumes an integrated luminosity of 1500\,\uprightMath{fb^{-1}}, whilst that of the \rootS{3} assumes an integrated luminosity of 2000\,\uprightMath{fb^{-1}}.}
 \label{tab:doubleHiggsResult}
 \end{table}
 
 
-As previously stated, the double Higgs production cross section is sensitive to the Higgs trilinear self coupling \gHHH. The relative uncertainty on the coupling can be related to the uncertainty on the coupling via:
+The expected uncertainties on the measurement of the double Higgs production cross sections are estimated to be the inverse of the significance:
+\begin{equation}
+\frac{\Delta\left[\sigma\left(\HHvv\right)\right]}{\sigma\left(\HHvv\right)} =
+\begin{cases}
+  179\%, & \mbox{at \rootS{1.4}, }  \\
+  92\%, & \mbox{at \rootS{3}},
+\end{cases}
+\end{equation}
+%where $N_S$ is the number of  \eeToHH events passing the MVA event selection and $N_B$ is the number of background events passing the MVA event selection.
+
+The value at \rootS{3} combines the results from analyses for the hadronic and semi-leptonic decay sub-channels.
+
+
+%. The relative uncertainty on the \gHHH coupling can be related to the uncertainty on the cross section
+The Higgs trilinear self coupling \gHHH is related to the double Higgs production cross section via  \cite{Abramowicz:2016zbo}:
 \begin{equation}
 \frac{\Delta\gHHH}{\gHHH}\approx \kappa \cdot \frac{\Delta\left[\sigma\left(\HHvv\right)\right]}{\sigma\left(\HHvv\right)},
 \label{eqn:doubleHiggs1Dextration}
 \end{equation}
-$\kappa$ can be extracted by varying the \gHHH and parameterising the cross section. \FIGURE{fig:doubleHiggsCouplingOneDRelation} shows the cross sections as a function of the coupling at generator level for \rootS{1.4} and \rootS{3}  \cite{Abramowicz:2016zbo}. The negative gradient indicates that the Feynman diagram that is  sensitive to the \gHHH experiences destructive interferences with other SM Feynman  diagrams. At the SM \gHHH value, the $\kappa$ is 1.22 and 1.47 at \rootS{1.4} and 3\,TeV respectively.
+The coefficient $\kappa$ can be determined by parameterising the cross section as a function of the coupling \gHHH. \FIGURE{fig:doubleHiggsCouplingOneDRelation} shows the cross sections as a function of the coupling \gHHH for \rootS{1.4} and \rootS{3}. The negative gradient indicates that for all processes producing double Higgs, the process  that is  sensitive to the \gHHH experiences destructive interferences with other SM processes with the same final state. At the SM \gHHH value, the coefficient $\kappa$ is 1.22 at \rootS{1.4}, and 1.47  at  \rootS{3}.
 %Since $\kappa$ is extracted from the relation at generator level, the fully simulated reconstruction selection may favour certain Feynman diagrams, therefore affecting the sensitivity to $\lambda$ .
 
 
+\begin{figure}[!htbp]
+    \includegraphics[width=0.45\textwidth]{{doubleHiggs/extraction/oneDrelation}}
+\caption[Cross section for the \eeToHH process as a function of the ratio $\lambda/\lambda_{SM}$ ]
+{Cross section for the \eeToHH process as a function of the ratio $\lambda/\lambda_{SM}$ at \rootS{1.4} and 3\,TeV, taken from \cite{Abramowicz:2016zbo}. Here $\lambda$ is the Higgs trilinear self coupling, \gHHH.}
+   \label{fig:doubleHiggsCouplingOneDRelation}
+\end{figure}
 %Without electron polarisation,
-The uncertainty on measurement of the Higgs trilinear self coupling, \gHHH, from  \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue} analysis is obtained via \Equation{eqn:doubleHiggs1Dextration}:
+The uncertainties on measurement of the Higgs trilinear self coupling, \gHHH, from  \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue} analyses, are hence obtained via \Equation{eqn:doubleHiggs1Dextration}:
 \begin{equation}
-\frac{\Delta\gHHH}{\gHHH}=
+\frac{\Delta\gHHH}{\gHHH} \approx
 \begin{cases}
   218\%, & \mbox{at \rootS{1.4}, }  \\
   135\%, & \mbox{at \rootS{3}}.
 \end{cases}
 \end{equation}
 
-Since the Feynman diagrams for the double Higgs boson productions include t-channel $\HepProcess{\PW\PW}$-fusion, the cross section can be enhanced by using polarised electron beam. For $P(\Pem) = 80\%$, the uncertainty of \gHHH via \Equation{eqn:doubleHiggs1Dextration} becomes:
+Since the leading-order  Feynman diagrams for the double Higgs boson production  include a t-channel $\HepProcess{\PW\PW}$-fusion process, the cross section can be enhanced by using a polarised electron beam. For a electron beam polarisation of $P(\Pem) = 80\%$, the uncertainties of the coupling \gHHH  become:
 \begin{equation}
-\frac{\Delta\gHHH}{\gHHH}=
+\frac{\Delta\gHHH}{\gHHH} \approx
 \begin{cases}
   163\%, & \mbox{at \rootS{1.4}, }  \\
   97\%, & \mbox{at \rootS{3}}.
 \end{cases}
 \end{equation}
-When both \sqrtS are combined, the statistical precision on \lambda increases to 99\% for the unpolarised beam, and 87\% for the polarised beam with  $P(\Pem) = 80\%$.
+When the analyses at both \rootS{1.4} and \rootS{3} are combined, the uncertainty of the coupling \gHHH improves to 99\% with the unpolarised beam, and to 87\% with the polarised beam of  $P(\Pem) = 80\%$.
 
-\begin{figure}[!tbp]
-    \includegraphics[width=0.45\textwidth]{{doubleHiggs/extraction/oneDrelation}}
-\caption[Cross section for the \eeToHH process as a function of the ratio $\lambda/\lambda_{SM}$ ]
-{Cross section for the \eeToHH process as a function of the ratio $\lambda/\lambda_{SM}$ at \rootS{1.4} and 3\,TeV, taken from \cite{Abramowicz:2016zbo}. Here $\lambda$ is the Higgs trilinear self coupling, \gHHH.}
-   \label{fig:doubleHiggsCouplingOneDRelation}
-\end{figure}
 
 \section{Combined results}
 
-When \eeToHHbbWW and \eeToHHbbbb sub-channels are combined, the expected precisions on the cross sections are:
+When the analyses for \eeToHHbbWW and \eeToHHbbbb sub-channels are combined, the expected uncertainties on the double Higgs production cross section measurements are:
 \begin{equation}
-\frac{\Delta\left[\sigma\left(\HHvv\right)\right]}{\sigma\left(\HHvv\right)}=
+\frac{\Delta\left[\sigma\left(\HHvv\right)\right]}{\sigma\left(\HHvv\right)} =
 \begin{cases}
   44\%, & \mbox{at \rootS{1.4}, }  \\
   20\%, & \mbox{at \rootS{3}},
 \end{cases}
 \end{equation}
 
-This translates to the uncertainty on the Higgs trilinear self coupling \gHHH, via \Equation{eqn:doubleHiggs1Dextration}, without electron polarisation:
+This translates to uncertainties on the measurement of the Higgs trilinear self coupling \gHHH, via \Equation{eqn:doubleHiggs1Dextration}, with unpolarised beams:
 \begin{equation}
-\frac{\Delta\gHHH}{\gHHH}=
+\frac{\Delta\gHHH}{\gHHH} \approx
 \begin{cases}
   54\%, & \mbox{at \rootS{1.4}, }  \\
   29\%, & \mbox{at \rootS{3}}.
@@ -1867,45 +1873,68 @@ This translates to the uncertainty on the Higgs trilinear self coupling \gHHH, v
 
 \section{Simultaneous couplings extraction}
 
-As stated in the beginning of the chapter the study of the double Higgs production via \WW fusion can probe the Higgs trilinear self coupling, \gHHH and quartic coupling, \gWWHH. Therefore, a simultaneous extraction on the coupling uncertainty can be performed by extending the method in the previous sections. Once a relationship between \gHHH , \gWWHH and difference in kinematic variable distributions is established, a contour of the uncertainty of the measurements of  \gHHH and \gWWHH in two-dimensional phase space can be obtained.
+%As stated in the beginning of the chapter,
+%Therefore, a simultaneous extraction on the coupling uncertainty can be performed by extending the one-dimensional coupling extraction in the previous sections.
+The study of the double Higgs production via \WW fusion can probe the Higgs trilinear self coupling, \gHHH, and quartic coupling, \gWWHH.  A two-dimensional couplings extraction is performed using the results of the hadronic  analysis at  \rootS{3}. The integrated luminosity in this section is assumed to be 3000\,\uprightMath{fb^{-1}} at  \rootS{3}  to reflect the updated \CLIC running scenario \cite{CLIC:2016zwp}. A simple scaling is applied to the results of the analysis at \rootS{3} to adapt to  the change in the luminosity.
 
-This two dimensional template fitting is performed at  \rootS{3}, as the precision at \rootS{1.4} is too low to support such a fitting. The integrated luminosity is assumed to be 3000\,\uprightMath{fb^{-1}} to reflect the updated \CLIC running scenario.
-
-The normalised cross section of the \eeToHH as a function of \gHHH and \gWWHH is shown in \Figure{fig:doubleHiggsCouplingCrossSection}. The SM cross section is normalised to 1. Around the SM coupling value, the cross section increases with the decrease of \gHHH and with the increase of \gWWHH. Hence the cross sections along the anti-diagonal are nearly constant, which would be difficult to precisely determine the statistical uncertainty on the coupling measurements.
-
+% , as the uncertainty in couplings obtained from analysis at \rootS{1.4} is too large to obtain meaningful results.
+%  template fitting
 
 
-To determine the uncertainty on the coupling measurements, the variables proposed in the generator-level study in \Section{sec:theoryHiggsBSM} are used: the invariant mass of the two Higgs system, \mhh, and the scalar sum of the two Higgs transverse momentum, \HT.  %By choosing kinematic bins, high-energy behaviour can be disentailed from the physics at threshold, allowing the extraction of the coupling strength \gWWHH and \gHHH.
 
-Simulated events with non-SM couplings are generated and reconstructed. These events went through the analysis chain discussed in this chapter with the same cuts and the same MVA classifier.  \FIGURE{fig:doubleHiggsCouplingSignificancebbWW} shows the  signal significance of the double Higgs events with hadronic \WW decay of \eeToHHbbWW sub-channel as a function of  \gHHH and \gWWHH.
+
+
+The \eeToHH events with non-SM couplings are generated and reconstructed.  The normalised cross sections of the \eeToHH as a function of \gHHH and \gWWHH are shown in \Figure{fig:doubleHiggsCouplingCrossSection}.  Around the SM coupling values, the cross section increases with the decrease of \gHHH and with the increase of \gWWHH.
+
+%The cross sections along the anti-diagonal are nearly constant, which would be difficult to precisely determine the statistical uncertainty on the coupling measurements.
 
 \begin{figure}[!htbp]
     \includegraphics[width=0.85\textwidth]{{doubleHiggs/extraction/crossSectionNew2}}
-\caption{Normalised cross section for the \eeToHH process as a function of the $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$ at \rootS{3}.}
+\caption{Normalised cross section for the \eeToHH process as a function of the $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$ at \rootS{3}. All cross sections are normalised to the cross section at the SM couplings value.}
    \label{fig:doubleHiggsCouplingCrossSection}
 \end{figure}
 
 
 
-The selected events are divided into 8 kinematic bins. Two bins in \HT are obtained by dividing the \HT distribution at 200\,GeV. Four bins in \mhh are obtained by dividing the \mhh distribution at 400, 560, and 720\,GeV. A $\chi^2$ function is constructed to access the difference of the \mhh and \HT distributions for  non-SM coupling comparing to \SM coupling sample, defined as:
-\begin{equation}
-\chi^2 = \sum_{i}^{bins}\frac{\parenths{N_i - N_{i,observed}}^2}{N_{i}},
-\end{equation}
-where $N_i$ is the number of event expected in a kinematic bin $i$ for a non-SM coupling sample; and $ N_{i,observed}$ is the number of event observed in a kinematic bin $i$. Here the observed set is the \SM coupling sample. The expression is summed over all kinematic bins. By construction, the \SM coupling point has a $\chi^2$ of 0. \FIGURE{fig:doubleHiggsCouplingChi2Separate} shows the $\chi^2$  as a function of \gHHH and \gWWHH for two sub-channels; hadronic \WW decay of \eeToHHbbWW and \eeToHHbbbb. The $\chi^2$ values for the \eeToHHbbbb sub-channel are larger as the \eeToHHbbbb is more sensitive to the couplings.
+%Once a relationship between the couplings, \gHHH and \gWWHH, and the change in kinematic variable distributions is established,  the uncertainty of the measurements of  \gHHH and \gWWHH  be obtained.
 
-\begin{figure}[!tbp]
+%To determine the uncertainty on the coupling measurements, the variables proposed in the  study in \Section{sec:theoryHiggsBSM} are used: the invariant mass of the two Higgs system, \mhh, and the scalar sum of the two Higgs transverse momentum, \HT.  %By choosing kinematic bins, high-energy behaviour can be disentailed from the physics at threshold, allowing the extraction of the coupling strength \gWWHH and \gHHH.
+%generator-leve
+
+These generated non-SM coupling \eeToHH events went through the analysis chain discussed in this chapter with the same cuts and the same MVA classifier applied. The same of background events from the \rootS{3} analysis were added to the signal events with non-SM couplings. \FIGURE{fig:doubleHiggsCouplingSignificancebbWW} shows the  signal significance of the double Higgs events with hadronic \WW decay of \eeToHHbbWW sub-channel as a function of  \gHHH and \gWWHH.
+
+\begin{figure}[!htbp]
     \includegraphics[width=0.8\textwidth]{doubleHiggs/extraction/SignificanceBono3}
-\caption{The significance for the \eeToHH process as a function of the $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$ at \rootS{3}, using sub-channel hadronic \WW decay of \eeToHHbbWW, assuming an integrated luminosity of  3000\,\uprightMath{fb^{-1}}.}
+\caption{The significance for the \eeToHH process as a function of the $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$ at \rootS{3}, using  hadronic \WW decay of \eeToHHbbWW sub-channel, assuming an integrated luminosity of  3000\,\uprightMath{fb^{-1}}.}
    \label{fig:doubleHiggsCouplingSignificancebbWW}
 \end{figure}
 
-\begin{figure}[!tbp]
-  \begin{subfigure}[b]{0.45\textwidth}
+
+To improve the extraction of the couplings, two kinematic variables that are sensitive to the change of the couplings are used (see \Section{sec:theoryHiggsBSM}): the invariant mass of the two Higgs system, \mhh, and the scalar sum of the two Higgs transverse momentum, \HT.
+
+The kinematic variables are subsequently binned. Two bins in \HT are obtained by dividing the \HT distribution at 200\,GeV. Four bins in \mhh are obtained by dividing the \mhh distribution at 400, 560, and 720\,GeV. This results in events being divided into 8 kinematic bins.
+
+%Once the relationship between the change in the kinematic variable distributions, and the change in couplings is established,  the uncertainties of the measurements of  \gHHH and \gWWHH  can be obtained.
+
+%The selected events are divided into 8 kinematic bin. Two bins in \HT are obtained by binning the \HT distribution at 200\,GeV. Four bins in \mhh are obtained by dividing the \mhh distribution at 400, 560, and 720\,GeV.
+To access the change in the \mhh and \HT distributions for  non-SM coupling sampleing comparing to \SM coupling sample, the $\chi^2$ function is used:
+%A $\chi^2$ function is constructed to access the change in the \mhh and \HT distributions for  non-SM coupling comparing to \SM coupling sample, defined as:
+\begin{equation}
+\chi^2 = \sum_{i}^{8}\frac{\parenths{N_i - N_{i,observed}}^2}{N_{i}},
+\label{eqn:doubleHiggsChi2}
+\end{equation}
+where $N_i$ is the number of expected  events in the kinematic bin $i$ in a non-SM coupling sample; and $ N_{i,observed}$ is the number of observed  event in the kinematic bin $i$. Here the observed sample is assumed to be the \SM coupling sample. The  $\chi^2$  is summed over all kinematic bins. By construction, the \SM coupling point has a $\chi^2$ of 0. \FIGURE{fig:doubleHiggsCouplingChi2Separate} shows the $\chi^2$  as a function of \gHHH and \gWWHH using samples from two sub-channels: hadronic \WW decay of \eeToHHbbWW and \eeToHHbbbb. The $\chi^2$ values for the \eeToHHbbbb sub-channel are larger because the signal significance of \eeToHHbbbb  sub-channel is much higher than that of the hadronic \WW decay of \eeToHHbbWW channel.
+
+%more sensitive to the couplings.
+
+
+\begin{figure}[!htbp]
+  \begin{subfigure}[b]{0.75\textwidth}
     \includegraphics[width=\textwidth]{{doubleHiggs/extraction/new/chi2Bono4mhh2HT2}}
-    \caption{\eeToHHbbWWHad,}
+    \caption{\eeToHHbbWWHad}
     \label{fig:doubleHiggsCouplingChi2bbWW}
   \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.75\textwidth}
     \includegraphics[width=\textwidth]{doubleHiggs/extraction/new/chi2Rosa4mhh2HT2}
     \caption{\eeToHHbbbb}
     \label{fig:doubleHiggsCouplingChi2bbbb}
@@ -1915,27 +1944,29 @@ where $N_i$ is the number of event expected in a kinematic bin $i$ for a non-SM 
    \label{fig:doubleHiggsCouplingChi2Separate}
 \end{figure}
 
-Two sub-channels, hadronic \WW decay of \eeToHHbbWW and \eeToHHbbbb, are combined to increase the statistical precision on the coupling measurements.  To avoid statistical fluctuations in the sample, a toy MC experiment is performed. The SM coupling samples are treated as a data template set. 100000 data sets are generated by fluctuating the event number in each kinematic bin in the data template set according to Poisson distribution.  The $\chi^2$ is performed and summed using these generated data sets as the observed data. The summed $\chi$ is then averaged over the number of  data sets (100000) and normalised such that the $\chi^2$ at the  SM coupling is 0. Since only the difference between the non-SM and SM $\chi^2$ is used for the coupling measurements, the normalisation does not affect the measurements and helps to ease the visualisation. \FIGURE{fig:doubleHiggsCouplingChi2Ave} shows the normalised $\chi^2$ after averaging over the toy MC experiments as a function of $\gHHH/\gHHH_{SM}$ and $\gWWHH/\gWWHH_{SM}$. The $\chi^2$ changes slowly along the anti-diagonal which is similar to the cross section plot.
+Two sub-channels, hadronic \WW decay of \eeToHHbbWW and \eeToHHbbbb, are combined to increase the statistical precision on the coupling measurements.  To avoid statistical fluctuations in samples, a toy MC experiment is performed. The SM coupling sample is treated as a data template set. 100000 data sets are generated by fluctuating the event number in each kinematic bin in the data template set according to the Poisson distribution with a mean that is equal to the event number in the bin.  The $\chi^2$ is calculated using these generated data sets as the observed data ($N_{i,observed}$ in \Equation{eqn:doubleHiggsChi2}). The $\chi^2$ is then averaged over the number of  data sets (100000) and normalised such that the $\chi^2$ at the  SM coupling is 0. Since only the difference between the non-SM and SM $\chi^2$ value  is used for the couplings extraction, this normalisation does not affect the couplings extraction and helps to ease the visualisation. \FIGURE{fig:doubleHiggsCouplingChi2Ave} shows the normalised $\chi^2$ after averaging over 100000 toy MC experiments as a function of $\gHHH/\gHHH_{SM}$ and $\gWWHH/\gWWHH_{SM}$.
 
-\begin{figure}[!tbp]
+%The $\chi^2$ changes slowly along the anti-diagonal which is similar to the cross section plot.
+
+\begin{figure}[!htbp]
     \includegraphics[width=0.85\textwidth]{{doubleHiggs/extraction/new/chi2CombineAve4mhh2HT2}}
-\caption{Normalised $\chi^2$, after averaging the toy MC experiments, as a function of $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$, combining hadronic decay \eeToHHbbWW and \eeToHHbbbb sub-channels, assuming an integrated luminosity of  3000\,\uprightMath{fb^{-1}}.}
+\caption{Normalised $\chi^2$, after averaging over 100000 the toy MC experiments, as a function of $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$, combining hadronic decay \eeToHHbbWW and \eeToHHbbbb sub-channels, assuming an integrated luminosity of  3000\,\uprightMath{fb^{-1}}.  Normalisation is set such that the $\chi^2$ at the  SM coupling point is 0.}
    \label{fig:doubleHiggsCouplingChi2Ave}
 \end{figure}
 
 
-\begin{figure}[!tbp]
+%for this fit
+Since there are two couplings in this $\chi^2$ surface, the degree of freedom for this fit  is 2. A contour of 68\% confidence ($\chi^2 = 2.3$) can be drawn by interpolating between points on the $\chi^2$ surface in \Figure{fig:doubleHiggsCouplingChi2Ave}. \FIGURE{fig:doubleHiggsCouplingChi2Countour} shows the contour of 68\% confidence of the measurements of the \gHHH and \gWWHH. The counter can be sliced one dimensionally to extract the uncertainty of the measurements of one coupling for a given value of the other coupling. For example:
+\begin{equation}
+\frac{\Delta\gWWHH}{\gWWHH}  \simeq 4.9\% , & \text{ for \gHHH = $\gHHH_{,SM}$}\\
+\frac{\Delta\gHHH}{\gHHH}  \simeq 29\% , & \text{ for \gWWHH = $\gWWHH_{,SM}$}
+\end{equation}
+
+The statistical precisions on the measurements of \gWWHH and \gHHH are much better at \CLIC than at current \LHC or  high luminosity upgraded \LHC \cite{Contino:2010mh}.
+
+
+\begin{figure}[!htbp]
     \includegraphics[width=0.85\textwidth]{doubleHiggs/extraction/new/contourCOmbineAve3}
-\caption{Contour plot of 68\% confidence ($\chi^2 = 2.3$) , after averaging the toy MC experiments, as a function of $\gHHH/\gHHH_{SM}$ and  $\gWWHH/\gWWHH_{SM}$,  combining hadronic \WW  decay of \eeToHHbbWW and \eeToHHbbbb sub-channels, assuming an integrated luminosity of  3000\,\uprightMath{fb^{-1}}.}
+\caption{Contour plot of 68\% confidence ($\chi^2 = 2.3$) , after averaging the toy MC experiments, as a function of $\gHHH/\gHHH_{,SM}$ and  $\gWWHH/\gWWHH_{,SM}$,  combining hadronic \WW  decay of \eeToHHbbWW and \eeToHHbbbb sub-channels, assuming an integrated luminosity of  3000\,\uprightMath{fb^{-1}}.}
    \label{fig:doubleHiggsCouplingChi2Countour}
 \end{figure}
-
-Since there are two couplings in this $\chi^2$ surface, the degree of freedom for this fit is 2. A contour of 68\% confidence ($\chi^2 = 2.3$) can be drawn by interpolating between points on the surface. \FIGURE{fig:doubleHiggsCouplingChi2Countour} shows the contour. The counter can be sliced one dimensionally to extract the uncertainty of the measurements of one coupling for a given value of the other coupling. For example:
-\begin{equation}
-\frac{\Delta\gWWHH}{\gWWHH} \simeq 4.9\% \text{ for \gHHH = $\gHHH_{,SM}$}
-\end{equation}
-\begin{equation}
-\frac{\Delta\gHHH}{\gHHH} \simeq 29\% \text{ for \gWWHH = $\gWWHH_{,SM}$}
-\end{equation}
-
-The statistical precisions on \gWWHH and \gHHH are much better at the \CLIC than at the current \LHC or at the high luminosity upgraded \LHC \cite{Contino:2010mh}.

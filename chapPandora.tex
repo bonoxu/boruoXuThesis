@@ -448,7 +448,7 @@ Often we are dealing with extracting a type of events, from a large number of ot
 
 Typical metrics of signal selection is efficiency and purity. This toy example illustrates definitions of efficiency and purity.
 
-\begin{table}[!tbp]
+\begin{table}[!htbp]
 \begin{tabular}{lrr}
 \hline
 \hline
@@ -499,7 +499,7 @@ One definition of  overfitting is when the efficiency of the signal selection in
    %There are better methods
 %There are methods to assign the error on the selection efficiency, as the training and testing efficiency would fluctuate wit . Thus one can make a better choice of parameters to avoid overfitting. These methods were not implemented due to the technical capacity provided by the TMVA.
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
 \includegraphics[width=0.85\textwidth]{doubleHiggs/DepthOfTrees.pdf}
 \caption{Example of the signal selection efficiency as function of the model complexity. The example is chosen from the double Higgs analysis at \rootS{3}, using the Boosted Decision Tree model. The efficiency of the signal selection is defined as the  fraction of the signal selected when the background fraction is 1\%, reported by the TMVA training process. The depth of the tree  reflects the complexity of the model.  From a tree depth of six onwards, overfitting occurs.}
 \label{fig:doubleHiggsMVAovertraining}
@@ -560,14 +560,14 @@ The applying of a trained decision tree is performed by transversion the tree fr
 
 The simple tree in \Figure{fig:doubleHiggsMVAdecisionTree} is grown fully as each end node contains signal or background only. An example of applying the trained decision tree is provided: if there is a student who ends parties before 1\,am and knows where a free pizza is located, then the student is classified as a PhD student.
 
-\begin{figure}[!tbp]
+\begin{figure}[!htbp]
 \includegraphics[width=0.65\textwidth]{doubleHiggs/mva/BDTcomic}
 \caption[Example of a decision tree. ]
 {Example of a decision tree. Numbers in each node represent number of PhD students (red) and number of undergraduate students (blue). Diamond boxes represent splitting nodes. Rectangular boxes represent end nodes. Blue boxes are background-like end nodes. Red boxes are signal-like end-nodes.}
    \label{fig:doubleHiggsMVAdecisionTree}
 \end{figure}
 
-\begin{table}[!tbp]\centering
+\begin{table}[!htbp]\centering
 
 \begin{tabular}{lrr}
 \hline \hline
