@@ -556,9 +556,9 @@ The applying of a trained decision tree is performed by transversion the tree fr
 
 
 
-\FIGURE{fig:doubleHiggsMVAdecisionTree} illustrates a simple example of a trained decision tree. The signal class is the PhD student and the background class is the undergraduate student. The depth of this binary  tree is 2. A splitting node is represented by a diamond.  The signal-like end node is represented by the red rectangle and the background-like end nodes are represented by blue rectangles. The tree is constructed with two possible cuts, ``Party ends before 1am'' and ``Know where free pizza is''. The attributes of samples are listed \Table{tab:doubleHiggsDecisionTreeComic2}. The Gini index metric is used to determine the optimal cut. If the cut at the root node is ``Party ends before 1am'', the probability of the cut producing the signal, $p$, is $\frac{10}{13}$, as there are 10 PhD students and 3 undergraduate students who end parties before 1\,am. Gini index give $2p\parenths{1\!-\!p} \backsimeq 0.36 $. If the cut is ``Know where free pizza is'', $p=\frac{10}{15}$, as there are  10 PhD students and 5 undergraduate students who know where the free pizza is located. Gini index is $2p\parenths{1\!-\!p} \backsimeq 0.44 $. Therefore, by choosing the cut that minimise the Gini Index, the optimal cut for the root node is ``Party ends before 1am''.
+\FIGURE{fig:doubleHiggsMVAdecisionTree} illustrates a simple example of a trained decision tree. The signal class is the PhD student and the background class is the undergraduate student. The depth of this binary  tree is 2. A splitting node is represented by a diamond.  The signal-like end node is represented by the red rectangle and the background-like end nodes are represented by blue rectangles. The tree is constructed with two possible cuts, ``Party ends before 1am'' and ``Know where free pizza is''. The attributes of samples are listed \Table{tab:doubleHiggsDecisionTreeComic2}. The Gini index metric is used to determine the optimal cut. If the cut at the root node is ``Leave party before 1am'', the probability of the cut producing the signal, $p$, is $\frac{10}{13}$, as there are 10 PhD students and 3 undergraduate students who end parties before 1\,am. Gini index give $2p\parenths{1\!-\!p} \backsimeq 0.36 $. If the cut is ``Know where free pizza is'', $p=\frac{10}{15}$, as there are  10 PhD students and 5 undergraduate students who know where the free pizza is located. Gini index is $2p\parenths{1\!-\!p} \backsimeq 0.44 $. Therefore, by choosing the cut that minimise the Gini Index, the optimal cut for the root node is ``Leave party before 1am''.
 
-The simple tree in \Figure{fig:doubleHiggsMVAdecisionTree} is grown fully as each end node contains signal or background only. An example of applying the trained decision tree is provided: if there is a student who ends parties before 1\,am and knows where a free pizza is located, then the student is classified as a PhD student.
+The simple tree in \Figure{fig:doubleHiggsMVAdecisionTree} is grown fully as each end node contains signal or background only. An example of applying the trained decision tree is provided: if there is a student who leaves parties before 1\,am and knows where a free pizza is located, then the student is classified as a PhD student.
 
 \begin{figure}[!htbp]
 \includegraphics[width=0.65\textwidth]{doubleHiggs/mva/BDTcomic}
@@ -571,12 +571,12 @@ The simple tree in \Figure{fig:doubleHiggsMVAdecisionTree} is grown fully as eac
 
 \begin{tabular}{lrr}
 \hline \hline
-PhD student & Party ends before 1\,am  & Party ends after 1\,am\\
+PhD students & Leave party before 1\,am  & Leave party after 1\,am\\
 \hline
 Know where free pizza is & 10 & 0 \\
 Not know where free pizza is & 0 & 0 \\
-\hline 
-Undergraduates & Party ends before 1\,am  & Party ends after 1\,am\\
+\hline
+Undergraduates & Leave party before 1\,am  & Leave party after 1\,am\\
 \hline
 Know where free pizza is & 0 & 5 \\
 Not know where free pizza is & 3 & 2 \\
