@@ -32,7 +32,7 @@ The main challenge in the tau lepton decay modes  classification is to reconstru
 
 
 
-%Many final states of the tau decay involves \Ppizero, where \HepProcess{\Ppizero \to \Pphoton \Pphoton}. 
+%Many final states of the tau decay involves \Ppizero, where \HepProcess{\Ppizero \to \Pphoton \Pphoton}.
 
 %This chapter is organised as follows. Firstly, the choice of samples for the analysis will be discussed. The tau decay modes of interests are identified. The pre-selection cuts and variables used in the MVA classification are then discussed. The performance of the tau decay mode classification will be given, followed by an \ECAL optimisation study using the developed tau decay mode classification. Lastly, the  tau decay mode classification is further used in a proof-of-principle analysis to demonstrate the ability to identify Higgs boson from \PZ  boson using the tau pair decay channel.
 
@@ -43,7 +43,7 @@ The main challenge in the tau lepton decay modes  classification is to reconstru
 
 \section{Overview of the analysis}
 
-The analysis starts with defining the samples in \Section{sec:tauDecayModes}. Seven major tau lepton decay modes are chosen for the tau decay mode classification. The simulation and reconstruction of these tau lepton decays are described in \Section{sec:tauSim}.  Pre-selection of the events, discussed in \Section{sec:tauPreSel}, are such that events affected by the reconstruction and detector effects, which do not vary with the \ECAL cell sizes, are taken out of this analysis. After defining discriminative variables used in the MVA classification in \Section{sec:tauVar}, the classification is performed with a multivariate classifier. Since the decay products of a tau need to be classified into one of the seven decay modes, a multiclass classification, presented in \Section{sec:tauMVA}, is used to allow simultaneous classification between  multiple decay modes. Afterwards, the performance of the classification is described in \Section{sec:tauClassificationEff}.
+The analysis starts with defining the samples in \Section{sec:tauDecayModes}. Seven major tau lepton decay modes are chosen for the tau decay mode classification. The simulation and reconstruction of these tau lepton decays are described in \Section{sec:tauSim}.  Pre-selection of the events, discussed in \Section{sec:tauPreSel}, are such that events affected by the reconstruction and detector effects, which do not vary with the \ECAL cell sizes, are taken out of this analysis. After defining discriminative variables used in the MVA classification in \Section{sec:tauVar}, the classification is performed with a multivariate classifier. Since the decay products of a tau need to be classified into one of the seven decay modes, a \multiclass classification, presented in \Section{sec:tauMVA}, is used to allow simultaneous classification between  multiple decay modes. Afterwards, the performance of the classification is described in \Section{sec:tauClassificationEff}.
 
 The classification of the tau lepton decay modes are then  repeated for different energies of tau lepton decay to access the impact of the tau energy on the classification. The classification is also used to study the impact of the \ECAL cell sizes on the classification performance,  discussed in \Section{sec:tauECAL}. The classification is then utilised to demonstrate the ability to separate Higgs boson from \PZ  boson using the tau pair decay channel in a proof-of-principle analysis, described in the \Section{sec:tauHZ}.
 
@@ -52,7 +52,7 @@ The classification of the tau lepton decay modes are then  repeated for differen
 
 % The study of the tau final state classification in the context for the  \ECAL optimisation allows the analysis to discard reconstruction and detector issue that do not vary with the \ECAL design. For example, the early photon conversion that happens in the tracking detector would complicate the event topology. But since it is affected by the tracker design, it can be ignored in this analysis. \SECTION{sec:tauSim}  and \Section{sec:tauPreSel} discuss the pre-selection cuts to choose the signal samples and events for this analysis.
 
-%The classification is performed with a multivariate classifier. Discriminating variables are calculated before feeding into the classifier.  A multiclass classicisation is used to allow simultaneous classification between  multiple final states, described in \Section{}.
+%The classification is performed with a multivariate classifier. Discriminating variables are calculated before feeding into the classifier.  A \multiclass classicisation is used to allow simultaneous classification between  multiple final states, described in \Section{}.
 
 
 %A proof-of-principle analysis to demonstrate the ability to identify \PHiggs from \PZ using  tau pair decay channel is presented in the \Section{}. The difference in the spin of the boson reflects in the different spin correlation of the tau pair. By extracting the spin correlation, parent bosons can be separated.
@@ -62,7 +62,7 @@ The classification of the tau lepton decay modes are then  repeated for differen
 \section{Event generation}
 \label{sec:tauDecayModes}
 
-%\section{Select single tau decay}  in a \ee collider for an electron-positron collider 
+%\section{Select single tau decay}  in a \ee collider for an electron-positron collider
 The studied tau lepton decay channel is \eeToTauTau, with a centre-of-mass energy of 100\,GeV.  To study the predominant effect of the tau lepton decays, decay modes with branching ratio above 2\% are classified. This results in seven tau lepton decay modes studied, which cover 92.58\,\% of the tau decay. The seven tau decay mode, their branching ratios, and detectable final states are  shown in \Table{tab:TauDecayMode}.
 
 
@@ -72,7 +72,7 @@ The studied tau lepton decay channel is \eeToTauTau, with a centre-of-mass energ
 
 %\subsection{Tau lepton decay modes}
 
-%Tau lepton decays into a number of final states. 
+%Tau lepton decays into a number of final states.
 % The most difficult final states to separate are \decayRhoFinalStateShort and \decayAiPhotonFinalStateShort, where photons from boosted \Ppizero are very challenging to reconstruct correctly.
 
 \begin{table}[htbp]\centering
@@ -102,7 +102,7 @@ Decay modes & Detectable final states & Branching ratio\\
 \label{sec:tauSim}
 
 
-Two million \eeToTauTau events are simulated and reconstructed using the \ILD detector model. The beam specific effects that are not affected by the varying \ECAL cell sizes are not simulated, such as the initial state radiation and the beam induced background. An event display of \eeToTauTau interaction is shown in \Figure{fig:tauEvtDsp}. 
+Two million \eeToTauTau events are simulated and reconstructed using the \ILD detector model. The beam specific effects that are not affected by the varying \ECAL cell sizes are not simulated, such as the initial state radiation and the beam induced background. An event display of \eeToTauTau interaction is shown in \Figure{fig:tauEvtDsp}.
 
 
 %As the study is aimed for optimisation study of the \ECAL cell sizes, t
@@ -280,9 +280,9 @@ Track info. & $\Delta E/P$ \\
 
 \section{Multivariate Analysis}
 \label{sec:tauMVA}
-For the multivariate analysis, the multiclass class of the TMVA package \cite{Therhaag:2009dp} was used to perform a multiclass classification, which classifies seven tau lepton decay final states simultaneously. The multiclass classifier is an extension of a standard two-class signal-background classifier. The discussion on multivariate analysis can be found in \Section{sec:pandoraMVA}. In particular, the multiclass classifier is discussed in \Section{sec:pandoraMVAmulticlass}.
+For the multivariate analysis, the \multiclass class of the TMVA package \cite{Therhaag:2009dp} was used to perform a multiple-class classification, which classifies seven tau lepton decay final states simultaneously. The \multiclass classifier is an extension of a standard two-class signal-background classifier. The discussion on multivariate analysis can be found in \Section{sec:pandoraMVA}. In particular, the \multiclass classifier is discussed in \Section{sec:pandoraMVAmulticlass}.
 
-The multiclass classifier used is Boosted Decision Tree with Gradient boost (BDTG). The optimisation of the BDTG classifier followed the strategy in \Section{sec:pandoraMVAoptimisation}. The optimised parameters are listed in \Table{tab:tauBDTparameters}. An explanation of the variables can be found in \Section{sec:pandoraMVAbdtVar}.  Half of the randomly selected samples were used in the training process and the other half were used for testing.
+TO edut The \multiclass classifier used is Boosted Decision Tree with Gradient boost (BDTG). The optimisation of the BDTG classifier followed the strategy in \Section{sec:pandoraMVAoptimisation}. The optimised parameters are listed in \Table{tab:tauBDTparameters}. An explanation of the variables can be found in \Section{sec:pandoraMVAbdtVar}.  Half of the randomly selected samples were used in the training process and the other half were used for testing.
 
 \begin{table}[!htbp]\centering
 %\small
@@ -302,7 +302,7 @@ End node output & yes/no \\
 \end{tabular}
 
 \caption
-{Optimised parameters for the Boosted Decision Tree with Gradient boost multiclass classifier. See \Section{sec:pandoraMVAbdtVar} for a detailed explanation of variables.}
+{Optimised parameters for the Boosted Decision Tree with Gradient boost \multiclass classifier. See \Section{sec:pandoraMVAbdtVar} for a detailed explanation of variables.}
 \label{tab:tauBDTparameters}
 \end{table}
 
@@ -323,7 +323,7 @@ For the \decayPionShort decay mode, 3.4\% events were misclassified as \decayRho
 
 For the \decayRhoShortest decay mode, most misclassification comes from the confusion with \decayAiPhotonShortest decay mode.  If the reconstruction is unable to resolve the all photon pair from \Ppizero decay in \decayRhoShortest and \decayAiPhotonShortest decay mode, the two decay modes would have similar topologies.
 
-For the \decayAiPhotonShortest decay mode, the correct classification rate is the lowest among seven decay modes, as the \decayAiPhotonShortest decay final state is the most challenging to reconstruct correctly: two photon pairs and  one \Ppipm. The 9.5\% confusion with \decayRhoShortest is due to the same photon reconstruction failure issue. It should be noted that \Figure{fig:tauVarNPhoton} suggests that 30\% of \decayAiPhotonShortest events have fewer than four photons reconstructed, where the distribution overlaps with the distribution for \decayRhoShortest decay mode. The \decayAiPhotonShortest resonance reconstruction and the multiclass classifier reduce the confusion between two decay modes from 30\% to  9.5\%.
+For the \decayAiPhotonShortest decay mode, the correct classification rate is the lowest among seven decay modes, as the \decayAiPhotonShortest decay final state is the most challenging to reconstruct correctly: two photon pairs and  one \Ppipm. The 9.5\% confusion with \decayRhoShortest is due to the same photon reconstruction failure issue. It should be noted that \Figure{fig:tauVarNPhoton} suggests that 30\% of \decayAiPhotonShortest events have fewer than four photons reconstructed, where the distribution overlaps with the distribution for \decayRhoShortest decay mode. The \decayAiPhotonShortest resonance reconstruction and the \multiclass classifier reduce the confusion between two decay modes from 30\% to  9.5\%.
 
 For the \decayAiPionShortest decay mode, the biggest source of misclassification is with \decayThreePionPhotonShort decay mode. The biggest misclassification of  \decayThreePionPhotonShort decay mode  is with \decayAiPionShortest decay mode.
 
