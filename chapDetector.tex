@@ -814,19 +814,6 @@ ILD, and their integration into a coherent detector concept
 \section{Detector optimisation}
 
 
-\subsection{Vertex detector optimisation}
-For the \ILD vertex detector, \Figure{fig:detectorVertexResolution} shows the impact parameter resolution as a function of the particle momentum for  two different particle production angles from test beam results \cite{Behnke:2013lya}. The curves with long dashes show the performance goal. The figure shows that the desired impact parameter resolution is achievable.
-
-
-
-\begin{figure}[tbph]
-\centering
-\includegraphics[width=0.55\textwidth]{ILD/vertexResolution}
-\caption
-{Impact parameter resolution of the \ILD vertex detector for two different particle production angles (20\degree and 85\degree), assuming the baseline point resolution given in \Table{tab:detectorVertex} for CMOS option (solid line), and the FPCCD option (dotted line). The curves with long dashes show the performance goal. The figure is taken from \cite{Behnke:2013lya}.}
-\label{fig:detectorVertexResolution}
-\end{figure}
-
 %\section{The \CLIC versus the \ILC}
 
 
@@ -858,6 +845,35 @@ For the \ILD \HCAL design, the transverse cell sizes has been optimised for the 
 \caption
 {The single jet energy resolution as a function of the hadronic calorimeter scintillator cell sizes, with different total jet energy using \eeZuds, at barrel region, taken from \cite{Baer:2013cma}.}
     \label{fig:detectorHCALoptimise}
+\end{figure}
+
+\section{Detector performance}
+
+
+\subsection{Vertex detector performance}
+For the \ILD vertex detector, \Figure{fig:detectorVertexResolution} shows the impact parameter resolution as a function of the particle momentum for  two different particle production angles from test beam results \cite{Behnke:2013lya}. The curves with long dashes show the performance goal. The figure shows that the desired impact parameter resolution is achievable.
+
+
+
+\begin{figure}[tbph]
+\centering
+\includegraphics[width=0.55\textwidth]{ILD/vertexResolution}
+\caption
+{Impact parameter resolution of the \ILD vertex detector for two different particle production angles (20\degree and 85\degree), assuming the baseline point resolution given in \Table{tab:detectorVertex} for CMOS option (solid line), and the FPCCD option (dotted line). The curves with long dashes show the performance goal. The figure is taken from \cite{Behnke:2013lya}.}
+\label{fig:detectorVertexResolution}
+\end{figure}
+
+
+\subsection{Particle flow performance}
+
+\FIGURE{fig:detectorJERangle} shows the jet energy resolution as a function of the polar angle of the \Zprime, using \eeZuds, at barrel region of the detector. There is a degradation in the energy resolution for the barrel/endcap overlap region, corresponding to \uprightMath{0.7 < \absOf{\cos \theta} < 0.8}. A small degradation in the performance at \uprightMath{\cos\theta \approx 0} is seen because of the \TPC central membrane and gaps between sections of the \HCAL in the \ILD detector simulation.
+
+\begin{figure}[tbph]
+\centering
+\includegraphics[width=0.55\textwidth]{ILD/JERangle}
+\caption
+{The jet energy resolution, defined as the \uprightMath{\alpha} in \uprightMath{\sigma / E = \alpha / \sqrt{E(GeV)}}, plotted versus angle of the \Zprime for four different values of \sqrtS, using \eeZuds, at barrel region of the detector. The figure is taken from \cite{Thomson:2009rp}.}
+\label{fig:detectorJERangle}
 \end{figure}
 
 \section{\CLICILD}
