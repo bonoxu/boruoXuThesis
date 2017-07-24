@@ -195,9 +195,9 @@ The last pre-selection cut is to discard events with tau decay products depositi
 
 %An low visible energy event is discarded if the total energy of the tau lepton visible decay products is below 5\,GeV. Requirement of the tau decay in the barrel or the end cap part of the calorimeter is defined as the polar angle of the tau is $ 17.2\degree < |\theta_{Z}| < 34.4\degree$ or $ 45.8\degree < |\theta_{Z}| < 90\degree$.
 
-\section{Event reconstruction}
+\section{Event reconstruction and analysis}
 
- and 
+
 
 The \eeToTauTau channel contains two tau leptons travelling in opposite directions. Since the tau decay mode classification is applied on a per tau lepton basis, the decay products of two taus in one event are divided into two collections for separate classification. Each collection of particles corresponds  to the decay products of one tau lepton.
 The principle thrust axis vector is used to separation particles into two collections. Two collections are obtained based on the sign of the scalar product between the principle thrust axis vector  and the momentum vector of a particle. The principle thrust axis vector, $\hat{t}$, is chosen by maximising the classical event shape thrust \cite{PhysRevLett.39.1587}, $T$:
@@ -205,6 +205,30 @@ The principle thrust axis vector is used to separation particles into two collec
 T = \max_{\hat{t}}\!\frac{\sum_{i}\absOf{\hat{t}\!\cdot\!\vec{p_{i}}}}{\sum_{i}\absOf{\vec{p_{i}}}}
 \end{equation}
 where $\vec{p_{i}}$ is the momentum vector of the particle $i$;   $\hat{t}$, is the unit principle thrust axis vector; and index $i$ is summed over all particles in an event. The principle thrust axis vector is the axis that most particle aligned to.
+
+
+
+
+\subsection{\texorpdfstring{\decayRhoShort and \decayAiPhotonShort} \, resonances reconstruction variables}
+\label{sec:tauResonance}
+\decayRhoShort and \decayAiPhotonShort decay modes are identified further using their invariant mass resonance structure. For example, \decayRhoShort decay mode contains a \Pgpm and a \Ppizero decaying into two photons. By selecting \Pgpm and photons consistent with \Prho mass, \decayRhoShort decay mode could be identified. The  \decayRhoShort decay mode hypothesis test is performed by minimising a  $\chi^{2}$ function:
+\begin{equation}
+\chi^{2} = {\left(\frac{m_{tot} -  m^{MC}_{\Prho}}{\sigma^{MC}_{\Prho}}\right)}^{2} + {\left(\frac{m_{\Pphoton \Pphoton} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2} \,,
+\label{eqn:tauRho}
+\end{equation}
+where $m_{\Pphoton \Pphoton}$ is the invariant mass of two photons; $m_{tot}$ is the invariant mass of the  two photons and one \Pgpm; $m^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are true masses of \Prho and \Ppizero, respectively, taken from \cite{Agashe:2014kda}; and $\sigma^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are the half width of the invariant mass distribution of reconstructed \Prho and \Ppizero, respectively, obtained using the truth information. All combinations of photons and \Pgpm are tested. Two variables obtained in this minimisation and used in the MVA classification are the invariant mass of the two photons in the fit, $m_{\Pgpz}\parenths{\rho}$, and  the invariant mass of the  two photons and one \Pgpm, $m_\rho$.
+
+
+Similarly, \decayAiPhotonShort decay mode can be identified using an extended minimisation function:
+\begin{equation}
+\chi^{2} = {\left(\frac{m_{tot} -  m^{MC}_{\Pai}}{\sigma^{MC}_{\Pai}}\right)}^{2} + {\left(\frac{m_{\Pphoton1 \Pphoton2} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2}  + {\left(\frac{m_{\Pphoton3 \Pphoton4} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2} \,,
+\end{equation}
+where \Prho has been replace by \Pai and other variables are defined in the same way as in the previous $\chi^2$ function in \Equation{eqn:tauRho}. Two photon pairs and one \Pgpm are needed for this minimisation. Both photon pairs are required to be consistent with the \pionToPhoton. Three variables obtained in this minimisation and used in the MVA classification are the invariant mass of the first two photons in the fit, $m_{\Pgpz}\parenths{\Pai}$; the invariant mass of the last two photons in the fit, $m^*_{\Pgpz}\parenths{\Pai}$; and the invariant mass of the four photons and one \Pgpm, $m_{\Pai}$. The first photon pair is defined to have a invariant mass closer to the invariant mass of the \Ppizero than the second photon pair.  \FIGURE{fig:tauVarMA1} shows the distributions of the invariant mass of $m_{\Pai}$ under \decayAiPhotonShort hypothesis test for selected tau decay modes. Only the distribution for \decayAiPhotonShort decay mode has a resonance peak at \Pai mass.
+
+%Comparing to simple invariant mass distribution in \Figure{fig:tauVarMVis}, \decayAiPhotonShort mass peak is enhanced.
+%\decayAiPhotonShort reconstruction &  \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\Pai}$, $m^*_{\Pgpz}\parenths{\Pai}$, $m_{\Pai}$} \\
+
+The $\chi^{2}$ functions for both hypothesis test are adapted for events where the event reconstruction fails to reconstruct enough photons. Relevant terms are dropped from the expression if there are fewer photons reconstructed  than required in the $\chi^{2}$ functions.
 
 
 \section{Variables used in the MVA}
@@ -238,28 +262,7 @@ Energy information helps to further separate different final states. Six energy 
 
 Two calorimetric information variable are used in the MVA classification: the fraction of the energy  deposited in the \ECAL over the  energy deposited in the calorimeters for all charge particles ($\% E_{\charge}$) and the fraction of the energy  deposited in the \ECAL over the  energy deposited in the calorimeters for all particles ($\% E$). These  two variables help to identify electrons and muons. For example, an electron deposits most energy in the \ECAL, and a muon deposits 5\% to 20\% energy in the \ECAL. The difference between two variables is that photons, which deposit most of their energy in the \ECAL, do not participate in the calculation of $\% E_{\charge}$.
 
-
-
-\subsection{\texorpdfstring{\decayRhoShort and \decayAiPhotonShort} \, resonances reconstruction variables}
-\label{sec:tauResonance}
-\decayRhoShort and \decayAiPhotonShort decay modes are identified further using their invariant mass resonance structure. For example, \decayRhoShort decay mode contains a \Pgpm and a \Ppizero decaying into two photons. By selecting \Pgpm and photons consistent with \Prho mass, \decayRhoShort decay mode could be identified. The  \decayRhoShort decay mode hypothesis test is performed by minimising a  $\chi^{2}$ function:
-\begin{equation}
-\chi^{2} = {\left(\frac{m_{tot} -  m^{MC}_{\Prho}}{\sigma^{MC}_{\Prho}}\right)}^{2} + {\left(\frac{m_{\Pphoton \Pphoton} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2} \,,
-\label{eqn:tauRho}
-\end{equation}
-where $m_{\Pphoton \Pphoton}$ is the invariant mass of two photons; $m_{tot}$ is the invariant mass of the  two photons and one \Pgpm; $m^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are true masses of \Prho and \Ppizero, respectively, taken from \cite{Agashe:2014kda}; and $\sigma^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are the half width of the invariant mass distribution of reconstructed \Prho and \Ppizero, respectively, obtained using the truth information. All combinations of photons and \Pgpm are tested. Two variables obtained in this minimisation and used in the MVA classification are the invariant mass of the two photons in the fit, $m_{\Pgpz}\parenths{\rho}$, and  the invariant mass of the  two photons and one \Pgpm, $m_\rho$.
-
-
-Similarly, \decayAiPhotonShort decay mode can be identified using an extended minimisation function:
-\begin{equation}
-\chi^{2} = {\left(\frac{m_{tot} -  m^{MC}_{\Pai}}{\sigma^{MC}_{\Pai}}\right)}^{2} + {\left(\frac{m_{\Pphoton1 \Pphoton2} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2}  + {\left(\frac{m_{\Pphoton3 \Pphoton4} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2} \,,
-\end{equation}
-where \Prho has been replace by \Pai and other variables are defined in the same way as in the previous $\chi^2$ function in \Equation{eqn:tauRho}. Two photon pairs and one \Pgpm are needed for this minimisation. Both photon pairs are required to be consistent with the \pionToPhoton. Three variables obtained in this minimisation and used in the MVA classification are the invariant mass of the first two photons in the fit, $m_{\Pgpz}\parenths{\Pai}$; the invariant mass of the last two photons in the fit, $m^*_{\Pgpz}\parenths{\Pai}$; and the invariant mass of the four photons and one \Pgpm, $m_{\Pai}$. The first photon pair is defined to have a invariant mass closer to the invariant mass of the \Ppizero than the second photon pair.  \FIGURE{fig:tauVarMA1} shows the distributions of the invariant mass of $m_{\Pai}$ under \decayAiPhotonShort hypothesis test for selected tau decay modes. Only the distribution for \decayAiPhotonShort decay mode has a resonance peak at \Pai mass.
-
-%Comparing to simple invariant mass distribution in \Figure{fig:tauVarMVis}, \decayAiPhotonShort mass peak is enhanced.
-%\decayAiPhotonShort reconstruction &  \multicolumn{1}{R{0.6\textwidth}}{  $m_{\Pgpz}\parenths{\Pai}$, $m^*_{\Pgpz}\parenths{\Pai}$, $m_{\Pai}$} \\
-
-The $\chi^{2}$ functions for both hypothesis test are adapted for events where the event reconstruction fails to reconstruct enough photons. Relevant terms are dropped from the expression if there are fewer photons reconstructed  than required in the $\chi^{2}$ functions.
+\subsection{Resonance}
 
 \subsection{Separate \decayElectronShort from \decayPionShort}
 
