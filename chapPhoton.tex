@@ -140,13 +140,13 @@ The \PhotonReconstruction algorithm is a photon reconstruction  algorithm at the
 \end{figure}
 
 
-\subsection{Form photon clusters}
+\subsection{Forming photon clusters}
 
 The inputs of the \PhotonReconstruction algorithm are calorimeter hits in the \ECAL that have not been used in previous algorithms. For example, muon reconstruction algorithms form muons and remove calorimeter hits associated with muons from the reconstruction. The  calorimeter hits associated with reconstructed muons are not used to form photons.
 
 This step forms photon clusters from calorimeter hits in the \ECAL. The clusters are formed in a way such that calorimeter hits from one photon would not be split into two clusters, but one cluster may contain calorimeter hits from  multiple photons. The algorithm uses  the cone clustering algorithm  provided inside \pandora to form clusters.  Since the target for reconstruction is the neutral photon, the cone clustering algorithm uses high-energy calorimeter hits in the \ECAL as initial seeds, instead of using track projections as initial seeds.  %The parameters for the cone clustering are such that  forming large clusters is preferred.
 
-\subsection{Find photon candidates}
+\subsection{Finding photon candidates}
 \label{sec:photonCandiate}
 
 This step refines photon clusters into smaller photon candidates. Each photon candidate should contain calorimeter hits from one photon only.
@@ -208,7 +208,7 @@ There are two variants of the \peakFinding algorithm: the neutral cluster varian
 \label{fig:photonPeakFindingFlowNeutral}
 \end{figure}
 
-\subsection{Initialise  two-dimensional histogram}
+\subsection{Initialising  two-dimensional histogram}
 
 This step initialises a two-dimensional (2D) histogram to host the projection of the calorimeter hits of the cluster. For the best resolving power between photons, the projection direction is chosen to be the direction of the cluster. Two axes of the two-dimensional histogram are chosen such that the axes and the direction of the cluster form an orthogonal basis  in the three-dimensional space.
 
@@ -216,7 +216,7 @@ This step initialises a two-dimensional (2D) histogram to host the projection of
 
 
 
-\subsection{Project calorimeter hits to histogram}
+\subsection{Projecting calorimeter hits to histogram}
 
 %For a finite-sized 2D histogram, t
 This step projects the calorimeter hits associated with the cluster onto the 2D histogram initialised in the previous step. The projection is chosen such that the cluster centroid position is projected onto the centre of the histogram. The relative distance between the calorimeter hit position and the cluster centroid position is converted into a distance vector. The distance vector, $\vec{s_{i}}$, of a calorimeter hit $i$, is obtained by:
@@ -230,11 +230,11 @@ The height of a bin in the 2D histogram is the sum of the energies associated wi
 
 %The issue with the histogram size being finite is discussed in \Section{sec:photonPeakFindingInclusive}.
 
-\subsection{Identify local peaks}
+\subsection{Identifying local peaks}
 
 This step identifies all local peaks in the 2D histogram. A local peak is defined as a bin where its height is above all eight neighbouring bins. The 2D histogram is scanned to identify all local peaks. %Hence the processing time is $O\left(N^2\right)$, where $N$ is number of bins in one axis.
 %For example, in \Figure{fig:photonPeakFinding}, there are clearly two peaks, both colour coded.
-\subsection{Associate non-peak bins to peaks}
+\subsection{Associating non-peak bins to peaks}
 
 Having identified all local peaks, this step associates non-peak bins to a particular peak based on the energy of the peak and the distance of the non-peak bin to the peak bin. A non-peak bin should be associated to a high-energy peak bin that is close to the non-peak bin.
 
@@ -305,7 +305,7 @@ In \Section{sec:photonIDtest}, the photon ID test in the photon reconstruction a
 %\subsection{Overview of Projective Likelihood}
 %\label{sec:photonPDE}
 
-\subsection{Variable used in the likelihood classifier}
+\subsection{Likelihood classifier variables}
 
 Variables used in the likelihood classifier exploit the differences between a characteristic electromagnetic shower and a hadronic shower, and the fact that a photon is less likely to be close to track projections onto the front of the \ECAL, than a cluster of a charged paritcle. Variables used in the classifier are listed in \Table{tab:photonPhotonIDvar}.
 
@@ -444,7 +444,7 @@ Depending on whether the fragment is reconstructed as a photon or a neutral hadr
 % $d$, $d_c$ and $d_h$ are mean energy weighted intra-layer distance within the pair, distance between two centroids, and minimum distance between calorimeter hits of each \PFO in the pair, respectively.  Three distance measurements have subtle difference.
 \TABLE{tab:photonFragRemovalCuts} lists cuts for merging photon$-$photon-fragment pairs and photon$-$neutral-hadron-fragment pairs for both low energy and high energy fragments. The description of each variable used in the cuts will be provided first, followed by the description of the logics of the cuts.
 
-\subsection{Variables used in photon fragment removal algorithm}
+\subsection{Variables}
 
 There are three distance variables: the variable $d_c$ gives the distance between centroids of the \PFO in the photon$-$fragment pair, which is a computationally quick measurement;  the variable  $d_h$ is the minimum distance between calorimeter hits of each \PFO in the pair;  the variable  $d$ is the mean energy weighted intra-layer distance between  each \PFO in the pair, illustrated schematically in \Figure{fig:photonDistanceMetric}:
 \begin{equation}
@@ -672,7 +672,7 @@ If multiple photon$-$fragment pairs pass the cuts with the same fragment, the pa
 
 %Algorithms described above deal with forming photons from calorimeter hits in the \ECAL, merging photon fragments in the \ECAL and the \HCAL.
 
-Another aspect in photon reconstruction is to split accidentally merged photons. During the event reconstruction, it is possible that photons are accidentally merged if they are spatially close. Hence another algorithm at the end of the event reconstruction addresses this issue and tries to split merged photons. 
+Another aspect in photon reconstruction is to split accidentally merged photons. During the event reconstruction, it is possible that photons are accidentally merged if they are spatially close. Hence another algorithm at the end of the event reconstruction addresses this issue and tries to split merged photons.
 
 %Merged photons are typically energetic.
 If a photon has the  topologies of a spatially closed photon pair, the photon should be split. Extra care should be taken if the photon is close to a charged track projection onto the front of the \ECAL.
@@ -712,7 +712,7 @@ $E_{c1}$ and $E_{c2}$ values &  \\
 \label{tab:photonPhotonSplitting}
 \end{table}
 
-\section{Characterise the performance}
+\section{Characterising the performance}
 
 
 %Motivations and implementations of four different photon related algorithms have been described above.
@@ -730,7 +730,7 @@ Without stand-alone photon reconstruction algorithms, \pandora applies a simple 
 
 Firstly the performance with the full algorithms implemented in \pandora version 3 is compared with the performance with no photon algorithms. Afterwards, the performance with  the full algorithms is compared with the performance obtained from  \pandora version 1. The performances of individual photon algorithms are then characterised, followed by the characterisation of the performance of the photon algorithms in \pandora version 3.
 
-\section{Compare with no photon reconstruction}
+\section{Comparing with no photon reconstruction}
 
 This section compares the performance with and without photon related algorithms using  two-photon-per-event and jet samples. The two-photon-per-event samples were generated with an uniform distribution in the solid angle of the first photon, and an uniform distribution in the solid angle  for a range of the opening angles  between the photon pair. Events are selected such that there is no early photon conversion in the tracking detector and the photon does not escape the detector. The events are further restricted to photon decaying in barrel and endcap region only, to avoid the barrel/endcap overlap region. The nominal \ILD detector model is used to simulate the events.
 
@@ -751,7 +751,7 @@ with photon energies of  500\,GeV and 50\,GeV,   reconstructed with and without 
 
 
 
-The improvement in photon reconstruction leads to a considerable improvement in the jet energy resolution. Jet energy resolution is defined as the \rms divided by the mean for the smallest width of distribution that contains 90\% of entries, using \eeZuds, at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \Zprime is used as \pandora does not attempt to recover missing momentum from semi-leptonic decay of heavy quarks. Using 90\% of the entries is robust and focus on the Gaussian part of the jet energy distribution. The total jet energy is sampled at the centre-of-mass energies of 91, 200, 360 and 500\,GeV. 
+The improvement in photon reconstruction leads to a considerable improvement in the jet energy resolution. Jet energy resolution is defined as the \rms divided by the mean for the smallest width of distribution that contains 90\% of entries, using \eeZuds, at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \Zprime is used as \pandora does not attempt to recover missing momentum from semi-leptonic decay of heavy quarks. Using 90\% of the entries is robust and focus on the Gaussian part of the jet energy distribution. The total jet energy is sampled at the centre-of-mass energies of 91, 200, 360 and 500\,GeV.
 
 As shown in \Figure{fig:photonJERmuon}, the jet energy resolutions are much better at \rootSGeV{360} and 500\,GeV with photon algorithms. By identifying photons before reconstructing charged particles in a dense jet environment, there are fewer calorimeter hits left for the charged particle reconstruction. However, at \rootSGeV{91} and 200\,GeV, the jet energy resolution is worse with photon algorithms, because photon algorithms are developed with  jet environments at a centre-of-mass energy of 500\,GeV.
 
@@ -797,7 +797,7 @@ Photon confusion &\rootSGeV{91} & 200\,GeV & 360\,GeV & 500\,GeV  \\
     Double_t erry1[nPoints] = {0.0482638,0.0371727,0.0357569 ,0.03669   };//
 \end{comment}
 
-\section{Compare with photon reconstruction in \pandora version 1}
+\section{Comparing with photon reconstruction in \pandora version 1}
 \label{sec:photonPerformanceCompare}
 
 This section reviews the performance improvement with the photon algorithms  from \pandora version 1 to version 3, using single-photon-per-event, two-photon-per-event, and jet samples.
@@ -889,7 +889,7 @@ The reduction in the fragments, as shown in the reconstruction of the single-pho
 \end{figure}
 
 
-\section{Understand photon reconstruction improvement}
+\section{Understanding photon reconstruction improvement}
 
 
 
