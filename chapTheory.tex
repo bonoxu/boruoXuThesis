@@ -263,7 +263,7 @@ When the field is expanded around the minimum of the potential,  $\nu=\sqrt{\fra
 \section{Higgs Mechanism}
 \label{sec:theoryHiggs}
 
-The Higgs mechanism is an extension of the example of the spontaneous symmetry breaking introduced in the previous section. It can provide mass terms for bosons and fermions. A complex  scalar Higgs field, $\Phi_{\PH}$, transforms as a doublet of SU(2) with hypercharge $Y = \frac{1}{2}$. The Lagrangian is given by:
+The Higgs mechanism is an extension of the example of the spontaneous symmetry breaking introduced in the previous section. It can provide mass terms for bosons and fermions that are compatible with the gauge invariance of the \SM. A complex  scalar Higgs field, $\Phi_{\PH}$, transforms as a doublet of SU(2) with hypercharge $Y = \frac{1}{2}$. The Higgs Lagrangian is given by:
 \begin{equation}
 \Lagr_{Higgs} = \left(D_\mu\Phi_{\PH}\right)^\dagger\left(D^\mu\Phi_{\PH}\right) - \mu^2\Phi_{\PH}^\dagger\Phi_{\PH} + \lambda\left(\Phi_{\PH}^\dagger\Phi_{\PH}\right)^2,
 \label{eq:theoryEWSBhiggs}
@@ -272,7 +272,7 @@ where $\lambda$ and $\mu$ are constants. The \uprightMath{SU(2)_L\times U(1)} sy
 \begin{equation}
 D_\mu = \left(\partial_{\mu} + ig\frac{\tau_i}{2}W^i_{\mu} + ig'\frac{1}{2}B_{\mu}\right),
 \end{equation}
-where $g$ is the coupling constant of the \uprightMath{SU(2)_L} gauge symmetry; $g'$ is the coupling constant of the U(1) gauge symmetry; and $\tau_i$ is one of the Pauli matrices. The Higgs potential is given by:
+where $g$ is the coupling constant of the \uprightMath{SU(2)_L} gauge symmetry; $g'$ is the coupling constant of the U(1) gauge symmetry; and the $\tau_i$ are Pauli matrices. The Higgs potential is given by:
 \begin{equation}
 V(\PH) = \mu^2\Phi_{\PH}^\dagger\Phi_{\PH} - \lambda\left(\Phi_{\PH}^\dagger\Phi_{\PH}\right)^2.
 \label{eq:theoryHiggsPotential}
@@ -290,12 +290,11 @@ By expanding the Higgs field about the minimum point of the potential, the non-z
 \end{pmatrix}
 ,
 \end{equation}
-with a real $\nu$. Substituting the  Higgs VEV into the $\Lagr_{boson}$ in \Equation{eq:theoryEWSBhiggs}, the $\left(D_\mu\Phi_{\PH}\right)^\dagger\left(D^\mu\Phi_{\PH}\right)$ becomes
+with a real $\nu$. Substituting the  Higgs VEV into the $\Lagr_{Higgs}$ in \Equation{eq:theoryEWSBhiggs}, the $\left(D_\mu\Phi_{\PH}\right)^\dagger\left(D^\mu\Phi_{\PH}\right)$ term becomes
  \begin{equation}
 -\frac{1}{8}
 \begin{pmatrix}
-0 \\
-\nu
+0 & \nu
 \end{pmatrix}
 \begin{pmatrix}
 gW^3_\mu+g'B_\mu & g\parenths{W^1_\mu-iW^2_\mu} \\
@@ -328,34 +327,34 @@ The physical fields $Z_{\mu}$ and $A_{\mu}$ are associated with $W^3_{\mu}$ and 
 \frac{\nu^2}{8}\parenths{gW^3_\mu - g'B_\mu}^2 = \frac{\nu^2\parenths{g^2+{g'}^2}}{8}\parenths{\frac{g}{\sqrt{g^2+{g'}^2}}W^3_\mu - \frac{g'}{\sqrt{g^2+{g'}^2}}B_\mu}^2.
 \label{eq:theoryEWBosonMass2}
 \end{equation}
-A convenient way to connect $g$ and $g'$ is to use the Weinberg mixing angle  \cite{Weinberg:1967tq}, denoted as $\theta_{\PW}$. The Weinberg mixing angle is defined as
+A convenient way to connect $g$ and $g'$ is to use the Weinberg mixing angle  \cite{Weinberg:1967tq}, denoted as \weinberg. The Weinberg mixing angle is defined as
 \begin{equation}
-\cos\parenths{\theta_{\PW}} = \frac{g}{\sqrt{g^2+{g'}^2}},
+\cos\parenths{\weinberg} = \frac{g}{\sqrt{g^2+{g'}^2}},
 \end{equation}
 \begin{equation}
-\sin\parenths{\theta_{\PW}} = \frac{g'}{\sqrt{g^2+{g'}^2}}.
+\sin\parenths{\weinberg} = \frac{g'}{\sqrt{g^2+{g'}^2}}.
 \end{equation}
 The \Equation{eq:theoryEWBosonMass2} can be rewritten using the Weinberg mixing angle:
 \begin{equation}
-\frac{\nu^2\parenths{g^2+{g'}^2}}{8}\parenths{\cos\parenths{\theta_{\PW}}W^3_\mu - \sin\parenths{\theta_{\PW}}B_\mu}^2.
+\frac{\nu^2\parenths{g^2+{g'}^2}}{8}\parenths{\cos\parenths{\weinberg}W^3_\mu - \sin\parenths{\weinberg}B_\mu}^2.
 \label{eq:theoryEWBosonMass3}
 \end{equation}
 The physical field $Z_{\mu}$ can be immediately identified as:
 \begin{equation}
-Z_{\mu} = \cos\left(\theta_W\right)W^3_{\mu} - \sin\left(\theta_W\right)B_{\mu}.
+Z_{\mu} = \cos\parenths{\weinberg}W^3_{\mu} - \sin\parenths{\weinberg}B_{\mu}.
 \end{equation}
 Consequently, the physical field $A_{\mu}$ with associated massless photon can be written as:
 \begin{equation}
-A_{\mu} = \sin\left(\theta_W\right)W^3_{\mu} + \cos\left(\theta_W\right)B_{\mu}.
+A_{\mu} = \sin\parenths{\weinberg}W^3_{\mu} + \cos\parenths{\weinberg}B_{\mu}.
 \end{equation}
 The \Equation{eq:theoryGaugeBonson1} can be written in terms of the physical fields $W^+_{\mu}$, $W^-_{\mu}$, $Z_{\mu}$ and $A_{\mu}$:
 \begin{equation}
 \frac{{\left(g\nu\right)}^2}{4}W^+_{\mu}W^{-\mu} + \frac{\left(g^2 + {g'}^{2}\right)\nu^2}{8}Z_{\mu}Z^{\mu}.
 \label{eq:theoryBoson}
 \end{equation}
-The first term gives mass of the \PWplus and \PWminus vector bosons. The second term gives mass of the \PZ neutral vector boson. There is no mass term for the photon. The spontaneous symmetry breaking of the Higgs field breaks the electroweak  \uprightMath{SU(2)_L\times U(1)} gauge symmetry to electromagnetism U(1)  gauge symmetry. The masses of the \PWplus, \PWminus and \PZ bosons are given by:
+The first term gives mass of the \PWplus and \PWminus vector bosons. The second term gives mass of the \PZ neutral vector boson. There is no mass term for the photon. The spontaneous symmetry breaking of the Higgs field breaks the electroweak  \uprightMath{SU(2)_L\times U(1)} gauge symmetry to the U(1)  gauge symmetry of the electromagnetism.  The masses of the \PWplus, \PWminus and \PZ bosons are given by:
 \begin{equation}
-m_{\PWplus} = m_{\PWminus} = \frac{g\nu}{2}\,\,,\,\, m_{\PZ} = \frac{\nu\sqrt{g^2+{g'}^2}}{2} = \frac{m_{\PW}}{\cos\parenths{\theta{\PW}}}.
+m_{\PWplus} = m_{\PWminus} = \frac{g\nu}{2},\quad m_{\PZ} = \frac{\nu\sqrt{g^2+{g'}^2}}{2} = \frac{m_{\PW}}{\cos\parenths{\weinberg}}.
 \end{equation}
 
 \begin{comment}
@@ -599,7 +598,7 @@ Decay modes & Final states & Branching ratio\\
 \label{tab:theoryTauDecayMode}
 \end{table}
 
-A scalar Higgs boson with spin-0 can decay to \TauTauSub{L}{L} or \TauTauSub{R}{R}, whereas  a vector boson \PZ with spin-1 can decay to \TauTauSub{L}{R} or \TauTauSub{R}{L}, where L, R denotes the tau lepton helicity. Therefore, by studying the correlation between the polarisations of the  tau pair from a boson decay, one can determine statistically if the parent boson is a  scalar or a vector.
+A scalar Higgs boson with spin-0 can decay to \TauTauSub{L}{L} or \TauTauSub{R}{R}, whereas  a vector boson \PZ with spin-1 can decay to \TauTauSub{L}{R} or \TauTauSub{R}{L}, where L, R denotes the tau lepton helicity, due to the helicity conservation. Therefore, by studying the correlation between the polarisations of the  tau pair from a boson decay, one can determine statistically if the parent boson is a  scalar or a vector.
 
 %For many theories beyond the Standard Model, a common feature is that the coupling of the Higgs particle to leptons increases with the increase of the lepton mass \cite{Duperrin:2008in}.  In these BSM theories, unlike vector bosons coupling to all flavours of leptons equally, the \HigssTauTau coupling would dominate the Higgs coupling to leptons. Therefore, if an experiment observes the breaking of the lepton universality by favouring \TauTau events, it could indicate the existence of a scalar Higgs. When such a universality breaking is observed, a helicity correlation test can be used to show that the \TauTau pair is from a scalar boson or a vector boson. In particular, the polarisation correlations of tau leptons are different for \HiggsToTauTau and \ZToTauTau, as scalar Higgs decays to \TauTauSub{L}{L} or \TauTauSub{R}{R} and \PZ decays to \TauTauSub{L}{R} or \TauTauSub{R}{L}, where L, R denotes the tau lepton helicities.
 

@@ -613,9 +613,9 @@ The increase in \ECAL cell sizes has a larger impact on the performance of the t
 
 
 
-A  spin-0 scalar Higgs boson can decay to \TauTauSub{L}{L} or \TauTauSub{R}{R}, whereas  a   spin-1 vector boson \PZ with can decay to \TauTauSub{L}{R} or \TauTauSub{R}{L}, where L, R denotes the tau lepton helicity. Therefore, by studying the tau pair polarisation correlation from a boson decay, one can determine statistically if the parent boson is a  scalar or a vector.
+A  spin-0 scalar Higgs boson can decay to \TauTauSub{L}{L} or \TauTauSub{R}{R}, whereas  a   spin-1 vector boson \PZ with can decay to \TauTauSub{L}{R} or \TauTauSub{R}{L}, where L, R denotes the tau lepton helicity, due to the helicity conservation. Therefore, by studying the tau pair polarisation correlation from a boson decay, one can determine statistically if the parent boson is a  scalar or a vector.
 
-The theoretical discussion in \Section{sec:theoryTauPair} presented a generator-level analysis using the correlation between the polarisations of the tau pair from a boson decay as a signature to differentiate the Higgs boson from the \PZ boson. This section presents a proof-of-principle analysis to reconstruct the polarisation correlation of the tau pair with \ZToTauTau channel, where both \tauToPion. The analysis starts with the event generation and simulation, followed by identifying the tau decay products in the events. Afterwards, the tau decay mode classification is used to identify \tauToPion decays. Lastly the tau pair polarisation correlation is presented and compared to  the tau pair polarisation correlation obtained with Monte Carlo particles.
+This section follows the theoretical discussion in \Section{sec:theoryTauPair} on using the correlation between the polarisations of the tau pair from a boson decay as a signature to differentiate the Higgs boson from the \PZ boson. A proof-of-principle analysis  is performed to reconstruct the polarisation correlation of the tau pair with \ZToTauTau channel, where both \tauToPion. The analysis starts with the event generation and simulation, followed by identifying the tau decay products in the events. Afterwards, the tau decay mode classification is used to identify \tauToPion decays. Lastly the tau pair polarisation correlation is presented and compared to  the tau pair polarisation correlation obtained with generator-level Monte Carlo particles.
 
 
 %For many theories beyond the Standard Model, a common feature is that the coupling of the Higgs particle to leptons increases with the increase of the lepton mass \cite{Duperrin:2008in}.  In these BSM theories, unlike vector bosons coupling to all flavours of leptons equally, the \HigssTauTau coupling would dominate the Higgs coupling to leptons. Therefore, if an experiment observes the breaking of the lepton universality by favouring \TauTau events, it could indicate the existence of a scalar Higgs. When such a universality breaking is observed, a helicity correlation test can be used to show that the \TauTau pair is from a scalar boson or a vector boson. In particular, the polarisation correlations of tau leptons are different for \HiggsToTauTau and \ZToTauTau, as scalar Higgs decays to \TauTauSub{L}{L} or \TauTauSub{R}{R} and \PZ decays to \TauTauSub{L}{R} or \TauTauSub{R}{L}, where L, R denotes the tau lepton helicities.
@@ -634,7 +634,7 @@ The theoretical discussion in \Section{sec:theoryTauPair} presented a generator-
 
 \subsection{Event generation and simulation}
 
-The channel to study is \HepProcess{\Pep \Pem \to \PZ \PZ}, where one \PZ boson decays hadronically and the other \PZ boson decays to a tau lepton pair. The samples were generated at a centre-of-mass energy of 350\,GeV without \ISR contribution for this proof-of-principle study.
+The studied process  is \HepProcess{\Pep \Pem \to \PZ \PZ}, where one \PZ boson decays hadronically and the other \PZ boson decays to a tau lepton pair. The samples were generated at a centre-of-mass energy of 350\,GeV without \ISR contribution for this proof-of-principle study.
 
 The same seven tau decay modes defined in the previous analysis in \Section{sec:tauDecayModes} are studied. The constraints on the simulated events are the same as those   in the previous analysis in \Section{sec:tauSim}, except that the constraint on the total energy of non-neutrino decay products is not applied. A considerable fraction of \ZToTauTau events, where \tauToPion, have two low-energy charged pions. Therefore, the constraint on the total energy of non-neutrino decay products would distort the energy distribution of the charged pions, thus affecting the tau pair polarisation correlation extration.
 
@@ -643,7 +643,7 @@ The same seven tau decay modes defined in the previous analysis in \Section{sec:
 \subsection{Find tau decay products}
 \label{sec:tauHZfindTau}
 
-The final state of the channel, \eeZZQQ, contains two tau leptons and two quark jets. Therefore, tau decay products can either be found by direct tau lepton decay products searching with a tau finder processor, or by using jet algorithms to find tau decay products as jets. When a tau lepton decays to a few particles, such as the leptonic tau decay final states, the direct tau searching method is favoured. When a tau lepton decays hadronically, resulting in multiple charged and neutral particles, the jet cluster method is suitable to find tau decay methods. Hence, two approaches are combined to find the two tau leptons decay products.
+The final state of the process, \eeZZQQ, contains two tau leptons and two quark jets. Therefore, tau decay products can either be found by direct tau lepton decay products searching with a tau finder processor, or by using jet algorithms to find tau decay products as jets. When a tau lepton decays to a few particles, such as the leptonic tau decay final states, the direct tau searching method is favoured. When a tau lepton decays hadronically, resulting in multiple charged and neutral particles, the jet cluster method is suitable to find tau decay methods. Hence, two approaches are combined to find the two tau leptons decay products.
 
 %If a tau lepton decays into a few particles, then the direct tau searching would work better. If a tau lepton decays into many particles, finding tau decay products as jets has a better performance, as jet clustering works better with more particles.
 
@@ -756,7 +756,7 @@ The training  the multivariate classifier follows the procedure in  \Section{sec
 
 \FIGURE{fig:TauSpin2D} shows the two-dimensional distributions of  tau decay product energy fractions, with \eeZZ channel where one \PZ decays to a tau pair and the other \PZ decays hadronically, using both \tauToPion decay mode. The energy fractions of the tau decay product to the tau lepton ($E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$) are the appropriate kinematic variables to study the tau pair polarisation correlation, motivated in the theoretical discussion in \Section{sec:theoryTauPair}.
 
-\FIGURE{fig:TauSpin2DMC} shows the  two-dimensional  tau decay product energy fraction distribution obtained with the Monte Carlo particles. \FIGURE{fig:TauSpin2Dreco} shows the distribution using the full detector simulation. A good match between the distributions obtained with  the MC particles and the full detector simulation is achieved. Dark regions along the diagonal can be seen in both the distribution for the Monte Carlo particles and the distribution for the full detector simulation. In the \ZToTauTau decays, where both \tauToPion, an energetic \Pgppm is likely to be associated with an energetic \Pgpmp and a low-energy \Pgppm is  likely to be associated with a low-energy \Pgpmp. Comparing the two figures, some events in the top right quadrant, corresponding to  both \Ppipm being energetic, are not reconstructed correctly in the full detector simulation. This is due to the incorrect finding of the tau pair decay products  in \Section{sec:tauHZfindTau}.
+\FIGURE{fig:TauSpin2DMC} shows the  two-dimensional  tau decay product energy fraction distribution obtained with the generator-level  Monte Carlo particles. \FIGURE{fig:TauSpin2Dreco} shows the distribution using the full detector simulation. A good match between the distributions obtained with  the generator-level  MC particles and the full detector simulation is achieved. Dark regions along the diagonal can be seen in both the distribution for the Monte Carlo particles and the distribution for the full detector simulation. In the \ZToTauTau decays, where both \tauToPion, an energetic \Pgppm is likely to be associated with an energetic \Pgpmp and a low-energy \Pgppm is  likely to be associated with a low-energy \Pgpmp. Comparing the two figures, some events in the top right quadrant, corresponding to  both \Ppipm being energetic, are not reconstructed correctly in the full detector simulation. This is due to the incorrect finding of the tau pair decay products  in \Section{sec:tauHZfindTau}.
 
 
 % This trend is shown in both the distribution produced with the Monte Carlo particles and with the full detector simulation
@@ -775,7 +775,7 @@ This proof-of-principle analysis shows the tau polarisation correlations, using 
 \centering % \begin{center}/\end{center} takes some additional vertical space
 \begin{subfigure}[b]{0.75\textwidth}
   \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2DMC}
-  \caption{Monte Carlo particles}
+  \caption{Generator-level  Monte Carlo particles}
   \label{fig:TauSpin2DMC}
 \end{subfigure}
 \begin{subfigure}[b]{0.75\textwidth}
@@ -784,7 +784,7 @@ This proof-of-principle analysis shows the tau polarisation correlations, using 
   \label{fig:TauSpin2Dreco}
 \end{subfigure}
 \caption
-{Two-dimensional distributions of $E_{\Ppiplus}/E_{\APtauon}$ as a function of $E_{\Ppiminus}/E_{\Ptauon}$ from \ZToTauTau decay where both \tauToPion, with \eeZZ channel where one \PZ decays to a tau pair and the other \PZ decays hadronically,  for a) Monte Carlo particles, and b) the full detector simulation. The \tauToPion decay is selected using a) the truth information, and b) the MVA classifier.}
+{Two-dimensional distributions of $E_{\Ppiplus}/E_{\APtauon}$ as a function of $E_{\Ppiminus}/E_{\Ptauon}$ from \ZToTauTau decay where both \tauToPion, with \eeZZ channel where one \PZ decays to a tau pair and the other \PZ decays hadronically,  for a) generator-level  Monte Carlo particles, and b) the full detector simulation. The \tauToPion decay is selected using a) the truth information, and b) the MVA classifier.}
 \label{fig:TauSpin2D}
 \end{figure}
 \begin{comment}
