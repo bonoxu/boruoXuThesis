@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.4.28)  27 JUL 2017 16:01
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.4.28)  27 JUL 2017 17:31
 entering extended mode
 **main.tex
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.tex"
@@ -1393,6 +1393,9 @@ File: ILD/ILDtracking.jpg Graphic file (type jpg)
 <use ILD/ILDtracking.jpg>
 Package pdftex.def Info: ILD/ILDtracking.jpg used on input line 464.
 (pdftex.def)             Requested size: 201.63182pt x 163.2573pt.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1454,15 +1457,12 @@ Package epstopdf Info: Source file: <ILD/ILD_ECAL_layer.eps>
 (epstopdf)                    date: 2017-07-27 16:01:15
 (epstopdf)                    size: 486306 bytes
 (epstopdf)             Output file: <ILD/ILD_ECAL_layer-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-07-27 16:01:27
+(epstopdf)                    size: 26206 bytes
 (epstopdf)             Command: <epstopdf --outfile=ILD/ILD_ECAL_layer-eps-conv
 erted-to.pdf ILD/ILD_ECAL_layer.eps>
 (epstopdf)             \includegraphics on input line 876.
-runsystem(epstopdf --outfile=ILD/ILD_ECAL_layer-eps-converted-to.pdf ILD/ILD_EC
-AL_layer.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <ILD/ILD_ECAL_layer-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-07-27 16:01:27
-(epstopdf)                    size: 26206 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <ILD/ILD_ECAL_layer-eps-converted-to.pdf, id=1706, 241.90375pt x 175.65625pt>
 File: ILD/ILD_ECAL_layer-eps-converted-to.pdf Graphic file (type pdf)
@@ -1551,7 +1551,7 @@ sitron
  []
 
 [46] [47]
-Underfull \vbox (badness 2189) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48]
 [49]
@@ -1827,9 +1827,6 @@ File: photon/photonRecoFlow2-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: photon/photonRecoFlow2-eps-converted-to.pdf used on in
 put line 136.
 (pdftex.def)             Requested size: 291.24521pt x 421.90157pt.
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
  [74 <E:/user/my documents/University/2016-2017/boruoXuThesis/photon/photonReco
 Flow2-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <photon/peakFindingMod.eps>
@@ -5172,19 +5169,20 @@ ser/my documents/University/2016-2017/boruoXuThesis/doubleHiggs/extraction/new/
 contourCOmbineAve3-eps-converted-to.pdf>]
 chapter 8.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2809) has occurred while \output is active []
 
  [187
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [188]))
+]))
 Processing 'appendices' comment. Comment 'appendices' writing to comment.cut.
 Straight input of comment.cut.
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\comment.cut"
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\appendicesDoubleHiggs
-.tex" [189] [190
+.tex"
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [188]
+[189] [190
 
 ]
 chapter A.
@@ -5288,13 +5286,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 351--356
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [201]
-Underfull \hbox (badness 3302) in paragraph at lines 428--433
+Underfull \hbox (badness 3302) in paragraph at lines 427--432
 []\T1/lmr/m/n/12 (+20) S. Luki¢,  For-ward elec-tron tag-ging in the h $[]$ $\O
 ML/lmm/m/it/12 $ $$ \T1/lmr/m/n/12 (+20) ana-lysis at
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 428--433
+Underfull \hbox (badness 2376) in paragraph at lines 427--432
 \T1/lmr/m/n/12 (+20) 1.4 tev,  [][]$\T1/lmtt/m/n/12 http : / / indico . cern . 
 ch / event / 262809 / contributions / 1595499 /
  []
@@ -5312,16 +5310,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 19039 strings out of 494045
- 303137 string characters out of 3154005
- 588555 words of memory out of 3000000
- 20746 multiletter control sequences out of 15000+200000
- 162278 words of font info for 292 fonts, out of 3000000 for 9000
+ 19043 strings out of 494045
+ 303169 string characters out of 3154005
+ 588595 words of memory out of 3000000
+ 20749 multiletter control sequences out of 15000+200000
+ 162250 words of font info for 292 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  69i,48n,75p,8816b,1062s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{D:/MiKTeX 2.9/fonts/enc/dvips/lm
@@ -5345,9 +5340,9 @@ c/lm/lmssbx10.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><D:/MiKTeX 2.
 b><D:/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><D:/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmtt12.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (218 pages, 17683566 bytes).
+Output written on main.pdf (218 pages, 17682170 bytes).
 PDF statistics:
- 40111 PDF objects out of 45951 (max. 8388607)
- 719 named destinations out of 1000 (max. 500000)
+ 40114 PDF objects out of 45951 (max. 8388607)
+ 720 named destinations out of 1000 (max. 500000)
  38309 words of extra memory for PDF output out of 42996 (max. 10000000)
 

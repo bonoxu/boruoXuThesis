@@ -1,8 +1,8 @@
 \chapter{Event generation, simulation, reconstruction, and analysis software}
 \label{chap:Reconstruction}
 
-\chapterquote{All the world's a stage, And all the men and women merely players; They have their exits and their entrances, And one man in his time plays many parts.}%
-{William Shakespeare, 1564 - 1616}%: Blackwood's Magazine May 1830
+\chapterquote{When I walk along with two others, from at least one I will be able to learn.}%
+{Confucius, 551 BC $-$ 479 BC}%: Blackwood's Magazine May 1830
 
 %As previously stated, this document focus on the \ILD and \CLICILD detectors. Due to the similarity, we often only discuss one detector to avoid the repetition. The difference in detectors will be stated if applicable.
 
@@ -80,7 +80,7 @@ L(\Gammagamma) / L(\ee) &0.64 & 0.69\\
 
 %For all the simulated events used in this thesis, t
 
-The simulation software used to simulate the interaction of particles through the detector material is the GEANT4 software \cite{Agostinelli:2002hh}. The \ILD and \CLICILD detector geometry descriptions are provided by the \Mokka software \cite{MoradeFreitas:2002kj}.  The QGSP\_BERT physics list is used to simulate the detailed development of hadronic showers in the detector. Since events were generated with head-on collisions, the event simulation introduced the crossing angles (20\,mrad for \CLIC and 14\,mrad for \ILC) by applying a corresponding Lorentz boost to all particles in the events.
+The simulation software used to simulate the interaction of particles through the detector material is the \GEANT software \cite{Agostinelli:2002hh}. The \ILD and \CLICILD detector geometry descriptions are provided by the \Mokka software \cite{MoradeFreitas:2002kj}.  The QGSP\_BERT physics list from \GEANT the  is used to simulate the detailed development of hadronic showers in the detector. Since events were generated with head-on collisions, the event simulation introduced the crossing angles (20\,mrad for \CLIC and 14\,mrad for \ILC) by applying a corresponding Lorentz boost to all particles in the events.
 
 %The  QGSP\_BERT physics list uses the Bertini model \cite{Proceedings:2003lxa} at low energies, making a transition to the Low Energy Parameterisations (GHEISHA \cite{TechnicalReportPITHA 85-02}) model between 9.5 and 9.9\,GeV, and a further transition to the QGSP model between 12 and 25\,GeV.  QGSP model is a GEANT4 implementation of a string model~\cite PhysRevLett.67.1523 for the high energy interaction, supplemented by the  GEANT4} precompound model\cite{mazzucato2001proceedings}
 %QGSP is the basic physics list applying the quark gluon string model for high energy interactions of protons, neutrons, pions, and Kaons and nuclei. The high energy interaction creates an exited nucleus, which is passed to the precompound model modeling the nuclear de-excitation.
@@ -364,7 +364,7 @@ The $d_{ij}$ and $d_{iB}$ are calculated for all pairs of particles. If the mini
 
 %\fourMomentum of particle $i$ is updated as the sum of the two particles.
 
-The exclusive variant is similar to the inclusive variant. First difference is that when the minimum value is  a $d_{iB}$, particle $i$ forms part of the beam jet. The beam jet contains particles that are considered to be from the beam induced background and discarded at the end of the jet clustering. The second difference is that when all $d_{ij}$ and $d_{iB}$ are above a threshold, $d_{cut}$, the jet clustering will stop. 
+The exclusive variant is similar to the inclusive variant. First difference is that when the minimum value is  a $d_{iB}$, particle $i$ forms part of the beam jet. The beam jet contains particles that are considered to be from the beam induced background and discarded at the end of the jet clustering. The second difference is that when all $d_{ij}$ and $d_{iB}$ are above a threshold, $d_{cut}$, the jet clustering will stop.
 
 The exclusive mode allows a specified number of jets to be found, where the $d_{cut}$ is automatically determined. In contrast, the inclusive mode would find as many jets as the algorithm allows.
 
@@ -502,7 +502,7 @@ This two-class classification scheme can  be easily extended to multiple classes
 \subsection{Optimisation and overfitting}
 \label{sec:pandoraMVAoptimisation}
 
-One important concept with the MVA is the optimisation and the overfitting of the model. The optimisation of the model refers to selecting the optimal free parameters of the model. One could build a complex model which fits the training samples well, but the model would not be optimal for a testing sample. A simple model is less prone to statistical fluctuation of samples, however, the model might be too simple to achieve the optimal modelling. The former case is known as overfitting, or overtraining. The latter case is called underfitting, or undertraining. 
+One important concept with the MVA is the optimisation and the overfitting of the model. The optimisation of the model refers to selecting the optimal free parameters of the model. One could build a complex model which fits the training samples well, but the model would not be optimal for a testing sample. A simple model is less prone to statistical fluctuation of samples, however, the model might be too simple to achieve the optimal modelling. The former case is known as overfitting, or overtraining. The latter case is called underfitting, or undertraining.
 
 %Another way to describe the difference in a simple and a complex model is that a simple model typically has a low variance but a high bias, whilst a complex model would often have a low bias but a high variance.
 
@@ -524,7 +524,7 @@ One definition of  overfitting is when the efficiency of the signal selection in
 
 \subsection{Choice of models}
 
-The model to fit the data can be as simple as a cut-based model, a likelihood estimator, or a linear regression model. The model can also be as complicated as a non-linear tree, a non-linear neutral network, or a support vector machine. Regardless of the model complexity, the choice of the most optimal classifier is often data driven to match the nature of the sample. For example, a non-linear model is the best to model a non-linear response to the input variables. 
+The model to fit the data can be as simple as a cut-based model, a likelihood estimator, or a linear regression model. The model can also be as complicated as a non-linear tree, a non-linear neutral network, or a support vector machine. Regardless of the model complexity, the choice of the most optimal classifier is often data driven to match the nature of the sample. For example, a non-linear model is the best to model a non-linear response to the input variables.
 
 To rigourously identify the best model, individual optimisation of models are required, which is computationally very expensive. However, as researchers in the machine learning suggested, the boosted decision tree is probably the best out-of-the-box machine learning method  \cite{hastie2009elements}. A neutral network model could potentially perform better than the boosted decision tree model, but it requires more tuning, and it is less intuitive to interpret. For these reasons, the boost decision tree model (BDT) is chosen for to be used in  physics analyses in this thesis. Before describing the BDT model in details, some simpler models will be described.
 
@@ -559,7 +559,7 @@ Similar to the rectangular cut method, the likelihood model works better with de
 \label{sec:pandoraDecisionTree}
  %is a non linear tree based model
 
-%Before discussing boost decision tree (BDT) model, it is necessary to introduce the decision tree model. 
+%Before discussing boost decision tree (BDT) model, it is necessary to introduce the decision tree model.
 
 The decision tree is a non-linear tree based model. Its rather complex nature requires a careful explanation of many concepts.
 
@@ -586,11 +586,11 @@ To demonstrate first step of the training of the model, details of finding the o
 \begin{equation}
 2p\parenths{1\!-\!p} \backsimeq 0.36 .
 \end{equation}
-If the cut at the root node is ``Know where free pizza is'', $p=\frac{10}{15}$, as there are  10 PhD students and 5 undergraduate students who know where the free pizza is located. Gini index is given by 
+If the cut at the root node is ``Know where free pizza is'', $p=\frac{10}{15}$, as there are  10 PhD students and 5 undergraduate students who know where the free pizza is located. Gini index is given by
 \begin{equation}
 2p\parenths{1\!-\!p} \backsimeq 0.44 .
 \end{equation}
-Therefore, by choosing the cut that minimise the Gini Index, the optimal cut for the root node is ``Leave party before 1am''. 
+Therefore, by choosing the cut that minimise the Gini Index, the optimal cut for the root node is ``Leave party before 1am''.
 
 The simple tree in \Figure{fig:doubleHiggsMVAdecisionTree} is grown fully as each end node contains signal or background only. An example of applying the trained decision tree is provided: if there is a student who leaves parties before 1\,am and knows where a free pizza is located, then the student is classified as a PhD student.
 
@@ -624,7 +624,7 @@ Not know where free pizza is & 3 & 2 \\
 
 \subsubsection{To improve decision tree}
 
-%The decision tree model has a low bias, but a high variance. 
+%The decision tree model has a low bias, but a high variance.
 
 %This means
 
@@ -636,7 +636,7 @@ Boosting: the basic idea of boosting is that the tree growing procedure focuses 
 
 %The basic idea of adaptive boosting is that the tree making procedure focuses on events which are difficult to classify correctly. By assigning a weight to each event,   after each tree growing iteration, the weights for misclassified events are gradually increased. Therefore misclassified events get more attention in the next iteration.
 
-Bagging: also known as boot-strap, it is a method that select a  random subset of the training sample, and use the subset at training. 
+Bagging: also known as boot-strap, it is a method that select a  random subset of the training sample, and use the subset at training.
 
 %When bagging is combined with boosting, every iteration takes a subset of the  sample, rather than the whole sample.
 
@@ -647,7 +647,7 @@ Random Forest: when a tree is grown, a randomly selected subset of discriminativ
 
 Boosted decision tree (BDT) contains a forest of decision trees, where the boosting is used to grow trees. There are two common boosting methods: adaptive boosting and gradient boosting. The adaptive boosting,  first introduced in \cite{FREUND1997119}, is discussed in further details, as it is simpler to understand than the gradient boosting. The adaptive boosting algorithm, adapted from \cite{hastie2009elements},  is outlined below:
 
-%where each tree is iterated many times using a technique called boosting.   By overcoming the instability of a single  decision tree, BDT is often regarded as  the best out-of-the-box machine learning method. 
+%where each tree is iterated many times using a technique called boosting.   By overcoming the instability of a single  decision tree, BDT is often regarded as  the best out-of-the-box machine learning method.
 %The basic idea of adaptive boosting is that the tree making procedure focuses on events which are difficult to classify correctly. By assigning a weight to each event,   after each tree growing iteration, the weights for misclassified events are gradually increased. Therefore misclassified events get more attention in the next iteration.
 \begin{itemize}
   \item At the initialisation stage,  event weight is initialised to $w = 1 / N$ for every event, for $N$ total events.
@@ -726,7 +726,7 @@ TMVA multiple class implementation, \multiclass, uses the ``one versus all" sche
 
 The advantage of using the \multiclass classifier instead of a two-class classifier for samples with multiple classes  is the classifier outputs are correctly adjusted for multiple classes. Hence one event can  be unambiguously classified into only one class. The issue with the \multiclass classifier is that powerful discriminative variables for each individual class need to enter the training stage simultaneously, resulting in a large number of discriminative variables in the  \multiclass classifier.
 
-%that the correlation between different classes are accounted for. 
+%that the correlation between different classes are accounted for.
 %TMVA \multiclass implementation uses "one versus all" scheme. \Multiclass is used in flavour tagging of jets, \Section{sec:pandoraLCFI}, and in the tau lepton final state separation study, \Section{}.
 
 %Computational intensive jobs are processed either on the Cambridge High Energy Physics grid, or the \CLIC computing grid.
