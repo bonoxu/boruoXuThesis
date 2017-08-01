@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: canvas1/
-//=========  (Tue Aug  1 16:45:18 2017) by ROOT version5.34/05
+//=========  (Tue Aug  1 17:44:37 2017) by ROOT version5.34/05
    TCanvas *canvas1 = new TCanvas("canvas1", "",12,51,800,700);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -39,7 +39,7 @@
 
    ci = TColor::GetColor("#7293cb");
    0->SetLineColor(ci);
-   0->GetXaxis()->SetTitle("Number of e^{-}");
+   0->GetXaxis()->SetTitle("N_{e^{-}}");
    0->GetXaxis()->SetNdivisions(506);
    0->GetXaxis()->SetLabelFont(132);
    0->GetXaxis()->SetLabelOffset(0.015);
@@ -78,7 +78,7 @@
 
    ci = TColor::GetColor("#e1974c");
    1->SetLineColor(ci);
-   1->GetXaxis()->SetTitle("Number of e^{-}");
+   1->GetXaxis()->SetTitle("N_{e^{-}}");
    1->GetXaxis()->SetNdivisions(506);
    1->GetXaxis()->SetLabelFont(132);
    1->GetXaxis()->SetLabelOffset(0.015);
@@ -119,7 +119,7 @@
 
    ci = TColor::GetColor("#83ba5b");
    2->SetLineColor(ci);
-   2->GetXaxis()->SetTitle("Number of e^{-}");
+   2->GetXaxis()->SetTitle("N_{e^{-}}");
    2->GetXaxis()->SetNdivisions(506);
    2->GetXaxis()->SetLabelFont(132);
    2->GetXaxis()->SetLabelOffset(0.015);
@@ -158,7 +158,7 @@
 
    ci = TColor::GetColor("#ab6857");
    3->SetLineColor(ci);
-   3->GetXaxis()->SetTitle("Number of e^{-}");
+   3->GetXaxis()->SetTitle("N_{e^{-}}");
    3->GetXaxis()->SetNdivisions(506);
    3->GetXaxis()->SetLabelFont(132);
    3->GetXaxis()->SetLabelOffset(0.015);
