@@ -141,7 +141,7 @@ Separating reconstructed particles in an event into two sets is achieved using t
 \begin{equation}
 T = \max_{\hat{t}}\!\frac{\sum_{i}\absOf{\hat{t}\!\cdot\!\vec{p_{i}}}}{\sum_{i}\absOf{\vec{p_{i}}}},
 \end{equation}
-where $\vec{p_{i}}$ is the momentum vector of particle $i$;  the vector $\hat{t}$ is the unit principle thrust axis vector; and index $i$ is summed over all particles in an event. Two sets of particles are obtained based on the sign of the scalar product between the principle thrust axis vector  and the momentum vector of a particle: particles with a positive sign of the scalar products are in one set and particles with a negative sign are in another set.
+where $\vec{p_{i}}$ is the momentum vector of particle $i$;  vector $\hat{t}$ is the unit principle thrust axis vector; and index $i$ is summed over all particles in an event. Two sets of particles are obtained based on the sign of the scalar product between the principle thrust axis vector  and the momentum vector of a particle: particles with a positive sign of the scalar products are in one set and particles with a negative sign are in another set.
 
 
 \section{Pre-selection}
@@ -176,7 +176,7 @@ Lastly, tay decay products are discarded when tau decay products deposit energie
 
 \TABLE{tab:tauPreSelEff} shows the fractions of tau decays passing successive cuts  for different tau decay final states.  As expected, the cut on the photon conversion only affects tau decay modes with  photons in the final states. The cut on the total visible energy of the tau decay products has the greatest affect on the leptonic decay modes with two neutrinos  in the final states. The cut on the tau polar angle affects different tau decay modes almost equally.
 
-% because more energies are carried by neutrinos in these decay modes. 
+% because more energies are carried by neutrinos in these decay modes.
 
 %All decay modes are affected almost equally by this cut, suggested by numbers in \Table{tab:tauPreSelEff}.
 
@@ -200,7 +200,7 @@ Lastly, tay decay products are discarded when tau decay products deposit energie
 \hline
 \end{tabular}
 \caption
-{Fractions of tau decays passing successive cuts  for different tau decay final states.}%All cuts are based on the truth information.
+{Fractions of tau decays passing successive pre-selection cuts  for different tau decay final states.}%All cuts are based on the truth information.
 \label{tab:tauPreSelEff}
 \end{table}
 
@@ -261,15 +261,30 @@ The last pre-selection cut is to discard events with tau decay products depositi
 \section{\texorpdfstring{\decayRhoShort and \decayAiPhotonShort} \, resonances reconstruction}
 \label{sec:tauResonance}
 
+By utilising the photon identification potential of the highly granular \ECAL, the identification of the \decayRhoShort and \decayAiPhotonShort decay modes is enhanced  by reconstructing the \Prho and \Pai invariant mass. For events with at least one charged pion and one photon, the reconstruction selects the combination of charged pion and photon that have a invariant mass consistent with the \Prho or \Pai mass.
 
 
 
-The \decayRhoShort and \decayAiPhotonShort decay modes identification is enhanced  by reconstructing the \Prho and \Pai invariant mass resonances. For example, the final state of the \decayRhoShort decay mode contains a \Pgpm and a \Ppizero, where  \pionToPhoton. By selecting \Pgpm and photons consistent with \Prho mass, \decayRhoShort decay mode reconstruction is improved. The  \decayRhoShort decay mode hypothesis test is performed by minimising a  $\chi^{2}$ function:
+%The identification of the \decayRhoShort and \decayAiPhotonShort decay modes is enhanced  by reconstructing the \Prho and \Pai invariant mass. The
+
+
+%The \decayRhoShort and \decayAiPhotonShort decay modes identification is enhanced  by reconstructing the \Prho and \Pai invariant mass resonances. 
+% By selecting \Pgpm and photons consistent with \Prho mass, \decayRhoShort decay mode reconstruction is improved. 
+For example, the final state of the \decayRhoShort decay mode contains a \Pgpm and a \Ppizero, where  \pionToPhoton. The  \decayRhoShort decay mode hypothesis test is performed by selecting the combination of the charged pion and photons that gives the smallest value of a $\chi^{2}$ function:
 \begin{equation}
-\chi^{2} = {\left(\frac{m_{tot} -  m^{MC}_{\Prho}}{\sigma^{MC}_{\Prho}}\right)}^{2} + {\left(\frac{m_{\Pphoton_1\Pphoton_2} -  m^{MC}_{\Ppizero}}{\sigma^{MC}_{\Ppizero}}\right)}^{2} \,,
+\chi^{2} = {\left(\frac{m_{tot} -  m_{\Prho}}{\sigma_{\Prho}}\right)}^{2} + {\left(\frac{m_{\Pphoton_1\Pphoton_2} -  m_{\Ppizero}}{\sigma_{\Ppizero}}\right)}^{2} \,,
 \label{eqn:tauRho}
 \end{equation}
-where $m_{\Pphoton_1\Pphoton_2}$ is the invariant mass of two photons; the variable $m_{tot}$ is the total invariant mass of the  two photons and one \Pgpm; the variables $m^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are the respective true masses of \Prho and \Ppizero, taken from \cite{Agashe:2014kda}; and $\sigma^{MC}_{\Prho}$ and $\sigma^{MC}_{\Ppizero}$ are the respective half widths of the invariant mass distributions of reconstructed \Prho and \Ppizero. The minimisation function is iterated over all combinations of photons and \Pgpm. By choosing the combination of photons and \Pgpm which minimises the  $\chi^{2}$ function, the fitted \Prho mass, $m_{tot}$, and the fitted \Ppizero mass, $m_{\Pphoton_1\Pphoton_2}$, are obtained.
+where $m_{\Pphoton_1\Pphoton_2}$ is the invariant mass of two photons; the variable $m_{tot}$ is the total invariant mass of the  two photons and one \Pgpm; the variables $m^{MC}_{\Prho}$ and $m^{MC}_{\Ppizero}$ are the respective true masses of \Prho and \Ppizero, taken from \cite{Agashe:2014kda}; and $\sigma^{MC}_{\Prho}$ and $\sigma^{MC}_{\Ppizero}$ are the respective half widths of the invariant mass distributions of reconstructed \Prho and \Ppizero. 
+
+
+
+The minimisation function is iterated over all combinations of photons and \Pgpm.
+
+
+
+
+By choosing the combination of photons and \Pgpm which minimises the  $\chi^{2}$ function, the fitted \Prho mass, $m_{tot}$, and the fitted \Ppizero mass, $m_{\Pphoton_1\Pphoton_2}$, are obtained.
 
 The minimisation function in \Equation{eqn:tauRho} is modified for the \decayAiPhotonShort decay mode hypothesis test:
 %The \decayAiPhotonShort decay mode identification can be enhanced using an similar minimisation function, $\chi^2$:
