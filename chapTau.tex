@@ -281,7 +281,7 @@ Calorimetric energy information &   { $E^{\ECAL}_{\charge} / E_{\charge}$,  $ E^
 \decayAiPhotonShort reconstruction & {  $m_{\Pgpz}^{(\Pai)}$, $m^{*(\Pai)}_{\Pgpz}$, $m_{\Pai}^{reco}$} \\
 EM shower profile & $\delta{l}$, $t_0$, $\langle{w}\rangle$ \\
 Calorimeter hit information & $\bar{E}_{hit}$, $MIP$ \\
-Track information & $E/P$ \\
+Track information & $E/p$ \\
 \hline
 \hline
 \end{tabular}
@@ -296,7 +296,38 @@ The most crucial variables for classifying tau decay modes  are the number of pa
 
 
 
-\FIGURE{fig:tauVarNCharge} shows the distributions of the number of charged particles for different tau decay modes. Over 98\% \decayElectronShort, \decayMuonShort, and \decayPionShort final state events have exactly one reconstructed charged particle  per event, and approximately 95\% \decayAiPionShort final state events have exactly three reconstructed charged particles  per event. \FIGURE{fig:tauVarNPhoton} shows the distributions of the number of photons, which is powerful to distinguish final states with different numbers of \Ppizero. Nearly 75\% of  \decayRhoShort decay mode events have exactly two reconstructed photons per event, and over 60\% of the \decayAiPhotonShort decay mode events have exactly four photons per event.
+\FIGURE{fig:tauVarNCharge} shows the distribution of the number of reconstructed charged particles for different tau decay modes. Over 98\% of  \tauToElectron, \tauToMuon, and \tauToPion final state events have exactly one reconstructed charged particle  per event, and approximately 95\% of \decayAiPionShort final state events give exactly three reconstructed charged particles. \FIGURE{fig:tauVarNMuon} and \Figure{fig:tauVarNElectron}  show the distributions of the number of reconstructed muons and electrons respectively for different tau decay modes. 99\% of \tauToMuon final state events produce exactly one reconstructed muon, and 99\% of \tauToElectron final state events have one reconstructed electron. \FIGURE{fig:tauVarNPhoton} shows the distributions of the number of reconstructed photons  for different tau decay modes, which distinguishes between final states with different numbers of \Ppizero.  Nearly 75\% of  \decayRhoShort  decays give exactly two reconstructed photons, and over 60\% of the \decayAiPhotonShort decays have exactly four photons.
+
+
+
+
+\begin{figure}[htbp]
+\centering
+% \begin{center}/\end{center} takes some additional vertical space
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/nCharge_100GeV_improved.pdf}
+  \caption{}
+  \label{fig:tauVarNCharge}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/nMuon_100GeV_improved.pdf}
+  \caption{}
+  \label{fig:tauVarNMuon}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/nElectron_100GeV_improved.pdf}
+  \caption{}
+  \label{fig:tauVarNElectron}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/var2/nPhoton_100GeV_improved.pdf}
+  \caption{}
+  \label{fig:tauVarNPhoton}
+\end{subfigure}
+\caption
+{Distributions of  the number of reconstructed a)  charged particles (${N}_{\charge}$); b) muons (${N}_{\Pmu}$); c) electrons (${N}_{\Pe}$); d) and photons (${N}_{\Pgg}$). The particle ID information comes from the output of the \pandora reconstruction. The area under the curve for each decay mode is normalised to unity. Decay modes in all plots are selected using the truth information.}
+\label{fig:tauVar}
+\end{figure}
 
 % and the overlap between \decayRhoShort and \decayAiPhotonShort is around 15\%. ${N}_{\Pgg}$ can also separate two 3-prong final states.
 %${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgpm}$ are useful to identify two leptonic final states, and further separate 3-prong final states from 1-prong final states.
@@ -361,7 +392,7 @@ where $m_{tot}$ is the total invariant mass of one photon and one \Pgpm.
   \label{fig:tauRhoFromRho}
 \end{subfigure}
 \caption
-{Reconstructed invariant mass distributions for a) \Ppizero; b) \Prho, in the \decayRhoShort decay mode. The reconstructed masses are obtained using the MC truth information to find the corresponding reconstructed particles. The decay mode is selected using the MC truth information. Area under the curve is normalised to 1.}
+{Reconstructed invariant mass distributions for a) \Ppizero; b) \Prho, in the \decayRhoShort decay mode. The reconstructed masses are obtained using the MC truth information to find the corresponding reconstructed particles. The decay mode is selected using the MC truth information. The area under the curve is normalised to unity.}
 \label{fig:tauRho}
 \end{figure}
 
