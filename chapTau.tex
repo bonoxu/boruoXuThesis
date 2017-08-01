@@ -296,7 +296,7 @@ The most crucial variables for classifying tau decay modes  are the number of pa
 
 
 
-\FIGURE{fig:tauVarNCharge} shows the distribution of the number of reconstructed charged particles for different tau decay modes. Over 98\% of  \tauToElectron, \tauToMuon, and \tauToPion final state events have exactly one reconstructed charged particle  per event, and approximately 95\% of \decayAiPionShort final state events give exactly three reconstructed charged particles. \FIGURE{fig:tauVarNMuon} and \Figure{fig:tauVarNElectron}  show the distributions of the number of reconstructed muons and electrons respectively for different tau decay modes. 99\% of \tauToMuon final state events produce exactly one reconstructed muon, and 99\% of \tauToElectron final state events have one reconstructed electron. \FIGURE{fig:tauVarNPhoton} shows the distributions of the number of reconstructed photons  for different tau decay modes, which distinguishes between final states with different numbers of \Ppizero.  Nearly 75\% of  \decayRhoShort  decays give exactly two reconstructed photons, and over 60\% of the \decayAiPhotonShort decays have exactly four photons.
+\FIGURE{fig:tauVarNCharge} shows the distributions of the number of reconstructed charged particles for different tau decay modes. Over 98\% of  \tauToElectron, \tauToMuon, and \tauToPion final state events have exactly one reconstructed charged particle  per event, and approximately 95\% of \decayAiPionShort final state events give exactly three reconstructed charged particles. \FIGURE{fig:tauVarNMuon} and \Figure{fig:tauVarNElectron}  show the distributions of the number of reconstructed muons and electrons respectively for different tau decay modes. 99\% of \tauToMuon final state events produce exactly one reconstructed muon, and 99\% of \tauToElectron final state events have one reconstructed electron. \FIGURE{fig:tauVarNPhoton} shows the distributions of the number of reconstructed photons  for different tau decay modes, which distinguishes between final states with different numbers of \Ppizero.  Nearly 75\% of  \decayRhoShort  decays give exactly two reconstructed photons, and over 60\% of the \decayAiPhotonShort decays have exactly four photons.
 
 
 
@@ -326,7 +326,7 @@ The most crucial variables for classifying tau decay modes  are the number of pa
 \end{subfigure}
 \caption
 {Distributions of  the number of reconstructed a)  charged particles (${N}_{\charge}$); b) muons (${N}_{\Pmu}$); c) electrons (${N}_{\Pe}$); d) and photons (${N}_{\Pgg}$). The particle ID information comes from the output of the \pandora reconstruction. The area under the curve for each decay mode is normalised to unity. Decay modes in all plots are selected using the truth information.}
-\label{fig:tauVar}
+\label{fig:tauVar1}
 \end{figure}
 
 % and the overlap between \decayRhoShort and \decayAiPhotonShort is around 15\%. ${N}_{\Pgg}$ can also separate two 3-prong final states.
@@ -335,9 +335,33 @@ The most crucial variables for classifying tau decay modes  are the number of pa
 
 \subsection{Invariant mass variables}
 
-Five invariant mass variables participate in the MVA classification: the invariant mass of all non-neutrino decay products ($m_{vis}$); the invariant mass of all charged particles ($m_{\charge}$); the invariant mass of all neutral particles ($m_{\neutral}$); the invariant mass of all photons ($m_{\Pgg}$); and the invariant mass of all charged pions ($m_{\Pgpm}$). \FIGURE{fig:tauVarMVis} shows the distributions of the invariant mass of all non-neutrino decay products for different tau decay modes. Resonance peaks in the invariant mass distribution can be seen for \Prho and \Pai decay modes in the figure.
+Five invariant mass variables participate in the MVA classification: the invariant mass of all reconstructed particles ($m_{vis}$); the invariant mass of all reconstructed charged particles ($m_{\charge}$); the invariant mass of all reconstructed neutral particles ($m_{\neutral}$); the invariant mass of all reconstructed photons ($m_{\Pgg}$); and the invariant mass of all charged reconstructed pions ($m_{\Pgpm}$). 
+
+\FIGURE{fig:tauVarMVis} shows the distributions of the invariant mass of all reconstructed particles  for different tau decay modes. Peaks in the invariant mass distribution can be seen for the \Prho and \Pai decay modes. \FIGURE{fig:tauVarMNeutral} shows the distributions of the invariant mass of all reconstructed neutral particles  for different tau decay modes. Difference in the distributions for  the \Prho and \Pai decay modes can be seen.
+
+
 
 %Invariant masses of different particles are good at characterising different final states. \FIGURE{fig:tauVarMVis} shows the invariant mass of the system. Clear reasonable peaks can be seen for \Prho and \Pai. The mass peak of  \decayAiPionFinalStateShort are much higher. $m_{\charge}$ and $m_{\neutral}$ are invariant masses of charged and neutral particles respectively. They separate final states with neutral particles from those without neutral particles. Similarly, $m_{\Pgg}$ and $m_{\Pgpm}$ identify final states with photons and with \Pgpm respectively.
+
+
+
+\begin{figure}[htbp]
+\centering
+% \begin{center}/\end{center} takes some additional vertical space
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/var2/mVis_100GeV_improved_zoom.pdf}
+  \caption{}
+  \label{fig:tauVarMVis}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/mNeutral_100GeV_improved_zoom.pdf}
+  \caption{}
+  \label{fig:tauVarMNeutral}
+\end{subfigure}
+\caption
+{Distributions of  the invariant mass of all reconstructed a) particles (${m}_{vis}$); b) and neutral particles (${m}_{\neutral}$). The particle ID information comes from the output of the \pandora reconstruction. The area under the curve for each decay mode is normalised to unity. Decay modes in all plots are selected using the truth information.}
+\label{fig:tauVar}
+\end{figure}
 
 \subsection{Energy variables}
 
