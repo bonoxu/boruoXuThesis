@@ -360,23 +360,48 @@ Five invariant mass variables are used in the MVA classification: the invariant 
 \end{subfigure}
 \caption
 {Distributions of  the invariant mass of all reconstructed a) particles (${m}_{vis}$); b) and neutral particles (${m}_{\neutral}$). The particle ID information comes from the output of the \pandora reconstruction. The area under the curve for each decay mode is normalised to unity. Decay modes in all plots are selected using the truth information.}
-\label{fig:tauVar}
+\label{fig:tauVar2}
 \end{figure}
 
 \subsection{Energy variables}
 
 Energy information helps to further separate different tau decay modes. Six energy variables are used in the MVA classification: the normalised total energy of all reconstructed particles ($\tilde{E}_{vis}$); the normalised total energy of charged particles ($\tilde{E}_{\charge}$); the normalised total energy of muons ($\tilde{E}_{\Pmu}$); the normalised total energy of electrons ($\tilde{E}_{\Pe}$); the normalised total energy of photons ($\tilde{E}_{\Pgg}$); and the normalised total energy of charged pions ($\tilde{E}_{\Pgpm}$). All variables are normalised with respect to the energy of the associated tau lepton, i.e. $\tilde{E}_{vis} = E_{vis} / E_{\Ptau}$, where $E_{vis} $ is the total energy of all reconstructed particles and $E_{\Ptau}$ is the energy of the associated tau lepton.
 
-\subsection{Calorimetric information variables}
+
+\FIGURE{fig:tauVarEVis} and \Figure{fig:tauVarEPhoton} show the distributions of the normalised energy of all reconstructed particles and photons respectively for different tau decay modes. Difference in the distributions for  different tau decay modes can be seen.
 
 
-Two calorimetric information variable are used in the MVA classification: the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the calorimeters for all charged particles ($\% E_{\charge}$), and the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the calorimeters for all particles ($\% E$). These  two variables help to identify electron and muon decay modes. For example, an electron typically deposits over 95\% of its energy in the \ECAL, and a muon typically deposits 5\% to 20\% energy in the \ECAL. The difference between $\% E_{\charge}$ and  $\% E$ is that photons, which deposit most of their energy in the \ECAL, do not participate in the calculation of $\% E_{\charge}$.
+
+\begin{figure}[htbp]
+\centering
+% \begin{center}/\end{center} takes some additional vertical space
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/eVisRatio_100GeV_improved_zoom.pdf}
+  \caption{}
+  \label{fig:tauVarEVis}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/ePhotonRatio_100GeV_improved_zoom.pdf}
+  \caption{}
+  \label{fig:tauVarEPhoton}
+\end{subfigure}
+\caption
+{Distributions of  the normalised energy of all reconstructed a) particles ($\tilde{E}_{vis}$); b) and photons ($\tilde{E}_{\Pgg}$). The particle ID information comes from the output of the \pandora reconstruction. The area under the curve for each decay mode is normalised to unity. Decay modes in all plots are selected using the truth information.}
+\label{fig:tauVar3}
+\end{figure}
+
+\subsection{Calorimetric energy information variables}
+ { $E^{\ECAL}_{\charge} / E_{\charge}$,  $ E^{\ECAL} / E$ } \\
+
+Two calorimetric energy information variable are used in the MVA classification: the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL, where only calorimetric deposits associated with charged particles are considered ($E^{\ECAL}_{\charge} / E_{\charge}$), and the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL for all particles ($ E^{\ECAL} / E$). These  two variables help to identify electron and muon decay modes. For example, an electron typically deposits over 95\% of its energy in the \ECAL, and a muon typically deposits 5\% to 20\% of its energy in the \ECAL. The difference between $\% E_{\charge}$ and  $\% E$ is that photons and neutral hadrons, which deposit most of their energy in the \ECAL, are not included in the calculation of $E^{\ECAL}_{\charge} / E_{\charge}$.
+
+
 
 \subsection{\texorpdfstring{\decayRhoShort and \decayAiPhotonShort} \, resonances variables}
 
 
-\section{\texorpdfstring{\decayRhoShort and \decayAiPhotonShort} \, resonances reconstruction}
-\label{sec:tauResonance}
+%\section{\texorpdfstring{\decayRhoShort and \decayAiPhotonShort} \, resonances reconstruction}
+%\label{sec:tauResonance}
 
 By utilising the photon identification potential of the highly granular \ECAL, the identification of the \decayRhoShort and \decayAiPhotonShort decay modes is enhanced  by reconstructing the \Prho and \Pai invariant mass. For events with at least one charged pion and one photon, the reconstruction selects the combination of charged pion and photon that have a invariant mass consistent with the \Prho or \Pai mass.
 
@@ -474,30 +499,46 @@ where $m_{tot}$ is the invariant mass of the charged pion and the photon.
 
 
 
+For  the \Prho invariant mass reconstruction of the \decayRhoShort  decay mode,  two variables are used in the MVA classification to help to identify  \decayRhoShort  decay mode: the \Prho mass ($m^{reco}_\rho \equiv m_{tot}$ in \Equation{eqn:tauRho}) and the \Ppizero mass ($m_{\Pgpz}^{\parenths{\Prho}} \equiv m_{\Pphoton_1\Pphoton_2}$ in  \Equation{eqn:tauRho}).
 
-Following the discussion on the \Prho invariant mass resonance reconstruction for the \decayRhoShort  decay mode,  two variables are used in the MVA classification to help to identify  \decayRhoShort  decay mode: the fitted \Prho mass ($m_\rho \equiv m_{tot}$ in \Equation{eqn:tauRho}) and the fitted \Ppizero mass ($m_{\Pgpz\parenths{\rho}} \equiv m_{\Pphoton_1\Pphoton_2}$ in  \Equation{eqn:tauRho}).
+For the \decayAiPhotonShort decay mode identification using the \Pai invariant mass resonance reconstruction, three variables are used in the MVA classification:  the \Pai mass ($m^{reco}_{\Pai} \equiv m_{tot}$ in \Equation{eqn:tauA1}), the first \Ppizero mass ($m_{\Pgpz}^{(\Pai)} \equiv m_{\Pphoton_1\Pphoton_2}$ in \Equation{eqn:tauA1}), and the second \Ppizero mass ($m^{*(\Pai)}_{\Pgpz} \equiv  m_{\Pphoton_3\Pphoton_4}$ in \Equation{eqn:tauA1}).
 
-For the \decayAiPhotonShort decay mode identification using the \Pai invariant mass resonance reconstruction, three variables are used in the MVA classification:  fitted \Pai mass ($m_{\Pai} \equiv m_{tot}$ in \Equation{eqn:tauA1}), the first fitted \Ppizero mass ($m_{\Pgpz(\Pai)} \equiv m_{\Pphoton_1\Pphoton_2}$ in \Equation{eqn:tauA1}), and the second fitted \Ppizero mass ($m^*_{\Pgpz(\Pai)} \equiv  m_{\Pphoton_3\Pphoton_4}$ in \Equation{eqn:tauA1}).
-
- \FIGURE{fig:tauVarMA1} shows the distributions of  $m_{\Pai}$ under \decayAiPhotonShort decay mode hypothesis test for four different tau decay modes. Only the distribution for \decayAiPhotonShort decay mode has a resonance peak at \Pai mass position.
+ \FIGURE{fig:tauVarMA1} shows the distributions of  $m^{reco}_{\Pai}$ under \decayAiPhotonShort decay mode hypothesis test for four different tau decay modes. Only the distribution for \decayAiPhotonShort decay mode has a resonance peak at \Pai mass position.
 
 % \Equation{eqn:tauRho} and \Equation{eqn:tauA1}
 %are the invariant mass of the two photons in the fit, $m_{\Pgpz}\parenths{\rho}$, and  the invariant mass of the  two photons and one \Pgpm, $m_\rho$.
 %Three variables obtained in this minimisation and used in the MVA classification are the invariant mass of the first two photons in the fit, $m_{\Pgpz}\parenths{\Pai}$; the invariant mass of the last two photons in the fit, $m^*_{\Pgpz}\parenths{\Pai}$; and the invariant mass of the four photons and one \Pgpm, $m_{\Pai}$. The first photon pair is defined to have a invariant mass closer to the invariant mass of the \Ppizero than the second photon pair.
 
-\subsection{Separating electrons from charged prions}
+\begin{figure}[htbp]
+\centering
+% \begin{center}/\end{center} takes some additional vertical space
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/var2/mA1A1Fit_100GeV_improved_zoom.pdf}
+  \caption{}
+  \label{fig:tauVarMA1}
+\end{subfigure}
+\caption
+{Reconstructed invariant mass distributions for \Pai ($m^{reco}_{\Pai}$), reconstructed under the  \decayAiPhotonShort decay mode hypothesis. The reconstructed masses are obtained using the MC truth information to find the corresponding reconstructed particles. The decay mode is selected using the MC truth information. The area under the curve is normalised to unity.}
+\label{fig:tauVar4}
+\end{figure}
 
-The particle ID output by \pandora is used extensively to reconstruct variables. However, extra variables are used in this analysis to help further separating  electrons from charged pions, obtained from a modified private version of \pandora.
+\subsection{Separating electrons from charged pions}
+
+%The particle ID output by \pandora is used extensively to reconstruct variables. However, extra
+
+Variables are used in this analysis to help further separating  electrons from charged pions, obtained from a modified private version of \pandora.
 
 %, which could be mistaken as \Pgpm in the  reconstruction.
 
 %In particular \pandora uses a wide range of information to determine the electron ID.
 
-An electron develops a characteristic EM shower in the \ECAL, whilst a charged pion develops a hadronic shower. Variables characterising the  EM shower helps to identify an electron. Three variables are used in the MVA classification: the start layer of the longitudinal shower ($t_0$); the fractional difference between observed and expected longitudinal shower profile describing the longitudinal EM shower ($\delta{l}$); and $\langle{w}\rangle$, a measure of the EM shower transverse width. These variables are defined in the same way as the variables used in the photon likelihood classifier in the photon reconstruction in \pandora, described in \Section{sec:photonLikelihood}.
+An electron develops a characteristic EM shower in the \ECAL, whilst a charged pion develops a hadronic shower. Variables characterising the  EM shower help to identify an electron. Three variables are used in the MVA classification: the start layer of the longitudinal shower ($t_0$); the fractional difference between observed and expected longitudinal EM shower profile ($\delta{l}$); and $\langle{w}\rangle$, a measure of the EM shower transverse width. These variables are defined in the same way as the variables used in the photon likelihood classifier in the photon reconstruction in \pandora, described in \Section{sec:photonLikelihood}.
 
-Another type of information to differentiate an EM shower from a hadronic shower is the calorimeter hit information. Two variables used in the MVA classification are: the average energy of a calorimeter hit ($\bar{E}_{hit}$) and the average fraction of minimum ionising calorimeter hits for all particles ($\%MIP$)
+The calorimeter hit information can also be used to  differentiate an EM shower from a hadronic shower. Two variables used in the MVA classification are: the average energy of a \ECAL calorimeter hit ($\bar{E}_{hit}$), which is the total energy deposited in the \ECAL and \HCAL divided by the number of the \ECAL and \HCAL calorimeter hit, and the average fraction of minimum ionising calorimeter hits ($MIP$), which is the number of calorimeter hits in the \ECAL and \HCAL flagged as minimum ionising particles by the \pandora reconstruction divided by the total number of calorimeter hits in the \ECAL and \HCAL.
 
-Last information used to separate an electron  from a charged prion is the track$-$momentum calorimeter$-$energy consistency check. The variable used in the MVA classification is the average calorimeter energy divided by the track momentum ($\Delta E/P$).
+One variable used is the consistency of the track momentum with the total \ECAL and \HCAL energy. The variable used in the MVA classification is the energy in the \ECAL and \HCAL divided by the track momentum , averaged over all particles ($E/p$).
+
+%Last information used to separate an electron  from a charged pion is the track$-$momentum calorimeter$-$energy consistency check.
 
 
 %This variable is found to help to differentiate \decayElectronShort from \decayPionShort final state.
@@ -510,40 +551,10 @@ Last information used to separate an electron  from a charged prion is the track
 
 
 
-\begin{figure}[htbp]
-\centering
-% \begin{center}/\end{center} takes some additional vertical space
-\begin{subfigure}[b]{0.45\textwidth}
- \includegraphics[width=\textwidth]{tau/var2/nCharge_100GeV_improved.pdf}
-  \caption{}
-  \label{fig:tauVarNCharge}
-\end{subfigure}
-\begin{subfigure}[b]{0.45\textwidth}
- \includegraphics[width=\textwidth]{tau/var2/nPhoton_100GeV_improved.pdf}
-  \caption{}
-  \label{fig:tauVarNPhoton}
-\end{subfigure}
-\begin{subfigure}[b]{0.45\textwidth}
- \includegraphics[width=\textwidth]{tau/var2/mVis_100GeV_improved_zoom.pdf}
-  \caption{}
-  \label{fig:tauVarMVis}
-\end{subfigure}
-\begin{subfigure}[b]{0.45\textwidth}
- \includegraphics[width=\textwidth]{tau/var2/mA1A1Fit_100GeV_improved_zoom.pdf}
-  \caption{}
-  \label{fig:tauVarMA1}
-\end{subfigure}
-
-\caption
-{Distributions for a) the number of charged particle (${N}_{\charge}$); b) the number of photons (${N}_{\Pgg}$); c) the invariant mass of all non-neutrino decay products ($m_{vis}$); and d) the fitted invariant mass of the \Pai ($m_{\Pai}$), reconstructed with \decayAiPhotonShort decay mode hypothesis. Area under the curve for each decay mode is normalised to 1. Decay modes in all plots are selected using the truth information.}
-\label{fig:tauVar}
-\end{figure}
-
-
 \section{Multivariate Analysis}
 \label{sec:tauMVA}
 
-For the multivariate analysis, the \multiclass class of the TMVA package \cite{Therhaag:2009dp} was used to perform a multiple-class classification, which classifies seven tau lepton decay final states simultaneously. The \multiclass classification is an extension of a standard two-class signal$-$background classification. The classifier used  is Boosted Decision Tree classifier with Gradient boost (BDTG). Half of the randomly selected samples were used in the training process and the other half were used for testing. The optimisation of the BDTG classifier followed the strategy outlined in \Section{sec:pandoraMVAoptimisation}. The optimised parameters for the classifier are listed in \Table{tab:tauBDTparameters}, where an explanation of the parameters can be found in \Section{sec:pandoraMVAbdtVar}.
+The \multiclass class of the TMVA package \cite{Therhaag:2009dp} was used to perform a multiple-class classification, which classifies seven tau lepton decay final states simultaneously. The \multiclass classification is an extension of a standard two-class signal-background classification. The Boosted Decision Tree classifier with Gradient boost (BDTG) is used. Half of the samples, randomly selected, were used in the training process and the other half were used for testing. The optimisation of the BDTG classifier followed the strategy outlined in \Section{sec:pandoraMVAoptimisation}. The optimised parameters for the classifier are listed in \Table{tab:tauBDTparameters}, where an explanation of the parameters can be found in \Section{sec:pandoraMVAbdtVar}.
 
 % The discussion on multivariate analysis can be found in \Section{sec:pandoraMVA}. In particular, the \multiclass classifier is discussed in \Section{sec:pandoraMVAmulticlass}.
 
@@ -565,7 +576,6 @@ Number of bins per variables & 100 \\
 End node output & yes/no \\
 \hline \hline
 \end{tabular}
-
 \caption
 {Optimised parameters for the Boosted Decision Tree with Gradient boost \multiclass classifier. A detailed explanation of variables can be found in \Section{sec:pandoraMVAbdtVar}.}
 \label{tab:tauBDTparameters}
@@ -574,33 +584,15 @@ End node output & yes/no \\
 
 \section{Tau decay mode classification efficiency}
 \label{sec:tauClassificationEff}
-The classification efficiencies for the seven tau decay modes are shown in \Table{tab:TauSelExample}. The correct classification efficiencies are shown in bold numbers in the table, defined as:
+
+Two million \eeToTauTau events at a centre-of-mass energy of 100\,GeV were used in the classification. For tau decays passing pre-selection cuts, the correct classification and misidentification  efficiencies for the seven tau decay modes are shown in \Table{tab:TauSelExample}. The correct classification efficiencies, in bold numbers,  are defined as:
 \begin{equation}
 \varepsilon_i = \frac{N^{correct}_i}{N^{MC}_i},
 \label{eqn:tauEff}
 \end{equation}
-where $N^{correct}_i$ is the number of correctly classified events for tau decay mode $i$ and the $N^{MC}_i$ is the number of events for tau decay mode $i$, based on the truth information.
+where $N^{correct}_i$ is the number of correctly classified tau decays for tau decay mode $i$ and the $N^{MC}_i$ is the total number of true tau decays of tau decay mode $i$.
 %For example, 99.8\% events of true \decayElectronShort decay mode are reconstructed correctly.
 
-For the \decayElectronShort decay mode,   99.8\%  correct classicisation efficiency is achieved. For the \decayMuonShort decay mode,  99.5\% correct classicisation efficiency is achieved.
-
-% due to an effective track reconstruction and muon reconstruction algorithms in \pandora.
-
-For the \decayPionShort decay mode, 3.4\% events are misclassified as \decayRhoShortest decay mode events. If the reconstruction is unable to reconstruct two photons from \Ppizero decay in \decayRhoShortest decay mode, the \decayPionShort and \decayRhoShortest decay modes events would appear to be similar and misclassification occurs. On the other hand, only 0.9\% of \decayPionShort decay events are misclassified as \decayElectronShort decay, due to variables dedicated to separation between \Pem and \Ppiminus.
-
-%The confusion with \decayElectronShort is at percent level, which is low due to the usage of EM shower variables. The percent level confusion with \decayAiPionShortest is because the tracking efficiency is at 98\%, where 2\% \decayPionShort events have more than one track reconstructed.
-
-%confusion with \decayRhoShortest decay mode  is to due to differentiate two event topologies. Around 15\% of \decayPionShort events have at least one photon reconstructed, mostly due to the FSR.
-
-For the \decayRhoShortest decay mode, most misclassification comes from the confusion with \decayAiPhotonShortest decay mode.  If the reconstruction is unable to resolve the all photons from \Ppizero decay in \decayRhoShortest and \decayAiPhotonShortest decay mode, the two decay modes would have similar topologies.
-
-For the \decayAiPhotonShortest decay mode, the correct classification rate is the lowest among seven decay modes, as the final state of the \decayAiPhotonShortest decay mode is the most challenging to reconstruct correctly with four photons in the final state. The 9.5\% confusion with \decayRhoShortest decay mode is due to the same photon reconstruction failure issue. It should be noted that the distribution of the number of photons in \Figure{fig:tauVarNPhoton} suggests that 30\% of \decayAiPhotonShortest events have fewer than four photons reconstructed, overlapping with the distribution for \decayRhoShortest decay mode. The \decayAiPhotonShortest resonance reconstruction and the use of the MVA \multiclass classifier reduce the confusion between two decay modes from 30\% to  9.5\%.
-
-%For the \decayAiPionShortest decay mode, the biggest source of misclassification is with \decayThreePionPhotonShort decay mode. The biggest misclassification of  \decayThreePionPhotonShort decay mode  is with \decayAiPionShortest decay mode.
-
-%And the reason is the same for
-
-%The unprecedented high classification rate has been achieved. The improvement of photon reconstruction described in \Section{} improved the ability to separate 1-prong final state. Most notably,  \Figure{} shows number of photons have a high correct reconstruction efficiency.
 
 
 \begin{table}[htbp]
@@ -614,21 +606,51 @@ Reco$\downarrow$ Truth$\to$& \decayElectronShort & \decayMuonShort &\decayPionSh
 \hline
 
 {\decayElectronShort}&\textbf{99.7}\%&-&0.9\%&0.6\%&0.4\%&-&-\\
-{\decayMuonShort}&-&\textbf{99.5}\%&0.6\%&-&-&-&-\\
-{\decayPionShort}&-&0.3\%&\textbf{94.0}\%&0.8\%&-&0.4\%&-\\
-{\decayRhoShort}&-&-&3.4\%&\textbf{93.6}\%&9.5\%&0.6\%&2.3\%\\
-{\decayAiPhotonShort}&-&-&-&4.5\%&\textbf{89.7}\%&-&0.6\%\\
-{\decayAiPionShort}&-&-&0.9\%&-&-&\textbf{96.8}\%&6.4\%\\
-{\decayThreePionPhotonShort}&-&-&-&0.3\%&-&2.0\%&\textbf{90.6}\%\\
+{\decayMuonShort}&-&\textbf{99.5}\%&0.6\%&-&-&-&-\\ \cline{4-6}
+{\decayPionShort}&-&0.3\%& \multicolumn{1}{| r}{\textbf{94.0}\%} &0.8\%&\multicolumn{1}{r|}{-}&0.4\%&-\\
+{\decayRhoShort}&-&-& \multicolumn{1}{| r}{3.4\%}&\textbf{93.6}\%&\multicolumn{1}{r|}{9.5\%}&0.6\%&2.3\%\\
+{\decayAiPhotonShort}&-&-&\multicolumn{1}{| r}{-}&4.5\%&\multicolumn{1}{r|}{\textbf{89.7}\%}&-&0.6\%\\ \cline{4-8}
+{\decayAiPionShort}&-&-&0.9\%&-&\multicolumn{1}{r|}{-}&\textbf{96.8}\%&\multicolumn{1}{r|}{6.4\%}\\
+{\decayThreePionPhotonShort}&-&-&-&0.3\%&\multicolumn{1}{r|}{-}&2.0\%&\multicolumn{1}{r|}{\textbf{90.6}\%}\\  \cline{7-8}
 
 \hline
 \hline
 \end{tabular}
 
 \caption[Classification efficiency for tau decay modes.]
-{ Classification efficiency for seven tau decay modes using the nominal \ILD detector model, with \eeTauTau channel at \rootSGeV{100}. Bold numbers show the correct classification efficiencies. \Pgngt is not shown. - represents a number below 0.25\%.  Statistical uncertainties are less than 0.25\%.}
+{Classification efficiencies for the seven tau decay modes considered here. Bold numbers represent the correct classification efficiencies. The boxes highlight one-prong and three-prong tau hadronic decay modes. The entries marked with ``-'' represent numbers below 0.25\%. The absolute statistical uncertainty for each entry is less than 0.25\%.}
 \label{tab:TauSelExample}
 \end{table}
+
+The particle ID from the \pandora reconstruction is effective, resulting in the classification efficiencies for \tauToElectron and \tauToMuon decays being 99.8\% and 99.5\% respectively.
+
+For the \tauToPion decays, only 0.9\% of decays are misclassified as \tauToElectron decays, due to variables dedicated to separation between \Pem and \Ppiminus.
+
+For the separation of tau hadronic decay modes, the photon reconstruction is important as the number of photons is an essential variable to distinguish different hadronic decay modes. Failure to reconstruct photons in the \tauToAiPhoton decays or extra reconstructed photons in the \tauToRho decays leads to the misclassification between the two decays. Similarly, failure to reconstruct photons in the \tauToRho decays or extra reconstructed photons in the \tauToPion decays leads to the misclassification between the two decays. The misclassification between one-prong decays is highlighted in \Table{tab:TauSelExample}.
+
+
+
+%For the \decayElectronShort decay mode,   99.8\%  correct classicisation efficiency is achieved. For the \decayMuonShort decay mode,  99.5\% correct classicisation efficiency is achieved.
+
+% due to an effective track reconstruction and muon reconstruction algorithms in \pandora.
+
+%For the \decayPionShort decay mode, 3.4\% events are misclassified as \decayRhoShortest decay mode events. If the reconstruction is unable to reconstruct two photons from \Ppizero decay in \decayRhoShortest decay mode, the \decayPionShort and \decayRhoShortest decay modes events would appear to be similar and misclassification occurs. On the other hand, only 0.9\% of \decayPionShort decay events are misclassified as \decayElectronShort decay, due to variables dedicated to separation between \Pem and \Ppiminus.
+
+%The confusion with \decayElectronShort is at percent level, which is low due to the usage of EM shower variables. The percent level confusion with \decayAiPionShortest is because the tracking efficiency is at 98\%, where 2\% \decayPionShort events have more than one track reconstructed.
+
+%confusion with \decayRhoShortest decay mode  is to due to differentiate two event topologies. Around 15\% of \decayPionShort events have at least one photon reconstructed, mostly due to the FSR.
+
+%For the \decayRhoShortest decay mode, most misclassification comes from the confusion with \decayAiPhotonShortest decay mode.  If the reconstruction is unable to resolve the all photons from \Ppizero decay in \decayRhoShortest and \decayAiPhotonShortest decay mode, the two decay modes would have similar topologies.
+
+%For the \decayAiPhotonShortest decay mode, the correct classification rate is the lowest among seven decay modes, as the final state of the \decayAiPhotonShortest decay mode is the most challenging to reconstruct correctly with four photons in the final state. The 9.5\% confusion with \decayRhoShortest decay mode is due to the same photon reconstruction failure issue. It should be noted that the distribution of the number of photons in \Figure{fig:tauVarNPhoton} suggests that 30\% of \decayAiPhotonShortest events have fewer than four photons reconstructed, overlapping with the distribution for \decayRhoShortest decay mode. The \decayAiPhotonShortest resonance reconstruction and the use of the MVA \multiclass classifier reduce the confusion between two decay modes from 30\% to  9.5\%.
+
+%For the \decayAiPionShortest decay mode, the biggest source of misclassification is with \decayThreePionPhotonShort decay mode. The biggest misclassification of  \decayThreePionPhotonShort decay mode  is with \decayAiPionShortest decay mode.
+
+%And the reason is the same for
+
+%The unprecedented high classification rate has been achieved. The improvement of photon reconstruction described in \Section{} improved the ability to separate 1-prong final state. Most notably,  \Figure{} shows number of photons have a high correct reconstruction efficiency.
+
+
 
 
 
@@ -636,15 +658,22 @@ Reco$\downarrow$ Truth$\to$& \decayElectronShort & \decayMuonShort &\decayPionSh
 \section{Electromagnetic calorimeter optimisation}
 \label{sec:tauECAL}
 
-The tau decay mode classification is used to study the \ECAL performance as a function of the \ECAL square cell sizes and the centre-of-mass energies of the \eeToTauTau events. The tau decay mode classification was repeated with varying \ECAL square cell sizes at 3, 5, 7, 10, 15 and 20\,mm, and at four  centre-of-mass energies of 100, 200, 500, 1000\,GeV. Other \ECAL dimensions are kept the same as the \ILD nominal detector. The multivariate classifier was trained  individually for each \ECAL cell size and each centre-of-mass energy.
+Photon reconstruction in a highly granular \ECAL is an important  metric for the \ECAL performance. Since the classification of the tau hadronic decay modes depends on the ability to reconstruct photons, the  tau hadronic decay modes classification is used as a metric to optimise the \ECAL design. The tau decay mode classification was studied with \ECAL square cell sizes of 3, 5, 7, 10, 15 and 20\,mm, and at four  centre-of-mass energies of 100, 200, 500, 1000\,GeV. The other \ECAL dimensions are kept the same as for  the \ILD nominal detector. The multivariate classifier was trained  individually for each \ECAL cell size and each centre-of-mass energy.
 
 
 %The analysis is repeated with varying \ECAL square cell sizes at 3, 5, 7, 10, 15 and 20\,mm, at four  \sqrtS = 100, 200, 500, 1000\,GeV.
 %In above sections, an analysis on tau decay mode classification is presented. Events used in the analysis were \eeToTauTau events at \rootSGeV{100} with the nominal \ILD detector model. In this section, the analysis
 
-As \pandora is optimised for the nominal \ILD detector, a re-optimisation is required when the study uses the detector model with non-nominal \ECAL square cell sizes. In particular, the optimal parameters used in \PhotonFragmentRemoval algorithm  have a large dependence on the \ECAL cell sizes. The optimal \ClosestHitDistance parameter in \PhotonFragmentRemoval algorithm, which is a distance metric controlling the merging of the fragment, was chosen by selecting the value that gives the highest overall classification rate (\tauHad defined in \Equation{eq:had}). \TABLE{tab:TauPhotonFragmentRemovalParameter} shows the optimised values of \ClosestHitDistance parameter in  \PhotonFragmentRemoval algorithm as a function of the \ECAL square cell size. As cell sizes become larger, the distance metric for merging photons becomes larger, as expected.
+\pandora was optimised for the nominal \ILD detector. Therefore a re-optimisation is required for detector models with different \ECAL cell sizes. In particular, the parameters used in \PhotonFragmentRemoval algorithm need to be optimised for  different \ECAL cell sizes. The optimal \ClosestHitDistance parameter in \PhotonFragmentRemoval algorithm, which is a distance metric controlling the merging of the fragment, was chosen by selecting the value that gives the highest overall tau hadronic decay classification rate, \tauHad, amongst values of 5, 10, 20, 30, 40, and 50\,mm with \eeTauTau samples at a centre-of-mass energy of 100\,GeV.  The overall tau hadronic decay classification rate, \tauHad, is the weighted average correct classification efficiency:
+\begin{equation}
+\tauHad = \frac{\sum_{i}^5 {B}_{i}\varepsilon_{i}}{\sum_{i}^5 {B}_{i}}  \,,
+\label{eq:had}
+\end{equation}
+where $B_{i}$ is the branching fraction of the tau  hadronic decay mode $i$; $\varepsilon_{i}$ is the correct classification efficiency of tau decay mode $i$ (defined in \Equation{eqn:tauEff}); and the index $i$ is summed over five tau hadronic decay modes considered here:\tauToPion; \tauToRho; \tauToAiPhoton; \tauToAiPion; and \tauToThreePion.
 
-%For example, the \PhotonFragmentRemoval algorithm which merges photon fragments uses a distance metric that depends on the \ECAL cell sizes.
+
+ \TABLE{tab:TauPhotonFragmentRemovalParameter} shows the optimised values of \ClosestHitDistance parameter in  \PhotonFragmentRemoval algorithm as a function of the \ECAL square cell size. As expected, for larger cell sizes,  the distance metric for merging photons becomes larger.
+
 
 \begin{table}[htbp]
 \centering
@@ -666,43 +695,59 @@ As \pandora is optimised for the nominal \ILD detector, a re-optimisation is req
 \end{table}
 
 
-Because the electron and muon reconstruction mostly rely on the performance of the tracking system, which was not varied in this study, only the   tau hadronic decay modes were investigated for the \ECAL optimisation study. The correct classification efficiencies for  tau hadronic decay final states  as a function of the \ECAL square cell sizes for different centre-of-mass energies are shown in \Figure{fig:TauPionEfficiency}. The tau decay mode correct classification efficiencies generally decrease with an increase of centre-of-mass energies and an increase of \ECAL cell sizes.
+
+\FIGURE{fig:TauHadronicEfficiency} shows \tauHad as a function of \ECAL cell size for four different centre-of-mass energies. \tauHad  decreases with the increasing centre-of-mass energies and increasing \ECAL cell sizes, because it is increasingly difficult to reconstruct boosted photons with lower \ECAL transverse spatial resolutions.
+
+\begin{figure}[htbp]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+\includegraphics[width=.85\textwidth]{tau/plots3/hadronicEff.pdf}
+\caption[The tau hadronic decay efficiency as a function of  the \ECAL cell sizes at different \sqrtS with the \ILD detector model.]
+{The weighted average tau hadronic decay efficiency, \tauHad, as a function of  the \ECAL cell sizes for different centre-of-mass energies. The blue, orange, green, and red points  show \tauHad at \sqrtS = 100, 200, 500 and 1000\,GeV, respectively.}
+\label{fig:TauHadronicEfficiency}
+\end{figure}
 
 %\FIGURE{fig:TauPionEfficiency} shows that
 
 %This trend is observed for almost all tau decay modes.
-
-As the centre-of-mass energy increases, tau decay products are often boosted. It is increasingly difficult to separate tau decay products, for example, the photon pair from \Ppizero decay. Therefore, the inability to separate photon pairs leads to a degradation of  the classification performance.
+The tau decay mode correct classification efficiencies generally decrease with an increase of centre-of-mass energy. As the centre-of-mass energy increases, the tau decay products become more boosted, making it increasingly difficult to separate tau decay products, for example, the photon pair from \Ppizero decay. The reduction in the ability to separate photon pairs leads to a degradation of  the classification performance.
 % becomes very challenging to separate at a high centre-of-mass energy.
 
-The change in the \ECAL cell size will change the transverse spatial resolution. Hence a large cell size will result in a low transverse spatial resolution, leading to the inability to separate a pair of photons. Consequently, a worse classification performance is expected for a large \ECAL cell size.
-%An increase of the \ECAL cell sizes   degrading the classicisation performance.
+The tau decay mode correct classification efficiencies decrease with an increase of the \ECAL cell size. The change in the \ECAL cell size will change the transverse spatial resolution. Hence a large cell size will result in a low transverse spatial resolution, leading to a reduction in the ability to separate a pair of photons. Consequently, a worse classification performance is expected for larger \ECAL cell size.
+
+\Table{tab:TauTauHad} lists the \tauHad with a 3\,mm and 20\,mm \ECAL cell sizes for four different centre-of-mass energies. The sensitivity of \tauHad to different cell sizes is stronger at high centre-of-mass energies.  With decay products being spatially close at high centre-of-mass energies, it is more beneficial to have a small \ECAL cell size to reconstruct individual particles.
 
 
+\begin{table}[htbp]
+\centering
+%\small
+%\smallskip
+\begin{tabular}{ l   r r }
+\hline
+\hline
+\tauHad & 3\,mm & 20\,mm  \\
+\hline
+100\,GeV & 94\% & 91\% \\
+200\,GeV & 94\% & 86\% \\
+500\,GeV & 92\% & 78\% \\
+1000\,GeV & 85\% & 75\% \\
+\hline
+\hline
+\end{tabular}
 
-%For the \decayPionShort decay mode, the general trend is followed. The efficiency for \rootSGeV{200} is slightly better than that of the \rootSGeV{100} for small cell sizes.
-
-For the \decayRhoShort decay mode, the efficiency for  \rootSGeV{1000} increases as the cell size increases. This is because the multivariate classifier optimises for the overall classification efficiency, which may balance the decrease of the efficiency of one decay mode by the increase of the efficiency of another decay mode. In this case, the small increase in the efficiency for \decayRhoShort decay mode at \rootSGeV{1000} is compensated by the drastic decrease in the efficiency for \decayAiPhotonShort decay mode at the same centre-of-mass energy.
-
-For the \decayAiPhotonShort decay mode, the loss of efficiency with an increasing \ECAL  cell size and an increasing centre-of-mass energy is most significant comparing to other decay modes. With most number of photons in the final state, it is the most challenging decay channel to reconstruct and thus most sensitive to the change in cell sizes and centre-of-mass energies.
-
-For the \decayAiPionShort decay mode, the efficiencies are similar to that of the \decayPionShort decay mode. Both final states contain charged particles only. Therefore it is most sensitive to the tracking performance, which is not affected by the  varying of the \ECAL cell sizes.
-
-%For the \decayThreePionPhotonShort decay mode, the decreases in efficiencies are more significant for \rootSGeV{500} and 1000\,GeV.
-
-%The   correct reconstruction efficiency of the tau leptonic decay is not used as a metric as they are similar across different \ECAL cell sizes. This is because the \Pepm and \Pgmpm identifications mostly rely on the tracking system, which was not varied in this study. However the energy deposited in the calorimeter are also used for the association to the tracks. But the calorimeters have a small impact on the electron and  muon identification.
-
-%This classification can be applied for different  \sqrtS and with different detector models. The main reconstruction issue is to separate boosted photon pair from \Ppizero decay. High \sqrtS The \ECAL cell size is crucial in separating the EM showers from photons. As discussed in previous chapter, separating photons requires a high transverse spatial resolution. Therefore, the \ECAL square cell size is expected to affect the classification efficiency.
-
-%The main difficulty in the classification is to classify 1-prong final states.  These final states involves \Ppizero, where two photons from \Ppizero decay could be poorly reconstructed. At high energy, \Ppizero is boosted making the reconstruction more challenging. The ability to reconstruct the two photons as separate entities requires good pattern recognition algorithm for photons and \ECAL spatial resolution. Hence the improved photon reconstruction in \Chapter{chap:Photon} is used in this study. The impact of the \ECAL transverse spatial resolution on the tau decay classification is demonstrated as well.
+\caption
+{\tauHad with a 3\,mm and 20\,mm \ECAL cell sizes for four different centre-of-mass energies.}
+\label{tab:TauTauHad}
+\end{table}
 
 
+\FIGURE{fig:TauPionEfficiency} shows the correct classification efficiencies for  tau hadronic decay final states  as a function of the \ECAL square cell sizes for different centre-of-mass energies. The tau decay mode correct classification efficiencies generally decrease with an increase of centre-of-mass energies and an increase of \ECAL cell sizes.
 
 
+For the \tauToRho decay mode, the efficiency for  \rootSGeV{1000} increases as the cell size increases. This is because the multivariate classifier optimises for the overall classification efficiency, which may balance the decrease of the efficiency of one decay mode by the increase of the efficiency of another decay mode. In this case, the small increase in the efficiency for \tauToRho decay mode at \rootSGeV{1000} is compensated by the drastic decrease in the efficiency for \tauToAiPhoton decay mode at the same centre-of-mass energy.
 
-%\FIGURE{fig:TauPionEfficiency} shows the correct classification efficiencies for  tau hadronic decay final states  as a function of the \ECAL square cell sizes. For example, plotted values for 5\,mm cell size at \rootSGeV{100} are the same as the bold numbers in \Table{tab:TauSelExample}.
+For the \tauToAiPhoton decay mode, the loss of efficiency with an increasing \ECAL  cell size and an increasing centre-of-mass energy is most significant comparing to other decay modes. With most number of photons in the final state, it is the most challenging decay channel to reconstruct and thus most sensitive to the change in cell sizes and centre-of-mass energies.
 
-
+For the \tauToAiPion decay mode, the efficiencies are similar to that of the \tauToPion decay mode. Both final states contain charged particles only. Therefore it is most sensitive to the tracking performance, which is not affected by different \ECAL cell sizes.
 
 
 \begin{figure}[htbp]
@@ -738,24 +783,13 @@ For the \decayAiPionShort decay mode, the efficiencies are similar to that of th
   \label{fig:tauDecayLegend}
 \end{subfigure}
 \caption[The correct classification efficiency for  tau hadronic decay final states  as a function of the \ECAL square cell sizes]
-{ The correct classification efficiencies as a function of the \ECAL square cell sizes for a) \decayPionShort decay mode; b) \decayRhoShortest decay mode; c) \decayAiPhotonShortest decay mode; d) \decayAiPionShortest decay mode; and e) \decayThreePionPhotonShort decay mode. The legend is shown in f). All plots are produced with  the \ILD detector model using \eeTauTau channel at \sqrtS = 100, 200, 500, and 1000\,GeV.}
+{ The correct classification efficiencies as a function of the \ECAL square cell sizes for a) \tauToPion decay mode; b) \tauToRho decay mode; c) \tauToAiPhoton decay mode; d) \tauToAiPion decay mode; and e) \tauToThreePion decay mode. The legend is shown in f). All plots are produced with  the \ILD detector model using \eeTauTau channel at \sqrtS = 100, 200, 500, and 1000\,GeV.}
 \label{fig:TauPionEfficiency}
 \end{figure}
 
+\begin{comment}
 
-\subsection{Tau hadronic decay correct classification efficiency}
-
-There are two reasons to construct a single parameter for  the overall tau hadronic decay efficiency: firstly the multivariate classifier is trained to achieve a best overall classification efficiency; secondly it is easier to compare the impact of different detector models and different centre-of-mass energies on the classification with a single parameter.
-
-The constructed tau hadronic decay correct classification efficiency, \tauHad, is a weighted average correct classification efficiency over five hadronic decay modes:
-\begin{equation}
-\tauHad = \frac{\sum_{i}^5 {Br}_{i}\varepsilon_{i}}{\sum_{i}^5 {Br}_{i}}  \,,
-\label{eq:had}
-\end{equation}
-where $Br_{i}$ is the branching fraction of the tau  hadronic decay mode $i$; $\varepsilon_{i}$ is the correct reconstruction efficiency of the tau decay mode $i$, defined in \Equation{eqn:tauEff}; and index $i$ is summed over five tau hadronic decay modes: , \decayPionShort; \decayRhoShortest; \decayAiPhotonShortest; \decayAiPionShortest; and \decayThreePionPhotonShort decay modes.
-
-\FIGURE{fig:TauHadronicEfficiency} shows \tauHad as a function of \ECAL cell sizes with different centre-of-mass energies. The \tauHad  decreases with the increase of centre-of-mass energies and the increase of \ECAL cell sizes, because it is increasingly difficult to reconstruct boosted photons with lower \ECAL transverse spatial resolutions.
-
+Because the electron and muon reconstruction mostly rely on the performance of the tracking system, which was not varied in this study, only the   tau hadronic decay modes were investigated for the \ECAL optimisation study. 
 %The general trend for t
 %As the \sqrtS increases, tau decay products are boosted and it is challenging to separate identical decay products. Similarly,  increasing \ECAL cell sizes makes particle separation more difficult.
 
@@ -765,13 +799,41 @@ At a centre-of-mass energy of 100\,GeV, the \tauHad decreases from 94\% at 3\,mm
 
 The increase in \ECAL cell sizes has a larger impact on the performance of the tau decay classification at high centre-of-mass energies. When the cell size is increased from 3\,mm to 20\,mm, the degradation of \tauHad is greater at \rootSGeV{500} and 1000\,GeV, than the degradation  of \tauHad at \rootSGeV{100} and 200\,GeV. With decay products being spatially close at high centre-of-mass energies, it is more beneficial to have a small \ECAL cell size to reconstruct individual particles.
 
-\begin{figure}[htbp]
-\centering % \begin{center}/\end{center} takes some additional vertical space
-\includegraphics[width=.85\textwidth]{tau/plots3/hadronicEff.pdf}
-\caption[The tau hadronic decay efficiency as a function of  the \ECAL cell sizes at different \sqrtS with the \ILD detector model.]
-{The tau hadronic decay efficiency, \tauHad, as a function of  the \ECAL cell sizes with different centre-of-mass energies, using \eeTauTau channel simulated with the \ILD detector model. The blue, orange, green, and red lines  represent the \tauHad at \sqrtS = 100, 200, 500 and 1000\,GeV, respectively.}
-\label{fig:TauHadronicEfficiency}
-\end{figure}
+
+
+%For example, the \PhotonFragmentRemoval algorithm which merges photon fragments uses a distance metric that depends on the \ECAL cell sizes.
+
+
+%An increase of the \ECAL cell sizes   degrading the classicisation performance.
+
+
+
+%For the \decayPionShort decay mode, the general trend is followed. The efficiency for \rootSGeV{200} is slightly better than that of the \rootSGeV{100} for small cell sizes.
+
+For the \decayRhoShort decay mode, the efficiency for  \rootSGeV{1000} increases as the cell size increases. This is because the multivariate classifier optimises for the overall classification efficiency, which may balance the decrease of the efficiency of one decay mode by the increase of the efficiency of another decay mode. In this case, the small increase in the efficiency for \decayRhoShort decay mode at \rootSGeV{1000} is compensated by the drastic decrease in the efficiency for \decayAiPhotonShort decay mode at the same centre-of-mass energy.
+
+For the \decayAiPhotonShort decay mode, the loss of efficiency with an increasing \ECAL  cell size and an increasing centre-of-mass energy is most significant comparing to other decay modes. With most number of photons in the final state, it is the most challenging decay channel to reconstruct and thus most sensitive to the change in cell sizes and centre-of-mass energies.
+
+For the \decayAiPionShort decay mode, the efficiencies are similar to that of the \decayPionShort decay mode. Both final states contain charged particles only. Therefore it is most sensitive to the tracking performance, which is not affected by the  varying of the \ECAL cell sizes.
+\end{comment}
+%For the \decayThreePionPhotonShort decay mode, the decreases in efficiencies are more significant for \rootSGeV{500} and 1000\,GeV.
+
+%The   correct reconstruction efficiency of the tau leptonic decay is not used as a metric as they are similar across different \ECAL cell sizes. This is because the \Pepm and \Pgmpm identifications mostly rely on the tracking system, which was not varied in this study. However the energy deposited in the calorimeter are also used for the association to the tracks. But the calorimeters have a small impact on the electron and  muon identification.
+
+%This classification can be applied for different  \sqrtS and with different detector models. The main reconstruction issue is to separate boosted photon pair from \Ppizero decay. High \sqrtS The \ECAL cell size is crucial in separating the EM showers from photons. As discussed in previous chapter, separating photons requires a high transverse spatial resolution. Therefore, the \ECAL square cell size is expected to affect the classification efficiency.
+
+%The main difficulty in the classification is to classify 1-prong final states.  These final states involves \Ppizero, where two photons from \Ppizero decay could be poorly reconstructed. At high energy, \Ppizero is boosted making the reconstruction more challenging. The ability to reconstruct the two photons as separate entities requires good pattern recognition algorithm for photons and \ECAL spatial resolution. Hence the improved photon reconstruction in \Chapter{chap:Photon} is used in this study. The impact of the \ECAL transverse spatial resolution on the tau decay classification is demonstrated as well.
+
+
+
+
+
+%\FIGURE{fig:TauPionEfficiency} shows the correct classification efficiencies for  tau hadronic decay final states  as a function of the \ECAL square cell sizes. For example, plotted values for 5\,mm cell size at \rootSGeV{100} are the same as the bold numbers in \Table{tab:TauSelExample}.
+
+
+
+%\subsection{Tau hadronic decay correct classification efficiency}
+
 
 
 \section{Tau pair polarisation correlations as a signature of Higgs boson}
