@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: canvas1/
-//=========  (Tue Aug  1 17:43:34 2017) by ROOT version5.34/05
+//=========  (Thu Aug  3 13:31:25 2017) by ROOT version5.34/05
    TCanvas *canvas1 = new TCanvas("canvas1", "",12,51,800,700);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -135,7 +135,7 @@
 
    ci = TColor::GetColor("#d35e60");
    0->SetLineColor(ci);
-   0->GetXaxis()->SetTitle("m_{N}");
+   0->GetXaxis()->SetTitle("m_{N} / GeV");
    0->GetXaxis()->SetNdivisions(506);
    0->GetXaxis()->SetLabelFont(132);
    0->GetXaxis()->SetLabelOffset(0.015);
@@ -272,7 +272,7 @@
 
    ci = TColor::GetColor("#808585");
    1->SetLineColor(ci);
-   1->GetXaxis()->SetTitle("m_{N}");
+   1->GetXaxis()->SetTitle("m_{N} / GeV");
    1->GetXaxis()->SetNdivisions(506);
    1->GetXaxis()->SetLabelFont(132);
    1->GetXaxis()->SetLabelOffset(0.015);
@@ -409,7 +409,7 @@
 
    ci = TColor::GetColor("#ab6857");
    2->SetLineColor(ci);
-   2->GetXaxis()->SetTitle("m_{N}");
+   2->GetXaxis()->SetTitle("m_{N} / GeV");
    2->GetXaxis()->SetNdivisions(506);
    2->GetXaxis()->SetLabelFont(132);
    2->GetXaxis()->SetLabelOffset(0.015);
