@@ -92,10 +92,8 @@ Photon reconstruction is an important part of particle reconstruction. For many 
 %\pandora is a multi-algorithm pattern-recognition software package for the event reconstruction and an implementation of the particle flow approach to calorimetry. A detailed discussion of the \pandora and the main steps of the \pandora event reconstruction can be found in \Section{sec:pandoraPandoraPFA}. The multi-algorithm approach of the \pandora allows each algorithm to deal with a particular issue in the reconstruction.
 
 
-Five algorithms are developed to tackle different issues in the photon reconstruction. The most important photon algorithm is the \PhotonReconstruction algorithm. It reconstructs photons from calorimeter hits in the \ECAL, including forming a photon candidate and applying a photon ID test, with special treatments for photons close to charged particles. %This algorithm is implemented at the early stage of the reconstruction.
-
-
-Three algorithms remove photon fragments at a later stage in the reconstruction. Two photon fragment removal algorithms merge fragments in the \ECAL, and one algorithm merges fragments in the \HCAL. The last photon algorithm is a photon splitting algorithm. The algorithm separates accidently merged photons.
+Five algorithms are developed to tackle different issues in the photon reconstruction. The most important photon algorithm is the \PhotonReconstruction algorithm. It reconstructs photons from calorimeter hits in the \ECAL, including forming a photon candidate and applying a photon ID test, with special treatments for photons close to charged particles. Three algorithms remove photon fragments at a later stage in the reconstruction. Two photon fragment removal algorithms merge fragments in the \ECAL, and one algorithm merges fragments in the \HCAL. The last photon algorithm is a photon splitting algorithm. The algorithm separates accidently merged photons. Samples used to produce figures in this chapter were reconstructed with the \ILD detector concept.
+ %This algorithm is implemented at the early stage of the reconstruction.
 
 %These algorithms improve the compsingle photon energy resolution.
 
@@ -636,7 +634,7 @@ Photon fragments in the \HCAL are  spatially close to the main photon. A cone ob
 
 This algorithm uses photons in the \ECAL and neutral hadrons in the \HCAL as inputs. The algorithm then iterates over all pairs of reconstructed photons and neutral hadrons. Photon$-$fragment pairs passing all the cuts will be merged.
 
-%For each pair, variables are calculated and compared to a set of cuts. 
+%For each pair, variables are calculated and compared to a set of cuts.
 
 \subsection{Adjacent in layers cut}
 
@@ -735,7 +733,7 @@ If multiple photon$-$fragment pairs pass the cuts with the same fragment, the pa
 Another aspect in photon reconstruction is to split accidentally merged photons. During the event reconstruction, it is possible that photons are accidentally merged if they are spatially close. Hence an algorithm at the end of the event reconstruction addresses this issue and tries to split merged photons.
 
 %Merged photons are typically energetic.
-If a photon has the  topologies of multiple spatially closed photons, the parent photon should be split into several daughter photons. Extra care should be taken if the parent photon is close to a track projection onto the front of the \ECAL. \TABLE{tab:photonPhotonSplitting} lists the cuts used in the algorithm.  
+If a photon has the  topologies of multiple spatially closed photons, the parent photon should be split into several daughter photons. Extra care should be taken if the parent photon is close to a track projection onto the front of the \ECAL. \TABLE{tab:photonPhotonSplitting} lists the cuts used in the algorithm.
 
 %This algorithm focuses on energetic photons with energies greater than 10\,GeV.
 The algorithm works as follows. If an energetic photon is identified, the \peakFinding algorithm will  be used to identify EM showers in the parent photon. If energy of the parent photon is bigger than $E_{c1}$, and the energy of the $2^{nd}$ energetic EM shower is bigger than $E_{c2}$, the parent photon will be split to daughter photons according to the number of EM showers identified by the \peakFinding algorithm.
@@ -867,14 +865,18 @@ This section reviews the photon reconstruction improvement  from \pandora versio
 
 %We will review performance metrics of above algorithms. \Fig{fig:n_p} shows the number of reconstructed photons as a function of their true distance separation for a two photons per event sample. The reduction of the number of reconstructed photons are mainly due the the fragment merging algorithms for fragments in the ECal. \Fig{fig:n_all} shows a similar reduction in the reconstructed particles as in \Fig{fig:n_p}, and it shows that neutral hadron fragments in HCal have been merged back to main photons.
 
-The single-photon-per-event samples were generated with an uniform distribution in the solid angle. Other samples are generated and smulated in the same way as in the previous section. The same selection on the  single-photon-per-event and  two-photon-per-event samples as in the previous section is applied.
+The single-photon-per-event samples were generated with an uniform distribution in the solid angle of the photon. Other samples were generated and simulated in the same way as previously. The same selection on the  single-photon-per-event and  two-photon-per-event samples as previously was applied.
 
-\FIGURE{fig:photonSingleN_p} shows the reduction in fragments reconstructed as photons, using a single-photon-per-event sample. With the reconstruction in \pandora version 3, for a 100\,GeV photon sample, the average number of reconstructed photons is reduced to 1 from 2; for a 500\,GeV photon sample, the  number is reduced to 1.05 from 2.8.
+\FIGURE{fig:photonSingleN_p} shows the average number of reconstructed photons as a function of the true photon energies, using a single-photon-per-event sample. Comparing the reconstruction in \pandora version 3 with version 1, for a 100\,GeV photon sample, the average number of reconstructed photons is reduced to 1 from 2; for a 500\,GeV photon sample, the  number is reduced to 1.05 from 2.8. \FIGURE{fig:photonSingleN_all} shows the average number of reconstructed particles as a function of the true photon energies, using a single-photon-per-event sample. The number of  reconstructed particles counts the fragments reconstructed as neutral hadrons and photons.   Comparing the reconstruction in \pandora version 3 with version 1,  for a 100\,GeV photon sample, the average number of reconstructed particles is reduced to 1 from 2.4; for a 500\,GeV photon sample, the number is reduced to 1.05 from 3.8.
 
+
+%eduction in fragments reconstructed as photons,
 
 %For the reconstruction in \pandora version 3, indicating as the blue dots on the plot, average number of photon stays below 1.05 for a photon energy of  500 \,GeV (true value 1).
 
-An  improvement in the number of reconstructed particles is shown in \Figure{fig:photonSingleN_all}. The number of  reconstructed particles counts the fragments reconstructed as neutral hadrons and photons.  Comparing \pandora version 3 with version 1, for a 100\,GeV photon sample, the average number of reconstructed particles is reduced to 1 from 2.4; for a 500\,GeV photon sample, the number is reduced to 1.05 from 3.8.
+
+
+%An  improvement in the number of reconstructed particles is shown in \Figure{fig:photonSingleN_all}. The number of  reconstructed particles counts the fragments reconstructed as neutral hadrons and photons.  Comparing \pandora version 3 with version 1, for a 100\,GeV photon sample, the average number of reconstructed particles is reduced to 1 from 2.4; for a 500\,GeV photon sample, the number is reduced to 1.05 from 3.8.
 
 
 \begin{figure}[tbph]
