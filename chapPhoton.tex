@@ -39,7 +39,7 @@ The radiation length of a material describes the EM longitudinal  shower profile
 \frac{dE}{dt} = E_0 b \frac{\parenths{bt}^{a-1}e^{-bt}}{\Gamma(a)},
 \label{eq:photonEMshower}
 \end{equation}
-where $t$ is the number of radiation lengths; the parameter $E_0$ is the shower energy; the parameter $b = 0.5$ for the purpose of photon reconstruction \cite{Agashe:2014kda}; and the parameter $a$ is given by \cite{Thomson:2009rp}:
+where $t$ is the number of radiation lengths; the parameter $E_0$ is the shower energy; the parameter $b$ takes the value of 0.5 for the purpose of photon reconstruction \cite{Agashe:2014kda}; and the parameter $a$ is given by \cite{Thomson:2009rp}:
 \begin{equation}
 a = 1.25 + 0.5\ln\left(\frac{E_0}{E_c}\right),
 \end{equation}
@@ -127,8 +127,10 @@ Firstly an overview of electromagnetic showers is presented. The \PhotonReconstr
 \label{sec:photonRecostrcution}
 
 
-The \PhotonReconstruction runs at an early stage of the reconstruction. It corresponds to ``Particle ID'' stage in the \pandora reconstruction, described in \Section{sec:particleID}.  Main steps of the \PhotonReconstruction algorithm, shown in \Figure{fig:photonPhotonRecoFlow}, are:  forming photon clusters; finding photon candidates; photon ID test; and optional fragments removal.
+The \PhotonReconstruction runs at an early stage of the reconstruction, before the charged particle reconstruction.   Main steps of the \PhotonReconstruction algorithm, shown in \Figure{fig:photonPhotonRecoFlow}, are:  forming photon clusters; finding photon candidates; photon ID test; and optional fragments removal.
 
+
+%It corresponds to ``Particle ID'' stage in the \pandora reconstruction, described in \Section{sec:particleID}.
 %Finding photon candidates uses the transverse EM shower profile information, which requires a  two dimensional peak finding algorithm, further explained in \Section{sec:peakFinding}. The photon ID test involves a multi dimensional likelihood classifier, which is described in \Section{sec:photonLikelihood}. The optional fragment removal algorithm shares a common code base case class with another photon fragment removal algorithm. Hence two photon fragment removal algorithms are discussed together in \Section{sec:photonFragRemoval}.
 
 \begin{figure}[tbph]
@@ -202,10 +204,10 @@ As discussed in \Section{sec:photonCandiate}, identifying photon candidates insi
 % An example of two photons resolved in a two dimensional plane is shown in the \Figure{fig:photonPeakFinding}.
 %  calorimeter hits of
 
-There are two variants of the \peakFinding algorithm: the neutral cluster variant and the charged cluster variant. The base algorithm is  the neutral cluster variant. The charged cluster variant is used when the cluster is close to the projection of a track onto the front of the \ECAL. Main steps of the  neutral cluster variant are shown in \Figure{fig:photonPeakFindingFlowNeutral}: initialising a two-dimensional histogram; projecting  calorimeter hits to the histogram; identifying local peaks; associating non-peak bins to peaks; filtering peaks; and forming \ShowerPeak objects.
+There are two variants of the \peakFinding algorithm: the neutral cluster variant and the charged cluster variant. Main steps of the neutral cluster variant are shown in \Figure{fig:photonPeakFindingFlowNeutral}: initialising a two-dimensional histogram; projecting  calorimeter hits to the histogram; identifying local peaks; associating non-peak bins to peaks; filtering peaks; and forming \ShowerPeak objects.
 
 %Since charged hadrons would deposit tracks in the tracking system, extra care is taken when a cluster is close to the projection of the track in the front of the \ECAL.
-
+%The base algorithm is  the neutral cluster variant. The charged cluster variant is only used when the cluster is close to the projection of a track onto the front of the \ECAL. 
 % The neutral cluster variant is described first, followed by description of the modification of the algorithm to treat clusters close to track projections.
 
 \begin{figure}[tbph]
@@ -307,11 +309,11 @@ This step aims to carefully identify photon candidates next to charged hadrons, 
 \end{figure}
 
 
-The "Create and iterate over sub-clusters" step performs the following. The \ECAL is sliced longitudinally to create fiducial volumes. For example, the default three slices will result in three \ECAL fiducial volumes. Each fiducial volume covers the  space from the front of the \ECAL to a third, to two thirds, and to the back of the \ECAL. Three sub-clusters are created from calorimeter hits that are contained in each fiducial volume.
+The "Create and iterate over sub-clusters" step performs the following. The \ECAL is sliced longitudinally to create fiducial volumes. For example, the default three slices will result in three \ECAL fiducial volumes. Each fiducial volume covers the  space from the front of the \ECAL to a third, to two thirds, and to the back of the \ECAL. Three sub-clusters are created from calorimeter hits of the cluster that are contained in each fiducial volume.
 
-After creating sub-clusters, the neutral cluster variant of the  \peakFinding algorithm is applied to each sub-cluster to find peaks.  The sub-cluster in the first third of the \ECAL is processed first. The sub-cluster in the whole of the \ECAL is processed last. For each sub-cluster, a collection of \ShowerPeak objects are created from the  \peakFinding algorithm.
+After creating sub-clusters, the neutral cluster variant of the  \peakFinding algorithm is applied to each sub-cluster to find peaks.  The sub-cluster in the first a third of the \ECAL is processed first. The sub-cluster in the whole of the \ECAL is processed last. For each sub-cluster,  \ShowerPeak objects are created from the  \peakFinding algorithm.
 
-The \ShowerPeak objects created from each sub-cluster undergo the "\ShowerPeak filter" step. The order of the \ShowerPeak objects to filter peaks is the same order of applying the neutral cluster variant of the  \peakFinding algorithm. All peaks from the first sub-cluster are preserved. For the next sub-cluster, a peak  is only preserved if the peak bin position is the same as a peak bin position in the previous sub-cluster, allowing a shift in the peak bin position by no more than one neighbouring bin. Furthermore, if a peak bin is within one neighbouring bin of a track projection bin, the peak is discarded. Only the peaks in the last sub-cluster that are not discarded will be used to form the final \ShowerPeak objects. The track projection bin in the 2D histogram is the bin where the track position, which is projected position onto the front of the \ECAL, projects onto the 2D histogram.
+The \ShowerPeak objects created from each sub-cluster undergo the "\ShowerPeak filter" step. The order of the \ShowerPeak objects to filter peaks is the same order of creating the sub-clusters. All peaks from the first sub-cluster are preserved. For the next sub-cluster, a peak  is only preserved if the peak bin position is the same as a peak bin position in the previous sub-cluster, allowing a shift in the peak bin position by no more than one neighbouring bin. Furthermore, if a peak bin is within one neighbouring bin of a track projection bin, the peak is discarded. Only the peaks in the last sub-cluster that are not discarded will be used to form the final \ShowerPeak objects. The track projection bin in the 2D histogram is the bin where the track position, which is projected position onto the front of the \ECAL, projects onto the 2D histogram.
 
 % position of the track projection onto the front of the \ECAL projects onto the 2D histogram.
 
@@ -322,7 +324,7 @@ The \ShowerPeak objects created from each sub-cluster undergo the "\ShowerPeak f
 %The non-preserved peak and the associated \ShowerPeak object are discarded.
 %, reconstructed using the \ILD detector model
 
-\FIGURE{fig:photon2DpeakCharge} illustrates an example of three sub-clusters created during the charged variant of the \peakFinding algorithm. Peaks with associated bins and track projection bins are labelled. \FIGURE{fig:photon2DpeakCharge1} shows the first sub-cluster, created with calorimeter hits in the first 10 layers of the \ECAL. One peak is identified. \FIGURE{fig:photon2DpeakCharge2} shows the second sub-cluster, created with calorimeter hits in the first 20 layers of the \ECAL. The one peak in the second sub-cluster is in the same position of the peak in the first sub-cluster. Hence, the peak in the second cluster is preserved. \FIGURE{fig:photon2DpeakCharge3} shows the third sub-cluster, created with calorimeter hits in the \ECAL. Three peaks are identified. However, only one peak (blue) shares the  same position of the peak in the second sub-cluster. Hence, only that peak (blue) is preserved. The preserved peak and associated bins in the third sub-cluster are then used to create one \ShowerPeak object.
+\FIGURE{fig:photon2DpeakCharge} illustrates an example of three sub-clusters created during the charged variant of the \peakFinding algorithm. Peaks with associated bins and track projection bins are labelled. \FIGURE{fig:photon2DpeakCharge1} shows the first sub-cluster, created with calorimeter hits of the cluster in the first 10 layers of the \ECAL. One peak is identified. \FIGURE{fig:photon2DpeakCharge2} shows the second sub-cluster, created with calorimeter hits of the cluster in the first 20 layers of the \ECAL. The one peak in the second sub-cluster is in the same position of the peak in the first sub-cluster. Hence, the peak in the second cluster is preserved. \FIGURE{fig:photon2DpeakCharge3} shows the third sub-cluster, created with calorimeter hits of the cluster in the \ECAL. Three peaks are identified. However, only one peak (blue) shares the  same position of the peak in the second sub-cluster. Hence, only that peak (blue) is preserved. The preserved peak and associated bins in the third sub-cluster are then used to create one \ShowerPeak object.
 
 
 \begin{figure}[tbph]
