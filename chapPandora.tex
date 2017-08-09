@@ -12,7 +12,7 @@
  %Automated analysis is the only way to deal with the vast amount of data generated in high energy physics. Hence the software supporting the automated analysis are important. An analysis often consists of  Monte Carlo event generation, event reconstruction, and using software to extract information of the event.
 %  The software for the future linear colliders shares a  common software framework.
 
-In this chapter, event generation. simulation, reconstruction, and analysis software for the future linear colliders  are discussed. The reconstruction of the particle flow objects with \pandora is presented, which is the framework for the photon reconstruction algorithms in \Chapter{chap:Photon}. The multivariate analysis (MVA) is discussed, which is used in \Chapter{chap:Photon}, \Chapter{chap:Tau}, and \Chapter{chap:DoubleHiggs}.
+In this chapter, event generation, simulation, reconstruction, and analysis softwares for the future linear colliders  are discussed. Reconstruction of particle flow objects with \pandora is presented, which is the framework for photon reconstruction algorithms in \Chapter{chap:Photon}. Multivariate analysis (MVA) is discussed, which is used in \Chapter{chap:Photon}, \Chapter{chap:Tau}, and \Chapter{chap:DoubleHiggs}.
 
 %The multivariate analysis (MVA) is discussed  in details due to its complexity.
 
@@ -31,7 +31,7 @@ Most of the Monte Carlo (MC) samples used in this thesis were generated using \W
 \label{sec:pandoraCLUClumi}
 
 
-\CLIC is not just a \ee collider. It also collides photons with photons, and electron (or positrons) with photons. \Guineapig \cite{Schulte:1999tx} is used to generate luminosity spectrums for all these collisions. \FIGURE{fig:pandoraCLICLumiSpec} shows the  luminosity spectrum for \CLIC operating at \rootS{3}. The \Guineapig prediction overestimates the  luminosities for interactions involves Beamstrahlung photons \cite{Sailer:lumi}. Hence luminosities corrections are applied to the  interactions involves Beamstrahlung photons according to \Table{tab:reconstrcutionBSlumi}.
+\CLIC is not just a \ee collider. It also collides photons with photons, and electron (or positrons) with photons. \Guineapig \cite{Schulte:1999tx} is used to generate luminosity spectrums for all these collisions. \FIGURE{fig:pandoraCLICLumiSpec} shows the  luminosity spectrum for \CLIC operating at \rootS{3}. The \Guineapig prediction overestimates the  luminosities for interactions involves Beamstrahlung photons \cite{Sailer:lumi}. Hence luminosities corrections are applied to the  interactions that involves Beamstrahlung photons according to \Table{tab:reconstrcutionBSlumi}.
 
 \begin{figure}[tbph]
 \centering
@@ -70,14 +70,14 @@ L(\Gammagamma) / L(\ee) &0.64 & 0.69\\
 
 
 %For all the simulated events used in this thesis, t
-\GEANT \cite{Agostinelli:2002hh} is used to simulate the interaction of particles through the detector material. The \ILD and \CLICILD detector geometries are implemented in the \Mokka package \cite{MoradeFreitas:2002kj}.  The QGSP\_BERT physics list from \GEANT the  is used to simulate the detailed development of hadronic showers in the detector. The event simulation introduces the crossing angles (20\,mrad for \CLIC and 14\,mrad for the \ILC) by applying a corresponding Lorentz boost to all particles in the events.
+\GEANT \cite{Agostinelli:2002hh} is used to simulate the interactions of particles through the detector material. The \ILD and \CLICILD detector geometries are implemented in the \Mokka package \cite{MoradeFreitas:2002kj}.  The QGSP\_BERT physics list from \GEANT  is used to simulate the detailed development of hadronic showers in the detector. The event simulation introduces the beam crossing angle (20\,mrad for \CLIC and 14\,mrad for the \ILC) by applying a corresponding Lorentz boost to all particles in the events.
 
 %The  QGSP\_BERT physics list uses the Bertini model \cite{Proceedings:2003lxa} at low energies, making a transition to the Low Energy Parameterisations (GHEISHA \cite{TechnicalReportPITHA 85-02}) model between 9.5 and 9.9\,GeV, and a further transition to the QGSP model between 12 and 25\,GeV.  QGSP model is a GEANT4 implementation of a string model~\cite PhysRevLett.67.1523 for the high energy interaction, supplemented by the  GEANT4} precompound model\cite{mazzucato2001proceedings}
 %QGSP is the basic physics list applying the quark gluon string model for high energy interactions of protons, neutrons, pions, and Kaons and nuclei. The high energy interaction creates an exited nucleus, which is passed to the precompound model modeling the nuclear de-excitation.
 %QGSP_BERT and QGSP_BERT_EMV
 %Like QGSP, but using Geant4 Bertini cascade for primary protons, neutrons, pions and Kaons below ~10GeV. In comparison to experimental data we find improved agreement to data compared to QGSP which uses the low energy parameterised (LEP) model for all particles at these energies. The Bertini model produces more secondary neutrons and protons than the LEP model, yielding a better agreement to experimental data.
 
-\subsection{\CLIC beam induced backgrounds}
+\subsection{\CLIC beam induced background}
 \label{sec:pandoraggHad}
 
 
@@ -122,13 +122,13 @@ Central Tracker & - & 7 \\
 \hline
 \end{tabular}
 \caption
-{Average energy deposited from \ggHad and the incoherent pairs in the different parts of the \CLICILD subdetectors. Numbers correspond to the background for an entire \CLIC bunch train and were obtained for nominal background rates. The reconstructed calorimeter energies are integrated over 300\,ns from the start of the bunch train. The table is adapted from \cite{Linssen:2012hp}.}
+{Average energy deposited from \ggHad and the incoherent \ee pairs in different parts of the \CLICILD subdetectors. Numbers correspond to the background for an entire \CLIC bunch train. The reconstructed calorimeter energies are integrated over 300\,ns from the start of the bunch train. The table is adapted from \cite{Linssen:2012hp}.}
 \label{tab:reconstrcutionBackgroundEnergy}
 \end{table}
 
+%and were obtained for nominal background rates. 
 
-
-For the study presented in \Chapter{chap:DoubleHiggs}, only the \ggHad background is included in the simulation. The hits from simulated \ggHad events, resulted from 60 bunch crossings, are superimposed on simulated \ee, \Egamma, and \Gammagamma collisions before the event reconstruction. The included background corresponds to a time window of $-5$\,ns to $+25$\,ns around the generated physics event. Bunch trains are separated by 0.5\,ns to mimic the \CLIC train structure \cite{Linssen:2012hp}. For each bunch crossing, the number of \ggHad events included are drawn from a Poisson distribution with a mean of 3.2.
+For the study presented in \Chapter{chap:DoubleHiggs}, only the \ggHad background is included in the simulation. The hits from simulated \ggHad events, resulted from 60 bunch crossings, are superimposed on simulated \ee, \Egamma, and \Gammagamma collisions before the event reconstruction. The included background corresponds to an integration time window of $-5$\,ns to $+25$\,ns around the generated physics event. Bunch trains are separated by 0.5\,ns to mimic the \CLIC train structure \cite{Linssen:2012hp}. For each bunch crossing, the number of \ggHad events included are drawn from a Poisson distribution with a mean of 3.2.
 
 
 
@@ -149,7 +149,7 @@ Several different \Marlin processors are used to reconstruct tracks: the \textsc
 
 %Here particle flow reconstruction via \pandora will be discussed in details, as \pandora provides the software framework for the photon reconstruction in \Chapter{chap:Photon}. The \pandora event reconstruction is also used in the analyses in  \Chapter{chap:Tau} and \Chapter{chap:DoubleHiggs}.
 
-\subsection{\pandora  reconstruction}
+\subsection{\pandora}
 \label{sec:pandoraPandoraPFA}
 
 %The tradition energy flow approach to calorimetry is unable to meet the mass and energy resolution requirements for future linear colliders. The particle flow approach to calorimetry with \pandora has a proof-of-principle demonstration of its capability to reach the required jet energy resolution. The particle flow approach to calorimetry  also puts stringent requirements on the detector design, which is described in \Section{sec:detectorPhysicsRequirementPandora}. By associating calorimeter hits to the tracks, around 60\% of the jet energy from charged particles is measured by the tracking detector, which has a much better resolution than the calorimeter. Small cell sizes of the calorimeters are required to identify calorimeter hits from different particles. The traditional sum of calorimeter cell energies is hence replaced by particle flow reconstruction algorithms - a complex pattern recognition problem.
@@ -157,7 +157,7 @@ Several different \Marlin processors are used to reconstruct tracks: the \textsc
 %The \pandora algorithm has been developed and used in the \ILC and \CLIC simulation studies.
 %\pandora event reconstruction is used in the studies for future \ee linear colliders.
 
-\pandora was developed with in the context of the \ILD detector concept \cite{Thomson:2009rp} at the \ILC and at \CLIC  \cite{Linssen:2012hp,Marshall:2012ry}. The latest improvement to \pandora, including a better internal memory management, is summarised in  \cite{Marshall:2015rfa}.
+\pandora was developed for the \ILD detector concept \cite{Thomson:2009rp} at the \ILC and at \CLIC  \cite{Linssen:2012hp,Marshall:2012ry}. The latest improvement to \pandora, including a better internal memory management, is summarised in  \cite{Marshall:2015rfa}.
 
 \pandora adopts a multi-algorithm approach to the particle flow object reconstruction. There are over 60 \ee linear collider specific reconstruction algorithms. Each algorithm aims to address a particular topological issue in the reconstruction.
 
@@ -170,11 +170,11 @@ There are nine main steps in the \pandora reconstruction, listed below:
   \item Calorimeter hit processing calculates the properties of a calorimeter hit, such  as its position and its energy response from the calorimeter digitiser. The calorimeters hits are prepared for  subsequent reconstruction;
   \item Particle identification algorithms find calorimeter hits associated with neutral particles, such as muons and photons. \CHAPTER{chap:Photon} describes the photon reconstruction  algorithms in detail;
   \item Clustering step group calorimeter hits into clusters, which is discussed further in \Section{sec:pandoraConeCluster} as the clustering step is used in photon reconstruction  algorithms described in \CHAPTER{chap:Photon};
-  \item Topological cluster association refines clusters after the initial clustering step using topological information of calorimeter hits in the calorimeters;
-  \item Track$-$cluster association step associates the clusters to the tracks obtained from the inner tracking detectors;
+  \item Topological cluster association refines clusters using topological information of calorimeter hits;
+  \item Track$-$cluster association step associates clusters to tracks obtained from the tracking detectors;
   \item Re-clustering step refine the track$-$cluster association based on the information from the momentum of the track and the energy of the cluster, which is important for events with a dense jet environment and jets above 50\,GeV;
   \item Fragment removal step  focuses on merging clusters that are likely to be fragments of other particles. Algorithms for photon fragment merging  are described in \Chapter{chap:Photon};
-  \item Particle Flow Object Creation is the last stage of the reconstruction, which creates the output objects, Particle Flow Objects (PFOs). The PFOs contain clusters and associated tracks and calorimeter hits.
+  \item Particle Flow Object creation is the last step of the \pandora reconstruction, which creates the output objects, Particle Flow Objects (PFOs). The PFOs contain clusters and associated tracks and calorimeter hits.
 \end{itemize}
 
 \begin{comment}
@@ -215,12 +215,12 @@ Dedicated particle identification algorithms find calorimeter hits associated wi
 \subsubsection{Clustering}
 \label{sec:pandoraConeCluster}
 
-This section discusses the clustering algorithm used in \pandora because the clustering algorithm is used in photon reconstruction  algorithms described in \CHAPTER{chap:Photon}.
+This section discusses the clustering algorithm used in \pandora. Illustrated in \Figure{fig:pandoraConeClustering}, a cone based clustering algorithm identifies a seed (yellow dot). The algorithm then forms a cone to include hits that are within a specified opening angle to the direction of the cone. Afterwards the cone with the associated hits forms the cluster.
 
 
+ %because the clustering algorithm is used in photon reconstruction  algorithms described in \CHAPTER{chap:Photon}.
 %Since the cone clustering algorithm is widely used in many other reconstruction algorithms in \pandora reconstruction, it is necessary to introduce the cone based clustering algorithm, before discussing the rest of the \pandora reconstruction.
 
-Illustrated in \Figure{fig:pandoraConeClustering}, a cone based clustering algorithm identifies a seed (yellow dot). The algorithm then forms a cone to include hits that are within a specified opening angle to the direction of the cone. Afterwards the cone with the associated hits forms the cluster.
 
 % The main type of clustering algorithms used in the  \pandora is the cone based algorithms. The direction of the seed is typically used as the   direction of the cone.
 
@@ -229,12 +229,12 @@ Illustrated in \Figure{fig:pandoraConeClustering}, a cone based clustering algor
 \begin{figure}[tbph]
 \centering
 {\includegraphics[width=0.5\textwidth]{pandora/coneClustering}}%
-\caption{Illustration of the cone based clustering algorithm, taken from \cite{Marshall:pandoraLC}}
+\caption{Illustration of a cone based clustering algorithm, taken from \cite{Marshall:pandoraLC}}
 \label{fig:pandoraConeClustering}
 \end{figure}
 
 
-In \pandora, cone-based clustering algorithms are used to group calorimeter hits into clusters. The cone-based clustering algorithm is used in \pandora reconstruction because the direction of the particle flow is largely unchanged from the originated particle, irrespective of  the particle flow being an electromagnetic shower, QCD radiation, or hadronisation. The seed for the cone clustering is typically the projection of a track onto the front of the \ECAL.  The initial cone direction is typically taken as the direction of the seed. Afterwards, a cone with a specified opening angle will be formed around the direction of the seed. The building of the cone is iterated from the inner layer of the \ECAL to the outer layer. At each layer, possible associations with calorimeters hits in previous layers and the same layer are made. If a calorimeter hit is not associated with the cone, the hit is used to seed a new cluster.
+In \pandora, cone-based clustering algorithms are used to group calorimeter hits into clusters. The cone-based clustering algorithm is used in \pandora reconstruction because the direction of the particle flow is largely unchanged from the originated particle, irrespective of  the particle flow being an electromagnetic shower, QCD radiation, or hadronisation. The seed for the cone clustering is typically the projection of a track onto the front of the \ECAL.  The initial cone direction is typically taken as the direction of the seed. Afterwards, a cone with a specified opening angle will be formed around the direction of the seed. The building of the cone is iterated from the inner layer of the \ECAL to the outer layer. At each layer, possible associations  with the cone are made by considering calorimeters hits in previous layers and the same layer. If a calorimeter hit is not associated with the cone, the hit is used to seed a new cluster.
 
 %The output \clusters are further processed, merged, or split based on their topological properties.
 %FIGURE{fig:pandoraConeClustering2} illustrates the cone-based clustering algorithm used in the \pandora reconstruction.
@@ -337,7 +337,7 @@ Three configurations of these cuts are developed: ``loose'', ``normal'', and ``t
 
 %The optimal configuration of the PFO selection to suppress the beam induced background depends on the centre-of-mass energy of the collision and the physics process to study.
 
-\FIGURE{fig:pandoraEvtDisplayggHad} shows the effect of the suppression of the background with the tight \PFO selection.  \FIGURE{fig:pandoraEvtDisplayggHad1} shows reconstructed particles  in a simulated \HepProcess{\Pep\Pem \to \PHiggs\PHiggs \to \Ptop\APbottom\Pbottom\APtop} event which are integrated over a time window of 10\,ns (100\,ns in \HCAL barrel) in the \CLICILD detector model, with 60 bunch crossings of \ggHad background overlaid. The effect of applying tight \PFO selection cuts is shown in \Figure{fig:pandoraEvtDisplayggHad2}. The energy deposited in the detector by the background is reduced from 1.2\,TeV to the level of 100\,GeV.
+\FIGURE{fig:pandoraEvtDisplayggHad} shows the effect of the background suppression   with the tight \PFO selection.  \FIGURE{fig:pandoraEvtDisplayggHad1} shows reconstructed particles  in a simulated \HepProcess{\Pep\Pem \to \PHiggs\PHiggs \to \Ptop\APbottom\Pbottom\APtop} event which are integrated over a time window of 10\,ns (100\,ns in \HCAL barrel) in the \CLICILD detector model, with 60 bunch crossings of \ggHad background overlaid. The effect of applying tight \PFO selection cuts is shown in \Figure{fig:pandoraEvtDisplayggHad2}. The energy deposited in the detector by the background is reduced from 1.2\,TeV to the level of 100\,GeV.
 
 
 \begin{figure}[tbph]
@@ -385,12 +385,12 @@ The jet algorithm implementation used in this thesis is the FastJet C++ software
 
 \subsubsection{Longitudinally invariant \kt algorithm}
 
-Longitudinally invariant \kt algorithm \cite{Catani:1993hr,Ellis:1993tq} is one of the common sequential combination algorithms used in the \pp collider experiments. There are two variants of the algorithm: inclusive and exclusive. In the inclusive variant, the symmetrical pair-wise distance metric between particle $i$ and $j$, $d_{ij}$ or $d_{ji}$, and the beam distance, $d_{iB}$, are defined as
+Longitudinally invariant \kt algorithm \cite{Catani:1993hr,Ellis:1993tq} is one of the most common sequential combination algorithms used in the \pp collider experiments. There are two variants of the algorithm: inclusive and exclusive. In the inclusive variant, the symmetrical pair-wise distance metric between particle $i$ and $j$, $d_{ij}$ or $d_{ji}$, and the beam distance, $d_{iB}$, are defined as
 \begin{equation}
 d_{ij}  & = d_{ji} = \min\!\parenths{\pT_{i}^{2},\!\pT_{j}^{2}}\frac{\DeltaOf{R_{ij}^{2}}}{R^{2}}, \\
 d_{iB} & = \pT_{i}^2,
 \end{equation}
-where $\pT_{i}$ is the transverse momentum of particle $i$ with respect to the beam ($z$) direction, and $\DeltaOf{R_{ij}^{2}}$ is the measurement of angular separation of particle $i$ and $j$, defined as $\DeltaOf{R_{ij}^{2}} = \parenths{y_i - y_j}^2 + \parenths{\phi_i - \phi_j}^2$, where $y_i = \frac{1}{2}\ln\!\frac{E_i + {p_z}_i}{E_i - {p_z}_i}$ and $\phi_i$ are particle $i$'s rapidity and azimuthal angle. The free parameter $R$ controls the jet radius.
+where $\pT_{i}$ is the transverse momentum of particle $i$ with respect to the beam ($z$) direction, and $\DeltaOf{R_{ij}^{2}}$ is the measurement of angular separation of particle $i$ and $j$, defined as $\DeltaOf{R_{ij}^{2}} = \parenths{y_i - y_j}^2 + \parenths{\phi_i - \phi_j}^2$, where $y_i = \frac{1}{2}\ln\!\frac{E_i + {p_z}_i}{E_i - {p_z}_i}$ and $\phi_i$ are the rapidity and azimuthal angle of  particle $i$. The free parameter $R$ controls the jet radius.
 
 The $d_{ij}$ and $d_{iB}$ are calculated for all pairs of particles. If the minimum value of all $d_{ij}$ and $d_{iB}$ is a $d_{ij}$, particle $i$ and $j$ are merged and the four momentum of particle $i$ is updated as the sum of the two particles. If the minimum value is  a $d_{iB}$, particle $i$ is set to be a final jet and removed from the list of particles. The above procedure is repeated until no particles are left.
 
@@ -399,7 +399,7 @@ The $d_{ij}$ and $d_{iB}$ are calculated for all pairs of particles. If the mini
 
 %\fourMomentum of particle $i$ is updated as the sum of the two particles.
 
-The exclusive variant is similar to the inclusive variant. First difference is that when the minimum value is  a $d_{iB}$, particle $i$ forms part of the beam jet. The beam jet is discarded at the end of the jet clustering. The second difference is that when all $d_{ij}$ and $d_{iB}$ are above a threshold, $d_{cut}$, the jet clustering will stop.
+The exclusive variant is similar to the inclusive variant. First difference is that when the minimum value of all $d_{ij}$ and $d_{iB}$  is  a $d_{iB}$, particle $i$ forms part of the beam jet. The beam jet is discarded at the end of the jet clustering. The second difference is that when all $d_{ij}$ and $d_{iB}$ are above a threshold, $d_{cut}$, the jet clustering will stop.
 
 The exclusive mode allows a specified number of jets to be found, where the $d_{cut}$ is automatically determined. In contrast, the inclusive mode would find as many jets as the algorithm allows.
 
@@ -407,11 +407,11 @@ The exclusive mode allows a specified number of jets to be found, where the $d_{
 
 \subsubsection{Durham algorithm}
 \label{sec:pandoraJetDurham}
-The Durham algorithm \cite{Catani:1991hj}, also known as \ee \kt algorithm, is commonly used in the \ee collider experiments. It has one pair-wise distance metric:
+The Durham algorithm \cite{Catani:1991hj}, also known as \ee \kt algorithm, is commonly used in \ee collider experiments. It has one pair-wise distance metric:
 \begin{equation}
-d_{ij} = 2\min\!\parenths{E_i^2,\!E_j^2}\!\parenths{1 - \cosOf{\theta_{ij}}},
+d_{ij} = 2\,\min\!\parenths{E_i^2,\!E_j^2}\,\parenths{1 - \cosOf{\theta_{ij}}},
 \end{equation}
-where $E_i$ is the energy of particle $i$ and $\theta_{ij}$ is the angle between particle $i$ and $j$. The Durham algorithm can only be run at exclusive mode, which means that the clustering will stop when all $d_{ij}$ are above a threshold, $d_{cut}$.
+where $E_i$ is the energy of particle $i$ and $\theta_{ij}$ is the angle between particle $i$ and $j$. The Durham algorithm can only be run in exclusive mode, which means that the clustering will stop when all $d_{ij}$ are above a threshold, $d_{cut}$.
 
 %Compared to the longitudinally invariant \kt algorithm, the Durham algorithm uses energy instead of \pT in the distance metric, and it does not use the beam distance. This is because that for the \ee collider at low centre-of-mass energies, the beam induced background is not significant. And the total energy of the event is known, which is the same as the collision energy (for events with missing momentum).
 
@@ -419,7 +419,7 @@ where $E_i$ is the energy of particle $i$ and $\theta_{ij}$ is the angle between
 
 \subsubsection{Jet algorithm for \CLIC}
 
-Although \CLIC is a \ee collider, the  beam-induced background is significant and deposits a large amount of energy in the detector. Therefore, traditional \ee jet algorithms, like the Durham algorithm, are not suitable for the \CLIC colliding environment. \FIGURE{fig:pandoraJetCompare} shows the reconstructed \PZ boson mass distribution for \HepProcess{\PZ\PZ \to \Pq \Paq \Pq' \Paq' } at a 500\,GeV \CLIC \cite{Boronat:2014hva}, using the Durham jet algorithm and the longitudinally invariant \kt jet algorithm. The \ggHad background corresponding to 300 bunch crossings was overlaid on the event, where each bunch crossing contains approximately 0.3 \ggHad events. Longitudinally invariant \kt algorithm gives a better  reconstructed \PZ boson mass distribution. Other studies \cite{Linssen:2012hp,LCD-Note-2010-006} have also shown that jet algorithms for the \pp colliders, such as  longitudinally invariant \kt algorithm,  give better reconstructed mass and energies resolutions at \CLIC. Therefore, longitudinally invariant \kt algorithm is often used in analyses at \CLIC.
+Although \CLIC is a \ee collider, the  beam induced background is significant and deposits a large amount of energy in the detector. Therefore, traditional \ee jet algorithms, like the Durham algorithm, are not suitable for the \CLIC colliding environment. \FIGURE{fig:pandoraJetCompare} shows the reconstructed \PZ boson mass distribution for \HepProcess{\PZ\PZ \to \Pq \Paq \Pq' \Paq' } at a 500\,GeV \CLIC \cite{Boronat:2014hva}, using the Durham jet algorithm and the longitudinally invariant \kt jet algorithm. The \ggHad background corresponding to 300 bunch crossings was overlaid on the event, where each bunch crossing contains approximately 0.3 \ggHad events. Longitudinally invariant \kt algorithm gives a better  reconstructed \PZ boson mass distribution. Other studies \cite{Linssen:2012hp,LCD-Note-2010-006} have also shown that jet algorithms for the \pp colliders, such as  longitudinally invariant \kt algorithm,  give better reconstructed mass and energies resolutions at \CLIC. Therefore, longitudinally invariant \kt algorithm is often used in analyses at \CLIC.
 
 \begin{figure}[tbph]
 \centering
@@ -531,13 +531,13 @@ When we are describing particles, light lepton, \llight, refer to electrons, \Pe
 \section{Multivariate Analysis}
 \label{sec:pandoraMVA}
 
-Multivariate analysis (MVA) has become increasingly important in high energy physics. The implementation of the machine learning based MVA used in this thesis is provided by  TMVA software \cite{Hocker:2007ht}.
+Multivariate analysis (MVA) has become increasingly important in high energy physics. The implementation of the machine learning based MVA used in this thesis is provided by  TMVA package \cite{Hocker:2007ht}.
 
 % Compared to the traditional cut-based method, modern machine learning techniques offer much improvement to data analysis.
 %MVA is typically used in physics analysis to classify signal events from background events. 
 %MVA can be viewed as an advanced tool for regression or classification.
 
-MVA can be used for classification or regression. Classification classifies a testing event into one of several classes. Regression of a testing event  gives an output in a continuous numerical range. The focus in this section is on the classification, as in a physics analysis the MVA is often used to select one type of events from other type of events.
+MVA can be used for classification or regression. Classification classifies an event into one of several classes. Regression of an event  gives an output in a continuous numerical range. The focus in this section is on the classification, as in a physics analysis, the MVA is often used to classify one type of events from other type of events.
 
 A typical MVA classification involves two classes, sometimes referring to as the signal class and the background class. Before using the MVA classification, a machine learning model (classifier) needs to be trained with training data. The model uses a set of discriminant variables as inputs, which have different distributions for the signal and the background. To use the MVA classification, the trained model will be applied onto the testing data. The classification response of the model on a testing sample is a two-class outcome:  the signal or background.
 
@@ -548,13 +548,13 @@ This two-class classification scheme can  be easily extended to multiple classes
 \subsection{Optimisation and overfitting}
 \label{sec:pandoraMVAoptimisation}
 
-One important concept with the MVA is the optimisation and the overfitting of a model. The optimisation of a model refers to selecting the optimal free parameters of the model. One could build a complex model which fits the training samples extremely well, but the model may not be optimal for a testing sample. A simple model is less prone to statistical fluctuations of samples. However, the model might be too simple to achieve the optimal modelling. The former case is known as overfitting, or overtraining. The latter case is called underfitting, or undertraining.
+Two important concepts with the MVA are the optimisation and the overfitting of a model. The optimisation of a model refers to selecting the optimal free parameters of the model. One could build a complex model which fits the training samples extremely well, but the model may not be optimal for a testing sample. A simple model is less prone to statistical fluctuations of samples. However, the model might be too simple to achieve the optimal modelling. The former case is known as overfitting, or overtraining. The latter case is called underfitting, or undertraining.
 
 %Another way to describe the difference in a simple and a complex model is that a simple model typically has a low variance but a high bias, whilst a complex model would often have a low bias but a high variance.
 
-The optimal model is the one between overfitting and underfitting. In practice, this involves building the model with increasing complexities, and identifying the point where overfitting occurs.
+An optimal model is the one between an overfitted model and an underfitted model. In practice, this involves building a model with increasing complexities, and identifying the point where overfitting occurs.
 
-One definition of  overfitting is when the efficiency of the signal selection in the training samples increases, but the efficiency of the signal selection in the testing sample decreases, with the increase of the model complexity. \FIGURE{fig:doubleHiggsMVAovertraining} shows the signal selection efficiency as a function of the model complexity, using an example from the double Higgs analysis at \rootS{3}, using the Boosted Decision Tree model. The efficiency of the signal selection is defined as the  fraction of the signal selected when the background fraction is 1\%, reported by the TMVA training process. The depth of the tree  reflects the complexity of the model. From a tree depth of two to six, the efficiency for both testing and training samples increases. From a tree depth of six onwards, overfitting occurs. In this particular example, one should choose a tree depth fewer than seven to avoid overfitting.
+One definition of  overfitting is when the efficiency of the signal selection in the training samples increases, but the efficiency of the signal selection in the testing sample decreases, with the increase of the model complexity. \FIGURE{fig:doubleHiggsMVAovertraining} shows the signal selection efficiency as a function of the model complexity, using an example from the double Higgs analysis at \rootS{3}, using the Boosted Decision Tree model. The efficiency of the signal selection is defined as the  fraction of the signal selected when the fraction of background  is 1\%, reported by the TMVA training process. The depth of the tree  reflects the complexity of the model. From a tree depth of two to six, the efficiency for both testing and training samples increases. From a tree depth of six onwards, overfitting occurs. In this particular example, one should choose a tree depth fewer than seven to avoid overfitting.
 
 %\FIGURE{fig:doubleHiggsMVAovertraining}  can be repeated with a different split of training and testing samples to avoid the statistical fluctuation in samples. This allows for a better estimation of where overfitting occurs. However, this method is not used as the TMVA does not support such a method.
 
@@ -563,7 +563,7 @@ One definition of  overfitting is when the efficiency of the signal selection in
 
 \begin{figure}[!htbp]
 \includegraphics[width=0.85\textwidth]{doubleHiggs/DepthOfTrees2}
-\caption{Example of the signal selection efficiency as function of the model complexity. The example is chosen from the double Higgs analysis at \rootS{3}, using the Boosted Decision Tree model. The efficiency of the signal selection is defined as the  fraction of the signal selected when the background fraction is 1\%, reported by the TMVA training process. The depth of the tree  reflects the complexity of the model.  From a tree depth of six onwards, overfitting occurs.}
+\caption{Example of the signal selection efficiency as function of the model complexity. The example is chosen from the double Higgs analysis at \rootS{3}, using the Boosted Decision Tree model. The efficiency of the signal selection is defined as the  fraction of the signal selected when the fraction of background  is 1\%, reported by the TMVA training process. The depth of the tree  reflects the complexity of the model.  From a tree depth of six onwards, overfitting occurs.}
 \label{fig:doubleHiggsMVAovertraining}
 \end{figure}
 
@@ -572,7 +572,7 @@ One definition of  overfitting is when the efficiency of the signal selection in
 
 The model to fit the data can be as simple as a cut-based model, a likelihood estimator, or a linear regression model. The model can also be as complicated as a non-linear tree, a non-linear neutral network, or a support vector machine. Regardless of the model complexity, the choice of the most optimal classifier is often data driven to match the nature of the sample. For example, a non-linear model is the best to model a non-linear response to the input variables.
 
-To rigourously identify the best model, individual optimisation of models are required, which is computationally very expensive. However, as researchers in the machine learning field suggested, the boosted decision tree is probably the best out-of-the-box machine learning method  \cite{hastie2009elements}. A neutral network model could potentially perform better than the boosted decision tree model, but it requires more tuning, and it is less intuitive to interpret. For these reasons, the boost decision tree model (BDT) is chosen for physics analyses in this thesis. Before describing the BDT model in detail, some simpler models will be described.
+To rigourously identify the best model, individual optimisation of models are required, which is computationally very expensive. However, as researchers in the machine learning field suggested, the boosted decision tree is probably the best out-of-the-box machine learning model  \cite{hastie2009elements}. A neutral network model could potentially perform better than the boosted decision tree model, but it requires more tuning, and is less intuitive to interpret. For these reasons, the boost decision tree model (BDT) is chosen for physics analyses in this thesis. Before describing the BDT model in detail, some simpler models are discussed.
 
 %the traditional rectangular cut model, and the Projective Likelihood method, which is used in the photon ID in the \pandora in \Section{}.
 % often the choice of machine learning model in high energy physics. And it is
@@ -611,7 +611,7 @@ Similar to the rectangular cut method, the likelihood model works better with de
 
 The decision tree is a non-linear tree based model. Its rather complex nature requires a careful explanation of many concepts.
 
-The decision tree is a binary tree, where each splitting node (splitting point) uses a cut on a single discriminant variable to decide whether an event is signal-like (``goes down by a layer to the left''), or background-like (``goes down by a layer to the right''), depending on whether the event passes the cut. At each splitting node, samples are divided into two sub-categories: signal-like and background-like sub-samples. For each sub-sample, this splitting process (tree growing) starts at the  root node, and stops after certain criterion are met. The root node is the first splitting node. The stopping criterion could be the minimum number of events in a node, the maximum number of layers of the tree, or a minimum/maximum signal purity of the end nodes.  The end nodes, where the tree stops growing and the sub-samples are not split, contains signal and/or background events. If there are more signal than background events in an end node, it is called a signal-like end node. The opposite is called a background-like end node.
+The decision tree is a binary tree, where each splitting node (splitting point) uses a cut on a single discriminant variable to decide whether an event is signal-like (``goes down by a layer to the left''), or background-like (``goes down by a layer to the right''), depending on whether the event passes the cut. At each splitting node, samples are divided into two sub-samples: signal-like and background-like sub-samples. For each sub-sample, this splitting process (tree growing) starts at the  root node, and stops after certain criterion are met. The root node is the first splitting node. The stopping criterion could be the minimum number of events in a node, the maximum number of layers of the tree, or a minimum/maximum signal purity of the end nodes.  The end nodes, where the tree stops growing and the sub-samples are not split, contains signal and/or background events. If there are more signal than background events in an end node, it is called a signal-like end node. The opposite is called a background-like end node.
 
 %The bottom nodes that are not split are called end nodes. An end node with more signal than background events in is called a signal-like nodes. The opposite is called a background-like node.
 
@@ -628,9 +628,9 @@ The applying of a trained decision tree is performed by transversion the tree fr
 
 
 
-\FIGURE{fig:doubleHiggsMVAdecisionTree} illustrates a simple example of a trained decision tree. The signal class is the PhD student and the background class is the undergraduate student. The attributes of samples are listed \Table{tab:doubleHiggsDecisionTreeComic2}. The top diamond box,   ``Leave party  before  1am'', is the root node. All diamond boxes are splitting nodes. Rectangular boxes are end nodes.  The signal-like end node is represented by the red rectangle and the background-like end nodes are represented by blue rectangles. The depth of this decision tree is two. The metric used to find the optimal cut at the splinting node is the Gini index.
+\FIGURE{fig:doubleHiggsMVAdecisionTree} illustrates a simple example of a trained decision tree. PhD student is the signal class and the undergraduate student is the background class. The attributes of signal and background classes are listed \Table{tab:doubleHiggsDecisionTreeComic2}. The top diamond box in \Figure{fig:doubleHiggsMVAdecisionTree},   ``Leave party  before  1am'', is the root node. All diamond boxes are splitting nodes. Rectangular boxes are end nodes.  The signal-like end node is represented by the red rectangle and the background-like end nodes are represented by blue rectangles. The depth of this decision tree is two. The metric used to find the optimal cut at the splinting node is the Gini index.
 
-To demonstrate first step of the training of the model, details of finding the optimal cut at the root node are outlined. There are two possible cuts for the root node, ``Leave party before (after) 1am'' and ``(Not) Know where free pizza is''. If the cut at the root node is ``Leave party before 1am'', the probability of the cut producing the signal, $p$, is $\frac{10}{13}$, as there are 10 PhD students and 3 undergraduate students who leave parties before 1\,am. The Gini index gives
+To demonstrate the first step of the training of the model, details of finding the optimal cut at the root node are outlined. There are two possible cuts for the root node, ``Leave party before (after) 1am'' and ``(Not) Know where free pizza is''. If the cut at the root node is ``Leave party before 1am'', the probability of the cut producing the signal, $p$, is $\frac{10}{13}$, as there are 10 PhD students and 3 undergraduate students who leave parties before 1\,am. The Gini index gives
 \begin{equation}
 2p\parenths{1\!-\!p} \backsimeq 0.36 .
 \end{equation}
@@ -642,12 +642,7 @@ Therefore, by choosing the cut that minimise the Gini Index, the optimal cut for
 
 The simple tree in \Figure{fig:doubleHiggsMVAdecisionTree} is grown fully as each end node contains signal or background only. An example of applying the trained decision tree is provided: if there is a student who leaves parties before 1\,am and knows where a free pizza is located, then the student is classified as a PhD student.
 
-\begin{figure}[!htbp]
-\includegraphics[width=0.85\textwidth]{doubleHiggs/mva/BDTcomic}
-\caption[Example of a decision tree. ]
-{Example of a decision tree. Numbers in each node represent number of PhD students (red) and number of undergraduate students (blue). Diamond boxes represent splitting nodes. Rectangular boxes represent end nodes. Blue boxes are background-like end nodes. The red box is a signal-like end-node.}
-   \label{fig:doubleHiggsMVAdecisionTree}
-\end{figure}
+
 
 \begin{table}[!htbp]\centering
 
@@ -669,8 +664,14 @@ Not know where free pizza is & 3 & 2 \\
 \label{tab:doubleHiggsDecisionTreeComic2}
 \end{table}
 
+\begin{figure}[!htbp]
+\includegraphics[width=0.85\textwidth]{doubleHiggs/mva/BDTcomic}
+\caption[Example of a decision tree. ]
+{Example of a decision tree. Numbers in each node represent the number of PhD students (red) and the number of undergraduate students (blue). Diamond boxes represent splitting nodes. Rectangular boxes represent end nodes. Blue boxes are background-like end nodes. The red box is a signal-like end-node.}
+   \label{fig:doubleHiggsMVAdecisionTree}
+\end{figure}
 
-\subsubsection{To improve decision tree}
+\subsubsection{Improving decision tree}
 
 %The decision tree model has a low bias, but a high variance.
 
@@ -698,7 +699,7 @@ It is very easy to construct a decision tree that fits the training data very we
 \subsection{Boosted Decision Tree model}
 \label{sec:analysisBDT}
 
-Boosted decision tree (BDT) contains a forest of decision trees, where the boosting is used to grow trees. There are two common boosting methods: adaptive boosting and gradient boosting. The adaptive boosting,  first introduced in \cite{FREUND1997119}, is discussed in further detail, as it is simpler to understand than the gradient boosting. The adaptive boosting algorithm, adapted from \cite{hastie2009elements},  is outlined below:
+Boosted decision tree (BDT) contains many decision trees, where the boosting is used to grow trees. There are two common boosting methods: adaptive boosting and gradient boosting. The adaptive boosting,  first introduced in \cite{FREUND1997119}, is discussed in further detail, as it is simpler to understand than the gradient boosting. The adaptive boosting algorithm, adapted from \cite{hastie2009elements},  is outlined below:
 
 %where each tree is iterated many times using a technique called boosting.   By overcoming the instability of a single  decision tree, BDT is often regarded as  the best out-of-the-box machine learning method.
 %The basic idea of adaptive boosting is that the tree making procedure focuses on events which are difficult to classify correctly. By assigning a weight to each event,   after each tree growing iteration, the weights for misclassified events are gradually increased. Therefore misclassified events get more attention in the next iteration.
@@ -740,7 +741,7 @@ The power of the adaptive boosting  is to dramatically improve the performance o
 The most important parameter is the depth of a tree, which determines how many end nodes the tree has. It also affects the complexity of the BDT model. If the depth of a tree is set to a large value, it could lead to the overfitting of the model.
 %or the degrees of freedom of the tree.
 
-The number of trees is another important parameter. Past studies on BDT show that using many small trees yields the best result \cite{hastie2009elements}. Intuitively a large number of trees leads to overfitting. But it has been shown that a large number does not lead to overfitting \cite{hastie2009elements}. Therefore there is a debate on the metric to determine the optimal number of trees.
+The number of trees is another important parameter. Past studies on BDT show that using many small trees yields the best result \cite{hastie2009elements}. Intuitively a large number of trees leads to overfitting. But it has been shown that a large number of trees  does not lead to overfitting \cite{hastie2009elements}. Therefore there is a debate on the metric to determine the optimal number of trees.
 
 The minimum number of events in a node, which is a stopping criteria for tree growing, affects the size of the tree. But it is less important than the depth of the tree parameter.
 
@@ -750,32 +751,32 @@ The learning rate of the adaptive boost  controls how fast the event weight chan
 
 The shrinkage rate in the gradient boost is similar to the learning rate parameter in the adaptive boost. The shrinkage rate controls how fast the weight changes for events in each boosting iteration. Again a small value   ($\thicksim$0.1) is preferable \cite{hastie2009elements}.
 
-The usual choice of the metric to optimise cuts for tree growing is either the Gini index or the cross-entropy. The two different metrics make  little differences to model performances.
+The usual choice of the metric to optimise cuts for tree growing is either the Gini index or the cross-entropy. The two metrics make  little differences to model performances.
 
 %The use of the Gini Index  makes little differences to performances, comparing to the cross-entropy metric.
 %Typically the Gini index metric is chosen.
 
 
-The number of bins per variable is  a necessary parameter to make tree growing efficient, because it is faster to compute the optimal cut at splitting nodes for discretely binned variables than continuous variables. This parameter, however,  has little  impacts on the model performance. But because variables are binned, variables should be pre-processed before feeding into the training model. For example, the variable should be limited to a range to avoid the extreme values that distort the shape of the variable distribution. If the original distribution of the variable is highly skewed, the variable should be transformed to obtain a more uniform distribution.
+The number of bins per variable is  a necessary parameter to make tree growing efficient, because it is faster to compute the optimal cut at splitting nodes for discretely binned variables than continuous variables. This parameter, however,  has little  impacts on the model performance. But because variables are binned, variables should be pre-processed before feeding into the training model. For example, a variable should be limited to a range to avoid the extreme values that distort the shape of the variable distribution. If the original distribution of a variable is highly skewed, the variable should be transformed to obtain a more uniform distribution.
 
 For the end node, the output can either be  signal-like or background-like, based on the majority of the training events in the end node. Numerically, it can correspond to 1/0. However, the end node could also use signal purity as the output, resulting in a continues range of [0,1].
 
 The bagging fraction determines the fraction of randomly selected samples used in each boosting iteration. By choosing a small value, samples between each boosting iteration are less correlated. Hence the overall model performance improves.
 
-The DoPreSelection flag allows the classifier to discard phase spaces where there are only background events.
+The \DoPreSelection flag allows the classifier to identify  phase spaces where there are only background events and apply cuts to discard these background events.
 
 \subsection{Multiple classes}
 \label{sec:pandoraMVAmulticlass}
 % ATTN used in tau chapter
 
-The above discussion  assumes two classes, the signal class and the background class. The classification can be extended to multiple classes. There are two ways for the training multiple classes. ``One versus one'' scheme trains each class against each other class. The second way is called ``one versus all'', when each class is trained against all other classes combined.
+The above discussion  assumes two classes, the signal class and the background class. The classification can be extended to multiple classes. There are two ways to train a classifier for multiple classes. ``One versus one'' scheme trains each class against each other class. The second way is called ``one versus all'', when each class is trained against all other classes combined.
 %, and the overall outputs are normalised.
 
-Using a three-class example, A, B, and C class, ``one versus one" scheme trains A class against B class; B class against C class; and C class against A class.  ``One versus all" scheme would train A class against non-A classes; B class against non-B classes; and C class against non-C classes.
+Using a three-class example, A, B, and C class, ``one versus one" scheme trains class A against class B;  class B against class C; and class C against class A.  ``One versus all" scheme would train class A against non-A classes; class B against non-B classes; and class C against non-C classes.
 
 %Then the likelihood is normalised.as the background as the signa
 
-TMVA multiple class implementation, \multiclass, uses the ``one versus all" scheme. For each class, the \multiclass classifier will train the class against all other classes. This process is repeated for each class, resulting in multiple classifiers. The overall classifier output for a single event is a normalised response using all trained classifiers, where the sum of the classifier outputs for a single event is one. Individual response of a trained classifier for an event can be treated as the likelihood. In the applying stage, the event is classified into a class if the classifier for that class gives the highest output response amongst all classifiers for that event.
+TMVA implementation of the multiple classes classifier, \multiclass, uses the ``one versus all" scheme. For each class, the \multiclass classifier will train the class against all other classes. This process is repeated for each class, resulting in multiple classifiers. The overall classifier output for a single event is a normalised response using all trained classifiers, where the sum of the classifier outputs for a single event is one. Individual response of a trained classifier for an event can be treated as the likelihood. In the applying stage, the event is classified into a class if the classifier for that class gives the highest output response amongst all classifiers for that event.
 
 The advantage of using the \multiclass classifier instead of a two-class classifier for samples with multiple classes  is the classifier outputs are correctly adjusted for multiple classes. Hence one event can  be unambiguously classified into only one class. The issue with the \multiclass classifier is that powerful discriminant variables for each individual class need to enter the training stage simultaneously, resulting in a large number of discriminant variables in the  \multiclass classifier.
 
