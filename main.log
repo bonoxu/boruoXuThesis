@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.4.28)  11 AUG 2017 18:04
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.4.28)  11 AUG 2017 21:35
 entering extended mode
 **main.tex
 ("E:\user\my documents\University\2016-2017\boruoXuThesis\main.tex"
@@ -2844,16 +2844,12 @@ Package epstopdf Info: Source file: <tau/plots3/hadronicEff2.eps>
 (epstopdf)                    size: 771338 bytes
 (epstopdf)             Output file: <tau/plots3/hadronicEff2-eps-converted-to.p
 df>
+(epstopdf)                    date: 2017-08-11 18:04:46
+(epstopdf)                    size: 22934 bytes
 (epstopdf)             Command: <epstopdf --outfile=tau/plots3/hadronicEff2-eps
 -converted-to.pdf tau/plots3/hadronicEff2.eps>
 (epstopdf)             \includegraphics on input line 724.
-runsystem(epstopdf --outfile=tau/plots3/hadronicEff2-eps-converted-to.pdf tau/p
-lots3/hadronicEff2.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <tau/plots3/hadronicEff2-eps-converted-to.p
-df>
-(epstopdf)                    date: 2017-08-11 18:04:46
-(epstopdf)                    size: 22934 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <tau/plots3/hadronicEff2-eps-converted-to.pdf, id=31430, 508.90125pt x 410.5337
 5pt>
@@ -2961,8 +2957,12 @@ File: tau/NoTimeAnalysis/EvtDsp.png Graphic file (type png)
 <use tau/NoTimeAnalysis/EvtDsp.png>
 Package pdftex.def Info: tau/NoTimeAnalysis/EvtDsp.png used on input line 919.
 (pdftex.def)             Requested size: 336.05533pt x 333.53308pt.
- [129] [130 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/NoTime
-Analysis/EvtDsp.png>]
+
+Underfull \vbox (badness 1194) has occurred while \output is active []
+
+ [129]
+[130 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/NoTimeAnalysi
+s/EvtDsp.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [131]
@@ -2970,52 +2970,60 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [132]
 [133]
-Package epstopdf Info: Source file: <tau/NoTimeAnalysis/2DMC.eps>
-(epstopdf)                    date: 2017-05-04 14:53:06
-(epstopdf)                    size: 22368 bytes
-(epstopdf)             Output file: <tau/NoTimeAnalysis/2DMC-eps-converted-to.p
-df>
-(epstopdf)                    date: 2017-05-04 15:06:26
-(epstopdf)                    size: 6735 bytes
-(epstopdf)             Command: <epstopdf --outfile=tau/NoTimeAnalysis/2DMC-eps
--converted-to.pdf tau/NoTimeAnalysis/2DMC.eps>
+Package epstopdf Info: Source file: <tau/NoTimeAnalysis/2DMC2.eps>
+(epstopdf)                    date: 2017-08-11 21:35:04
+(epstopdf)                    size: 769002 bytes
+(epstopdf)             Output file: <tau/NoTimeAnalysis/2DMC2-eps-converted-to.
+pdf>
+(epstopdf)             Command: <epstopdf --outfile=tau/NoTimeAnalysis/2DMC2-ep
+s-converted-to.pdf tau/NoTimeAnalysis/2DMC2.eps>
 (epstopdf)             \includegraphics on input line 1157.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=tau/NoTimeAnalysis/2DMC2-eps-converted-to.pdf tau/
+NoTimeAnalysis/2DMC2.eps)...executed (allowed).
 
-<tau/NoTimeAnalysis/2DMC-eps-converted-to.pdf, id=31797, 569.12625pt x 480.7962
-5pt>
-File: tau/NoTimeAnalysis/2DMC-eps-converted-to.pdf Graphic file (type pdf)
- <use tau/NoTimeAnalysis/2DMC-eps-converted-to.pdf>
-Package pdftex.def Info: tau/NoTimeAnalysis/2DMC-eps-converted-to.pdf used on i
-nput line 1157.
-(pdftex.def)             Requested size: 336.05533pt x 283.90941pt.
-Package epstopdf Info: Source file: <tau/NoTimeAnalysis/2Dreco.eps>
-(epstopdf)                    date: 2017-05-04 15:13:42
-(epstopdf)                    size: 22339 bytes
-(epstopdf)             Output file: <tau/NoTimeAnalysis/2Dreco-eps-converted-to
-.pdf>
-(epstopdf)                    date: 2017-05-04 15:14:49
-(epstopdf)                    size: 6721 bytes
-(epstopdf)             Command: <epstopdf --outfile=tau/NoTimeAnalysis/2Dreco-e
-ps-converted-to.pdf tau/NoTimeAnalysis/2Dreco.eps>
+Package epstopdf Info: Result file: <tau/NoTimeAnalysis/2DMC2-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2017-08-11 21:35:19
+(epstopdf)                    size: 26434 bytes.
+
+<tau/NoTimeAnalysis/2DMC2-eps-converted-to.pdf, id=31797, 484.81125pt x 410.533
+75pt>
+File: tau/NoTimeAnalysis/2DMC2-eps-converted-to.pdf Graphic file (type pdf)
+ <use tau/NoTimeAnalysis/2DMC2-eps-converted-to.pdf>
+Package pdftex.def Info: tau/NoTimeAnalysis/2DMC2-eps-converted-to.pdf used on 
+input line 1157.
+(pdftex.def)             Requested size: 336.05533pt x 284.58408pt.
+Package epstopdf Info: Source file: <tau/NoTimeAnalysis/2Dreco2.eps>
+(epstopdf)                    date: 2017-08-11 21:35:02
+(epstopdf)                    size: 766770 bytes
+(epstopdf)             Output file: <tau/NoTimeAnalysis/2Dreco2-eps-converted-t
+o.pdf>
+(epstopdf)             Command: <epstopdf --outfile=tau/NoTimeAnalysis/2Dreco2-
+eps-converted-to.pdf tau/NoTimeAnalysis/2Dreco2.eps>
 (epstopdf)             \includegraphics on input line 1162.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(epstopdf --outfile=tau/NoTimeAnalysis/2Dreco2-eps-converted-to.pdf ta
+u/NoTimeAnalysis/2Dreco2.eps)...executed (allowed).
 
-<tau/NoTimeAnalysis/2Dreco-eps-converted-to.pdf, id=31798, 569.12625pt x 480.79
-625pt>
-File: tau/NoTimeAnalysis/2Dreco-eps-converted-to.pdf Graphic file (type pdf)
- <use tau/NoTimeAnalysis/2Dreco-eps-converted-to.pdf>
-Package pdftex.def Info: tau/NoTimeAnalysis/2Dreco-eps-converted-to.pdf used on
- input line 1162.
-(pdftex.def)             Requested size: 336.05533pt x 283.90941pt.
+Package epstopdf Info: Result file: <tau/NoTimeAnalysis/2Dreco2-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2017-08-11 21:35:20
+(epstopdf)                    size: 26260 bytes.
+
+<tau/NoTimeAnalysis/2Dreco2-eps-converted-to.pdf, id=31798, 486.81876pt x 410.5
+3375pt>
+File: tau/NoTimeAnalysis/2Dreco2-eps-converted-to.pdf Graphic file (type pdf)
+ <use tau/NoTimeAnalysis/2Dreco2-eps-converted-to.pdf>
+Package pdftex.def Info: tau/NoTimeAnalysis/2Dreco2-eps-converted-to.pdf used o
+n input line 1162.
+(pdftex.def)             Requested size: 336.05533pt x 283.39388pt.
 
 
-LaTeX Warning: Float too large for page by 38.58882pt on input line 1169.
+LaTeX Warning: Float too large for page by 38.74796pt on input line 1169.
 
 ) ("E:\user\my documents\University\2016-2017\boruoXuThesis\chapDoubleHiggs.tex
 " [134] [135 <E:/user/my documents/University/2016-2017/boruoXuThesis/tau/NoTim
-eAnalysis/2DMC-eps-converted-to.pdf> <E:/user/my documents/University/2016-2017
-/boruoXuThesis/tau/NoTimeAnalysis/2Dreco-eps-converted-to.pdf>] [136
+eAnalysis/2DMC2-eps-converted-to.pdf> <E:/user/my documents/University/2016-201
+7/boruoXuThesis/tau/NoTimeAnalysis/2Dreco2-eps-converted-to.pdf>] [136
 
 ]
 chapter 7.
@@ -3099,7 +3107,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [140]
 [141] [142]
-<doubleHiggs/isoLep/electron1highPTSignal.png, id=31883, 798.985pt x 674.52pt>
+<doubleHiggs/isoLep/electron1highPTSignal.png, id=31891, 798.985pt x 674.52pt>
 File: doubleHiggs/isoLep/electron1highPTSignal.png Graphic file (type png)
 
 <use doubleHiggs/isoLep/electron1highPTSignal.png>
@@ -3107,7 +3115,7 @@ Package pdftex.def Info: doubleHiggs/isoLep/electron1highPTSignal.png used on i
 nput line 290.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<doubleHiggs/isoLep/electron1highPTbkg.png, id=31884, 798.985pt x 674.52pt>
+<doubleHiggs/isoLep/electron1highPTbkg.png, id=31892, 798.985pt x 674.52pt>
 File: doubleHiggs/isoLep/electron1highPTbkg.png Graphic file (type png)
 
 <use doubleHiggs/isoLep/electron1highPTbkg.png>
@@ -3115,7 +3123,7 @@ Package pdftex.def Info: doubleHiggs/isoLep/electron1highPTbkg.png used on inpu
 t line 295.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<doubleHiggs/isoLep/electron1lowPTSignal.png, id=31885, 798.985pt x 674.52pt>
+<doubleHiggs/isoLep/electron1lowPTSignal.png, id=31893, 798.985pt x 674.52pt>
 File: doubleHiggs/isoLep/electron1lowPTSignal.png Graphic file (type png)
 
 <use doubleHiggs/isoLep/electron1lowPTSignal.png>
@@ -3123,7 +3131,7 @@ Package pdftex.def Info: doubleHiggs/isoLep/electron1lowPTSignal.png used on in
 put line 300.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<doubleHiggs/isoLep/electron1lowPTbkg.png, id=31886, 798.985pt x 674.52pt>
+<doubleHiggs/isoLep/electron1lowPTbkg.png, id=31894, 798.985pt x 674.52pt>
 File: doubleHiggs/isoLep/electron1lowPTbkg.png Graphic file (type png)
 
 <use doubleHiggs/isoLep/electron1lowPTbkg.png>
@@ -3143,14 +3151,14 @@ lowPTbkg.png>]
 Underfull \vbox (badness 3439) has occurred while \output is active []
 
  [145]
-[146] <doubleHiggs/isoLep/tau1.png, id=31914, 798.985pt x 674.52pt>
+[146] <doubleHiggs/isoLep/tau1.png, id=31922, 798.985pt x 674.52pt>
 File: doubleHiggs/isoLep/tau1.png Graphic file (type png)
 
 <use doubleHiggs/isoLep/tau1.png>
 Package pdftex.def Info: doubleHiggs/isoLep/tau1.png used on input line 373.
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<doubleHiggs/isoLep/tau2real.png, id=31915, 798.985pt x 674.52pt>
+<doubleHiggs/isoLep/tau2real.png, id=31923, 798.985pt x 674.52pt>
 File: doubleHiggs/isoLep/tau2real.png Graphic file (type png)
 
 <use doubleHiggs/isoLep/tau2real.png>
@@ -3158,7 +3166,7 @@ Package pdftex.def Info: doubleHiggs/isoLep/tau2real.png used on input line 378
 .
 (pdftex.def)             Requested size: 201.63182pt x 170.2146pt.
 
-<doubleHiggs/isoLep/tau3.png, id=31916, 798.985pt x 674.52pt>
+<doubleHiggs/isoLep/tau3.png, id=31924, 798.985pt x 674.52pt>
 File: doubleHiggs/isoLep/tau3.png Graphic file (type png)
 
 <use doubleHiggs/isoLep/tau3.png>
@@ -3192,7 +3200,7 @@ BCAL-eps-converted-to.pdf doubleHiggs/forward/ForwardBCAL.eps>
 (epstopdf)             \includegraphics on input line 495.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/forward/ForwardBCAL-eps-converted-to.pdf, id=31940, 212.795pt x 17
+<doubleHiggs/forward/ForwardBCAL-eps-converted-to.pdf, id=31948, 212.795pt x 17
 7.66376pt>
 File: doubleHiggs/forward/ForwardBCAL-eps-converted-to.pdf Graphic file (type p
 df)
@@ -3212,7 +3220,7 @@ LCAL-eps-converted-to.pdf doubleHiggs/forward/ForwardLCAL.eps>
 (epstopdf)             \includegraphics on input line 500.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/forward/ForwardLCAL-eps-converted-to.pdf, id=31941, 541.02126pt x 
+<doubleHiggs/forward/ForwardLCAL-eps-converted-to.pdf, id=31949, 541.02126pt x 
 344.28625pt>
 File: doubleHiggs/forward/ForwardLCAL-eps-converted-to.pdf Graphic file (type p
 df)
@@ -3224,7 +3232,7 @@ sed on input line 500.
 [149] [150 <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs
 /forward/ForwardBCAL-eps-converted-to.pdf> <E:/user/my documents/University/201
 6-2017/boruoXuThesis/doubleHiggs/forward/ForwardLCAL-eps-converted-to.pdf>]
-[151] <doubleHiggs/MCmassFit2.png, id=31985, 750.1626pt x 507.8172pt>
+[151] <doubleHiggs/MCmassFit2.png, id=31993, 750.1626pt x 507.8172pt>
 File: doubleHiggs/MCmassFit2.png Graphic file (type png)
 
 <use doubleHiggs/MCmassFit2.png>
@@ -3234,7 +3242,7 @@ Package pdftex.def Info: doubleHiggs/MCmassFit2.png used on input line 654.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [152]
-<doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.pdf, id=31996, 569.12625pt x 480.
+<doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.pdf, id=32004, 569.12625pt x 480.
 79625pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.pdf Graphic file (type pdf)
  <use doubleHiggs/resolution/ILD_1.4TeV_Higgs1_M_R.pdf>
@@ -3243,7 +3251,7 @@ on input line 674.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR.pdf,
- id=31997, 569.12625pt x 480.79625pt>
+ id=32005, 569.12625pt x 480.79625pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR
 .pdf Graphic file (type pdf)
 
@@ -3253,7 +3261,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_1.4TeV_Higgs1_SigmaL_add_Si
 gmaR_divide_M_testR.pdf used on input line 679.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.pdf, id=31998, 569.12625pt x 480.
+<doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.pdf, id=32006, 569.12625pt x 480.
 79625pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.pdf Graphic file (type pdf)
  <use doubleHiggs/resolution/ILD_1.4TeV_Higgs2_M_R.pdf>
@@ -3262,7 +3270,7 @@ on input line 684.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR.pdf,
- id=31999, 569.12625pt x 480.79625pt>
+ id=32007, 569.12625pt x 480.79625pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR
 .pdf Graphic file (type pdf)
 
@@ -3272,7 +3280,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_1.4TeV_Higgs2_SigmaL_add_Si
 gmaR_divide_M_testR.pdf used on input line 689.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.pdf, id=32000, 569.12625pt x 480.7
+<doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.pdf, id=32008, 569.12625pt x 480.7
 9625pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.pdf Graphic file (type pdf)
  <use doubleHiggs/resolution/ILD_1.4TeV_W_M_testR.pdf>
@@ -3281,7 +3289,7 @@ n input line 694.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_testR.pdf, id=3
-2001, 569.12625pt x 480.79625pt>
+2009, 569.12625pt x 480.79625pt>
 File: doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M_testR.pdf 
 Graphic file (type pdf)
 
@@ -3309,7 +3317,7 @@ ments/University/2016-2017/boruoXuThesis/doubleHiggs/resolution/ILD_1.4TeV_W_M_
 testR.pdf, page is rotated 90 degrees> <E:/user/my documents/University/2016-20
 17/boruoXuThesis/doubleHiggs/resolution/ILD_1.4TeV_W_SigmaL_add_SigmaR_divide_M
 _testR.pdf, page is rotated 90 degrees>]
-<doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.pdf, id=32274, 569.12625pt x 480.79
+<doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.pdf, id=32282, 569.12625pt x 480.79
 625pt>
 File: doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.pdf Graphic file (type pdf)
  <use doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.pdf>
@@ -3318,7 +3326,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_Higgs1_M_R.pdf used on
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR.pdf, i
-d=32275, 569.12625pt x 480.79625pt>
+d=32283, 569.12625pt x 480.79625pt>
 File: doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_SigmaR_divide_M_testR.p
 df Graphic file (type pdf)
 
@@ -3328,7 +3336,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_Higgs1_SigmaL_add_Sigm
 aR_divide_M_testR.pdf used on input line 748.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.pdf, id=32276, 569.12625pt x 480.79
+<doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.pdf, id=32284, 569.12625pt x 480.79
 625pt>
 File: doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.pdf Graphic file (type pdf)
  <use doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.pdf>
@@ -3337,7 +3345,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_Higgs2_M_R.pdf used on
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR.pdf, i
-d=32277, 569.12625pt x 480.79625pt>
+d=32285, 569.12625pt x 480.79625pt>
 File: doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_SigmaR_divide_M_testR.p
 df Graphic file (type pdf)
 
@@ -3347,7 +3355,7 @@ Package pdftex.def Info: doubleHiggs/resolution/ILD_3TeV_Higgs2_SigmaL_add_Sigm
 aR_divide_M_testR.pdf used on input line 758.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
-<doubleHiggs/resolution/ILD_3TeV_W_M_testR.pdf, id=32278, 569.12625pt x 480.796
+<doubleHiggs/resolution/ILD_3TeV_W_M_testR.pdf, id=32286, 569.12625pt x 480.796
 25pt>
 File: doubleHiggs/resolution/ILD_3TeV_W_M_testR.pdf Graphic file (type pdf)
  <use doubleHiggs/resolution/ILD_3TeV_W_M_testR.pdf>
@@ -3356,7 +3364,7 @@ input line 763.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR.pdf, id=322
-79, 569.12625pt x 480.79625pt>
+87, 569.12625pt x 480.79625pt>
 File: doubleHiggs/resolution/ILD_3TeV_W_SigmaL_add_SigmaR_divide_M_testR.pdf Gr
 aphic file (type pdf)
 
@@ -3387,7 +3395,7 @@ ed 90 degrees>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [157]
-<doubleHiggs/eval-lcfiweights_R0_7_2jets-test.pdf, id=32564, 569.12625pt x 541.
+<doubleHiggs/eval-lcfiweights_R0_7_2jets-test.pdf, id=32572, 569.12625pt x 541.
 02126pt>
 File: doubleHiggs/eval-lcfiweights_R0_7_2jets-test.pdf Graphic file (type pdf)
  <use doubleHiggs/eval-lcfiweights_R0_7_2jets-test.pdf>
@@ -3395,7 +3403,7 @@ Package pdftex.def Info: doubleHiggs/eval-lcfiweights_R0_7_2jets-test.pdf used
 on input line 826.
 (pdftex.def)             Requested size: 201.63182pt x 191.67175pt.
 
-<doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.pdf, id=32565, 569.12625pt 
+<doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.pdf, id=32573, 569.12625pt 
 x 541.02126pt>
 File: doubleHiggs/eval-lcfiweights_tR0_7_3000_2jets-test.pdf Graphic file (type
  pdf)
@@ -3419,7 +3427,7 @@ s>
 Package epstopdf Info: Output file is already uptodate.
 
 <doubleHiggs/jetPairing/nR0_7_6jet_btag2_bTag1_TMVA20170223R0_7_qq_btag2_prepar
-e2-eps-converted-to.pdf, id=32566, 569.12625pt x 480.79625pt>
+e2-eps-converted-to.pdf, id=32574, 569.12625pt x 480.79625pt>
 File: doubleHiggs/jetPairing/nR0_7_6jet_btag2_bTag1_TMVA20170223R0_7_qq_btag2_p
 repare2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -4922,7 +4930,7 @@ verted-to.pdf>
 (epstopdf)             \includegraphics on input line 876.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/preSel/mutual6022bbWW2-eps-converted-to.pdf, id=32667, 569.12625pt
+<doubleHiggs/preSel/mutual6022bbWW2-eps-converted-to.pdf, id=32675, 569.12625pt
  x 480.79625pt>
 File: doubleHiggs/preSel/mutual6022bbWW2-eps-converted-to.pdf Graphic file (typ
 e pdf)
@@ -4942,7 +4950,7 @@ verted-to.pdf>
 (epstopdf)             \includegraphics on input line 881.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/preSel/mutual6022bbbb2-eps-converted-to.pdf, id=32668, 569.12625pt
+<doubleHiggs/preSel/mutual6022bbbb2-eps-converted-to.pdf, id=32676, 569.12625pt
  x 480.79625pt>
 File: doubleHiggs/preSel/mutual6022bbbb2-eps-converted-to.pdf Graphic file (typ
 e pdf)
@@ -4975,7 +4983,7 @@ re2.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <doubleHiggs/jetPairing/nR0_7_6jet_btag2_Higgs1_M_TMVA20170223R0_7_qq_btag2_pre
-pare2-eps-converted-to.pdf, id=32705, 571.13374pt x 480.79625pt>
+pare2-eps-converted-to.pdf, id=32713, 571.13374pt x 480.79625pt>
 File: doubleHiggs/jetPairing/nR0_7_6jet_btag2_Higgs1_M_TMVA20170223R0_7_qq_btag
 2_prepare2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -5000,7 +5008,7 @@ repare_bkg2.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <doubleHiggs/jetPairing/nR0_7_6jet_btag2_Higgs1_M_TMVA20170223R0_7_qq_btag2_pre
-pare_bkg2-eps-converted-to.pdf, id=32706, 571.13374pt x 480.79625pt>
+pare_bkg2-eps-converted-to.pdf, id=32714, 571.13374pt x 480.79625pt>
 File: doubleHiggs/jetPairing/nR0_7_6jet_btag2_Higgs1_M_TMVA20170223R0_7_qq_btag
 2_prepare_bkg2-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -5011,7 +5019,7 @@ Package pdftex.def Info: doubleHiggs/jetPairing/nR0_7_6jet_btag2_Higgs1_M_TMVA2
 (pdftex.def)             Requested size: 201.63182pt x 169.74113pt.
 
 <doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_prep
-are.pdf, id=32708, 569.12625pt x 480.79625pt>
+are.pdf, id=32716, 569.12625pt x 480.79625pt>
 File: doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2
 _prepare.pdf Graphic file (type pdf)
 
@@ -5026,7 +5034,7 @@ ed-to.pdf> <E:/user/my documents/University/2016-2017/boruoXuThesis/doubleHiggs
 /jetPairing/nR0_7_6jet_btag2_Higgs1_M_TMVA20170223R0_7_qq_btag2_prepare_bkg2-ep
 s-converted-to.pdf>] [162]
 <doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_pre
-pare.pdf, id=32744, 569.12625pt x 480.79625pt>
+pare.pdf, id=32752, 569.12625pt x 480.79625pt>
 File: doubleHiggs/preSel/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag
 2_prepare.pdf Graphic file (type pdf)
 
@@ -5242,7 +5250,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [169]
 <doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_M_TMVA20161208R0_7_qq_btag2_prepar
-e_testNew2.pdf, id=32879, 569.12625pt x 480.79625pt>
+e_testNew2.pdf, id=32887, 569.12625pt x 480.79625pt>
 File: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_M_TMVA20161208R0_7_qq_btag2_p
 repare_testNew2.pdf Graphic file (type pdf)
 
@@ -5253,7 +5261,7 @@ Package pdftex.def Info: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_M_TMVA2016
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs2_M_TMVA20161208R0_7_qq_btag2_prepar
-e_testNew2.pdf, id=32880, 569.12625pt x 480.79625pt>
+e_testNew2.pdf, id=32888, 569.12625pt x 480.79625pt>
 File: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs2_M_TMVA20161208R0_7_qq_btag2_p
 repare_testNew2.pdf Graphic file (type pdf)
 
@@ -5264,7 +5272,7 @@ Package pdftex.def Info: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs2_M_TMVA2016
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_acolinearity_TMVA20161208R0_7_qq_b
-tag2_prepare_testNew2.pdf, id=32881, 569.12625pt x 480.79625pt>
+tag2_prepare_testNew2.pdf, id=32889, 569.12625pt x 480.79625pt>
 File: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_acolinearity_TMVA20161208R0_7
 _qq_btag2_prepare_testNew2.pdf Graphic file (type pdf)
 
@@ -5275,7 +5283,7 @@ ty_TMVA20161208R0_7_qq_btag2_prepare_testNew2.pdf used on input line 1242.
 (pdftex.def)             Requested size: 201.63182pt x 170.33537pt.
 
 <doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_spin_TMVA20161208R0_7_qq_btag2_pre
-pare_testNew2.pdf, id=32882, 569.12625pt x 480.79625pt>
+pare_testNew2.pdf, id=32890, 569.12625pt x 480.79625pt>
 File: doubleHiggs/1400var/nR0_7_6jet_btag2_Higgs1_spin_TMVA20161208R0_7_qq_btag
 2_prepare_testNew2.pdf Graphic file (type pdf)
 
@@ -5344,7 +5352,7 @@ verted-to.pdf>
 (epstopdf)             \includegraphics on input line 1470.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/preSel/mutual6025bbWW2-eps-converted-to.pdf, id=33089, 569.12625pt
+<doubleHiggs/preSel/mutual6025bbWW2-eps-converted-to.pdf, id=33097, 569.12625pt
  x 480.79625pt>
 File: doubleHiggs/preSel/mutual6025bbWW2-eps-converted-to.pdf Graphic file (typ
 e pdf)
@@ -5364,7 +5372,7 @@ verted-to.pdf>
 (epstopdf)             \includegraphics on input line 1475.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/preSel/mutual6025bbbb2-eps-converted-to.pdf, id=33090, 569.12625pt
+<doubleHiggs/preSel/mutual6025bbbb2-eps-converted-to.pdf, id=33098, 569.12625pt
  x 480.79625pt>
 File: doubleHiggs/preSel/mutual6025bbbb2-eps-converted-to.pdf Graphic file (typ
 e pdf)
@@ -5375,7 +5383,7 @@ f used on input line 1475.
 
 [175]
 <doubleHiggs/preSel/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag2
-_prepare.pdf, id=33099, 569.12625pt x 480.79625pt>
+_prepare.pdf, id=33107, 569.12625pt x 480.79625pt>
 File: doubleHiggs/preSel/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_
 btag2_prepare.pdf Graphic file (type pdf)
 
@@ -5386,7 +5394,7 @@ Package pdftex.def Info: doubleHiggs/preSel/tR0_7_6jet_btag2_Higgs_all_M_TMVA20
 (pdftex.def)             Requested size: 380.86543pt x 321.76498pt.
 
 <doubleHiggs/preSel/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prepa
-re.pdf, id=33100, 569.12625pt x 480.79625pt>
+re.pdf, id=33108, 569.12625pt x 480.79625pt>
 File: doubleHiggs/preSel/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_
 prepare.pdf Graphic file (type pdf)
 
@@ -5466,7 +5474,7 @@ relation-eps-converted-to.pdf doubleHiggs/extraction/oneDrelation.eps>
 (epstopdf)             \includegraphics on input line 1830.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/oneDrelation-eps-converted-to.pdf, id=33253, 213.79875p
+<doubleHiggs/extraction/oneDrelation-eps-converted-to.pdf, id=33261, 213.79875p
 t x 201.75375pt>
 File: doubleHiggs/extraction/oneDrelation-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -5490,7 +5498,7 @@ sSectionNew3-eps-converted-to.pdf doubleHiggs/extraction/crossSectionNew3.eps>
 (epstopdf)             \includegraphics on input line 1894.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/crossSectionNew3-eps-converted-to.pdf, id=33290, 492.84
+<doubleHiggs/extraction/crossSectionNew3-eps-converted-to.pdf, id=33298, 492.84
 125pt x 399.4925pt>
 File: doubleHiggs/extraction/crossSectionNew3-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -5513,7 +5521,7 @@ ificanceBono4-eps-converted-to.pdf doubleHiggs/extraction/SignificanceBono4.eps
 (epstopdf)             \includegraphics on input line 1909.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/SignificanceBono4-eps-converted-to.pdf, id=33292, 491.8
+<doubleHiggs/extraction/SignificanceBono4-eps-converted-to.pdf, id=33300, 491.8
 375pt x 399.4925pt>
 File: doubleHiggs/extraction/SignificanceBono4-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -5546,7 +5554,7 @@ T3.eps>
 (epstopdf)             \includegraphics on input line 1935.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/new/chi2Bono4mhh2HT3-eps-converted-to.pdf, id=33318, 50
+<doubleHiggs/extraction/new/chi2Bono4mhh2HT3-eps-converted-to.pdf, id=33326, 50
 2.87875pt x 399.4925pt>
 File: doubleHiggs/extraction/new/chi2Bono4mhh2HT3-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -5569,7 +5577,7 @@ T3.eps>
 (epstopdf)             \includegraphics on input line 1940.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/new/chi2Rosa4mhh2HT3-eps-converted-to.pdf, id=33319, 50
+<doubleHiggs/extraction/new/chi2Rosa4mhh2HT3-eps-converted-to.pdf, id=33327, 50
 6.89375pt x 399.4925pt>
 File: doubleHiggs/extraction/new/chi2Rosa4mhh2HT3-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -5593,7 +5601,7 @@ ineAve4mhh2HT3.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <doubleHiggs/extraction/new/chi2CombineAve4mhh2HT3-eps-converted-to.pdf, id=333
-22, 506.89375pt x 399.4925pt>
+30, 506.89375pt x 399.4925pt>
 File: doubleHiggs/extraction/new/chi2CombineAve4mhh2HT3-eps-converted-to.pdf Gr
 aphic file (type pdf)
 
@@ -5624,7 +5632,7 @@ neAve4.eps>
 (epstopdf)             \includegraphics on input line 1972.
 Package epstopdf Info: Output file is already uptodate.
 
-<doubleHiggs/extraction/new/contourCOmbineAve4-eps-converted-to.pdf, id=33358, 
+<doubleHiggs/extraction/new/contourCOmbineAve4-eps-converted-to.pdf, id=33366, 
 449.68pt x 399.4925pt>
 File: doubleHiggs/extraction/new/contourCOmbineAve4-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -5800,7 +5808,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  19240 strings out of 494045
- 310335 string characters out of 3154005
+ 310345 string characters out of 3154005
  594796 words of memory out of 3000000
  20887 multiletter control sequences out of 15000+200000
  163523 words of font info for 301 fonts, out of 3000000 for 9000
@@ -5828,9 +5836,9 @@ b><D:/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><D:/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmsy8.pfb><D:/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><D:/MiKTeX 2.9
 /fonts/type1/public/amsfonts/symbols/msam10.pfb><D:/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (228 pages, 17081471 bytes).
+Output written on main.pdf (228 pages, 17089822 bytes).
 PDF statistics:
- 33746 PDF objects out of 38293 (max. 8388607)
+ 33754 PDF objects out of 38293 (max. 8388607)
  731 named destinations out of 1000 (max. 500000)
  38270 words of extra memory for PDF output out of 42996 (max. 10000000)
 

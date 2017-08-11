@@ -892,7 +892,7 @@ The analysis starts with the event generation and simulation, followed by identi
 
 \subsection{Event generation and simulation}
 
-For this proof-of-principle study, \eeZZQQ events were generated at a centre-of-mass energy of 350\,GeV, using the \WHIZARD generator without ISR. The \TAUOLA software was used to describe the tau lepton decay with correct spin correlations of the tau decay products. The \eeZZQQ events were simulated using the \ILD detector model as described in \Chapter{chap:Reconstruction}.
+For this proof-of-principle study, \eeZZQQ events were generated at a centre-of-mass energy of 350\,GeV, using the \WHIZARD generator without ISR. \TAUOLA was used to describe the tau lepton decay with correct spin correlations of the tau decay products. The \eeZZQQ events were simulated using the \ILD detector model as described in \Chapter{chap:Reconstruction}.
 
 
 %\subsection{Analysis strategy overview}
@@ -906,10 +906,10 @@ The seven tau decay modes defined in \Section{sec:tauDecayModes} were studied: \
 \subsection{Tau decay products identification}
 \label{sec:tauHZfindTau}
 
-The \eeZZQQ final state contains two tau leptons and two quark jets. Identifying the tau decay products in \eeZZQQ events is challenging as a low multiplicity quark-jet could be topologically similar  to a tau-jet. Hence the tau decay product identification processor and the jet clustering algorithm are both used to find tau decay products. The best tau decay products should result in a well reconstructed \ZToqq. \FIGURE{fig:TauNTAevtDsp} shows an event display of a \eeZZQQ event. The two brown cones indicate the tau decay products found by the tau identification processor. The four blue cones indicate the four jets found by the jet clustering algorithm. The blue outer region shows the \HCAL ring. In this particular example, particles associated with the tau decay products found by the tau identification processor are different to the particles associated with jets found by the jet clustering algorithm.
+The \eeZZQQ final state contains two tau leptons and two quark jets. Identifying the tau decay products in \eeZZQQ events is challenging as a low multiplicity quark-jet could be topologically similar  to a tau hadronic decay. Hence the tau decay product identification processor and the jet clustering algorithm are both used to find tau decay products. \FIGURE{fig:TauNTAevtDsp} shows an event display of a \eeZZQQ event. The two brown cones indicate the tau decay products found by the tau identification processor. The four blue cones indicate the four jets found by the jet clustering algorithm. The blue outer region shows the \HCAL ring. In this particular example, particles associated with the tau decay products found by the tau identification processor are different to the particles associated with jets found by the jet clustering algorithm.
 
 %Hence the two approaches are combined to find the decay products from two tau leptons.
-
+% The best tau decay products should result in a well reconstructed \ZToqq.
 
 %For a low multiplicity tau-jet, it is beneficial to use a dedicated tau decay product identification processor. For a high multiplicity tau-jet, the jet clustering algorithm may be more suitable to find tau decay products.
 
@@ -1154,12 +1154,12 @@ This is a proof-of-principle demonstration that the generator-level pion energy 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
 \begin{subfigure}[b]{0.75\textwidth}
-  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2DMC}
+  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2DMC2}
   \caption{Generator-level  Monte Carlo particles}
   \label{fig:TauSpin2DMC}
 \end{subfigure}
 \begin{subfigure}[b]{0.75\textwidth}
-  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2Dreco}
+  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2Dreco2}
   \caption{Full detector simulation}
   \label{fig:TauSpin2Dreco}
 \end{subfigure}
