@@ -25,7 +25,7 @@ Since the tau lepton has a very short mean decay lifetime of 290\,fs \cite{Abreu
 
 %The efficiency of tau decay mode classification can be used as a benchmark for detector performance.
 
-The main challenge in the tau lepton decay modes  classification is to reconstruct and to separate spatially close photons. For  tau leptons with energies above tens of GeV, the visible decay products are often boosted.  Electromagnetic showers from photons, resulted from \Ppizero decays, often overlap each other in the \ECAL.  Reconstructing these photons as separate entities requires a good photon reconstruction. Hence the photon reconstruction algorithms described in \Chapter{chap:Photon} are used in this study.
+The main challenge in the tau lepton decay modes  classification is to reconstruct and to separate spatially close photons. For  tau leptons with energies above tens of GeVs, the visible decay products are often boosted.  Electromagnetic showers from photons, resulted from \Ppizero decays, often overlap each other in the \ECAL.  Reconstructing these photons as separate entities requires a good photon reconstruction. Hence the photon reconstruction algorithms described in \Chapter{chap:Photon} are used in this study.
 
 % and a fine \ECAL spatial resolution
 %Since the main difference in the topologies between some final states, for example \decayRhoFinalState and \decayAiPhoton final states,  is the number of photons from \Ppizero in the final state, the ability to reconstruct the photon pairs from \Ppizero as separate particles is crucial to differentiate tau decay modes.
@@ -263,7 +263,7 @@ The last pre-selection cut is to discard events with tau decay products depositi
 \section{Variables used in MVA}
 \label{sec:tauVar}
 
-The classification of different tau decays uses a MVA classifier based on twenty seven discriminant variables. These are listed in \Table{tab:tauVaraibles}. The particle ID information comes from the output of the \pandora reconstruction.
+The classification of different tau decays uses a MVA classifier based on twenty-seven discriminant variables, listed in \Table{tab:tauVaraibles}. The particle ID information comes from the output of the \pandora reconstruction.
 
 %After event reconstruction,  27 discriminative variables used in the MVA  classification  are  developed and listed in \Table{tab:tauVaraibles}. The distributions of four powerful variables for different tau decay modes are shown in \Figure{fig:tauVar}.
 
@@ -472,14 +472,14 @@ The $\chi^2$ function in \Equation{eqn:tauRho} is modified for the \decayAiPhoto
 \end{equation}
 where the \Prho mass has been replace by the \Pai mass and other variables are defined in the same way as  previously. Four photons and one \Pgpm are required for this  $\chi^2$ function. To resolve the degeneracy between two photon pairs,  the requirement of $\absOf{ m_{\Pphoton_1\Pphoton_2} - m_{\Ppizero}} < \absOf{ m_{\Pphoton_3\Pphoton_4} - m_{\Ppizero}}$ is imposed.
 
-The particle ID of charged pions and photons comes from the output of the \pandora reconstruction. If there are at least four photons in a decay, combinations of four photons are iterated and the combination with the smallest value of $\chi^2$ is chosen. If there are three photons in a decay, the last term in the \Equation{eqn:tauA1}  is dropped and the $\chi^{2}$ function becomes:
+If there are at least four photons in a decay, combinations of four photons are iterated and the combination with the smallest value of $\chi^2$ is chosen. If there are three photons in a decay, the last term in the \Equation{eqn:tauA1}  is dropped and the $\chi^{2}$ function becomes:
 \begin{equation}
 \chi^{2} = {\left(\frac{m_{tot} -  m_{\Pai}}{\sigma_{\Pai}}\right)}^{2} + {\left(\frac{m_{\Pphoton_1 \Pphoton_2} -  m_{\Ppizero}}{\sigma_{\Ppizero}}\right)}^{2}  \,,
 \end{equation}
-where $m_{tot}$ is the invariant mass of the charged pion and three photons and $m_{\Pphoton_1 \Pphoton_2}$ is the invariant mass of two photons. The combination of two photons are iterated.
+where $m_{tot}$ is the invariant mass of the charged pion and three photons and $m_{\Pphoton_1 \Pphoton_2}$ is the invariant mass of two photons. The combinations of photons are iterated.
 
 
-If there are two photons in a decay, either the reconstruction fails to reconstruct one photon pair or the reconstruction fails to reconstruct both photon pair. Hence two $\chi^2$ functions are tried and the one with the smallest value is chosen. The first function is
+If there are two photons in a decay, either the reconstruction fails to reconstruct one photon pair or the reconstruction fails to reconstruct both photon pair. Hence two $\chi^2$ functions are used and the one with the smallest value is chosen. The first function is
 \begin{equation}
 \chi^{2} = {\left(\frac{m_{tot} -  m_{\Pai}}{\sigma_{\Pai}}\right)}^{2} + {\left(\frac{m_{\Pphoton_1 \Pphoton_2} -  m_{\Ppizero}}{\sigma_{\Ppizero}}\right)}^{2}  \,,
 \end{equation}
@@ -599,12 +599,12 @@ End node output & yes/no \\
 \section{Tau decay mode classification efficiency}
 \label{sec:tauClassificationEff}
 
-Two million \eeToTauTau events at a centre-of-mass energy of 100\,GeV were used in the tau decay modes classification. For tau decays passing pre-selection cuts, the correct classification and misidentification  efficiencies for the seven tau decay modes are shown in \Table{tab:TauSelExample}. The correct classification efficiencies, in bold numbers,  are defined as:
+Two million \eeToTauTau events at a centre-of-mass energy of 100\,GeV were used in the tau decay modes classification. For tau decays passing pre-selection cuts, the correct classification and misidentification  efficiencies for the seven tau decay modes are shown in \Table{tab:TauSelExample}. The correct classification efficiencies  (bold numbers in \Table{tab:TauSelExample})  are defined as:
 \begin{equation}
 \varepsilon_i = \frac{N^{correct}_i}{N^{MC}_i},
 \label{eqn:tauEff}
 \end{equation}
-where $N^{correct}_i$ is the number of correctly classified tau decays for tau decay mode $i$ and the $N^{MC}_i$ is the total number of true tau decays of tau decay mode $i$.
+where $N^{correct}_i$ is the number of correctly classified tau decays for decay mode $i$ and the $N^{MC}_i$ is the total number of true tau decays for decay mode $i$.
 %For example, 99.8\% events of true \decayElectronShort decay mode are reconstructed correctly.
 
 
@@ -721,7 +721,7 @@ where $B_{i}$ is the branching fraction of the tau  hadronic decay mode $i$; $\v
 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
-\includegraphics[width=.85\textwidth]{tau/plots3/hadronicEff.pdf}
+\includegraphics[width=.85\textwidth]{tau/plots3/hadronicEff2}
 \caption[The tau hadronic decay efficiency as a function of  the \ECAL cell sizes at different \sqrtS with the \ILD detector model.]
 {The weighted average tau hadronic decay correct classification efficiency, \tauHad, as a function of  the \ECAL cell sizes for four different centre-of-mass energies. The blue, orange, green, and red points  show \tauHad at \sqrtS = 100, 200, 500, and 1000\,GeV, respectively.}
 \label{fig:TauHadronicEfficiency}
