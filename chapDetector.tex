@@ -361,7 +361,7 @@ significant challenge, including the need for quiescent currents.
 
 \subsection{Vertex Detector}
 
-The pixel-vertex detector (\VTX) needs to be close to the interaction point to reconstruct secondary vertices. As the \TPC is the main tracking  detector, the \VTX mainly measures the impact parameter of tracks. \FIGURE{fig:detectorILDVXT} shows the structure of the vertex detector.  The structure is of three, nearly cylindrical, concentric layers of double-sided ladders. Each ladder contains pixel sensors on both sides at 2\,mm separation between two layers. This results in six measured  positions for each charged particle traversing the detector. The first double layer is half the length of the other two, to avoid the high occupancy region of direct low momentum hits from the incoherent pair background. The baseline geometry of the vertex detector can be found in \Table{tab:detectorVertex}.  The radii covered by the detector range from 16 mm to 60 mm.
+The pixel-vertex detector (\VTX) needs to be close to the interaction point to reconstruct secondary vertices. As the \TPC is the main tracking  detector, the \VTX mainly measures the impact parameter of tracks. \FIGURE{fig:detectorILDVXT} shows the structure of the vertex detector.  The structure is of three, nearly cylindrical, concentric layers of double-sided ladders. Each ladder contains pixel sensors on both sides at 2\,mm separation between two layers. This results in six measured  positions for each charged particle traversing the detector. The first double layer is of half the length of the other two, to avoid the high occupancy region of direct low-momentum hits from the incoherent pair background. The baseline geometry of the vertex detector can be found in \Table{tab:detectorVertex}.  The radii covered by the detector range from 16 mm to 60 mm.
 
 
 \begin{figure}[tbph]
@@ -369,7 +369,7 @@ The pixel-vertex detector (\VTX) needs to be close to the interaction point to r
     \includegraphics[width=0.85\textwidth]{{{ILD/ILD_VTX}}}
 \caption
 {
-Structure of \ILD vertex detector, taken from \cite{Behnke:2013lya}.}
+Structure of the \ILD vertex detector, taken from \cite{Behnke:2013lya}.}
 \label{fig:detectorILDVXT}
 \end{figure}
 
@@ -377,25 +377,25 @@ Structure of \ILD vertex detector, taken from \cite{Behnke:2013lya}.}
 \begin{table}[htbp]
 \centering
 \smallskip
-\begin{tabular}{l  r r r r r }
+\begin{tabular}{l  r r r }
 \hline
 \hline
- &  R & \absOf{z} & $\absOf{\cos\parenths{\theta}}$ & $\sigma$ & Readout time \\
+ &  R & \absOf{z} & $\absOf{\cos\parenths{\theta}}$ \\ %& $\sigma$ & Readout time \\
 \hline
-Layer 1 & 16\,mm & 62.5\,mm & 0.97 & 2.8\,$\mu$m & 50 \,$\mu$s \\
-Layer 2 & 18\,mm & 62.5\,mm & 0.96 & 6\,$\mu$m & 10 \,$\mu$s \\
+Layer 1 & 16\,mm & 62.5\,mm & 0.97 \\%& 2.8\,$\mu$m & 50 \,$\mu$s \\
+Layer 2 & 18\,mm & 62.5\,mm & 0.96 \\%& 6\,$\mu$m & 10 \,$\mu$s \\
 \hline
-Layer 3 & 37\,mm & 125\,mm & 0.96 & 4\,$\mu$m & 100 \,$\mu$s \\
-Layer 4 & 39\,mm & 125\,mm & 0.95 & 4\,$\mu$m & 100 \,$\mu$s \\
+Layer 3 & 37\,mm & 125\,mm & 0.96 \\%& 4\,$\mu$m & 100 \,$\mu$s \\
+Layer 4 & 39\,mm & 125\,mm & 0.95 \\%& 4\,$\mu$m & 100 \,$\mu$s \\
 \hline
-Layer 5 & 58\,mm & 125\,mm & 0.91 & 4\,$\mu$m & 100 \,$\mu$s \\
-Layer 6 & 60\,mm & 125\,mm & 0.90 & 4\,$\mu$m & 100 \,$\mu$s \\
+Layer 5 & 58\,mm & 125\,mm & 0.91 \\%& 4\,$\mu$m & 100 \,$\mu$s \\
+Layer 6 & 60\,mm & 125\,mm & 0.90 \\%& 4\,$\mu$m & 100 \,$\mu$s \\
 \hline
 \hline
 \end{tabular}
 
 \caption
-{Key parameters for vertex detector in the \ILC. The spatial resolution ($\sigma$) and readout times are for the CMOS option. The table is adapted from \cite{Behnke:2013lya}.}
+{Key parameters for vertex detector in the \ILC.  The table is adapted from \cite{Behnke:2013lya}.} %The spatial resolution ($\sigma$) and readout times are for the CMOS option. 
 \label{tab:detectorVertex}
 \end{table}
 
@@ -403,7 +403,7 @@ Layer 6 & 60\,mm & 125\,mm & 0.90 & 4\,$\mu$m & 100 \,$\mu$s \\
 
 \subsection{Tracking Detectors}
 
-The hybrid  tracking system consists of a large time projection chamber (\TPC), a Silicon Inner Tracker (\SIT), a Silicon External Tracker (\SET) in the barrel region, a silicon end cap tracking component (\ETD) behind the endplate of the \TPC, and a silicon forward tracker (\FTD) in the forward region.  A top quadrant view of the \ILD silicon envelope system with the \TPC is shown in  \Figure{fig:detectorTrackingFull}. The \SIT, \SET, and \ETD are made up of two single-sided strip layers tilted by a small angle. The \FTD is a system of two silicon-pixel disks and five silicon-strip disks.   The main parameters of the silicon system and the \TPC can be found in \Table{tab:detectorTracking}.
+The hybrid  tracking system consists of a large time projection chamber (\TPC), a Silicon Inner Tracker (\SIT), a Silicon External Tracker (\SET) in the barrel region, a silicon endcap tracking component (\ETD) behind the endplate of the \TPC, and a silicon forward tracker (\FTD) in the forward region.  A top quadrant view of the \ILD silicon envelope system with the \TPC is shown in  \Figure{fig:detectorTrackingFull}. The \SIT, \SET, and \ETD are made up of two single-sided strip layers tilted by a small angle. The \FTD is a system of two silicon-pixel disks and five silicon-strip disks.   The main parameters of the silicon system and the \TPC can be found in \Table{tab:detectorTracking}.
 
 A \TPC tracking detector has several advantages: a) tracks can be measured with a large number of three-dimensional ($r,\phi,z$) spatial points; b) the continuous tracking allows precise reconstruction of tracks; and c) the \TPC uses a minimum amount of material, which minimises the photon to electron pair conversion.
 
@@ -507,7 +507,7 @@ The particle flow paradigm has a large impact on the \ECAL design. In addition t
 
 %These requirements can be fulfilled with an excellent three-dimensional granular \ECAL.
 
-From test beam data and simulation studies \cite{Ramilli:2012dva,Adloff:2009zz,Adloff:2013jqa}, a sampling calorimeter with a longitudinal segmentation below one radiation length and the transverse segmentation respectively below one Moli\`{e}re radius  is required. A compact design is realised with tungsten as the absorber material and silicon pad diodes as the active material. A cross section of an \ECAL layer is shown in \Figure{fig:detectorILDECAL}. Tungsten is a dense material with a large ratio of interaction length to radiation length. A small radiation length will promote the start of the electromagnetic shower earlier in the calorimeter, whilst a large interaction length will reduce the fraction of hadronic showers starting in the \ECAL.
+From test beam data and simulation studies \cite{Ramilli:2012dva,Adloff:2009zz,Adloff:2013jqa}, a sampling calorimeter with a longitudinal segmentation below one radiation length and the transverse segmentation below one Moli\`{e}re radius  is required. A compact design is realised with tungsten as the absorber material and silicon pad diodes as the active material. A cross section of an \ECAL layer is shown in \Figure{fig:detectorILDECAL}. Tungsten is a dense material with a large ratio of interaction length to radiation length. A small radiation length will promote the start of the electromagnetic shower earlier in the calorimeter, whilst a large interaction length will reduce the fraction of hadronic showers starting in the \ECAL.
 
 The \ECAL, which is about 20\,cm thick, has  30 longitudinal layers providing about 24 radiation lengths. The first 20 layers use 2.1\,mm thick absorber plates and the last 10 layers have 4.2\,mm   thick absorber plates.
 
@@ -612,7 +612,7 @@ The principal role of the \HCAL is to separate neutral hadron showers from other
 For the absorber material, stainless steel is chosen for mechanical and calorimetric reasons. Steel allows a self-supporting structure without auxiliary supports. At the same time, iron has a moderate ratio of hadronic interaction length ($\lambda_I = 17$\,cm) to electromagnetic radiation length ($X_0=1.8$\,cm), which allows a fine longitudinal sampling in $X_0$ with a reasonable number of layers in a given total hadronic absorption length.  The longitudinal system, including the \ECAL, provides about 6 interaction lengths, which is sufficient to contain the hadronic showers.
 
 
-The scintillator tiles provide both energy and position measurement. The transverse segmentation, chosen by optimisation studies \cite{Thomson:2009rp} is about 3$\times$3\,\uprightMath{cm^2}. This level of segmentation is sufficient to meet the requirement of the particle flow \cite{Behnke:2013lya}.
+The scintillator tiles provide both energy and position measurements. The transverse segmentation, chosen by optimisation studies \cite{Thomson:2009rp} is about 3$\times$3\,\uprightMath{cm^2}. This level of segmentation is sufficient to meet the requirement of the particle flow \cite{Behnke:2013lya}.
 
 %  The requirement of three dimensional granularity in transverse and longitudinal directions is satisfied by a sampling calorimeter with steel absorber and scintillator tiles as active medium.
 
@@ -893,7 +893,7 @@ The \ILD \ECAL design was optimised as a function of the transverse cell sizes, 
 
 \subsection{Hadronic calorimeter optimisation}
 
-For the \ILD \HCAL design, the transverse cell sizes has been optimised using  the  jet energy resolution as the metric. The jet energy resolutions as a function of \HCAL scintillator square cell sizes for foure different jet energies are shown in \Figure{fig:detectorHCALoptimise}. There is no substantial gain in the jet energy resolution for cell sizes below 3\,cm. However, the jet energy resolution degrades for cell sizes above 3\,cm. Hence 3$\times$3\,\uprightMath{cm^2} scintillator cell size is chosen for the \HCAL design.
+For the \ILD \HCAL design, the transverse cell sizes has been optimised using  the  jet energy resolution as the metric. The jet energy resolutions as a function of \HCAL scintillator square cell sizes for four different jet energies are shown in \Figure{fig:detectorHCALoptimise}. There is no substantial gain in the jet energy resolution for cell sizes below 3\,cm. However, the jet energy resolution degrades for cell sizes above 3\,cm. Hence 3$\times$3\,\uprightMath{cm^2} scintillator cell size is chosen for the \HCAL design.
 
 
 \begin{figure}[tbph]
@@ -951,7 +951,7 @@ There are two detector concepts studied in the \CLIC conceptual design report \c
 \centering
     \includegraphics[width=0.8\textwidth]{ILD/CLIC_ILD}
 \caption
-{The longitudinal cross section of top quadrant the \CLICILD detector concept, taken from and \cite{Linssen:2012hp}. From interaction point (\IP) outwards, there is: a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layers; highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL);  forward calorimeters (\FCAL); a superconducting solenoid; and muon chambers embedded within the iron return yokes.}
+{The longitudinal cross section of top quadrant of the \CLICILD detector concept, taken from \cite{Linssen:2012hp}. From interaction point (\IP) outwards, there is: a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layers; highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL);  forward calorimeters (\FCAL); a superconducting solenoid; and muon chambers embedded within the iron return yokes.}
     \label{fig:CLIC_ILD}
 \end{figure}
 
