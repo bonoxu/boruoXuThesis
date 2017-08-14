@@ -398,6 +398,10 @@ paren " " swap$ *
 }
 FUNCTION {format.book.entry}
 { format.btitle
+format.bvolume *
+format.number.series *
+format.edition *
+format.pub.addr.date *
 }
 FUNCTION {format.inbook.entry}
 { format.book.entry
@@ -550,7 +554,7 @@ new.block
 format.title "title" output.check
 crossref missing$
 { journal field.or.null
-format.vol.num.pages 
+format.vol.num.pages
 format.date empty$
 'skip$
 { duplicate$ empty$
@@ -588,7 +592,7 @@ crossref missing$
 { new.block
 format.book.crossref output.nonnull
 }
-if$    
+if$
 eprint output
 new.block
 note output
