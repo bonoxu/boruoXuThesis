@@ -213,9 +213,11 @@ Several different \Marlin processors are used to reconstruct tracks: \textsc{Clu
   \item An initial clustering step group calorimeter hits into clusters. This step is discussed further in \Section{sec:pandoraConeCluster}, since it is used in photon reconstruction  algorithms described in \CHAPTER{chap:Photon};
   \item Topological cluster association merges clusters based on clear topological signatures. Merging signatures include combining track segments, connecting track segments with gaps, connecting track segments to hadronic showers, and merging clusters when they are within close proximity.
   \item Track$-$cluster  matching step associates clusters to tracks obtained from the tracking detectors;
-  \item Re-clustering step refine the track$-$cluster association based on the information from the momentum of the track and the energy of the cluster, which is important for events with a dense jet environment and jets above 50\,GeV;
+  \item Re-clustering step  improves the compatibility of the cluster energy and the associated track momentum on a statistical basis. This step is important for events with a dense jet environment and jets above 50\,GeV;
   \item Fragment removal step  focuses on merging clusters that are likely to be fragments of other particles. Algorithms for photon fragment merging  are described in \Chapter{chap:Photon};
-  \item Particle Flow Object creation is the last step of the \pandora reconstruction, which creates the output objects, Particle Flow Objects (PFOs). The PFOs contain clusters and associated tracks and calorimeter hits.
+  \item Particle Flow Object creation is the last step of the \pandora reconstruction. It creates the output objects, Particle Flow Objects (PFOs). The reconstructed particles, PFOs, are the basis of all subsequent analyses.
+  
+  %The PFOs contain clusters and associated tracks and calorimeter hits.
 \end{itemize}
 
 \begin{comment}
@@ -253,10 +255,12 @@ Dedicated particle identification algorithms find calorimeter hits associated wi
 
 %Dedicated particle identification algorithms aim to identify muons and photons before associating calorimeter hits to tracks.
 \end{comment}
-\subsubsection{Clustering}
+\subsubsection{Initial clustering}
 \label{sec:pandoraConeCluster}
 
-This section discusses the clustering algorithm used in \pandora. Illustrated in \Figure{fig:pandoraConeClustering}, a cone based clustering algorithm identifies a seed (yellow dot). The algorithm then forms a cone to include hits that are within a specified opening angle to the direction of the cone. Afterwards the cone with the associated hits forms the cluster.
+
+
+%This section discusses the clustering algorithm used in \pandora. Illustrated in \Figure{fig:pandoraConeClustering}, a cone based clustering algorithm identifies a seed (yellow dot). The algorithm then forms a cone to include hits that are within a specified opening angle to the direction of the cone. Afterwards the cone with the associated hits forms the cluster.
 
 
  %because the clustering algorithm is used in photon reconstruction  algorithms described in \CHAPTER{chap:Photon}.
@@ -267,15 +271,23 @@ This section discusses the clustering algorithm used in \pandora. Illustrated in
 
 %these cone clusters have similar direction and energy to the originated particle. Therefore it is applicable to use cone based clustering algorithms for building clusters.
 
+
+
+In \pandora, cone-based clustering algorithms are used to group calorimeter hits into clusters, illustrate in  \Figure{fig:pandoraConeClustering}. The cone-based clustering algorithm is used because the direction of the particle flow is largely unchanged from the original particle. The seed for the cone clustering can be a projection of a track onto the front of the \ECAL, and the initial cone direction is the direction of the track projection. Alternatively, the seed can be a calorimeter hit, and the initial cone direction is the direction from the \IP to the calorimeter hit. Afterwards, a cone with a specified opening angle is formed around the direction of the seed. The building of the cone is iterated from the inner layer of the \ECAL to the outer layer. At each layer, possible associations  with the cone are made by considering calorimeters hits in previous layers and the same layer. If a calorimeter hit is not associated with any cone, the hit is used to seed a new cluster.
+
+%The seed for the cone clustering can be a projection of a track onto the front of the \ECAL, or a calorimeter hit.  The initial cone direction is taken as the direction of the seed, which is the direction of the track projection , or the direction from the \IP to the calorimeter hit seed.
+
+
+
+
 \begin{figure}[tbph]
 \centering
 {\includegraphics[width=0.5\textwidth]{pandora/coneClustering}}%
-\caption{Illustration of a cone based clustering algorithm, taken from \cite{Marshall:pandoraLC}}
+\caption{Illustration of a cone-based clustering algorithm, taken from \cite{Marshall:pandoraLC}}
 \label{fig:pandoraConeClustering}
 \end{figure}
 
 
-In \pandora, cone-based clustering algorithms are used to group calorimeter hits into clusters. The cone-based clustering algorithm is used in \pandora reconstruction because the direction of the particle flow is largely unchanged from the originated particle, irrespective of  the particle flow being an electromagnetic shower, QCD radiation, or hadronisation. The seed for the cone clustering is typically the projection of a track onto the front of the \ECAL.  The initial cone direction is typically taken as the direction of the seed. Afterwards, a cone with a specified opening angle will be formed around the direction of the seed. The building of the cone is iterated from the inner layer of the \ECAL to the outer layer. At each layer, possible associations  with the cone are made by considering calorimeters hits in previous layers and the same layer. If a calorimeter hit is not associated with the cone, the hit is used to seed a new cluster.
 
 %The output \clusters are further processed, merged, or split based on their topological properties.
 %FIGURE{fig:pandoraConeClustering2} illustrates the cone-based clustering algorithm used in the \pandora reconstruction.
@@ -361,24 +373,22 @@ The last stage of the reconstruction is to create the output objects, Particle F
 %There are a few  simulation and reconstruction issues specific to the \CLIC, which affect the analysis in \Chapter{chap:DoubleHiggs}. One issue is that the luminosity spectrum for  interactions with photon from Beamstrahlung is different to the luminosity spectrum of electron-positron interactions. A solution is presented in \Section{sec:pandoraCLUClumi} to correct for the differences. Another issue is that there is a large amount of beam induced background in the \CLIC environment, which needs to be suppressed before physics analyses. The background suppression is described in \Section{sec:pandoraggHad}. Lastly simulated masses of particles are given in \Section{sec:pandoraCLICsimMass}.
 
 %One issue is that the event reconstruction does not include calorimeters hits in the forward calorimeters due to computational reasons. Instead, a fast simulation using MC particles is used and details are laid out in \Section{sec:doubleHiggsForwardElectron}.
+The analysis  \Chapter{chap:DoubleHiggs} is performed for the \CLICILD detector, where the \CLIC beam induce background must be considered. The output of the \pandora is a list of reconstructed particles. Two packages have been developed to suppress the background from pile up of \ggHad: \TrackSelector and \PFOSelector \cite{Marshall:2012ry}.
+
+The \TrackSelector \cite{Marshall:2012ry} package  removes poor quality and fake tracks that are  likely to be from the beam induced background. It examines the number of track hits in individual tracking subdetectors and imposes track-quality cuts. It also places a cut on the arrival time of the track onto the front of the \ECAL. If the arrival time of the track onto the front of the \ECAL, using the helical fit of the track trajectory, differs more than 50\,ns from using a straight line fit, the track will be rejected.
 
 
-Following the discussion on \CLIC beam induced background,  two packages have been developed to suppress \ggHad backgrounds: \TrackSelector and \PFOSelector \cite{Marshall:2012ry}.
-
-\TrackSelector \cite{Marshall:2012ry} package  removes poor quality and fake tracks that are  likely from the beam induced background. It examines the number of track hits in individual tracking subdetectors and places a track-quality cut. It also places a cut on the arrival time of the track onto the front of the \ECAL. If the arrival time of the track onto the front of the \ECAL using the helical fit of the track differs more than 50\,ns from using a straight line fit, the track will be rejected.
-
-
-\PFOSelector \cite{Marshall:2012ry} package discards PFOs that are originated from the beam induced background from the event reconstruction, based on the transverse momentum (\pT) and time information of the PFOs. The PFOs from \ggHad often have low \pT and are distributed in time across the reconstruction integration timing window. In contrast, the PFOs from physics processes have a range of \pT, and have times close to the time of the brunch crossing that contains the physics event.
+The \PFOSelector \cite{Marshall:2012ry} package discards reconstructed particles that are likely to be from the beam induced background from the event reconstruction, based on the transverse momentum (\pT) and time information of the  reconstructed particles. The  reconstructed particles from \ggHad often have low \pT and are distributed in time across the 10\,ns reconstruction integration timing window. In contrast, the PFOs from physics processes have a range of \pT, and have times close to the time of the brunch crossing that contains the even, which is determined by the high-level software trigger.
 
 %By utilising the high spatial resolution from the high granular calorimeter, individual PFOs can be tracked and reconstructed.
 
  \PFOSelector uses different \pT and timing cuts for the central part of the detector and for the forward part of the detector. \PFOSelector also uses different \pT and timing cuts for different types of particles: photons, neutral PFOs, and charged PFOs.
 
-Three configurations of these cuts are developed: ``loose'', ``normal'', and ``tight'' PFO selections. As the name suggested, ``loose'' PFO selection corresponds to a looser cut of \pT and time, preserving PFOs with a larger range of \pT and a larger range of  times than the ``tight'' PFO selection.
+Three configurations of these cuts were developed: ``loose'', ``normal'', and ``tight'' PFO selections. As the name suggested, ``loose'' PFO selection corresponds to a looser cut of \pT and time, preserving PFOs with a larger range of \pT and a larger range of  times than the ``tight'' PFO selection.
 
 %The optimal configuration of the PFO selection to suppress the beam induced background depends on the centre-of-mass energy of the collision and the physics process to study.
 
-\FIGURE{fig:pandoraEvtDisplayggHad} shows the effect of the background suppression   with the tight \PFO selection.  \FIGURE{fig:pandoraEvtDisplayggHad1} shows reconstructed particles  in a simulated \HepProcess{\Pep\Pem \to \PHiggs\PHiggs \to \Ptop\APbottom\Pbottom\APtop} event which are integrated over a time window of 10\,ns (100\,ns in \HCAL barrel) in the \CLICILD detector model, with 60 bunch crossings of \ggHad background overlaid. The effect of applying tight \PFO selection cuts is shown in \Figure{fig:pandoraEvtDisplayggHad2}. The energy deposited in the detector by the background is reduced from 1.2\,TeV to the level of 100\,GeV.
+\FIGURE{fig:pandoraEvtDisplayggHad} shows the effect of the background suppression   with the tight \PFO selection.  \FIGURE{fig:pandoraEvtDisplayggHad1} shows reconstructed particles  in a simulated \HepProcess{\Pep\Pem \to \PHiggs\PHiggs \to \Ptop\APbottom\Pbottom\APtop} event  in the \CLICILD detector model, assuming an integration  time window of 10\,ns (100\,ns in \HCAL barrel), with 60 bunch crossings of \ggHad background overlaid. 60 bunch crossings corresponds to an integration time window of 30\,ns assuming a \CLIC beam structure, which is sufficient to account for main effect of the background.  The effect of applying tight \PFO selection cuts is shown in \Figure{fig:pandoraEvtDisplayggHad2}. The energy deposited in the detector by the background is reduced from 1.2\,TeV to the level of 100\,GeV.
 
 
 \begin{figure}[tbph]
@@ -394,7 +404,7 @@ Three configurations of these cuts are developed: ``loose'', ``normal'', and ``t
     \label{fig:pandoraEvtDisplayggHad2}
   \end{subfigure}
 \caption[Effect of the suppression of the background with the tight \PFO selection.]
-{Reconstructed particles  in a simulated \HepProcess{\Pep\Pem \to \PHiggs\PHiggs \to \Ptop\APbottom\Pbottom\APtop} event, integrated over a time window of 10\,ns (100 \,ns in \HCAL barrel) in the \CLICILD detector model, with 60 bunch crossings of \ggHad background overlaid in a). The effect of applying tight \PFO section cuts is shown in b). The energy deposited in the detector by the background is reduced from 1.2\,TeV to the level of 100\,GeV. Figures are taken from \cite{Marshall:2012ry}.}
+{Reconstructed particles  in a simulated \HepProcess{\Pep\Pem \to \PHiggs\PHiggs \to \Ptop\APbottom\Pbottom\APtop} event, integrated over a time window of 10\,ns (100\,ns in \HCAL barrel) in the \CLICILD detector model, with 60 bunch crossings of \ggHad background overlaid in a). The effect of applying tight \PFO section cuts is shown in b). The energy deposited in the detector by the background is reduced from 1.2\,TeV to the level of 100\,GeV. Figures are taken from \cite{Marshall:2012ry}.}
 \label{fig:pandoraEvtDisplayggHad}
 \end{figure}
 
@@ -406,7 +416,11 @@ Three configurations of these cuts are developed: ``loose'', ``normal'', and ``t
 
 \subsection{Monte Carlo truth linker}
 \label{sec:pandoraMCtruthLink}
-It is important to be able to associate reconstructed particles to the Monte Carlo particles, for algorithms development and  event selection optimisation. The MC truth linker processor provides the link between a MC particle and a  reconstructed calorimeter hit. From the link, the MC particle contributing the most to a reconstructed \PFO or a group of \PFOs (a jet) can be determined.
+It is important to be able to associate reconstructed particles to the Monte Carlo particles for the purpose of algorithm development and  event selection optimisation. The MC truth linker processor provides the link between a MC particle and a  reconstructed calorimeter hit. From the link, the MC particle contributing the most to a reconstructed particle  can be determined, based on highest sum of calorimeter hits of the reconstructed  particle with the link to the same MC particle. Similarly, the MC particle contributing the most to a group of reconstructed particles (a jet) can be determined.
+
+%the MC particle that links to the calorimeter hits of the reconstructed  particle.
+
+% or a group of \PFOs (a jet) can be determined.
 
 \subsection{Jet algorithms}
 \label{sec:pandoraJetAlg}
