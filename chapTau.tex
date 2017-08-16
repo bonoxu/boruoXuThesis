@@ -1,10 +1,10 @@
-\chapter{Tau Lepton Decay Modes Classification}
+\chapter{Tau Lepton Decay Mode Classification}
 \label{chap:Tau}
 
 \chapterquote{I once tried standing up on my toes to see far out in the distance, but I found that I could see much farther by climbing to a high place.}%
 {Xun Kuang, 313 BC $-$ 238 BC}%: Blackwood's Magazine May 1830
 
-The tau pair polarisation correlation from a boson decay can be used to determine statistically if the parent boson is a  scalar or a vector, and, for example, to differentiate a \PH boson from  a \PZ boson \cite{Bullock:1991my}. It can also be used to measure the CP (the product of charge conjugation and parity symmetries) of the Higgs, via \HiggsToTauTau decay process\cite{Berge:2015nua}. The CP of the Higgs can be inferred from the angle between the tau pair.
+The tau pair polarisation correlation from a boson decay can be used to determine statistically if the parent boson is a  scalar or a vector, and, for example, to differentiate a \PH boson from  a \PZ boson \cite{Bullock:1991my}. It can also be used to measure the CP (the product of charge conjugation and parity symmetries) of the Higgs, via \HiggsToTauTau decay process\cite{Berge:2015nua}.
  %The polarisation correlation of the tau pairs can be used to infer the spin of the parent boson, differentiating \HiggsToTauTau from \ZToTauTau.
 
 \begin{comment}
@@ -21,11 +21,11 @@ The two-dimensional distribution of (a) \HepProcess{\PZ \to \APtauon \Ptauon \to
 \end{figure}
 \end{comment}
 
-Since the tau lepton has a very short mean decay lifetime of 290\,fs \cite{Abreu:1991jn}, only tau decay products can be detected in the calorimeters and tracking detectors. Therefore, the performance of the calorimetric and tracking systems determines the ability to reconstruct tau lepton decay products and to classify different tau decay modes.
+Since the tau lepton has a very short mean decay lifetime of 290\,fs \cite{Abreu:1991jn}, only tau decay products can be detected in the calorimeters and tracking detectors of the \ILD detector. Therefore, the performance of the calorimetric and tracking systems determines the ability to reconstruct tau lepton decay products and to classify different tau decay modes.
 
 %The efficiency of tau decay mode classification can be used as a benchmark for detector performance.
 
-The main challenge in the tau lepton decay modes  classification is to reconstruct and to separate spatially close photons. For  tau leptons with energies above tens of GeVs, the visible decay products are often boosted.  Electromagnetic showers from photons, resulted from \Ppizero decays, often overlap each other in the \ECAL.  Reconstructing these photons as separate entities requires a good photon reconstruction. Hence the photon reconstruction algorithms described in \Chapter{chap:Photon} are used in this study.
+The main challenge in classifying the tau lepton hadronic decay modes  is the reconstruction and  separation of spatially close photons. For  tau leptons with energies above tens of GeVs, the visible decay products are often highly boosted. Consequently electromagnetic showers from photons from \Ppizero decays often overlap in the \ECAL.  Reconstructing these photons as separate entities requires a good photon reconstruction. Hence the photon reconstruction algorithms described in \Chapter{chap:Photon} are used in this study. This chapter presents a study of the classification of tau decay modes in a highly granular linear collider detector.
 
 % and a fine \ECAL spatial resolution
 %Since the main difference in the topologies between some final states, for example \decayRhoFinalState and \decayAiPhoton final states,  is the number of photons from \Ppizero in the final state, the ability to reconstruct the photon pairs from \Ppizero as separate particles is crucial to differentiate tau decay modes.
@@ -40,7 +40,7 @@ The main challenge in the tau lepton decay modes  classification is to reconstru
 %
 %The impact of the \ECAL transverse spatial resolution on the tau decay classification is demonstrated as well.
 
-This chapter presents a study of the tau decay modes classification. The ability to classify tau decay modes in a highly granular linear collider detector is used for the \ECAL optimisation study, where the impact of  the \ECAL cell sizes,  as well as the tau lepton energy, is examined.
+
 
 \begin{comment}
 \section{Overview of the chapter}
@@ -73,7 +73,7 @@ The tau decay mode classification is then utilised in \Section{sec:tauHZ} to dem
 
 %\section{Select single tau decay}  in a \ee collider for an electron-positron collider The studied tau lepton decay channel is \eeToTauTau, with a centre-of-mass energy of 100\,GeV.   predominant effect of the tau lepton decays,
 
-Two million \eeToTauTau events at a centre-of-mass energy of 100\,GeV were generated with the \WHIZARD software \cite{whizard}.  The \TAUOLA software \cite{Jadach:1993hs} was used to describe the tau lepton decays with correct spin correlations of the tau decay products. The study was focused on separating tau decay modes. Hence the beam specific effects were not generated, such as the initial state radiation and the beam induced background. The \eeToTauTau events were simulated using the \ILD detector model as described in \Chapter{chap:Reconstruction}.
+Two million \eeToTauTau events at a centre-of-mass energy of 100\,GeV were generated with  \WHIZARD \cite{whizard}.  \TAUOLA \cite{Jadach:1993hs} was used to describe the tau lepton decays with correct spin correlations of the tau decay products. The study was focused on separating tau decay modes. Hence beam effects, such as the initial state radiation and the beam induced background, were not included. The \eeToTauTau events were simulated using the \ILD detector model as described in \Chapter{chap:Reconstruction}.
 
 
 
@@ -81,24 +81,24 @@ Two million \eeToTauTau events at a centre-of-mass energy of 100\,GeV were gener
 \section{Event reconstruction}
 \label{sec:tauReco}
 
-Events were reconstructed with  \ilcsoft version v01-17-07 \cite{Gaede:82475} and \pandora version 3 \cite{Marshall:2015rfa}, using the photon reconstruction discussed in \Chapter{chap:Photon}. An event display of \eeToTauTau interaction reconstructed in the \ILD detector is shown in \Figure{fig:tauEvtDsp}. The top half of the event shows a tau lepton decaying into \decayRhoFinalState. The bottom half of the event shows a tau lepton decaying into \decayThreePionPhoton. Purple lines represent \Ppipm tracks in the tracking detectors. Purple dots represent  calorimeter hits of the \Ppipm hadronic showers in the \ECAL and the \HCAL. Yellow dots represent calorimeter hits of EM showers of photons  from \HepProcess{\Ppizero \to \Pphoton \Pphoton} process. The blue region is the transverse cross section of the \ECAL barrel part.
+Events were reconstructed with  \ilcsoft version v01-17-07 \cite{Gaede:82475} and \pandora version 3 \cite{Marshall:2015rfa}, using the photon reconstruction algorithms described in \Chapter{chap:Photon}. An event display of \eeToTauTau interaction reconstructed in the \ILD detector is shown in \Figure{fig:tauEvtDsp}. The top half of the event shows a tau lepton decaying into \decayRhoFinalState. The bottom half of the event shows a tau lepton decaying into \decayThreePionPhoton. 
 
 
 %As the study is aimed for optimisation study of the \ECAL cell sizes, t
 
 \begin{figure}[!tbph]
 \centering
-\includegraphics[width=1\textwidth]{tau/tau_evt_dsp3}
-\caption{ An event display of a simulated \eeToTauTau event using the \ILD detector model. The top half of the event shows a tau lepton decaying into \decayRhoFinalState. The bottom half of the event shows a tau lepton decaying into \decayThreePionPhoton. Purple lines represent \Ppipm tracks in the tracking detectors. Purple dots represent  calorimeter hits of the \Ppipm hadronic showers in the \ECAL and the \HCAL. Yellow dots represent calorimeter hits of EM showers of photons  from \HepProcess{\Ppizero \to \Pphoton \Pphoton}. The blue region is the transverse cross section of the \ECAL barrel part.}
+\includegraphics[width=0.7\textwidth]{tau/tau_evt_dsp3}
+\caption{ An event display of a simulated \eeToTauTau event using the \ILD detector model. The top half of the event shows a tau lepton decaying into \decayRhoFinalState. The bottom half of the event shows a tau lepton decaying into \decayThreePionPhoton. Purple lines represent \Ppipm tracks in the tracking detectors. Purple squares represent  calorimeter hits of the \Ppipm hadronic showers in the \ECAL and the \HCAL. Yellow squares represent calorimeter hits of EM showers of photons  from \HepProcess{\Ppizero \to \Pphoton \Pphoton}. The blue region is the transverse cross section of the \ECAL barrel part.}
 \label{fig:tauEvtDsp}
 \end{figure}
 
 
 
 
-\subsection{Tau major decay modes}
+\subsection{Tau  decay modes}
 
-To study the main decay modes of the tau lepton, decay modes with branching ratios above 2\% are classified. This results in seven tau lepton decay modes, which cover 92.58\,\% of the tau decay \cite{Agashe:2014kda}. The seven tau decay modes, their branching ratios, and detectable final states are  shown in \Table{tab:TauDecayMode}.
+To study the main decay modes of the tau lepton, decay modes with branching ratios above 2\% are classified, which results in seven decay modes, covering 92.58\,\% of the tau decay branching fraction \cite{Agashe:2014kda}. The seven tau decay modes, their branching ratios, and detectable final states are listed in \Table{tab:TauDecayMode}.
 
 
 In the  \decayRho decay mode, the \Prho meson subsequently decays into  \decayRhoFinalStateShort. In the \decayAi  neutral and charged decay modes, the \Pai meson subsequently decays into \decayAiPhotonFinalStateShort, and \decayAiPionFinalStateShort, respectively. The invariant masses of the \Prho meson and \Pai meson are \uprightMath{775.11\pm0.34}\,MeV and \uprightMath{1230\pm40}\,MeV, respectively \cite{Agashe:2014kda}.
@@ -130,31 +130,35 @@ Decay mode  & Detectable final state & Branching ratio\\
 \hline
 \end{tabular}
 \caption[Decay modes, detectable final state particles and branching ratios of the seven major \Pgtm decays.]
-{Decay modes, detectable final state particles, and branching ratios of seven major tau decay modes. Values are taken from \cite{Agashe:2014kda}.}
+{Decay modes, detectable final state particles, and branching ratios of the seven major tau decay modes with the largest branching ratios. Values are taken from \cite{Agashe:2014kda}.}
 \label{tab:TauDecayMode}
 \end{table}
 
 
-\subsection{Selecting single tau decay}
+\subsection{Tau selection}
 
-The \eeToTauTau channel contains two tau leptons. Since the tau decay mode classification is applied on a per-tau-lepton basis, the decay products of the two tau leptons in one event are divided into two sets for individual tau decay mode classifications. By identifying the axis of the back-to-back taus in the  \eeToTauTau event, the detector space can be separated in two hemispheres, where particles in each hemisphere correspond to the decay products of one tau lepton.
+The simulated \eeToTauTau event contains two tau leptons. Since the tau decay mode classification is applied on a per-tau-lepton basis, the decay products of the two tau leptons in one event are divided into two sets for individual tau decay mode classification. By identifying the axis of the back-to-back taus in the event, the detector space can be separated in two hemispheres, where particles in each hemisphere correspond to the decay products of one tau lepton.
 
 Separating reconstructed particles in an event into two sets is achieved using the principle thrust axis vector of the event, which is the axis that most particles are aligned to. The principle thrust axis vector, $\hat{t}$, is determined by maximising the thrust \cite{PhysRevLett.39.1587}, $T$:
 \begin{equation}
 T = \max_{\hat{t}}\!\frac{\sum_{i}\absOf{\hat{t}\!\cdot\!\vec{p_{i}}}}{\sum_{i}\absOf{\vec{p_{i}}}},
 \end{equation}
-where $\vec{p_{i}}$ is the momentum vector of particle $i$;  vector $\hat{t}$ is the unit principle thrust axis vector; and index $i$ is summed over all particles in an event. Two sets of particles are obtained based on the sign of the scalar product between the principle thrust axis vector  and the momentum vector of a particle: particles with a positive sign of the scalar product are in one set and particles with a negative sign of the scalar product are in another set.
+where $\vec{p_{i}}$ is the momentum vector of particle $i$;  vector $\hat{t}$ is the unit principle thrust axis vector; and index $i$ is summed over all particles in an event. Two sets of particles are obtained based on the sign of the scalar product between the principle thrust axis vector  and the momentum vector of a particle; particles with a positive sign of the scalar product are in one set and particles with a negative sign of the scalar product are in another set.
 
 
 \section{Pre-selection}
 \label{sec:tauPreSel}
-Three pre-selection cuts, based on the MC information of the particles,  are used. The cuts and the number of tau decays passing the cuts are listed in \Table{tab:tauPreSelEff}.
 
-Since this study is focused on the photon reconstruction in the \ECAL to classify tau decay modes, the tau decay products with photon converting to electron pairs in the tracking detector are not considered.
 
-Another pre-selection cut requires the total visible energy (i.e. not accounting for neutrinos) of tau decay products, $E_{vis,MC}$, to be greater than 5\,GeV.
+For the purpose of this study, three pre-selection cuts, based on the MC information of the particles,  are used. The cuts and the number of tau decays passing the cuts are listed in \Table{tab:tauPreSelEff}.
 
-Lastly, tay decay products are discarded when tau decay products deposit energies in the gap region between barrel and  endcap parts of the calorimeters, because there is a degradation in the particle reconstruction efficiency in the gap region. Tau decay products with the generated polar angle of the tau lepton in the region of 0.6\,rad and 0.9\,rad are not considered.
+Since this study is focused on photon reconstruction in the \ECAL to classify tau decay modes, the tau decays with photon converting to electron pairs in the tracking detector are not considered.
+
+The focus of the study is on higher energy tau decays. Tau decays with the total visible energy (i.e. not accounting for neutrinos) of tau decay products, $E_{vis}^{MC}$, less than 5\,GeV are not considered.
+
+
+
+Lastly, tau decays are discarded when the tau decay products are in the gap region between barrel and  endcap parts of the calorimeters, because there is a degradation in the particle reconstruction efficiency in this region. Tau decays with the generated polar angle of the tau lepton in the region $0.6 < \absOf{\theta_{\Ptau}^{MC}} < 0.9$\,rad are not considered.
 
 %The cut demands the absolute value of the generated polar angle of the tau lepton with respect to the beam direction, $\absOf{\theta_{Z,MC}}$, is between 0.3\,rad and 0.6\,rad to be  in the endcap region, or is between 0.8\,rad and $\frac{\pi}{2}$\,rad to be  in the barrel region.
 
@@ -176,7 +180,7 @@ Lastly, tay decay products are discarded when tau decay products deposit energie
 
 %Last set of constraints requires events to be discarded when tau decay products deposit energies in the gap region between barrel and  endcap part of the calorimeter. As the reconstruction   does not attempt to recover reconstruction in the gap region, there is a degradation in the particle reconstruction efficiency in the gap region. The constraint demands the absolute value of the polar angle of tau lepton with respect to the beam direction, $\absOf{\theta_{Z,MC}}$, is between 0.3\,rad and 0.6\,rad to be  in the endcap region, or is between 0.8\,rad and $\frac{\pi}{2}$\,rad to be  in the barrel region.
 
-\TABLE{tab:tauPreSelEff} shows the fractions of tau decays passing successive cuts  for different tau decay final states.  As expected, the cut on the photon conversion only affects tau decay modes with  photons in the final states. The cut on the total visible energy of the tau decay products has the greatest effect on the leptonic decay modes with two neutrinos  in the final states. The cut on the tau polar angle affects different tau decay modes almost equally.
+\TABLE{tab:tauPreSelEff} shows the fractions of tau decays passing successive cuts  for different tau decay final states.  As expected, the cut on  photon conversions only affects tau decay modes with  photons in the final states. The cut on the total visible energy of the tau decay products has the greatest effect on the leptonic decay modes with two neutrinos  in the final states. The cut on the tau polar angle affects different tau decay modes equally.
 
 % because more energies are carried by neutrinos in these decay modes.
 
@@ -189,7 +193,7 @@ Lastly, tay decay products are discarded when tau decay products deposit energie
 \begin{tabular}{ l r r r}
 \hline
 \hline
- \multicolumn{1}{L{0.2\textwidth}}{Final state}   & \multicolumn{1}{R{0.2\textwidth}}{No photon conversion} & \multicolumn{1}{R{0.2\textwidth}}{$E_{vis,MC}$ > 5\,GeV} &\multicolumn{1}{R{0.2\textwidth}}{$\absOf{\theta_{Z,MC}}$} \\
+ \multicolumn{1}{L{0.2\textwidth}}{Final state}   & \multicolumn{1}{R{0.2\textwidth}}{No photon conversion} & \multicolumn{1}{R{0.2\textwidth}}{$E_{vis}^{MC}$ > 5\,GeV} &\multicolumn{1}{R{0.2\textwidth}}{$\absOf{\theta_{\Ptau}^{MC}}$} \\
 \hline
 \decayElectron& 100.0\% & 84.7\%& 66.2\%\\
 \decayMuon &100.0\%& 85.2\%&66.7\%\\
@@ -260,7 +264,7 @@ The last pre-selection cut is to discard events with tau decay products depositi
 
 
 
-\section{Variables used in MVA}
+\section{Multivariate classification}
 \label{sec:tauVar}
 
 The classification of different tau decays uses a MVA classifier based on twenty-seven discriminant variables, listed in \Table{tab:tauVaraibles}. The particle ID information comes from the output of the \pandora reconstruction.
@@ -294,11 +298,11 @@ Track information & $E/p$ \\
 
 \subsection{Particle number variables}
 
-The most crucial variables for classifying tau decay modes  are the number of different types of particles. There are five variables used in the MVA classification: the number of charged particles (${N}_{\charge}$); the number of muons (${N}_{\Pmu}$); the number of electrons (${N}_{\Pe}$); the number of photons (${N}_{\Pgg}$); and the number of charged pions (${N}_{\Pgpm}$).
+The most crucial variables for classifying tau decay modes  are the number of different types of final state particles. There are five particle number  variables used in the MVA classification: the number of charged particles (${N}_{\charge}$); the number of muons (${N}_{\Pmu}$); the number of electrons (${N}_{\Pe}$); the number of photons (${N}_{\Pgg}$); and the number of charged pions (${N}_{\Pgpm}$). Here muon and electron IDs are provided by the \pandora outputs.
 
 
 
-\FIGURE{fig:tauVarNCharge} shows the distributions of the numbers of reconstructed charged particles for different tau decay modes. Over 98\% of  \tauToElectron, \tauToMuon, and \tauToPion decays have exactly one reconstructed charged particle, and approximately 95\% of \decayAiPionShort decays give exactly three reconstructed charged particles. \FIGURE{fig:tauVarNMuon} and \Figure{fig:tauVarNElectron}  show the distributions of the numbers of reconstructed muons and electrons respectively for different tau decay modes. 99\% of \tauToMuon decays produce exactly one reconstructed muon, and 99\% of \tauToElectron decays have one reconstructed electron. \FIGURE{fig:tauVarNPhoton} shows the distributions of the numbers of reconstructed photons  for different tau decay modes, which distinguishes tau decay final states with different numbers of \Ppizero.  Nearly 75\% of  \decayRhoShort  decays give exactly two reconstructed photons, and over 60\% of \decayAiPhotonShort decays have exactly four photons.
+\FIGURE{fig:tauVarNCharge} shows  distributions of the numbers of reconstructed charged particles for different tau decay modes. Over 98\% of  \tauToElectron, \tauToMuon, and \tauToPion decays have exactly one reconstructed charged particle, and approximately 95\% of \decayAiPionShort decays give exactly three reconstructed charged particles. \FIGURE{fig:tauVarNMuon} and \Figure{fig:tauVarNElectron}  show the distributions of the numbers of reconstructed muons and electrons respectively for different tau decay modes. Here 99\% of \tauToMuon decays produce exactly one reconstructed muon, and 99\% of \tauToElectron decays have one reconstructed electron. \FIGURE{fig:tauVarNPhoton} shows  distributions of the numbers of reconstructed photons  for different tau decay modes, which distinguishes hadronic tau decay final states with different numbers of \Ppizero.  Nearly 75\% of  \decayRhoShort  decays give exactly two reconstructed photons, and over 60\% of \decayAiPhotonShort decays have exactly four photons.
 
 
 
