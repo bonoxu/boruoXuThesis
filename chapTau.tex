@@ -550,7 +550,7 @@ where $m_{tot}$ is the invariant mass of the charged pion and the photon.
 
 From  the \Prho invariant mass reconstruction of the \decayRhoShort  decay hypothesis test,  two variables are  obtained and  used in the MVA classification to help to identify  \decayRhoShort  decay mode: the \Prho mass ($m^{reco}_\rho \equiv m_{tot}$ in \Equation{eqn:tauRho}) and the \Ppizero mass ($m_{\Pgpz}^{\parenths{\Prho}} \equiv m_{\Pphoton_1\Pphoton_2}$ in  \Equation{eqn:tauRho}). If there is only one photon, $m_{\Pgpz}^{\parenths{\Prho}}$ is set to 0. 
 
-From the \Pai invariant mass resonance reconstruction, three variables are obtained and used in the MVA classification:  the \Pai mass ($m^{reco}_{\Pai} \equiv m_{tot}$ in \Equation{eqn:tauA1}), the first \Ppizero mass ($m_{\Pgpz}^{(\Pai)} \equiv m_{\Pphoton_1\Pphoton_2}$ in \Equation{eqn:tauA1}), and the second \Ppizero mass ($m^{*(\Pai)}_{\Pgpz} \equiv  m_{\Pphoton_3\Pphoton_4}$ in \Equation{eqn:tauA1}). If there are three reconstructed photons, $m^{*(\Pai)}_{\Pgpz}$ is set to   0. If there are two reconstructed photons, depending on whether \Equation{eqn:tauA1TwoPhoton1} or \Equation{eqn:tauA1TwoPhoton2} gives the smallest $\chi^2$ value, either $m^{*(\Pai)}_{\Pgpz}$ is set to   0 or both $m_{\Pgpz}^{(\Pai)$ and $m^{*(\Pai)}_{\Pgpz}$ are 0. If there is only one reconstructed photon, both $m_{\Pgpz}^{(\Pai)$ and $m^{*(\Pai)}_{\Pgpz}$ are 0.
+From the \Pai invariant mass resonance reconstruction, three variables are obtained and used in the MVA classification:  the \Pai mass ($m^{reco}_{\Pai} \equiv m_{tot}$ in \Equation{eqn:tauA1}), the first \Ppizero mass ($m_{\Pgpz}^{(\Pai)} \equiv m_{\Pphoton_1\Pphoton_2}$ in \Equation{eqn:tauA1}), and the second \Ppizero mass ($m^{*(\Pai)}_{\Pgpz} \equiv  m_{\Pphoton_3\Pphoton_4}$ in \Equation{eqn:tauA1}). If there are three reconstructed photons, $m^{*(\Pai)}_{\Pgpz}$ is set to   0. If there are two reconstructed photons, depending on whether \Equation{eqn:tauA1TwoPhoton1} or \Equation{eqn:tauA1TwoPhoton2} gives the smallest $\chi^2$ value, either $m^{*(\Pai)}_{\Pgpz}$ is set to   0 or both $m_{\Pgpz}^{(\Pai)}$ and $m^{*(\Pai)}_{\Pgpz}$ are 0. If there is only one reconstructed photon, both $m_{\Pgpz}^{(\Pai)}$ and $m^{*(\Pai)}_{\Pgpz}$ are 0.
 
  \FIGURE{fig:tauVarMA1} shows the distributions of  $m^{reco}_{\Pai}$ under \decayAiPhotonShort decay mode hypothesis test for four different tau decay modes. Only the distribution for \decayAiPhotonShort decay mode has a resonance peak at \Pai mass position.
 
@@ -561,7 +561,7 @@ From the \Pai invariant mass resonance reconstruction, three variables are obtai
 \begin{figure}[htbp]
 \centering
 % \begin{center}/\end{center} takes some additional vertical space
- \includegraphics[width=0.65\textwidth]{tau/var2/mA1A1Fit_100GeV_improved_zoom.pdf}
+ \includegraphics[width=0.65\textwidth]{tau/var3/mA1A1Fit_100GeV_improved_zoom.pdf}
 \caption
 {Reconstructed invariant mass distributions for \Pai ($m^{reco}_{\Pai}$), reconstructed under the  \decayAiPhotonShort decay mode hypothesis for different tau decay modes. The area under the curve is normalised to unity.}
 \label{fig:tauVarMA1}
@@ -571,7 +571,7 @@ From the \Pai invariant mass resonance reconstruction, three variables are obtai
 
 %The particle ID output by \pandora is used extensively to reconstruct variables. However, extra
 
-Variables are used in this analysis to help further separating  electrons from charged pions, obtained from a modified private version of \pandora.
+Variables are used in this analysis to help further separate  electrons from charged pions, obtained from a modified private version of \pandora.
 
 %, which could be mistaken as \Pgpm in the  reconstruction.
 
@@ -579,9 +579,9 @@ Variables are used in this analysis to help further separating  electrons from c
 
 An electron develops a characteristic EM shower in the \ECAL, whilst a charged pion develops a hadronic shower. Variables characterising the  EM shower help to identify an electron. Three variables are used in the MVA classification: the start layer of the longitudinal shower ($t_0$); the fractional difference between observed and expected longitudinal EM shower profile ($\delta{l}$); and $\langle{w}\rangle$, a measure of the EM shower transverse width. These variables are defined in the same way as the variables used in the photon likelihood classifier in the photon reconstruction in \pandora, described in \Section{sec:photonLikelihood}.
 
-The calorimeter hit information are also used to  differentiate an EM shower from a hadronic shower. Two variables used in the MVA classification are: the average energy of a calorimeter hit ($\bar{E}_{hit}$), which is the total energy deposited in the \ECAL and \HCAL divided by the number of the \ECAL and \HCAL calorimeter hits, and the average fraction of minimum ionising calorimeter hits ($MIP$), which is the number of calorimeter hits in the \ECAL and \HCAL flagged as minimum ionising particles by the \pandora reconstruction divided by the total number of calorimeter hits in the \ECAL and \HCAL.
+The calorimeter hit information is also used to  differentiate an EM shower from a hadronic shower. Two variables used in the MVA classification are: the average energy of a calorimeter hit ($\bar{E}_{hit}$), which is the total energy deposited in the \ECAL and \HCAL divided by the number of the \ECAL and \HCAL calorimeter hits, and the average fraction of minimum ionising calorimeter hits ($MIP$), which is the number of calorimeter hits in the \ECAL and \HCAL flagged as minimum ionising particles by the \pandora reconstruction, divided by the total number of calorimeter hits in the \ECAL and \HCAL.
 
-Another variable used is the consistency of the track momentum with the total energies in the \ECAL and \HCAL for charged particles. The variable used in the MVA classification is the energy in the \ECAL and \HCAL divided by the track momentum, averaged over all charged particles ($E/p$).
+Finally track momentum used to provide the consistency check of the track momentum with the total energies in the \ECAL and \HCAL for charged particles. The variable used in the MVA classification is the energy in the \ECAL and \HCAL divided by the track momentum, averaged over all charged particles ($E/p$).
 
 %Last information used to separate an electron  from a charged pion is the track$-$momentum calorimeter$-$energy consistency check.
 
