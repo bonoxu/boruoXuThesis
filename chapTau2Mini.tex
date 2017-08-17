@@ -65,7 +65,7 @@ Events were reconstructed with  \ilcsoft version v01-17-07 \cite{Gaede:82475} an
 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
-  \includegraphics[width=0.75\textwidth]{tau/NoTimeAnalysis/EvtDsp}
+  \includegraphics[width=0.65\textwidth]{tau/NoTimeAnalysis/EvtDsp}
   \caption{An event display of a \eeZZQQ event. The two brown cones indicate the tau decay products found by the tau identification processor. The four blue cones indicate the four jets found by the jet clustering algorithm. The blue outer region shows the \HCAL ring.}
   \label{fig:TauNTAevtDsp}
 \end{figure}
@@ -165,7 +165,7 @@ where \sqrtS is the centre-of-mass energy;   variable $m_{\PZ}$ is the mass of \
 
 %the reconstructed mass resolution  and energy resolution of the \ZToqq, respectively;  the variables $m_{\Pquark\Pquark}$ and  $E_{\Pquark\Pquark}$ are obtained from the recoil momenta against two tau candidates, assuming that the collision occurs at \sqrtS. The  $m_{\Pquark\Pquark}$ is defined as the invariant mass of the recoil momenta, and  the $E_{\Pquark\Pquark}$ is defined as the energy of the recoil momenta.; and the minimisation is iterated over all tau candidates.
 
-\subsubsection{Jet clustering}
+\subsection{Jet clustering}
 
 %Tau hadronically decay products can be also identified as a small jet.
 
@@ -204,7 +204,7 @@ For the direct tau searching method, $m_{\Pquark\Pquark}$ and  $E_{\Pquark\Pquar
 The $\chi^2$ minimisation function is repeated for the direct tau searching method and the jet clustering method. For each method, the minimisation produces a best pair of  tau candidates with the smallest $\chi^2$.
 \end{comment}
 
-\subsubsection{Selecting best tau candidates in an event}
+\subsection{Selecting best tau candidates in an event}
 
 
 If both \BonoTauFinder processor and the jet clustering method find two tau candidates, the best pair of tau  candidates   should result in well reconstructed \ZToqq decays, defined by:
@@ -254,7 +254,7 @@ Having identified the best two tau candidates for each method, a set of conditio
 the pair of  tau  candidates  with smallest $\chi^2$ is selected as the best pair of tau  candidates. Otherwise, if only one pair of tau candidates satisfies the constraint in \Equation{eq:tauMinimiserSelector}, that pair is chosen. If none of the pairs satisfies the constraint, and if one jet from the jet clustering is close to the beam pipe and there are exactly two tau candidates obtained from \BonoTauFinder, then these two tau candidates from \BonoTauFinder  are chosen. This is because if one jet is close to the beam pipe, it is likely that some particles close to the beam pipe are undetected, which leads to a failure in the kinematic constraint and/or the jet reconstruction. Lastly, if all conditions above are not satisfied, two smallest jets by the number of \PFOs from the jet clustering method are chosen to be the best pair of tau  candidates.
 \end{comment}
 
-\subsection{Kinematic reconstruction}
+\section{Kinematic reconstruction of tau energy}
 
 %The previous section describes the method to identify the tau pair decay products.
 To obtain the distributions of  $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$, for  \tauToPionBoth decays in \eeZZQQ events, the energies of the taus, $E_{\APtauon}$ and   $E_{\Ptauon}$ are required. Energies of the taus are also required for the calculation of the energy variables used in the tau decay mode classification.
@@ -266,11 +266,29 @@ Because the energies of the taus can be obtained in the \PZ rest frame, kinemati
 To boost  tau decay products into the \PZ rest frame, the four-momentum of the \PZ is needed. Since there are two \PZ in the \eeZZQQ event, \ZForTauTau refers to the \PZ decaying to a tau pair and \ZForqq refers to the \PZ decaying to a quark pair. The four-momentum of the \ZForTauTau can be obtained from the recoil four-momentum of \ZForqq th system against the centre-of-mass energy, where the four-momentum of \ZForqq is measured directly from the particles that are not the tau candidates. A beam crossing angle of  14\,mrad is considered.
 
 
-The estimation of the four-momentum of   \ZForTauTau is improved by correcting the energy of the \ZForTauTau to be half of the centre-of-mass energy.
+The estimation of the four-momentum of   \ZForTauTau is improved by correcting the energy of the \ZForTauTau to be half of the centre-of-mass energy, which improves the estimation of the tau energies. \FIGURE{fig:TauMini2DimproveKEAll} shows the two-dimensional distributions of $E_{\Ppiplus}/E_{\APtauon}$ as a function of $E_{\Ppiminus}/E_{\Ptauon}$ from \ZToTauTau decays where both \tauToPionBoth. \tauToPionBoth decay mode is determined using the truth information. MC tau decay particles are used to generate distributions in figures. \FIGURE{fig:TauMini2DNOimproveKE} shows the distribution without the  improved four-momentum of   \ZForTauTau. \FIGURE{fig:TauMini2DimproveKE} shows the distribution with the  improved four-momentum of   \ZForTauTau. A better match with the distributions obtained in the generator level study in \Figure{fig:theoryTauPairCorrelationZ} is achieved with the   improved four-momentum of   \ZForTauTau, which motivates the correction of the \ZForTauTau energy to improve the measurement of the distributions of $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$.
+
+
+\begin{figure}[htbp]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2DNOimproveKE}
+  \caption{}
+  \label{fig:TauMini2DNOimproveKE}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2DimproveKE}
+  \caption{}
+  \label{fig:TauMini2DimproveKE}
+\end{subfigure}
+\caption
+{Two-dimensional distributions of $E_{\Ppiplus}/E_{\APtauon}$ as a function of $E_{\Ppiminus}/E_{\Ptauon}$ from \ZToTauTau decay where both \tauToPionBoth, with: a)   the  unimproved four-momentum of   \ZForTauTau, and b) the   improved four-momentum of   \ZForTauTau.  \tauToPionBoth decay mode is determined using the truth information. MC tau decay particles are used to generate distributions in figures.}
+\label{fig:TauMini2DimproveKEAll}
+\end{figure}
 
 
 
-
+\begin{comment}
 
 
 
@@ -306,7 +324,7 @@ p^{\mu}_{\ZToTauTau} =
 where $\theta_{beam}$ is the beam crossing angle of  14\,mrad; \sqrtS is the centre-of-mass energy; $p^{\mu}_{\ZToqq}$ is the four-momentum of the \ZToqq system.
 
 
-
+\end{comment}
 \begin{comment}
  and other variables are defined in the same way as in the previous equation. The vector $p^{\mu}_{\Ptau\Ptau,correct} $ is then treated as the four-momentum vector of \PZ boson, where \ZToTauTau. Tau decay products are boosted to the \PZ decay rest frame accordingly. The calculation of the variables used in the MVA classifier are then performed in the \ZToTauTau decay rest frame.
 
@@ -332,9 +350,11 @@ p^{\mu}_{\Ptau\Ptau,correct} = p^{\mu}_{\Ptau\Ptau} \times \frac{\frac{1}{2}\sqr
 where $E_{\Ptau\Ptau}$ is the energy of the vector $p^{\mu}_{\Ptau\Ptau}$  and other variables are defined in the same way as in the previous equation. The vector $p^{\mu}_{\Ptau\Ptau,correct} $ is then treated as the four-momentum vector of \PZ boson, where \ZToTauTau. Tau decay products are boosted to the \PZ decay rest frame accordingly. The calculation of the variables used in the MVA classifier are then performed in the \ZToTauTau decay rest frame.
 \end{comment}
 
-\subsection{Tau decay mode classification}
+\section{Tau decay mode classification}
 
-The tau decay mode classifier is used to select the \tauToPionBoth decay mode. In the classifier, variables regarding EM shower profiles, calorimeter hit information, and track information are not used (the last three rows in \Table{tab:tauVaraibles}) as the information was not available in the outputs of the standard version of \pandora used in this analysis. The selection of the \tauToPionBoth decay mode also demands that there is at least one charged pion in the \tauToPionBoth decays.
+The tau decay mode classifier developed in \Chapter{chap:Tau} can now be used to select the \tauToPionBoth decay mode. In the classifier, variables regarding EM shower profiles, calorimeter hit information, and track information are not used (the last three rows in \Table{tab:tauVaraibles}) as the information was not available in the outputs of the standard version of \pandora.
+
+% The selection of the \tauToPionBoth decay mode also demands that there is at least one charged pion in the \tauToPionBoth decays.
 
 \begin{comment}
 
@@ -351,14 +371,58 @@ The training  the multivariate classifier follows the procedure in  \Section{sec
 \end{comment}
 %\subsection{Result}
 
-\FIGURE{fig:TauSpin2D} shows the two-dimensional distributions of $E_{\Ppiplus} / E_{\APtauon}$ versus $E_{\Ppiminus} / E_{\Ptauon}$, using generated \eeZZQQ events, where both \tauToPionBoth. The energy fractions of the tau decay product to the tau lepton ($E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$) are the appropriate kinematic variables to study the tau pair polarisation correlation, motivated in \Section{sec:theoryTauPair}.
+\section{Tau pair polarisation correlations}
+\label{sec:TauMiniCorr}
+
+\FIGURE{fig:TauSpin1D} shows distributions of $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$, using generated \eeZZQQ events. Both taus decay by \tauToPionBoth. $E_{\Ptaupm}$ is half of the energy of \ZForTauTau in \ZForTauTau rest frame. The energy fractions of the tau decay product to the tau lepton ($E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$) are the appropriate kinematic variables to study the tau pair polarisation correlation, motivated in \Section{sec:theoryTauPair}. The shape of the distraction at the generator decreases gradually with the increasing $E_{\Ppipm}/E_{\Ptaupm}$. The decreasing shape is largely preserved in the full detector simulation. In the full detector simulation, events with  $E_{\Ppipm}/E_{\Ptaupm}$ close to 0, which fall in the first bin in the figures, are not reconstructed correctly. When the energies of the tau are mostly carried away by the neutrinos, it is difficult to identify low-energy charged pions as tau decay products.
+
+
+\begin{figure}[htbp]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/1DMC}
+  \caption{Generator-level  Monte Carlo particles}
+  \label{fig:TauSpin1DMC}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/1DrecoNoOverflow}
+  \caption{Full detector simulation}
+  \label{fig:TauSpin1Dreco}
+\end{subfigure}
+\caption
+{Distributions of $E_{\Ppipm}/E_{\Ptaupm}$ from \ZToTauTau decays where both \tauToPionBoth, in \eeZZQQ events for: a) generator-level  Monte Carlo particles, and b) the full detector simulation. The \tauToPionBoth decay mode is selected using: a) the truth information, and b) the tau decay mode classifier.}
+\label{fig:TauSpin1D}
+\end{figure}
+
+
+
+%The energy fractions of the tau decay product to the tau lepton ($E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$) are the appropriate kinematic variables to study the tau pair polarisation correlation, motivated in \Section{sec:theoryTauPair}.
 
 
 %tau decay product energy fractions, with \eeZZ channel where one \PZ decays to a tau pair and the other \PZ decays hadronically, using both \tauToPion decay mode.
 
-\FIGURE{fig:TauSpin2DMC} shows the  two-dimensional  tau decay product energy fraction distribution obtained with the generator-level  Monte Carlo particles. \FIGURE{fig:TauSpin2Dreco} shows the distribution using the full detector simulation. A good match between the distributions obtained with  the generator-level  MC particles and the full detector simulation is achieved. Dark regions along the diagonal can be seen in both the distribution for the Monte Carlo particles and the distribution for the full detector simulation. In the \ZToTauTau decays, where both \tauToPionBoth, an energetic \Pgppm is likely to be associated with an energetic \Pgpmp and a low-energy \Pgppm is  likely to be associated with a low-energy \Pgpmp. Comparing the two figures, some events in the top right quadrant, corresponding to  both \Ppipm being energetic, are not reconstructed correctly in the full detector simulation, due to the failure of identifying the correct tau decay products.
+\FIGURE{fig:TauSpin2D} shows the two-dimensional distributions of $E_{\Ppiplus} / E_{\APtauon}$ versus $E_{\Ppiminus} / E_{\Ptauon}$, using generated \eeZZQQ events. Both taus decay by \tauToPionBoth. \FIGURE{fig:TauSpin2DMC} shows the  two-dimensional  tau decay product energy fraction distribution obtained with the generator-level  Monte Carlo particles. \FIGURE{fig:TauSpin2Dreco} shows the distribution using the full detector simulation. A good match between the distributions obtained with  the generator-level  MC particles and the full detector simulation is achieved. Dark regions along the diagonal can be seen in both the distribution for the Monte Carlo particles and the distribution for the full detector simulation. In the \ZToTauTau decays, where both \tauToPionBoth, an energetic \Pgppm is likely to be associated with an energetic \Pgpmp and a low-energy \Pgppm is  likely to be associated with a low-energy \Pgpmp. Comparing the two figures, some events in the top right quadrant, corresponding to  both \Ppipm being energetic, are not reconstructed correctly in the full detector simulation, due to the failure of identifying the correct tau decay products.
 
-This is a proof-of-principle demonstration that the generator-level pion energy fraction correlation can be rescued at the analysis level.
+
+\begin{figure}[htbp]
+\centering % \begin{center}/\end{center} takes some additional vertical space
+\begin{subfigure}[b]{0.7\textwidth}
+  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2DMC2}
+  \caption{Generator-level  Monte Carlo particles}
+  \label{fig:TauSpin2DMC}
+\end{subfigure}
+\begin{subfigure}[b]{0.7\textwidth}
+  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2Dreco2}
+  \caption{Full detector simulation}
+  \label{fig:TauSpin2Dreco}
+\end{subfigure}
+\caption
+{Two-dimensional distributions of $E_{\Ppiplus}/E_{\APtauon}$ as a function of $E_{\Ppiminus}/E_{\Ptauon}$ from \ZToTauTau decays where both \tauToPionBoth, in \eeZZQQ events for a) generator-level  Monte Carlo particles, and b) the full detector simulation. The \tauToPionBoth decay mode is selected using a) the truth information, and b) the tau decay mode classifier.}
+\label{fig:TauSpin2D}
+\end{figure}
+
+\section{Summary}
+This is a proof-of-principle demonstration that the generator-level pion energy fraction correlation can be reconstructed at the analysis level. The analysis contains several important steps: tau identification; kinematic reconstruction of the energies of the taus; the classification of the  \tauToPionBoth decay mode; and the reconstruction of the tau pair polarisation correlations discussed in \Section{sec:TauMiniCorr}.
 
 %the incorrect finding of the tau pair decay products  in \Section{sec:tauHZfindTau}.
 
@@ -375,22 +439,7 @@ This is a proof-of-principle demonstration that the generator-level pion energy 
 %\FIGURE{fig:theoryTauPairCorrelation} shows the resulting two-dimensional distributions of  $\overline{z} = \frac{E_{\Ppiplus}}{E_{\APtauon}}$ versus  $z = \frac{E_{\Ppiminus}}{E_{\Ptauon}}$ for \ZToTauTau and \HiggsToTauTau channels, where both tau leptons decay via \tauToPion. The difference of the tau pair polarisation correlation between \PZ and \PHiggs  is clear. The energy distribution of the charged pion from \ZToTauTau has the form of $\overline{z}  \sim z$, whilst the distribution from  \HiggsToTauTau has the form of $\overline{z}  \sim (1-z)$. Therefore, in \ZToTauTau process, a high-energy \Pgppm  is likely to be associated with a high-energy \Pgpmp. In \HiggsToTauTau process, the opposite is favoured. If the tau pair decay from Higgs boson is observed, the decay can be recognised in the \tauToPion mode as a high-energy \Pgppm with a low-energy \Pgpmp. Hence, the tau decay product energy distribution can be a clean signature for \HiggsToTauTau.
 
 
-\begin{figure}[htbp]
-\centering % \begin{center}/\end{center} takes some additional vertical space
-\begin{subfigure}[b]{0.75\textwidth}
-  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2DMC2}
-  \caption{Generator-level  Monte Carlo particles}
-  \label{fig:TauSpin2DMC}
-\end{subfigure}
-\begin{subfigure}[b]{0.75\textwidth}
-  \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/2Dreco2}
-  \caption{Full detector simulation}
-  \label{fig:TauSpin2Dreco}
-\end{subfigure}
-\caption
-{Two-dimensional distributions of $E_{\Ppiplus}/E_{\APtauon}$ as a function of $E_{\Ppiminus}/E_{\Ptauon}$ from \ZToTauTau decay where both \tauToPionBoth, with \eeZZQQ events for a) generator-level  Monte Carlo particles, and b) the full detector simulation. The \tauToPionBoth decay mode is selected using a) the truth information, and b) the tau decay mode classifier.}
-\label{fig:TauSpin2D}
-\end{figure}
+
 \begin{comment}
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
