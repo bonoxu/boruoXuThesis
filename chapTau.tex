@@ -81,7 +81,7 @@ Two million \eeToTauTau events at a centre-of-mass energy of 100\,GeV were gener
 \section{Event reconstruction}
 \label{sec:tauReco}
 
-Events were reconstructed with  \ilcsoft version v01-17-07 \cite{Gaede:82475} and \pandora version 3 \cite{Marshall:2015rfa}, using the photon reconstruction algorithms described in \Chapter{chap:Photon}. An event display of \eeToTauTau interaction reconstructed in the \ILD detector is shown in \Figure{fig:tauEvtDsp}. The top half of the event shows a tau lepton decaying into \decayRhoFinalState. The bottom half of the event shows a tau lepton decaying into \decayThreePionPhoton. 
+Events were reconstructed with  \ilcsoft version v01-17-07 \cite{Gaede:82475} and \pandora version 3 \cite{Marshall:2015rfa}, using the photon reconstruction algorithms described in \Chapter{chap:Photon}. An event display of \eeToTauTau interaction reconstructed in the \ILD detector is shown in \Figure{fig:tauEvtDsp}. The top half of the event shows a tau lepton decaying into \decayRhoFinalState. The bottom half of the event shows a tau lepton decaying into \decayThreePionPhoton.
 
 
 %As the study is aimed for optimisation study of the \ECAL cell sizes, t
@@ -371,10 +371,10 @@ Five invariant mass variables are used in the MVA classification: the invariant 
 
 \subsection{Energy variables}
 
-Energy information helps to further separate different tau decay modes. Six energy variables are used in the MVA classification: the normalised total energy of all reconstructed particles ($\tilde{E}_{vis}$); the normalised total energy of charged particles ($\tilde{E}_{\charge}$); the normalised total energy of muons ($\tilde{E}_{\Pmu}$); the normalised total energy of electrons ($\tilde{E}_{\Pe}$); the normalised total energy of photons ($\tilde{E}_{\Pgg}$); and the normalised total energy of charged pions ($\tilde{E}_{\Pgpm}$). All variables are normalised with respect to the energy of the associated tau lepton, i.e. $\tilde{E}_{vis} = E_{vis} / E_{\Ptau}$, where $E_{vis} $ is the total energy of all reconstructed particles and $E_{\Ptau}$ is the energy of the associated tau lepton.
+Energy information helps to further separate different tau decay modes. Six energy variables are used in the MVA classification: the normalised total energy of all reconstructed particles ($\tilde{E}_{vis}$); the normalised total energy of charged particles ($\tilde{E}_{\charge}$); the normalised total energy of muons ($\tilde{E}_{\Pmu}$); the normalised total energy of electrons ($\tilde{E}_{\Pe}$); the normalised total energy of photons ($\tilde{E}_{\Pgg}$); and the normalised total energy of charged pions ($\tilde{E}_{\Pgpm}$). All variables are normalised relative to the energy of the associated tau lepton, i.e. $\tilde{E}_{vis} = E_{vis} / E_{\Ptau}$, where $E_{vis} $ is the total energy of all reconstructed particles and $E_{\Ptau}$ is the energy of the associated tau lepton.  $E_{\Ptau}$ is obtained from the generated value, i.e. 50\,GeV.
 
 
-\FIGURE{fig:tauVarEVis} and \Figure{fig:tauVarEPhoton} show the distributions of the normalised energies of all reconstructed particles and photons respectively for different tau decay modes. Differences in the distributions for  different tau decay modes can be seen.
+\FIGURE{fig:tauVarEVis} and \Figure{fig:tauVarEPhoton} show distributions of the normalised energies of all reconstructed particles and photons respectively for different tau decay modes. Differences in the distributions for  different tau decay modes can be seen. The cut-off at 0.1 for the $\tilde{E}_{vis}$ distribution is due to the pre-selection of  $E_{vis}^{MC}>5$\,GeV, which corresponds to  $\tilde{E}_{vis}>0.1$.
 
 
 
@@ -396,10 +396,10 @@ Energy information helps to further separate different tau decay modes. Six ener
 \label{fig:tauVar3}
 \end{figure}
 
-\subsection{Calorimetric energy information variables}
+\subsection{Calorimetric energy variables}
 % { $E^{\ECAL}_{\charge} / E_{\charge}$,  $ E^{\ECAL} / E$ } \\
 
-Two calorimetric energy information variable are used in the MVA classification: the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL, where only calorimetric deposits associated with charged particles are considered ($E^{\ECAL}_{\charge} / E_{\charge}$), and the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL for all particles ($ E^{\ECAL} / E$). These  two variables help to identify electron and muon decay modes. For example, an electron typically deposits over 95\% of its energy in the \ECAL, and a muon typically deposits 5\% to 20\% of its energy in the \ECAL. The difference between $E^{\ECAL}_{\charge} / E_{\charge}$ and  $ E^{\ECAL} / E$ is that photons and neutral hadrons, which deposit most of their energies in the \ECAL and in the \HCAL respectively, are not included in the calculation of $E^{\ECAL}_{\charge} / E_{\charge}$.
+Two calorimetric energy variables are used in the MVA classification: the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL, where only calorimetric deposits associated with charged particles are considered ($E^{\ECAL}_{\charge} / E_{\charge}$); and the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL for all particles ($ E^{\ECAL} / E$). These  two variables help to improve the identification of electron and muon decay modes. For example, an electron typically deposits over 95\% of its energy in the \ECAL, and a muon typically deposits 5\% to 20\% of its energy in the \ECAL. The difference between $E^{\ECAL}_{\charge} / E_{\charge}$ and  $ E^{\ECAL} / E$ is that photons and neutral hadrons, which deposit most of their energies in the \ECAL and in the \HCAL respectively, are not included in the calculation of $E^{\ECAL}_{\charge} / E_{\charge}$.
 
 
 
