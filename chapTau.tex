@@ -399,9 +399,27 @@ Energy information helps to further separate different tau decay modes. Six ener
 \subsection{Calorimetric energy variables}
 % { $E^{\ECAL}_{\charge} / E_{\charge}$,  $ E^{\ECAL} / E$ } \\
 
-Two calorimetric energy variables are used in the MVA classification: the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL, where only calorimetric deposits associated with charged particles are considered ($E^{\ECAL}_{\charge} / E_{\charge}$); and the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL for all particles ($ E^{\ECAL} / E$). These  two variables help to improve the identification of electron and muon decay modes. For example, an electron typically deposits over 95\% of its energy in the \ECAL, and a muon typically deposits 5\% to 20\% of its energy in the \ECAL. The difference between $E^{\ECAL}_{\charge} / E_{\charge}$ and  $ E^{\ECAL} / E$ is that photons and neutral hadrons, which deposit most of their energies in the \ECAL and in the \HCAL respectively, are not included in the calculation of $E^{\ECAL}_{\charge} / E_{\charge}$.
+Two calorimetric energy variables are used in the MVA classification: the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL, where only calorimetric deposits associated with charged particles are considered ($E^{\ECAL}_{\charge} / E_{\charge}$); and the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL for all particles ($E^{\ECAL} / E$). These  two variables help to improve the identification of electron and muon decay modes. \FIGURE{fig:tauVar4} show distributions of  $E^{\ECAL}_{\charge} / E_{\charge}$ and $E^{\ECAL} / E$ for different decay modes. An electron typically deposits over 95\% of its energy in the \ECAL, and a muon typically deposits 5\% to 20\% of its energy in the \ECAL. The difference between $E^{\ECAL}_{\charge} / E_{\charge}$ and  $E^{\ECAL} / E$ is that photons and neutral hadrons, which deposit most of their energies in the \ECAL and in the \HCAL respectively, are not included in the calculation of $E^{\ECAL}_{\charge} / E_{\charge}$.
 
 
+
+\begin{figure}[htbp]
+\centering
+% \begin{center}/\end{center} takes some additional vertical space
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/var3/EEHCalRatio_100GeV_improved}
+  \caption{}
+  \label{fig:tauVarEEcalRatio}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+ \includegraphics[width=\textwidth]{tau/var3/EEHCalAllRatio_100GeV_improved}
+  \caption{}
+  \label{fig:tauVarEEcalRatioAll}
+\end{subfigure}
+\caption
+{Distributions of  the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL, a) where only calorimetric deposits associated with charged particles are considered ($E^{\ECAL}_{\charge} / E_{\charge}$); and b) for all reconstructed particles ($ E^{\ECAL} / E$). The particle ID information comes from the output of the \pandora reconstruction. The area under the curve for each decay mode is normalised to unity.}
+\label{fig:tauVar4}
+\end{figure}
 
 \subsection{\texorpdfstring{\decayRhoShort and \decayAiPhotonShort} \, resonances variables}
 
@@ -409,7 +427,7 @@ Two calorimetric energy variables are used in the MVA classification: the fracti
 %\section{\texorpdfstring{\decayRhoShort and \decayAiPhotonShort} \, resonances reconstruction}
 %\label{sec:tauResonance}
 
-By utilising the photon identification potential of the highly granular \ECAL, the identification of the \decayRhoShort and \decayAiPhotonShort decay modes is enhanced  by reconstructing the \Prho and \Pai invariant masses. For decays with at least one charged pion and one photon, the reconstruction selects the combination of charged pions and photons that have a invariant mass consistent with the \Prho or \Pai mass.
+By utilising the photon identification potential of the highly granular \ECAL, the identification of the \decayRhoShort and \decayAiPhotonShort decay modes is enhanced  by reconstructing the \Prho and \Pai invariant masses. For decays with at least one charged pion and one photon, the reconstruction selects the combination of charged pions and photons that have a invariant mas mosts consistent with the \Prho or \Pai mass.
 
 
 
@@ -423,16 +441,20 @@ For example, the final state of the \decayRhoShort decay mode contains a \Pgpm a
 \chi^{2} = {\left(\frac{m_{tot} -  m_{\Prho}}{\sigma_{\Prho}}\right)}^{2} + {\left(\frac{m_{\Pphoton_1\Pphoton_2} -  m_{\Ppizero}}{\sigma_{\Ppizero}}\right)}^{2} \,,
 \label{eqn:tauRho}
 \end{equation}
-where $m_{\Pphoton_1\Pphoton_2}$ is the invariant mass of two photons; the variable $m_{tot}$ is the total invariant mass of the  two photons and one \Pgpm; the variables $m_{\Prho}$ and $m_{\Ppizero}$ are the respective true masses of \Prho and \Ppizero, taken from \cite{Agashe:2014kda}; and the mass resolution is assumed to be 20\%, i.e. $\sigma_{\Prho}/m_{\Prho}$ = $\sigma_{\Ppizero}/m_{\Ppizero}$ = 20\%. \FIGURE{fig:tauRho} shows the reconstructed invariant mass distributions for \Ppizero and \Prho in the \decayRhoShort decay mode, obtained using the MC truth information. The decay mode is selected using the MC truth information. A mass resolution of 20\% is an good approximation for the invariant masses of \Ppizero and \Prho.
+where $m_{\Pphoton_1\Pphoton_2}$ is the invariant mass of two photons; the variable $m_{tot}$ is the total invariant mass of the  two photons and one \Pgpm; $m_{\Prho}$ and $m_{\Ppizero}$ are the respective true masses of \Prho and \Ppizero; and $\sigma_{\Prho}$ and $\sigma_{\Ppizero}$ are the assumed mass resolutions. \FIGURE{fig:tauRho} shows the reconstructed invariant mass distributions for \Ppizero and \Prho in the \decayRhoShort decay mode, obtained by selecting reconstructed particles using the MC truth information.  A mass resolution of 20\% is an good approximation for the invariant masses of \Ppizero and \Prho, and this is used for $\sigma_{\Prho}$ and $\sigma_{\Ppizero}$.
 
+%the mass resolution is assumed to be 20\%, i.e. $\sigma_{\Prho}/m_{\Prho}$ = $\sigma_{\Ppizero}/m_{\Ppizero}$ = 20\%. The decay mode is selected using the MC truth information.
 % to find the corresponding reconstructed particles
 
-The particle ID of charged pions and photons comes from the output of the \pandora reconstruction. The $\chi^{2}$ function works naturally if there are two reconstructed photons in a decay. If there are more than two photons in a decay, combinations of two photons are iterated and the combination with the smallest value of $\chi^2$ is chosen. If there is only one photon in a decay, the second term in the \Equation{eqn:tauRho} is dropped and the $\chi^{2}$ function becomes:
+The particle ID of charged pions and photons comes from the output of the \pandora reconstruction. The $\chi^{2}$ function works naturally if there are two reconstructed photons in a decay. If there are more than two photons in a decay, all combinations of two photons are considered and the combination with the smallest value of $\chi^2$ is chosen. If there is only one photon in a decay, the second term in the \Equation{eqn:tauRho} is dropped and $m_{tot}$ is the total invariant mass of one photon and one \Pgpm.
+
+\begin{comment}
+the $\chi^{2}$ function becomes:
 \begin{equation}
 \chi^{2} = {\left(\frac{m_{tot} -  m_{\Prho}}{\sigma_{\Prho}}\right)}^{2} \,,
 \end{equation}
 where $m_{tot}$ is the total invariant mass of one photon and one \Pgpm.
-
+\end{comment}
 
 
 \begin{figure}[htbp]
@@ -449,7 +471,7 @@ where $m_{tot}$ is the total invariant mass of one photon and one \Pgpm.
   \label{fig:tauRhoFromRho}
 \end{subfigure}
 \caption
-{Reconstructed invariant mass distributions for a) \Ppizero; b) \Prho, in the \decayRhoShort decay mode. The reconstructed masses are obtained using the MC truth information to find the corresponding reconstructed particles. The decay mode is selected using the MC truth information. The area under the curve is normalised to unity.}
+{Reconstructed invariant mass distributions for the \Ppizero and \Prho in the \decayRhoShort decay mode. The reconstructed masses are obtained using the MC truth information to find the corresponding reconstructed particles. The area under the curve is normalised to unity.}
 \label{fig:tauRho}
 \end{figure}
 
@@ -468,15 +490,15 @@ where $m_{tot}$ is the total invariant mass of one photon and one \Pgpm.
 
 %By choosing the combination of photons and \Pgpm which minimises the  $\chi^{2}$ function, the fitted \Prho mass, $m_{tot}$, and the fitted \Ppizero mass, $m_{\Pphoton_1\Pphoton_2}$, are obtained.
 
-The $\chi^2$ function in \Equation{eqn:tauRho} is modified for the \decayAiPhotonShort decay mode hypothesis test:
+The $\chi^2$ function of \Equation{eqn:tauRho} is modified for the \decayAiPhotonShort decay mode hypothesis test:
 %The \decayAiPhotonShort decay mode identification can be enhanced using an similar minimisation function, $\chi^2$:
 \begin{equation}
 \chi^{2} = {\left(\frac{m_{tot} -  m_{\Pai}}{\sigma_{\Pai}}\right)}^{2} + {\left(\frac{m_{\Pphoton_1 \Pphoton_2} -  m_{\Ppizero}}{\sigma_{\Ppizero}}\right)}^{2}  + {\left(\frac{m_{\Pphoton_3 \Pphoton_4} -  m_{\Ppizero}}{\sigma_{\Ppizero}}\right)}^{2} \,,
 \label{eqn:tauA1}
 \end{equation}
-where the \Prho mass has been replace by the \Pai mass and other variables are defined in the same way as  previously. Four photons and one \Pgpm are required for this  $\chi^2$ function. To resolve the degeneracy between two photon pairs,  the requirement of $\absOf{ m_{\Pphoton_1\Pphoton_2} - m_{\Ppizero}} < \absOf{ m_{\Pphoton_3\Pphoton_4} - m_{\Ppizero}}$ is imposed.
+where the \Prho mass has been replaced by the \Pai mass and other variables are defined in the same way as  previously. Four photons and one \Pgpm are required for this  $\chi^2$ function. To resolve the degeneracy between two photon pairs,  the requirement of $\absOf{ m_{\Pphoton_1\Pphoton_2} - m_{\Ppizero}} < \absOf{ m_{\Pphoton_3\Pphoton_4} - m_{\Ppizero}}$ is imposed.
 
-If there are at least four photons in a decay, combinations of four photons are iterated and the combination with the smallest value of $\chi^2$ is chosen. If there are three photons in a decay, the last term in the \Equation{eqn:tauA1}  is dropped and the $\chi^{2}$ function becomes:
+If there are at least four photons in a decay, all combinations of four photons are considered and the combination with the smallest value of $\chi^2$ is chosen. If there are three photons in a decay, the last term in the \Equation{eqn:tauA1}  is dropped and the $\chi^{2}$ function becomes:
 \begin{equation}
 \chi^{2} = {\left(\frac{m_{tot} -  m_{\Pai}}{\sigma_{\Pai}}\right)}^{2} + {\left(\frac{m_{\Pphoton_1 \Pphoton_2} -  m_{\Ppizero}}{\sigma_{\Ppizero}}\right)}^{2}  \,,
 \end{equation}
