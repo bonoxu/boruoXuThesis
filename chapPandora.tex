@@ -32,7 +32,7 @@ Most of the Monte Carlo (MC) samples used in this thesis were generated using \W
 \subsection{\CLIC luminosity spectrum}
 \label{sec:pandoraCLUClumi}
 
-The small \CLIC beam size  at the interaction point, which indicates a high bunch charge density, results in electrons and positrons radiating strongly in the electromagnetic field of the other beam. This effect is known as beamstrahlung. Therefore, the centre-of-mass energies of the \ee collisions  have a long low energy tail towards lower values than the nominal centre-of-mass energy. The spectrum for \CLIC operating at \rootS{3} is shown in \Figure{fig:pandoraCLICLumiSpec}, generated with \Guineapig \cite{Schulte:1999tx}. 35\% of the effective luminosity falls within 1\% of the nominal centre-of-mass energy, for \CLIC operating at \rootS{3}.
+The small \CLIC beam size  at the interaction point, which indicates a high bunch charge density, results in electrons and positrons radiating strongly in the electromagnetic field of the other beam. This effect is known as beamstrahlung. Therefore, the centre-of-mass energies of the \ee collisions  have a long low energy tail towards lower values than the nominal centre-of-mass energy. The luminosity spectrum for \CLIC operating at \rootS{3} is shown in \Figure{fig:pandoraCLICLumiSpec}, generated with \Guineapig \cite{Schulte:1999tx}. Only 35\% of the effective luminosity falls within 1\% of the nominal centre-of-mass energy, for \CLIC operating at \rootS{3}.
 
 \begin{figure}[tbph]
 \centering
@@ -42,7 +42,7 @@ The small \CLIC beam size  at the interaction point, which indicates a high bunc
 \label{fig:pandoraCLICLumiSpec}
 \end{figure}
 
-Due to the presence of a large amount of Beamstrahlung photons, the electron/positron$-$photon and photon$-$photon background must be accounted for. The instantaneous luminosities for the electron$-$positron,  electron/positron$-$photon, and photon$-$photon interactions  at a \rootS{3} \CLIC machine are listed in \Table{tab:reconstrcutionInsLumi}, obtained from \Guineapig.
+Due to the presence of a large amount of beamstrahlung photons, the electron/positron$-$photon and photon$-$photon background must be accounted for. The instantaneous luminosities for the electron$-$positron,  electron/positron$-$photon, and photon$-$photon interactions  at a \rootS{3} \CLIC machine are listed in \Table{tab:reconstrcutionInsLumi}, obtained from \Guineapig.
 
  %\Guineapig \cite{Schulte:1999tx} is used to generate luminosity spectra for all these collisions.
 
@@ -66,7 +66,7 @@ Instantaneous luminosity / \uprightMath{10^{34} cm^{-2} s^{-1}  }  &  \rootS{3} 
 \label{tab:reconstrcutionInsLumi}
 \end{table}
 
-The \Guineapig prediction overestimates the  luminosities for interactions that involve Beamstrahlung photons \cite{Sailer:lumi}. Hence luminosity corrections are applied to the  interactions that involves Beamstrahlung photons according to \Table{tab:reconstrcutionBSlumi}.
+The \Guineapig prediction overestimates the  luminosities for interactions that involve beamstrahlung photons \cite{Sailer:lumi}. Hence luminosity corrections are applied to the  interactions that involves Beamstrahlung photons according to \Table{tab:reconstrcutionBSlumi}.
 
 
 %the  centre-of-mass energies of the \ee collisions have a long low energy tail
@@ -103,7 +103,7 @@ L(\Gammagamma) / L(\ee) &0.64 & 0.69\\
 
 \section{Event Simulation}
 
-Studies presented in this thesis are based on event samples, fully simulated and reconstructed in \ILD or \CLICILD detectors.
+Studies presented in this thesis are based on event samples, fully simulated and reconstructed in \ILD or \CLICILD detector models.
 
 \GEANT \cite{Agostinelli:2002hh} is used to simulate the interactions of particles through the detector material. The \ILD and \CLICILD detector geometries are implemented in the \Mokka package \cite{MoradeFreitas:2002kj}.  The QGSP\_BERT physics list from \GEANT  is used to simulate the detailed development of hadronic showers in the detector. The beam crossing angle (20\,mrad for \CLIC and 14\,mrad for the \ILC) is introduced by applying a corresponding Lorentz boost to all generated particles in the events prior to detector simulation.
 
@@ -199,7 +199,7 @@ Several different \Marlin processors are used to reconstruct tracks: \textsc{Clu
 %The \pandora algorithm has been developed and used in the \ILC and \CLIC simulation studies.
 %\pandora event reconstruction is used in the studies for future \ee linear colliders.
 
-\pandora was developed for the \ILD detector concept \cite{Thomson:2009rp} at the \ILC and at \CLIC  \cite{Linssen:2012hp,Marshall:2012ry}. It has also been used for the \SiD concept cite{Aihara:2010zz} and the studies for the CMS endcap calorimeter upgrade \cite{Contardo:2020886}. The latest improvement to \pandora, including a better internal memory management, is summarised in  \cite{Marshall:2015rfa}.
+\pandora was developed for the \ILD detector concept \cite{Thomson:2009rp} at the \ILC and at \CLIC  \cite{Linssen:2012hp,Marshall:2012ry}. It has also been used for the \SiD detector concept \cite{Aihara:2010zz} and the studies for the CMS endcap calorimeter upgrade \cite{Contardo:2020886}. The latest improvement to \pandora, including a better internal memory management, is summarised in  \cite{Marshall:2015rfa}.
 
 
 %has been adapted to the \CLIC condition and shows its ability to deliver required energy resolutions \cite{Linssen:2012hp,Marshall:2012ry}. In the recent development, the core base codes for basic objects and memory managements were factorised into the Pandora C++ Software Development Kit \cite{Marshall:2015rfa}.
@@ -283,7 +283,7 @@ In \pandora, cone-based clustering algorithms are used to group calorimeter hits
 \begin{figure}[tbph]
 \centering
 {\includegraphics[width=0.5\textwidth]{pandora/coneClustering}}%
-\caption{Illustration of a cone-based clustering algorithm, taken from \cite{Marshall:pandoraLC}}
+\caption{Illustration of the cone-based clustering algorithm used in \pandora, taken from \cite{Marshall:pandoraLC}}
 \label{fig:pandoraConeClustering}
 \end{figure}
 
@@ -368,7 +368,7 @@ The last stage of the reconstruction is to create the output objects, Particle F
 % The electron, muon and photon identifications associated with the \PFOs are  also used in physics analyses, for example, the analyses in \Chapter{chap:Tau} and in \Chapter{chap:DoubleHiggs}.
 \end{comment}
 
-\subsection{\CLIC beam induced backgrounds suppression}
+\subsection{\CLIC beam induced background suppression}
 
 %There are a few  simulation and reconstruction issues specific to the \CLIC, which affect the analysis in \Chapter{chap:DoubleHiggs}. One issue is that the luminosity spectrum for  interactions with photon from Beamstrahlung is different to the luminosity spectrum of electron-positron interactions. A solution is presented in \Section{sec:pandoraCLUClumi} to correct for the differences. Another issue is that there is a large amount of beam induced background in the \CLIC environment, which needs to be suppressed before physics analyses. The background suppression is described in \Section{sec:pandoraggHad}. Lastly simulated masses of particles are given in \Section{sec:pandoraCLICsimMass}.
 
@@ -378,11 +378,11 @@ The analysis  \Chapter{chap:DoubleHiggs} is performed for the \CLICILD detector,
 The \TrackSelector \cite{Marshall:2012ry} package  removes poor quality and fake tracks that are  likely to be from the beam induced background. It examines the number of track hits in individual tracking subdetectors and imposes track-quality cuts. It also places a cut on the arrival time of the track onto the front of the \ECAL. If the arrival time of the track onto the front of the \ECAL, using the helical fit of the track trajectory, differs more than 50\,ns from using a straight line fit, the track will be rejected.
 
 
-The \PFOSelector \cite{Marshall:2012ry} package discards reconstructed particles that are likely to be from the beam induced background from the event reconstruction, based on the transverse momentum (\pT) and time information of the  reconstructed particles. The  reconstructed particles from \ggHad often have low \pT and are distributed in time across the 10\,ns reconstruction integration timing window. In contrast, the PFOs from physics processes have a range of \pT, and have times close to the time of the brunch crossing that contains the even, which is determined by the high-level software trigger.
+The \PFOSelector \cite{Marshall:2012ry} package discards reconstructed particles that are likely to be from the beam induced background from the event reconstruction, based on the transverse momentum (\pT) and time information of the  reconstructed particles. The  reconstructed particles from \ggHad often have low \pT and are distributed in time across the 10\,ns reconstruction integration timing window. In contrast, the PFOs from physics processes have a range of \pT, and have times close to the time of the brunch crossing that contains the event. The time of  the brunch crossing containing the event is determined by the high-level software trigger.
 
 %By utilising the high spatial resolution from the high granular calorimeter, individual PFOs can be tracked and reconstructed.
 
- \PFOSelector uses different \pT and timing cuts for the central part of the detector and for the forward part of the detector. \PFOSelector also uses different \pT and timing cuts for different types of particles: photons, neutral PFOs, and charged PFOs.
+ \PFOSelector uses different \pT and timing cuts for the central part  and  the forward part of the detector. \PFOSelector also uses different \pT and timing cuts for different types of particles: photons, neutral PFOs, and charged PFOs.
 
 Three configurations of these cuts were developed: ``loose'', ``normal'', and ``tight'' PFO selections. As the name suggested, ``loose'' PFO selection corresponds to a looser cut of \pT and time, preserving PFOs with a larger range of \pT and a larger range of  times than the ``tight'' PFO selection.
 
@@ -416,7 +416,7 @@ Three configurations of these cuts were developed: ``loose'', ``normal'', and ``
 
 \subsection{Monte Carlo truth linker}
 \label{sec:pandoraMCtruthLink}
-It is important to be able to associate reconstructed particles to the Monte Carlo particles for the purpose of algorithm development and  event selection optimisation. The MC truth linker processor provides the link between a MC particle and a  reconstructed calorimeter hit. From the link, the MC particle contributing the most to a reconstructed particle  can be determined, based on highest sum of calorimeter hits of the reconstructed  particle with the link to the same MC particle. Similarly, the MC particle contributing the most to a group of reconstructed particles (a jet) can be determined.
+It is important to be able to associate reconstructed particles to the Monte Carlo particles for the purpose of algorithm development and  event selection optimisation. The MC truth linker processor provides the link between a MC particle and a  reconstructed calorimeter hit. From the link, the MC particle contributing the most to a reconstructed particle  can be determined, based on highest sum of the energies of calorimeter hits with the link to the same MC particle. Similarly, the MC particle contributing the most to a group of reconstructed particles (a jet) can be determined.
 
 %the MC particle that links to the calorimeter hits of the reconstructed  particle.
 
@@ -447,14 +447,14 @@ d_{iB} & = \pT_{i}^2,
 \end{equation}
 where $\pT_{i}$ is the transverse momentum of particle $i$ with respect to the beam ($z$) direction, and $\DeltaOf{R_{ij}^{2}}$ is the measurement of angular separation of particle $i$ and $j$, defined as $\DeltaOf{R_{ij}^{2}} = \parenths{y_i - y_j}^2 + \parenths{\phi_i - \phi_j}^2$, where $y_i = \frac{1}{2}\ln\!\frac{E_i + {p_z}_i}{E_i - {p_z}_i}$ and $\phi_i$ are the rapidity and azimuthal angle of  particle $i$. The free parameter $R$ controls the jet radius.
 
-The distance metric and the beam distance are calculated for all pairs of particles. If the minimum value of all  distance metrics and beam distances is a distance metric, $d_{ij}$, particle $i$ and $j$ are merged and the four momentum of particle $i$ is updated as the sum of the two particles. If the minimum value is  a beam distance, $d_{iB}$, particle $i$ becomes an output jet and removed from the list of particles. The above procedure is repeated until no particles are left.
+The distance metric and the beam distance are calculated for all pairs of particles. If the minimum value of all  distance metrics and beam distances is a distance metric, $d_{ij}$, particle $i$ and $j$ are merged and the four momentum of particle $i$ is updated as the sum of the two particles. If the minimum value is  a beam distance, $d_{iB}$, particle $i$ becomes an output jet and is removed from the list of particles. The above procedure is repeated until no particles are left.
 
 
 %If $d_{ij} < d_{iB}$, particle $i$ and $j$ are merged and the four momentum of particle $i$ is updated as the sum of the two particles.  Otherwise if $d_{ij} \geqslant d_{iB}$, particle $i$ is set to be a final jet. Particle $j$ is then used to seed a new jet. The above procedure is repeated until no particles are left.
 
 %\fourMomentum of particle $i$ is updated as the sum of the two particles.
 
-The exclusive variant is similar to the inclusive variant. First difference is that when the minimum value of all distance metrics and beam distances  is  a beam distance, particle $i$ forms part of the beam jet. The beam jet is discarded at the end of the jet clustering. The second difference is that when all $d_{ij}$ and $d_{iB}$ are above a threshold, $d_{cut}$, the jet clustering will stop.
+The exclusive variant is similar to the inclusive variant. First difference is that when the minimum value of all distance metrics and beam distances  is  a beam distance, $d_{iB}$, particle $i$ forms part of the beam jet. The beam jet is discarded at the end of the jet clustering. The second difference is that when all l distance metrics and beam distances are above a threshold, $d_{cut}$, the jet clustering will stop.
 
 The exclusive mode allows a specified number of jets to be found, where the $d_{cut}$ is automatically determined. In contrast, the inclusive mode would find as many jets as the algorithm allows.
 
@@ -611,7 +611,7 @@ Two important concepts with MVAs are optimisation and the overfitting of a model
 
 An optimal model lies between an overfitted model and an underfitted model. In practice, this involves building a model with increasing complexities, and identifying the point where overfitting occurs.
 
-One definition of  overfitting is when the efficiency of the signal selection in the training samples increases, but the efficiency of the signal selection in the testing sample decreases, with the increase of the model complexity. \FIGURE{fig:doubleHiggsMVAovertraining} shows the signal selection efficiency as a function of the model complexity, using an example from the double Higgs analysis of \Chapter{chap:DoubleHiggs}, using the Boosted Decision Tree model. The efficiency of the signal selection is defined as the  fraction of the signal selected when the fraction of background  is 1\%, reported by the \TMVA training process. The depth of the tree  reflects the complexity of the model. From a tree depth of two to six, the efficiency for both testing and training samples increases. From a tree depth of six onwards, overfitting occurs. In this particular example, one should choose a tree depth fewer than seven to avoid overfitting.
+One definition of  overfitting is when the efficiency of the signal selection in the training samples increases, but the efficiency of the signal selection in the testing sample decreases, with the increase of the model complexity. \FIGURE{fig:doubleHiggsMVAovertraining} shows the signal selection efficiency as a function of the model complexity, using an example from the double Higgs analysis of \Chapter{chap:DoubleHiggs}, and the Boosted Decision Tree model. The efficiency of the signal selection is defined as the  fraction of the signal selected when the fraction of background  is 1\%, reported by the \TMVA training process. The depth of the tree  reflects the complexity of the model. From a tree depth of two to six, the efficiency for both testing and training samples increases. From a tree depth of six onwards, overfitting occurs. In this particular example, one should choose a tree depth fewer than seven to avoid overfitting.
 
 %\FIGURE{fig:doubleHiggsMVAovertraining}  can be repeated with a different split of training and testing samples to avoid the statistical fluctuation in samples. This allows for a better estimation of where overfitting occurs. However, this method is not used as the TMVA does not support such a method.
 
@@ -620,7 +620,7 @@ One definition of  overfitting is when the efficiency of the signal selection in
 
 \begin{figure}[!htbp]
 \includegraphics[width=0.45\textwidth]{doubleHiggs/DepthOfTrees3}
-\caption{Example of the signal selection efficiency as function of the model complexity. The example is chosen from the double Higgs analysis at \rootS{3}, using the Boosted Decision Tree model. The efficiency of the signal selection is defined as the  fraction of the signal selected when the fraction of background  is 1\%, reported by the \TMVA training process. The depth of the tree  reflects the complexity of the model.  From a tree depth of six onwards, overfitting occurs.}
+\caption{Example of the signal selection efficiency as a function of the model complexity. The example is chosen from the double Higgs analysis at \rootS{3}, using the Boosted Decision Tree model. The efficiency of the signal selection is defined as the  fraction of the signal selected when the fraction of background  is 1\%, reported by the \TMVA training process. The depth of the tree  reflects the complexity of the model.  From a tree depth of six onwards, overfitting occurs.}
 \label{fig:doubleHiggsMVAovertraining}
 \end{figure}
 
@@ -646,7 +646,7 @@ Discriminant variables give better separation power when they are gaussian-like 
 \subsection{Projective Likelihood model}
 \label{sec:pandoraLikelihood}
 
-The projective likelihood model with probability density estimators (PDE) is used in \pandora for the photon ID test,  due to its simplicity and low requirement on computing resources. The \pandora implementation of the projective likelihood model is discussed  in \Section{sec:photonLikelihood}.
+The projective likelihood model with probability density estimators (PDE) is used in \pandora for the photon ID test,  due to its simplicity and low requirement on computing resources. The \pandora implementation of the projective likelihood model is discussed  in \Section{sec:photonIDtest}.
 %Probability density estimators for each input variable combined in likelihood estimator (ignoring correlations
 
 The likelihood classifier calculates the probability density for each discriminant variable, for the signal class and the  background class. The overall signal and background likelihood are defined as products of the individual probability densities of each variable, for the respective signal class and background class. The likelihood ratio, $R$, can be then defined as the signal likelihood divided by the sum of the signal likelihood and the background likelihood.
@@ -742,7 +742,7 @@ It is very easy to construct a decision tree that fits the training data very we
 
 \begin{itemize}
   \item Boosting: the basic idea of boosting is that the tree growing procedure focuses on events which are difficult to classify correctly. By assigning a weight to each event,   after each tree growing iteration, the weights for misclassified events are gradually increased. Therefore misclassified events get more attention in the next iteration.
-  \item Bagging: also known as boot-strap, it is a method that selects a  random subset of the training sample, and use the subset in the training stage.
+  \item Bagging: also known as boot-strap, it is a method that selects a  random subset of the training sample, and uses the subset in the training stage.
   \item Random Forest: when a tree is grown, a randomly selected subset of discriminant variables are used to grow the tree. %This method is know to reduce the variance of the tree.
 \end{itemize}
 
@@ -783,9 +783,9 @@ A Boosted Decision Tree (BDT) contains many decision trees, where the boosting i
     \end{cases}
   \end{equation}
 \end{itemize}
-The tree classifier output, $G$, is denoted as  $-1$ or $+1$. One can think of $-1$ as background and $+1$ as signal. There are $N$ events and $M$ iterations (trees). The parameter $B$ represents whetjher an event is misclassified. For the $i^{th}$ event in the  $m^{th}$ tree,  $B_{i,m} = 1$ if the event is misclassified, or 0 if the event is correctly classified. The parameter $w_{i,m}$ represents the event weight for $i^{th}$ event  in $m^{th}$ tree. In each iteration, if the $i^{th}$ event is misclassified in $m^{th}$ tree, the event weight increases by a factor of $(1 - err_m)/(err_m)$. Otherwise, the event weight does not change.
+The tree classifier output, $G$, is denoted as  $-1$ or $+1$. One can think of $-1$ as background and $+1$ as signal. There are $N$ events and $M$ iterations (trees). The parameter $B$ represents whether an event is misclassified. For the $i^{th}$ event in the  $m^{th}$ tree,  $B_{i,m} = 1$ if the event is misclassified, or 0 if the event is correctly classified. The parameter $w_{i,m}$ represents the event weight for $i^{th}$ event  in $m^{th}$ tree. In each iteration, if the $i^{th}$ event is misclassified in $m^{th}$ tree, the event weight increases by a factor of $(1 - err_m)/(err_m)$. Otherwise, the event weight does not change.
 
-The power of  adaptive boosting  is to dramatically improve the performance of a weak classifier. A weak classifier is a classifier which is gives a predictive performance only sightly better than a random guess. A decision tree with one or two layers would be a weak classifier. By sequentially applying many weak classifiers with weighted samples, the final ``forest'' is very robust with a very good performance at selecting signals.
+The power of  adaptive boosting  is to dramatically improve the performance of a weak classifier. A weak classifier is a classifier which gives a predictive performance only sightly better than a random guess. A decision tree with one or two layers would be a weak classifier. By sequentially applying many weak classifiers with weighted samples, the final ``forest'' is very robust with a very good performance at selecting signals.
 
 %A weak classifier is one whose error rate is only slightly better than random guessing. The purpose of boosting is to sequentially apply the weak classification algorithm to repeatedly modified versions of the data,
 
@@ -815,9 +815,9 @@ The number of bins per variable is  a necessary parameter to make tree growing e
 
 For the end node, the output can either be  signal-like or background-like, based on the majority of the training events in the end node. Numerically, it can correspond to 1/0. However, the end node could also use signal purity as the output, resulting in a continues range of [0,1].
 
-The bagging fraction determines the fraction of randomly selected samples used in each boosting iteration. By choosing a small value, samples between each boosting iteration are less correlated. Hence the overall model performance improves.
+The bagging fraction determines the fraction of randomly selected events used in each boosting iteration. By choosing a small value, events between each boosting iteration are less correlated. Hence the overall model performance improves.
 
-The \DoPreSelection in the BDT of \TMVA flag allows the classifier to identify  phase spaces where there are only background events and apply cuts to discard these background events.
+The \DoPreSelection flag in the BDT of \TMVA allows the classifier to identify  phase spaces where there are only background events and apply cuts to discard these background events.
 
 \subsection{Multiple classes}
 \label{sec:pandoraMVAmulticlass}

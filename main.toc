@@ -37,7 +37,7 @@
 \contentsline {section}{\numberline {4.3}Event Reconstruction}{49}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}\pandora }{49}{subsection.4.3.1}
 \contentsline {subsubsection}{\numberline {4.3.1.1}Initial clustering}{50}{subsubsection.4.3.1.1}
-\contentsline {subsection}{\numberline {4.3.2}\CLIC beam induced backgrounds suppression}{51}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}\CLIC beam induced background suppression}{51}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Analysis software}{53}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Monte Carlo truth linker}{53}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Jet algorithms}{53}{subsection.4.4.2}
@@ -60,26 +60,26 @@
 \contentsline {section}{\numberline {5.2}Overview of photon reconstruction in \pandora }{69}{section.5.2}
 \contentsline {section}{\numberline {5.3}\PhotonReconstruction algorithm}{70}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Forming photon clusters}{71}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Finding photon candidates}{72}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}\peakFinding algorithm}{72}{subsection.5.3.3}
-\contentsline {subsubsection}{\numberline {5.3.3.1}Creating the 2D map}{74}{subsubsection.5.3.3.1}
-\contentsline {subsubsection}{\numberline {5.3.3.2}Peak reconstruction}{74}{subsubsection.5.3.3.2}
-\contentsline {subsubsection}{\numberline {5.3.3.3}Charged cluster variant}{76}{subsubsection.5.3.3.3}
-\contentsline {subsubsection}{\numberline {5.3.3.4}Inclusive mode}{78}{subsubsection.5.3.3.4}
-\contentsline {subsection}{\numberline {5.3.4}Photon ID test}{78}{subsection.5.3.4}
-\contentsline {subsubsection}{\numberline {5.3.4.1}Variables used in likelihood classifier}{80}{subsubsection.5.3.4.1}
-\contentsline {subsubsection}{\numberline {5.3.4.2}Projective Likelihood classifier}{82}{subsubsection.5.3.4.2}
+\contentsline {subsection}{\numberline {5.3.2}Finding photon candidates and \peakFinding algorithm}{72}{subsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.2.1}Creating the 2D map}{74}{subsubsection.5.3.2.1}
+\contentsline {subsubsection}{\numberline {5.3.2.2}Peak reconstruction}{74}{subsubsection.5.3.2.2}
+\contentsline {subsubsection}{\numberline {5.3.2.3}Charged cluster variant}{76}{subsubsection.5.3.2.3}
+\contentsline {subsubsection}{\numberline {5.3.2.4}Inclusive mode}{78}{subsubsection.5.3.2.4}
+\contentsline {subsection}{\numberline {5.3.3}Photon ID test}{78}{subsection.5.3.3}
+\contentsline {subsubsection}{\numberline {5.3.3.1}Variables used in likelihood classifier}{78}{subsubsection.5.3.3.1}
+\contentsline {subsubsection}{\numberline {5.3.3.2}Projective Likelihood classifier}{81}{subsubsection.5.3.3.2}
 \contentsline {section}{\numberline {5.4}Photon fragment removal algorithm in the \ECAL }{83}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Variables}{84}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Cuts}{86}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Photon fragment removal algorithm after the \PhotonReconstruction algorithm}{88}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}Photon fragment removal algorithm in the \HCAL }{88}{section.5.5}
+\contentsline {subsection}{\numberline {5.4.2}Cuts}{85}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Photon fragment removal algorithm after the \PhotonReconstruction algorithm}{87}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}Photon fragment removal algorithm in the \HCAL }{87}{section.5.5}
 \contentsline {section}{\numberline {5.6}Photon splitting algorithm}{91}{section.5.6}
-\contentsline {section}{\numberline {5.7}Photon reconstruction performance}{92}{section.5.7}
-\contentsline {subsection}{\numberline {5.7.1}Improvement from no stand-alone photon algorithms}{93}{subsection.5.7.1}
-\contentsline {subsection}{\numberline {5.7.2}Improvement from \pandora version 1}{96}{subsection.5.7.2}
-\contentsline {subsection}{\numberline {5.7.3}Performance of individual photon algorithms}{98}{subsection.5.7.3}
-\contentsline {subsection}{\numberline {5.7.4}Photon reconstruction performance with \pandora version 3}{99}{subsection.5.7.4}
+\contentsline {section}{\numberline {5.7}Photon reconstruction performance}{91}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Improvement over no stand-alone photon algorithms}{92}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Improvement over \pandora version 1}{95}{subsection.5.7.2}
+\contentsline {subsection}{\numberline {5.7.3}Performance of individual photon algorithms}{97}{subsection.5.7.3}
+\contentsline {subsection}{\numberline {5.7.4}Photon reconstruction performance with \pandora version 3}{98}{subsection.5.7.4}
+\contentsline {section}{\numberline {5.8}Summary}{101}{section.5.8}
 \contentsline {chapter}{\numberline {6}Tau Lepton Decay Mode Classification}{103}{chapter.6}
 \contentsline {section}{\numberline {6.1}Event generation and simulation}{104}{section.6.1}
 \contentsline {section}{\numberline {6.2}Event reconstruction}{104}{section.6.2}
@@ -94,21 +94,21 @@
 \contentsline {subsection}{\numberline {6.4.5}\decayRhoShort and \decayAiPhotonShort resonances variables}{112}{subsection.6.4.5}
 \contentsline {subsection}{\numberline {6.4.6}Separating electrons from charged pions}{115}{subsection.6.4.6}
 \contentsline {section}{\numberline {6.5}Classification}{115}{section.6.5}
-\contentsline {section}{\numberline {6.6}Tau decay mode classification efficiency}{116}{section.6.6}
+\contentsline {section}{\numberline {6.6}Tau decay mode classification efficiency}{117}{section.6.6}
 \contentsline {section}{\numberline {6.7}Electromagnetic calorimeter optimisation}{118}{section.6.7}
-\contentsline {section}{\numberline {6.8}Summary}{122}{section.6.8}
+\contentsline {section}{\numberline {6.8}Summary}{121}{section.6.8}
 \contentsline {chapter}{\numberline {7}Tau pair polarisation correlations}{123}{chapter.7}
-\contentsline {section}{\numberline {7.1}Event generation and simulation}{124}{section.7.1}
+\contentsline {section}{\numberline {7.1}Event generation and simulation}{125}{section.7.1}
 \contentsline {section}{\numberline {7.2}Event reconstruction}{125}{section.7.2}
-\contentsline {section}{\numberline {7.3}Pre-selection}{126}{section.7.3}
-\contentsline {section}{\numberline {7.4}Tau identification}{126}{section.7.4}
+\contentsline {section}{\numberline {7.3}Pre-selection}{125}{section.7.3}
+\contentsline {section}{\numberline {7.4}Tau identification}{125}{section.7.4}
 \contentsline {subsection}{\numberline {7.4.1}Tau identification processor}{126}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Jet clustering}{127}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.2}Jet clustering}{128}{subsection.7.4.2}
 \contentsline {subsection}{\numberline {7.4.3}Selecting best tau candidates in an event}{128}{subsection.7.4.3}
-\contentsline {section}{\numberline {7.5}Kinematic reconstruction of tau energy}{128}{section.7.5}
+\contentsline {section}{\numberline {7.5}Kinematic reconstruction of tau energy}{129}{section.7.5}
 \contentsline {section}{\numberline {7.6}Tau decay mode classification}{130}{section.7.6}
-\contentsline {section}{\numberline {7.7}Tau pair polarisation correlations}{130}{section.7.7}
-\contentsline {section}{\numberline {7.8}Summary}{131}{section.7.8}
+\contentsline {section}{\numberline {7.7}Tau pair polarisation correlations}{131}{section.7.7}
+\contentsline {section}{\numberline {7.8}Summary}{132}{section.7.8}
 \contentsline {chapter}{\numberline {8}Double Higgs Boson Production Analysis}{135}{chapter.8}
 \contentsline {section}{\numberline {8.1}Analysis Strategy Overview}{136}{section.8.1}
 \contentsline {section}{\numberline {8.2}Monte Carlo sample generation}{137}{section.8.2}

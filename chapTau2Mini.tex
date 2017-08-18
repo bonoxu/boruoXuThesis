@@ -1,8 +1,8 @@
 \chapter{Tau pair polarisation correlations}
 \label{chap:Tau2Mini}
 
-\chapterquote{I once tried standing up on my toes to see far out in the distance, but I found that I could see much farther by climbing to a high place.}%
-{Xun Kuang, 313 BC $-$ 238 BC}%: Blackwood's Magazine May 1830
+\chapterquote{Where can I find a man who has forgotten words so I can have a word with him?}%
+{Zhuang Zi, 369 BC $-$ 286 BC}%: Blackwood's Magazine May 1830
 
 
 
@@ -22,7 +22,7 @@ The analysis starts with the event generation and simulation, followed by identi
 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
-  \includegraphics[width=0.75\textwidth]{tau/NoTimeAnalysis/tauNTAflow}
+  \includegraphics[width=0.75\textwidth]{tau/NoTimeAnalysis/tauNTAflow2}
   \caption{Main steps in the proof-of-principle demonstration of the tau pair polarisation correlations.}
   \label{fig:TauNTAflow}
 \end{figure}
@@ -54,7 +54,7 @@ For this proof-of-principle study, \eeZZQQ events were generated at a centre-of-
 \section{Event reconstruction}
 
 
-Events were reconstructed with  \ilcsoft version v01-17-07 \cite{Gaede:82475} and \pandora version 3 \cite{Marshall:2015rfa}, using the photon reconstruction algorithms described in \Chapter{chap:Photon}. \FIGURE{fig:TauNTAevtDsp} shows an event display of a \eeZZQQ event. The two brown cones indicate the tau decay products found by the tau identification processor. The four blue cones indicate the four jets found by the jet clustering algorithm. 
+Events were reconstructed with  \ilcsoft version v01-17-07 \cite{Gaede:82475} and \pandora version 3 \cite{Marshall:2015rfa}, using the photon reconstruction algorithms described in \Chapter{chap:Photon}. \FIGURE{fig:TauNTAevtDsp} shows an event display of a \eeZZQQ event. The two brown cones indicate the tau decay products found by the tau identification processor. The four blue cones indicate the four jets found by the jet clustering algorithm.
 
 
 %Hence the two approaches are combined to find the decay products from two tau leptons.
@@ -71,7 +71,7 @@ Events were reconstructed with  \ilcsoft version v01-17-07 \cite{Gaede:82475} an
 \end{figure}
 
 
-Seven tau decay modes defined in \Section{sec:tauDecayModes} were considered in this analysis: \tauToElectron; \tauToMuon; \tauToPion; \tauToRho; \tauToAiPhoton; \tauToAiPion; and \tauToThreePion. 
+Seven tau decay modes defined in \Section{sec:tauDecayModes} were considered in this analysis: \tauToElectron; \tauToMuon; \tauToPion; \tauToRho; \tauToAiPhoton; \tauToAiPion; and \tauToThreePion.
 
 
 \section{Pre-selection}
@@ -111,7 +111,7 @@ The \eeZZQQ final state contains two tau leptons and two quark jets. Identifying
 
 The \BonoTauFinder processor is a modified version of the tau decay product identification software used in the double Higgs analysis in \Section{sec:doubleHiggsBonoTauFinder}. The processor identifies high transverse momentum (\pT) particles as tau seeds. Particles are iteratively added to a cone in the order of the ascending opening angle to the seed. The cone is called search cone, which contains potential tau decay products. After each particle addition, the temporary search cone is then considered as a temporary  tau candidate and tested for isolation and consistency  with a tau hadronic decay signature. The number of charged particles in the temporary tau candidate, $N_{X^+}$, should be one or three. The invariant mass of the temporary tau candidate, $m_{c}$, should be less than 3\,GeV. The temporary tau candidate also needs to pass the isolation condition to be identified as a tau candidate, which requires the opening angle between the temporary search cone  and the $2^{nd}$ closest charged particle, $\theta^{c}_{X'^+}$, is larger than 0.6\,rad.
 
-The iterative particle addition procedure stops when the cone opening angle, $\theta_S$, is larger than $\cos^{-1}(0.99)$. If multiple temporary tau candidates of the same tau seed pass the isolation condition, the one with the smallest opening angle is chosen to form the final tau candidate. \TABLE{tab:tauBonoTauFinderProcessor} lists the parameters  for the  \BonoTauFinder processor. 
+The iterative particle addition procedure stops when the cone opening angle, $\theta_S$, is larger than $\cos^{-1}(0.99)$. If multiple temporary tau candidates of the same tau seed pass the isolation condition, the one with the smallest opening angle is chosen to form the final tau candidate. \TABLE{tab:tauBonoTauFinderProcessor} lists the parameters  for the  \BonoTauFinder processor.
 
 %The parameter \pT is the transverse momentum. The parameter $\theta_S$ is the maximum opening angle of the search cone in rad. The parameter $ N_{X^+}$ is the number of charged particles in the search cone. The parameter $m_{c}$ is the invariant mass of all particles in the search cone. The parameter $\theta^{c}{X'^+}$ is the opening angle between the search cone  and the $2^{nd}$ closest charged particle.
 
@@ -257,7 +257,7 @@ the pair of  tau  candidates  with smallest $\chi^2$ is selected as the best pai
 \section{Kinematic reconstruction of tau energy}
 
 %The previous section describes the method to identify the tau pair decay products.
-To obtain the distributions of  $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$, for  \tauToPionBoth decays in \eeZZQQ events, the energies of the taus, $E_{\APtauon}$ and   $E_{\Ptauon}$ are required. Energies of the taus are also required for the calculation of the energy variables used in the tau decay mode classification.
+To obtain the distributions of  $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$, for  \tauToPionBoth decays in \eeZZQQ events, the energies of the taus, $E_{\APtauon}$ and   $E_{\Ptauon}$, are required. Energies of the taus are also required for the calculation of the energy variables used in the tau decay mode classification.
 
  In the lab frame, the energies of the taus from  \ZToTauTau can not be determined easily. However, in the \PZ rest frame, the energies of the taus can determined, which are the half of the energy of the \PZ, i.e. $E'_{\APtauon} = E'_{\Ptauon} = \frac{1}{2} E'_{\PZ}$.
 
@@ -307,7 +307,7 @@ p^{\mu}_{\ZForTauTau} =
 \end{equation}
 
 
-To determine the 
+To determine the
 
 
 
@@ -374,19 +374,19 @@ The training  the multivariate classifier follows the procedure in  \Section{sec
 \section{Tau pair polarisation correlations}
 \label{sec:TauMiniCorr}
 
-\FIGURE{fig:TauSpin1D} shows distributions of $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$, using generated \eeZZQQ events. Both taus decay by \tauToPionBoth. $E_{\Ptaupm}$ is half of the energy of \ZForTauTau in \ZForTauTau rest frame. The energy fractions of the tau decay product to the tau lepton ($E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$) are the appropriate kinematic variables to study the tau pair polarisation correlation, motivated in \Section{sec:theoryTauPair}. The shape of the distraction at the generator decreases gradually with the increasing $E_{\Ppipm}/E_{\Ptaupm}$. The decreasing shape is largely preserved in the full detector simulation. In the full detector simulation, events with  $E_{\Ppipm}/E_{\Ptaupm}$ close to 0, which fall in the first bin in the figures, are not reconstructed correctly. When the energies of the tau are mostly carried away by the neutrinos, it is difficult to identify low-energy charged pions as tau decay products.
+\FIGURE{fig:TauSpin1D} shows distributions of $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$, using generated \eeZZQQ events. Both taus decay by \tauToPionBoth. $E_{\Ptaupm}$ is half of the energy of \ZForTauTau in \ZForTauTau rest frame. The energy fractions of the tau decay product to the tau lepton ($E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$) are the appropriate kinematic variables to study the tau pair polarisation correlation, motivated in \Section{sec:theoryTauPair}. At the generator level, the shape of the distribution decreases gradually with the increasing $E_{\Ppipm}/E_{\Ptaupm}$. The decreasing shape is largely preserved in the full detector simulation. In the full detector simulation, events with  $E_{\Ppipm}/E_{\Ptaupm}$ close to 0, which fall in the first bin in the figures, are not reconstructed correctly. When the energies of the tau are mostly carried away by the neutrinos, it is difficult to identify low-energy charged pions as tau decay products.
 
 
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
 \begin{subfigure}[b]{0.45\textwidth}
   \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/1DMC}
-  \caption{Generator-level  Monte Carlo particles}
+  \caption{}
   \label{fig:TauSpin1DMC}
 \end{subfigure}
 \begin{subfigure}[b]{0.45\textwidth}
   \includegraphics[width=\textwidth]{tau/NoTimeAnalysis/1DrecoNoOverflow}
-  \caption{Full detector simulation}
+  \caption{}
   \label{fig:TauSpin1Dreco}
 \end{subfigure}
 \caption
@@ -422,7 +422,7 @@ The training  the multivariate classifier follows the procedure in  \Section{sec
 \end{figure}
 
 \section{Summary}
-This is a proof-of-principle demonstration that the generator-level pion energy fraction correlation can be reconstructed at the analysis level. The analysis contains several important steps: tau identification; kinematic reconstruction of the energies of the taus; the classification of the  \tauToPionBoth decay mode; and the reconstruction of the tau pair polarisation correlations discussed in \Section{sec:TauMiniCorr}.
+This is a proof-of-principle demonstration that the generator-level pion energy fraction correlation can be reconstructed at the analysis level. The analysis contains several important steps: tau identification; kinematic reconstruction of the energies of the taus; the classification of the  \tauToPionBoth decay mode; and the reconstruction of the tau pair polarisation correlations discussed in \Section{sec:theoryTauPair}.
 
 %the incorrect finding of the tau pair decay products  in \Section{sec:tauHZfindTau}.
 

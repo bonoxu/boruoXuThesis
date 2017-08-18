@@ -150,7 +150,7 @@ where $\vec{p_{i}}$ is the momentum vector of particle $i$;  vector $\hat{t}$ is
 \label{sec:tauPreSel}
 
 
-For the purpose of this study, three pre-selection cuts, based on the MC information of the particles,  are used. The cuts and the number of tau decays passing the cuts are listed in \Table{tab:tauPreSelEff}.
+For the purpose of this study, three pre-selection cuts, based on the MC information of the particles,  are used. The cuts and the fractions of tau decays passing the cuts are listed in \Table{tab:tauPreSelEff}.
 
 Since this study is focused on photon reconstruction in the \ECAL to classify tau decay modes, the tau decays with photon converting to electron pairs in the tracking detector are not considered.
 
@@ -282,7 +282,7 @@ Category &  Variable \\
 Particle numbers  &{  ${N}_{\charge}$, ${N}_{\Pmu}$, ${N}_{\Pe}$, ${N}_{\Pgg}$,  ${N}_{\Pgpm}$} \\
 Invariant masses & {$m_{vis}$, $m_{\charge}$, $m_{\neutral}$, $m_{\Pgg}$, $m_{\Pgpm}$} \\
 Energy variables & { $\tilde{E}_{vis}$,  $\tilde{E}_{\charge}$, $\tilde{E}_{\Pmu}$, $\tilde{E}_{\Pe}$, $\tilde{E}_{\Pgg}$,  $\tilde{E}_{\Pgpm}$} \\
-Calorimetric energy information &   { $E^{\ECAL}_{\charge} / E_{\charge}$,  $ E^{\ECAL} / E$ } \\
+Calorimetric energy &   { $E^{\ECAL}_{\charge} / E_{\charge}$,  $ E^{\ECAL} / E$ } \\
 \decayRhoShort reconstruction &{  $m_{\Pgpz}^{\parenths{\Prho}}$, $m_{\Prho}^{reco}$} \\
 \decayAiPhotonShort reconstruction & {  $m_{\Pgpz}^{(\Pai)}$, $m^{*(\Pai)}_{\Pgpz}$, $m_{\Pai}^{reco}$} \\
 EM shower profile & $\delta{l}$, $t_0$, $\langle{w}\rangle$ \\
@@ -399,7 +399,7 @@ Energy information helps to further separate different tau decay modes. Six ener
 \subsection{Calorimetric energy variables}
 % { $E^{\ECAL}_{\charge} / E_{\charge}$,  $ E^{\ECAL} / E$ } \\
 
-Two calorimetric energy variables are used in the MVA classification: the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL, where only calorimetric deposits associated with charged particles are considered ($E^{\ECAL}_{\charge} / E_{\charge}$); and the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL for all particles ($E^{\ECAL} / E$). These  two variables help to improve the identification of electron and muon decay modes. \FIGURE{fig:tauVar4} show distributions of  $E^{\ECAL}_{\charge} / E_{\charge}$ and $E^{\ECAL} / E$ for different decay modes. An electron typically deposits over 95\% of its energy in the \ECAL, and a muon typically deposits 5\% to 20\% of its energy in the \ECAL. The difference between $E^{\ECAL}_{\charge} / E_{\charge}$ and  $E^{\ECAL} / E$ is that photons and neutral hadrons, which deposit most of their energies in the \ECAL and in the \HCAL respectively, are not included in the calculation of $E^{\ECAL}_{\charge} / E_{\charge}$.
+Two calorimetric energy variables are used in the MVA classification: the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL, where only calorimetric deposits associated with charged particles are considered ($E^{\ECAL}_{\charge} / E_{\charge}$); and the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL for all particles ($E^{\ECAL} / E$). These  two variables help to improve the identification of electron and muon decay modes. \FIGURE{fig:tauVar4} show distributions of  $E^{\ECAL}_{\charge} / E_{\charge}$ and $E^{\ECAL} / E$ for different decay modes. An electron typically deposits over 95\% of its energy in the \ECAL, and a muon typically deposits 5\% to 25\% of its energy in the \ECAL. The difference between $E^{\ECAL}_{\charge} / E_{\charge}$ and  $E^{\ECAL} / E$ is that photons and neutral hadrons, which deposit most of their energies in the \ECAL and in the \HCAL respectively, are not included in the calculation of $E^{\ECAL}_{\charge} / E_{\charge}$.
 
 
 
@@ -417,7 +417,7 @@ Two calorimetric energy variables are used in the MVA classification: the fracti
   \label{fig:tauVarEEcalRatioAll}
 \end{subfigure}
 \caption
-{Distributions of  the fraction of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL, a) where only calorimetric deposits associated with charged particles are considered ($E^{\ECAL}_{\charge} / E_{\charge}$); and b) for all reconstructed particles ($ E^{\ECAL} / E$). The particle ID information comes from the output of the \pandora reconstruction. The area under the curve for each decay mode is normalised to unity.}
+{Distributions of  the fractions of the energy  deposited in the \ECAL divided by the  energy deposited in the \ECAL and \HCAL: a) where only calorimetric deposits associated with charged particles are considered ($E^{\ECAL}_{\charge} / E_{\charge}$); and b) for all reconstructed particles ($ E^{\ECAL} / E$). The particle ID information comes from the output of the \pandora reconstruction. The area under the curve for each decay mode is normalised to unity.}
 \label{fig:tauVar4}
 \end{figure}
 
@@ -552,7 +552,7 @@ From  the \Prho invariant mass reconstruction of the \decayRhoShort  decay hypot
 
 From the \Pai invariant mass resonance reconstruction, three variables are obtained and used in the MVA classification:  the \Pai mass ($m^{reco}_{\Pai} \equiv m_{tot}$ in \Equation{eqn:tauA1}), the first \Ppizero mass ($m_{\Pgpz}^{(\Pai)} \equiv m_{\Pphoton_1\Pphoton_2}$ in \Equation{eqn:tauA1}), and the second \Ppizero mass ($m^{*(\Pai)}_{\Pgpz} \equiv  m_{\Pphoton_3\Pphoton_4}$ in \Equation{eqn:tauA1}). If there are three reconstructed photons, $m^{*(\Pai)}_{\Pgpz}$ is set to   0. If there are two reconstructed photons, depending on whether \Equation{eqn:tauA1TwoPhoton1} or \Equation{eqn:tauA1TwoPhoton2} gives the smallest $\chi^2$ value, either $m^{*(\Pai)}_{\Pgpz}$ is set to   0 or both $m_{\Pgpz}^{(\Pai)}$ and $m^{*(\Pai)}_{\Pgpz}$ are 0. If there is only one reconstructed photon, both $m_{\Pgpz}^{(\Pai)}$ and $m^{*(\Pai)}_{\Pgpz}$ are 0.
 
- \FIGURE{fig:tauVarMA1} shows the distributions of  $m^{reco}_{\Pai}$ under \decayAiPhotonShort decay mode hypothesis test for four different tau decay modes. Only the distribution for \decayAiPhotonShort decay mode has a resonance peak at \Pai mass position.
+ \FIGURE{fig:tauVarMA1} shows the distributions of  $m^{reco}_{\Pai}$ under \decayAiPhotonShort decay mode hypothesis test for three different tau decay modes. Only the distribution for \decayAiPhotonShort decay mode has a resonance peak at \Pai mass position.
 
 % \Equation{eqn:tauRho} and \Equation{eqn:tauA1}
 %are the invariant mass of the two photons in the fit, $m_{\Pgpz}\parenths{\rho}$, and  the invariant mass of the  two photons and one \Pgpm, $m_\rho$.
@@ -577,11 +577,11 @@ Variables are used in this analysis to help further separate  electrons from cha
 
 %In particular \pandora uses a wide range of information to determine the electron ID.
 
-An electron develops a characteristic EM shower in the \ECAL, whilst a charged pion develops a hadronic shower. Variables characterising the  EM shower help to identify an electron. Three variables are used in the MVA classification: the start layer of the longitudinal shower ($t_0$); the fractional difference between observed and expected longitudinal EM shower profile ($\delta{l}$); and $\langle{w}\rangle$, a measure of the EM shower transverse width. These variables are defined in the same way as the variables used in the photon likelihood classifier in the photon reconstruction in \pandora, described in \Section{sec:photonLikelihood}.
+An electron develops a characteristic EM shower in the \ECAL, whilst a charged pion develops a hadronic shower. Variables characterising the  EM shower help to identify an electron. Three variables are used in the MVA classification: the start layer of the longitudinal shower ($t_0$); the fractional difference between observed and expected longitudinal EM shower profile ($\delta{l}$); and $\langle{w}\rangle$, a measure of the EM shower transverse width. These variables are defined in the same way as the variables used in the photon likelihood classifier in the photon reconstruction in \pandora, described in \Section{sec:photonIDtest}.
 
 The calorimeter hit information is also used to  differentiate an EM shower from a hadronic shower. Two variables used in the MVA classification are: the average energy of a calorimeter hit ($\bar{E}_{hit}$), which is the total energy deposited in the \ECAL and \HCAL divided by the number of the \ECAL and \HCAL calorimeter hits, and the average fraction of minimum ionising calorimeter hits ($MIP$), which is the number of calorimeter hits in the \ECAL and \HCAL flagged as minimum ionising particles by the \pandora reconstruction, divided by the total number of calorimeter hits in the \ECAL and \HCAL.
 
-Finally track momentum used to provide the consistency check of the track momentum with the total energies in the \ECAL and \HCAL for charged particles. The variable used in the MVA classification is the energy in the \ECAL and \HCAL divided by the track momentum, averaged over all charged particles ($E/p$).
+Finally track momentum is used to provide the consistency check of the track momentum with the total energies in the \ECAL and \HCAL for charged particles. The variable used in the MVA classification is the energy in the \ECAL and \HCAL divided by the track momentum, averaged over all charged particles ($E/p$).
 
 
 \FIGURE{fig:tauVar5} show distributions of the average energy of a calorimeter hit ($\bar{E}_{hit}$), and the energy in the \ECAL and \HCAL divided by the track momentum, averaged over all charged particles ($E/p$). Differences between the \decayElectron, \decayMuon, and \decayPion decay modes can be seen.
@@ -745,7 +745,7 @@ where $B_{i}$ is the branching fraction of the tau  hadronic decay mode $i$; $\v
 \hline
 \ECAL square cell size /\,mm & 3 & 5 & 7 & 10 & 15 & 20  \\
 \hline
-\ClosestHitDistance /\,mm& 5 & 10 & 10 & 10 & 20 & 20 \\
+\ClosestHitDistance    /\,mm& 5 & 10 & 10 & 10 & 20 & 20 \\
 \hline
 \hline
 \end{tabular}
