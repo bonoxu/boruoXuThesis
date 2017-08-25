@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: canvas1/
-//=========  (Thu Aug 17 14:11:56 2017) by ROOT version5.34/05
+//=========  (Fri Aug 25 11:01:05 2017) by ROOT version5.34/05
    TCanvas *canvas1 = new TCanvas("canvas1", "",12,51,800,700);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -97,7 +97,7 @@
 
    ci = TColor::GetColor("#7293cb");
    0->SetLineColor(ci);
-   0->GetXaxis()->SetTitle("#bar{E}_{hit}");
+   0->GetXaxis()->SetTitle("#bar{E}_{hit} / GeV");
    0->GetXaxis()->SetNdivisions(506);
    0->GetXaxis()->SetLabelFont(132);
    0->GetXaxis()->SetLabelOffset(0.015);
@@ -221,7 +221,7 @@
 
    ci = TColor::GetColor("#e1974c");
    1->SetLineColor(ci);
-   1->GetXaxis()->SetTitle("#bar{E}_{hit}");
+   1->GetXaxis()->SetTitle("#bar{E}_{hit} / GeV");
    1->GetXaxis()->SetNdivisions(506);
    1->GetXaxis()->SetLabelFont(132);
    1->GetXaxis()->SetLabelOffset(0.015);
@@ -357,7 +357,7 @@
 
    ci = TColor::GetColor("#83ba5b");
    2->SetLineColor(ci);
-   2->GetXaxis()->SetTitle("#bar{E}_{hit}");
+   2->GetXaxis()->SetTitle("#bar{E}_{hit} / GeV");
    2->GetXaxis()->SetNdivisions(506);
    2->GetXaxis()->SetLabelFont(132);
    2->GetXaxis()->SetLabelOffset(0.015);
