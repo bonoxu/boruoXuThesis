@@ -719,7 +719,7 @@ A high correct classification rate is achieved for all seven classified tau deca
 \section{Electromagnetic calorimeter optimisation}
 \label{sec:tauECAL}
 
-Photon reconstruction in a highly granular \ECAL is an important  metric for the \ECAL performance. Since the classification of the tau hadronic decay modes depends on the ability to reconstruct photons, tau hadronic decay modes classification is used as a metric to optimise the \ECAL design. The tau decay mode classification was studied with \ECAL square cell sizes of 3, 5, 7, 10, 15 and 20\,mm, and at four  centre-of-mass energies of 100, 200, 500, 1000\,GeV. The other \ECAL dimensions are kept the same as for  the \ILD nominal detector. The multivariate classifier was trained  individually for each \ECAL cell size and each centre-of-mass energy.
+The performance of photon reconstruction in a highly granular \ECAL is an important  metric for the \ECAL performance. Since the classification of the tau hadronic decay modes depends on the ability to reconstruct photons, tau hadronic decay modes classification is used as a metric to optimise the \ECAL design. The tau decay mode classification was studied with \ECAL square cell sizes of 3, 5, 7, 10, 15 and 20\,mm, and at four  centre-of-mass energies of 100, 200, 500, 1000\,GeV. The other \ECAL dimensions are kept the same as for  the \ILD nominal detector. The multivariate classifier was trained  individually for each \ECAL cell size and each centre-of-mass energy.
 
 
 %The analysis is repeated with varying \ECAL square cell sizes at 3, 5, 7, 10, 15 and 20\,mm, at four  \sqrtS = 100, 200, 500, 1000\,GeV.
@@ -740,12 +740,17 @@ where $B_{i}$ is the branching fraction of the tau  hadronic decay mode $i$; $\v
 \centering
 %\small
 %\smallskip
-\begin{tabular}{ l   r  r  r  r  r  r  }
+\begin{tabular}{l   r}
 \hline
 \hline
-\ECAL square cell size /\,mm & 3 & 5 & 7 & 10 & 15 & 20  \\
+\ECAL cell length /\,mm& \ClosestHitDistance\xspace/\,mm   \\
 \hline
-\ClosestHitDistance    /\,mm& 5 & 10 & 10 & 10 & 20 & 20 \\
+3 & 5 \\
+5  & 10 \\
+7 & 10 \\
+10 & 10 \\
+15 & 20 \\
+20 & 20 \\
 \hline
 \hline
 \end{tabular}
@@ -760,7 +765,7 @@ where $B_{i}$ is the branching fraction of the tau  hadronic decay mode $i$; $\v
 
 %\tauHad  decreases with the increasing centre-of-mass energies and the increasing \ECAL cell sizes, because it is increasingly difficult to reconstruct boosted photons with lower \ECAL transverse spatial resolutions.
 
-\FIGURE{fig:TauHadronicEfficiency} shows \tauHad as a function of \ECAL cell size for four different centre-of-mass energies. The efficiency \tauHad decreases with an increase of the centre-of-mass energy. As the centre-of-mass energy increases, the tau decay products become more boosted, making it increasingly difficult to separate tau decay products, for example, the photon pair from \Ppizero decay. The reduction in the ability to separate photon pairs leads to a degradation of  the classification performance.
+\FIGURE{fig:TauHadronicEfficiency} shows \tauHad as a function of \ECAL cell sizes for four different centre-of-mass energies. The efficiency \tauHad decreases with an increase of the centre-of-mass energy. As the centre-of-mass energy increases, the tau decay products become more boosted, making it increasingly difficult to separate tau decay products, for example, the photon pair from \Ppizero decay. The reduction in the ability to separate photon pairs leads to a degradation of  the classification performance.
 % becomes very challenging to separate at a high centre-of-mass energy.
 
  The efficiency \tauHad decreases with the  increasing \ECAL cell sizes. The change in the \ECAL cell size will change the \ECAL transverse spatial resolution. Hence a large cell size will result in a low transverse spatial resolution, leading to a reduction in the ability to separate a pair of photons. Consequently, a worse classification performance is expected for a larger \ECAL cell size.
@@ -770,7 +775,7 @@ where $B_{i}$ is the branching fraction of the tau  hadronic decay mode $i$; $\v
 \centering % \begin{center}/\end{center} takes some additional vertical space
 \includegraphics[width=.85\textwidth]{tau/plots3/hadronicEff2}
 \caption[The tau hadronic decay efficiency as a function of  the \ECAL cell sizes at different \sqrtS with the \ILD detector model.]
-{The weighted average tau hadronic decay correct classification efficiency, \tauHad, as a function of  the \ECAL cell sizes for four different centre-of-mass energies. The blue, orange, green, and red points  show \tauHad at \sqrtS = 100, 200, 500, and 1000\,GeV, respectively.}
+{The weighted average tau hadronic decay correct classification efficiency, \tauHad, as a function of  the \ECAL cell sizes for four different centre-of-mass energies. The blue, orange, green, and red points  show \tauHad at centre-of-mass energies of 100, 200, 500, and 1000\,GeV, respectively.}
 \label{fig:TauHadronicEfficiency}
 \end{figure}
 
