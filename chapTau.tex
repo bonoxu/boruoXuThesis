@@ -4,7 +4,7 @@
 \chapterquote{I once tried standing up on my toes to see far out in the distance, but I found that I could see much farther by climbing to a high place.}%
 {Xun Kuang, 313 BC $-$ 238 BC}%: Blackwood's Magazine May 1830
 
-The tau pair polarisation correlation from a boson decay can be used to determine statistically if the parent boson is a  scalar or a vector, and, for example, to differentiate a \PH boson from  a \PZ boson \cite{Bullock:1991my}. It can also be used to measure the CP (the product of charge conjugation and parity symmetries) of the Higgs, via \HiggsToTauTau decay process\cite{Berge:2015nua}.
+The tau pair polarisation correlation from a boson decay can be used to determine statistically if the parent boson is a  scalar or a vector, for example, to differentiate a \PH boson from  a \PZ boson \cite{Bullock:1991my}. It can also be used to measure the CP (the product of charge conjugation and parity symmetries) of the Higgs, via \HiggsToTauTau decay process\cite{Berge:2015nua}.
  %The polarisation correlation of the tau pairs can be used to infer the spin of the parent boson, differentiating \HiggsToTauTau from \ZToTauTau.
 
 \begin{comment}
@@ -25,7 +25,7 @@ Since the tau lepton has a very short mean decay lifetime of 290\,fs \cite{Abreu
 
 %The efficiency of tau decay mode classification can be used as a benchmark for detector performance.
 
-The main challenge in classifying the tau lepton hadronic decay modes  is the reconstruction and  separation of spatially close photons. For  tau leptons with energies above tens of GeVs, the visible decay products are often highly boosted. Consequently electromagnetic showers from photons from \Ppizero decays often overlap in the \ECAL.  Reconstructing these photons as separate entities requires a good photon reconstruction. Hence the photon reconstruction algorithms described in \Chapter{chap:Photon} are used in this study. This chapter presents a study of the classification of tau decay modes in a highly granular linear collider detector.
+The main challenge in classifying tau lepton hadronic decay modes  is the reconstruction and  separation of spatially close photons. For  tau leptons with energies above tens of GeVs, visible decay products are often highly boosted. Consequently electromagnetic showers from photons from \Ppizero decays often overlap in the \ECAL.  Reconstructing these photons as separate entities requires a good photon reconstruction. Hence the photon reconstruction algorithms described in \Chapter{chap:Photon} are used in this study. This chapter presents a study of the classification of tau decay modes in a highly granular linear collider detector.
 
 % and a fine \ECAL spatial resolution
 %Since the main difference in the topologies between some final states, for example \decayRhoFinalState and \decayAiPhoton final states,  is the number of photons from \Ppizero in the final state, the ability to reconstruct the photon pairs from \Ppizero as separate particles is crucial to differentiate tau decay modes.
@@ -137,7 +137,7 @@ Decay mode  & Detectable final state & Branching ratio\\
 
 \subsection{Tau selection}
 
-The simulated \eeToTauTau event contains two tau leptons. Since the tau decay mode classification is applied on a per-tau-lepton basis, the decay products of the two tau leptons in one event are divided into two sets for individual tau decay mode classification. By identifying the axis of the back-to-back taus in the event, the detector space can be separated in two hemispheres, where particles in each hemisphere correspond to the decay products of one tau lepton.
+The simulated \eeToTauTau event contains two tau leptons. Since the tau decay mode classification is applied on a per-tau-lepton basis, the decay products of the two tau leptons in one event are divided into two sets for individual tau decay mode classification. By identifying the axis of the back-to-back taus in an event, the detector space can be separated in two hemispheres, where particles in each hemisphere correspond to the decay products of one tau lepton.
 
 Separating reconstructed particles in an event into two sets is achieved using the principle thrust axis vector of the event, which is the axis that most particles are aligned to. The principle thrust axis vector, $\hat{t}$, is determined by maximising the thrust \cite{PhysRevLett.39.1587}, $T$:
 \begin{equation}
@@ -154,7 +154,7 @@ For the purpose of this study, three pre-selection cuts, based on the MC informa
 
 Since this study is focused on photon reconstruction in the \ECAL to classify tau decay modes, the tau decays with photon converting to electron pairs in the tracking detector are not considered.
 
-The focus of the study is on higher energy tau decays. Tau decays with the total visible energy (i.e. not accounting for neutrinos) of tau decay products, $E_{vis}^{MC}$, less than 5\,GeV are not considered.
+The focus of the study is on high energy tau decays. Tau decays with the total visible energy (i.e. not accounting for neutrinos) of tau decay products, $E_{vis}^{MC}$, less than 5\,GeV are not considered.
 
 
 
@@ -180,7 +180,7 @@ Lastly, tau decays are discarded when the tau decay products are in the gap regi
 
 %Last set of constraints requires events to be discarded when tau decay products deposit energies in the gap region between barrel and  endcap part of the calorimeter. As the reconstruction   does not attempt to recover reconstruction in the gap region, there is a degradation in the particle reconstruction efficiency in the gap region. The constraint demands the absolute value of the polar angle of tau lepton with respect to the beam direction, $\absOf{\theta_{Z,MC}}$, is between 0.3\,rad and 0.6\,rad to be  in the endcap region, or is between 0.8\,rad and $\frac{\pi}{2}$\,rad to be  in the barrel region.
 
-\TABLE{tab:tauPreSelEff} shows the fractions of tau decays passing successive cuts  for different tau decay final states.  As expected, the cut on  photon conversions only affects tau decay modes with  photons in the final states. The cut on the total visible energy of the tau decay products has the greatest effect on the leptonic decay modes with two neutrinos  in the final states. The cut on the tau polar angle affects different tau decay modes equally.
+\TABLE{tab:tauPreSelEff} shows fractions of tau decays passing successive cuts  for different tau decay final states.  As expected, the cut on  photon conversions only affects tau decay modes with  photons in the final states. The cut on the total visible energy of the tau decay products has the greatest effect on the leptonic decay modes with two neutrinos  in the final states. The cut on the tau polar angle affects different tau decay modes equally.
 
 % because more energies are carried by neutrinos in these decay modes.
 
@@ -302,7 +302,7 @@ The most crucial variables for classifying tau decay modes  are the number of di
 
 
 %\tauToElectron, \tauToMuon, and
-\FIGURE{fig:tauVarNCharge} shows  distributions of the numbers of reconstructed charged particles for different tau decay modes. Over 98\% of   \tauToPion decays have exactly one reconstructed charged particle, and approximately 95\% of \decayAiPionShort decays give exactly three reconstructed charged particles. \FIGURE{fig:tauVarNMuon} and \Figure{fig:tauVarNElectron}  show the distributions of the numbers of reconstructed muons and electrons respectively for different tau decay modes. Here 99\% of \tauToMuon decays produce exactly one reconstructed muon, and 99\% of \tauToElectron decays have one reconstructed electron. \FIGURE{fig:tauVarNPhoton} shows  distributions of the numbers of reconstructed photons  for different tau decay modes, which distinguishes hadronic tau decay final states with different numbers of \Ppizero.  Nearly 75\% of  \decayRhoShort  decays give exactly two reconstructed photons, and over 60\% of \decayAiPhotonShort decays have exactly four photons.
+\FIGURE{fig:tauVarNCharge} shows  distributions of numbers of reconstructed charged particles for different tau decay modes. Over 98\% of   \tauToPion decays have exactly one reconstructed charged particle, and approximately 95\% of \decayAiPionShort decays give exactly three reconstructed charged particles. \FIGURE{fig:tauVarNMuon} and \Figure{fig:tauVarNElectron}  show distributions of numbers of reconstructed muons and electrons respectively for different tau decay modes. Here 99\% of \tauToMuon decays produce exactly one reconstructed muon, and 99\% of \tauToElectron decays have one reconstructed electron. \FIGURE{fig:tauVarNPhoton} shows  distributions of numbers of reconstructed photons  for different tau decay modes, which distinguishes hadronic tau decay final states with different numbers of \Ppizero.  Nearly 75\% of  \decayRhoShort  decays give exactly two reconstructed photons, and over 60\% of \decayAiPhotonShort decays have exactly four photons.
 
 
 
@@ -343,7 +343,7 @@ The most crucial variables for classifying tau decay modes  are the number of di
 
 Five invariant mass variables are used in the MVA classification: the invariant mass of all reconstructed particles ($m_{vis}$); the invariant mass of all reconstructed charged particles ($m_{\charge}$); the invariant mass of all reconstructed neutral particles ($m_{\neutral}$); the invariant mass of all reconstructed photons ($m_{\Pgg}$); and the invariant mass of all reconstructed  charged pions ($m_{\Pgpm}$).
 
-\FIGURE{fig:tauVarMVis} shows the distributions of the invariant masses of all reconstructed particles  for different tau decay modes. Peaks in the invariant mass distributions can be seen for the \Prho and \Pai decay modes. \FIGURE{fig:tauVarMNeutral} shows the distributions of the invariant masses of all reconstructed neutral particles  for different tau decay modes. Differences in the distributions for  the \Prho and \Pai decay modes can be seen.
+\FIGURE{fig:tauVarMVis} shows distributions of invariant masses of all reconstructed particles  for different tau decay modes. Peaks in the invariant mass distributions can be seen for the \Prho and \Pai decay modes. \FIGURE{fig:tauVarMNeutral} shows distributions of invariant masses of all reconstructed neutral particles  for different tau decay modes. Differences in the distributions for  the \Prho and \Pai decay modes can be seen.
 
 
 
@@ -374,7 +374,7 @@ Five invariant mass variables are used in the MVA classification: the invariant 
 Energy information helps to further separate different tau decay modes. Six energy variables are used in the MVA classification: the normalised total energy of all reconstructed particles ($\tilde{E}_{vis}$); the normalised total energy of charged particles ($\tilde{E}_{\charge}$); the normalised total energy of muons ($\tilde{E}_{\Pmu}$); the normalised total energy of electrons ($\tilde{E}_{\Pe}$); the normalised total energy of photons ($\tilde{E}_{\Pgg}$); and the normalised total energy of charged pions ($\tilde{E}_{\Pgpm}$). All variables are normalised relative to the energy of the associated tau lepton, i.e. $\tilde{E}_{vis} = E_{vis} / E_{\Ptau}$, where $E_{vis} $ is the total energy of all reconstructed particles and $E_{\Ptau}$ is the energy of the associated tau lepton.  $E_{\Ptau}$ is obtained from the generated value, i.e. 50\,GeV.
 
 
-\FIGURE{fig:tauVarEVis} and \Figure{fig:tauVarEPhoton} show distributions of the normalised energies of all reconstructed particles and photons respectively for different tau decay modes. Differences in the distributions for  different tau decay modes can be seen. The cut-off at 0.1 for the $\tilde{E}_{vis}$ distribution is due to the pre-selection of  $E_{vis}^{MC}>5$\,GeV, which corresponds to  $\tilde{E}_{vis}>0.1$.
+\FIGURE{fig:tauVarEVis} and \Figure{fig:tauVarEPhoton} show distributions of normalised energies of all reconstructed particles and photons respectively for different tau decay modes. Differences in the distributions for  different tau decay modes can be seen. The cut-off at 0.1 for the $\tilde{E}_{vis}$ distribution is due to the pre-selection of  $E_{vis}^{MC}>5$\,GeV, which approximately corresponds to  $\tilde{E}_{vis}>0.1$.
 
 
 
@@ -392,7 +392,7 @@ Energy information helps to further separate different tau decay modes. Six ener
   \label{fig:tauVarEPhoton}
 \end{subfigure}
 \caption
-{Distributions of  the normalised energies of a) all reconstructed particles ($\tilde{E}_{vis}$); and b) all reconstructed  photons ($\tilde{E}_{\Pgg}$). The particle ID information comes from the output of the \pandora reconstruction. The area under the curve for each decay mode is normalised to unity.}
+{Distributions of  the normalised energies of: a) all reconstructed particles ($\tilde{E}_{vis}$); and b) all reconstructed  photons ($\tilde{E}_{\Pgg}$). The particle ID information comes from the output of the \pandora reconstruction. The area under the curve for each decay mode is normalised to unity.}
 \label{fig:tauVar3}
 \end{figure}
 
@@ -427,7 +427,7 @@ Two calorimetric energy variables are used in the MVA classification: the fracti
 %\section{\texorpdfstring{\decayRhoShort and \decayAiPhotonShort} \, resonances reconstruction}
 %\label{sec:tauResonance}
 
-By utilising the photon identification potential of the highly granular \ECAL, the identification of the \decayRhoShort and \decayAiPhotonShort decay modes is enhanced  by reconstructing the \Prho and \Pai invariant masses. For decays with at least one charged pion and one photon, the reconstruction selects the combination of charged pions and photons that have a invariant mas mosts consistent with the \Prho or \Pai mass.
+By utilising the photon identification potential of the highly granular \ECAL, the identification of the \decayRhoShort and \decayAiPhotonShort decay modes is enhanced  by reconstructing the \Prho and \Pai invariant masses. For decays with at least one charged pion and one photon, the reconstruction selects the combination of charged pions and photons that have a invariant mass most consistent with the \Prho or \Pai mass.
 
 
 
@@ -441,7 +441,7 @@ For example, the final state of the \decayRhoShort decay mode contains a \Pgpm a
 \chi^{2} = {\left(\frac{m_{tot} -  m_{\Prho}}{\sigma_{\Prho}}\right)}^{2} + {\left(\frac{m_{\Pphoton_1\Pphoton_2} -  m_{\Ppizero}}{\sigma_{\Ppizero}}\right)}^{2} \,,
 \label{eqn:tauRho}
 \end{equation}
-where $m_{\Pphoton_1\Pphoton_2}$ is the invariant mass of two photons; the variable $m_{tot}$ is the total invariant mass of the  two photons and one \Pgpm; $m_{\Prho}$ and $m_{\Ppizero}$ are the respective true masses of \Prho and \Ppizero; and $\sigma_{\Prho}$ and $\sigma_{\Ppizero}$ are the assumed mass resolutions. \FIGURE{fig:tauRho} shows the reconstructed invariant mass distributions for \Ppizero and \Prho in the \decayRhoShort decay mode, obtained by selecting reconstructed particles using the MC truth information.  A mass resolution of 20\% is an good approximation for the invariant masses of \Ppizero and \Prho, and this is used for $\sigma_{\Prho}$ and $\sigma_{\Ppizero}$.
+where $m_{\Pphoton_1\Pphoton_2}$ is the invariant mass of two photons; the variable $m_{tot}$ is the total invariant mass of the  two photons and one \Pgpm; $m_{\Prho}$ and $m_{\Ppizero}$ are the respective true masses of \Prho and \Ppizero; and $\sigma_{\Prho}$ and $\sigma_{\Ppizero}$ are the assumed mass resolutions. \FIGURE{fig:tauRho} shows the reconstructed invariant mass distributions for \Ppizero and \Prho in the \decayRhoShort decay mode, obtained by selecting reconstructed particles using the MC truth information.  A mass resolution of 20\% is an good approximation for the invariant masses of \Ppizero and \Prho, and it is used for $\sigma_{\Prho}$ and $\sigma_{\Ppizero}$.
 
 %the mass resolution is assumed to be 20\%, i.e. $\sigma_{\Prho}/m_{\Prho}$ = $\sigma_{\Ppizero}/m_{\Ppizero}$ = 20\%. The decay mode is selected using the MC truth information.
 % to find the corresponding reconstructed particles
@@ -471,7 +471,7 @@ where $m_{tot}$ is the total invariant mass of one photon and one \Pgpm.
   \label{fig:tauRhoFromRho}
 \end{subfigure}
 \caption
-{Reconstructed invariant mass distributions for the \Ppizero and \Prho in the \decayRhoShort decay mode. The reconstructed masses are obtained using the MC truth information to find the corresponding reconstructed particles. The area under the curve is normalised to unity.}
+{Reconstructed invariant mass distributions of the \Ppizero and \Prho in the \decayRhoShort decay mode. The reconstructed masses are obtained using the MC truth information to find the corresponding reconstructed particles. The area under the curve is normalised to unity.}
 \label{fig:tauRho}
 \end{figure}
 
@@ -502,10 +502,10 @@ If there are at least four photons in a decay, all combinations of four photons 
 \begin{equation}
 \chi^{2} = {\left(\frac{m_{tot} -  m_{\Pai}}{\sigma_{\Pai}}\right)}^{2} + {\left(\frac{m_{\Pphoton_1 \Pphoton_2} -  m_{\Ppizero}}{\sigma_{\Ppizero}}\right)}^{2}  \,,
 \end{equation}
-where $m_{tot}$ is the invariant mass of the charged pion and three photons and $m_{\Pphoton_1 \Pphoton_2}$ is the invariant mass of two photons. The combinations of photons are iterated.
+where $m_{tot}$ is the invariant mass of the charged pion and three photons and $m_{\Pphoton_1 \Pphoton_2}$ is the invariant mass of two photons. Combinations of photons are iterated.
 
 
-If there are only two photons in a decay, either the reconstruction faied to reconstruct one photon pair or the reconstruction fails to reconstruct both photon pair. Hence two $\chi^2$ functions are used and the one with the smallest value is chosen. The first function is
+If there are only two photons in a decay, either the reconstruction failed to reconstruct one photon pair or the reconstruction fails to reconstruct both photon pair. Hence two $\chi^2$ functions are used and the one with the smallest value is chosen. The first function is
 \begin{equation}
 \chi^{2} =\frac{1}{2} {\left(\frac{m_{tot} -  m_{\Pai}}{\sigma_{\Pai}}\right)}^{2} + \frac{1}{2} {\left(\frac{m_{\Pphoton_1 \Pphoton_2} -  m_{\Ppizero}}{\sigma_{\Ppizero}}\right)}^{2}  \,,
 \label{eqn:tauA1TwoPhoton1}
@@ -563,7 +563,7 @@ From the \Pai invariant mass resonance reconstruction, three variables are obtai
 % \begin{center}/\end{center} takes some additional vertical space
  \includegraphics[width=0.65\textwidth]{tau/var3/mA1A1Fit_100GeV_improved_zoom.pdf}
 \caption
-{Reconstructed invariant mass distributions for \Pai ($m^{reco}_{\Pai}$), reconstructed under the  \decayAiPhotonShort decay mode hypothesis for different tau decay modes. The area under the curve is normalised to unity.}
+{Reconstructed invariant mass distributions for \Pai ($m^{reco}_{\Pai}$), reconstructed under the  \decayAiPhotonShort decay mode hypothesis for three different tau decay modes. The area under the curve is normalised to unity.}
 \label{fig:tauVarMA1}
 \end{figure}
 
