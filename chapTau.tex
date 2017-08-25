@@ -783,7 +783,7 @@ where $B_{i}$ is the branching fraction of the tau  hadronic decay mode $i$; $\v
 
 %This trend is observed for almost all tau decay modes.
 
-\TABLE{tab:TauTauHad} lists the achieved hadronic decay mode separation, as measured by \tauHad, with 3\,mm and 20\,mm \ECAL cell sizes for four different centre-of-mass energies. The sensitivity of \tauHad to different cell sizes is stronger at high centre-of-mass energies.  With decay products being spatially close at high centre-of-mass energies, it is more beneficial to have a small \ECAL cell size to reconstruct individual particles.
+\TABLE{tab:TauTauHad} lists the achieved hadronic decay mode separation, as measured by \tauHad, with 3\,mm and 20\,mm \ECAL cell lengths for four different centre-of-mass energies. The sensitivity of \tauHad to different cell sizes is stronger at high centre-of-mass energies.  With decay products being spatially close at high centre-of-mass energies, it is more beneficial to have a small \ECAL cell size to reconstruct individual particles.
 
 
 \begin{table}[htbp]
@@ -804,12 +804,12 @@ where $B_{i}$ is the branching fraction of the tau  hadronic decay mode $i$; $\v
 \end{tabular}
 
 \caption
-{\tauHad with 3\,mm and 20\,mm \ECAL cell sizes for four different centre-of-mass energies.}
+{\tauHad with 3\,mm and 20\,mm \ECAL cell lengths for four different centre-of-mass energies.}
 \label{tab:TauTauHad}
 \end{table}
 
 
-\FIGURE{fig:TauPionEfficiency} shows the correct classification efficiencies ($\varepsilon_{i}$) for five  tau hadronic decay modes as a function of the \ECAL square cell sizes for four different centre-of-mass energies. The tau decay mode correct classification efficiencies generally decrease with an increase of centre-of-mass energies and an increase of \ECAL cell sizes.
+\FIGURE{fig:TauPionEfficiency} shows the correct classification efficiencies ($\varepsilon_{i}$) for five  tau hadronic decay modes as a function of the \ECAL square cell sizes for four different centre-of-mass energies. For the \ECAL square cells, the cell size is the squared of the cell length. The tau decay mode correct classification efficiencies generally decrease with an increase of centre-of-mass energies and an increase of \ECAL cell sizes.
 
 
 For the \tauToRho decay mode, the efficiency at  \rootSGeV{1000} increases as the cell size increases. This is because the multivariate classifier optimises for the overall classification efficiency, which may balance the decrease of the efficiency of one decay mode by the increase of the efficiency of another decay mode. In this case, the small increase in the efficiency for \tauToRho decay mode at \rootSGeV{1000} is compensated by the drastic decrease in the efficiency for \tauToAiPhoton decay mode at the same centre-of-mass energy. For this reason, \tauHad gives a better picture of true performance.
@@ -858,7 +858,7 @@ For the \tauToAiPion decay mode, the efficiencies are similar to that of the \ta
 
 
 
-A previous study \cite{Tran:2015nxa} on the tau decay mode classification was performed using the \ILD detector on \decayPion, \decayRho, and \decayAiPhoton decay modes. Samples used were \HepProcess{\ee \to \PZz \to \TauTau(\Pphoton)} at 250\,GeV. Pre-selection required that events with photon converted to electron pairs in the tracking detector were discarded. \Garlic \cite{Reinhard:2009jh,Jeans:2012jj} photon reconstruction was used to reconstruct photons in the events. The main differences in the analyses are the pre-selection cuts, the photon reconstruction algorithm,  and the number of classified decay modes: seven versus three in previous study. \TABLE{tab:TauCompareGarlic} lists the correct classification rates  of  \decayPion, \decayRho, and \decayAiPhoton decay modes for current analysis with \pandora photon reconstruction at a centre-of-mass energies of 200\,GeV  and previous analysis using \Garlic photon reconstruction. Similar correct classification rates are achieved for \decayPion, \decayRho, and \decayAiPhoton decay modes.
+A previous study \cite{Tran:2015nxa} on the tau decay mode classification was performed using the \ILD detector on \decayPion, \decayRho, and \decayAiPhoton decay modes. Samples used were \HepProcess{\ee \to \PZz \to \TauTau(\Pphoton)} at 250\,GeV. Pre-selection required that events with photon converted to electron pairs in the tracking detector were discarded. \Garlic \cite{Reinhard:2009jh,Jeans:2012jj} photon reconstruction was used to reconstruct photons in the events. The main differences between the previous analysis and the current one are the pre-selection cuts, the photon reconstruction algorithm,  and the number of classified decay modes. \TABLE{tab:TauCompareGarlic} lists the correct classification rates  of  \decayPion, \decayRho, and \decayAiPhoton decay modes for current analysis with \pandora photon reconstruction at a centre-of-mass energies of 200\,GeV  and the previous analysis using \Garlic photon reconstruction. Similar correct classification rates are achieved for \decayPion, \decayRho, and \decayAiPhoton decay modes.
 
 
 \begin{table}[htbp]
@@ -884,7 +884,7 @@ Decay mode & \pandora \rootSGeV{200} & \Garlic \rootSGeV{250}  \\
 
 \section{Summary}
 
-For the \ILC at \rootSGeV{250} or \CLIC at \rootSGeV{350}, an \ECAL size of 10\,mm or fewer is sufficient to achieve a \tauHad of 92\%. For a linear collider operating at a centre-of-mass energy above a few hundred GeVs, such as the \ILC at \rootSGeV{500} or \CLIC at \rootS{1.4} or \rootS{3}, it is preferable to have a small \ECAL cell size, i.e. 3\,mm,  for the best tau decay mode separation, as \tauHad decreases drastically with an increasing \ECAL cell size.
+For the \ILC at \rootSGeV{250} or \CLIC at \rootSGeV{350}, an \ECAL size of 10\,mm or fewer is sufficient to achieve a \tauHad of 92\%. For a linear collider operating at a centre-of-mass energy above a few hundred GeVs, such as the \ILC at \rootSGeV{500} or \CLIC at \rootS{1.4} or 3\,TeV, it is preferable to have a small \ECAL cell size, i.e. 3\,mm,  for the best tau decay mode separation, as \tauHad decreases drastically with an increasing \ECAL cell size.
 
 \begin{comment}
 
