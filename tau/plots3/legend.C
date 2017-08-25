@@ -1,10 +1,10 @@
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Tue May  2 12:38:34 2017) by ROOT version5.34/30
+//=========  (Fri Aug 25 12:24:40 2017) by ROOT version5.34/05
    TCanvas *c1 = new TCanvas("c1", "c1",12,51,800,700);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
-   c1->Range(-2.088667,-0.2432432,22.84467,1.108108);
+   c1->Range(-108.0393,-0.2432432,465.4273,1.108108);
    c1->SetFillColor(0);
    c1->SetBorderMode(0);
    c1->SetBorderSize(2);
@@ -24,12 +24,11 @@
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
    leg->SetLineWidth(2);
-   leg->SetFillColor(0);
+   leg->SetFillColor(10);
    leg->SetFillStyle(0);
    TLegendEntry *entry=leg->AddEntry("Graph","100 GeV","lep");
 
-   Int_t ci;      // for color index setting
-   TColor *color; // for color definition with alpha
+   Int_t ci;   // for color index setting
    ci = TColor::GetColor("#7293cb");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
@@ -39,7 +38,6 @@
    entry->SetMarkerColor(ci);
    entry->SetMarkerStyle(20);
    entry->SetMarkerSize(1);
-   entry->SetTextFont(132);
    entry=leg->AddEntry("Graph","200 GeV","lep");
 
    ci = TColor::GetColor("#e1974c");
@@ -51,7 +49,6 @@
    entry->SetMarkerColor(ci);
    entry->SetMarkerStyle(20);
    entry->SetMarkerSize(1);
-   entry->SetTextFont(132);
    entry=leg->AddEntry("Graph","500 GeV","lep");
 
    ci = TColor::GetColor("#83ba5b");
@@ -63,7 +60,6 @@
    entry->SetMarkerColor(ci);
    entry->SetMarkerStyle(20);
    entry->SetMarkerSize(1);
-   entry->SetTextFont(132);
    entry=leg->AddEntry("Graph","1000 GeV","lep");
 
    ci = TColor::GetColor("#d35e60");
@@ -75,7 +71,6 @@
    entry->SetMarkerColor(ci);
    entry->SetMarkerStyle(20);
    entry->SetMarkerSize(1);
-   entry->SetTextFont(132);
    leg->Draw();
    c1->Modified();
    c1->cd();
