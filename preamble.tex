@@ -255,15 +255,18 @@
 \DeclareRobustCommand{\kt}{\mymath{k_{t}}\xspace}
 \DeclareRobustCommand{\y}[1]{\mymath{y_{#1}}\xspace}
 \DeclareRobustCommand{\btag}{\mymath{B}\xspace}
-\DeclareRobustCommand{\btagFull}[1]{\mymath{B_{#1}}\xspace}
+\DeclareRobustCommand{\btagFull}[2]{\mymath{B^{#1}_{#2}}\xspace}
+\DeclareRobustCommand{\ctagFull}[2]{\mymath{C^{#1}_{#2}}\xspace}
+
+
 \DeclareRobustCommand{\sumBtag}[1]{\mymath{\Sigma{\btag}_{#1\xspace{jets}}}\xspace}
 \DeclareRobustCommand{\partialSumBtag}[3]{\mymath{\sum_{#1}^{#2}{\btag}_{#3\!{\text{jets}}}}\xspace}
-\DeclareRobustCommand{\ctagFull}[1]{\mymath{C_{#1}}\xspace}
+
 \DeclareRobustCommand{\sphericity}{\mymath{\textbf{S}}\xspace}
 \DeclareRobustCommand{\abs}[1]{\mods{#1}}
 \DeclareRobustCommand{\acolinearity}[1]{\mymath{\textit{A}_{#1}}\xspace}
 \DeclareRobustCommand{\npfo}[1]{\mymath{N_{#1}}\xspace}
-\DeclareRobustCommand{\cosStar}[1]{\mymath{\cosOf{\theta^{*}_{#1}}}\xspace}
+\DeclareRobustCommand{\cosStar}[1]{\mymath{\cos{\theta^{*}_{#1}}}\xspace}
 \DeclareRobustCommand{\rootOf}[1]{\mymath{\sqrt{#1}}\xspace}
 
 \DeclareRobustCommand{\W*}{\HepParticle{W}{}{*}\xspace}
@@ -274,7 +277,7 @@
 \DeclareRobustCommand{\mhh}{\mymath{m_{\HH}}\xspace}
 \DeclareRobustCommand{\HT}{\mymath{H_T}\xspace}
 
-\DeclareRobustCommand{\HiggsTableFull}[2]{Table shows the signal and background events at \rootS{#1}, assuming an integrated luminosity of #2\,\uprightMath{fb^{-1}}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles.}
+\DeclareRobustCommand{\HiggsTableFull}[2]{The table shows the signal and background events at \rootS{#1}, assuming an integrated luminosity of #2\,\uprightMath{fb^{-1}}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles.}
 
 \DeclareRobustCommand{\HiggsTableLow}{\HiggsTableFull{1.4}{1500}}
 \DeclareRobustCommand{\HiggsTableHigh}{\HiggsTableFull{3}{2000}}

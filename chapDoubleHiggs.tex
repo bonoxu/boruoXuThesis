@@ -932,7 +932,7 @@ where the indices represent the six jets. The parameter $\mu$ and $\sigma^{\prim
    \end{cases}
 \end{equation}
 \end{comment}
-A jet pairing is only considered when at least one of the jets associated to the \Hbb decay has a b-jet tag > 0.2. Of these combinations of jets, the jet pairing giving smallest  $\chi^2$ is selected. \FIGURE{fig:doubleHiggsJetPairing} shows the normalised distribution of $m_{\Hbb}$ after jet pairing, for the signal process, \eeToHHbbWW and the sum of all background processes. For the signal process, the distribution peaks around the expected mass of $m_{\Hbb}$. Around 1\% of signal events have no solutions for the jet pairing, i.e. no jet has a b-jet tag > 0.2. These events are no longer considered in the analysis. The full list of fraction of events surviving after this jet pairing selection are listed in \Table{tab:doubleHiggs1.4TeVPreslection} for signal \eeToHHbbWW process and all background processes.
+A jet pairing is only considered when at least one of the jets associated to the \Hbb decay has a b-jet tag > 0.2. Of these combinations of jets, the jet pairing giving smallest  $\chi^2$ is selected. \FIGURE{fig:doubleHiggsJetPairing} shows the normalised distributions of $m_{\Hbb}$ after jet pairing, for the signal process, \eeToHHbbWW and the sum of all background processes. For the signal process, the distribution peaks around the expected mass of $m_{\Hbb}$. Around 1\% of signal events have no solutions for the jet pairing, i.e. no jet has a b-jet tag > 0.2. These events are no longer considered in the analysis. The full list of fraction of events surviving after this jet pairing selection are listed in \Table{tab:doubleHiggs1.4TeVPreslection} for signal \eeToHHbbWW process and all background processes.
 
 
 \begin{figure}[!htbp]
@@ -959,7 +959,7 @@ A jet pairing is only considered when at least one of the jets associated to the
 \small
 \begin{tabular}{lrrrr}
 \hline \hline
- \multicolumn{1}{L{3.5cm}}{\rootS{1.4}} &  \multicolumn{1}{R{2cm}}{N}  & \multicolumn{1}{R{2cm}}{Lepton evto} & \multicolumn{1}{R{2cm}}{\bbWW / \bbWW separation} & \multicolumn{1}{R{2cm}}{Valid jet Pairing} \\
+ \multicolumn{1}{L{3.5cm}}{\rootS{1.4}} &  \multicolumn{1}{R{2cm}}{N}  & \multicolumn{1}{R{2cm}}{Lepton veto} & \multicolumn{1}{R{2cm}}{\bbWW / \bbWW separation} & \multicolumn{1}{R{2cm}}{Valid jet Pairing} \\
 \hline
 \eeToHH $\to$ \\
 \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue}, hadronic             &27.9& 89.7\% & 79.1\% & 78.3\%\\
@@ -1023,18 +1023,18 @@ Since both Higgs bosons are on mass shell,  the invariant mass of the double Hig
 
 \begin{figure}[!htbp]
     \includegraphics[width=0.95\textwidth]{{doubleHiggs/preSel2/nR0_7_6jet_btag2_Higgs_all_M_TMVA20161208R0_7_qq_btag2_prepare}.pdf}
-   \caption{Distributions of the invariant mass of the two Higgs system for \rootS{1.4}, assuming an intergraded luminosity of 1500\,\uprightMath{fb^{-1}}. }
+   \caption{Distributions of the invariant mass of the two Higgs system for \rootS{1.4}, assuming an integrated luminosity of 1500\,\uprightMath{fb^{-1}}. }
     \label{fig:doubleHiggs1.4PreSelmHH}
 
 \end{figure}
 
 
-Many background events do not have b-quark jets in the final state. Therefore, by requiring the second highest b-jet tag value greater than 0.2, as shown in \FIGURE{fig:doubleHiggs1.4PreSelbtag},  background events with no \Pbottom quarks in final states are removed.
+Many background events do not have \Pbottom quarks in the final state. Therefore, by requiring the second highest b-jet tag value greater than 0.2, as shown in \FIGURE{fig:doubleHiggs1.4PreSelbtag},  background events with no \Pbottom quarks in final states are removed.
 
 \begin{figure}[!htbp]
     \includegraphics[width=0.95\textwidth]{{doubleHiggs/preSel2/nR0_7_6jet_btag2_btag2_TMVA20161208R0_7_qq_btag2_prepare}.pdf}
 
-    \caption{Distributions of the  second highest b-jet tag value for \rootS{1.4}, assuming an intergraded luminosity of 1500\,\uprightMath{fb^{-1}}. }
+    \caption{Distributions of the  second highest b-jet tag value for \rootS{1.4}, assuming an integrated luminosity of 1500\,\uprightMath{fb^{-1}}. }
     \label{fig:doubleHiggs1.4PreSelbtag}
 \end{figure}
 
@@ -1043,7 +1043,7 @@ The signal final states have neutrinos and hence missing momentum in the events.
 \begin{figure}[!htbp]
     \includegraphics[width=0.95\textwidth]{{doubleHiggs/preSel2/nR0_7_6jet_btag2_Higgs_all_Pt_TMVA20161208R0_7_qq_btag2_prepare}.pdf}
 
-    \caption{Distributions of the transverse momentum  of the two Higgs system for \rootS{1.4}, assuming an intergraded luminosity of 1500\,\uprightMath{fb^{-1}}. }
+    \caption{Distributions of the transverse momentum  of the two Higgs system for \rootS{1.4}, assuming an integrated luminosity of 1500\,\uprightMath{fb^{-1}}. }
     \label{fig:doubleHiggs1.4PreSelpT}
 \end{figure}
 
@@ -1145,7 +1145,7 @@ Mutually exclusive & \sumBtag{4} < 2.3, \y{34} < 3.7 \\
 
 \section{MVA variables}
 
-Having extracted information about leptons, b-jets, and jet pairing, a number of variables are used to differentiate the signal to the background events. These variables are the basis of the subsequent MVA event selection. The variables used are listed in \Table{tab:doubleHiggsVaraibles}. The distributions of the four most powerful discriminators are shown in \Figure{fig:doubleHiggs1.4var}.
+Having extracted information about leptons, b-jets, and jet pairing, a number of variables are used to differentiate the signal to the background events. These variables are the bases of the subsequent MVA event selection, listed in \Table{tab:doubleHiggsVaraibles}. The distributions of the four most powerful discriminators are shown in \Figure{fig:doubleHiggs1.4var}.
 
 \subsection{Invariant mass  variables}
 
@@ -1162,7 +1162,7 @@ For the off-mass-shell \PW, the energy  is used instead of the invariant mass, a
 
 \subsection{Lab-frame angle variables}
 
-Four lab-frame angle variables are in the MVA event selection: the pseudorapidity of the missing momenta ($\eta_{mis}$), the  acollinearity of the two jets associated with \Hbb ($\acolinearity{\Hbb}$),  the  acollinearity of the two jets associated with \HWW ($\acolinearity{\HWW}$), and the  acollinearity of the two Higgs bosons($\acolinearity{\HH}$).
+Four lab-frame angle variables are in the MVA event selection: the pseudorapidity of the missing momenta ($\eta_{mis}$), the  acollinearity of the two jets associated with \Hbb ($\acolinearity{\Hbb}$),  the  acollinearity of the two jets associated with \HWW ($\acolinearity{\HWW}$), and the  acollinearity of the two Higgs bosons ($\acolinearity{\HH}$).
 
 The pseudorapidity   of the missing momenta is used, instead of the polar angle, because the forward polar angles are transformed to a larger range in the pseudorapidity. The pseudorapidity of the missing momenta is defined as
 \begin{equation}
@@ -1170,7 +1170,7 @@ The pseudorapidity   of the missing momenta is used, instead of the polar angle,
 \end{equation}
 where $\theta_{mis}$ is the polar angle of the missing momenta measured in a spherical polar coordinate system.
 
-Acollinearity is a measures the angle between the two momenta. The definition for the acollinearity for momenta $i$ and momenta $j$ is
+Acollinearity is a measure of the angle between the two momenta. The definition for the acollinearity for momenta $i$ and momenta $j$ is
 \begin{equation}
 \acolinearity{ij} = \pi - \cos^{-1}\left(\textbf{\^{p}}_i\cdot\textbf{\^{p}}_j\right),
 \end{equation}
@@ -1178,19 +1178,19 @@ where $\textbf{\^{p}}_i$ is the unit momentum three-vector of momenta $i$. The d
 
 \subsection{Boosted-frame angle variables}
 
-The MVA event selection also uses five boosted-frame angle variables: the angle between two jets associated with \Hbb in the \Hbb decay rest frame ($\cosStar{\Hbb}$), the angle between two \PW associated with \HWW in the \HWW decay rest frame ($\cosStar{\HWW}$), the angle between two jets associated with \PW in the \PW decay rest frame ($\cosStar{\PW}$), the angle between two jets associated with \W* in the \W* decay rest frame ($\cosStar{\W*}$), and the angle between two Higgs bosons in two Higgs bosons decay rest frame ($\cosStar{\HH}$).
+The MVA event selection also uses five boosted-frame angle variables: the angle between two jets associated with \Hbb in the \Hbb decay rest frame ($\cosStar{\Hbb}$), the angle between two \PW{s} associated with \HWW in the \HWW decay rest frame ($\cosStar{\HWW}$), the angle between two jets associated with \PW in the \PW decay rest frame ($\cosStar{\PW}$), the angle between two jets associated with \W* in the \W* decay rest frame ($\cosStar{\W*}$), and the angle between two Higgs bosons in two Higgs bosons decay rest frame ($\cosStar{\HH}$).
 
-These variables are some of the most powerful variables. For example, $\cosStar{\Hbb}$ for  the signal events has a unform distribution, shown in \Figure{fig:doubleHiggs1.4varSpinHbb}, as it is equally likely for two quarks to decay in any open angle in the \Hbb decay rest frame. For the background events, by pairing jets under the signal event hypothesis, $\cosStar{\Hbb}$ does not have a flat distribution. The  $\cosStar{\Hbb}$ distribution for the background events peaks at 1.
+These variables are some of the most powerful variables. For example, $\cosStar{\Hbb}$ for  the signal events has a unform distribution, shown in \Figure{fig:doubleHiggs1.4varSpinHbb}, as it is equally likely for two quarks to decay in any opening angle in the \Hbb decay rest frame. For the background events, by pairing jets under the signal event hypothesis, $\cosStar{\Hbb}$ does not have a flat distribution. The  $\cosStar{\Hbb}$ distribution for the background events peaks at 1.
 
 \subsection{Event shape variables}
 
 Five event shapes variables are used in the MVA event selection: the absolute value of the sphericity ($\abs{\sphericity}$), the negative logarithm of \y{23} ($-\ln(\y{23})$), the negative logarithm of \y{34} ($-\ln(\y{34})$), the negative logarithm of \y{45} ($-\ln(\y{45})$), the negative logarithm of \y{56} ($-\ln(\y{56})$).
 
-The sphericity, \sphericity, is a measurement of the spherically symmetry of the event, which will be different for the signal and background events. The sphericity is  derived from the sphericity tensor \cite{PhysRevLett.35.1609}. The sphericity tensor is  defined as
+The sphericity, \sphericity, is a measure of the spherical symmetry of the event, which will be different for the signal and background events. The sphericity is  derived from the sphericity tensor \cite{PhysRevLett.35.1609}, which is  defined as
 \begin{equation}
 {\bm{S}^{\alpha\beta}} = \frac{\sum_{i}p^{\alpha}_{i}p^{\beta}_{i}}{\sum_{i}\absOf{\vec{p_{i}}}^2},
 \end{equation}
-where $\vec{p_{i}}$ is the momentum vector of the particle $i$; index $i$ is summed over all particles in the event; and $\alpha$ and $\beta$ refer to the x, y, z coordinate axis. Eigenvalues of $\bm{S}$  tensor, denoted with $\lambda_{1}$, $\lambda_{2}$, $\lambda_{3}$, can be found via diagonalisation of the matrix $\bm{S}$. The normalisation condition requires $\lambda_{1}\!\geqslant\! \lambda_{2} \! \geqslant \! \lambda_{3}$ and $ \lambda_{1} \! + \! \lambda_{2} \! + \! \lambda_{3} \! = \! 1 $. Sphericity, $S$, is defined in terms of $\lambda$,
+where $\vec{p_{i}}$ is the momentum vector of the particle $i$; index $i$ is summed over all particles in the event; and $\alpha$ and $\beta$ refer to the x, y, z coordinate axes. Eigenvalues of $\bm{S}$  tensor, denoted with $\lambda_{1}$, $\lambda_{2}$, $\lambda_{3}$, can be found via diagonalisation of the matrix $\bm{S}$. The normalisation condition requires $\lambda_{1}\!\geqslant\! \lambda_{2} \! \geqslant \! \lambda_{3}$ and $ \lambda_{1} \! + \! \lambda_{2} \! + \! \lambda_{3} \! = \! 1 $. Sphericity, \sphericity, is defined in terms of $\lambda$,
 \begin{equation}
 \sphericity = \frac{3}{2}\parenths{\lambda_{1} \! + \! \lambda_{2}}.
 \end{equation}
@@ -1198,15 +1198,15 @@ where $\vec{p_{i}}$ is the momentum vector of the particle $i$; index $i$ is sum
 
 %The \y{} parameter is a measure of the number of jets in an event.  It describes the transition of  the exclusive jet algorithm going from $N$ clustered jets to $N\!+\!1$ clustered jets. For example, $\y{23}$ would be the $d_{cut}$ value for a exclusive jet algorithm, above which the jet algorithm returns 2 jets, below which the jet algorithm returns 3 jets. Numerically the \y{} parameter is often much smaller than 1. A typically way to convert the small number to a machine acceptable range is to take the negative logarithm of the number. See \Section{sec:pandoraJetAlg} for discussion on jet algorithms and $d_{cut}$.
 
-\subsection{\Pbottom and \Pcharm tag  variables}
+\subsection{\Pbottom-jet and \Pcharm-jet tag  variables}
 
-Six b-jet and c-jet tag variables are used in the MVA event selection: the highest b-jet tag value of the two jets associated with \Hbb ($\btagFull{1,\Hbb}$), the lowest b-jet tag value of the two jets associated with \Hbb ($\btagFull{2,\Hbb}$), the highest b-jet tag value of the two jets associated with \PW ($\btagFull{1,\PW}$), the highest b-jet tag value of the two jets associated with \W* ($\btagFull{1,\W*}$), the highest c-jet tag value of the two jets associated with \Hbb ($\ctagFull{1,\Hbb}$), and the highest c-jet tag value of the two jets associated with \PW ($\ctagFull{1,\PW}$).
+Six b-jet and c-jet tag variables are used in the MVA event selection: the highest b-jet tag value of the two jets associated with \Hbb ($\btagFull{1}{\Hbb}$), the lowest b-jet tag value of the two jets associated with \Hbb ($\btagFull{2}{\Hbb}$), the highest b-jet tag value of the two jets associated with \PW ($\btagFull{1}{\PW}$), the highest b-jet tag value of the two jets associated with \W* ($\btagFull{1}{\W*}$), the highest c-jet tag value of the two jets associated with \Hbb ($\ctagFull{1}{\Hbb}$), and the highest c-jet tag value of the two jets associated with \PW ($\ctagFull{1}{\PW}$).
 
 As mentioned in the flavour tagging section, these b-jet and c-jet tag variables are useful to separate the signal events from the background events which do not have \Pbottom quarks in the final states.
 
 \subsection{Particle number  variables}
 
-The last four variables used in the MVA event selection are the particle number  variables: the number of particles associated with \Hbb (\Hbb), the number of particles associated with \HWW (\HWW), the number of particles associated with \PW (\PW), the number of particles associated with \W* (\W*). These variables are effective to differentiate the signal events from the background events with fewer than six quarks in final states.
+The last four variables used in the MVA event selection are the particle number  variables: the number of particles associated with \Hbb (\npfo{\Hbb}), the number of particles associated with \HWW (\npfo{\HWW}), the number of particles associated with \PW (\npfo{\PW}), the number of particles associated with \W* (\npfo{\W*}). These variables are effective to differentiate the signal events from the background events with fewer than six quarks in final states.
 
 An optimal set of 32 variables are chosen for the best MVA performance, whilst no strong ($>80\%$) pair-wise correlation exists between any two variables. %shown in \Figure{fig:doubleHiggs1.4Corr}.
 
@@ -1221,7 +1221,7 @@ Energy and momentum & \multicolumn{1}{R{0.6\textwidth}}{$E_{\W*}$, $E_{mis}$, $\
 Lab-frame angles & \multicolumn{1}{R{0.6\textwidth}}{$\eta_{mis}$, $\acolinearity{\Hbb}$, $\acolinearity{\PW}$, $\acolinearity{\HH}$} \\
 Boosted-frame angles & \multicolumn{1}{R{0.6\textwidth}}{$\cosStar{\Hbb}$, $\cosStar{\HWW}$, $\cosStar{\PW}$, $\cosStar{\W*}$, $\cosStar{\HH}$} \\
 Event shape & \multicolumn{1}{R{0.6\textwidth}}{$\abs{\sphericity}$, $-\ln(\y{23})$, $-\ln(\y{34})$, $-\ln(\y{45})$, $-\ln(\y{56})$} \\
-\Pbottom and \Pcharm tag & \multicolumn{1}{R{0.6\textwidth}}{$\btagFull{1,\Hbb}$, $\btagFull{2,\Hbb}$, $\btagFull{1,\PW}$, $\btagFull{1,\W*}$, $\ctagFull{1,\Hbb}$, $\ctagFull{1,\PW}$} \\
+\Pbottom-jet and \Pcharm-jet tag & \multicolumn{1}{R{0.6\textwidth}}{$\btagFull{1}{\Hbb}$, $\btagFull{2}{\Hbb}$, $\btagFull{1}{\PW}$, $\btagFull{1}{\W*}$, $\ctagFull{1}{\Hbb}$, $\ctagFull{1}{\PW}$} \\
  Particle number &  \multicolumn{1}{R{0.6\textwidth}}{$\npfo{\Hbb}$, $\npfo{\HWW}$, $\npfo{\PW}$, $\npfo{\W*}$} \\
 \hline
 \hline
@@ -1255,7 +1255,7 @@ Event shape & \multicolumn{1}{R{0.6\textwidth}}{$\abs{\sphericity}$, $-\ln(\y{23
     \label{fig:doubleHiggs1.4varSpinHbb}
   \end{subfigure}
 \caption
-   {Distributions of the four variables with highest discriminating power: a) the invariant mass of \Hbb; b) the invariant mas of \HWW; c) the acolinearity of the two jets associated with \Hbb; and d) the opening angle of the two jets associated with \Hbb in the decay rest frame of the \Hbb. All plots assume an intergraded luminosity of  1500\,\uprightMath{fb^{-1}} at \rootS{1.4} after all pre-selection cuts applied before the MVA event selection.}
+   {Distributions of the four variables with highest discriminating power: a) the invariant mass of \Hbb; b) the invariant mas of \HWW; c) the acolinearity of the two jets associated with \Hbb; and d) the opening angle of the two jets associated with \Hbb in the decay rest frame of the \Hbb. All plots assume an integrated luminosity of  1500\,\uprightMath{fb^{-1}} at \rootS{1.4} after all pre-selection cuts applied before the MVA event selection.}
    \label{fig:doubleHiggs1.4var}
 \end{figure}
 
@@ -1330,7 +1330,7 @@ End node output & x $\in [0,1]$ \\
 \label{sec:doubleHiggsSignalSelResult}
 %first sentence doesn't make sense. Should there be an "and" in there?
 
-Number of events passed the MVA event selection at \rootS{1.4}, assuming a luminosity of 1500\,\uprightMath{fb^{-1}},  are listed in \Table{tab:doubleHiggs1.4TeVMVA} for individual processes. A few  background processes have non-zero events after the MVA event selection. \eeTo{\Pquark \APquark \PHiggs \Pnu \APnu} events are difficult to discard because its topology, one Higgs and neutrinos, is very similar to the signal event topology. Similarly, \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} events can be confused with the signal events when the lepton is undetected in the forward region, or the energy of the lepton is too low to be tagged. \eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} events can also have a similar topology to the signal events. Other background processes that are not discarded after the MVA are the electron$-$photon and photon$-$photon interactions with the same final states as the processes above.
+Number of events passed the MVA event selection at \rootS{1.4}, assuming an integrated luminosity of 1500\,\uprightMath{fb^{-1}},  are listed in \Table{tab:doubleHiggs1.4TeVMVA} for individual processes. A few  background processes have non-zero events after the MVA event selection. \eeTo{\Pquark \APquark \PHiggs \Pnu \APnu} events are difficult to discard because its topology, one Higgs and neutrinos, is very similar to the signal event topology. Similarly, \eeTo{ \Pquark \Pquark \Pquark \Pquark \Plepton \Pnu} events can be confused with the signal events when the lepton is undetected in the forward region, or the energy of the lepton is too low for the lepton to be tagged. \eeTo{ \Pquark \Pquark \Pquark \Pquark \Pnu \APnu} events can also have a similar topology to the signal events. Other background processes that are not discarded after the MVA are the electron$-$photon and photon$-$photon interactions with the same final states as the processes above.
 
 
 Before interpreting the result for analysis at \rootS{1.4}, the analyses at \rootS{3} and  the semi-leptonic channel of \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnue \APnue} are presented.
@@ -1394,7 +1394,7 @@ Before interpreting the result for analysis at \rootS{1.4}, the analyses at \roo
 \end{tabular}
 
 \caption[Selection efficiency and number of events for signal and background at \rootS{1.4}.]%
-{List of signal and background events with selection efficiency and number of events at \rootS{1.4}, assuming  an integrated  of 1500\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of the MVA event selection after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after the MVA event selection ($N_{MVA}$) are shown. The entries marked with ``-'' represent  numbers less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop.}
+{List of signal and background events with selection efficiency and number of events at \rootS{1.4}, assuming  an integrated luminosity  of 1500\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of the MVA event selection after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after the MVA event selection ($N_{MVA}$) are shown. The entries marked with ``-'' represent  numbers less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop.}
 \label{tab:doubleHiggs1.4TeVMVA}
 \end{table}
 
@@ -1404,7 +1404,7 @@ Before interpreting the result for analysis at \rootS{1.4}, the analyses at \roo
 
 The hadronic \WW decay of the \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu} at \rootS{3} analysis follows the same strategy as the analysis at \rootS{1.4}. Lepton finding, jet pairing and flavouring tagging have been discussed in previous sections. The differences, which have not been mentioned, will be highlighted in this section.
 
-Cross sections of used samples are listed in \Table{tab:doubleHiggs3crossSection}. The mutually exclusive cuts to separate events into two independent sets are almost identical to the cuts used in the \rootS{1.4} analysis. \FIGURE{fig:doubleHiggs3TeVMutualPreselection} shows the sum of b-jet tag values, when the event is clustered into four jets, as a function of $-\log\parenths{\y{34}}$ for the hadronic \WW decay in \eeToHHbbWW and \eeToHHbbbb sub-channels. The optimised cuts are  $\sumBtag{4} < 2.3, \, -\log\parenths{\y{34}} < 3.6$. The selection efficiencies of evens after lepton veto, the  mutually exclusive cuts  and the jet pairing for individual processes are shown in \Table{tab:doubleHiggs3TeVPreslection}.
+Cross sections of used samples are listed in \Table{tab:doubleHiggs3crossSection}. The mutually exclusive cuts to separate events into two independent sets are almost identical to the cuts used in the \rootS{1.4} analysis. \FIGURE{fig:doubleHiggs3TeVMutualPreselection} shows the sum of b-jet tag values, when the event is clustered into four jets, as a function of $-\log\parenths{\y{34}}$ for the hadronic \WW decay in \eeToHHbbWW and \eeToHHbbbb sub-channels. The optimised cuts are  $\sumBtag{4} < 2.3, \, -\log\parenths{\y{34}} < 3.6$. The selection efficiencies of evens after lepton veto, the  mutually exclusive cuts,  and the valid jet pairing for individual processes are shown in \Table{tab:doubleHiggs3TeVPreslection}.
 
 \begin{table}[!htbp]\centering
 % TODO fix lumi correction for e gamma, gamma e
@@ -1483,7 +1483,7 @@ Process  &  $\sigma(\rootS{3})$ / fb   \\
     \label{fig:doubleHiggs3Mutualbbbb}
   \end{subfigure}
 \caption[Sum of b-jet tag as a function of \y{34} at \rootS{3}]%
-   {The two-dimensional distribution of sum of b-jet tag values against $-\log\parenths{\y{34}}$ for: a)  hadronic \WW decay of \eeToHHbbWW; and b) \eeToHHbbbb events at \rootS{3}. The sum of b-jet tag values is calculated for the cases where events are clustered into four jets.}
+   {The two-dimensional distributions of sum of b-jet tag values against $-\log\parenths{\y{34}}$ for: a)  hadronic \WW decay of \eeToHHbbWW; and b) \eeToHHbbbb events at \rootS{3}. The sum of b-jet tag values is calculated for the cases where events are clustered into four jets.}
    \label{fig:doubleHiggs3TeVMutualPreselection}
 \end{figure}
 
@@ -1492,17 +1492,17 @@ The pre-selection cuts at \rootS{3} use the same cut on $m_{\HH}$. The cut on  b
 
 \begin{figure}[!htbp]
     \includegraphics[width=0.95\textwidth]{{doubleHiggs/preSel2/tR0_7_6jet_btag2_Higgs_all_M_TMVA201612083TeVtR0_7_qq_btag2_prepare}.pdf}
-    \caption{Distributions of the invariant mass  of the two Higgs system for \rootS{3}, assuming an intergraded luminosity of 2000\,\uprightMath{fb^{-1}}.}
+    \caption{Distributions of the invariant mass  of the two Higgs system for \rootS{3}, assuming an integrated luminosity of 2000\,\uprightMath{fb^{-1}}.}
     \label{fig:doubleHiggs3PreSelmHH}
 \end{figure}
 
 \begin{figure}[!htbp]
     \includegraphics[width=0.95\textwidth]{{doubleHiggs/preSel2/tR0_7_6jet_btag2_bTag1_TMVA201612083TeVtR0_7_qq_btag2_prepare}.pdf}
-    \caption{Distributions of the highest b-jet tag value for \rootS{3}, assuming an intergraded luminosity of 2000\,\uprightMath{fb^{-1}}.}
+    \caption{Distributions of the highest b-jet tag value for \rootS{3}, assuming an integrated luminosity of 2000\,\uprightMath{fb^{-1}}.}
     \label{fig:doubleHiggs3PreSelbtag}
 \end{figure}
 
-The cuts to aid the MVA at \rootS{3} are largely the same as the ones at \rootS{1.4}, apart from the difference on the cut of the invariant mass of \HH due to a higher centre-of-mass energy. The cuts are the invariant mass of the \Hbb < 500\,GeV, the invariant mass of the \HWW < 800\,GeV, the invariant mass of the \PW < 200\,GeV, and the invariant mass of the double Higgs system < 3000\,GeV.
+The cuts to aid the MVA at \rootS{3} are largely the same as the ones at \rootS{1.4}, apart from the difference on the cut of the invariant mass of double Higgs system due to a higher centre-of-mass energy. The cuts are the invariant mass of the \Hbb < 500\,GeV, the invariant mass of the \HWW < 800\,GeV, the invariant mass of the \PW < 200\,GeV, and the invariant mass of the double Higgs system < 3000\,GeV.
 
 
 \begin{comment}
@@ -1706,7 +1706,7 @@ Energy and momentum & \multicolumn{1}{R{0.6\textwidth}}{$E_{mis}$, $\pT_{\Hbb}$,
 Lab-frame angles & \multicolumn{1}{R{0.6\textwidth}}{$\theta_{mis}$, $\acolinearity{\Hbb}$, $\acolinearity{\PW}$, $\acolinearity{\HH}$} \\
 Boosted-frame frames & \multicolumn{1}{R{0.6\textwidth}}{$\cosStar{\Hbb}$, $\cosStar{\HH}$} \\
 Event shape & \multicolumn{1}{R{0.6\textwidth}}{$\abs{\sphericity}$, $-\ln(\y{23})$, $-\ln(\y{34})$, $-\ln(\y{45})$, $-\ln(\y{56})$} \\
-\Pbottom and \Pcharm tag & \multicolumn{1}{R{0.6\textwidth}}{$\btagFull{1,\Hbb}$, $\btagFull{2,\Hbb}$, $\btagFull{1,\PW}$, $\ctagFull{1,\Hbb}$, $\ctagFull{1,\PW}$} \\
+\Pbottom and \Pcharm tag & \multicolumn{1}{R{0.6\textwidth}}{$\btagFull{1}{\Hbb}$, $\btagFull{2}{\Hbb}$, $\btagFull{1}{\PW}$, $\ctagFull{1}{\Hbb}$, $\ctagFull{1}{\PW}$} \\
 Particle number &  \multicolumn{1}{R{0.6\textwidth}}{$\npfo{\Hbb}$, $\npfo{\PW}$} \\
 \hline
 \hline
