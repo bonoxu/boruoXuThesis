@@ -1667,15 +1667,15 @@ The same set of variables are used in the MVA as in the analysis at \rootS{1.4}.
 
 The final analysis is the semi-leptonic \WW decay of \eeToHH $\to$ \HepProcess{ \Pbottom \APbottom \PWplus \PWminus \Pnu \APnu}  at \rootS{3}. The semi-leptonic decay analysis at \rootS{1.4} was also performed. However there are not enough signal events to have a meaningful discussion for the analysis at \rootS{1.4}. Hence, only the semi-leptonic decay analysis at \rootS{3} is presented.
 
-The strategy of the semi-leptonic decay  analysis is very similar to the hadronic decay analysis. The main difference are that there is one lepton in the final state and the final state has four quarks instead of six. \Hbb and \PW can not be reconstructed due to the leptonic decay of one of the \PW. Hence, the signal events are selected when there is one identified lepton using the same lepton finding processors. The jet reconstruction parameters are the same as hadronic decay analysis at the \rootS{3}. There are no mutually exclusive cuts since there is no semi-leptonic analysis in the \eeToHHbbbb analysis.
+The strategy of the semi-leptonic decay  analysis is very similar to the hadronic decay analysis. The main differences are that there is one lepton in the final state and the final state has four quarks instead of six. \Hbb and \PW can not be reconstructed due to the leptonic decay of one of the \PW{s}. Hence, the signal events are selected when there is one identified lepton using the same lepton finding processors. The jet reconstruction parameters are the same as hadronic decay analysis at the \rootS{3}. There are no mutually exclusive cuts since there is no semi-leptonic analysis for the \eeToHHbbbb sub-channel.
 
 The pre-selection cuts are similar to the cuts in the hadronic analysis. The invariant mass of the double Higgs system is required to be above 150\,GeV. The highest b-jet tag value is higher than 0.2. The transverse momentum of the double Higgs system is higher than 30\,GeV.
 
-Variables used in the MVA classifier, listed in  \Table{tab:doubleHiggsVaraiblesSemiLep},  belong to  a reduced set of the variables  used in the hadronic decay analysis, as \Hbb and \PW can not be reconstructed in the semi-hadronic decay analysis. For the same reason, the cuts to aid the MVA are reduced to the invariant mass of \Hbb < 500\,GeV and the invariant mass of the double Higgs system < 3000\,GeV.
+Variables used in the MVA classifier, listed in  \Table{tab:doubleHiggsVaraiblesSemiLep},  belong to  a reduced set of the variables  used in the hadronic decay analysis, as \HWW and one \PW can not be reconstructed in the semi-hadronic decay analysis. For the same reason, the cuts to aid the MVA are reduced to the invariant mass of \Hbb < 500\,GeV and the invariant mass of the double Higgs system < 3000\,GeV.
 
 
 
-\FIGURE{tab:doubleHiggsQlv3TeVMVA} lists the  selection efficiency and number of events after the MVA event selection for individual processes at \rootS{3}, assuming a luminosity of 2000\,\uprightMath{fb^{-1}}.  Almost all background processes are non-zero after the MVA event selection. Nevertheless,  dominant background processes are almost identical to the hadronic decay analysis  at \rootS{3}. Hence discussion of the MVA event selection is provided in \Section{sec:doubleHiggsSignalSelResult}.
+\TABLE{tab:doubleHiggsQlv3TeVMVA} lists the  selection efficiency and number of events after the MVA event selection for individual processes at \rootS{3}, assuming an integrated luminosity of 2000\,\uprightMath{fb^{-1}}.  Almost all background processes are non-zero after the MVA event selection. Nevertheless,  dominant background processes are almost identical to the hadronic decay analysis  at \rootS{3}. Hence discussion of the MVA event selection is provided in \Section{sec:doubleHiggsSignalSelResult}.
 %"dominant background channels"?
 \begin{comment}
 \begin{table}[!htbp]
@@ -1774,7 +1774,7 @@ Particle number &  \multicolumn{1}{R{0.6\textwidth}}{$\npfo{\Hbb}$, $\npfo{\PW}$
 \hline \hline
 \end{tabular}
 \caption
-{List of signal and background events with selection efficiency and number of events at \rootS{3}  for semi-leptonic \WW decay of \eeToHHbbWW analysis , assuming an integrated luminosity of 2000\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of MVA after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after MVA ($N_{MVA}$) are shown. The entries marked with ``-'' represent  numbers less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles.}
+{List of signal and background events with selection efficiency and number of events at \rootS{3}  for semi-leptonic \WW decay of \eeToHHbbWW analysis, assuming an integrated luminosity of 2000\,\uprightMath{fb^{-1}}. The number of events ($N$), the selection efficiencies of pre-selection cuts ($\varepsilon_{presel}$), the selection efficiencies of MVA after pre-selection cuts ($\varepsilon_{MVA}$), and the number of events after MVA ($N_{MVA}$) are shown. The entries marked with ``-'' represent  numbers less than 0.01. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles.}
 \label{tab:doubleHiggsQlv3TeVMVA}
 \end{table}
 %semi-leptonic \WW decay of \eeToHHbbWW
@@ -1812,7 +1812,7 @@ The expected uncertainties on the measurement of the double Higgs production cro
 \frac{\Delta\left[\sigma\left(\HHvv\right)\right]}{\sigma\left(\HHvv\right)} =
 \begin{cases}
   179\%, & \mbox{at \rootS{1.4}, }  \\
-  92\%, & \mbox{at \rootS{3}},
+  92\%, & \mbox{at \rootS{3}}.
 \end{cases}
 \end{equation}
 %where $N_S$ is the number of  \eeToHH events passing the MVA event selection and $N_B$ is the number of background events passing the MVA event selection.
@@ -1835,7 +1835,7 @@ The coefficient $\kappa$ can be determined by parameterising the \eeToHH cross s
 \begin{figure}[!htbp]
     \includegraphics[width=0.45\textwidth]{{doubleHiggs/extraction/oneDrelation}}
 \caption[Cross section for the \eeToHH process as a function of the ratio $\lambda/\lambda_{SM}$ ]
-{Cross section for the \eeToHH process as a function of the ratio $\lambda/\lambda_{SM}$ at \rootS{1.4} and 3\,TeV, taken from \cite{Abramowicz:2016zbo}. Here $\lambda$ is the Higgs trilinear self coupling, \gHHH.}
+{Cross section for \eeToHH process as a function of the ratio $\lambda/\lambda_{SM}$ at \rootS{1.4} and 3\,TeV, taken from \cite{Abramowicz:2016zbo}. Here $\lambda$ is the Higgs trilinear self coupling, \gHHH.}
    \label{fig:doubleHiggsCouplingOneDRelation}
 \end{figure}
 %Without electron polarisation,
