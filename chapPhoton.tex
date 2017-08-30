@@ -199,7 +199,7 @@ The three-dimensional splitting problem is harder than a two-dimensional one. Th
 \centering
 {\includegraphics[width=0.85\textwidth]{photon/peakFindingMod}}
 \caption[Example of projecting a large photon cluster containing two photons.]
-{Two 500\,GeV photons (yellow and blue) within a  cluster, just resolved in a transverse plane orthogonal to the direction of the cluster.  The axes U and V are orthogonal axes in units of the \ECAL cell sizes. The height of a bin in the histogram is the sum of the calorimeter hit energy associated with the bin.}
+{Two 500\,GeV photons (yellow and blue) within a  cluster, just resolved in a transverse plane orthogonal to the direction of the cluster.  The axes U and V are orthogonal axes in units of the \ECAL cell lengths. The height of a bin in the histogram is the sum of the calorimeter hit energy associated with the bin.}
 \label{fig:photonPeakFinding}
 \end{figure}
 
@@ -317,14 +317,14 @@ In a dense jet environment, if a photon next to a charged hadron is carefully re
 \centering
 {\includegraphics[width=0.8\textwidth]{photon/2DpeakFindingTrack2}}
 \caption[Flow chart for \peakFinding algorithm.]
-{Main steps of the  \peakFinding algorithm, including the charged cluster variant: identifying whether the cluster is close to a track; creating and iterating over sub-clusters; applying \peakFinding algorithm neutral cluster variant to sub-clusters; filtering \ShowerPeak objects in sub-clusters; creating final \ShowerPeak objects.}
+{Main steps of the  \peakFinding algorithm, including the charged cluster variant: identifying whether the cluster is close to a track; creating and iterating over sub-clusters; applying \peakFinding algorithm neutral cluster variant to sub-clusters; filtering \ShowerPeak objects in sub-clusters; and creating final \ShowerPeak objects.}
 \label{fig:photonPeakFindingFlow}
 \end{figure}
 
 
 The "Create and iterate over sub-clusters" step performs the following. The \ECAL is sliced longitudinally to create fiducial volumes. For example, the default three slices will result in three  fiducial volumes in the \ECAL. Each fiducial volume covers the  space from the front of the \ECAL to a third, to two thirds, and to the back of the \ECAL. Three sub-clusters are created from the calorimeter hits of the cluster that are contained in each fiducial volume. In the example of the \ILD detector model, the first sub-cluster is formed with the  calorimeter hits of the cluster in the first 10 layers of the \ECAL. The second and the third sub-cluster are formed with the  calorimeter hits of the cluster in the first 20 layers  the \ECAL and the entire \ECAL respectively.
 
-After creating sub-clusters, the neutral cluster variant of the  \peakFinding algorithm is applied to each sub-cluster to find peaks. \ShowerPeak objects are created from the  \peakFinding algorithm.
+After creating sub-clusters, the neutral cluster variant of the  \peakFinding algorithm is applied to each sub-cluster to find peaks. \ShowerPeak objects are created from peaks, identified with the  \peakFinding algorithm.
 
 % The sub-cluster in the first 10 layers of the \ECAL is processed first, followed by the sub-clusters in the first 20 layers and the whole of the \ECAL.
 
@@ -945,7 +945,7 @@ with photon energies of  500\,GeV and 50\,GeV,   reconstructed with and without 
 
 
 
-The improvement in photon reconstruction leads to a considerable improvement in the jet energy resolution. Jet energy resolution is defined as the \rms divided by the mean for the smallest width of distribution that contains 90\% of entries, using \eeZuds, at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \Zprime is used   to avoid the complication of missing momentum from semi-leptonic decay of heavy quarks. Using 90\% of the entries is robust and focus on the Gaussian part of the jet energy distribution. The total jet energies are   sampled at centre-of-mass energies of 91, 200, 360 and 500\,GeV.
+The improvement in photon reconstruction leads to a considerable improvement in the jet energy resolution. Jet energy resolution is defined as the \rms divided by the mean for the smallest width of distribution that contains 90\% of entries, using \eeZuds, at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \Zprime is used   to avoid the complication of missing momentum from semi-leptonic decay of heavy quarks. Using 90\% of the entries is robust and focuses on the Gaussian part of the jet energy distribution. The total jet energies are   sampled at centre-of-mass energies of 91, 200, 360 and 500\,GeV.
 
 As shown in \Figure{fig:photonJERmuon}, jet energy resolutions are much better at \rootSGeV{360} and 500\,GeV for the reconstruction with photon algorithms. By identifying photons before reconstructing charged particles in a dense jet environment, there are fewer calorimeter hits left for the charged particle reconstruction. However, at \rootSGeV{91} and 200\,GeV, jet energy resolutions are worse  for the reconstruction with photon algorithms, because photon algorithms are developed and optimised with  jet environments at a high centre-of-mass energy of 500\,GeV.
 
@@ -1075,7 +1075,7 @@ The single-photon MC  samples were generated with an uniform distribution in the
 Another metric to reflect the improvement in photon reconstruction is the fraction of the fragment energy to the total energy in an event. In a two-photon sample, the fragment energy is defined as the total energy of particles excluding the two most energetic photons. Shown in \Figure{fig:photonDoubleFragEnergy}, using two-photon sample with photon energies of  500\,GeV and 50\,GeV, a reduction in fragment energy can be seen clearly going from \pandora version 1 to version 3. For the photon reconstruction in \pandora version 3, the average fragment energy fraction is below 0.1\% up to a distance separation of  30\,mm, whilst around 5\% energy would be in fragments for the reconstruction with \pandora version 1.
 \begin{figure}[tbph]
 \centering
-\includegraphics[width=0.75\textwidth]{photon/DoubleCompareFragEnergy3}
+\includegraphics[width=0.45\textwidth]{photon/DoubleCompareFragEnergy4}
 \caption[Average fraction fragments energy to the total energy, as a function of the MC distance separation]
 {Average fraction of fragments energy to the total energy  in the event, as a function of the true distance separation between two photons, using a two-photon sample with photon energies of  500\,GeV and 50\,GeV. The top orange and bottom blue points represent the reconstruction with \pandora version 1 and version 3 respectively. }
 \label{fig:photonDoubleFragEnergy}
@@ -1185,7 +1185,7 @@ Using the \ILD detector model, the single photon reconstruction efficiency is ab
 
 The number of photon fragments produced have been greatly reduced. Using a two-photon sample with photon energies of  500\,GeV and 50\,GeV, the average numbers of photons and particles beyond a distance separation of 20\,mm  are both less than 2.05, where the true value is 2.
 
-The distance of the minimal resolved photon pairs is reduced to 6\,mm for two photons with same energies, and 10\,mm for two photons with different energies.
+The distance of the minimal resolved photon pairs is reduced to 6\,mm for two photons with the same energy, and 10\,mm for two photons with different energies.
 
 The jet energy resolution has been improved for high centre-of-mass energies. The photon confusion terms, except at \rootSGeV{91}, have been reduced to 0.9\%.
 
