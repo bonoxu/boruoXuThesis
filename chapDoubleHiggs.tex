@@ -170,7 +170,7 @@ Process \rootS{1.4} &  $\sigma$ / fb   \\
 \end{tabular}
 
 \caption[Signal and background samples with the corresponding cross sections at \rootS{1.4}.]
-{List of signal and background samples used in the double Higgs analysis with the corresponding cross sections at \rootS{1.4}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes labeled with * and $\myDagger$, events are generated with the invariant mass of the total momenta of all quarks above 50 and 120\,GeV, respectively.}
+{List of signal and background samples used in the double Higgs analysis with the corresponding cross sections at \rootS{1.4}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung. \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes labeled with * and $\myDagger$, events are generated with the invariant mass of the total momenta of all quarks above 50 and 120\,GeV, respectively.}
 \label{tab:doubleHiggsMCSamples}
 \end{table}
 %Simulated \PW has invariant mass of 80.385\,GeV.
@@ -527,7 +527,7 @@ The performances of the different lepton finding processors for signal events an
 %Second sentence: can you say "" becase this would read better
 % \TABLE{tab:doubleHiggsIsoLepPerformance} shows the performance of the processors for signal events and the  \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background events.
 
-The forward lepton finders are most effective at rejecting background events with primary leptons in the forward region. Only 1\% of signal events are rejected, but 47.4\% of the \egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background events are rejected.
+The forward lepton finders are most effective at rejecting background events with primary leptons in the forward region. Only 1\% of signal events are rejected, but 47.4\% of the \egamma{\Pem}{\Pphoton}{\BS}{\Pem \Pquark \Pquark \Pquark \Pquark} background events are rejected.
 
 %\TABLE{tab:doubleHiggs1.4TeVPreslection} list the number of events surviving lepton rejection for signal and all background channels.
 
@@ -548,7 +548,7 @@ Combined & 86.6\% & 16.8\%  &  30.8\% \\
 \hline
 
 \end{tabular}
-\caption{The performances of the lepton finding algorithms for the signal events and selected background events at \rootS{1.4}.  \Pphoton(BS) represents a real photon from beamstrahlung (BS). Numbers represent the fractions of events where no leptons are identified by the individual lepton finder.}
+\caption{The performances of the lepton finding algorithms for the signal events and selected background events at \rootS{1.4}.  \Pphoton(BS) represents a real photon from beamstrahlung. Numbers represent the fractions of events where no leptons are identified by the individual lepton finder.}
 \label{tab:doubleHiggsIsoLepPerformance}
 \end{table}
 
@@ -578,7 +578,7 @@ Combined & 81.0\% & 23.3\% &  33.4\% \\
 \hline
 
 \end{tabular}
-\caption{The performances of the lepton finding algorithms for the signal events and selected background events at \rootS{3}.  \Pphoton(BS) represents a real photon from beamstrahlung (BS). Numbers represent the fractions of events where no leptons are identified by the individual lepton finder.}
+\caption{The performances of the lepton finding algorithms for the signal events and selected background events at \rootS{3}.  \Pphoton(BS) represents a real photon from beamstrahlung. Numbers represent the fractions of events where no leptons are identified by the individual lepton finder.}
 \label{tab:doubleHiggs3TeVIsoLepPerformance}
 \end{table}
 
@@ -1367,29 +1367,29 @@ Before interpreting the result for analysis at \rootS{1.4}, the analyses at \roo
 \eeTo{ \Pquark \Pquark \Pl \Pl} &  4088700 & 0.08\%& - & - \\
 \eeTo{ \Pquark \Pquark \Pnu \Pnu} & 1181550 & 4.0\%& - & - \\
 \hline
-\egamma{\Pepm}{\Pphoton}{BS}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 2606625 & 0.3\%& - & -\\
+\egamma{\Pepm}{\Pphoton}{\BS}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 2606625 & 0.3\%& - & -\\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pem \Pquark \Pquark \Pquark \Pquark} & 1305787.5  & 0.3\%& - & -\\
 %\egamma{\Pep}{\Pphoton}{BS}{\Pep \Pquark \Pquark \Pquark \Pquark} & 1300837.5 & 0.4\%& -& -\\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 861000 & 0.3\%&  - &  - \\
+\egamma{\Pepm}{\Pphoton}{\EPA}{\Pepm \Pquark \Pquark \Pquark \Pquark} & 861000 & 0.3\%&  - &  - \\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pem \Pquark \Pquark \Pquark \Pquark} & 430650.0 & 0.3\%&  - &  - \\
 %\egamma{\Pep}{\Pphoton}{EPA}{\Pep \Pquark \Pquark \Pquark \Pquark}  & 430350.0 & 0.3\% & - & -\\
-\egamma{\Pepm}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 178987.5  & 25.7\%& 0.005\%& 2.05\\
+\egamma{\Pepm}{\Pphoton}{\BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 178987.5  & 25.7\%& 0.005\%& 2.05\\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 89775.0  & 25.4\%& 0.005\%& 1.09\\
 %\egamma{\Pep}{\Pphoton}{BS}{\APnu \Pquark \Pquark \Pquark \Pquark}& 89212.5 & 24.9\% & 0.004\%& 0.96\\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 52050  & 12.5\% & 0.004\% & 0.27 \\
+\egamma{\Pepm}{\Pphoton}{\EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 52050  & 12.5\% & 0.004\% & 0.27 \\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pnu \Pquark \Pquark \Pquark \Pquark}& 26100.0  & 12.6\% & - &  - \\
 %\egamma{\Pep}{\Pphoton}{EPA}{\APnu \Pquark \Pquark \Pquark \Pquark}& 25950.0  & 12.4\%& 0.008\% & 0.27\\
-\egamma{\Pepm}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 35437.5   & 30.7\% & 0.02\% & 2.16 \\
+\egamma{\Pepm}{\Pphoton}{\BS}{\Pquark \Pquark \PHiggs \Pnu} & 35437.5   & 30.7\% & 0.02\% & 2.16 \\
 %\egamma{\Pem}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 17775   & 30.8\% & 0.02\% & 1.00 \\
 %\egamma{\Pep}{\Pphoton}{BS}{\Pquark \Pquark \PHiggs \Pnu} & 17662.5  & 30.6\% & 0.02\% & 1.16 \\
-\egamma{\Pepm}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 10170.0  & 16.1\% & 0.06\% & 0.95 \\
+\egamma{\Pepm}{\Pphoton}{\EPA}{\Pquark \Pquark \PHiggs \Pnu} & 10170.0  & 16.1\% & 0.06\% & 0.95 \\
 %\egamma{\Pem}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 5085  & 16.0\% & 0.04\% & 0.33 \\
 %\egamma{\Pep}{\Pphoton}{EPA}{\Pquark \Pquark \PHiggs \Pnu} & 5085   & 16.2\% & 0.08\% & 0.62 \\
 \hline
-\gammagamma{\Pphoton}{BS}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 2054951.5  & 0.2\%&  - & -\\
-\gammagamma{\Pphoton}{BS}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 4521037.5  & 0.4\%& - & - \\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{BS}{ \Pquark \Pquark \Pquark \Pquark}& 4539150.0 & 0.3\%&  - & - \\
-\gammagamma{\Pphoton}{EPA}{\Pphoton}{EPA}{ \Pquark \Pquark \Pquark \Pquark}& 1129500.0 & 0.3\% & - & -\\
+\gammagamma{\Pphoton}{\BS}{\Pphoton}{\BS}{ \Pquark \Pquark \Pquark \Pquark}& 2054951.5  & 0.2\%&  - & -\\
+\gammagamma{\Pphoton}{\BS}{\Pphoton}{\EPA}{ \Pquark \Pquark \Pquark \Pquark}& 4521037.5  & 0.4\%& - & - \\
+\gammagamma{\Pphoton}{\EPA}{\Pphoton}{\BS}{ \Pquark \Pquark \Pquark \Pquark}& 4539150.0 & 0.3\%&  - & - \\
+\gammagamma{\Pphoton}{\EPA}{\Pphoton}{\EPA}{ \Pquark \Pquark \Pquark \Pquark}& 1129500.0 & 0.3\% & - & -\\
 \hline \hline
 \end{tabular}
 
@@ -1463,7 +1463,7 @@ Process  &  $\sigma(\rootS{3})$ / fb   \\
 \end{tabular}
 
 \caption[Cross sections of samples at \rootS{3}.]
-{List of signal and background samples used in the double Higgs analysis with the corresponding cross sections at \rootS{3}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung (BS). \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes labelled with *, events are generated with the invariant mass of the total momenta of all quarks above 50\,GeV.}
+{List of signal and background samples used in the double Higgs analysis with the corresponding cross sections at \rootS{3}. \Pquark can be \Pup, \Pdown, \Pstrange, \Pbottom or \Ptop. Unless specified, \Pquark, \Plepton and \Pnu represent either particles or the corresponding anti-particles. \Pphoton(BS) represents a real photon from beamstrahlung. \Pphoton(EPA) represents a ``quasi-real'' photon, simulated with the Equivalent Photon Approximation. For processes labelled with *, events are generated with the invariant mass of the total momenta of all quarks above 50\,GeV.}
 \label{tab:doubleHiggs3crossSection}
 \end{table}
 
