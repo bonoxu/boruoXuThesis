@@ -822,6 +822,8 @@ FUNCTION {techreport}
 collaboration output
 format.authors "author" output.check
 new.block
+format.title "title" output.check
+new.block
 format.inst.tr.num.date output.nonnull
 eprint output
 new.block
