@@ -581,6 +581,8 @@ There are two variants of the photon fragment removal algorithms: one immediatel
 
 
 
+
+
 %The description of each variable used in the cuts will be provided first, followed by the descriptions of the logics of the cuts.
 
 \begin{comment}
@@ -642,23 +644,33 @@ Other quantities used in the merging metric include: $E_m$, the energy of the ma
 %\subsection{Cuts}
 %\subsection{Transverse shower comparison cuts}
 
-
-The transverse shower comparison cut merges fragments when the photon$-$fragment pair looks like one EM shower in the two-dimensional energy deposition projection. The transverse shower comparison requires $\frac{E_{p1}}{E_m + E_f} > 0.9 $, demanding  most energy of the cluster contains in the most energetic peak found by the  \peakFinding algorithm. It also demands that the second energetic peak should have less than half of the energy in the fragment,  $\frac{E_{p2}}{E_f} < 0.5 $. And the most energetic peak should have more energy than the main photon,   $E_{p1} > E_m$, where $E_m$ is the energy of the main photon;  $E_f$ is  the energy of the fragment; and $E_{p1}$ and $E_{p2}$ are the respective energies of the two most energetic EM showers,  identified by the \peakFinding algorithm, ordered by descending energy, using the photon$-$fragment pair as input. Lastly the fragment should be close to the main photon, $d < 30 $\,mm, where $d$ is the average energy weighted intra-layer distance between the photon and the fragment, illustrated schematically in \Figure{fig:photonDistanceMetric}:
+There are five sets of cuts:
+\begin{itemize}
+  \item The transverse shower comparison cut merges fragments when the photon$-$fragment pair looks like one EM shower in the two-dimensional energy deposition projection. The transverse shower comparison requires $\frac{E_{p1}}{E_m + E_f} > 0.9 $, demanding  most energy of the cluster contains in the most energetic peak found by the  \peakFinding algorithm. It also demands that the second energetic peak should have less than half of the energy in the fragment,  $\frac{E_{p2}}{E_f} < 0.5 $. And the most energetic peak should have more energy than the main photon,   $E_{p1} > E_m$, where $E_m$ is the energy of the main photon;  $E_f$ is  the energy of the fragment; and $E_{p1}$ and $E_{p2}$ are the respective energies of the two most energetic EM showers,  identified by the \peakFinding algorithm, ordered by descending energy, using the photon$-$fragment pair as input. Lastly the fragment should be close to the main photon, $d < 30 $\,mm, where $d$ is the average energy weighted intra-layer distance between the photon and the fragment, illustrated schematically in \Figure{fig:photonDistanceMetric}:
 \begin{equation}
 d = \frac{\sum_{i}^{layers}d_l^i \ E_{f}^i}{\sum_{i}^{layers}E_{f}^i}
 \end{equation}
 where index $i$ indicates $i^{th}$ layer of the \ECAL; the parameter $d_{l}^i$ is the minimum distance between calorimeter hits of the photon and the fragment in the $i^{th}$ layer; and $E_{f}^i$ is the total energy of calorimeter hits of the fragment in the $i^{th}$ layer of the \ECAL.  \FIGURE{fig:photonFragPhotonLowD}  and \Figure{fig:photonFragPhotonHighD} show the average energy weighted intra-layer distance ($d$) for  photon$-$photon-fragment pairs and the true photon$-$photon pairs, for low-energy and high-energy fragments respectively. Photon$-$fragment pairs typically have a small distance separation between the photon and the fragment.
-
-
-
-% All three distance metrics should be small to merge a photon$-$fragment pair.
-%$d$ is a better measurement of the closeness of the pair.
 \begin{figure}[tbph]
 \centering
 \includegraphics[width=0.35\textwidth]{photon/dLayer3}
 \caption{An illustration of  the average energy weighted intra-layer distance between the photon and the fragment, $d$.}
 \label{fig:photonDistanceMetric}
 \end{figure}
+  \item The close proximity cut merges fragments  when the fragment has a low energy and is spatially close to the main photon: $d < 20 $\,mm and  $E_f<$0.2\,GeV.
+  \item The third set of logics, small fragment cuts,  is when fragments that are spatially close to the main photon and have very few number of associated calorimeter hits. Either the  photon$-$fragment pair satisfies:  $d < 30 $\,mm; $d_c < 50 $\,mm; and $N_{calo}<40$. Or the  photon$-$fragment pair satisfies: $d < 30 $\,mm, and $N_{calo}<50$, where $N_{calo}$ is the number of the calorimeter  hits  in the fragment. The multiple sets of cuts allow the merging of a fragment with a fewer number of  calorimeter hits with a slightly larger distance separation to the main photon, or the merging of a fragment with a slightly larger number of  calorimeter hits with a smaller distance separation to the main photon.
+
+  \item The fourth set of  logics merges low-energy fragment in the  endcap region of the detector. The cut demands: $d_c < 60$\,mm; $\absCosTheta > 0.7$; $E_f<$ 0.6\,GeV; and $N_{calo}<40$. $\absCosTheta$ is the absolute value of the cosine of the polar angle of the main photon with respect to the beam direction. $d_c$ gives the distance between centroids of the photon and the fragment, which is a computationally quick measurement.  \FIGURE{fig:photonFragNeutralLowDc} and \Figure{fig:photonFragNeutralHighDc} shows the distance between centroids ($d_c$)  for photon$-$neutral-fragment pairs and the true photon$-$neutral-hadron pairs, for low-energy and high-energy fragments respectively. Photon$-$fragment pairs typically have a small distance separation between the photon and the fragment.
+
+  \item The last set of  logics is that the merged fragment should be relatively low energetic. The ratio of the fragment energy  to the main photon energy should be less than 0.01. The distance between the pair should satisfies $d < 40$\,mm and $d_h < 20$\,mm, where  $d_h$ is the minimum distance between calorimeter hits of the photon and the fragment.
+\end{itemize}
+
+
+
+
+% All three distance metrics should be small to merge a photon$-$fragment pair.
+%$d$ is a better measurement of the closeness of the pair.
+
 %One logic for merging is when
 \begin{figure}[tbph]
 \centering
@@ -680,7 +692,7 @@ where index $i$ indicates $i^{th}$ layer of the \ECAL; the parameter $d_{l}^i$ i
 
 %\subsection{Close proximity cuts}
 
-The close proximity cut merges fragments  when the fragment has a low energy and is spatially close to the main photon: $d < 20 $\,mm and  $E_f<$0.2\,GeV.
+
 %This set of cuts merges fragments if it is very close to the main photon and the fragment has a low energy.
 
 %\subsection{Low energy fragment cuts}
@@ -689,12 +701,10 @@ The close proximity cut merges fragments  when the fragment has a low energy and
 
 % \subsection{Small fragment cuts}
 % Two sets of cuts are developed.
-The third set of logics, small fragment cuts,  is when fragments that are spatially close to the main photon and have very few number of associated calorimeter hits. Either the  photon$-$fragment pair satisfies:  $d < 30 $\,mm; $d_c < 50 $\,mm; and $N_{calo}<40$. Or the  photon$-$fragment pair satisfies: $d < 30 $\,mm, and $N_{calo}<50$, where $N_{calo}$ is the number of the calorimeter  hits  in the fragment. The multiple sets of cuts allow the merging of a fragment with a fewer number of  calorimeter hits with a slightly larger distance separation to the main photon, or the merging of a fragment with a slightly larger number of  calorimeter hits with a smaller distance separation to the main photon.
 
 %in \ECAL
 
 %\subsection{Small fragment forward region cuts}
-The fourth set of  logics merges low-energy fragment in the  endcap region of the detector. The cut demands: $d_c < 60$\,mm; $\absCosTheta > 0.7$; $E_f<$ 0.6\,GeV; and $N_{calo}<40$. $\absCosTheta$ is the absolute value of the cosine of the polar angle of the main photon with respect to the beam direction. $d_c$ gives the distance between centroids of the photon and the fragment, which is a computationally quick measurement.  \FIGURE{fig:photonFragNeutralLowDc} and \Figure{fig:photonFragNeutralHighDc} shows the distance between centroids ($d_c$)  for photon$-$neutral-fragment pairs and the true photon$-$neutral-hadron pairs, for low-energy and high-energy fragments respectively. Photon$-$fragment pairs typically have a small distance separation between the photon and the fragment.
 
 %\subsection{Relative low energy fragment cuts}
 
@@ -715,7 +725,7 @@ The fourth set of  logics merges low-energy fragment in the  endcap region of th
 \label{fig:photonFragDistance2}
 \end{figure}
 
-The last set of  logics is that the merged fragment should be relatively low energetic. The ratio of the fragment energy  to the main photon energy should be less than 0.01. The distance between the pair should satisfies $d < 40$\,mm and $d_h < 20$\,mm, where  $d_h$ is the minimum distance between calorimeter hits of the photon and the fragment.
+
 %$d < 40$\,mm; $d_h < 20$\,mm; $\frac{E_{f}}{E_m} < 0.01$
 
 % If the fragment is close to the photon, and it is relative low energy to the photon, then the fragment is merged to the photon. This logic contains multiple sets of cuts, allowing the merging of a fragment with a smaller fragment-to-photon energy ratio with a slightly larger distance separation to the main photon, or the merging of  a fragment with a slightly higher  fragment-to-photon energy ratio with a smaller distance separation to the main photon.
@@ -736,6 +746,41 @@ Cuts for high-energy fragments ($E_f>$ 1\,GeV) only has logics for transverse sh
 
 %Comparing cuts for photon$-$photon-fragment pair and photon$-$neutral-hadron-fragment pair, the differences are in the values of cuts  due to the fact that  the neutral hadron fragments originated from charged particles are more likely to have low energies, and high-energy neutral hadron fragments are more likely to be originated from photons.
 
+
+\begin{table}[htbp]
+\centering
+
+\smallskip
+
+\begin{tabular}{l  r  r }
+\hline
+\hline
+$E_f\leqslant1$\,GeV &  Photon$-$photon & Photon$-$neutral-hadron \\
+\hline
+\multicolumn{1}{L{0.3\textwidth}}{Transverse shower comparison, or} & \multicolumn{1}{R{0.3\textwidth}}{$d < 30 $\,mm; $\frac{E_{p1}}{E_m + E_f} > 0.9 $; $\frac{E_{p2}}{E_f} < 0.5 $; $E_{p1} > E_m$}  & \multicolumn{1}{R{0.3\textwidth}}{-} \\
+%\multicolumn{1}{L{0.3\textwidth}}{close proximity, or} & \multicolumn{1}{R{0.3\textwidth}}{-}  & \multicolumn{1}{R{0.3\textwidth}}{$d < 20 $\,mm; $d_c < 40 $\,mm} \\
+\multicolumn{1}{L{0.3\textwidth}}{Low energy fragment, or} & \multicolumn{1}{R{0.3\textwidth}}{$d < 20 $\,mm; $E_f < 0.4 $\,GeV}  & \multicolumn{1}{R{0.3\textwidth}}{$d < 20 $\,mm; $d_c < 40 $\,mm} \\
+\multicolumn{1}{L{0.3\textwidth}}{Small fragment 1, or} & \multicolumn{1}{R{0.3\textwidth}}{$d < 30 $\,mm; $N_{calo} < 40 $; $d_c < 50 $\,mm}  & \multicolumn{1}{R{0.3\textwidth}}{$d < 50 $\,mm; $N_{calo} < 10 $; $d_h < 50$\,mm} \\
+\multicolumn{1}{L{0.3\textwidth}}{Small fragment 2, or} & \multicolumn{1}{R{0.3\textwidth}}{$d < 50 $\,mm; $N_{calo} < 20 $}  & \multicolumn{1}{R{0.3\textwidth}}{-} \\
+\multicolumn{1}{L{0.3\textwidth}}{Small fragment forward region, or} & \multicolumn{1}{R{0.3\textwidth}}{$N_{calo} < 40$; $d_c < 60$\,mm; $E_f < 0.6$\,GeV; $\absCosTheta > 0.7$}  & \multicolumn{1}{R{0.3\textwidth}}{-} \\
+\multicolumn{1}{L{0.3\textwidth}}{Relative low energy fragment} & \multicolumn{1}{R{0.3\textwidth}}{$d < 40$\,mm; $d_h < 20$\,mm; $\frac{E_{f}}{E_m} < 0.01$}  & \multicolumn{1}{R{0.3\textwidth}}{$d < 40$\,mm; $d_h < 15$\,mm; $\frac{E_{f}}{E_m} < 0.01$} \\
+\hline
+$E_f>1$\,GeV &  Photon$-$photon & Photon$-$neutral-hadron \\
+\hline
+\multicolumn{1}{L{0.3\textwidth}}{Transverse shower comparison, or} & \multicolumn{1}{R{0.3\textwidth}}{$\frac{E_{p1}}{E_m + E_f} > 0.9 $; $E_{p2} = 0$ or ($\frac{E_{p2}}{E_f} < 0.5 $, $E_{p1} > E_m$)}  & \multicolumn{1}{R{0.3\textwidth}}{$\frac{E_{p1}}{E_m + E_f} > 0.9 $; $E_{p2} = 0$ or ($\frac{E_{p2}}{E_f} < 0.5 $, $E_{p1} > E_m$)} \\
+\multicolumn{1}{L{0.3\textwidth}}{Relative low energy fragment 1, or} & \multicolumn{1}{R{0.3\textwidth}}{$d < 40$\,mm; $d_h < 20$\,mm; $\frac{E_f}{E_m} < 0.02$} & \multicolumn{1}{R{0.3\textwidth}}{$d < 40$\,mm; $d_h < 20$\,mm; $\frac{E_f}{E_m} < 0.02$} \\
+\multicolumn{1}{L{0.3\textwidth}}{Relative low energy fragment 2, or} & \multicolumn{1}{R{0.3\textwidth}}{-}  & \multicolumn{1}{R{0.3\textwidth}}{$d < 40$\,mm; $d_h < 20$\,mm; $\frac{E_f}{E_m} < 0.1$; $E_f > 10$\,GeV} \\
+\multicolumn{1}{L{0.3\textwidth}}{Relative low energy fragment 3} & \multicolumn{1}{R{0.3\textwidth}}{-}  & \multicolumn{1}{R{0.3\textwidth}}{$d < 20$\,mm; $d_h < 20$\,mm; $\frac{E_f}{E_m} < 0.2$; $E_f > 10$\,GeV} \\
+\hline
+\hline
+\end{tabular}
+
+\caption[The cuts for photon fragment removal algorithm in the \ECAL.]%
+{The cuts for merging photon$-$photon-fragment pairs and photon$-$neutral-fragment pairs for both low-energy and high-energy fragments, after charged hadron reconstruction.}
+\label{tab:photonFragRemovalCuts}
+\end{table}
+
+
 This merging test is considered for all possible  photon$-$fragment pairs. If multiple photon$-$fragment pairs with the same photon pass the merging test, the pair with the smallest distance metric, $d$, will be merged.
 
 Since all possible photon$-$fragment pairs are considered, this is a costly cooperation with $O(n^2)$ time complexity for $n$ particles. The speed is improved by considering only pairs with $d<80\ \text{mm}$.
@@ -746,6 +791,38 @@ Since all possible photon$-$fragment pairs are considered, this is a costly coop
 \subsection{Photon fragment removal algorithm after the \PhotonReconstruction algorithm}
 
 The photon fragment removal algorithm immediately after the \PhotonReconstruction algorithm shares similar logics as the stated above. The cuts for merging fragments are listed in \Table{tab:photonFragRemovalCuts2}.
+
+
+
+\begin{table}[htbp]
+\centering
+
+\smallskip
+
+\begin{tabular}{l  r  r }
+\hline
+\hline
+$E_f\leqslant1$\,GeV &  Photon$-$photon & Photon$-$neutral-hadron \\
+\hline
+\multicolumn{1}{L{0.3\textwidth}}{Transverse shower comparison, or} & \multicolumn{1}{R{0.3\textwidth}}{$d < 20 $\,mm; $\frac{E_{p1}}{E_m + E_f} > 0.9 $; $E_{p2} = 0$ or ($\frac{E_{p2}}{E_f} < 0.5 $, $E_{p1} > E_m$)}  & \multicolumn{1}{R{0.3\textwidth}}{$d < 20 $\,mm; $\frac{E_{p1}}{E_m + E_f} > 0.9 $; $E_{p2} = 0$ or ($\frac{E_{p2}}{E_f} < 0.5 $, $E_{p1} > E_m$)} \\
+\multicolumn{1}{L{0.3\textwidth}}{Low energy fragment, or} & \multicolumn{1}{R{0.3\textwidth}}{$d < 20 $\,mm; $E_f < 0.2 $\,GeV}  & \multicolumn{1}{R{0.3\textwidth}}{-} \\
+\multicolumn{1}{L{0.3\textwidth}}{Small fragment 1, or} & \multicolumn{1}{R{0.3\textwidth}}{$d < 30 $\,mm; $N_{calo} < 20 $; $d_h < 13 $\,mm}  & \multicolumn{1}{R{0.3\textwidth}}{$d < 50 $\,mm; $N_{calo} < 10 $; $d_h < 50$\,mm} \\
+\multicolumn{1}{L{0.3\textwidth}}{Small fragment 2, or} & \multicolumn{1}{R{0.3\textwidth}}{$d_c < 30 $\,mm; $N_{calo} < 10 $; $d_h < 13 $\,mm}  & \multicolumn{1}{R{0.3\textwidth}}{-} \\
+
+\multicolumn{1}{L{0.3\textwidth}}{Relative low energy fragment} & \multicolumn{1}{R{0.3\textwidth}}{-}  & \multicolumn{1}{R{0.3\textwidth}}{$d < 40$\,mm; $d_h < 15$\,mm; $\frac{E_{f}}{E_m} < 0.01$} \\
+\hline
+$E_f>1$\,GeV &  Photon$-$photon & Photon$-$neutral-hadron \\
+\hline
+\multicolumn{1}{L{0.3\textwidth}}{Transverse shower comparison, or} & \multicolumn{1}{R{0.3\textwidth}}{$d< 20$\,mm; $\frac{E_{p1}}{E_m + E_f} > 0.9 $; $E_{p2} = 0$ or ($\frac{E_{p2}}{E_f} < 0.5 $, $E_{p1} > E_m$)}  & \multicolumn{1}{R{0.3\textwidth}}{$d< 20$\,mm; $\frac{E_{p1}}{E_m + E_f} > 0.9 $; $E_{p2} = 0$ or ($\frac{E_{p2}}{E_f} < 0.5 $, $E_{p1} > E_m$)} \\
+\multicolumn{1}{L{0.3\textwidth}}{Relative low energy fragment } & \multicolumn{1}{R{0.3\textwidth}}{-} & \multicolumn{1}{R{0.3\textwidth}}{$d < 40$\,mm; $d_h < 20$\,mm; $\frac{E_f}{E_m} < 0.02$} \\
+\hline
+\hline
+\end{tabular}
+
+\caption[The cuts for photon fragment removal algorithm in the \ECAL.]%
+{The cuts for merging photon$-$photon-fragment pairs and photon$-$neutral-fragment pairs for both low-energy and high-energy fragments, immediately after photon reconstruction. }
+\label{tab:photonFragRemovalCuts2}
+\end{table} 
 
 %differs sightly in the values of the cuts, which
 % The algorithm have stricter cuts as it is careful not to make mistakes at merging fragments.
@@ -771,18 +848,28 @@ There is another type of fragments originated from the leakage effect of the \EC
 Photon fragments in the \HCAL are  spatially close to the main photon. A cone obtained from fitting the main photon, if extended to the \HCAL, should contain most of the calorimeter hits of the fragment. These features allow a set of cuts developed to merge  fragments in the \HCAL, which are listed in \Table{tab:photonHighEnergyFragCuts}.
 
 
-This algorithm uses photons in the \ECAL and neutral hadrons in the \HCAL as inputs. It then considers all pairs of reconstructed photons and neutral hadrons. Photon$-$fragment pairs passing all the cuts will be merged.
+This algorithm uses photons in the \ECAL and neutral hadrons in the \HCAL as inputs. It then considers all pairs of reconstructed photons and neutral hadrons. Photon$-$fragment pairs passing all the cuts will be merged. There are six categories of cuts:
 
 %For each pair, variables are calculated and compared to a set of cuts.
 
 %\subsection{Adjacent in layers cut}
+\begin{itemize}
+  \item The adjacent in layers cut demands that  photon cluster deposit energies in the last outer layer of the \ECAL   and  the fragment deposits energies in the first inner layer of the \HCAL.
+  \item
+Another requirement for merging, energy comparison cut,  is that the fragment should have a low energy relative to the main photon. The variables $E_m$ and $E_f$ are the energy of the main photon  and the energy of the fragment respectively. The ratio, $\frac{E_f}{E_m}$, has to be less than 0.1 for merging. \FIGURE{fig:photonHCalFragCut1} shows the distributions of  the energy fractions ($\frac{E_f}{E_m}$) after passing the adjacent in layers cut, for photon fragments in jet samples (blue), non-fragments in jet samples (orange), and photon fragments in single-photon samples (green). Jet samples are \eeZuds, at \rootSGeV{500}, reconstructed with the \pandora version 1. Single-photon samples are single 500\,GeV photon events,  reconstructed with the \pandora version 1. The cut $\frac{E_f}{E_m}$ < 0.1 contains most of the fragments.
+  \item
+The distance comparison cuts requires that fragment in the \HCAL to be merged to the main photon  should be spatially close to the main photon, measured by three distance metrics: the variable $d^l_c$ is the distance between the centroid position of the calorimeter hits of the main photon in the last outer layer in the \ECAL, and the centroid position of the calorimeter hits of the fragment in the first inner layer of the \HCAL; the variable $d^l_{fit}$ is the shortest distance between the direction fitted with the calorimeter hits of the main photon in the  last outer layer in the \ECAL, and the direction fitted with  the calorimeter hits of the fragment in the first inner layer of the \HCAL; and $d_{fit}$ is the shortest distance between the direction fitted with the main photon, and the direction fitted with the fragment. These three distances should be small for merging. The cuts demand: $d^l_c \leqslant 173\,\text{mm}$; $d^l_{fit} \leqslant 100\,\text{mm}$; and $d_{fit} \leqslant 100\,\text{mm}$.  \FIGURE{fig:photonHCalFragCut2} shows the distributions of ${d^l_c}^2$  after passing the adjacent in layers cut and the energy comparison cut, for photon fragments in jet samples (blue), non-fragments in jet samples (orange), and photon fragments in single-photon samples (green). The cut at  $d^l_c \leqslant 173$\,mm (${d^l_c}^2 \leqslant 3000$\,\uprightMath{mm^2}) covers most of the fragments.
 
-The adjacent in layers cut demands that  photon cluster deposit energies in the last outer layer of the \ECAL   and  the fragment deposits energies in the first inner layer of the \HCAL.
+  \item The projection comparison cut states that the direction of the fragment  to be merged to the main photon should be similar to the direction of the main photon. The variable  $r_f$ is the energy weighted \rms  distance of a calorimeter hit in the fragment to the direction fitted with the main photon.  The cut requires $ r_f \leqslant 45\,\text{mm}$.
+  \item The shower width comparison cut requires that the shower width of the fragment to be merged to the main photon  and the shower width of the main photon are similar. Variable $w^l_m$ is the \rms distance of the calorimeter hits of the main photon in last outer layer  in the \ECAL to the centroid of the calorimeter hits in the same layer. Variable  $w^l_f$ is the  \rms distance of the calorimeter hits of the fragment in the first inner layer  in the \HCAL to the centroid of the calorimeter hits in the same layer. The ratio $\frac{w^l_f}{w^l_m}$ needs to be in the range from 0.3 to 5 to pass the cut. The generous upper bound is because the \HCAL cell size is much larger than the cell size of the \ECAL.
+  \item The last cut, the cone comparison cut, demands that when a cone obtained by fitting the main photon in the \ECAL is extended to the fragment in the \HCAL, the cone should contain a significant amount of the fragment. The variable, $\frac{N_{cone}}{N_f}$, the fraction of the calorimeter hits in the fragment in the cone comparing to the  calorimeter hits in the fragment, has to be greater than 0.5 for merging.
+
+\end{itemize}
+
 
 %\subsection{Energy comparison cut}
 
 
-Another requirement for merging, energy comparison cut,  is that the fragment should have a low energy relative to the main photon. The variables $E_m$ and $E_f$ are the energy of the main photon  and the energy of the fragment respectively. The ratio, $\frac{E_f}{E_m}$, has to be less than 0.1 for merging. \FIGURE{fig:photonHCalFragCut1} shows the distributions of  the energy fractions ($\frac{E_f}{E_m}$) after passing the adjacent in layers cut, for photon fragments in jet samples (blue), non-fragments in jet samples (orange), and photon fragments in single-photon samples (green). Jet samples are \eeZuds, at \rootSGeV{500}, reconstructed with the \pandora version 1. Single-photon samples are single 500\,GeV photon events,  reconstructed with the \pandora version 1. The cut $\frac{E_f}{E_m}$ < 0.1 contains most of the fragments.
 
 
 \begin{figure}[!tbph]
@@ -796,8 +883,6 @@ Another requirement for merging, energy comparison cut,  is that the fragment sh
 
 %\subsection{Distance comparison cuts}
 
-The distance comparison cuts requires that fragment in the \HCAL to be merged to the main photon  should be spatially close to the main photon, measured by three distance metrics: the variable $d^l_c$ is the distance between the centroid position of the calorimeter hits of the main photon in the last outer layer in the \ECAL, and the centroid position of the calorimeter hits of the fragment in the first inner layer of the \HCAL; the variable $d^l_{fit}$ is the shortest distance between the direction fitted with the calorimeter hits of the main photon in the  last outer layer in the \ECAL, and the direction fitted with  the calorimeter hits of the fragment in the first inner layer of the \HCAL; and $d_{fit}$ is the shortest distance between the direction fitted with the main photon, and the direction fitted with the fragment. These three distances should be small for merging. The cuts demand: $d^l_c \leqslant 173\,\text{mm}$; $d^l_{fit} \leqslant 100\,\text{mm}$; and $d_{fit} \leqslant 100\,\text{mm}$.  \FIGURE{fig:photonHCalFragCut2} shows the distributions of ${d^l_c}^2$  after passing the adjacent in layers cut and the energy comparison cut, for photon fragments in jet samples (blue), non-fragments in jet samples (orange), and photon fragments in single-photon samples (green). The cut at  $d^l_c \leqslant 173$\,mm (${d^l_c}^2 \leqslant 3000$\,\uprightMath{mm^2}) covers most of the fragments.
-
   %Jet samples are \eeZuds, at \rootSGeV{500}, reconstructed with the \pandora version 1. Single-photon samples are single 500\,GeV photon samples,  reconstructed with the \pandora version 1.
 
 \begin{figure}[!tbph]
@@ -810,14 +895,13 @@ The distance comparison cuts requires that fragment in the \HCAL to be merged to
 
 
 %\subsection{Projection comparison cut}
-The projection comparison cut states that the direction of the fragment  to be merged to the main photon should be similar to the direction of the main photon. The variable  $r_f$ is the energy weighted \rms  distance of a calorimeter hit in the fragment to the direction fitted with the main photon.  The cut requires $ r_f \leqslant 45\,\text{mm}$.
+
 
 %\subsection{Shower width comparison cut}
-The shower width comparison cut requires that the shower width of the fragment to be merged to the main photon  and the shower width of the main photon are similar. Variable $w^l_m$ is the \rms distance of the calorimeter hits of the main photon in last outer layer  in the \ECAL to the centroid of the calorimeter hits in the same layer. Variable  $w^l_f$ is the  \rms distance of the calorimeter hits of the fragment in the first inner layer  in the \HCAL to the centroid of the calorimeter hits in the same layer. The ratio $\frac{w^l_f}{w^l_m}$ needs to be in the range from 0.3 to 5 to pass the cut. The generous upper bound is because the \HCAL cell size is much larger than the cell size of the \ECAL.
+
 
 %\subsection{Cone comparison cut}
 
-The last cut, the cone comparison cut, demands that when a cone obtained by fitting the main photon in the \ECAL is extended to the fragment in the \HCAL, the cone should contain a significant amount of the fragment. The variable, $\frac{N_{cone}}{N_f}$, the fraction of the calorimeter hits in the fragment in the cone comparing to the  calorimeter hits in the fragment, has to be greater than 0.5 for merging.
 
 
 
