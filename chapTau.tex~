@@ -581,10 +581,10 @@ An electron develops a characteristic EM shower in the \ECAL, whilst a charged p
 
 The calorimeter hit information is also used to  differentiate an EM shower from a hadronic shower. Two variables used in the MVA classification are: the average energy of a calorimeter hit ($\bar{E}_{hit}$), which is the total energy deposited in the \ECAL and \HCAL divided by the number of the \ECAL and \HCAL calorimeter hits, and the average fraction of minimum ionising calorimeter hits ($MIP$), which is the number of calorimeter hits in the \ECAL and \HCAL flagged as minimum ionising particles by the \pandora reconstruction, divided by the total number of calorimeter hits in the \ECAL and \HCAL.
 
-Finally the track  is used to provide the consistency check of the track momentum with the total energy in the \ECAL and \HCAL for charged particles. The variable used in the MVA classification is the energy in the \ECAL and \HCAL divided by the track momentum ($E/p$).
+Finally track momentum is used to provide the consistency check of the track momentum with the total energies in the \ECAL and \HCAL for charged particles. The variable used in the MVA classification is the energy in the \ECAL and \HCAL divided by the track momentum, averaged over all charged particles ($E/p$).
 
 
-\FIGURE{fig:tauVar5} show distributions of the average energy of a calorimeter hit ($\bar{E}_{hit}$), and the energy in the \ECAL and \HCAL divided by the track momentum ($E/p$). Differences between the \decayElectron, \decayMuon, and \decayPion decay modes can be seen.
+\FIGURE{fig:tauVar5} show distributions of the average energy of a calorimeter hit ($\bar{E}_{hit}$), and the energy in the \ECAL and \HCAL divided by the track momentum, averaged over all charged particles ($E/p$). Differences between the \decayElectron, \decayMuon, and \decayPion decay modes can be seen.
 %Last information used to separate an electron  from a charged pion is the track$-$momentum calorimeter$-$energy consistency check.
 
 
@@ -609,7 +609,7 @@ Finally the track  is used to provide the consistency check of the track momentu
   \label{fig:tauVarEOverPCharge}
 \end{subfigure}
 \caption
-{Distributions of: a) the average energy of a calorimeter hit ($\bar{E}_{hit}$); and b)  the energy in the \ECAL and \HCAL divided by the track momentum ($E/p$).  The area under the curve is normalised to unity.}
+{Distributions of: a) the average energy of a calorimeter hit ($\bar{E}_{hit}$); and b)  the energy in the \ECAL and \HCAL divided by the track momentum, averaged over all charged particles ($E/p$).  The area under the curve is normalised to unity.}
 \label{fig:tauVar5}
 \end{figure}
 
@@ -740,7 +740,7 @@ where $B_{i}$ is the branching fraction of the tau  hadronic decay mode $i$; $\v
 \centering
 %\small
 %\smallskip
-\begin{tabular}{c   c}
+\begin{tabular}{l   r}
 \hline
 \hline
 \ECAL cell length /\,mm& \ClosestHitDistance\xspace/\,mm   \\
@@ -783,7 +783,7 @@ where $B_{i}$ is the branching fraction of the tau  hadronic decay mode $i$; $\v
 
 %This trend is observed for almost all tau decay modes.
 
-\TABLE{tab:TauTauHad} lists the achieved hadronic decay mode separation, as measured by \tauHad, with 3\,mm and 20\,mm \ECAL cells for four different centre-of-mass energies. The sensitivity of \tauHad to different cell sizes is stronger at high centre-of-mass energies.  With decay products being spatially close at high centre-of-mass energies, it is more beneficial to have a small \ECAL cell size to reconstruct individual particles.
+\TABLE{tab:TauTauHad} lists the achieved hadronic decay mode separation, as measured by \tauHad, with 3\,mm and 20\,mm \ECAL cell lengths for four different centre-of-mass energies. The sensitivity of \tauHad to different cell sizes is stronger at high centre-of-mass energies.  With decay products being spatially close at high centre-of-mass energies, it is more beneficial to have a small \ECAL cell size to reconstruct individual particles.
 
 
 \begin{table}[htbp]
@@ -814,7 +814,7 @@ where $B_{i}$ is the branching fraction of the tau  hadronic decay mode $i$; $\v
 
 For the \tauToRho decay mode, the efficiency at  \rootSGeV{1000} increases as the cell size increases. This is because the multivariate classifier optimises for the overall classification efficiency, which may balance the decrease of the efficiency of one decay mode by the increase of the efficiency of another decay mode. In this case, the small increase in the efficiency for \tauToRho decay mode at \rootSGeV{1000} is compensated by the drastic decrease in the efficiency for \tauToAiPhoton decay mode at the same centre-of-mass energy. For this reason, \tauHad gives a better picture of true performance.
 
-For the \tauToAiPhoton decay mode, the loss of efficiency with an increasing \ECAL  cell size and an increasing centre-of-mass energy is most significant compared to other decay modes. With more photons in the final state, it is the most challenging decay mode to reconstruct and thus most sensitive to the change in cell sizes and centre-of-mass energies.
+For the \tauToAiPhoton decay mode, the loss of efficiency with an increasing \ECAL  cell size and an increasing centre-of-mass energy is most significant comparing to other decay modes. With morephotons in the final state, it is the most challenging decay mode to reconstruct and thus most sensitive to the change in cell sizes and centre-of-mass energies.
 
 For the \tauToAiPion decay mode, the efficiencies are similar to that of the \tauToPion decay mode. Both final states contain charged particles only. Therefore it is most sensitive to the tracking detector performance, which is not affected by different \ECAL cell sizes.
 
