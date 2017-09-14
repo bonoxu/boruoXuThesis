@@ -19,7 +19,7 @@ A good single photon energy resolution and the ability to reconstruct two spatia
 
 %Since the essential part of the particle flow reconstruction is the track-cluster association,  a high-performance photon reconstruction thus leads to a reduced-density environment for charged-particle reconstruction, which in return improves the
 
-This chapter starts with an overview of the electromagnetic shower produced by photons passing through a thick absorber. It then discusses photon reconstruction algorithms within the \pandora framework, followed by a description of the performance of these algorithms.  Part of this chapter has been published in the proceedings of 2015 International Workshop on Future Linear Colliders \cite{Xu:2016rcz}. The photon reconstruction algorithms presented in this chapter have benefited a number of physics analyses. The most recent example  is the  \HepProcess{\PHiggs \to \Pgamma \Pgamma} simulation study at  \CLIC \cite{Kacarevic:higgsToGammaGamma}.
+This chapter starts with an overview of the electromagnetic shower produced by photons passing through a thick absorber. It then discusses photon reconstruction algorithms within the \pandora framework followed by a description of the performance of these algorithms.  Part of this chapter has been published in the proceedings of 2015 International Workshop on Future Linear Colliders \cite{Xu:2016rcz}. The photon reconstruction algorithms presented in this chapter have benefited a number of physics analyses. The most recent example  is the  \HepProcess{\PHiggs \to \Pgamma \Pgamma} simulation study at  \CLIC \cite{Kacarevic:higgsToGammaGamma}.
 
 
 
@@ -28,9 +28,9 @@ This chapter starts with an overview of the electromagnetic shower produced by p
 
 \section{Electromagnetic showers}
 \label{sec:photonEMshower}
-Electromagnetic (EM) showers develop through processes of the pair production and bremsstrahlung when a high energy photon or electron passes though a thick absorber. Many low-energy photons and electrons are generated, producing shower-like  structures in the detector. Two suitable length scales to describe the EM shower growth are the radiation length and the \RM \cite{PhysRev.149.201,Bathow:1970dn}.
+Electromagnetic (EM) showers develop through processes of the pair production and bremsstrahlung when a high energy photon or electron passes though a thick absorber. Many low-energy photons and electrons are generated producing shower-like  structures in the detector. Two suitable length scales to describe the EM shower growth are the radiation length and the \RM \cite{PhysRev.149.201,Bathow:1970dn}.
 
-The radiation length of a material describes the EM longitudinal  shower profile, defined as the mean distance travelled by an electron for  its energy to be reduced by a factor of $1/e$ via bremsstrahlung. It is also defined as the \uprightMath{7/9} of the mean free path  for pair production by a high energy photon\cite{segre1977nuclei}.
+The radiation length of a material describes the EM longitudinal  shower profile defined as the mean distance travelled by an electron for  its energy to be reduced by a factor of $1/e$ via bremsstrahlung. It is also defined as the \uprightMath{7/9} of the mean free path  for pair production by a high energy photon\cite{segre1977nuclei}.
 %The properties of the EM shower is used to form photon candidates, photon ID test, and photon separation.
 
 
@@ -39,7 +39,7 @@ The radiation length of a material describes the EM longitudinal  shower profile
 \frac{dE}{dt} = E_0 b \frac{\parenths{bt}^{a-1}e^{-bt}}{\Gamma(a)},
 \label{eq:photonEMshower}
 \end{equation}
-where $t$ is the number of radiation lengths; the parameter $E_0$ is the initial energy of the photon/electron; the parameter $b$ takes the value of 0.5, which is sufficient for the purpose of photon reconstruction \cite{Agashe:2014kda}; and the parameter $a$ is given by \cite{Thomson:2009rp}:
+where $t$ is the number of radiation lengths; the parameter $E_0$ is the initial energy of the photon/electron; the parameter $b$ takes the value of 0.5 which is sufficient for the purpose of photon reconstruction \cite{Agashe:2014kda}; and the parameter $a$ is given by \cite{Thomson:2009rp}:
 \begin{equation}
 a = 1.25 + 0.5\ln\left(\frac{E_0}{E_c}\right),
 \end{equation}
@@ -53,7 +53,7 @@ where $E_c$ is the critical energy. The critical energy is defined as the energy
 \centering
 {\includegraphics[width=0.65\textwidth]{photon/EMlong}}
 \caption[Simulated longitudinal electromagnetic shower profile as a function of depth for electrons and photons.]
-{An EGS4 \cite{Ford:1978jp,Hirayama:296198} simulation of a 30\,GeV electron-induced electromagnetic shower in iron. The histogram shows the fractional energy deposition as a function of radiation length, and the curve is a gamma-function fit to the distribution. Circles and squares are the numbers of electrons and photons respectively with total energy greater than 1.5\,MeV crossing planes with scale on right. Plot taken from \cite{Agashe:2014kda}.}
+{An EGS4 \cite{Ford:1978jp,Hirayama:296198} simulation of a 30\,GeV electron-induced electromagnetic shower in iron. The histogram shows the fractional energy deposition as a function of radiation length. The curve is a gamma-function fit to the distribution. Circles and squares are the numbers of electrons and photons respectively with total energy greater than 1.5\,MeV crossing planes with scale on right. Plot taken from \cite{Agashe:2014kda}.}
 \label{fig:photonEMlongProfile}
 \end{figure}
 
@@ -110,7 +110,7 @@ Places of the photon algorithms used  in the \pandora are shown in \Figure{fig:p
 \centering
 {\includegraphics[width=0.85\textwidth]{photon/photonAlgs2}}
 \caption[A flow diagram of the \PhotonReconstruction algorithm.]
-{Places of the photon algorithms used  in the \pandora. The five photon algorithms are highlighted in red.}
+{Places of the photon algorithms used  in the \pandora. Five photon algorithms are highlighted in red.}
 \label{fig:photonPhotonAlgs}
 \end{figure}
 
@@ -147,7 +147,7 @@ Firstly an overview of electromagnetic showers is presented. The \PhotonReconstr
 \label{sec:photonRecostrcution}
 
 
-The \PhotonReconstruction algorithm runs at an early stage of the overall reconstruction, before the charged particle reconstruction.  The main steps of the \PhotonReconstruction algorithm, shown in \Figure{fig:photonPhotonRecoFlow}, are:  forming photon clusters; finding photon candidates; and a photon identity test. 
+The \PhotonReconstruction algorithm runs at an early stage of the overall reconstruction, before the charged particle reconstruction.  The main steps of the \PhotonReconstruction algorithm, shown in \Figure{fig:photonPhotonRecoFlow}, are:  forming photon clusters; finding photon candidates; and a photon identity test.
 
 The \PhotonReconstruction algorithm runs after the muon reconstruction algorithm, as shown in the schematic diagram of the algorithms in \pandora in \Figure{fig:photonPhotonAlgs}. Inputs of the \PhotonReconstruction algorithm are calorimeter hits in the \ECAL that are not associated with reconstructed muons.
 
@@ -261,7 +261,7 @@ The calorimeter hits associated with the cluster are projected onto the two-dime
 \begin{equation}
 \vec{s_{i}} = \frac{\vec{a_{i}} -  \vec{\angles{a}}}{d_{cell}},
 \end{equation}
-where $\vec{a}$ is the three-dimensional position of the calorimeter hit $i$;  $\vec{\angles{a}}$ is the centroid position of cluster $a$; and $d_{cell}$ is the  \ECAL square cell length. The coordinate of the calorimeter hit projection onto the plane is calculated from the scalar products of the distance vector, $\vec{s_{i}}$, with the axes vectors: $\vec{u}$ and $\vec{v}$. 
+where $\vec{a}$ is the three-dimensional position of the calorimeter hit $i$;  $\vec{\angles{a}}$ is the centroid position of cluster $a$; and $d_{cell}$ is the  \ECAL square cell length. The coordinate of the calorimeter hit projection onto the plane is calculated from the scalar products of the distance vector, $\vec{s_{i}}$, with the axes vectors: $\vec{u}$ and $\vec{v}$.
 % One bin size along either axes on the 2D histogram corresponds to one \ECAL square cell length.
 The calorimeter hits in the two-dimensional plane are binned in a two-dimensional histogram. The height of a bin in the 2D histogram is the sum of the energies associated with the calorimeter hits that fall in that particular bin. One bin size along either axis on the 2D histogram corresponds to one \ECAL square cell length.
 
@@ -307,7 +307,7 @@ where $d_{i}$ is the Euclidean distance between a non-peak bin and a  peak bin $
 In the 2D histogram,  major peaks with many associated non-peak bins most likely correspond to physical photons, while minor peaks with a few associated non-peak bins are more likely from fluctuations in the energy deposition of the EM shower. The performance of the \peakFinding algorithm is thus improved by discarding small peaks.  After all non-peak bins are associated with peak bins, peaks with fewer than three non-peak bins associated are discarded. These discarded non-peak bins are re-associated with other peak bins. This  process is iterated until all peak bins have at least three bins associated.
 
 
-%peak filtering. 
+%peak filtering.
 
 %To select only major peaks and to discard minor peaks,
 
@@ -589,9 +589,9 @@ Sometimes not all hits from a photon are reconstructed and identified as one pho
 
 % where cuts are developed by comparing photon$-$fragment pairs and non-photon$-$fragment pair using the truth information.
 % Kinematic and topological properties of a photon$-$fragment pair are examined.
-A photon and a fragment form a photon$-$fragment pair.  Depending on whether the fragment is reconstructed as a photon or a neutral hadron, the photon$-$fragment pairs are further classified into photon$-$photon-fragment pairs and photon$-$neutral-fragment pairs. The neutral fragment refers to the fragment reconstructed as a neutral hadron. 
+A photon and a fragment form a photon$-$fragment pair.  Depending on whether the fragment is reconstructed as a photon or a neutral hadron, the photon$-$fragment pairs are further classified into photon$-$photon-fragment pairs and photon$-$neutral-fragment pairs. The neutral fragment refers to the fragment reconstructed as a neutral hadron.
 
-\FIGURE{fig:photonFragEnergy} shows the energies of the second most energetic reconstructed photon in the photon$-$photon-fragment pairs, the true photon$-$photon pairs, photon$-$neutral-fragment pairs, and true photon$-$neutral-hadron pairs. Most photon and neutral hadron fragments have energies below than 1\,GeV. Hence the photon$-$fragment pairs are subsequently  divided into low-energy and high-energy pairs, depending on whether the fragment energy ($E_f$) is above 1\,GeV. 
+\FIGURE{fig:photonFragEnergy} shows the energies of the second most energetic reconstructed photon in the photon$-$photon-fragment pairs, the true photon$-$photon pairs, photon$-$neutral-fragment pairs, and true photon$-$neutral-hadron pairs. Most photon and neutral hadron fragments have energies below than 1\,GeV. Hence the photon$-$fragment pairs are subsequently  divided into low-energy and high-energy pairs, depending on whether the fragment energy ($E_f$) is above 1\,GeV.
 
 Plots in this section are obtained with 10000 simulated \eeZuds, at \rootSGeV{500}, reconstructed with the \pandora version 1.
 
@@ -880,7 +880,7 @@ $E_f>1$\,GeV &  Photon$-$photon & Photon$-$neutral-hadron \\
 
 %The previous section describes  algorithms to remove photon fragments in the \ECAL that are peripheral to the electromagnetic shower core.
 
-%There is another type of fragments originated from the leakage effect of the \ECAL. 
+%There is another type of fragments originated from the leakage effect of the \ECAL.
 
 When a high-energy EM shower is not fully contained in the \ECAL, the shower deposits energy in the \HCAL, which often forms a neutral hadron in the \HCAL. An example of a 500\,GeV photon reconstructed into a main photon in the \ECAL (red) and a neutral hadron fragment in the \HCAL (blue) is shown in \Figure{fig:photonEvtDspHCalFrag}. This section presents an algorithm to merge fragments in the \HCAL to the main photon.
 
@@ -1306,7 +1306,7 @@ The introduction of the photon reconstruction and photon splitting algorithm (bl
         \label{fig:photonDoubleCompareN_pN_all}
 \end{figure}
 
-%The ability to  reconstruct  a photon pair as two entities depends on energies of two photons. 
+%The ability to  reconstruct  a photon pair as two entities depends on energies of two photons.
 
 \FIGURE{fig:photonDoubleCompareEnergies} shows the average numbers of photon reconstructed using two-photon samples as a function of the true distance separation between two photons, for different photon energies. When the energies of two photons are similar, the distance of two photons starting to be resolved is shorter. This is because that when the two photon showers have similar sizes, the \peakFinding algorithm can exploit the symmetry in the size of the EM showers. For example, 500\,GeV$-$500\,GeV photon pair and 10\,GeV$-$10\,GeV photon pair start to be resolved at a distance separation of 6\,mm, which is about one \ECAL cell length in the simulated nominal \ILD detector. In contrast, photon pairs with different energies, for example 500\,GeV$-$50\,GeV and  100\,GeV$-$10\,GeV pairs, start to be resolved at a distance separation of 10\,mm, which is about two \ECAL cells length.
 
