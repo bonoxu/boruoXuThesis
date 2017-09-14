@@ -117,7 +117,7 @@ Places of the photon algorithms used  in the \pandora are shown in \Figure{fig:p
   %Two photon fragment removal algorithms remove fragments in the \ECAL, and one algorithm removes fragments in the \HCAL. The last photon algorithm is a photon splitting algorithm, which separates accidently merged photons.
  %This algorithm is implemented at the early stage of the reconstruction.
 %Three algorithms remove photon fragments at a later stage in the reconstruction.
-%These algorithms improve the compsingle photon energy resolution.
+%These algorithms improve the single photon energy resolution.
 
 %, which helps photon separation resolution.
 
@@ -149,7 +149,7 @@ Firstly an overview of electromagnetic showers is presented. The \PhotonReconstr
 
 The \PhotonReconstruction algorithm runs at an early stage of the overall reconstruction, before the charged particle reconstruction.  The main steps of the \PhotonReconstruction algorithm, shown in \Figure{fig:photonPhotonRecoFlow}, are:  forming photon clusters; finding photon candidates; and a photon identity test.
 
-The \PhotonReconstruction algorithm runs after the muon reconstruction algorithm, as shown in the schematic diagram of the algorithms in \pandora in \Figure{fig:photonPhotonAlgs}. Inputs of the \PhotonReconstruction algorithm are calorimeter hits in the \ECAL that are not associated with reconstructed muons.
+The \PhotonReconstruction algorithm runs after the muon reconstruction algorithm as shown in the schematic diagram of the algorithms in \pandora in \Figure{fig:photonPhotonAlgs}. Inputs of the \PhotonReconstruction algorithm are calorimeter hits in the \ECAL that are not associated with reconstructed muons.
 
 
 %It corresponds to ``Particle ID'' stage in the \pandora reconstruction, described in \Section{sec:particleID}.
@@ -169,7 +169,7 @@ The \PhotonReconstruction algorithm runs after the muon reconstruction algorithm
 
 %The inputs of the \PhotonReconstruction algorithm are calorimeter hits in the \ECAL that have not been used to form particles in previous algorithms. For example, muon reconstruction algorithms form muons and remove calorimeter hits associated with muons from the reconstruction. The  calorimeter hits associated with reconstructed muons are not used to form photons.
 
-Clusters are created from calorimeter hits in the \ECAL using the cone clustering algorithm. As the target for reconstruction is the neutral photon, the cone clustering algorithm uses high-energy calorimeter hits in the \ECAL as initial seeds in the order of descending energies, instead of using track projections as initial seeds.  Parameters for large cones are used to form clusters such that it is unlikely that one photon is split into two clusters, but one cluster may contain calorimeter hits from  multiple photons.
+Clusters are created from calorimeter hits in the \ECAL using the cone clustering algorithm. As the target for reconstruction is the neutral photon, the cone clustering algorithm uses high-energy calorimeter hits in the \ECAL as initial seeds in the order of descending energies instead of using track projections as initial seeds.  Parameters for large cones are used to form clusters such that it is unlikely that one photon is split into two clusters but one cluster may contain calorimeter hits from  multiple photons.
 
  %in a way such that calorimeter hits from one photon would not be split into two clusters, but one cluster may contain calorimeter hits from  multiple photons.
 
@@ -218,7 +218,7 @@ The three-dimensional splitting problem is harder than a two-dimensional one. Th
 
 %As discussed in \Section{sec:photonCandiate},
 
-Identifying photon candidates inside a cluster is equivalent to identifying peaks in a two-dimensional plane, using a two-dimensional peak-finding algorithm (\peakFinding algorithm). The \peakFinding algorithm aims to correctly identify peak positions in a two-dimensional histogram and to associate non-peak bins to identified peaks.
+Identifying photon candidates inside a cluster is equivalent to identifying peaks in a two-dimensional plane using a two-dimensional peak-finding algorithm (\peakFinding algorithm). The \peakFinding algorithm aims to correctly identify peak positions in a two-dimensional histogram and to associate non-peak bins to identified peaks.
 
 % An example of two photons resolved in a two dimensional plane is shown in the \Figure{fig:photonPeakFinding}.
 %  calorimeter hits of
@@ -231,7 +231,7 @@ There are two variants of the \peakFinding algorithm: the neutral cluster varian
 
 \begin{figure}[tbph]
 \centering
-{\includegraphics[width=0.7\textwidth]{photon/2DpeakFinding4}}
+{\includegraphics[width=0.7\textwidth]{photon/2DpeakFinding5}}
 \caption[Flow chart for \peakFinding algorithm neutral cluster variant.]
 {Main steps of the  neutral cluster variant of the \peakFinding algorithm: creating the 2D energy deposition; peak reconstruction; and forming \ShowerPeak objects.}
 \label{fig:photonPeakFindingFlowNeutral}
@@ -239,11 +239,11 @@ There are two variants of the \peakFinding algorithm: the neutral cluster varian
 
 \subsubsection{Creating the two-dimensional energy deposition}
 
-A two-dimensional (2D) plane is used to host the projection of the calorimeter hits of the cluster.  Two axes of the two-dimensional histogram are chosen such that the axes and the direction of the cluster form an orthogonal basis  in the three-dimensional space. The direction of the cluster is the direction of the IP to the centroid of the cluster. The first axis vector, $\vec{u}$,  is defined as
+A two-dimensional (2D) plane is used to host the projection of the calorimeter hits of the cluster.  Two axes of the two-dimensional histogram are chosen such that the axes and the direction of the cluster form an orthogonal basis  in the three-dimensional space. The direction of the cluster is the direction of the IP to the centroid of the cluster. The first axis vector, $\vec{u}$,  is defined as:
 \begin{equation}
 \vec{u} = \text{norm}\parenths{\vec{\angles{a}}_y,\, - \vec{\angles{a}}_x,\,0},
 \end{equation}
-where  norm is the normalisation operator and $ \vec{\angles{a}}_x$ is the $x$ component of the centroid position of cluster $a$, assuming the IP is at origin. The second axis vector, $\vec{v}$, is defined as
+where  norm is the normalisation operator and $ \vec{\angles{a}}_x$ is the $x$ component of the centroid position of cluster $a$ assuming the IP is at origin. The second axis vector, $\vec{v}$, is defined as:
 \begin{equation}
 \vec{v} = \text{norm}\parenths{\vec{u}\, \times \vec{\angles{a}}}.
 \end{equation}
@@ -280,7 +280,7 @@ Local peaks are identified in the 2D histogram. A local peak is defined as a bin
 \centering
 {\includegraphics[width=0.85\textwidth]{photon/peakFindingPeakOnly}}
 \caption[Example of projecting a large photon cluster containing two photons.]
-{Two peak bins, orange and blue, are identified. Red bins are non-peak bins.}
+{Two peak bins indicated with orange and blue colours are identified. Red bins are non-peak bins.}
 \label{fig:photonPeakFindingPeakOnly}
 \end{figure}
 
@@ -296,7 +296,7 @@ A non-peak bin is associated with the peak bin that gives the smallest value of 
 \begin{equation}
 \frac{d_{i}}{\sqrt{E_{i}}}
 \end{equation}
-where $d_{i}$ is the Euclidean distance between a non-peak bin and a  peak bin $i$ in the 2D histogram, and $E_{i}$ is the height (energy) of the peak bin $i$. For each non-peak bin, the metric is considered for all peak bins to find the peak bin that produces the smallest metric. In the example of the 2D histogram in \Figure{fig:photonPeakFindingPeakOnly} with two peaks identified, the result after associating non-peak bins to peak bins is shown in \Figure{fig:photonPeakFinding}.
+where $d_{i}$ is the Euclidean distance between a non-peak bin and a  peak bin $i$ in the 2D histogram, and $E_{i}$ is the height (energy) of the peak bin $i$. For each non-peak bin, the metric is considered for all peak bins to find the peak bin that produces the smallest metric. For the 2D histogram in \Figure{fig:photonPeakFindingPeakOnly} with two peaks identified, the result after associating non-peak bins to peak bins is shown in \Figure{fig:photonPeakFinding}.
 
 %Alternative metrics provided in the algorithm include $d_{i}$, $\frac{d_{i}}{{E_{i}}}$, and $\frac{d_{i}}{{E_{i}^2}}$. The default metric is chosen due to a good balance between distance and energy of the peak.
 
@@ -347,7 +347,7 @@ After creating sub-clusters, the neutral cluster variant of the  \peakFinding al
 
 % The sub-cluster in the first 10 layers of the \ECAL is processed first, followed by the sub-clusters in the first 20 layers and the whole of the \ECAL.
 
-The \ShowerPeak objects created from each sub-cluster undergo the ``\ShowerPeak filter'' step. Peaks in the first sub-cluster are preserved. Peaks in the second sub-cluster are preserved if the peak bin position is the same as a preserved peak bin position in the first sub-cluster, allowing a shift in the peak bin position by no more than one neighbouring bin. Similarly, peaks in the third sub-cluster are preserved if the peak bin position is the same as a preserved peak bin position in the second sub-cluster, allowing a shift in the peak bin position by no more than one neighbouring bin. Only preserved peaks in the third sub-cluster are used to form the final \ShowerPeak objects.
+The \ShowerPeak objects created from each sub-cluster undergo the ``\ShowerPeak filter'' step. Peaks in the first sub-cluster are preserved. Peaks in the second sub-cluster are preserved if the peak bin position is the same as a preserved peak bin position in the first sub-cluster and a shift in the peak bin position by no more than one neighbouring bin is allowed. Similarly, peaks in the third sub-cluster are preserved if the peak bin position is the same as a preserved peak bin position in the second sub-cluster, allowing a shift in the peak bin position by no more than one neighbouring bin. Only preserved peaks in the third sub-cluster are used to form the final \ShowerPeak objects.
 
 Furthermore, if a peak bin is within one neighbouring bin of a track projection bin, the peak is discarded. The track projection bin  is the bin where the track projection onto the front of the \ECAL projects onto the 2D histogram.
 
@@ -366,7 +366,7 @@ Furthermore, if a peak bin is within one neighbouring bin of a track projection 
 %The non-preserved peak and the associated \ShowerPeak object are discarded.
 %, reconstructed using the \ILD detector model
 
-\FIGURE{fig:photon2DpeakCharge} illustrates an example of three sub-clusters created during the charged variant of the \peakFinding algorithm. Peaks with associated bins and track projection bins are labelled. \FIGURE{fig:photon2DpeakCharge1} shows the first sub-cluster, created using calorimeter hits  in the first 10 layers of the \ECAL. One peak is identified. \FIGURE{fig:photon2DpeakCharge2} shows the second sub-cluster, created using calorimeter hits in the first 20 layers of the \ECAL. Two peaks are identified. Only the blue peak is in the same position of the blue peak in the first sub-cluster. Hence, the blue peak in the second cluster is preserved. \FIGURE{fig:photon2DpeakCharge3} shows the third sub-cluster, created using calorimeter hits in the entire \ECAL. Three peaks are identified. Only blue  peak is in the  same position of the blue peak in the second sub-cluster. Hence, only blue  peak in the third sub-cluster is preserved. The preserved blue peak and associated bins in the third sub-cluster are then used to create one \ShowerPeak object.
+\FIGURE{fig:photon2DpeakCharge} illustrates an example of three sub-clusters created during the charged variant of the \peakFinding algorithm. Peaks with associated bins and track projection bins are labelled. \FIGURE{fig:photon2DpeakCharge1} shows the first sub-cluster, created using calorimeter hits  in the first 10 layers of the \ECAL. One peak is identified. \FIGURE{fig:photon2DpeakCharge2} shows the second sub-cluster, created using calorimeter hits in the first 20 layers of the \ECAL. Two peaks are identified. Only the blue peak is in the same position of the blue peak in the first sub-cluster. Hence, the blue peak in the second cluster is preserved. \FIGURE{fig:photon2DpeakCharge3} shows the third sub-cluster created using calorimeter hits in the entire \ECAL. Three peaks are identified. Only blue  peak is in the  same position of the blue peak in the second sub-cluster. Hence, only blue  peak in the third sub-cluster is preserved. The preserved blue peak and associated bins in the third sub-cluster are then used to create one \ShowerPeak object.
 
 
 \begin{figure}[tbph]
@@ -397,7 +397,7 @@ Furthermore, if a peak bin is within one neighbouring bin of a track projection 
 
 %The 2D histogram is iterated many times during the algorithm.
 
-The time complexity of iterating a 2D histogram is $O(n^2)$ for a $n$ bins by  $n$ bins sized histogram (default $n = 41$). Therefore, for the purpose of speed, it is undesirable to have  a large number of bins. Having a small finite-sized histogram speeds up the computation. However, because of the finite size of the histogram, only  calorimeter hits  projected onto the histogram would be considered by the peak finding algorithm. Calorimeter hits projected outside the histogram would not be used when \ShowerPeak objects are constructed. This behaviour is suitable if the algorithm is only interested in finding the EM shower cores, for example, the \PhotonReconstruction algorithm. However, for the purpose of photon splitting, all calorimeter hits from the parent photon should be used to form daughter photons. Hence the inclusive mode of the \peakFinding algorithm is developed, and allows calorimeter hits projected outside the histogram to be associated with identified peaks.
+The time complexity of iterating a 2D histogram is $O(n^2)$ for a $n$ bins by  $n$ bins sized histogram (default $n = 41$). Therefore, for the purpose of speed it is undesirable to have  a large number of bins. Having a small finite-sized histogram speeds up the computation. However, due to the finite size of the histogram only  calorimeter hits  projected onto the histogram would be considered by the peak finding algorithm. Calorimeter hits projected outside the histogram would not be used when \ShowerPeak objects are constructed. This behaviour is suitable if the algorithm is only interested in finding the EM shower cores, for example, the \PhotonReconstruction algorithm. However, for the purpose of photon splitting, all calorimeter hits from the parent photon should be used to form daughter photons. Hence the inclusive mode of the \peakFinding algorithm is developed and allows calorimeter hits projected outside the histogram to be associated with identified peaks.
 
 
 
@@ -437,13 +437,13 @@ The  photon fragment removal algorithm merges small photon fragments to identifi
 
 \subsubsection{Variables used in likelihood classifier }
 
-Variables used in the likelihood classifier exploit the differences between a characteristic electromagnetic shower and a hadronic shower, and the fact that a photon is less likely to be close to track projections onto the front of the \ECAL, than a cluster of a charged particle. Variables used in the classifier are listed in \Table{tab:photonPhotonIDvar}. All plots in this section are produced from  simulated \eeZuds, at \rootSGeV{500}.
+Variables used in the likelihood classifier exploit the differences between a characteristic electromagnetic shower and a hadronic shower and the fact that a photon is less likely to be close to track projections onto the front of the \ECAL than a cluster of a charged particle. Variables used in the classifier are listed in \Table{tab:photonPhotonIDvar}. All plots in this section are produced from  simulated \eeZuds at a centre-of-mass energy of 500\,GeV.
 
-Two variables are obtained from the EM longitudinal shower profile: $t_0$ is the start layer in the \ECAL of the fitted EM longitudinal shower profile, shown in \Figure{fig:photonLongProfileStart}; and $\delta{l}$ is fractional difference of the observed EM longitudinal shower profile to the expected EM longitudinal shower profile described in \Equation{eq:photonEMshower}:
+Two variables are obtained from the EM longitudinal shower profile: $t_0$ is the start layer in the \ECAL of the fitted EM longitudinal shower profile shown in \Figure{fig:photonLongProfileStart}; and $\delta{l}$ is fractional difference of the observed EM longitudinal shower profile to the expected EM longitudinal shower profile described in \Equation{eq:photonEMshower}:
 \begin{equation}
 \delta l = \frac{1}{E_0}\sum_{i}^{}\absOf{\Delta E_{obs}^i - \Delta E_{EM}^i },
 \end{equation}
-where $E_0$ is the energy of the EM shower; $\Delta E_{EM}^i$ is the energy of the expected EM longitudinal shower profile in bin $i$;  $\Delta E_{obs}^i$ is the energy of the observed EM longitudinal shower profile in bin $i$; the index $i$ is summed over the \ECAL layers as the EM longitudinal shower profile is binned according to the \ECAL layers; and the quantity $\delta l$ is minimised as a function of $\Delta E_{EM}^i$, which is a  function of $t_0$ via  \Equation{eq:photonEMshower}. The $\delta l$ distributions for photons and non-photon particles are shown in \Figure{fig:photonLongProfileDiscrepancy}. For a true photon, $t_0$  and $\delta l $ are expected to be small, as an EM shower should start in the first few layers of the \ECAL and the observed EM longitudinal shower profile should be similar to an expected EM longitudinal shower profile.
+where $E_0$ is the energy of the EM shower; $\Delta E_{EM}^i$ is the energy of the expected EM longitudinal shower profile in bin $i$;  $\Delta E_{obs}^i$ is the energy of the observed EM longitudinal shower profile in bin $i$; the index $i$ is summed over the \ECAL layers as the EM longitudinal shower profile is binned according to the \ECAL layers; and the quantity $\delta l$ is minimised as a function of $\Delta E_{EM}^i$ which is a  function of $t_0$ via  \Equation{eq:photonEMshower}. The $\delta l$ distributions for photons and non-photon particles are shown in \Figure{fig:photonLongProfileDiscrepancy}. For a true photon, $t_0$  and $\delta l $ are expected to be small, as an EM shower should start in the first few layers of the \ECAL and the observed EM longitudinal shower profile should be similar to an expected EM longitudinal shower profile.
 
 Three variables are obtained from the EM transverse  shower profile: the variable $\langle{w}\rangle$ is the energy weighted \rms distance of all bins in a \ShowerPeak to its peak bin, a measure of the transverse shower size, shown in \Figure{fig:photonPeakRms}; the variable ${\langle{w_{UV}}\rangle}$ is the smallest ratio of the two energy weighted \rms distances of all bins in a \ShowerPeak to its peak bin in each of the U, V axis direction, a measure of the circularity of the transverse shower; the variable, $\tilde{E}_{cluster}$, is the  ratio of the energy of the \ShowerPeak object to the cluster energy, a measure of the dominance of the \ShowerPeak in a cluster.
 
@@ -496,14 +496,14 @@ Distance to track &  $d$ \\
 
 
 
-%  Candidate with energy below 0.2\,GeV would not be examined in this step, as there are far more non-photons than photons and the classifier makes mor.
+%  Candidate with energy below 0.2\,GeV would not be examined in this step, as there are far more non-photons than photons and the classifier makes.
 
 \subsubsection{Projective Likelihood classifier}
 
 
-Projective likelihood classifier   is used  for the photon identity test due to its  low requirement on computing resources, comparing to a Boosted Decision Tree classifier or a Neural Network classifier.
+Projective likelihood classifier   is used  for the photon identity test due to its  low requirement on computing resources comparing to a Boosted Decision Tree classifier or a Neural Network classifier.
 
-The probability distributions for each variable for photons and non-photon particles are obtained in the training stage. The distributions of these variables are normalised to unity, stored in binned histograms. The classifier is improved by realising that the variable distributions depend on photon energy. Thus the variables distributions are stored separately for different photon energy ranges. Eight photon energy ranges are used by binning the distribution of photon energies at 0.2, 0.5, 1, 1.5, 2.5, 5, 10, 20\,GeV.
+The probability distributions for each variable for photons and non-photon particles are obtained in the training stage. The distributions of these variables are normalised to unity, stored in binned histograms. The classifier is improved by realising that the variable distributions depend on photon energy. Thus, the variables distributions are stored separately for different photon energy ranges. Eight photon energy ranges are used by binning the distribution of photon energies at 0.2, 0.5, 1, 1.5, 2.5, 5, 10, 20\,GeV.
 
 %The variable distributions for non-photon particles are binned in the same energy ranges, according to the energy of the non-photon particles.
 
@@ -521,8 +521,8 @@ where $P_{i}$ and $P'_{i}$ are the values in the $i^{th}$ variable probability d
 A \ShowerPeak object passes the photon identity test if
 \begin{equation}
 \begin{cases}
-  \text{PID} > 0.6, & \text{if}\ 0.2 < E < 0.5\,\text{GeV}\\
-  \text{PID} > 0.4, & \text{if}\ E \geqslant 0.5\,\text{GeV}
+  \text{PID} > 0.6, & \text{if}\ 0.2 < E < 0.5\,\text{GeV},\\
+  \text{PID} > 0.4, & \text{if}\ E \geqslant 0.5\,\text{GeV},
 \end{cases}
 \end{equation}
 where $E$ is the energy of the \ShowerPeak object. Two values of the cuts on $\text{PID}$ are motivated by the fact that it is more likely to misidentify a low-energy particle as a photon. A low-energy EM shower does not have a dense shower core, and is more difficult to identify. \FIGURE{fig:photonPidLow} shows the distributions of PID for photons and non-photons with energies between 0.2 and 0.5\,GeV. Hence for \ShowerPeak objects with energies between 0.2 and 0.5\,GeV, \uprightMath{PID > 0.6} is required instead of \uprightMath{PID > 0.4}.
@@ -591,9 +591,9 @@ Sometimes not all hits from a photon are reconstructed and identified as one pho
 % Kinematic and topological properties of a photon$-$fragment pair are examined.
 A photon and a fragment form a photon$-$fragment pair.  Depending on whether the fragment is reconstructed as a photon or a neutral hadron, the photon$-$fragment pairs are further classified into photon$-$photon-fragment pairs and photon$-$neutral-fragment pairs. The neutral fragment refers to the fragment reconstructed as a neutral hadron.
 
-\FIGURE{fig:photonFragEnergy} shows the energies of the second most energetic reconstructed photon in the photon$-$photon-fragment pairs, the true photon$-$photon pairs, photon$-$neutral-fragment pairs, and true photon$-$neutral-hadron pairs. Most photon and neutral hadron fragments have energies below than 1\,GeV. Hence the photon$-$fragment pairs are subsequently  divided into low-energy and high-energy pairs, depending on whether the fragment energy ($E_f$) is above 1\,GeV.
+\FIGURE{fig:photonFragEnergy} shows the energies of the second most energetic reconstructed photon in the photon$-$photon-fragment pairs, the true photon$-$photon pairs, photon$-$neutral-fragment pairs, and true photon$-$neutral-hadron pairs. Most photon and neutral hadron fragments have energies below than 1\,GeV. Hence the photon$-$fragment pairs are subsequently  divided into low-energy and high-energy pairs, depending on whether the fragment energy, $E_f$, is above 1\,GeV.
 
-Plots in this section are obtained with 10000 simulated \eeZuds, at \rootSGeV{500}, reconstructed with the \pandora version 1.
+Plots in this section are obtained with 10000 simulated \eeZuds at \rootSGeV{500} reconstructed with the \pandora version 1.
 
 %The pair is merged when its properties pass a set of cuts.
 
@@ -617,7 +617,7 @@ Plots in this section are obtained with 10000 simulated \eeZuds, at \rootSGeV{50
 
 % , because they have different kinematic and topological distributions.
 % $d$, $d_c$ and $d_h$ are mean energy weighted intra-layer distance within the pair, distance between two centroids, and minimum distance between calorimeter hits of each \PFO in the pair, respectively.  Three distance measurements have subtle difference.
-There are two variants of the photon fragment removal algorithms: one immediately after the \PhotonReconstruction algorithm, and the other one after the charged particle reconstruction, shown in the schematic diagram of the algorithms in \pandora in \Figure{fig:photonPhotonAlgs}.. Since two algorithms share similar logics for fragment removal, the algorithm used   after the charged particle reconstruction will be discussed in detail here.
+There are two variants of the photon fragment removal algorithms: one immediately after the \PhotonReconstruction algorithm, and the other one after the charged particle reconstruction, shown in the schematic diagram of the algorithms in \pandora in \Figure{fig:photonPhotonAlgs}. Since two algorithms share similar logics for fragment removal, the algorithm used   after the charged particle reconstruction will be discussed in detail here.
 
 The aim for the photon fragment removal algorithm is to merge fragments to main photons based on sets of cuts. \TABLE{tab:photonFragRemovalCuts} lists cuts for merging photon$-$photon-fragment pairs and photon$-$neutral-fragment pairs for both low-energy and high-energy fragments.  Using the cuts for photon$-$photon-fragment pairs with low-energy fragments  as an example,  each set of logics for merging fragments is discussed. There are five sets of cuts. A photon$-$fragment pair passing any one set of cuts will be merged.
 
@@ -688,7 +688,7 @@ Other quantities used in the merging metric include: $E_m$, the energy of the ma
 
 
 \begin{enumerate}
-  \item The transverse EM shower comparison cut merges fragments when the photon$-$fragment pair looks like one EM shower in the two-dimensional energy deposition projection. The transverse shower comparison requires $\frac{E_{p1}}{E_m + E_f} > 0.9 $, demanding  most energy of the cluster contains in the most energetic peak found by the  \peakFinding algorithm. It also demands that the second energetic peak should have less than half of the energy in the fragment,  $\frac{E_{p2}}{E_f} < 0.5 $. And the most energetic peak should have more energy than the main photon,   $E_{p1} > E_m$, where $E_m$ is the energy of the main photon;  $E_f$ is  the energy of the fragment; and $E_{p1}$ and $E_{p2}$ are the respective energies of the two most energetic EM showers,  identified by the \peakFinding algorithm, ordered by descending energy, using the photon$-$fragment pair as input. Lastly the fragment should be close to the main photon, $d < 30 $\,mm, where $d$ is the average energy weighted intra-layer distance between the photon and the fragment:
+  \item The transverse EM shower comparison cut merges fragments when the photon$-$fragment pair looks like one EM shower in the two-dimensional energy deposition projection. The transverse shower comparison requires $\frac{E_{p1}}{E_m + E_f} > 0.9 $, demanding  most energy of the cluster contains in the most energetic peak found by the  \peakFinding algorithm. It also demands that the second energetic peak should have less than half of the energy in the fragment,  $\frac{E_{p2}}{E_f} < 0.5 $. And the most energetic peak should have more energy than the main photon,   $E_{p1} > E_m$, where $E_m$ is the energy of the main photon;  $E_f$ is  the energy of the fragment; and $E_{p1}$ and $E_{p2}$ are the respective energies of the two most energetic EM showers  identified by the \peakFinding algorithm using the photon$-$fragment pair as input, ordered by descending energy. Lastly the fragment should be close to the main photon, $d < 30 $\,mm, where $d$ is the average energy weighted intra-layer distance between the photon and the fragment:
 \begin{equation}
 d = \frac{\sum_{i}^{layers}d_l^i \ E_{f}^i}{\sum_{i}^{layers}E_{f}^i}
 \end{equation}
@@ -828,7 +828,7 @@ $E_f>1$\,GeV &  Photon$-$photon & Photon$-$neutral-hadron \\
 
 All possible  photon$-$fragment pairs are considered. If multiple photon$-$fragment pairs with the same photon pass the merging test, the pair with the smallest distance metric, $d$, will be merged.
 
-Since all possible photon$-$fragment pairs are considered, this is a costly operation. The speed of the algorithm is improved by considering only pairs with $d<80\ \text{mm}$.
+Since all possible photon$-$fragment pairs are considered, this is a costly operation. The speed of the algorithm is improved by only considering pairs with $d<80\ \text{mm}$.
 
 
 %with $O(n^2)$ time complexity for $n$ particles. The time complexity of an algorithm describes the amount of time spent by an algorithm to run as a function of the length of the string representing the input. The speed is improved by considering only pairs with $d<80\ \text{mm}$.
@@ -895,7 +895,7 @@ When a high-energy EM shower is not fully contained in the \ECAL, the shower dep
 \label{fig:photonEvtDspHCalFrag}
 \end{figure}
 
-Photon fragments in the \HCAL are  spatially close to the main photon. A cone obtained from fitting the main photon, if extended to the \HCAL, should contain most of the calorimeter hits of the fragment. These features allow a set of cuts developed to merge  fragments in the \HCAL, which are listed in \Table{tab:photonHighEnergyFragCuts}.
+Photon fragments in the \HCAL are  spatially close to the main photon. A cone obtained from fitting the main photon, if extended to the \HCAL, should contain most of the calorimeter hits of the fragment. These features allow a set of cuts developed to merge  fragments in the \HCAL which are listed in \Table{tab:photonHighEnergyFragCuts}.
 
 
 This algorithm uses photons in the \ECAL and neutral hadrons in the \HCAL as inputs. It considers all pairs of reconstructed photons and neutral hadrons. Photon$-$fragment pairs passing all cuts will be merged. There are six sets of cuts:
@@ -906,9 +906,9 @@ This algorithm uses photons in the \ECAL and neutral hadrons in the \HCAL as inp
 \begin{enumerate}
   \item The adjacent in layers cut demands that the photon cluster deposits energies in the last outer layer of the \ECAL   and  the fragment deposits energies in the first inner layer of the \HCAL.
   \item
-The energy comparison cut requires that the fragment have a low energy relative to the main photon. The ratio, $\frac{E_f}{E_m}$, has to be less than 0.1 for merging. The variables $E_m$ and $E_f$ are the energy of the main photon  and the energy of the fragment respectively. \FIGURE{fig:photonHCalFragCut1} shows the distributions of  the energy fractions, $\frac{E_f}{E_m}$, after passing the adjacent in layers cut, for photon fragments in jet samples (blue), non-fragments in jet samples (orange), and photon fragments in single-photon samples (green). Jet samples are \eeZuds, at \rootSGeV{500}, reconstructed with the \pandora version 1. Single-photon samples are single 500\,GeV photon events,  reconstructed with the \pandora version 1. The cut $\frac{E_f}{E_m}$ < 0.1 contains most of the fragments.
+The energy comparison cut requires that the fragment have a low energy relative to the main photon. The ratio, $\frac{E_f}{E_m}$, has to be less than 0.1 for merging. The variables $E_m$ and $E_f$ are the energy of the main photon  and the energy of the fragment respectively. \FIGURE{fig:photonHCalFragCut1} shows the distributions of  the energy fractions, $\frac{E_f}{E_m}$, after passing the adjacent in layers cut, for photon fragments in jet samples (blue), non-fragments in jet samples (orange), and photon fragments in single-photon samples (green). Jet samples are \eeZuds at a centre-of-mass energy of 500\,GeV reconstructed with the \pandora version 1. Single-photon samples are single 500\,GeV photon events  reconstructed with the \pandora version 1. The cut $\frac{E_f}{E_m}$ < 0.1 contains most of the fragments.
   \item
-The distance comparison cuts requires that fragment in the \HCAL is spatially close to the main photon, measured by three distance metrics: the variable $d^l_c$ is the distance between the centroid position of the calorimeter hits of the main photon in the last outer layer in the \ECAL, and the centroid position of the calorimeter hits of the fragment in the first inner layer of the \HCAL; the variable $d^l_{fit}$ is the shortest distance between the direction fitted with the calorimeter hits of the main photon in the  last outer layer in the \ECAL, and the direction fitted with  the calorimeter hits of the fragment in the first inner layer of the \HCAL; and $d_{fit}$ is the shortest distance between the direction fitted with the main photon, and the direction fitted with the fragment. The fitted direction is the direction where the most calorimeter hits align to. Three distances should be small for merging. The cuts demand: $d^l_c \leqslant 173\,\text{mm}$; $d^l_{fit} \leqslant 100\,\text{mm}$; and $d_{fit} \leqslant 100\,\text{mm}$.  \FIGURE{fig:photonHCalFragCut2} shows the distributions of ${d^l_c}^2$  after passing the adjacent in layers cut and the energy comparison cut, for photon fragments in jet samples (blue), non-fragments in jet samples (orange), and photon fragments in single-photon samples (green). The cut at  $d^l_c \leqslant 173$\,mm (${d^l_c}^2 \leqslant 3000$\,\uprightMath{mm^2}) covers most of the fragments.
+The distance comparison cuts requires that fragment in the \HCAL is spatially close to the main photon measured by three distance metrics: the variable $d^l_c$ is the distance between the centroid position of the calorimeter hits of the main photon in the last outer layer in the \ECAL, and the centroid position of the calorimeter hits of the fragment in the first inner layer of the \HCAL; the variable $d^l_{fit}$ is the shortest distance between the direction fitted with the calorimeter hits of the main photon in the  last outer layer in the \ECAL, and the direction fitted with  the calorimeter hits of the fragment in the first inner layer of the \HCAL; and $d_{fit}$ is the shortest distance between the direction fitted with the main photon, and the direction fitted with the fragment. The fitted direction is the direction where the most calorimeter hits align to. Three distances should be small for merging. The cuts demand: $d^l_c \leqslant 173\,\text{mm}$; $d^l_{fit} \leqslant 100\,\text{mm}$; and $d_{fit} \leqslant 100\,\text{mm}$.  \FIGURE{fig:photonHCalFragCut2} shows the distributions of ${d^l_c}^2$  after passing the adjacent in layers cut and the energy comparison cut, for photon fragments in jet samples (blue), non-fragments in jet samples (orange), and photon fragments in single-photon samples (green). The cut at  $d^l_c \leqslant 173$\,mm (${d^l_c}^2 \leqslant 3000$\,\uprightMath{mm^2}) covers most of the fragments.
 
   \item The projection comparison cut states that the fitted direction of the fragment   should be similar to the fitted direction of the main photon. The variable  $r_f$ is the energy weighted \rms  distance of a calorimeter hit in the fragment to the direction fitted with the main photon.  The cut requires $ r_f \leqslant 45\,\text{mm}$.
   \item The shower width comparison cut requires that the shower width of the fragment and the shower width of the main photon are similar. Variable $w^l_m$ is the \rms distance of the calorimeter hits of the main photon in last outer layer  in the \ECAL to the centroid of the calorimeter hits in the same layer. Variable  $w^l_f$ is the  \rms distance of the calorimeter hits of the fragment in the first inner layer  in the \HCAL to the centroid of the calorimeter hits in the same layer. The ratio $\frac{w^l_f}{w^l_m}$ needs to be in the range from 0.3 to 5 to pass the cut. The generous upper bound is because the \HCAL cell size is much larger than the cell size of the \ECAL.
@@ -1010,7 +1010,7 @@ The values of $E_{c1}$ and $E_{c2}$ depend on whether the parent photon is close
 %energises of the photon and the second energetic EM shower
 %When the candidate is close to a charged track, which is defined as within 100\,mm of the track projection on the front of the \ECAL, extra care is taken by demanding a large value for second EM shower energy. $E_{c1}$ and $E_{c2}$, the energy cut-off values, are determined by the number of nearby charged track.
 
-The constraint on $N_{p}$, the number of EM showers identified in the parent photon, should be fewer than five, as one reconstructed photon is unlikely to be accidentally merged from more than four photons.
+The constraint on $N_{p}$, the number of EM showers identified in the parent photon, should be fewer than five as one reconstructed photon is unlikely to be  merged from more than four photons.
 
 
 \begin{table}[htbp]
@@ -1053,13 +1053,13 @@ Three different versions of the \pandora are used to demonstrate the improvement
   \item with full photon algorithms described above, incorporated in \pandora version 3;
 \end{enumerate}
 
-Without photon reconstruction algorithms, \pandora applies a simple photon identity at the end of the reconstruction. In \pandora version 1, there is a rudimentary photon reconstruction algorithm. \pandora version 3 contains all the photon algorithms developed in this chapter.
+Without photon reconstruction algorithms, \pandora applies a simple photon identity test at the end of the reconstruction. In \pandora version 1, there is a rudimentary photon reconstruction algorithm. \pandora version 3 contains all the photon algorithms developed in this chapter.
 
 %The photon algorithms in \pandora version 3 have replaced the   photon reconstruction algorithm in \pandora version 1.
 
 %, as the algorithms  were developed during \pandora version 2.
 
-Firstly the photon reconstruction performance with full photon algorithms implemented in \pandora version 3 is compared with the performance with no  stand-alone photon algorithms. Afterwards, the photon reconstruction performance  is compared with the performance obtained from  \pandora version 1. The photon reconstruction performances of individual photon algorithms are then characterised, followed by the characterisation of the performance of the photon algorithms in \pandora version 3.
+Firstly, the photon reconstruction performance with full photon algorithms implemented in \pandora version 3 is compared with the performance with no  stand-alone photon algorithms. Afterwards, the photon reconstruction performance  is compared with the performance obtained from  \pandora version 1. The photon reconstruction performances of individual photon algorithms are then characterised, followed by the characterisation of the performance of the photon algorithms in \pandora version 3.
 
 \subsection{Improvement over no stand-alone photon algorithms}
 
@@ -1083,7 +1083,7 @@ with photon energies of  500\,GeV and 50\,GeV,   reconstructed with and without 
 
 
 
-The improvement in photon reconstruction leads to a considerable improvement in the jet energy resolution. Jet energy resolution is defined as the \rms divided by the mean for the smallest width of distribution that contains 90\% of entries, using \eeZuds, at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \Zprime is used   to avoid the complication of missing momentum from semi-leptonic decay of heavy quarks. Using 90\% of the entries is robust and focuses on the Gaussian part of the jet energy distribution. The total jet energies are   sampled at centre-of-mass energies of 91, 200, 360 and 500\,GeV.
+The improvement in photon reconstruction leads to a considerable improvement in the jet energy resolution. Jet energy resolution is defined as the \rms divided by the mean for the smallest width of distribution that contains 90\% of entries using \eeZuds at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \Zprime is used   to avoid the complication of missing momentum from semi-leptonic decay of heavy quarks. Using 90\% of the entries is robust and focuses on the Gaussian part of the jet energy distribution. The total jet energies are   sampled at centre-of-mass energies of 91, 200, 360 and 500\,GeV.
 
 As shown in \Figure{fig:photonJERmuon}, jet energy resolutions are much better at \rootSGeV{360} and 500\,GeV for the reconstruction with photon algorithms. By identifying photons before reconstructing charged particles in a dense jet environment, there are fewer calorimeter hits left for the charged particle reconstruction. However, at \rootSGeV{91} and 200\,GeV, jet energy resolutions are worse  for the reconstruction with photon algorithms, because photon algorithms are developed and optimised with  jet environments at a high centre-of-mass energy of 500\,GeV.
 
@@ -1096,7 +1096,7 @@ As shown in \Figure{fig:photonJERmuon}, jet energy resolutions are much better a
 \end{figure}
 
 
-The impact of photon algorithms on the jet energy resolution was studied using the same jet samples with the perfect photon reconstruction, which identifies photons by associating calorimeter hits using the truth information.  The photon confusion term, which are defined as the quadrature differences of the jet energy resolutions between  a non-cheated reconstruction and a perfect photon reconstruction, is a measure of the failure in the photon reconstruction. \TABLE{tab:photonPhotonConfusion} lists the photon confusion terms as a function of the centre-of-mass energies for the jet sample. The photon confusion terms, except at \rootSGeV{91}, have been reduced to 0.9\% for the reconstruction with photon algorithms.
+The impact of photon algorithms on the jet energy resolution was studied using the same jet samples with the perfect photon reconstruction, which identifies photons by associating calorimeter hits using the truth information.  The photon confusion term which are defined as the quadrature differences of the jet energy resolutions between  a non-cheated reconstruction and a perfect photon reconstruction is a measure of the failure in the photon reconstruction. \TABLE{tab:photonPhotonConfusion} lists the photon confusion terms as a function of the centre-of-mass energies for the jet sample. The photon confusion terms, except at \rootSGeV{91}, have been reduced to 0.9\% for the reconstruction with photon algorithms.
 
 %for reconstructions with and without photon algorithms
 
@@ -1133,11 +1133,11 @@ Photon confusion &\rootSGeV{91} & 200\,GeV & 360\,GeV & 500\,GeV  \\
 \subsection{Improvement over \pandora version 1}
 \label{sec:photonPerformanceCompare}
 
-This section reviews the photon reconstruction improvement  from \pandora version 1 to version 3, using single-photon, two-photon, and jet samples.
+This section reviews the photon reconstruction improvement  from \pandora version 1 to version 3 using single-photon, two-photon, and jet samples.
 
 %The \ECAL square cell size is about 5\,mm.
 
-%We will review performance metrics of above algorithms. \Fig{fig:n_p} shows the number of reconstructed photons as a function of their true distance separation for a two photons per event sample. The reduction of the number of reconstructed photons are mainly due the the fragment merging algorithms for fragments in the ECal. \Fig{fig:n_all} shows a similar reduction in the reconstructed particles as in \Fig{fig:n_p}, and it shows that neutral hadron fragments in HCal have been merged back to main photons.
+%We will review performance metrics of above algorithms. \Fig{fig:n_p} shows the number of reconstructed photons as a function of their true distance separation for a two photons per event sample. The reduction of the number of reconstructed photons are mainly due the fragment merging algorithms for fragments in the ECal. \Fig{fig:n_all} shows a similar reduction in the reconstructed particles as in \Fig{fig:n_p}, and it shows that neutral hadron fragments in HCal have been merged back to main photons.
 
 The single-photon MC  samples were generated with an uniform distribution in the solid angle of the photon. Other samples were generated and simulated in the same way as previously. The same pre-selection as previously was applied to the  single-photon and  two-photon samples.
 
@@ -1179,7 +1179,7 @@ The single-photon MC  samples were generated with an uniform distribution in the
 
 %The photon reconstruction is changed in \pandora version 2.
 
-\FIGURE{fig:photonDoubleCompareN} shows the numbers of reconstructed photons and particles as a function of  the true distance separation between the two photons, using a two-photon sample with photon energies of  500\,GeV and 50\,GeV.  The average numbers of photons and particles for reconstruction with \pandora version 3 are both below 2.05 at a distance separation of 30\,mm, which is significantly lower than the numbers for reconstruction with \pandora version 1. For reconstruction with \pandora version 3, two photons start to be resolved at a distance separation of 10\,mm, and fully resolved at a distance separation of 20\,mm.
+\FIGURE{fig:photonDoubleCompareN} shows the numbers of reconstructed photons and particles as a function of  the true distance separation between the two photons using a two-photon sample with photon energies of  500\,GeV and 50\,GeV.  The average numbers of photons and particles for reconstruction with \pandora version 3 are both below 2.05 at a distance separation of 30\,mm, which is significantly lower than the numbers for reconstruction with \pandora version 1. For reconstruction with \pandora version 3, two photons start to be resolved at a distance separation of 10\,mm and fully resolved at a distance separation of 20\,mm.
 
 
 % from 0 to 30\,mm
@@ -1210,7 +1210,7 @@ The single-photon MC  samples were generated with an uniform distribution in the
 
 
 
-Another metric to reflect the improvement in photon reconstruction is the fraction of the fragment energy to the total energy in an event. In a two-photon sample, the fragment energy is defined as the total energy of particles excluding the two most energetic photons. Shown in \Figure{fig:photonDoubleFragEnergy}, using two-photon sample with photon energies of  500\,GeV and 50\,GeV, a reduction in fragment energy can be seen in \pandora version 3. For the photon reconstruction in \pandora version 3, the average fragment energy fraction is below 0.1\% up to a distance separation of  30\,mm, whilst around 5\% energy would be in fragments for the reconstruction with \pandora version 1.
+Another metric to reflect the improvement in photon reconstruction is the fraction of the fragment energy to the total energy in an event. In a two-photon sample, the fragment energy is defined as the total energy of particles excluding the two most energetic photons. Shown in \Figure{fig:photonDoubleFragEnergy}, using two-photon sample with photon energies of  500\,GeV and 50\,GeV, a reduction in fragment energy can be seen in \pandora version 3. For the photon reconstruction in \pandora version 3, the average fragment energy fraction is below 0.1\% up to a distance separation of  30\,mm, while around 5\% energy would be in fragments for the reconstruction with \pandora version 1.
 \begin{figure}[tbph]
 \centering
 \includegraphics[width=0.45\textwidth]{photon/DoubleCompareFragEnergy4}
@@ -1222,7 +1222,7 @@ Another metric to reflect the improvement in photon reconstruction is the fracti
 %The photon reconstruction is changed in \pandora version 2.
 
 
-The reduction in the fragments, as shown in the reconstruction of the single-photon and two-photon samples, leads to a small improvement in the jet energy resolutions at a high jet energy. Using the same jet sample as in the previous section, the jet energy resolutions are better at total jet energies of 360 and 500\,GeV with the  photon reconstruction in \pandora version 3, as shown in \Figure{fig:photonJER}.
+The reduction in the fragments leads to a small improvement in the jet energy resolutions at a high jet energy. Using the same jet sample as in the previous section, the jet energy resolutions are better at total jet energies of 360 and 500\,GeV with the  photon reconstruction in \pandora version 3, as shown in \Figure{fig:photonJER}.
 
 %This is due to more an aggressive photon reconstruction, which is more useful at a high-energy dense jet environment.
 
@@ -1249,13 +1249,13 @@ The reduction in the fragments, as shown in the reconstruction of the single-pho
 %, with different photon algorithms turned on and off
 Two-photon events with photon energies of  500\,GeV and 500\,GeV are  used to show the incremental improvement of the performance of individual photon algorithms. \FIGURE{fig:photonDoubleCompareAlgs} shows the average number of reconstructed particles as a function of true distance separation between two photons, reconstructed with full photon algorithms with \pandora version 3 (blue), reconstructed with only fragment removal algorithms in the \ECAL and photon reconstruction in  \pandora version 1 (orange), reconstructed with fragment removal algorithms in the \ECAL and the \HCAL and photon reconstruction in  \pandora version 1 (green), and reconstructed with \pandora version 1 (red).
 
-%. Blue, orange, green, and red points represent full photon reconstruction, reconstructed with only fragment removal algorithms in the \ECAL, reconstructed with fragment removal algorith%ms in the \ECAL and the \HCAL, and reconstructed with \pandora version 1, respectively.
+%. Blue, orange, green, and red points represent full photon reconstruction, reconstructed with only fragment removal algorithms in the \ECAL, reconstructed with fragment removal algorithm%ms in the \ECAL and the \HCAL, and reconstructed with \pandora version 1, respectively.
 
 %the average number of particle for a high energy photon pair, with photon energies of  500\,GeV and 500\,GeV, is shown in \Figure{fig:photonDoubleCompareAlgs}. Blue, orange, green, and red points represent full photon reconstruction, reconstructed with only fragment removal algorithms in the \ECAL, reconstructed with fragment removal algorithms in the \ECAL and the \HCAL, and reconstructed with \pandora version 1, respectively.
 
-For the reconstruction with fragment removal algorithm in the \ECAL (orange), the number of fragments is reduced significantly, when it is compared with photon reconstruction in \pandora version 1 (red). With the additional fragment removal algorithm in the \HCAL (green), the number of fragments is reduced further. At a distance separation of  40\,mm,  there is on average less than 0.05 fragment per photon pair for the reconstruction with fragment removal algorithms in the \ECAL and the \HCAL  (green).
+For the reconstruction with fragment removal algorithm in the \ECAL (orange), the number of fragments is reduced significantly when it is compared with photon reconstruction in \pandora version 1 (red). With the additional fragment removal algorithm in the \HCAL (green), the number of fragments is reduced further. At a distance separation of  40\,mm,  there is on average less than 0.05 fragment per photon pair for the reconstruction with fragment removal algorithms in the \ECAL and the \HCAL  (green).
 
-The introduction of the photon reconstruction and photon splitting algorithm (blue) makes the photon pair resolve at a much shorter distance separation between two photons. Photon pairs start to be resolved at a distance separation of 5\,mm, and fully resolved at a distance separation of 15\,mm when reconstructed with full photon algorithms in \pandora version 3.
+The introduction of the photon reconstruction and photon splitting algorithm (blue) makes the photon pair resolve at a much shorter distance separation between two photons. Photon pairs start to be resolved at a distance separation of 5\,mm and fully resolved at a distance separation of 15\,mm when reconstructed with full photon algorithms in \pandora version 3.
 %, for a two-photon sample with photon energies of  500\,GeV and 500\,GeV,
 %With previous photon reconstruction in \pandora version 1, the same photon pair starts to be resolved at 10\,mm apart and fully resolved at around 40\,mm apart.
 
@@ -1273,7 +1273,7 @@ The introduction of the photon reconstruction and photon splitting algorithm (bl
 %In this section, the performance of the photon reconstruction as a function of photon energies will be described.
 %The photon reconstruction performance with \pandora version 3 is demonstrated with  single-photon and  two-photon samples.
 
-\FIGURE{fig:photonSingleEffPerformance} shows the average single photon reconstruction  efficiency as a function of the true photon energies, using single-photon samples.  In a single-photon sample, an event can have an efficiency of 1 or 0, depending on whether there is a reconstructed photon  corresponding to the true photon. The average single photon reconstruction efficiency is above 98\% for photons with energies above 2\GeV, and above 99.5\% for photons  with energies  above 100\,GeV.  The low efficiency in the first bin in \Figure{fig:photonSingleEffLow}, for photon energies in the range from 0 to 0.25\,GeV, is because photon reconstruction algorithms do not attempt to reconstruct photons with energies below 0.2\,GeV.
+\FIGURE{fig:photonSingleEffPerformance} shows the average single photon reconstruction  efficiency as a function of the true photon energies, using single-photon samples.  In a single-photon sample, an event can have an efficiency of 1 or 0 depending on whether there is a reconstructed photon  corresponding to the true photon. The average single photon reconstruction efficiency is above 98\% for photons with energies above 2\GeV and above 99.5\% for photons  with energies  above 100\,GeV.  The low efficiency in the first bin in \Figure{fig:photonSingleEffLow} for photon energies in the range from 0 to 0.25\,GeV is because photon reconstruction algorithms do not attempt to reconstruct photons with energies below 0.2\,GeV.
 
 % is demonstrated in \Figure{fig:photonSingleEffPerformance}, using single-photon samples.
 
@@ -1294,7 +1294,7 @@ The introduction of the photon reconstruction and photon splitting algorithm (bl
 \label{fig:photonSingleEffPerformance}
 \end{figure}
 
-\FIGURE{fig:photonDoubleCompareN_pN_all} shows  the average numbers of reconstructed photons and particles  as a function of the true distance separation between two photons, using a two-photon sample with photon energies of  500\,GeV and 500\,GeV. A good match between the number of photons and the number of particles is achieved. The average numbers of photons and particles are  both fewer than 2.05 for a distance separation beyond 20\,mm, less that 1 fragment produced per 20 events.
+\FIGURE{fig:photonDoubleCompareN_pN_all} shows  the average numbers of reconstructed photons and particles  as a function of the true distance separation between two photons using a two-photon sample with photon energies of  500\,GeV and 500\,GeV. A good match between the number of photons and the number of particles is achieved. The average numbers of photons and particles are  both fewer than 2.05 for a distance separation beyond 20\,mm, less that 1 fragment produced per 20 events.
 
 
 %For  two-photon samples, there are very few fragments.
@@ -1308,9 +1308,9 @@ The introduction of the photon reconstruction and photon splitting algorithm (bl
 
 %The ability to  reconstruct  a photon pair as two entities depends on energies of two photons.
 
-\FIGURE{fig:photonDoubleCompareEnergies} shows the average numbers of photon reconstructed using two-photon samples as a function of the true distance separation between two photons, for different photon energies. When the energies of two photons are similar, the distance of two photons starting to be resolved is shorter. This is because that when the two photon showers have similar sizes, the \peakFinding algorithm can exploit the symmetry in the size of the EM showers. For example, 500\,GeV$-$500\,GeV photon pair and 10\,GeV$-$10\,GeV photon pair start to be resolved at a distance separation of 6\,mm, which is about one \ECAL cell length in the simulated nominal \ILD detector. In contrast, photon pairs with different energies, for example 500\,GeV$-$50\,GeV and  100\,GeV$-$10\,GeV pairs, start to be resolved at a distance separation of 10\,mm, which is about two \ECAL cells length.
+\FIGURE{fig:photonDoubleCompareEnergies} shows the average numbers of photon reconstructed using two-photon samples as a function of the true distance separation between two photons for different photon energies. When the energies of two photons are similar, the distance of two photons starting to be resolved is shorter. This is because that when the two photon showers have similar sizes, the \peakFinding algorithm can exploit the symmetry in the size of the EM showers. For example, 500\,GeV$-$500\,GeV photon pair and 10\,GeV$-$10\,GeV photon pair start to be resolved at a distance separation of 6\,mm, which is about one \ECAL cell length in the simulated nominal \ILD detector. In contrast, photon pairs with different energies, for example 500\,GeV$-$50\,GeV and  100\,GeV$-$10\,GeV pairs, start to be resolved at a distance separation of 10\,mm, which is about two \ECAL cells length.
 
-For an energetic photon, it is easier to identify the photon, because the electromagnetic shower core is denser and contains more energies than the peripheral calorimeter hits. Therefore separating two energetic photons is easier than separating two low-energy photons. As shown in \Figure{fig:photonDoubleCompareEnergies}, at a distance separation of 20\,mm, 500\,GeV$-$500\,GeV photon pairs are fully resolved, whereas approximately only 60\% of 10\,GeV$-$10\,GeV photon pairs are resolved.
+For an energetic photon, it is easier to identify the photon because the electromagnetic shower core is denser and contains more energies than the peripheral calorimeter hits. Therefore separating two energetic photons is easier than separating two low-energy photons. As shown in \Figure{fig:photonDoubleCompareEnergies}, at a distance separation of 20\,mm, 500\,GeV$-$500\,GeV photon pairs are fully resolved, whereas approximately only 60\% of 10\,GeV$-$10\,GeV photon pairs are resolved.
 
 \begin{figure}[tbph]
 \centering
@@ -1321,11 +1321,11 @@ For an energetic photon, it is easier to identify the photon, because the electr
 
 \section{Summary}
 
-Using the \ILD detector model, the single photon reconstruction efficiency is above 98\% for photons with energies above 2\GeV, and above 99.5\% for photons with energies above 100\,GeV.
+Using the \ILD detector model, the single photon reconstruction efficiency is above 98\% for photons with energies above 2\GeV and above 99.5\% for photons with energies above 100\,GeV.
 
 The number of photon fragments produced have been greatly reduced. Using a two-photon sample with photon energies of  500\,GeV and 50\,GeV, the average numbers of photons and particles beyond a distance separation of 20\,mm  are both less than 2.05, where the true value is 2.
 
-The minimal distance separation of resolved photon pairs is reduced to 6\,mm for two photons with the same energy, and 10\,mm for two photons with different energies.
+The minimal distance separation of resolved photon pairs is reduced to 6\,mm for two photons with the same energy and 10\,mm for two photons with different energies.
 
 The jet energy resolution has been improved for high centre-of-mass energies. The photon confusion terms, except at \rootSGeV{91}, have been reduced to 0.9\%.
 
