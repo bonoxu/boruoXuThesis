@@ -119,16 +119,22 @@ Quantum electrodynamics (\QED) is a  quantum gauge field theory explaining elect
 \begin{equation}
 \Lagr_{QED} = \overline{\psi} \left( i\Dstroke - m \right)\psi -  \frac{1}{4}F_{\mu\nu}F^{\mu\nu},
 \end{equation}
-where $\psi$ is the spin-$\frac{1}{2}$ Dirac field satisfying the Dirac equation, given by the Lagrangian density:
+where $\psi$ is the spin-$\frac{1}{2}$ Dirac field satisfying the Dirac equation:
 \begin{equation}
-\Lagr =  \overline{\psi} \left( i\Dstroke - m \right)\psi,
+\left( i\PartialStroke - m \right)\psi = 0,
 \end{equation}
-where the $\gamma^{\mu}$ are the Dirac gamma matrices with $\mu\in\braces{0,1,2,3}$; $\overline{\psi}$ is defined as $\psi^{\dagger}\gamma^0$; $F_{\mu\nu} = \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}$ is the electromagnetic field tensor; $m$ is the mass of the electron; and the gauge covariant derivative is given by:
+where the $\gamma^{\mu}$ are the Dirac gamma matrices with $\mu\in\braces{0,1,2,3}$; $\overline{\psi}$ is defined as $\psi^{\dagger}\gamma^0$; $F_{\mu\nu} = c_{\mu}A_{\nu} - \partial_{\nu}A_{\mu}$ is the electromagnetic field tensor; $m$ is the mass of the electron; and the gauge covariant derivative is given by:
 \begin{equation}
 D_{\mu} \equiv \partial_{\mu} + ieA_{\mu},
 \end{equation}
-where $A_{\mu}$ is the covariant four-vector potential of the electromagnetic field; and $e$ is the coupling constant, which is equal to the electric charge.
-
+where $A_{\mu}$ is the covariant four-vector potential of the electromagnetic field; and $e$ is the coupling constant, which is equal to the electric charge. Invariance under phase transformations of the fermion fields, $\psi \rightarrow \psi' = e^{i \phi(x)} \psi$, require a gauge transformation of the electromagnsetic field:
+\begin{equation}
+A_{\mu} \rightarrow A'_{\mu} = A_{\mu} + \partial_{\mu} \chi = A_{\mu} - \partial_{\mu} \phi / e,
+\end{equation}
+where $\chi(x) = - \phi(x) / e$. Thus gauge invariance of the whole Lagrangian is conserved when the phase of the fermion field changes according to:
+\begin{equation}
+\psi \rightarrow \psi' = e^{-ie\chi(x)}\psi
+\end{equation}
 
 \begin{comment}
 
@@ -178,7 +184,12 @@ where $G_{\mu}^{b}$ is the gluon field with colour charge $b$; and $a$, $b$, and
 \section{The electroweak interaction}
 \label{sec:theoryElectroweak}
 
-The electroweak interaction can be thought as an extension to \QED to incorporate the weak force, the force describing, for example, nuclear radioactive decay. The unification of the electromagnetic and the weak force is accomplished with an \uprightMath{SU(2)_L \times U(1)} gauge symmetry group. The corresponding gauge bosons are  three \PW bosons ($W^1$, $W^2$, and $W^3$) from \uprightMath{SU(2)_L} gauge symmetry, and  $B$ boson from U(1) gauge symmetry. All gauge bosons are initially massless. Fermion mass terms are forbidden under  \uprightMath{SU(2)_L} gauge symmetry.
+The electroweak interaction can be thought as an extension to \QED to incorporate the weak force, the force describing, for example, nuclear radioactive decay. The unification of the electromagnetic and the weak force is accomplished with an \uprightMath{SU(2)_L \times U(1)} gauge symmetry group. The corresponding gauge bosons are  three \PW bosons ($W^1$, $W^2$, and $W^3$) from \uprightMath{SU(2)_L} gauge symmetry, and  $B$ boson from U(1) gauge symmetry. All gauge bosons are initially massless. The fermion mass term in the Lagrangian is:
+\begin{equation}
+m \overline{\psi}\psi & = \frac{1}{4}m \overline{\psi}\parenths{1 - \gamma^{5}}\parenths{1 - \gamma^{5}}\psi + \frac{1}{4}m \overline{\psi}\parenths{1 + \gamma^{5}}\parenths{1+ \gamma^{5}}\psi \\
+& = m \overline{\psi_R}\psi_L +   m \overline{\psi_L}\psi_R
+\end{equation}
+As $\psi_L$ and $ \overline{\psi_L}$ transform under \uprightMath{SU(2)_L} gauge symmetry while  $\psi_R$ and  $\overline{\psi_R}$ do not, the mass term is not gauge invariant. Consequently, fermion mass terms are forbidden under  \uprightMath{SU(2)_L} gauge symmetry.
 
 The electroweak Lagrangian can be written as
 \begin{equation}
