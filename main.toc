@@ -36,24 +36,24 @@
 \contentsline {subsection}{\numberline {4.2.1}\CLIC beam induced background}{47}{subsection.4.2.1}
 \contentsline {section}{\numberline {4.3}Event reconstruction}{49}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}\pandora }{49}{subsection.4.3.1}
-\contentsline {subsubsection}{Initial clustering}{50}{subsubsection*.37}
+\contentsline {subsubsection}{\numberline {4.3.1.1}Initial clustering}{50}{subsubsection.4.3.1.1}
 \contentsline {subsection}{\numberline {4.3.2}\CLIC beam induced background suppression}{51}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Analysis software}{52}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Monte Carlo truth linker}{52}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Jet algorithms}{53}{subsection.4.4.2}
-\contentsline {subsubsection}{Longitudinally invariant \kt algorithm}{53}{subsubsection*.40}
-\contentsline {subsubsection}{Durham algorithm}{54}{subsubsection*.41}
-\contentsline {subsubsection}{Jet algorithms for \CLIC }{54}{subsubsection*.42}
-\contentsline {subsubsection}{The \y {} parameter}{55}{subsubsection*.44}
+\contentsline {subsubsection}{\numberline {4.4.2.1}Longitudinally invariant \kt algorithm}{53}{subsubsection.4.4.2.1}
+\contentsline {subsubsection}{\numberline {4.4.2.2}Durham algorithm}{54}{subsubsection.4.4.2.2}
+\contentsline {subsubsection}{\numberline {4.4.2.3}Jet algorithms for \CLIC }{54}{subsubsection.4.4.2.3}
+\contentsline {subsubsection}{\numberline {4.4.2.4}The \y {} parameter}{55}{subsubsection.4.4.2.4}
 \contentsline {section}{\numberline {4.5}Multivariate analysis}{55}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Optimisation and overfitting}{56}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Choice of models}{57}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}Rectangular Cut model}{57}{subsection.4.5.3}
 \contentsline {subsection}{\numberline {4.5.4}Projective Likelihood model}{58}{subsection.4.5.4}
 \contentsline {subsection}{\numberline {4.5.5}Decision Tree model}{58}{subsection.4.5.5}
-\contentsline {subsubsection}{Improving decision tree}{60}{subsubsection*.48}
+\contentsline {subsubsection}{\numberline {4.5.5.1}Improving decision tree}{60}{subsubsection.4.5.5.1}
 \contentsline {subsection}{\numberline {4.5.6}Boosted Decision Tree model}{60}{subsection.4.5.6}
-\contentsline {subsubsection}{Optimisation of Boosted Decision Tree}{62}{subsubsection*.49}
+\contentsline {subsubsection}{\numberline {4.5.6.1}Optimisation of Boosted Decision Tree}{62}{subsubsection.4.5.6.1}
 \contentsline {subsection}{\numberline {4.5.7}Multiple classes}{63}{subsection.4.5.7}
 \contentsline {chapter}{\numberline {5}Photon Reconstruction in \pandora }{65}{chapter.5}
 \contentsline {section}{\numberline {5.1}Electromagnetic showers}{66}{section.5.1}
@@ -61,13 +61,13 @@
 \contentsline {section}{\numberline {5.3}\PhotonReconstruction algorithm}{68}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Forming photon clusters}{69}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Finding photon candidates and \peakFinding algorithm}{70}{subsection.5.3.2}
-\contentsline {subsubsection}{Creating the two-dimensional energy deposition}{71}{subsubsection*.55}
-\contentsline {subsubsection}{Peak reconstruction}{72}{subsubsection*.56}
-\contentsline {subsubsection}{Charged cluster variant}{74}{subsubsection*.58}
-\contentsline {subsubsection}{Inclusive mode}{76}{subsubsection*.61}
+\contentsline {subsubsection}{\numberline {5.3.2.1}Creating the two-dimensional energy deposition}{71}{subsubsection.5.3.2.1}
+\contentsline {subsubsection}{\numberline {5.3.2.2}Peak reconstruction}{72}{subsubsection.5.3.2.2}
+\contentsline {subsubsection}{\numberline {5.3.2.3}Charged cluster variant}{74}{subsubsection.5.3.2.3}
+\contentsline {subsubsection}{\numberline {5.3.2.4}Inclusive mode}{76}{subsubsection.5.3.2.4}
 \contentsline {subsection}{\numberline {5.3.3}Photon Identity test}{76}{subsection.5.3.3}
-\contentsline {subsubsection}{Variables used in likelihood classifier }{76}{subsubsection*.62}
-\contentsline {subsubsection}{Projective Likelihood classifier}{79}{subsubsection*.65}
+\contentsline {subsubsection}{\numberline {5.3.3.1}Variables used in likelihood classifier }{76}{subsubsection.5.3.3.1}
+\contentsline {subsubsection}{\numberline {5.3.3.2}Projective Likelihood classifier}{79}{subsubsection.5.3.3.2}
 \contentsline {section}{\numberline {5.4}Photon fragment removal in the \ECAL }{81}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Photon fragment removal algorithm after the \PhotonReconstruction algorithm}{84}{subsection.5.4.1}
 \contentsline {section}{\numberline {5.5}Photon fragment removal algorithm in the \HCAL }{85}{section.5.5}
@@ -112,11 +112,11 @@
 \contentsline {section}{\numberline {8.2}Monte Carlo sample generation}{133}{section.8.2}
 \contentsline {section}{\numberline {8.3}Lepton identification}{134}{section.8.3}
 \contentsline {subsection}{\numberline {8.3.1}Electron and muon identification}{134}{subsection.8.3.1}
-\contentsline {subsubsection}{\IsolatedLeptonFinderProcessor }{136}{subsubsection*.116}
-\contentsline {subsubsection}{\BonoLeptonFinder }{136}{subsubsection*.118}
+\contentsline {subsubsection}{\numberline {8.3.1.1}\IsolatedLeptonFinderProcessor }{136}{subsubsection.8.3.1.1}
+\contentsline {subsubsection}{\numberline {8.3.1.2}\BonoLeptonFinder }{136}{subsubsection.8.3.1.2}
 \contentsline {subsection}{\numberline {8.3.2}Tau lepton identification}{138}{subsection.8.3.2}
-\contentsline {subsubsection}{\TauFinderProcessor }{139}{subsubsection*.121}
-\contentsline {subsubsection}{\BonoTauFinder }{139}{subsubsection*.123}
+\contentsline {subsubsection}{\numberline {8.3.2.1}\TauFinderProcessor }{139}{subsubsection.8.3.2.1}
+\contentsline {subsubsection}{\numberline {8.3.2.2}\BonoTauFinder }{139}{subsubsection.8.3.2.2}
 \contentsline {subsection}{\numberline {8.3.3}Very forward electron identification}{142}{subsection.8.3.3}
 \contentsline {subsection}{\numberline {8.3.4}Summary of lepton identification performance}{143}{subsection.8.3.4}
 \contentsline {section}{\numberline {8.4}Jet reconstruction}{144}{section.8.4}
@@ -143,4 +143,4 @@
 \contentsline {chapter}{\numberline {9}Summary}{181}{chapter.9}
 \contentsline {chapter}{\numberline {A}Generation Parameters}{183}{appendix.A}
 \contentsline {chapter}{\numberline {B}Double Higgs Boson Production Analysis}{185}{appendix.B}
-\contentsline {chapter}{Bibliography}{189}{chapter*.162}
+\contentsline {chapter}{Bibliography}{189}{chapter*.145}
