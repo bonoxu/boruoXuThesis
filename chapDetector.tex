@@ -215,7 +215,7 @@ In a typical jet, about 62\% of the jet energy is from charged particles, 27\% f
 
 The particle flow approach to calorimetry improves the jet energy resolution by fully reconstructing  all visible particles in the detector. The jet energy is the sum of energies of individual particles where the energies of the charged particles are measured in the tracking detectors, and the energies of neutral particles are measured in calorimeters. Hence, the hadronic calorimeter only measures about 10\% of the jet energy.
 
-As shown in \Table{tab:detectorJetComponent}, assuming 30\% of the jet energy (photon energy) is measured with ${\sigma_{E}}/{E} = 15\% / \sqrt{E(\text{GeV})}$, and 10\% of the jet energy (hadron energy) is measured with ${\sigma_{E}}/{E} = 55\% / \sqrt{E(\text{GeV})}$ \cite{Behnke:2013lya}, a jet energy resolution of ${\sigma_{E}}/{E} = 19\% / \sqrt{E(\text{GeV})}$ can be obtained. This satisfies the jet energy resolution requirement for separating \PW and \PZ bosons via their hadronic decays, which requires a jet energy resolution of 3.5\% or better. In reality, this level of performance is unattainable due to incorrect association of energy deposits to particles. Results from imperfect reconstruction rather than the intrinsic detector performance limit the performance of particle flow calorimetry \cite{Thomson:2009rp} at jet energies beyond tens of GeV.
+As shown in \Table{tab:detectorJetComponent}, assuming 30\% of the jet energy (photon energy) is measured with ${\sigma_{E}}/{E} = 15\% / \sqrt{E(\text{GeV})}$, and 10\% of the jet energy (hadron energy) is measured with ${\sigma_{E}}/{E} = 55\% / \sqrt{E(\text{GeV})}$ \cite{Behnke:2013lya}, a jet energy resolution of ${\sigma_{E}}/{E} = 19\% / \sqrt{E(\text{GeV})} \simeq 0.17\sqrt{E_{j}}\,\oplus\,0.08\sqrt{E_{j}} $ can be obtained. This satisfies the jet energy resolution requirement for separating \PW and \PZ bosons via their hadronic decays, which requires a jet energy resolution of 3.5\% or better. In reality, this level of performance is unattainable due to incorrect association of energy deposits to particles. Results from imperfect reconstruction rather than the intrinsic detector performance limit the performance of particle flow calorimetry \cite{Thomson:2009rp} at jet energies beyond tens of GeV.
 
 \begin{table}[htbp]
 \small
@@ -226,7 +226,7 @@ As shown in \Table{tab:detectorJetComponent}, assuming 30\% of the jet energy (p
 \hline
  Component &  Detector & Energy fraction & Energy resolution & Jet energy resolution \\
 \hline
-Charged particles (\charge) & Tracker  & $\sim0.6E_j$ & $10^{-4}E^2_{\charge}$ & < $3.6 \times 10^{-5} E^2_j$ \\
+Charged particles (\charge) & Tracker  & $\sim0.6E_j$ & $10^{-4}$\uprightMath{GeV^{-1}}$E^2_{\charge}$ & < $3.6 \times 10^{-5} E^2_j$ \\
 Photons (\Pphoton) & \ECAL  & $\sim0.3E_j$ & 0.15$\sqrt{E_{\Pphoton}}$ & 0.08$\sqrt{E_{j}}$ \\
 Neutral hadrons(\neutral) & \HCAL  & $\sim0.1E_j$ & 0.55$\sqrt{E_{\neutral}}$ & 0.17$\sqrt{E_{j}}$ \\
 \hline
@@ -234,7 +234,7 @@ Neutral hadrons(\neutral) & \HCAL  & $\sim0.1E_j$ & 0.55$\sqrt{E_{\neutral}}$ & 
 \end{tabular}
 
 \caption
-{Contributions from different particle components to the jet energy resolutions (all energies in GeV). The table lists the approximate fractions of charged particles, photons, and neutral hadrons in a jet of energy $E_j$, and the assumed single particle energy resolutions. The table is adapted from \cite{Thomson:2009rp}.}
+{Contributions from different particle components to the jet energy resolutions (all energies in GeV). The table lists the approximate fractions of charged particles, photons, and neutral hadrons in a jet of energy $E_j$, and the assumed single particle energy resolutions. The value of the jet energy resolution in the last column is obtained using the energy resolution of the corresponding type of particles. For example,  30\% of jet energy is from photons, $E_{\Pphoton} \sim 0.3E_j$. Thus the photon contribution to the jet energy resolution is $0.15\sqrt{E_{\Pphoton}} = 0.15 \sqrt{0.3E_j} \simeq  0.08\sqrt{E_{j}}$.  The table is adapted from \cite{Thomson:2009rp}.}
 \label{tab:detectorJetComponent}
 \end{table}
 
