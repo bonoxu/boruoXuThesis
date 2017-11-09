@@ -24,6 +24,7 @@ type
 volume
 year
 archivePrefix
+reportNumber
 }
 {}
 { label }
@@ -578,6 +579,7 @@ format.pages output
 if$
 new.block
 note output
+reportNumber output
 fin.entry
 }
 FUNCTION {book}
@@ -602,6 +604,7 @@ if$
 eprint output
 new.block
 note output
+howpublished output
 fin.entry
 }
 FUNCTION {booklet}
