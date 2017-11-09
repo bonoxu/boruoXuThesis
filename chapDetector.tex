@@ -133,7 +133,7 @@ Repetition rate & 50\,Hz & 50\,Hz \\
 
 The two linear colliders use different technologies for accelerating electrons and positrons. The physics processes that can be studied are different due to different centre-of-mass energies that can be achieved by each one. Nevertheless the \ILC and  \CLIC share some common  features. Both colliders will be linear colliders as opposed to circular colliders like the Large Hadron Collider (\LHC). Detectors for both colliders will use igh granularity particle flow calorimetry \cite{Behnke:2013lya,Linssen:2012hp}. One major difference between the two colliders is the operating energy. Due to a higher centre-of-mass energy at \CLIC there are significant beam related backgrounds. The \ee incoherent pair background has a major influence on the design of the inner region  and the forward region of the detectors \cite{Linssen:2012hp}. The pile-up of 3.2 \ggHad background events per bunch on average need to be mitigated against for physics analyses  \cite{Linssen:2012hp}.  Another difference between the \ILC and  \CLIC is that the timing separation between bunches is much shorter at \CLIC. The \CLIC beam contains 312 bunch trains with a train repetition rate of 50\,Hz,  separated by 0.5\,ns between each bunch train. This short timing separation suggests that the detector will integrate over a number of bunch crossings.
 
-% , also integrating over 60 bunch crossings,  
+% , also integrating over 60 bunch crossings,
 
 %This, together with the significant \ggHad backgrounds, has a significant impact on the detector design.
 
@@ -294,7 +294,7 @@ Two detector concepts have been developed for the \ILC. Both are designed to be 
 
 
 
-The \ILD detector concept has been optimised for particle flow techniques. \FIGURE{fig:ILD} shows the longitudinal cross section of top quadrant of the \ILD. From the interaction point (\IP) outwards the design includes: a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layers; highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL);  forward calorimeters (\FCAL); a superconducting solenoid; and muon chambers embedded within the iron return yokes. The key parameters of the \ILD are listed in \Table{tab:ILDvsCLICILD}. The section below describes the sub-detectors of the \ILD detector concept referred to as the ILD\_o1\_v05 option in the \Mokka detector simulation \cite{MoradeFreitas:2002kj} used for the \ILD technical design report\cite{Behnke:2013lya}.
+The \ILD detector concept has been optimised for particle flow techniques. \FIGURE{fig:ILD} shows the longitudinal cross section of top quadrant of the \ILD. From the interaction point (\IP) outwards the design includes: a vertex detector, a tracking system comprising a large time projection chamber (\TPC) augmented with silicon layers; highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL);  forward calorimeters (\FCAL); a superconducting solenoid; and muon chambers embedded within the iron return yokes. The key parameters of the \ILD are listed in \Table{tab:ILDvsCLICILD}. The section below describes the sub-detectors of the \ILD detector concept referred to as the ILD\_o1\_v05 option in the \Mokka detector simulation \cite{MoradeFreitas:2002kj} used for the \ILD technical design report\cite{Behnke:2013lya}.
 
 
 
@@ -317,7 +317,7 @@ The \ILD detector concept has been optimised for particle flow techniques. \FIGU
 \centering
 \includegraphics[width=0.85\textwidth]{ILD/ILD}
 \caption
-{The longitudinal cross section of top quadrant of the \ILD, taken from  \cite{Behnke:2013lya}. From the interaction point (\IP) outwards, the design includes: a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layers; highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL);  forward calorimeters (\FCAL); a superconducting solenoid; and muon chambers embedded within the iron return yokes. Dimensions are in units of mm.}
+{The longitudinal cross section of top quadrant of the \ILD, taken from  \cite{Behnke:2013lya}. From the interaction point (\IP) outwards, the design includes: a vertex detector, a tracking system comprising a large time projection chamber (\TPC) augmented with silicon layers; highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL);  forward calorimeters (\FCAL); a superconducting solenoid; and muon chambers embedded within the iron return yokes. Dimensions are in units of mm.}
 \label{fig:ILD}
 \end{figure}
 
@@ -460,7 +460,7 @@ A \TPC tracking detector has several advantages: a) tracks can be measured with 
 
 %The \TPC is optimised for point resolution and minimum material, as required for the best calorimeter performance and the best particle flow performance.
 
-The silicon intermediate tracker (\SIT) and the silicon envelope tracker (\SET)  provide spatial point measurements before and after the \TPC in the barrel region. This helps to  improve the overall momentum resolution by providing points to link the vertex detector with the \TPC, and to extrapolate tracks from the \TPC to the calorimeters.  The \FTD improves the low angle coverage of the tracking system where the low angle is not covered by the \TPC.
+The \SIT and \SET provide spatial point measurements before and after the \TPC in the barrel region. This helps to  improve the overall momentum resolution by providing points to link the vertex detector with the \TPC, and to extrapolate tracks from the \TPC to the calorimeters.  The \FTD improves the low angle coverage of the tracking system where the low angle is not covered by the \TPC.
 
 
 \begin{comment}
@@ -656,7 +656,7 @@ are segmented into cells with a lateral size of 5 mm.
 
 The principal role of the \HCAL is to separate neutral hadron showers from other particles, and to measure (neutral) hadron energies. The \ILD \HCAL  is a sampling calorimeter with steel absorber and scintillator tiles as the active medium. The layout of the \HCAL is  48 longitudinal layers with 3$\times$3\,\uprightMath{{cm}^2} scintillator tiles. The layout of a technological design, the "EUDET prototype"  \cite{Collaboration:2011jka} is shown in \Figure{fig:detectorAHCAL}. %, using an analogue read out system
 
-Stainless steel is chosen for the absorber material for mechanical and calorimetric reasons. Steel allows for a self-supporting structure without auxiliary supports. At the same time, iron has a moderate ratio of hadronic interaction length ($\lambda_I = 17$\,cm) to electromagnetic radiation length ($X_0=1.8$\,cm), which allows a fine longitudinal sampling in $X_0$ with a reasonable number of layers in a given total hadronic absorption length.  Longitudinally the \HCAL and \ECAL, provide about six interaction lengths, which is sufficient to contain the hadronic showers.
+Stainless steel is chosen for the absorber material for mechanical and calorimetric reasons. Steel allows for a self-supporting structure without auxiliary supports. At the same time, iron has a moderate ratio of hadronic interaction length ($\lambda_I = 17$\,cm) to electromagnetic radiation length ($X_0=1.8$\,cm), which allows a fine longitudinal sampling in $X_0$ with a reasonable number of layers in a given total hadronic absorption length.  Longitudinally the \HCAL and \ECAL, provide about six interaction lengths.
 
 
 The scintillator tiles provide both energy and position measurements. The transverse segmentation, dictated by previous optimisation studies \cite{Thomson:2009rp}, is  3$\times$3\,\uprightMath{cm^2}. This level of segmentation is sufficient to meet the requirement of the particle flow paradigm \cite{Behnke:2013lya}.
@@ -851,31 +851,6 @@ radiation hard sensors are needed.
 %This section will describe sub-systems from small to large radius.
 
 
-\begin{table}[htbp]
-\centering
-\smallskip
-\begin{tabular}{l l r  r }
-\hline
-\hline
- & &  \ILD & \CLICILD \\
-\hline
-\multirow{4}{*}{\LumiCAL} & Geometrical acceptance  & 31 - 77\,mrad & 38 - 110\,mrad \\
-& Fiducial acceptance& 41 - 67\,mrad & 44 - 80\,mrad \\
-& z (start) & 2450\,mm & 2654\,mm \\
-& Number of layers (W + Si) & 30 & 40 \\
-\hline
-\multirow{4}{*}{\BeamCAL} & Geometrical acceptance & 5 - 40\,mrad & 10 - 40\,mrad \\
-& z (start)  & 3600\,mm & 3281\,mm \\
-& Number of layers (W + sensor) & 30 & 40 \\
-& Graphite layer thickness  & 100\,mm & 100\,mm \\
-\hline
-\hline
-\end{tabular}
-\caption[Comparison of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD .]%
-{Comparison of the key parameters of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD detector concepts. The table is adapted from \cite{Linssen:2012hp}. }
-\label{tab:detectorForwardILDvsCLICILD}
-\end{table}
-
 \begin{comment}
 The International Large Detector (ILD) is a concept for a detector at the International Linear Collider,
 ILC [198]. In a slightly modified version, it has also been proposed for the CLIC linear collider [199].
@@ -913,7 +888,7 @@ Detector optimisation studies were performed to select the optimal parameters of
 
 \subsection{Electromagnetic calorimeter optimisation}
 
-The typical metric used for PFA optimisation is the jet energy resolution - defined as the \rms divided by the mean for the smallest width of distribution that contains 90\% of entries using \eeZuds, at barrel region. The angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \Zprime is used  to avoid the complication of  missing momentum from semi-leptonic decay of heavy quarks. Using 90\% of the entries is robust and focuses on the Gaussian part of the distribution.
+The typical metric used for PFA optimisation is the jet energy resolution - defined as the \rms divided by the mean for the smallest width of distribution that contains 90\% of entries using \eeZuds, at barrel region. Ant angular cut is to avoid the barrel/endcap overlap region. The light quark decay of the \Zprime is used  to avoid the complication of  missing momentum from semi-leptonic decay of heavy quarks. Using 90\% of the entries is robust and focuses on the Gaussian part of the distribution.
 %The total jet energy is determined for \sqrtS= 91, 200, 360 and 500\,GeV.
 
 \FIGURE{fig:detectorILDECALjer} shows the jet energy resolution for a single jet as a function of the number of longitudinal layers for four different jet energies. For a 45\,GeV jet, a degradation  of 10\% in the jet energy resolution is observed when the number of layers decreases from 30 to 20. The degradation in the jet energy resolution is significant where the number of layers is fewer than 20, although the impact is smaller for high energy jets. Therefore, 30 longitudinal layers is chosen for the \ECAL.
@@ -998,7 +973,7 @@ There are two detector concepts studied in the \CLIC conceptual design report \c
 \centering
     \includegraphics[width=0.7\textwidth]{ILD/CLIC_ILD}
 \caption
-{The longitudinal cross section of top quadrant of the \CLICILD detector concept, taken from \cite{Linssen:2012hp}. From interaction point (\IP) outwards, the design includes: a tracking system comprising a large time projection chamber (\TPC) augmented with silicon tungsten layers; highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL);  forward calorimeters (\FCAL); a superconducting solenoid; and muon chambers embedded within the iron return yokes.}
+{The longitudinal cross section of top quadrant of the \CLICILD detector concept, taken from \cite{Linssen:2012hp}. From interaction point (\IP) outwards, the design includes: a vertex detector, a tracking system comprising a large time projection chamber (\TPC) augmented with silicon layers; highly granular electromagnetic calorimeters (\ECAL) and hadronic calorimeters (\HCAL);  forward calorimeters (\FCAL); a superconducting solenoid; and muon chambers embedded within the iron return yokes.}
     \label{fig:CLIC_ILD}
 \end{figure}
 
@@ -1019,13 +994,38 @@ For the \CLICILD \HCAL extra layers are added to contain the hadronic shower for
 
 The magnetic field is increased to 4\,T  for a better jet energy resolution \cite{Thomson:2009rp} at a higher centre-of-mass energy. Due to the different magnetic field strength the iron yoke thickness is  increased to 230\,cm.
 
-The \CLICILD detector model adopts a similar very forward calorimetry system as that of the \ILD. The dimensions of the elements are changed due to a difference in the beam crossing angles (20\,mrad for \CLIC and 14\,mrad for the \ILC). A comparison of the key parameters of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD is shown in \Table{tab:detectorForwardILDvsCLICILD}.
+The \CLICILD detector model adopts a similar very forward calorimetry system to that of the \ILD. The dimensions of the elements are changed due to a difference in the beam crossing angles (20\,mrad for \CLIC and 14\,mrad for the \ILC). A comparison of the key parameters of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD is shown in \Table{tab:detectorForwardILDvsCLICILD}.
 
 %Modifications to the design due to the \CLIC 3\,TeV centre-mass-of energy can be found in \cite{Linssen:2012hp}.
 
 
 
 
+
+\begin{table}[htbp]
+\centering
+\smallskip
+\begin{tabular}{l l r  r }
+\hline
+\hline
+ & &  \ILD & \CLICILD \\
+\hline
+\multirow{4}{*}{\LumiCAL} & Geometrical acceptance  & 31 - 77\,mrad & 38 - 110\,mrad \\
+& Fiducial acceptance& 41 - 67\,mrad & 44 - 80\,mrad \\
+& z (start) & 2450\,mm & 2654\,mm \\
+& Number of layers (W + Si) & 30 & 40 \\
+\hline
+\multirow{4}{*}{\BeamCAL} & Geometrical acceptance & 5 - 40\,mrad & 10 - 40\,mrad \\
+& z (start)  & 3600\,mm & 3281\,mm \\
+& Number of layers (W + sensor) & 30 & 40 \\
+& Graphite layer thickness  & 100\,mm & 100\,mm \\
+\hline
+\hline
+\end{tabular}
+\caption[Comparison of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD .]%
+{Comparison of the key parameters of the \LumiCAL and the \BeamCAL at the \ILD and the \CLICILD detector concepts. The table is adapted from \cite{Linssen:2012hp}. }
+\label{tab:detectorForwardILDvsCLICILD}
+\end{table}
 
 
 %Beam Calorimeter acceptance is defined as \absCosTheta is between  0.01 and 0.04\,rad and length in z direction is between 3181 and 3441\,mm. Luminosity Calorimeter acceptance is defined as \absCosTheta is between  0.038 and 0.11\,rad and length in z direction is between 2539 and 2714\,mm.

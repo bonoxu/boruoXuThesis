@@ -13,7 +13,7 @@ This chapter follows the theoretical discussion in \Section{sec:theoryTauPair} o
 
 A  spin-0 scalar Higgs boson can decay to \TauTauSub{L}{L} or \TauTauSub{R}{R}, whereas the  spin-1 \PZ  boson can decay to \TauTauSub{L}{R} or \TauTauSub{R}{L}, where L, R denote the tau lepton helicities. Therefore, by studying the tau pair polarisation correlation from a boson decay, one can determine statistically if the parent boson is a  scalar or a vector.
 
-Here a proof-of-principle analysis  is performed to reconstruct the polarisation correlation of the tau pairs in the \ZToTauTau process, where both \tauToPionBoth. \tauToPionBoth decay mode is selected using the tau decay mode classifier developed in \Chapter{chap:Tau}, which utilises the photon reconstruction in a highly granular calorimeter developed in \Chapter{chap:Photon}. The charged pion decay mode is chosen because the correlation between $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$ is very different if the parent boson is a \PZ or a \PHiggs boson, as suggested in \Figure{fig:theoryTauPairCorrelation}.
+Here a proof-of-principle analysis  is performed to reconstruct the polarisation correlation of the tau pairs in the \ZToTauTau process, where both \tauToPionBoth. The \tauToPionBoth decay mode is selected using the tau decay mode classifier developed in \Chapter{chap:Tau}, which utilises the photon reconstruction in a highly granular calorimeter developed in \Chapter{chap:Photon}. The charged pion decay mode is chosen because the correlation between $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$ is very different if the parent boson is a \PZ or a \PHiggs boson, as suggested in \Figure{fig:theoryTauPairCorrelation}.
 
 
 The analysis starts with the event generation and simulation, followed by identifying the tau decay products in the events. Afterwards, the tau decay mode classification is used to identify \tauToPionBoth decays. Lastly the tau pair polarisation correlation is presented and compared to  the tau pair polarisation correlation obtained with generator-level Monte Carlo particles. \FIGURE{fig:TauNTAflow} shows the main steps in this proof-of-principle demonstration of the tau pair polarisation correlations using  \eeZZQQ events, where both \tauToPionBoth.
@@ -45,7 +45,7 @@ The analysis starts with the event generation and simulation, followed by identi
 
 \section{Event generation and simulation}
 
-For this proof-of-principle study, \eeZZQQ events were generated at a centre-of-mass energy of 350\,GeV using \WHIZARD \cite{whizard} generator without ISR. \TAUOLA \cite{Jadach:1993hs} was used to describe the tau lepton decay with correct spin correlations of the tau decay products. Beam effects, such as the initial state radiation and the beam induced background, were not included. The \eeZZQQ events were simulated using the \ILD detector model as described in \Chapter{chap:Reconstruction}.
+For this proof-of-principle study, \eeZZQQ events were generated at a centre-of-mass energy of 350\,GeV using the \WHIZARD \cite{whizard} generator without ISR. \TAUOLA \cite{Jadach:1993hs} was used to describe the tau lepton decay with correct spin correlations of the tau decay products. Beam effects, such as the initial state radiation and the beam induced background, were not included. The \eeZZQQ events were simulated using the \ILD detector model as described in \Chapter{chap:Reconstruction}.
 
 
 %\subsection{Analysis strategy overview}
@@ -59,7 +59,7 @@ Events were reconstructed with  \ilcsoft version v01-17-07 \cite{Gaede:82475} an
 
 \section{Pre-selection}
 
-Two pre-selection cuts defined in \Section{sec:tauPreSel} are used: the tau decay products with photon conversion to electron pairs in the tracking detector are not considered; and tau decays with the generated polar angle of the tau lepton in the region $0.6 < \absOf{\theta_{\Ptau}^{MC}} < 0.9$\,rad are not considered.
+Two generator-level pre-selection cuts defined in \Section{sec:tauPreSel} are used: the tau decay products with photon conversion to electron pairs in the tracking detector are not considered; and tau decays with the generated polar angle of the tau lepton in the region $0.6 < \absOf{\theta_{\Ptau}^{MC}} < 0.9$\,rad are not considered.
 
 
 %Since this study is focused on photon reconstruction in the \ECAL to classify tau decay modes, the tau decays with photon converting to electron pairs in the tracking detector are not considered.
@@ -80,7 +80,7 @@ The \eeZZQQ final state contains two tau leptons and two quark jets. Identifying
 \begin{figure}[htbp]
 \centering % \begin{center}/\end{center} takes some additional vertical space
   \includegraphics[width=0.65\textwidth]{tau/NoTimeAnalysis/EvtDsp}
-  \caption{An event display of a \eeZZQQ event. The two brown cones indicate the tau decay products found by the tau identification processor. The four blue cones indicate the four jets found by the jet clustering algorithm. The blue outer region shows the \HCAL.}
+  \caption{An event display of a \eeZZQQ event. The two brown cones indicate the tau decay products found by the tau identification processor. The four blue cones indicate the four jets found by the jet clustering algorithm. The blue outer region shows the \HCAL. This is an example where the  tau identification processor and jet clustering find different tau decay products.}
   \label{fig:TauNTAevtDsp}
 \end{figure}
 
@@ -106,7 +106,7 @@ The \eeZZQQ final state contains two tau leptons and two quark jets. Identifying
 \subsection{Tau identification processor}
 \label{sec:TauMiniTauIdentifier}
 
-The \BonoTauFinder processor is a modified version of the tau decay product identification software used in the double Higgs analysis (\Section{sec:doubleHiggsBonoTauFinder}). The processor identifies high transverse momentum (\pT) particles as tau seeds. Particles are iteratively added to a cone in the order of the ascending opening angle to the seed. The cone is referred to as the search cone, which contains potential tau decay products. After each particle addition, the temporary search cone is then considered as a temporary  tau candidate and tested for isolation and consistency  with a tau hadronic decay signature. The number of charged particles in the temporary tau candidate, $N_{X^+}$, should be one or three. The invariant mass of the temporary tau candidate, $m_{c}$, should be less than 3\,GeV. The temporary tau candidate also needs to pass the isolation condition to be identified as a tau candidate, which requires the opening angle between the temporary search cone  and the $2^{nd}$ closest charged particle, $\theta^{c}_{X'^+}$, is larger than 0.6\,rad.
+The \BonoTauFinder processor is a modified version of the tau decay product identification software used in the double Higgs analysis (\Section{sec:doubleHiggsBonoTauFinder}). The processor identifies high transverse momentum (\pT) particles as tau seeds. Particles are iteratively added to a cone in the order of the ascending opening angle to the seed. The cone is referred to as the search cone, which contains potential tau decay products. After each particle addition, the temporary search cone is then considered as a temporary  tau candidate and tested for isolation and consistency  with a tau hadronic decay signature. The number of charged particles in the temporary tau candidate, $N_{X^+}$, should be one or three. The invariant mass of the temporary tau candidate, $m_{c}$, should be less than 3\,GeV. The temporary tau candidate also needs to pass the isolation condition to be identified as a tau candidate, which requires the opening angle between the temporary search cone  and the $2^{nd}$ closest charged particle, $\theta^{c}_{X'^+}$, to be larger than 0.6\,rad.
 
 The iterative particle addition procedure stops when the cone opening angle, $\theta_S$, is larger than $\cos^{-1}(0.99)$. If multiple temporary tau candidates of the same tau seed pass the isolation condition, the one with the smallest opening angle is chosen to form the final tau candidate. \TABLE{tab:tauBonoTauFinderProcessor} lists the parameters  of the  \BonoTauFinder processor.
 
@@ -138,7 +138,7 @@ Modified \BonoTauFinder  & Selection \\
 Veto low \pT &  $\pT < 0.5$\,GeV\\
 Seed particle & $\pT > 1$\,GeV \\
 Maximum search cone opening angle  & $\theta_S \leqslant \cos^{-1}(0.99)$\\
-Tau candidate rejection & $N_{X^+} \neq$ 1 or 3; $m_{c} > 3$\,GeV   \\
+Tau candidate selection & $N_{X^+} =$ 1 or 3; $m_{c} < 3$\,GeV   \\
 Isolation & $\theta^{c}_{X'^+} > 0.6$\,rad\\
 \hline
 \hline
@@ -153,7 +153,7 @@ The event is discarded if the \BonoTauFinder processor finds fewer than two tau 
 {\parenths{m_{\Pquark\Pquark} - m_{\PZ}}^2}+ {\parenths{E_{\Pquark\Pquark} - \frac{\sqrtS}{2}}^2},
 \label{eq:tauMinimiser}
 \end{equation}
-where \sqrtS is the centre-of-mass energy;   variable $m_{\PZ}$ is the mass of \PZ boson from reference \cite{Agashe:2014kda};  $m_{\Pquark\Pquark}$ is the invariant mass of particles that do not belong to the two tau candidates; and  $E_{\Pquark\Pquark}$ is  the total energy of particles that do not belong to the two tau candidates. This function is considered for all pairs of tau candidates.  In the generated \eeZZQQ events, the energy of each \PZ boson is half of the centre-of-mass energy. The invariant mass of two quarks from the \PZ decay should be close to \PZ mass.
+where \sqrtS is the centre-of-mass energy;   variable $m_{\PZ}$ is the mass of \PZ boson from reference \cite{Agashe:2014kda};  $m_{\Pquark\Pquark}$ is the invariant mass of particles that do not belong to the two tau candidates; and  $E_{\Pquark\Pquark}$ is  the total energy of particles that do not belong to the two tau candidates. This function is considered for all pairs of tau candidates.  In the generated \eeZZQQ events, the energy of each \PZ boson is half of the centre-of-mass energy. The invariant mass of two quarks from the \PZ decay should be close to the \PZ mass.
 
 
 
@@ -166,7 +166,7 @@ where \sqrtS is the centre-of-mass energy;   variable $m_{\PZ}$ is the mass of \
 
 %Tau hadronically decay products can be also identified as a small jet.
 
-The Durham algorithm  (\Section{sec:pandoraJetDurham}) was run in the exclusive mode to force the reconstructed particles in \eeZZQQ events into exactly four jets. The two tau candidate jets are identified by selecting two jets that gives the smallest value of the  function in \Equation{eq:tauMinimiser}. Here $m_{\Pquark\Pquark}$ is the invariant mass of particles that are not in the two tau candidates jets and $E_{\Pquark\Pquark}$ is  the total energy of particles that are not in the two tau candidates jets. Other variables are defined in the same way as in \Section{sec:TauMiniTauIdentifier}.
+The Durham algorithm  (\Section{sec:pandoraJetDurham}) was run in the exclusive mode to force the reconstructed particles in \eeZZQQ events into exactly four jets. The two tau candidate jets are identified by selecting two jets that gives the smallest value of the  function in \Equation{eq:tauMinimiser}. Here $m_{\Pquark\Pquark}$ and $E_{\Pquark\Pquark}$  are defined as above. Other variables are defined in the same way as in \Section{sec:TauMiniTauIdentifier}.
 
 
 
@@ -217,7 +217,7 @@ The selection of best pair of  tau candidates in an event proceeds as follows:
  \item otherwise, the two jets with the fewest number of particles are selected.
 \end{enumerate}
 
-\TABLE{tab:TauMiniTauFinding} lists the numbers of events with unmatched and matched taus identified in each of four steps in 107 manually scanned \eeZZQQ events. An event with matched tau requires that MC particles contributing the most to identified best tau candidates are both true taus. The opposite is an event with unmatched taus.  In 107 events, 93 events have matched taus and 14 events have unmatched taus.
+\TABLE{tab:TauMiniTauFinding} lists the numbers of events with unmatched and matched taus identified in each of four steps in 107 manually scanned \eeZZQQ events. An event with the matched tau requires that the MC particles contributing the most to identified best tau candidates are both true taus. The opposite is an event with at least one unmatched tau.  In 107 events, 93 events have matched taus and 14 events have unmatched taus.
 
 
 
@@ -254,18 +254,18 @@ the pair of  tau  candidates  with smallest $\chi^2$ is selected as the best pai
 \section{Kinematic reconstruction of tau energy}
 
 %The previous section describes the method to identify the tau pair decay products.
-The pion energy fractions, $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$, are  the appropriate  kinetic variables to illustrate the tau pair polarisation correlation in \eeZZQQ events, where both taus decay \tauToPionBoth, motivated in \Section{sec:theoryTauPair}. To obtain  $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$, the energies of the taus, $E_{\APtauon}$ and   $E_{\Ptauon}$, are required. Energies of the taus are also required for the calculation of the energy variables used in the tau decay mode classification.
+The pion energy fractions, $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$, are  the appropriate  kinetic variables to illustrate the tau pair polarisation correlation in \eeZZQQ events, where both taus decay \tauToPionBoth, motivated in \Section{sec:theoryTauPair}. To obtain  $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$, the energies of the taus, $E_{\APtauon}$ and   $E_{\Ptauon}$, are required. The energies of the taus are also required for the calculation of the energy variables used in the tau decay mode classification.
 
 
 
-In the laboratory frame, the energies of the taus from  \ZToTauTau can not be determined easily. However, in the \PZ rest frame, the energies of the taus are simply the half of the energy of the \PZ, i.e. $E'_{\APtauon} = E'_{\Ptauon} = \frac{1}{2} E'_{\PZ}$.
+In the laboratory frame, the energies of the taus from  \ZToTauTau can not be determined easily. However, in the \PZ rest frame, the energies of the taus are simply half of the energy of the \PZ, i.e. $E'_{\APtauon} = E'_{\Ptauon} = \frac{1}{2} E'_{\PZ}$.
 
 Because the energies of the taus can be obtained in the \PZ rest frame, kinematic variables used in tau decay mode classification, for example $\tilde{E}_{\charge}$, are calculated in the \PZ rest frame as well. Therefore, tau decay products need to be boosted into the \PZ rest frame for the calculation of the kinematic variables.
 
-To boost  tau decay products into the \PZ rest frame, the four-momentum of the \PZ is needed. Since there are two \PZ{s} in the \eeZZQQ event, \ZForTauTau refers to the \PZ decaying to a tau pair and \ZForqq refers to the \PZ decaying to a quark pair. The four-momentum of the \ZForTauTau can be obtained from the recoil four-momentum of \ZForqq against the centre-of-mass energy, where the four-momentum of \ZForqq is measured directly from the particles that are not the tau candidates. The beam crossing angle of  14\,mrad is taken in account.
+To boost the tau decay products into the \PZ rest frame, the four-momentum of the \PZ is needed. Since there are two \PZ{s} in the \eeZZQQ event, \ZForTauTau refers to the \PZ decaying to a tau pair and \ZForqq refers to the \PZ decaying to a quark pair. The four-momentum of the \ZForTauTau can be obtained from the recoil four-momentum of \ZForqq against the centre-of-mass energy, where the four-momentum of \ZForqq is measured directly from the particles that are not the tau candidates. The beam crossing angle of  14\,mrad is taken in account.
 
 
-The estimation of the four-momentum of   \ZForTauTau is improved by correcting the energy of the \ZForTauTau to be half of the centre-of-mass energy, which improves the estimation of the tau energies. \FIGURE{fig:TauMini2DimproveKEAll} shows the two-dimensional distributions of $E_{\Ppiplus}/E_{\APtauon}$ as a function of $E_{\Ppiminus}/E_{\Ptauon}$ from \ZToTauTau decays where both \tauToPionBoth. \tauToPionBoth decay mode is determined using the truth information. True Monte Carlo tau decay particles are used to generate distributions shown in the figures. \FIGURE{fig:TauMini2DNOimproveKE} shows the distribution without the  improved four-momentum of   \ZForTauTau. \FIGURE{fig:TauMini2DimproveKE} shows the distribution with the  improved four-momentum of   \ZForTauTau. A better match with the distributions obtained in the generator level study in \Figure{fig:theoryTauPairCorrelationZ} is achieved with the   improved four-momentum of   \ZForTauTau, which motivates the correction of the \ZForTauTau energy to improve the measurement of the distributions of $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$.
+The estimation of the four-momentum of   \ZForTauTau is improved by correcting the energy of the \ZForTauTau to be half of the centre-of-mass energy, which improves the estimation of the tau energies. \FIGURE{fig:TauMini2DimproveKEAll} shows the two-dimensional distributions of $E_{\Ppiplus}/E_{\APtauon}$ as a function of $E_{\Ppiminus}/E_{\Ptauon}$ from \ZToTauTau decays where both \tauToPionBoth. \tauToPionBoth decay mode is determined using the truth information. True Monte Carlo tau decay particles are used to generate the distributions shown in the figures. \FIGURE{fig:TauMini2DNOimproveKE} shows the distribution without the  improved four-momentum of   \ZForTauTau. \FIGURE{fig:TauMini2DimproveKE} shows the distribution with the  improved four-momentum of   \ZForTauTau. A better match with the distributions obtained in the generator level study in \Figure{fig:theoryTauPairCorrelationZ} is achieved with the   improved four-momentum of   \ZForTauTau, which motivates the correction of the \ZForTauTau energy to improve the measurement of the distributions of $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$.
 
 
 \begin{figure}[htbp]
@@ -373,7 +373,7 @@ The training  the multivariate classifier follows the procedure in  \Section{sec
 \section{Tau pair polarisation correlations}
 \label{sec:TauMiniCorr}
 
-\FIGURE{fig:TauSpin1D} shows the one-dimensional distributions of $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$ using generated \eeZZQQ events. Both taus decay by \tauToPionBoth. $E_{\Ptaupm}$ is half of the energy of \ZForTauTau in \ZForTauTau rest frame.  At the generator level, the shape of the distribution decreases gradually with the increasing $E_{\Ppipm}/E_{\Ptaupm}$. The decreasing shape is largely preserved in the full detector simulation. In the full detector simulation, events with  $E_{\Ppipm}/E_{\Ptaupm}$ close to 0, which fall in the first bin in the figures, are not reconstructed correctly. When the energies of the tau are mostly carried away by the neutrinos, it is difficult to identify low-energy charged pions as tau decay products.
+\FIGURE{fig:TauSpin1D} shows the one-dimensional distributions of $E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$ using generated \eeZZQQ events. Both taus decay by \tauToPionBoth. $E_{\Ptaupm}$ is half of the energy of \ZForTauTau in the \ZForTauTau rest frame.  At the generator level, the shape of the distribution decreases gradually with the increasing $E_{\Ppipm}/E_{\Ptaupm}$. The decreasing shape is largely preserved in the full detector simulation. In the full detector simulation, events with  $E_{\Ppipm}/E_{\Ptaupm}$ close to 0, which fall in the first bin in the figures, are not reconstructed correctly. When the energies of the tau are mostly carried away by the neutrinos, it is difficult to identify low-energy charged pions as tau decay products.
 
 
 %The energy fractions of the tau decay product to the tau lepton ($E_{\Ppiplus} / E_{\APtauon}$ and $E_{\Ppiminus} / E_{\Ptauon}$) are the appropriate kinematic variables to study the tau pair polarisation correlation, motivated in \Section{sec:theoryTauPair}.
